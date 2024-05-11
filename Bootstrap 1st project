@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://kit-pro.fontawesome.com/releases/v6.1.1/css/pro.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- navbar  -->
+
+    <nav id="navbar-spy-setting" class="navbar navbar-expand-lg text-uppercase fixed-top navbar-shrink sticky-top">
+        <div class="container-fluid py-3">
+            <a class="navbar-brand  text-white" href="#">
+                <h1 class="fw-bolder fs-2 ms-lg-5 ms-md-5">START BOOTSTRAP</h1>
+            </a>
+            <button class="navbar-toggler me-5 fs-5" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon align-items-center">Menu <i class="fa-regular fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-pills ms-auto mb-2 mb-lg-0 me-5">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text active fw-bolder fs-5 px-4" aria-current="page"
+                            href="#scrollspyHeading1">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text fw-bolder fs-5 px-4" href="#scrollspyHeading2">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text fw-bolder fs-5 px-4" href="#scrollspyHeading3">CONTACT</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-spy-setting" data-bs-offset="0" class="scrollspy" tabindex="0">
+
+
+        <!-- main content  -->
+
+        <header class="text-white text-center">
+
+            <div class="container-fluid py-5 content-container">
+                <div class="row">
+
+                    <div class="image text-center mt-5 pt-3">
+                        <img class="masthead-avatar mb-5"
+                            src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg"
+                            alt="">
+                    </div>
+                    <div class="content-text">
+                        <h1 class="content-heading fs-1 fw-bolder">START BOOTSTRAP</h1>
+                        <div class="divider-custom divider-light pb-5">
+
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <h4 class="text-capitalize pt-3 pb-5 mb-5">Graphic artist-web designer-illustrator</h4>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+
+        <!-- PORTFOLIO  -->
+
+        <section class="main-heading my-5 pt-5">
+
+            <div id="scrollspyHeading1" class="portfolio-head text-center">
+
+                <h1 class="portfolio-heading fw-bolder">PORTFOLIO</h1>
+
+                <div class="divider-custom divider-light pb-5">
+
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+
+            </div>
+
+
+            <div class="container portfolio-container">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-4 mx-auto mb-4 image-box">
+
+                        <figure>
+                            <img class="image-fluid"
+                                src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cabin.png"
+                                alt="">
+
+                            <div class="image-overlay">
+                                <div class="image-title"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+
+                        </figure>
+
+
+
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mx-auto mb-4 image-box">
+
+                        <figure>
+                            <img class="image-fluid"
+                                src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/cake.png"
+                                alt="">
+
+                            <div class="image-overlay">
+                                <div class="image-title"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+
+
+                        </figure>
+
+
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mx-auto mb-4 image-box">
+
+                        <figure>
+                            <img class="image-fluid"
+                                src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/circus.png"
+                                alt="">
+
+
+                            <div class="image-overlay">
+                                <div class="image-title"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+
+                        </figure>
+
+
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mx-auto mb-4 image-box">
+
+                        <figure>
+                            <img class="image-fluid"
+                                src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/game.png"
+                                alt="">
+
+
+                            <div class="image-overlay">
+                                <div class="image-title"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+
+                        </figure>
+
+
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mx-auto mb-4 image-box">
+
+                        <figure>
+                            <img class="image-fluid"
+                                src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/safe.png"
+                                alt="">
+
+                            <div class="image-overlay">
+                                <div class="image-title"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+
+                        </figure>
+
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mx-auto mb-4 image-box">
+
+                        <figure>
+                            <img class="image-fluid"
+                                src="	https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/portfolio/submarine.png"
+                                alt="">
+
+                            <div class="image-overlay">
+                                <div class="image-title"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+
+
+
+                        </figure>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+
+        <section id="scrollspyHeading2" class="text-white about-section py-5">
+
+
+            <div class="portfolio-head text-center">
+
+                <h1 class="portfolio-heading fw-bolder pt-4 fs-1">ABOUT</h1>
+
+                <div class="divider-custom divider-light mb-5">
+
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+
+            </div>
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-12 col-lg-5 col-md-6 mb-sm-5 fs-4">Freelancer is a free bootstar theme created by
+                        StarBootstrap. The download includes
+                        the complete source files including HTML, CSS, and JavaScript as well as option Sass stylesheets
+                        as well as options Sass stylesheets for easy custmiztion.</div>
+
+                    <div class="col-sm-12 col-lg-4 col-md-6 mb-sm-5 fs-4">You can create your own custom avatar for the
+                        masthead, change the icon int he
+                        dividers, and add your email address to the contact form to make it fully functional!</div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5 mt-sm-2 pb-3">
+
+                <button type="button"
+                    class="btn btn-outline-light fs-5 text-capitalize mx-5 px-4 py-3 fs-3 border-2 rounded"><i
+                        class="fa-solid fa-download"></i> &nbsp; Free download!</button>
+
+            </div>
+
+
+        </section>
+
+        <!-- CONTACT  -->
+
+        <section id="scrollspyHeading3" class="contact-section py-5">
+
+
+            <div class="portfolio-head text-center">
+
+                <h1 class="portfolio-heading fw-bolder pt-4 fs-1">CONTACT ME</h1>
+
+                <div class="divider-custom divider-light mb-5">
+
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+
+
+            </div>
+
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+
+                    <div class="col-lg-8 mt-5 col-xl-7">
+
+
+                        <form class="row needs-validation" data-sb-form-api-token="API_TOKEN" id="contactForm"
+                            novalidate>
+
+                            <!-- NAME  -->
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control py-5 border-0 border-bottom form-control-lg"
+                                    id="floatingInput validationCustom01" aria-label=".form-control-lg example"
+                                    placeholder="name  form-control-lg" required>
+
+                                <label for="validationCustom01" class="form-label">Full name</label>
+                                <div class="invalid-feedback">
+                                    A name is required.
+                                </div>
+                            </div>
+
+                            <!-- EMAIL  -->
+
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control py-5 border-0 border-bottom form-control-lg"
+                                    id=" form-control-lg floatingInput validationCustom02"
+                                    aria-label=".form-control-lg example" placeholder="name@example.com" required>
+
+                                <label for="floatingInput validationCustom02" class="form-label">Email address</label>
+                                <div class="invalid-feedback">
+                                    An email is required. <br>
+                                    Email is not valid.
+                                </div>
+                            </div>
+
+                            <!-- PHONE NUMBER  -->
+
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control py-5 border-0 border-bottom form-control-lg"
+                                    id=" form-control-lg floatingInput validationCustom03"
+                                    aria-label=".form-control-lg example" placeholder="phonenumber" required>
+
+                                <label for="validationCustom03" class="form-label">Phone number</label>
+                                <div class="invalid-feedback">A phone number is required.</div>
+                            </div>
+
+                            <!-- Text Area  -->
+
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control py-5 border-0 border-bottom form-control-lg" type="text"
+                                    placeholder="Leave a comment here"
+                                    id="floatingTextarea2 validationCustom04 form-control-lg"
+                                    aria-label=".form-control-lg example" required style="height: 10rem"></textarea>
+                                <label for="floatingTextarea2 validationCustom04" class="form-label">Message</label>
+                            </div>
+
+                            <!-- submit  -->
+
+                            <div class="mb-3">
+                                <button class="btn btn-color py-2 rounded px-3 fs-4" type="submit">Send</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+    </div>
+
+
+
+    <!-- footer  -->
+
+
+    <footer class="footer text-center text-white py-5">
+
+        <div class="container">
+
+            <div class="row py-5">
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+
+                    <h4 class="text-uppercase fs-2 fw-bolder mb-4">Location</h4>
+
+                    <p class="lead mb-0 fs-5 fw-normal">2215 John Daniel Drive</p>
+
+                    <p class="lead mb-0 fs-5 fw-noraml">Clark, MO 65243</p>
+
+                </div>
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+
+                    <h4 class="text-uppercase mb-4 fs-2 fw-bolder">Around The Web</h4>
+
+                    <!-- facebook  -->
+
+                    <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjYyNTMzOTAxLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"
+                        class="btn btn-outline-light btn-social mx-1 fs-4 border-3 rounded-circle" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+
+                    <!-- twitter -->
+
+                    <a href="https://twitter.com/i/flow/login"
+                        class="btn fs-4 border-3 rounded-circle btn-outline-light btn-social mx-1" target="_blank"><i
+                            class="fa-brands fa-twitter"></i></a>
+
+                    <!-- dribbble  -->
+
+                    <a href="https://dribbble.com/"
+                        class="btn rounded-circle btn-outline-light border-3 fs-4 btn-social mx-1" target="_blank"><i
+                            class="fa-brands fa-dribbble"></i></a>
+
+                    <!-- linkedin -->
+
+                    <a href="https://www.linkedin.com/login"
+                        class="btn btn-outline-light fs-4 border-3 rounded-circle btn-social mx-1" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4 class="text-uppercase mb-4 fs-2 fw-bolder">About Freelancer</h4>
+
+                    <p class="lead mb-0 fs-4-5 fw-normal">
+                        Freelancer is a free to use, MIT licensed Bootstrap theme created by <a
+                            href="http://startbootstrap.com" class="start-link">Start Bootstrap</a>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- copyright -->
+
+    <div class="copyright py-4 text-center text-white">
+
+        <div class="container">
+
+            <h3 class="fs-5">Copyright © Your Website 2022</h3>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+    </script>
+
+    <script>var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar-example'
+        })</script>
+
+
+</body>
+
+</html>
