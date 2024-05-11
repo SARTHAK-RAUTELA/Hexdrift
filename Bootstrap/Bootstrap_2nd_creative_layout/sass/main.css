@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  position: relative;
+}
+
+.navbar {
+  position: fixed;
+  color: #fff;
+  background: rgba(203, 70, 34, 0.7803921569);
+}
+.navbar h1 {
+  color: #d9c7bc;
+}
+.navbar h1:hover {
+  color: white;
+}
+.navbar ul .nav-text {
+  text-decoration: none;
+  color: #d9c7bc;
+}
+.navbar ul .nav-text:hover {
+  color: white;
+}
+
+ul {
+  color: #555;
+}
+
+.main-content {
+  padding-top: 16rem;
+  padding-bottom: 5rem;
+}
+@media (max-width: 642px) {
+  .main-content {
+    padding-top: 10rem;
+    padding-bottom: 0rem;
+  }
+}
+.main-content h1 {
+  font-size: 3.5rem;
+}
+@media (max-width: 770px) {
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+}
+.main-content .divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #f4623a;
+  opacity: 1;
+}
+.main-content .text-white-75 {
+  font-family: "Merriweather", serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+.main-content .btn-color {
+  color: #fff;
+  background-color: #f4623a;
+  border: 1px solid #f4623a;
+}
+.main-content .btn-color:hover {
+  background-color: #cb4622;
+  color: #fff;
+  border: 1px solid #cb4622;
+}
+
+.main-content {
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(https://startbootstrap.github.io/startbootstrap-creative/assets/img/bg-masthead.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.about-sction {
+  background: #f4623a;
+}
+.about-sction .divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  opacity: 1;
+}
+.about-sction .about-para {
+  font-family: "Merriweather", serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.service-section .divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  opacity: 1;
+  color: #f4623a;
+}
+.service-section .text-i {
+  color: #f4623a;
+}
+.service-section .service-para {
+  font-family: "Merriweather", serif;
+}
+
+.portfolio-container .image-box {
+  margin-bottom: -16px;
+}
+.portfolio-container .image-box figure {
+  position: relative;
+}
+.portfolio-container .image-box figure img {
+  display: block;
+  width: 100%;
+}
+.portfolio-container .image-box figure .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(244, 98, 58, 0.8784313725);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+.portfolio-container .image-box figure .image-overlay:hover {
+  opacity: 1;
+}
+.portfolio-container .image-box figure .image-overlay .image-title {
+  font-family: italic;
+  color: rgba(255, 255, 255, 0.75);
+}
+.portfolio-container .image-box figure .image-overlay .image-sub-title {
+  font-family: "Merriweather", serif;
+}
+
+.contact-container .btn-color {
+  background: #f4623a;
+  color: white;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.contact-container .divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  opacity: 1;
+  color: #f4623a;
+}
+.contact-container .font-for-text {
+  font-family: "Merriweather", serif;
+}
+
+footer .font-for-text {
+  font-family: "Merriweather", serif;
+}/*# sourceMappingURL=main.css.map */
