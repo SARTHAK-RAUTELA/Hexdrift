@@ -546,6 +546,11 @@ section {
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 786px) {
+  .contact .contact-icon {
+    margin-right: 18px;
+  }
+}
 .contact h4 {
   padding-left: 15%;
 }
@@ -714,4 +719,22 @@ section {
 #footer .credits a {
   color: #eb5d1e;
   text-decoration: none;
+}
+
+.portfolio figure {
+  max-width: 420px;
+  height: 630px;
+  overflow: hidden;
+}
+.portfolio figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 575px) {
+  .portfolio figure {
+    height: 380px;
+  }
 }/*# sourceMappingURL=main.css.map */
