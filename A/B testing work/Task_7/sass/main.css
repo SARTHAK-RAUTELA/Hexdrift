@@ -1,0 +1,127 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: #090318;
+  font-family: "Rubik", sans-serif;
+}
+
+#container {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .box {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  height: 33rem;
+  margin: 16px 4px;
+  padding: 39px 34px;
+  border-radius: 12px;
+}
+#container .box .heading {
+  color: white;
+  font-size: 3rem;
+}
+#container .box .paragraph {
+  color: grey;
+  font-size: 20px;
+  padding: 2%;
+}
+#container .box .p {
+  color: grey;
+  padding: 5px 0px;
+}
+#container .box .p .fas {
+  color: rgb(245, 111, 1);
+  margin: 2px 12px;
+}
+#container .box .watch {
+  color: #090318;
+  background-color: white;
+  margin: 17px 1px;
+  padding: 12px 2px;
+  width: 129px;
+  border-radius: 9px;
+}
+#container .box .account {
+  background-color: white;
+  color: black;
+  padding-right: 45px;
+}
+#container .box .buttons {
+  background: white;
+  margin-right: 9px;
+  margin-top: 17px;
+}
+#container .box .buttons .btn {
+  height: 40px;
+  width: 85px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid gray;
+  margin: 2px 1px;
+}
+#container .box .buttons .btn .fab {
+  padding: 0px 4px;
+  background-color: white;
+}
+#container .box .or {
+  background-color: white;
+  color: grey;
+  margin-top: 15px;
+}
+#container .box .form {
+  background-color: white;
+  flex-flow: column wrap;
+  display: flex;
+}
+#container .box .form hr {
+  margin-top: 24px;
+}
+#container .box .form .form-group {
+  background-color: white;
+  padding: 6px 3px;
+}
+#container .box .form .form-group input {
+  width: 271px;
+  background-color: white;
+  font-size: 14px;
+  margin: 6px 13px;
+  padding: 8px 6px;
+  border: 1px solid grey;
+}
+#container .box .start-btn {
+  background-color: #6841d1;
+  color: white;
+  padding: 7px 65px;
+  margin: 8px 17px;
+  border-radius: 5px;
+  border: 0px;
+}
+#container .box .last-para {
+  background-color: white;
+  padding: 18px 9px;
+}
+#container .box .last-para strong {
+  background-color: white;
+}
+#container .second-box {
+  background-color: white;
+  width: 347px;
+  height: 444px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  margin-top: 104px;
+  margin-left: -220px;
+  height: 394px;
+  filter: invert(100%);
+  z-index: 0;
+}/*# sourceMappingURL=main.css.map */

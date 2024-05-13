@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+$bg-color-backgroung: rgb(183, 87, 221);
+$bg-color: white;
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: $bg-color-backgroung;
+        height: 54%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    // box
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 57px 21px;
+        width: 493px;
+        height: 560px;
+        margin-bottom: -127px;
+
+        // first box about javascript
+
+        .upper-box {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            color: $bg-color;
+
+
+            .heading {
+                font-size: 2rem;
+                padding: 1% 1%;
+            }
+
+            .about {
+                padding: 1% 1%;
+                font-size: 14px;
+            }
+
+            .table {
+                padding: 9% 1%;
+                font-size: 12px;
+
+                .star {
+                    color: orange;
+                }
+            }
+
+        }
+
+        // 2nd box inside javascript
+
+        .lower-box {
+            background-color: #ffebff;
+            display: flex;
+            border-radius: 9px;
+            flex-direction: column;
+            margin-top: 28px;
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                margin: 13px 12px;
+
+                .ul {
+                    display: flex;
+
+                    .li {
+                        list-style: none;
+
+                        .a {
+                            padding: 2px 4px;
+                            color: #5a5353;
+                            text-decoration: none;
+                            font-size: 13px;
+
+                            &:hover {
+                                color: $bg-color-backgroung;
+                                text-decoration: underline;
+                                padding: 2px 2px;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // table-video on introduction to javascript
+
+            .intro {
+                margin: 1px 5px;
+
+                .left {
+                    padding: 3px 10px;
+                    font-size: 13px;
+
+                    .fa {
+                        color: rgb(150, 14, 150);
+                    }
+
+                }
+
+                // time period of video
+
+                .right {
+                    font-size: 13px;
+                    padding-top: 18px;
+
+                }
+
+            }
+
+        }
+
+        // last right side box
+
+        .subscription-box {
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffebff;
+            margin-top: -35px;
+            width: 15.4rem;
+
+            #image {
+                width: 240px;
+                border-radius: 9px;
+                margin-top: 4px;
+            }
+
+            .logo {
+                border-radius: 13px;
+                border: 1px solid black;
+                width: 38px;
+                margin: -107px 83px;
+            }
+
+            .h-primary {
+                font-size: 25px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                padding-top: 109px;
+            }
+
+            .price {
+                padding-right: 100px;
+                margin: 41px 0px;
+
+                .previous-price {
+                    color: gray;
+                    font-size: 20px;
+                    text-decoration: line-through;
+                }
+
+            }
+
+            .button {
+
+                .inside-1button {
+                    border: 1px solid rgb(150, 14, 150);
+                    margin: 4px;
+                    padding: 9px 63px;
+                }
+
+                .inside-2button {
+                    border: 1px solid rgb(150, 14, 150);
+                    margin: 4px;
+                    padding: 9px 66px;
+                }
+
+                .hover-button:hover {
+                    background-color: $bg-color-backgroung;
+                    color: $bg-color;
+                }
+
+            }
+
+        }
+
+
+
+    }
+
+}

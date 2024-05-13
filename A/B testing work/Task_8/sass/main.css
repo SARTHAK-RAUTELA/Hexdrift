@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  background-color: rgb(235, 214, 245);
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .box {
+  display: flex;
+  flex-direction: column;
+  width: 427px;
+  background-color: white;
+  margin: 17px 27px;
+  padding: 6px 0px;
+  border-radius: 17px;
+}
+#container .box .image {
+  width: 3rem;
+  margin: 15px 8px;
+  border: 1px solid rgb(144, 14, 204);
+  background-color: rgb(144, 14, 204);
+  border-radius: 34px;
+}
+#container .box .heading {
+  background-color: white;
+  font-size: 22px;
+  margin-top: -64px;
+  margin-left: 66px;
+}
+#container .box .span {
+  background-color: rgb(238, 127, 87);
+  color: white;
+  font-size: 16px;
+  border-radius: 2px;
+}
+#container .box .table {
+  background-color: white;
+  margin: 4px 58px;
+  font-size: 10px;
+}
+#container .box .table .th {
+  background-color: white;
+}
+#container .box .table .th3 {
+  padding: 2px 13px;
+}
+#container .box .paragraph {
+  margin: 12px 14px;
+  font-size: 14px;
+  background-color: white;
+  color: rgb(112, 109, 109);
+}
+#container .box .detail {
+  background-color: white;
+  margin: 17px 24px;
+  color: rgb(144, 14, 204);
+}/*# sourceMappingURL=main.css.map */

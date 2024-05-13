@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+}
+.header .column {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 17px;
+}
+.header .head-left {
+  margin: 23px 30px;
+  display: inline-block;
+  width: 308px;
+  height: 297px;
+}
+.header .head-left .image {
+  border: 2px solid white;
+  width: 3.4rem;
+  border-radius: 34px;
+  margin: 18px -9px;
+}
+.header .head-left .head {
+  font-size: 3rem;
+  padding: 4% 0%;
+}
+.header .head-right {
+  margin: 36px 39px;
+  padding: 5% 2%;
+  width: 515px;
+  font-size: 1.2rem;
+}
+.header .head-right .paragraph {
+  padding: 34px 3px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .box {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 8rem;
+  margin: 1px -17px;
+  padding: 16px 21px;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 12px 87px;
+  display: flex;
+  justify-content: center;
+}
+.footer button {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(100, 7, 109);
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+  height: 43px;
+  width: 207px;
+}/*# sourceMappingURL=main.css.map */

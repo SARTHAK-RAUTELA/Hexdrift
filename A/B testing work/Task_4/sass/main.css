@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2px 6px;
+}
+#container .box .inside-box {
+  background-color: aliceblue;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  border: 1px solid aliceblue;
+  padding: 28px 10px;
+  margin: 35px 7px;
+}
+#container .box .inside-box .about-me {
+  margin: 7px 15px;
+}
+#container .box .inside-box .information {
+  padding: 1% 5%;
+  color: rgb(68, 63, 63);
+}
+#container .box .inside-box .read {
+  margin: 2px 15px;
+  color: purple;
+  font-size: 16px;
+}
+#container .box .second .boxtable {
+  margin: -24px 2px;
+}
+#container .box .second .boxtable .tr li {
+  list-style-type: none;
+}
+#container .box .second .boxtable .tr .grey {
+  color: grey;
+  font-size: 9px;
+}
+#container .box .second .boxtable .tr .people {
+  width: 28px;
+}
+#container .box2 {
+  background-color: aliceblue;
+  border: 1px solid aliceblue;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .box2 .heading {
+  font-size: 20px;
+  margin: 2px 10px;
+}
+#container .box2 .heading .grey {
+  font-size: 13px;
+}
+#container .box2 .grey {
+  color: gray;
+}
+#container .box2 .different-courses .list {
+  list-style-type: none;
+  margin: 2px 2px;
+  padding: 2px 2px;
+}
+#container .box2 .different-courses .list .course-table .wordpress {
+  border-radius: 8px;
+  width: 6rem;
+  margin: 4px 4px;
+}
+#container .box2 .different-courses .list .course-table .java {
+  border-radius: 8px;
+  width: 6rem;
+  margin: 4px 4px;
+}
+#container .box2 .different-courses .list .course-table .angular {
+  border-radius: 8px;
+  width: 6rem;
+  margin: 4px 4px;
+}
+#container .box2 .different-courses .list .course-table .python {
+  border-radius: 8px;
+  width: 6rem;
+  margin: 4px 4px;
+}
+#container .box2 .different-courses .list .course-table .laravel {
+  border-radius: 8px;
+  width: 6rem;
+  margin: 4px 4px;
+}
+#container .box2 .different-courses .list .course-table .gatsby {
+  border-radius: 8px;
+  width: 6rem;
+  margin: 4px 4px;
+}
+#container .box2 .different-courses .list .course-table .course {
+  list-style-type: none;
+  margin: 2px 11px;
+}
+#container .box2 .different-courses .list .course-table .course .star {
+  color: rgb(255, 102, 0);
+}
+#container .box2 .different-courses .list .course-table .details {
+  font-size: 14px;
+}
+#container .box2 .different-courses .list .course-table .three-dots {
+  align-items: right;
+}/*# sourceMappingURL=main.css.map */

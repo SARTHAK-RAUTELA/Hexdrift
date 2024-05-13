@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding: 24px 0px;
+}
+#container .box {
+  height: 338px;
+  width: 305px;
+  margin: 1px 5px;
+  display: flex;
+  flex-direction: column;
+}
+#container .box .first-heading {
+  color: rebeccapurple;
+  margin: 11px 3px;
+}
+#container .box .main-heading {
+  font-size: 29px;
+  padding: 1% 0%;
+  margin: 2px;
+}
+#container .box .main-heading .name {
+  color: rebeccapurple;
+}
+#container .box .about {
+  padding: 1% 1%;
+  color: #605353;
+  font-size: 14px;
+}
+#container .box .table {
+  margin: 30px 0px;
+  border-top: 1px solid grey;
+  padding: 25px 1px;
+}
+#container .box .table .th {
+  font-size: 25px;
+}
+#container .box .table .td {
+  font-size: 13px;
+}
+#container .image {
+  width: 16rem;
+  margin: 28px 22px;
+}/*# sourceMappingURL=main.css.map */

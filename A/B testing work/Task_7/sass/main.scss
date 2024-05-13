@@ -1,0 +1,167 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: #090318;
+    font-family: 'Rubik', sans-serif;
+}
+
+$bg-color1: white;
+$bg-color2: rgb(245, 111, 1);
+$bg-color3: grey;
+$bg-color4: rgb(94, 47, 221);
+
+
+
+#container {
+    border: 2px solid white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 35rem;
+        height: 33rem;
+        margin: 16px 4px;
+        padding: 39px 34px;
+        border-radius: 12px;
+
+        // 1st box
+
+        .heading {
+            color: $bg-color1;
+            font-size: 3rem;
+        }
+
+        .paragraph {
+            color: $bg-color3;
+            font-size: 20px;
+            padding: 2%;
+        }
+
+        .p {
+            color: $bg-color3;
+            padding: 5px 0px;
+
+            .fas {
+                color: $bg-color2;
+                margin: 2px 12px;
+            }
+
+        }
+
+        .watch {
+            color: #090318;
+            background-color: white;
+            margin: 17px 1px;
+            padding: 12px 2px;
+            width: 129px;
+            border-radius: 9px;
+        }
+
+        // 2nd box
+
+        .account {
+            background-color: $bg-color1;
+            color: black;
+            padding-right: 45px;
+        }
+
+        .buttons {
+            background: white;
+            margin-right: 9px;
+            margin-top: 17px;
+
+            .btn {
+                height: 40px;
+                width: 85px;
+                background-color: white;
+                border-radius: 6px;
+                border: 1px solid gray;
+                margin: 2px 1px;
+
+                .fab {
+                    padding: 0px 4px;
+                    background-color: $bg-color1;
+                }
+
+            }
+
+        }
+
+        .or {
+            background-color: $bg-color1;
+            color: $bg-color3;
+            margin-top: 15px;
+          
+        }
+
+        .form {
+            background-color: $bg-color1;
+            flex-flow: column wrap;
+            display: flex;
+
+            hr {
+                margin-top: 24px;
+            }
+
+            .form-group {
+                background-color: $bg-color1;
+                padding: 6px 3px;
+
+
+
+
+                input {
+                    width: 271px;
+                    background-color: $bg-color1;
+                    font-size: 14px;
+                    margin: 6px 13px;
+                    padding: 8px 6px;
+                    border: 1px solid grey;
+                }
+            }
+        }
+
+        .start-btn {
+            background-color: #6841d1;
+            color: white;
+            padding: 7px 65px;
+            margin: 8px 17px;
+            border-radius: 5px;
+            border: 0px;
+        }
+
+        .last-para {
+
+            background-color: $bg-color1;
+            padding: 18px 9px;
+
+            strong {
+                background-color: white;
+            }
+        }
+
+    }
+
+    .second-box {
+        background-color: $bg-color1;
+        width: 347px;
+        height: 444px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+.image{
+    margin-top: 104px;
+    margin-left: -220px;
+    height: 394px;
+    
+    filter: invert(100%);
+    z-index: 0;
+}
