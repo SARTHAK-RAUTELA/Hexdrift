@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e9dede;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6em;
+  font-weight: bolder;
+  margin: 9px 120px;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    margin: 9px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.1em;
+  margin: 9px 120px;
+  color: rgb(131, 124, 124);
+}
+@media screen and (max-width: 600px) {
+  p {
+    margin: 9px 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.centre {
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px 0px;
+}
+#container .box {
+  background-color: white;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  max-width: 248px;
+  margin: 1px 5px;
+  margin-bottom: 20px;
+}
+#container .box #image {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+#container .box .logo {
+  border-radius: 13px;
+  border: 1px solid;
+  margin: -109px 89px;
+}
+#container .box .h-primary {
+  font-size: 27px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 115px 40px;
+  background: url();
+  font-family: "Rubik", sans-serif;
+}
+#container .box .h-secondary {
+  font-family: "Rubik", sans-serif;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin: -82px 1px;
+  padding: 8px 8px;
+}
+#container .box #table {
+  background-color: white;
+  margin: 75px 4px;
+  padding: 15px 3px;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  border-bottom: 1px solid grey;
+  line-height: 1.6em;
+}
+#container .box #table td {
+  background-color: white;
+}
+#container .box #table td .fa {
+  background-color: white;
+}
+#container .box #table .star {
+  color: orangered;
+}
+#container .box #table .rate {
+  color: grey;
+}
+#container .box #person {
+  display: flex;
+  flex-direction: row;
+  margin: -74px 3px;
+  padding: 7px 11px;
+  background-color: white;
+}
+#container .box #person .profile-p {
+  border-radius: 20px;
+  height: 32px;
+  width: 32px;
+}
+#container .box #person .fa {
+  background-color: white;
+  margin-left: auto;
+  padding: 7px 0px;
+}
+#container .box #person .person-name {
+  font-family: "Rubik", sans-serif;
+  background-color: white;
+  margin: 3px 3px;
+  padding: 3px 1px;
+}/*# sourceMappingURL=main.css.map */

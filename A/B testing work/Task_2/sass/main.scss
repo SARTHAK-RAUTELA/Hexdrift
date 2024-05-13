@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e9dede;
+}
+
+$bg-font: 'Rubik', sans-serif;
+
+$bg-color1: rgb(131, 124, 124);
+$bg-color2: rgb(247, 164, 11);
+
+
+
+// head
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: $bg-font;
+    font-size: 1.6em;
+    font-weight: bolder;
+    margin: 9px 120px;
+
+    @media screen and (max-width: 600px) {
+        margin: 9px 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+p {
+    font-family: $bg-font;
+    font-size: 1.1em;
+    margin: 9px 120px;
+    color: $bg-color1;
+
+    @media screen and (max-width: 600px) {
+        margin: 9px 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+
+// box
+.centre {
+    align-items: center;
+}
+
+#container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 24px 0px;
+
+
+
+    .box {
+        background-color: white;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        max-width: 248px;
+        margin: 1px 5px;
+        margin-bottom: 20px;
+
+
+
+        #image {
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+        }
+
+        .logo {
+            border-radius: 13px;
+            border: 1px solid;
+            margin: -109px 89px;
+        }
+
+        .h-primary {
+            font-size: 27px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 115px 40px;
+            background: url();
+            font-family: $bg-font;
+        }
+
+
+        .h-secondary {
+            font-family: $bg-font;
+            background-color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin: -82px 1px;
+            padding: 8px 8px;
+        }
+
+        #table {
+            background-color: white;
+            margin: 75px 4px;
+            padding: 15px 3px;
+            font-family: $bg-font;
+            font-size: 17px;
+            border-bottom: 1px solid grey;
+            line-height: 1.6em;
+
+            td {
+                background-color: white;
+
+                .fa {
+                    background-color: white;
+                }
+            }
+
+            .star {
+                color: orangered;
+            }
+
+            .rate {
+                color: grey;
+            }
+        }
+
+        #person {
+            display: flex;
+            flex-direction: row;
+            margin: -74px 3px;
+            padding: 7px 11px;
+            background-color: white;
+
+            .profile-p {
+                border-radius: 20px;
+                height: 32px;
+                width: 32px;
+
+            }
+
+            .fa {
+                background-color: white;
+                margin-left: auto;
+                padding: 7px 0px;
+            }
+
+            .person-name {
+                font-family: $bg-font;
+                background-color: white;
+                margin: 3px 3px;
+                padding: 3px 1px;
+            }
+        }
+
+    }
+
+}
