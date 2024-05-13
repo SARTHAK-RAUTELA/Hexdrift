@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+section {
+    background-color: rgb(238, 230, 230);
+}
+
+
+/* head */
+.head {
+    margin: 5px 8px;
+    height: 250px;
+}
+
+.heading {
+    margin: 8px 85px;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    font-family: 'Rubik', sans-serif;
+    padding: 24px 0 0;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.paragraph {
+    background-color: rgb(238, 230, 230);
+    ;
+    font-size: 1.5rem;
+    margin: 8px 85px;
+    font-family: 'Rubik', sans-serif;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+/* box */
+
+.centre {
+    text-align: center;
+}
+
+#rating {
+    background-color: rgb(238, 230, 230);
+    ;
+    padding: 24px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#rating .box {
+    height: auto;
+    width: 281px;
+    flex-direction: column;
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    padding: 17px 72px;
+    margin: 1px 6px;
+    border-radius: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+
+}
+
+#rating .box img {
+    height: 60px;
+    object-fit: inherit;
+    max-width: 100%;
+    padding: 1px 39px;
+    border-radius: 50%;
+}
+
+#rating p {
+    align-items: center;
+}
+
+/* under box */
+
+.name {
+    font-size: 15px;
+    margin: 22px -53px;
+    text-align: center;
+    background-color: white;
+}
+
+.profession {
+    color: #9f9494;
+    font-size: 18px;
+    background-color: white;
+}
+
+.h-primary {
+    background-color: white;
+}
+
+/* table */
+
+table,
+td {
+    border-bottom: 0px solid rgb(245, 232, 232);
+    line-height: 2em;
+    background-color: white;
+}
+
+table {
+    font-size: 20px;
+    margin: 17px -49px;
+    width: 173%;
+    border-collapse: collapse;
+}
+
+.about {
+    font-weight: lighter;
+    color: rgb(68, 66, 66);
+}
+
+.table .details-1 {
+    color: orange
+}
+
+@media screen and (max-width: 700px) {
+    .heading {
+        margin: 8px 20px;
+        font-size: 34px;
+    }
+
+    .paragraph {
+        margin: 8px 20px;
+        font-size: 17px;
+    }
+}
