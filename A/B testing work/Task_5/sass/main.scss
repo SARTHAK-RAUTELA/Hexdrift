@@ -10,26 +10,28 @@ $bg-font: 'Rubik', sans-serif;
 
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     font-family: $bg-font;
     justify-content: center;
+    text-align: center;
+    align-items: center;
 
 
     .column {
         display: flex;
         flex-direction: column;
-        padding: 22px 17px;
+        // padding: 22px 17px;
 
     }
 
     // left-box
 
     .head-left {
-        margin: 23px 30px;
+        margin: 0px 30px;
         display: inline-block;
-        width: 308px;
-        height: 297px;
+        max-width: 550px;
+        // height: 297px;
 
         .image {
             border: 2px solid white;
@@ -41,7 +43,7 @@ $bg-font: 'Rubik', sans-serif;
 
         .head {
             font-size: 3rem;
-            padding: 4% 0%;
+            // padding: 4% 0%;
         }
 
     }
@@ -49,13 +51,14 @@ $bg-font: 'Rubik', sans-serif;
     // right-box
 
     .head-right {
-        margin: 36px 39px;
-        padding: 5% 2%;
-        width: 515px;
+        // margin: 36px 39px;
+        // padding: 5% 2%;
+        max-width: 610px;
         font-size: 1.2rem;
 
         .paragraph {
             padding: 34px 3px;
+            padding-top: 20px;
         }
 
     }
@@ -69,17 +72,29 @@ $bg-font: 'Rubik', sans-serif;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 
     .box {
         display: flex;
         flex-direction: column;
         width: 20rem;
-        height: 8rem;
-        margin: 1px -17px;
+        // height: 8rem;
+        // margin: 1px -17px;
         padding: 16px 21px;
         font-family: $bg-font;
         margin-bottom: 20px;
+        border: 1px solid grey;
+        border-radius: 14px;
+        cursor: pointer;
 
+        &:hover {
+            background-color: #8080805e;
+            box-shadow: 3px 4px 12px 0px #a9a0a0;
+        }
+
+        .opportunity {
+            margin-bottom: 10px;
+        }
     }
 }
 
