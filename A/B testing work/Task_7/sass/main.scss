@@ -96,7 +96,7 @@ $bg-color4: rgb(94, 47, 221);
             background-color: $bg-color1;
             color: $bg-color3;
             margin-top: 15px;
-          
+
         }
 
         .form {
@@ -154,14 +154,16 @@ $bg-color4: rgb(94, 47, 221);
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 1;
     }
-    
+
 }
-.image{
+
+.image {
     margin-top: 104px;
     margin-left: -220px;
     height: 394px;
-    
+
     filter: invert(100%);
     z-index: 0;
 }
