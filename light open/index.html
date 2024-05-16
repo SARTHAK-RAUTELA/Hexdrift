@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice work</title>
+    <link rel="stylesheet" href="sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+
+    <div class="hero">
+        <nav>
+
+            <img src="https://i.pinimg.com/236x/5b/99/13/5b99139887bc830277b522d35dc863ae.jpg" class="menu-img" alt="">
+            <img src="https://miro.medium.com/max/1400/0*1VmmA6pxXSo7NpGv.jpg" class="logo" alt="">
+
+            <ul>
+                <li><a href="">Latest</a></li>
+                <li><a href="">Modern</a></li>
+                <li><a href="">contemporary</a></li>
+                <li><a href="">Affordable</a></li>
+            </ul>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+        </nav>
+
+
+        <div class="lamp-container">
+
+            <img src="lamp.png" class="lamp" alt="">
+            <img src="light.png" class="light" id="light" alt="">
+        </div>
+
+        <div class="text-container">
+            <h1>JUST DO IT.</h1>
+            <p>If people say your dreams are crazy, if they laugh at what you think you can do, good. Stay that way.
+                Because what the non-believers fail to understand is that calling a dream crazy is not an insult. It’s a
+                compliment.</p>
+            <a href="">FOR YOUR FUTURE</a>
+            <div class="control">
+                <p>04</p>
+                <div class="line"><span></span></div>
+                <p>05</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var btn = document.getElementById("btn");
+        var light = document.getElementById("light");
+
+        function toggleBtn(){
+            btn.classList.toggle("active");
+            light.classList.toggle("on")
+        }
+
+    </script>
+
+</body>
+
+</html>
