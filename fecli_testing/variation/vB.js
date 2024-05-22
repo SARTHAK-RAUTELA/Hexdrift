@@ -1,27 +1,27 @@
 (function () {
-	try {
-	  /* main variables */
-	  var debug = 0;
-	  var variation_name = "TT-144";
-  
-	  /* all Pure helper functions */
-  
-	  function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-		var interval = setInterval(function () {
-		  if (
-			document &&
-			document.querySelector(selector) &&
-			document.querySelectorAll(selector).length > 0
-		  ) {
-			clearInterval(interval);
-			trigger();
-		  }
-		}, delayInterval);
-		setTimeout(function () {
-		  clearInterval(interval);
-		}, delayTimeout);
-	  }
-    var thumbtechservices = `
+    try {
+        /* main variables */
+        var debug = 0;
+        var variation_name = "TT-144";
+
+        /* all Pure helper functions */
+
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+            var interval = setInterval(function () {
+                if (
+                    document &&
+                    document.querySelector(selector) &&
+                    document.querySelectorAll(selector).length > 0
+                ) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, delayInterval);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, delayTimeout);
+        }
+        var thumbtechservices = `
     <div class="thumbtechservices">
        <h2 class="bmheading">Popular services near you.</h2>
        <div class="bm-item">
@@ -44,9 +44,9 @@
     </div>
  `;
 
- var reviews = ` <div class="reviewsection disktop"> <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src=" https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png "></span>  with over 300k reviews on the App Store</p></div> `;
- var mobilereviews = ` <div class="reviewsection mobile"> <p> Trusted by +4.5M people <span>4.9/5 <img src=" https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png ">with over 300k reviews on the App Store</span>  </p></div> `;
- var listli  = `
+        var reviews = ` <div class="reviewsection disktop"> <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src=" https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png "></span>  with over 300k reviews on the App Store</p></div> `;
+        var mobilereviews = ` <div class="reviewsection mobile"> <p> Trusted by +4.5M people <span>4.9/5 <img src=" https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png ">with over 300k reviews on the App Store</span>  </p></div> `;
+        var listli = `
  <h1 class="mb5 bm_homepage-hero">
      <div class="bm_homepage-hero_textCarousel">
         <ul class="bm_homepage-herolist">
@@ -59,83 +59,83 @@
         </ul>
     </div><br>made easy.
 </h1>`;
-  
-	  /* Variation Init */
-	   function init() {
-      document.querySelector("body").classList.add(variation_name);
-      var textValuesToCheck = [
-        'Popular services in '
-      ];
-    
-      var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
 
-      // Loop through the elements
-      elementsToModify.forEach((element) => {
-          // Get the full text content of the element
-          var fullTextContent = element.textContent.trim();
-          
-          // Check if the text content starts with any value in the array
-          if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
-              // Add the "bmhidesection" class to the parent element
-              var parentElement = element.closest('.bg-white');
-              if (parentElement) {
-                  parentElement.classList.add('bmhidesection');
-              }
-          }
-      });
+        /* Variation Init */
+        function init() {
+            document.querySelector("body").classList.add(variation_name);
+            var textValuesToCheck = [
+                'Popular services in '
+            ];
 
-      // Check if the element .bmhidesection [class*="Type_title5"] exists
-      if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
-        // If it exists, insert content after it
-        document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
-      } else {
-        // If it does not exist, check for the element [data-testid="root"] + div
-        var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
-        if (rootSiblingElement) {
-          rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
-        } else {
-          // If neither of the above elements exist, check for [class*="composable-customer-header"] + div
-          var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
-          if (customerHeaderSiblingElement) {
-            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
-          }
+            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
+
+            // Loop through the elements
+            elementsToModify.forEach((element) => {
+                // Get the full text content of the element
+                var fullTextContent = element.textContent.trim();
+
+                // Check if the text content starts with any value in the array
+                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
+                    // Add the "bmhidesection" class to the parent element
+                    var parentElement = element.closest('.bg-white');
+                    if (parentElement) {
+                        parentElement.classList.add('bmhidesection');
+                    }
+                }
+            });
+
+            // Check if the element .bmhidesection [class*="Type_title5"] exists
+            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
+                // If it exists, insert content after it
+                document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
+            } else {
+                // If it does not exist, check for the element [data-testid="root"] + div
+                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
+                if (rootSiblingElement) {
+                    rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                } else {
+                    // If neither of the above elements exist, check for [class*="composable-customer-header"] + div
+                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
+                    if (customerHeaderSiblingElement) {
+                        customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                    }
+                }
+            }
+
+            document.querySelector('#uniqueId4').insertAdjacentHTML('afterend', reviews);
+            document.querySelector('#uniqueId4').insertAdjacentHTML('afterend', mobilereviews);
+
+            document.querySelector('html body.TT-144 [class*="homepage-hero_mainSection"] > div:first-child').insertAdjacentHTML('afterend', listli);
+
+            // Select the element you want to clone
+            var itemToClone = document.querySelector('.thumbtechservices + .bg-white ');
+            if (itemToClone) {
+                // Clone the selected element
+                var clonedItem = itemToClone.cloneNode(true);
+
+                // Insert the cloned element after the .thumbtechservices element
+                document.querySelector('.thumbtechservices + .bg-white +  .bg-white').insertAdjacentElement('afterend', clonedItem);
+
+            }
+            var itemToClone2 = document.querySelector('.bmhidesection + div ');
+            if (itemToClone2) {
+                // Clone the selected element
+                var clonedItem1 = itemToClone2.cloneNode(true);
+
+                // Insert the cloned element after the .thumbtechservices element
+                document.querySelector('.bmhidesection + div + div').insertAdjacentElement('afterend', clonedItem1);
+
+            }
+
+
+
         }
-      }
 
-      document.querySelector('#uniqueId4').insertAdjacentHTML('afterend', reviews);
-      document.querySelector('#uniqueId4').insertAdjacentHTML('afterend', mobilereviews);
-
-     document.querySelector('html body.TT-144 [class*="homepage-hero_mainSection"] > div:first-child').insertAdjacentHTML('afterend', listli);
-      
-      // Select the element you want to clone
-  var itemToClone = document.querySelector('.thumbtechservices + .bg-white ');
- if (itemToClone) {
-      // Clone the selected element
-      var clonedItem = itemToClone.cloneNode(true);
-
-      // Insert the cloned element after the .thumbtechservices element
-      document.querySelector('.thumbtechservices + .bg-white +  .bg-white').insertAdjacentElement('afterend', clonedItem);
-     
-  }
-  var itemToClone2 = document.querySelector('.bmhidesection + div ');
-  if (itemToClone2) {
-       // Clone the selected element
-       var clonedItem1 = itemToClone2.cloneNode(true);
- 
-       // Insert the cloned element after the .thumbtechservices element
-       document.querySelector('.bmhidesection + div + div').insertAdjacentElement('afterend', clonedItem1);
-      
-   }
-  
-      
-
-     }
-  
-	  /* Initialise variation */
-	  waitForElement("body", function(){
-		setTimeout(init, 4000);
-	  }, 50, 15000);
-	} catch (e) {
-	  if (debug) console.log(e, "error in Test" + variation_name);
-	}
-  })();
+        /* Initialise variation */
+        waitForElement("body", function () {
+            setTimeout(init, 4000);
+        }, 50, 15000);
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name);
+    }
+})();
