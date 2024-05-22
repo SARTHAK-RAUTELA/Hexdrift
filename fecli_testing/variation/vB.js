@@ -47,15 +47,15 @@
         var reviews = ` <div class="reviewsection disktop"> <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src=" https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png "></span>  with over 300k reviews on the App Store</p></div> `;
         var mobilereviews = ` <div class="reviewsection mobile"> <p> Trusted by +4.5M people <span>4.9/5 <img src=" https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png ">with over 300k reviews on the App Store</span>  </p></div> `;
         var listli = `
- <h1 class="mb5 bm_homepage-hero">
+ <h1 class="mb5 bm_homepage-hero">Home
      <div class="bm_homepage-hero_textCarousel">
         <ul class="bm_homepage-herolist">
           
-           <li><span>Home</span>  improvement,</li> <br>
-           <li><span>Home</span>  repair,</li><br>
-           <li><span>Home</span>  inspection,</li><br>
-           <li> <span>Home</span> cleaning,</li><br>
-           <li><span>Home</span> improvement,</li><br>
+           <li><span></span>  improvement,</li> <br>
+           <li><span></span>  repair,</li><br>
+           <li><span></span>  inspection,</li><br>
+           <li> <span></span> cleaning,</li><br>
+           <li><span></span> improvement,</li><br>
         </ul>
     </div><br>made easy.
 </h1>`;
