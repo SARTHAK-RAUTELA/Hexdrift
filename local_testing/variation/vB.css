@@ -102,7 +102,7 @@ html body.TT-144 [class*="homepage-hero_overflowOnTallScreens"] [class*="homepag
     font-size: 20px !important;
     font-weight: 700 !important;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 64px;
     margin-bottom: 15px;
     }
     html body.TT-144 .reviewsection p {
@@ -113,7 +113,7 @@ html body.TT-144 [class*="homepage-hero_overflowOnTallScreens"] [class*="homepag
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 19px;
+    margin-top: 10px;
     }
     html body.TT-144 .reviewsection p span img {
     max-width: 20px;
@@ -152,6 +152,9 @@ html body.TT-144 [class*="homepage-hero_overflowOnTallScreens"] [class*="homepag
     @media (max-width: 768px) {
     html body.TT-144 .bm-item li {
     flex: 1 1 calc(50% - 10px);
+    }
+    .bmhideservice{
+        display: none!important;
     }
     html body.TT-144 [class*="homepage-hero_overflowOnTallScreens"]>div {
     padding: 0 10px;
@@ -321,3 +324,9 @@ html body.TT-144 [class*="homepage-hero_overflowOnTallScreens"] [class*="homepag
     padding-left: 32px !important;
     }
     }
+   
+    [class*="zipCodeError"] {
+            text-align: center;
+    } 
+
+
