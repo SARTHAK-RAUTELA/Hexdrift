@@ -330,3 +330,8 @@ html body.TT-144 [class*="homepage-hero_overflowOnTallScreens"] [class*="homepag
     } 
 
 
+
+
+    .bmhidesection + div {
+        display: none;
+    }
