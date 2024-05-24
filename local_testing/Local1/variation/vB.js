@@ -111,11 +111,8 @@
 
     /* Initialise variation */
     waitForElement("body", function () {
-      var initInterval = setInterval(init, 500);
-      setTimeout(function () {
-        clearInterval(initInterval);
-      }, 15000);
-    }, 50, 15000);
+      var initInterval = setInterval(init, 100);
+    }, 50, 5000);
 
   } catch (e) {
     if (debug) console.log(e, "error in Test" + variation_name);
