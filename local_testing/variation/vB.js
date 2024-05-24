@@ -105,7 +105,7 @@
 
     /* Initialise variation */
     waitForElement("body", function () {
-      setTimeout(init, 3000);
+      setTimeout(init, 500);
     }, 50, 15000);
   } catch (e) {
     if (debug) console.log(e, "error in Test" + variation_name);
