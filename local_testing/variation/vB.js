@@ -28,7 +28,7 @@
        <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
       
        <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png"> <p>Handyman <br> <span>j</span></p></a></li>
-       <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
+       <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
        
        <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
     
@@ -105,7 +105,10 @@
 
     /* Initialise variation */
     waitForElement("body", function () {
-      setTimeout(init, 500);
+      var initInterval = setInterval(init, 500);
+      setTimeout(function () {
+        clearInterval(initInterval);
+      }, 15000);
     }, 50, 15000);
   } catch (e) {
     if (debug) console.log(e, "error in Test" + variation_name);
