@@ -6642,6 +6642,7 @@ html body.cre-t-81 .slide-heading>div {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 html body.cre-t-81 .slide-heading>div.active>p {
