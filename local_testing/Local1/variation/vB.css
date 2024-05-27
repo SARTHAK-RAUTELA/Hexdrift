@@ -278,7 +278,7 @@ html body.cre-t-81 .cre-t-5-try-garden-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* margin-left: 155px; */
+    margin-left: 155px;
     justify-content: flex-start;
     align-items: center;
 }
@@ -2776,6 +2776,7 @@ html body.cre-t-81 .cre-t-5-draw-header {
     font-weight: 700;
     line-height: 32px;
     text-align: center;
+    margin-bottom: 20px;
 
 }
 
@@ -6482,6 +6483,7 @@ html body.cre-t-81 .cre-growveg .reviewslider .cre-img img {
     html body.cre-t-81 .slider-text-81 {
         text-align: center;
         font-size: 15px;
+        font-family: Nunito Sans, sans-serif;
     }
 
     html body.cre-t-81 .slider-text-81-mobile {
@@ -7228,7 +7230,7 @@ html body.cre-t-81 .swiper-pagination-5-experts {
 }
 
 @media(max-width:1023px) {
-   
+
 
     html body.cre-t-81 .cre-t-5-hero-main {
         display: flex;
@@ -7323,11 +7325,8 @@ html body.cre-t-81 .swiper-pagination-5-experts {
 
 }
 
-@media (max-width: 1024px) {
-    html body.cre-t-81 .cre-t-5-try-garden-container .cre-t-5-try-garden-main {
-        position: relative;
-    }
 
+@media (max-width: 1023px) {
     html body.cre-t-81 .cre-t-5-try-garden-container .cre-t-5-try-garden-main::after {
         content: "";
         background: url('data:image/svg+xml;utf8,<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="130.89453px" height="132.83435px" viewBox="0 0 130.89453 132.83435" version="1.1"><g id="arrow" transform="matrix(0.4848103 0.8746193 -0.8746193 0.4848103 84.83789 1.359314)"><path d="M0.000165053 -9.34617e-13C0.000165053 -9.34617e-13 0.745664 69.0944 84.0387 81.6842" id="Path" fill="none" fill-rule="evenodd" stroke="%231DC089" stroke-width="2"/><path d="M70.1993 51.0529L95.0001 82.822L54.8077 97.0003" id="Path-2" fill="none" fill-rule="evenodd" stroke="%231DC089" stroke-width="2"/></g></svg>');
@@ -7340,6 +7339,13 @@ html body.cre-t-81 .swiper-pagination-5-experts {
         background-size: 100%;
         rotate: -6deg;
     }
+}
+
+@media (max-width: 1024px) {
+    html body.cre-t-81 .cre-t-5-try-garden-container .cre-t-5-try-garden-main {
+        position: relative;
+    }
+
 
     html body.cre-t-81 .cre-t-5-hero-wrapper {
         padding-top: 17px;
