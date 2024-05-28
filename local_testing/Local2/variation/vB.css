@@ -6383,6 +6383,7 @@ html body.cre-t-81 .cre-stickycta {
     padding: 15px;
     z-index: 8;
     display: none;
+    margin-left: 0;
 }
 
 html body.cre-t-81.Creshowitem .cre-stickycta {
@@ -7494,14 +7495,6 @@ html body.cre-t-81 .slide-heading>div>img {
 
 @media(max-width:768px) {
 
-    /* html body.cre-t-81 .slide-heading div {
-        display: none;
-    }
-
-    html body.cre-t-81 .slide-heading div.slide1,
-    html body.cre-t-81 .slide-heading div.slide2 {
-        display: flex;
-    } */
     html body.cre-t-81 .cre-81-GrowwithConfidence,
     html body.cre-t-81 .cre-81-gardeningMethod {
         margin-top: 15px
@@ -7541,6 +7534,7 @@ html body.cre-t-81 .slide-heading>div>img {
         width: 11.2px;
         height: 11.2px;
     }
+
 }
 
 html body.cre-t-81 .cre-t-5-draw-bottom-wrapper:has(.cre-t-5-draw-bottom-item1.swiper-slide-active) {
@@ -7594,4 +7588,14 @@ html body.cre-t-81 .cre-t-5-draw-bottom-wrapper:has(.cre-t-5-draw-bottom-item1.s
 
 html body.cre-t-81 .cre-81-graden-planer-text ul li {
     margin-bottom: 15px;
+}
+
+html body.cre-t-81 .cre-t-5-draw-header+h2 {
+    text-align: center;
+    margin-top: 0;
+
+}
+
+html body.cre-t-81 .cre-t-5-draw-top .cre-t-5-draw-header {
+    margin-bottom: 8px;
 }
