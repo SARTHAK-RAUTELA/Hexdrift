@@ -1,72 +1,72 @@
 (function () {
-	var debug = 0;
-	var variation_name = "cre-t-81";
-	try {
-	  function waitForElement(selector, trigger) {
-		var interval = setInterval(function () {
-		  if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-			clearInterval(interval);
-			trigger();
-		  }
-		}, 50);
-		setTimeout(function () {
-		  clearInterval(interval);
-		}, 15000);
-	  }
-  
-	  function live(selector, event, callback, context) {
-		/****Helper Functions****/
-		// helper for enabling IE 8 event bindings
-		function addEvent(el, type, handler) {
-		  if (el.attachEvent) el.attachEvent("on" + type, handler);
-		  else el.addEventListener(type, handler);
-		}
-		// matches polyfill
-		this.Element &&
-		  (function (ElementPrototype) {
-			ElementPrototype.matches =
-			  ElementPrototype.matches ||
-			  ElementPrototype.matchesSelector ||
-			  ElementPrototype.webkitMatchesSelector ||
-			  ElementPrototype.msMatchesSelector ||
-			  function (selector) {
-				var node = this,
-				  nodes = (node.parentNode || node.document).querySelectorAll(selector),
-				  i = -1;
-				while (nodes[++i] && nodes[i] != node);
-				return !!nodes[i];
-			  };
-		  })(Element.prototype);
-		// live binding helper using matchesSelector
-		function live(selector, event, callback, context) {
-		  addEvent(context || document, event, function (e) {
-			var found,
-			  el = e.target || e.srcElement;
-			while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-			if (found) callback.call(el, e);
-		  });
-		}
-		live(selector, event, callback, context);
-	  }
-	  function scrollToEl(el) {
-		var scrollHeight = document.querySelector(el);
-		scrollHeight = scrollHeight && scrollHeight.getBoundingClientRect().top || 0;
-		scrollHeight = scrollHeight + scrollY - 50;
-		scrollTo({ top: scrollHeight, behavior: 'smooth' });
-	  }
-	  function waitForSwiper(trigger) {
-		var interval = setInterval(function () {
-		  if (typeof window.Swiper != "undefined") {
-			clearInterval(interval);
-			trigger();
-		  }
-		}, 50);
-		setTimeout(function () {
-		  clearInterval(interval);
-		}, 15000);
-	  }
-  
-	  var uspOne = `
+    var debug = 0;
+    var variation_name = "cre-t-81";
+    try {
+        function waitForElement(selector, trigger) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+
+        function live(selector, event, callback, context) {
+            /****Helper Functions****/
+            // helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent("on" + type, handler);
+                else el.addEventListener(type, handler);
+            }
+            // matches polyfill
+            this.Element &&
+                (function (ElementPrototype) {
+                    ElementPrototype.matches =
+                        ElementPrototype.matches ||
+                        ElementPrototype.matchesSelector ||
+                        ElementPrototype.webkitMatchesSelector ||
+                        ElementPrototype.msMatchesSelector ||
+                        function (selector) {
+                            var node = this,
+                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                                i = -1;
+                            while (nodes[++i] && nodes[i] != node);
+                            return !!nodes[i];
+                        };
+                })(Element.prototype);
+            // live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found,
+                        el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e);
+                });
+            }
+            live(selector, event, callback, context);
+        }
+        function scrollToEl(el) {
+            var scrollHeight = document.querySelector(el);
+            scrollHeight = scrollHeight && scrollHeight.getBoundingClientRect().top || 0;
+            scrollHeight = scrollHeight + scrollY - 50;
+            scrollTo({ top: scrollHeight, behavior: 'smooth' });
+        }
+        function waitForSwiper(trigger) {
+            var interval = setInterval(function () {
+                if (typeof window.Swiper != "undefined") {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+
+        var uspOne = `
 		<div class="cre-t-81-usp-content1-wrapper cre-t-81-usp-content-wrapper">
 		<div class="cre-t-81-usp-content-1-container cre-t-81-usp-content-container cre-t-81-caret">
 			<div class="cre-t-81-usp-content-1-main">
@@ -83,8 +83,8 @@
 		</div>
 	</div>
 	`;
-  
-	  var uspTwo = ` 
+
+        var uspTwo = ` 
 	<div class="cre-t-81-usp-content2-wrapper cre-t-81-usp-content-wrapper">
 	  <div class="cre-t-81-usp-content-2-container cre-t-81-usp-content-container cre-t-81-caret">
 		<div class="cre-t-81-usp-content-2-main">
@@ -97,8 +97,8 @@
 		</div>
 	  </div>
 	</div>`;
-  
-	  var uspThree = ` 
+
+        var uspThree = ` 
 	<div class="cre-t-81-usp-content3-wrapper cre-t-81-usp-content-wrapper">
 	  <div class="cre-t-81-usp-content-3-container cre-t-81-usp-content-container cre-t-81-caret">
 		<div class="cre-t-81-usp-content-3-main">
@@ -114,8 +114,8 @@
 		</div>
 	  </div>
 	</div>`;
-  
-	  var uspFour = `<div class="cre-t-81-usp-content4-wrapper cre-t-81-usp-content-wrapper">
+
+        var uspFour = `<div class="cre-t-81-usp-content4-wrapper cre-t-81-usp-content-wrapper">
 	  <div class="cre-t-81-usp-content-4-container cre-t-81-usp-content-container cre-t-81-caret">
 		<div class="cre-t-81-usp-content-4-main">
 		  <div class="cre-t-81-usp-header">Packed with expert guidance at your fingertips</div>
@@ -135,8 +135,8 @@
 		</div>
 	  </div>
 	</div>`;
-  
-	  var uspFive = `<div class="cre-t-81-usp-content5-wrapper cre-t-81-usp-content-wrapper">
+
+        var uspFive = `<div class="cre-t-81-usp-content5-wrapper cre-t-81-usp-content-wrapper">
 	  <div class=" cre-t-81-usp-content-6-container cre-t-81-usp-content-container cre-t-81-caret">
 		<div class="cre-t-81-usp-content-5-main">
 		  <div class="cre-t-81-usp-header">Don't just take our word for it!</div>
@@ -404,15 +404,15 @@
 		</div>
 	  </div>
 	</div>`;
-	  var mobileNavitem = `<ul class="mobile-nav-81">
+        var mobileNavitem = `<ul class="mobile-nav-81">
 	<li> <p class="overview-t81-mobile">Overview</p><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link" style="width:20px"></li>
 	<li><p class="perfectPlan-t81">Create Your Plan</p><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link" style="width:20px"></li>
 	<li><p class="personalized-calendar-81">Personalized Planting Calendar</p><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link" style="width:20px"></li>
 	<li><p class="maximizeharvest-t81">Maximize Your Harvest</p><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link" style="width:20px"></li>
 	<li><a href="/account/create-account/" class="Cre-T-81-StickyNav-CTA">Get Started Free</a></li>
   </ul>`
-  
-	  var newstyle = `
+
+        var newstyle = `
   <div class="cre-t-81-usp-content5-wrapper cre-t-81-usp-content-wrapper">
 	<div class="cre-t-81-usp-content-5-container cre-t-81-usp-content-container cre-t-81-caret">
 		<div class="cre-t-81-usp-content-5-main">
@@ -425,75 +425,75 @@
 		</div>
 	</div>
   </div>`;
-  
-	  var creBugSection =
-		"" +
-		'  <div class="cre-t-5-protect-left cre-t-5-protect-left-mobile">' +
-		'      <div class="cre-t-5-protect-left-bubble">' +
-		'          <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T-5/Circle+image.png" alt="Circle" />' +
-		"  " +
-		"      </div>" +
-		'      <div class="cre-t-5-protect-left-pests-wrapper">' +
-		'          <div class="cre-t-5-protect-left-pests cre-t-5-protect-left-pests1">' +
-		'              <div class="cre-t-5-protect-left-pests-icon">' +
-		'                  <img src="https://gardenplannerwebsites.azureedge.net/theme/growveg/beneficial-insects-icon-btn.jpg" alt="insects-icon-btn" />' +
-		"              </div>" +
-		'              <div class="cre-t-5-protect-left-pests-content">' +
-		'                  <div class="cre-t-5-protect-left-pests-img">' +
-		'                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="25px" height="27.246094px" viewBox="0 0 25 27.246094" version="1.1">' +
-		'                  <g id="">' +
-		'                    <g id="" fill="#12982E">' +
-		'                      <path d="M24.6093 12.5C24.6093 5.81221 19.1878 0.390676 12.5 0.390676C5.81215 0.390676 0.390624 5.81221 0.390624 12.5C0.390624 19.1878 5.81215 24.6094 12.5 24.6094C19.1878 24.6094 24.6093 19.1878 24.6093 12.5ZM11.0993 18.9118C10.7942 19.2169 10.2995 19.2169 9.99439 18.9118L4.91628 13.8337C4.61124 13.5286 4.61124 13.0339 4.91628 12.7288L6.02115 11.624C6.32623 11.3189 6.82095 11.3189 7.12603 11.624L10.5468 15.0448L17.8739 7.71779C18.179 7.41266 18.6738 7.41266 18.9788 7.71779L20.0837 8.82262C20.3887 9.12769 20.3887 9.62241 20.0837 9.92749L11.0993 18.9118Z" />' +
-		"                    </g>" +
-		"                  </g>" +
-		"                </svg>" +
-		"                  </div>" +
-		'                  <div class="cre-t-5-protect-left-pests-text">' +
-		'                      <h1 class="cre-t-5-protect-left-pests-text-wrapper">Attract beneficial insects</h1>' +
-		"                  </div>" +
-		"              </div>" +
-		"          </div>" +
-		'          <div class="cre-t-5-protect-left-pests cre-t-5-protect-left-pests2">' +
-		'              <div class="cre-t-5-protect-left-pests-icon">' +
-		'                  <img src="https://gardenplannerwebsites.azureedge.net/theme/growveg/pests-icon-btn.jpg" alt="pests-icon-btn" />' +
-		"              </div>" +
-		'              <div class="cre-t-5-protect-left-pests-content">' +
-		'                  <div class="cre-t-5-protect-left-pests-img">' +
-		'                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="25px" height="27.246094px" viewBox="0 0 25 27.246094" version="1.1">' +
-		'                  <g id="">' +
-		'                    <g id="" fill="#C80800">' +
-		'                      <path d="M12.5 0.390676C5.81053 0.390676 0.390624 5.81059 0.390624 12.5C0.390624 19.1895 5.81053 24.6094 12.5 24.6094C19.1894 24.6094 24.6093 19.1895 24.6093 12.5C24.6093 5.81059 19.1894 0.390676 12.5 0.390676ZM18.4374 15.6787C18.6669 15.9082 18.6669 16.2793 18.4374 16.5088L16.5039 18.4375C16.2744 18.667 15.9033 18.667 15.6738 18.4375L12.5 15.2344L9.32129 18.4375C9.09178 18.667 8.72066 18.667 8.49121 18.4375L6.5625 16.5039C6.333 16.2744 6.333 15.9033 6.5625 15.6738L9.7656 12.5L6.5625 9.32134C6.333 9.09184 6.333 8.72072 6.5625 8.49126L8.49607 6.55764C8.72557 6.32814 9.09665 6.32814 9.32615 6.55764L12.5 9.76565L15.6787 6.56256C15.9082 6.33305 16.2793 6.33305 16.5087 6.56256L18.4423 8.49613C18.6719 8.72563 18.6719 9.0967 18.4423 9.3262L15.2343 12.5L18.4374 15.6787Z" />' +
-		"                    </g>" +
-		"                  </g>" +
-		"                </svg>" +
-		"                  </div>" +
-		'                  <div class="cre-t-5-protect-left-pests-text">' +
-		'                      <h1 class="cre-t-5-protect-left-pests-text-wrapper">Repel pests</h1>' +
-		"                  </div>" +
-		"              </div>" +
-		"          </div>" +
-		'          <div class="cre-t-5-protect-left-pests cre-t-5-protect-left-pests3">' +
-		'              <div class="cre-t-5-protect-left-pests-icon">' +
-		'                  <img src="https://gardenplannerwebsites.azureedge.net/theme/growveg/diseases-icon-btn.jpg" alt="protect-left-pests-icon"/>' +
-		"              </div>" +
-		'              <div class="cre-t-5-protect-left-pests-content">' +
-		'                  <div class="cre-t-5-protect-left-pests-img">' +
-		'                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="25px" height="27.246094px" viewBox="0 0 25 27.246094" version="1.1">' +
-		'                  <g id="">' +
-		'                    <g id="" fill="#C80800">' +
-		'                      <path d="M12.5 0.390676C5.81053 0.390676 0.390624 5.81059 0.390624 12.5C0.390624 19.1895 5.81053 24.6094 12.5 24.6094C19.1894 24.6094 24.6093 19.1895 24.6093 12.5C24.6093 5.81059 19.1894 0.390676 12.5 0.390676ZM18.4374 15.6787C18.6669 15.9082 18.6669 16.2793 18.4374 16.5088L16.5039 18.4375C16.2744 18.667 15.9033 18.667 15.6738 18.4375L12.5 15.2344L9.32129 18.4375C9.09178 18.667 8.72066 18.667 8.49121 18.4375L6.5625 16.5039C6.333 16.2744 6.333 15.9033 6.5625 15.6738L9.7656 12.5L6.5625 9.32134C6.333 9.09184 6.333 8.72072 6.5625 8.49126L8.49607 6.55764C8.72557 6.32814 9.09665 6.32814 9.32615 6.55764L12.5 9.76565L15.6787 6.56256C15.9082 6.33305 16.2793 6.33305 16.5087 6.56256L18.4423 8.49613C18.6719 8.72563 18.6719 9.0967 18.4423 9.3262L15.2343 12.5L18.4374 15.6787Z" />' +
-		"                    </g>" +
-		"                  </g>" +
-		"                </svg>" +
-		"                  </div>" +
-		'                  <div class="cre-t-5-protect-left-pests-text">' +
-		'                      <h1 class="cre-t-5-protect-left-pests-text-wrapper">Treat & prevent plant diseases</h1>' +
-		"                  </div>" +
-		"              </div>" +
-		"          </div>" +
-		"      </div>" +
-		"  </div>";
-	  var heroSection = `<div class="cre-t-5-hero-wrapper container-T-81" id="hero-wrapper">
+
+        var creBugSection =
+            "" +
+            '  <div class="cre-t-5-protect-left cre-t-5-protect-left-mobile">' +
+            '      <div class="cre-t-5-protect-left-bubble">' +
+            '          <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T-5/Circle+image.png" alt="Circle" />' +
+            "  " +
+            "      </div>" +
+            '      <div class="cre-t-5-protect-left-pests-wrapper">' +
+            '          <div class="cre-t-5-protect-left-pests cre-t-5-protect-left-pests1">' +
+            '              <div class="cre-t-5-protect-left-pests-icon">' +
+            '                  <img src="https://gardenplannerwebsites.azureedge.net/theme/growveg/beneficial-insects-icon-btn.jpg" alt="insects-icon-btn" />' +
+            "              </div>" +
+            '              <div class="cre-t-5-protect-left-pests-content">' +
+            '                  <div class="cre-t-5-protect-left-pests-img">' +
+            '                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="25px" height="27.246094px" viewBox="0 0 25 27.246094" version="1.1">' +
+            '                  <g id="">' +
+            '                    <g id="" fill="#12982E">' +
+            '                      <path d="M24.6093 12.5C24.6093 5.81221 19.1878 0.390676 12.5 0.390676C5.81215 0.390676 0.390624 5.81221 0.390624 12.5C0.390624 19.1878 5.81215 24.6094 12.5 24.6094C19.1878 24.6094 24.6093 19.1878 24.6093 12.5ZM11.0993 18.9118C10.7942 19.2169 10.2995 19.2169 9.99439 18.9118L4.91628 13.8337C4.61124 13.5286 4.61124 13.0339 4.91628 12.7288L6.02115 11.624C6.32623 11.3189 6.82095 11.3189 7.12603 11.624L10.5468 15.0448L17.8739 7.71779C18.179 7.41266 18.6738 7.41266 18.9788 7.71779L20.0837 8.82262C20.3887 9.12769 20.3887 9.62241 20.0837 9.92749L11.0993 18.9118Z" />' +
+            "                    </g>" +
+            "                  </g>" +
+            "                </svg>" +
+            "                  </div>" +
+            '                  <div class="cre-t-5-protect-left-pests-text">' +
+            '                      <h1 class="cre-t-5-protect-left-pests-text-wrapper">Attract beneficial insects</h1>' +
+            "                  </div>" +
+            "              </div>" +
+            "          </div>" +
+            '          <div class="cre-t-5-protect-left-pests cre-t-5-protect-left-pests2">' +
+            '              <div class="cre-t-5-protect-left-pests-icon">' +
+            '                  <img src="https://gardenplannerwebsites.azureedge.net/theme/growveg/pests-icon-btn.jpg" alt="pests-icon-btn" />' +
+            "              </div>" +
+            '              <div class="cre-t-5-protect-left-pests-content">' +
+            '                  <div class="cre-t-5-protect-left-pests-img">' +
+            '                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="25px" height="27.246094px" viewBox="0 0 25 27.246094" version="1.1">' +
+            '                  <g id="">' +
+            '                    <g id="" fill="#C80800">' +
+            '                      <path d="M12.5 0.390676C5.81053 0.390676 0.390624 5.81059 0.390624 12.5C0.390624 19.1895 5.81053 24.6094 12.5 24.6094C19.1894 24.6094 24.6093 19.1895 24.6093 12.5C24.6093 5.81059 19.1894 0.390676 12.5 0.390676ZM18.4374 15.6787C18.6669 15.9082 18.6669 16.2793 18.4374 16.5088L16.5039 18.4375C16.2744 18.667 15.9033 18.667 15.6738 18.4375L12.5 15.2344L9.32129 18.4375C9.09178 18.667 8.72066 18.667 8.49121 18.4375L6.5625 16.5039C6.333 16.2744 6.333 15.9033 6.5625 15.6738L9.7656 12.5L6.5625 9.32134C6.333 9.09184 6.333 8.72072 6.5625 8.49126L8.49607 6.55764C8.72557 6.32814 9.09665 6.32814 9.32615 6.55764L12.5 9.76565L15.6787 6.56256C15.9082 6.33305 16.2793 6.33305 16.5087 6.56256L18.4423 8.49613C18.6719 8.72563 18.6719 9.0967 18.4423 9.3262L15.2343 12.5L18.4374 15.6787Z" />' +
+            "                    </g>" +
+            "                  </g>" +
+            "                </svg>" +
+            "                  </div>" +
+            '                  <div class="cre-t-5-protect-left-pests-text">' +
+            '                      <h1 class="cre-t-5-protect-left-pests-text-wrapper">Repel pests</h1>' +
+            "                  </div>" +
+            "              </div>" +
+            "          </div>" +
+            '          <div class="cre-t-5-protect-left-pests cre-t-5-protect-left-pests3">' +
+            '              <div class="cre-t-5-protect-left-pests-icon">' +
+            '                  <img src="https://gardenplannerwebsites.azureedge.net/theme/growveg/diseases-icon-btn.jpg" alt="protect-left-pests-icon"/>' +
+            "              </div>" +
+            '              <div class="cre-t-5-protect-left-pests-content">' +
+            '                  <div class="cre-t-5-protect-left-pests-img">' +
+            '                      <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="25px" height="27.246094px" viewBox="0 0 25 27.246094" version="1.1">' +
+            '                  <g id="">' +
+            '                    <g id="" fill="#C80800">' +
+            '                      <path d="M12.5 0.390676C5.81053 0.390676 0.390624 5.81059 0.390624 12.5C0.390624 19.1895 5.81053 24.6094 12.5 24.6094C19.1894 24.6094 24.6093 19.1895 24.6093 12.5C24.6093 5.81059 19.1894 0.390676 12.5 0.390676ZM18.4374 15.6787C18.6669 15.9082 18.6669 16.2793 18.4374 16.5088L16.5039 18.4375C16.2744 18.667 15.9033 18.667 15.6738 18.4375L12.5 15.2344L9.32129 18.4375C9.09178 18.667 8.72066 18.667 8.49121 18.4375L6.5625 16.5039C6.333 16.2744 6.333 15.9033 6.5625 15.6738L9.7656 12.5L6.5625 9.32134C6.333 9.09184 6.333 8.72072 6.5625 8.49126L8.49607 6.55764C8.72557 6.32814 9.09665 6.32814 9.32615 6.55764L12.5 9.76565L15.6787 6.56256C15.9082 6.33305 16.2793 6.33305 16.5087 6.56256L18.4423 8.49613C18.6719 8.72563 18.6719 9.0967 18.4423 9.3262L15.2343 12.5L18.4374 15.6787Z" />' +
+            "                    </g>" +
+            "                  </g>" +
+            "                </svg>" +
+            "                  </div>" +
+            '                  <div class="cre-t-5-protect-left-pests-text">' +
+            '                      <h1 class="cre-t-5-protect-left-pests-text-wrapper">Treat & prevent plant diseases</h1>' +
+            "                  </div>" +
+            "              </div>" +
+            "          </div>" +
+            "      </div>" +
+            "  </div>";
+        var heroSection = `<div class="cre-t-5-hero-wrapper container-T-81" id="hero-wrapper">
 		<div class="cre-t-5-hero-container">
 			<div class="cre-t-5-hero-main">
 				<div class="cre-t-5-hero-top">
@@ -2982,7 +2982,7 @@
 			</div>
 		</div>
 	</div>`
-	  var Mobileheader = `<div class="mobile-header-t81">
+        var Mobileheader = `<div class="mobile-header-t81">
 	<div class="header-left-t81">
 		<a href="/">
 			<img width="100%" height="100%"
@@ -2994,24 +2994,24 @@
 			Free</a>
 	</div>
   </div>`
-	  var secondryusp = `<div class="Cre-StickyNav-mobile">
+        var secondryusp = `<div class="Cre-StickyNav-mobile">
   <div class="CRE-navStickyItem">
-	<p class="Scrollactive overview-t81">Overview</p>
+	<p class="Scrollactive overview-t81" dataid="#hero-wrapper">Overview</p>
 	<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link"
 		style="width:20px">
   </div>
   <div class="CRE-navStickyItem">
-	<p class="perfectPlan-t81">Create Your Plan</p>
+	<p class="perfectPlan-t81" dataid="#perfectPlan">Create Your Plan</p>
 	<img src=" https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link"
 		style="width:20px">
   </div>
   <div class="CRE-navStickyItem">
-	<p class="personalized-calendar-t81">Personalized Planting Calendar</p>
+	<p class="personalized-calendar-t81" dataid="#personalized-calendar">Personalized Planting Calendar</p>
 	<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link"
 		style="width:20px">
   </div>
   <div class="CRE-navStickyItem">
-	<p class="maximizeharvest-t81">Maximize Your Harvest</p>
+	<p class="maximizeharvest-t81" dataid="#maximizeharvest">Maximize Your Harvest</p>
 	<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/seemorearrow.png" alt="link"
 		style="width:20px">
   </div>
@@ -3019,338 +3019,338 @@
 	<a href="/account/login">Login</a>
   </div>
   </div>`
-  
-	  function addScript() {
-		var scriptOne = document.createElement("script");
-		scriptOne.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js";
-		document.querySelector("head").appendChild(scriptOne);
-  
-		var swiperCss =
-		  '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" integrity="sha512-ipO1yoQyZS3BeIuv2A8C5AwQChWt2Pi4KU3nUvXxc4TKr8QgG8dPexPAj2JGsJD6yelwKa4c7Y2he9TTkPM4Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
-		document.querySelector("head").insertAdjacentHTML("beforeend", swiperCss);
-	  }
-  
-	  addScript();
-  
-	  function swiperInit() {
-		var swiper = new Swiper("#impressive-Slider", {
-		  autoHeight: true,
-		  loop: true,
-		  pagination: {
-			el: ".swiper-pagination-impressive-Slider",
-			clickable: true,
-		  },
-		  navigation: {
-			nextEl: ".swiper-button-next-impressive-Slider",
-			prevEl: ".swiper-button-prev-impressive-Slider",
-			clickable: true,
-		  },
-  
-		  speed: 850,
-		});
-  
-		var swiperTwo = new Swiper(" .cre-t-5-sow-container .swiper", {
-		  loop: true,
-		  pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		  },
-		  navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-			clickable: true,
-		  },
-		  speed: 850,
-		});
-  
-		var swiperThree = new Swiper(".cre-t-5-experts-sldr", {
-		  slidesPerView: 1,
-		  loop: true,
-		  pagination: {
-			el: ".swiper-pagination-5-experts",
-			clickable: true,
-		  },
-		  navigation: {
-			nextEl: ".swiper-button-next-5-experts",
-			prevEl: ".swiper-button-prev-5-experts",
-		  },
-		  breakpoints: {
-			768: {
-			  slidesPerView: 1,
-			  spaceBetween: 20,
-			},
-			1023: {
-			  slidesPerView: 3,
-			  spaceBetween: 20,
-			},
-		  },
-		  speed: 850,
-		});
-  
-		var swiperFive = new Swiper('.Cre-T83-swiper-container', {
-		  // Swiper options here
-		  // Add any necessary configuration for your Swiper instance
-		  autoHeight: true,
-		  on: {
-			slideChange: function () {
-  
-			  var activeIndex = this.activeIndex;
-  
-			  // Get all slide headings
-			  var headings = document.querySelectorAll('.slide-heading > div');
-  
-			  // Remove active class from all headings
-			  headings.forEach(function (heading) {
-				heading.classList.remove('active');
-			  });
-  
-			  // Add active class to the heading of the active slide
-			  headings[activeIndex].classList.add('active');
-			  console.log(activeIndex)
-  
-			}
-		  },
-		  navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		  },
-		});
-		var deskheadings = document.querySelectorAll('.slide-heading > div');
-		deskheadings.forEach(function (heading, index) {
-		  heading.addEventListener('click', function () {
-			swiperFive.slideToLoop(index); // Use slideToLoop to handle looped swiper correctly
-		  });
-		});
-		var swiperSix = new Swiper('#swiper-t-81', {
-		  // Optional parameters
-		  slidesPerView: 1.5,
-		  centeredSlides: true,
-		  spaceBetween: 20,
-		  loop: true,
-		  lazyLoading: true,
-		  // pagination
-		  pagination: {
-			el: '.swiper-t-81-pagination',
-			dynamicBullets: true,
-		  },
-		  autoplay: {
-			delay: 2000, // Time between slides in milliseconds
-			disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
-		  },
-  
-		});
-  
-		var cre81SwiperaMobile = new Swiper(" .cre-growveg-mobile-wrapper  .cre-t-81-5-review-container .swiper", {
-		  // Optional parameters
-		  direction: "horizontal",
-		  autoHeight: true,
-		  spaceBetween: 20,
-		  slidesPerView: 1,
-		  roundLengths: true,
-		  navigation: {
-			nextEl: " .cre-t-81-5-review-container  .swiper-button-next",
-			prevEl: " .cre-t-81-5-review-container  .swiper-button-prev",
-		  },
-		});
-		var swipermobileseven = new Swiper('.Cre-T83-swiper-container-mobile', {
-		  autoHeight: true,
-		  navigation: {
-			nextEl: ".mobile-perfect-plan .swiper-button-next",
-			prevEl: ".mobile-perfect-plan .swiper-button-prev",
-		  },
-		  on: {
-			slideChange: function () {
-			  var activeIndex = this.activeIndex;
-  
-			  // Get all slide headings
-			  var headings = document.querySelectorAll('.slide-heading-mobile>div');
-  
-			  // Remove active class from all headings
-			  headings.forEach(function (heading) {
-				heading.classList.remove('active');
-			  });
-  
-			  // Add active class to the heading of the active slide
-			  headings[activeIndex].classList.add('active');
-			  console.log(activeIndex)
-			}
-		  }
-		});
-  
-		// Initialize with the first heading active
-		var headings = document.querySelectorAll('.slide-heading-mobile > div');
-		headings.forEach(function (heading, index) {
-		  heading.addEventListener('click', function () {
-			swipermobileseven.slideToLoop(index); // Use slideToLoop to handle looped swiper correctly
-		  });
-		});
-  
-	  }
-  
-  
-	  function bmScroll(bmContentId, bmValue) {
-		const bmContent = document.querySelector(bmContentId);
-		const scrollTop = bmContent.getBoundingClientRect().top + window.pageYOffset - bmValue;
-  
-		window.scrollTo({
-		  top: scrollTop,
-		  behavior: "smooth",
-		});
-	  }
-  
-  
-	  // Function to check the position of the element and add/remove class accordingly
-	  function checkElementPosition() {
-		// Get the element with the class .cre-t-5-draw-header
-		var element = document.querySelector('.cre-t-5-draw-header');
-  
-		// Check if the element is found
-		if (element) {
-		  // Get the position of the element from the top of the page
-		  var positionFromTop = element.getBoundingClientRect().top;
-  
-		  // Check if the position is less than 21px
-		  if (positionFromTop < 21) {
-			// Add a class to the body
-			document.body.classList.add('Creshowitem');
-		  } else {
-			// Remove the class from the body
-			document.body.classList.remove('Creshowitem');
-		  }
-		} else {
-		  console.log('Element not found');
-		}
-	  }
-	  live(".mobile-nav-81>li>a", "click", function () {
-		if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
-		  document.querySelector("#mobile-menu").classList.remove("menu-open")
-		}
-	  })
-  
-	  waitForElement("#page-header .header-upper-pane", function () {
-		if (!document.querySelector(".mobile-header-t81")) {
-		  document.querySelector("#page-header .header-upper-pane").insertAdjacentHTML("afterbegin", Mobileheader)
-		}
-	  }, 50, 15000)
-	  waitForElement(".mobile-header-t81", function () {
-		if (!document.querySelector(".Cre-StickyNav-mobile")) {
-		  document.querySelector(".mobile-header-t81").insertAdjacentHTML("afterend", secondryusp)
-		}
-	  })
-	  waitForElement(".Cre-StickyNav-inner .CRE-navStickyItem p", function () {
-		const navLinks = document.querySelectorAll('.Cre-StickyNav-inner .CRE-navStickyItem p');
-  
-		// Add click event listener to each navigation link
-		navLinks.forEach(link => {
-		  link.addEventListener('click', function (event) {
-			// Remove 'active' class from all links
-			navLinks.forEach(navLink => {
-			  navLink.classList.remove('Scrollactive');
-			});
-  
-			// Add 'active' class to the clicked link
-			link.classList.add('Scrollactive');
-		  });
-		});
-		const navLinksmobile = document.querySelectorAll('.Cre-StickyNav-mobile .CRE-navStickyItem p');
-  
-		// Add click event listener to each navigation link
-		navLinksmobile.forEach(link => {
-		  link.addEventListener('click', function (event) {
-			// Remove 'active' class from all links
-			navLinksmobile.forEach(navLink => {
-			  navLink.classList.remove('Scrollactive');
-			});
-  
-			// Add 'active' class to the clicked link
-			link.classList.add('Scrollactive');
-		  });
-		});
-		live(".overview-t81 , .overview-t81-mobile", "click", function () {
-		  scrollToEl("#hero-wrapper")
-		  if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
-			document.querySelector("#mobile-menu").classList.remove("menu-open")
-		  }
-		})
-		live(".perfectPlan-t81", "click", function () {
-		  scrollToEl("#perfectPlan")
-		  if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
-			document.querySelector("#mobile-menu").classList.remove("menu-open")
-		  }
-		})
-		live(".personalized-calendar-t81 ,.personalized-calendar-81", "click", function () {
-		  scrollToEl("#personalized-calendar")
-		  if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
-			document.querySelector("#mobile-menu").classList.remove("menu-open")
-		  }
-  
-		})
-		live(".maximizeharvest-t81", "click", function () {
-		  scrollToEl("#maximizeharvest")
-		  if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
-			document.querySelector("#mobile-menu").classList.remove("menu-open")
-		  }
-		})
-  
-  
-	  }, 50, 15000)
-  
-	  // Function to debounce the scroll event
-	  function debounce(func, wait, immediate) {
-		var timeout;
-		return function () {
-		  var context = this,
-			args = arguments;
-		  var later = function () {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		  };
-		  var callNow = immediate && !timeout;
-		  clearTimeout(timeout);
-		  timeout = setTimeout(later, wait);
-		  if (callNow) func.apply(context, args);
-		};
-	  }
-  
-	  // Function to check the position of the element and add/remove class accordingly
-	  function checkElementPosition() {
-		// Get the element with the class .cre-t-5-draw-header
-		var element = document.querySelector('.cre-t-5-draw-header');
-  
-		// Check if the element is found
-		if (element) {
-		  // Get the position of the element from the top of the page
-		  var positionFromTop = element.getBoundingClientRect().top;
-  
-		  // Check if the position is less than 21px
-		  if (positionFromTop < 21) {
-			// Add a class to the body
-			document.body.classList.add('Creshowitem');
-		  } else {
-			// Remove the class from the body
-			document.body.classList.remove('Creshowitem');
-		  }
-		} else {
-		  console.log('Element not found');
-		}
-	  }
-  
-	  // Debounce the scroll event to limit the frequency of calling checkElementPosition
-	  var debouncedCheckElementPosition = debounce(checkElementPosition, 250);
-  
-	  // Run the function when the page loads
-	  checkElementPosition();
-  
-	  // Run the debounced function when the user scrolls
-	  window.addEventListener('scroll', debouncedCheckElementPosition);
-  
-	  // Run the function when the page loads
-	  checkElementPosition();
-  
-	  // Run the function when the user scrolls
-	  window.addEventListener('scroll', checkElementPosition);
-  
-	  var sitckyNavBar = `<div class="Cre-T-81-StickyNav">
+
+        function addScript() {
+            var scriptOne = document.createElement("script");
+            scriptOne.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js";
+            document.querySelector("head").appendChild(scriptOne);
+
+            var swiperCss =
+                '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" integrity="sha512-ipO1yoQyZS3BeIuv2A8C5AwQChWt2Pi4KU3nUvXxc4TKr8QgG8dPexPAj2JGsJD6yelwKa4c7Y2he9TTkPM4Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
+            document.querySelector("head").insertAdjacentHTML("beforeend", swiperCss);
+        }
+
+        addScript();
+
+        function swiperInit() {
+            var swiper = new Swiper("#impressive-Slider", {
+                autoHeight: true,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination-impressive-Slider",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next-impressive-Slider",
+                    prevEl: ".swiper-button-prev-impressive-Slider",
+                    clickable: true,
+                },
+
+                speed: 850,
+            });
+
+            var swiperTwo = new Swiper(" .cre-t-5-sow-container .swiper", {
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                    clickable: true,
+                },
+                speed: 850,
+            });
+
+            var swiperThree = new Swiper(".cre-t-5-experts-sldr", {
+                slidesPerView: 1,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination-5-experts",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next-5-experts",
+                    prevEl: ".swiper-button-prev-5-experts",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    1023: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                },
+                speed: 850,
+            });
+
+            var swiperFive = new Swiper('.Cre-T83-swiper-container', {
+                // Swiper options here
+                // Add any necessary configuration for your Swiper instance
+                autoHeight: true,
+                on: {
+                    slideChange: function () {
+
+                        var activeIndex = this.activeIndex;
+
+                        // Get all slide headings
+                        var headings = document.querySelectorAll('.slide-heading > div');
+
+                        // Remove active class from all headings
+                        headings.forEach(function (heading) {
+                            heading.classList.remove('active');
+                        });
+
+                        // Add active class to the heading of the active slide
+                        headings[activeIndex].classList.add('active');
+                        console.log(activeIndex)
+
+                    }
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            var deskheadings = document.querySelectorAll('.slide-heading > div');
+            deskheadings.forEach(function (heading, index) {
+                heading.addEventListener('click', function () {
+                    swiperFive.slideToLoop(index); // Use slideToLoop to handle looped swiper correctly
+                });
+            });
+            var swiperSix = new Swiper('#swiper-t-81', {
+                // Optional parameters
+                slidesPerView: 1.5,
+                centeredSlides: true,
+                spaceBetween: 20,
+                loop: true,
+                lazyLoading: true,
+                // pagination
+                pagination: {
+                    el: '.swiper-t-81-pagination',
+                    dynamicBullets: true,
+                },
+                autoplay: {
+                    delay: 2000, // Time between slides in milliseconds
+                    disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
+                },
+
+            });
+
+            var cre81SwiperaMobile = new Swiper(" .cre-growveg-mobile-wrapper  .cre-t-81-5-review-container .swiper", {
+                // Optional parameters
+                direction: "horizontal",
+                autoHeight: true,
+                spaceBetween: 20,
+                slidesPerView: 1,
+                roundLengths: true,
+                navigation: {
+                    nextEl: " .cre-t-81-5-review-container  .swiper-button-next",
+                    prevEl: " .cre-t-81-5-review-container  .swiper-button-prev",
+                },
+            });
+            var swipermobileseven = new Swiper('.Cre-T83-swiper-container-mobile', {
+                autoHeight: true,
+                navigation: {
+                    nextEl: ".mobile-perfect-plan .swiper-button-next",
+                    prevEl: ".mobile-perfect-plan .swiper-button-prev",
+                },
+                on: {
+                    slideChange: function () {
+                        var activeIndex = this.activeIndex;
+
+                        // Get all slide headings
+                        var headings = document.querySelectorAll('.slide-heading-mobile>div');
+
+                        // Remove active class from all headings
+                        headings.forEach(function (heading) {
+                            heading.classList.remove('active');
+                        });
+
+                        // Add active class to the heading of the active slide
+                        headings[activeIndex].classList.add('active');
+                        console.log(activeIndex)
+                    }
+                }
+            });
+
+            // Initialize with the first heading active
+            var headings = document.querySelectorAll('.slide-heading-mobile > div');
+            headings.forEach(function (heading, index) {
+                heading.addEventListener('click', function () {
+                    swipermobileseven.slideToLoop(index); // Use slideToLoop to handle looped swiper correctly
+                });
+            });
+
+        }
+
+
+        function bmScroll(bmContentId, bmValue) {
+            const bmContent = document.querySelector(bmContentId);
+            const scrollTop = bmContent.getBoundingClientRect().top + window.pageYOffset - bmValue;
+
+            window.scrollTo({
+                top: scrollTop,
+                behavior: "smooth",
+            });
+        }
+
+
+        // Function to check the position of the element and add/remove class accordingly
+        function checkElementPosition() {
+            // Get the element with the class .cre-t-5-draw-header
+            var element = document.querySelector('.cre-t-5-draw-header');
+
+            // Check if the element is found
+            if (element) {
+                // Get the position of the element from the top of the page
+                var positionFromTop = element.getBoundingClientRect().top;
+
+                // Check if the position is less than 21px
+                if (positionFromTop < 21) {
+                    // Add a class to the body
+                    document.body.classList.add('Creshowitem');
+                } else {
+                    // Remove the class from the body
+                    document.body.classList.remove('Creshowitem');
+                }
+            } else {
+                console.log('Element not found');
+            }
+        }
+        live(".mobile-nav-81>li>a", "click", function () {
+            if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
+                document.querySelector("#mobile-menu").classList.remove("menu-open")
+            }
+        })
+
+        waitForElement("#page-header .header-upper-pane", function () {
+            if (!document.querySelector(".mobile-header-t81")) {
+                document.querySelector("#page-header .header-upper-pane").insertAdjacentHTML("afterbegin", Mobileheader)
+            }
+        }, 50, 15000)
+        waitForElement(".mobile-header-t81", function () {
+            if (!document.querySelector(".Cre-StickyNav-mobile")) {
+                document.querySelector(".mobile-header-t81").insertAdjacentHTML("afterend", secondryusp)
+            }
+        })
+        waitForElement(".Cre-StickyNav-inner .CRE-navStickyItem p", function () {
+            const navLinks = document.querySelectorAll('.Cre-StickyNav-inner .CRE-navStickyItem p');
+
+            // Add click event listener to each navigation link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    // Remove 'active' class from all links
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('Scrollactive');
+                    });
+
+                    // Add 'active' class to the clicked link
+                    link.classList.add('Scrollactive');
+                });
+            });
+            const navLinksmobile = document.querySelectorAll('.Cre-StickyNav-mobile .CRE-navStickyItem p');
+
+            // Add click event listener to each navigation link
+            navLinksmobile.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    // Remove 'active' class from all links
+                    navLinksmobile.forEach(navLink => {
+                        navLink.classList.remove('Scrollactive');
+                    });
+
+                    // Add 'active' class to the clicked link
+                    link.classList.add('Scrollactive');
+                });
+            });
+            live(".overview-t81 , .overview-t81-mobile", "click", function () {
+                scrollToEl("#hero-wrapper")
+                if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
+                    document.querySelector("#mobile-menu").classList.remove("menu-open")
+                }
+            })
+            live(".perfectPlan-t81", "click", function () {
+                scrollToEl("#perfectPlan")
+                if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
+                    document.querySelector("#mobile-menu").classList.remove("menu-open")
+                }
+            })
+            live(".personalized-calendar-t81 ,.personalized-calendar-81", "click", function () {
+                scrollToEl("#personalized-calendar")
+                if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
+                    document.querySelector("#mobile-menu").classList.remove("menu-open")
+                }
+
+            })
+            live(".maximizeharvest-t81", "click", function () {
+                scrollToEl("#maximizeharvest")
+                if (document.querySelector("#mobile-menu").classList.contains("menu-open")) {
+                    document.querySelector("#mobile-menu").classList.remove("menu-open")
+                }
+            })
+
+
+        }, 50, 15000)
+
+        // Function to debounce the scroll event
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function () {
+                var context = this,
+                    args = arguments;
+                var later = function () {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        }
+
+        // Function to check the position of the element and add/remove class accordingly
+        function checkElementPosition() {
+            // Get the element with the class .cre-t-5-draw-header
+            var element = document.querySelector('.cre-t-5-draw-header');
+
+            // Check if the element is found
+            if (element) {
+                // Get the position of the element from the top of the page
+                var positionFromTop = element.getBoundingClientRect().top;
+
+                // Check if the position is less than 21px
+                if (positionFromTop < 21) {
+                    // Add a class to the body
+                    document.body.classList.add('Creshowitem');
+                } else {
+                    // Remove the class from the body
+                    document.body.classList.remove('Creshowitem');
+                }
+            } else {
+                console.log('Element not found');
+            }
+        }
+
+        // Debounce the scroll event to limit the frequency of calling checkElementPosition
+        var debouncedCheckElementPosition = debounce(checkElementPosition, 250);
+
+        // Run the function when the page loads
+        checkElementPosition();
+
+        // Run the debounced function when the user scrolls
+        window.addEventListener('scroll', debouncedCheckElementPosition);
+
+        // Run the function when the page loads
+        checkElementPosition();
+
+        // Run the function when the user scrolls
+        window.addEventListener('scroll', checkElementPosition);
+
+        var sitckyNavBar = `<div class="Cre-T-81-StickyNav">
 		<div class="Cre-StickyNav-inner">
   <div class="logo-t81"><a href="/">
 		<img width="100%" height="100%" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/grow-logo.svg" id="Cre-T81-main-logo" alt="main-logo"></a>
@@ -3379,540 +3379,541 @@
   </div>
   </div>
   </div>`
-	  function scrollToEl(el) {
-		if (window.innerWidth > 1023) {
-		  var scrollHeight = document.querySelector(el);
-		  scrollHeight = scrollHeight && scrollHeight.getBoundingClientRect().top || 0;
-		  scrollHeight = scrollHeight + scrollY - 50;
-		  scrollTo({ top: scrollHeight, behavior: 'smooth' });
-		} else {
-		  var scrollHeight = document.querySelector(el);
-		  scrollHeight = scrollHeight && scrollHeight.getBoundingClientRect().top || 0;
-		  scrollHeight = scrollHeight + scrollY - 75;
-		  scrollTo({ top: scrollHeight, behavior: 'smooth' });
-		}
-	  }
-	  function init() {
-		document.body.classList.add(variation_name);
-		if (!document.querySelector('.cre-t-5-hero-wrapper')) {
-		  document.querySelector("#aspnetForm").insertAdjacentHTML("afterend", heroSection);
-		}
-  
-		waitForElement(".cre-growveg-mobile-wrapper", function () {
-  
-		  if (!document.querySelector(".Cre-T-81-StickyNav")) {
-			document.querySelector("#page-header").insertAdjacentHTML("afterbegin", sitckyNavBar);
-		  }
-		  if (!document.querySelector(".mobile-nav-81")) {
-			document.querySelector("#mobile-menu .mobile-menu-inner:first-child>ul").insertAdjacentHTML("beforebegin", mobileNavitem);
-		  }
-		}, 50, 15000)
-  
-  
-		document.querySelector(".header-upper-inner .mobile-menu-button").insertAdjacentHTML("afterend", '<div class="Feefo-parent">                  <a href="https://www.feefo.com/reviews/growing-interactive" target="_blank"><img alt="Feefo logo" border="0" src="https://api.feefo.com/api/logo?merchantidentifier=growing-interactive" title="See what our customers say about us"></a> ' + uspFive + '  </div>');
-		document.querySelector('#content-container').insertAdjacentHTML("afterend", '<div class="cre-stickycta cre-t-5-try-garden-buttons"> <a href="/account/create-account/" class="cre-t-5-try-garden-button button-one">Start planning your garden for FREE now</a> <a href="/subscribeinfo.aspx" class="cre-t-5-try-garden-button">See plans and pricing</a></div>');
-  
-  
-		waitForSwiper(swiperInit);
-  
-		waitForVimeo(function () {
-		  onVimeoPlayerAPIReady();
-		});
-  
-		live(".cre-t-5-hero-right-bottom-img-section", "click", function () {
-		  // if(document.querySelector('.creVideo.cre-hide')){
-		  // document.querySelector('.creVideo').classList.remove('cre-hide')
-		  // cre-t-5-hero-right-bottom-img-section
-		  // document.querySelector('.cre-t-5-hero-right-bottom-img-section').classList.add('cre-hide')
-		  document.querySelector("body").classList.remove("bmhide");
-  
-		  var iframeVideo1 = document.querySelector(".creVideo-06");
-		  var player2 = new Vimeo.Player(iframeVideo1);
-		  player2.pause();
-  
-		  var iframeVideo = document.querySelector(".creVideo-05");
-		  var player = new Vimeo.Player(iframeVideo);
-		  player.play();
-		  // }
-		});
-  
-		live(".cre-t-05-overlay, .croxx", "click", function () {
-		  // if(document.querySelector('.creVideo.cre-hide')){
-		  // document.querySelector('.creVideo').classList.remove('cre-hide')
-		  // cre-t-5-hero-right-bottom-img-section
-		  // document.querySelector('.cre-t-5-hero-right-bottom-img-section').classList.add('cre-hide')
-		  document.querySelector("body").classList.add("bmhide");
-  
-		  var iframeVideo = document.querySelector(".creVideo-05");
-		  var player = new Vimeo.Player(iframeVideo);
-		  player.pause();
-		  // }
-		});
-  
-		live(".cre-t-5-grdn-plnr-created-right-link", "click", function () {
-		  bmScroll(".cre-t-5-experts-wrapper", 100);
-		  // bmswiper.autoplay.start();
-		});
-  
-		waitForElement(
-		  ".cre-t-5-recommended-wrapper",
-		  function () {
-			if (!document.querySelector(".cre-t-5-new-section-harvest-wrapper")) {
-			  document.querySelector(".cre-t-5-recommended-wrapper").insertAdjacentHTML("beforebegin", harvest);
-			}
-		  },
-		  50,
-		  15000
-		);
-  
-		live(".harvest-img-section, .cre-newPlayBtn", "click", function () {
-		  // if(document.querySelector('.creVideo.cre-hide')){
-		  // document.querySelector('.creVideo').classList.remove('cre-hide')
-		  // cre-t-5-hero-right-bottom-img-section
-		  // document.querySelector('.cre-t-5-hero-right-bottom-img-section').classList.add('cre-hide')
-		  document.querySelector("body").classList.add("cre-t-81-Hide");
-  
-		  var iframeVideo = document.querySelector(".creVideo-06");
-		  var player = new Vimeo.Player(iframeVideo);
-		  player.play();
-		  // }
-		});
-	  }
-  
-	  live("#mobile-menu-open", "click", function () {
-		document.querySelector("body").classList.toggle("cre-test8");
-		// bmswiper.autoplay.start();
-	  });
-  
-  
-  
-	  // function for click element for chat open
-	  live(".hidearrow", "click", function (event) {
-		event.preventDefault();
-		openIntercomChat()
-  
-	  });
-  
-	  function openIntercomChat() {
-		// Check if the Intercom object is available
-		if (window.Intercom) {
-		  window.Intercom('show');
-		} else {
-		  console.error('Intercom not available.');
-		}
-	  }
-	  waitForElement(".cre-81-review", function () {
-		live(".cre-81-review .seeMore", "click", function () {
-		  if (this.parentNode.classList.contains("see-more-part")) {
-			this.parentNode.classList.remove("see-more-part")
-		  } else {
-			this.parentNode.classList.add("see-more-part")
-		  }
-		})
-	  }, 50, 15000)
-	  waitForElement(".cre-81-review", function () {
-		live(".cre-81-review .full-review", "click", function () {
-		  if (this.parentNode.parentNode.parentNode.classList.contains("see-more-part")) {
-			this.parentNode.parentNode.parentNode.classList.remove("see-more-part")
-		  } else {
-			this.parentNode.parentNode.parentNode.classList.add("see-more-part")
-		  }
-		})
-	  }, 50, 15000)
-  
-  
-	  function stickyButton() {
-		var target = document.querySelector("#page-header");
-		function callback(entries, observer) {
-		  entries.forEach(function (entry) {
-			if (entry.isIntersecting) {
-			  if (document.querySelector(".cre-t-8-Sticky")) {
-				document.querySelector("body").classList.remove("cre-t-8-Sticky");
-			  }
-			} else {
-			  document.querySelector("body").classList.add("cre-t-8-Sticky");
-			}
-		  });
-		}
-		let observer = new IntersectionObserver(callback);
-		observer.observe(target);
-	  }
-  
-	  var cre_growveg_desktop =
-		"" +
-		'  <div class="cre-growveg cre-forDesktop cre-t-5">' +
-		'      <div class="cre-groveg-container">' +
-		'          <div class="cre-growveg-row">' +
-		'              <div class="cre-groevag-card"> <div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/planner-icon81.png" alt="planner-icon81" class="cre-planer"></div>' +
-		'                  <p class="cre-card-copy"><strong>1,034,104 garden plans</strong> <br /> created by 869,812 gardeners</p>' +
-		"                  " +
-		uspOne +
-		"              </div>" +
-		'              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
-		'              <div class="cre-groevag-card"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/climate-icon81.png" alt="climate-icon81" class="cre-world"></div>' +
-		'                  <p class="cre-card-copy"><strong>Tailored to your local climate</strong> <br /> using data from 5,000 weather stations</p>' +
-		"                  " +
-		uspTwo +
-		"              </div>" +
-		'              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
-		'              <div class="cre-groevag-card"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/video-icon81.png" alt="video-icon81.png" class="cre-ecology"></div>' +
-		'                  <p class="cre-card-copy"><strong>Personalized how-to videos and articles,</strong><br /> based on what you’re growing</p>' +
-		"                  " +
-		uspFour +
-		"              </div>" +
-		'<svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"></line></svg>' +
-		'              <div class="cre-groevag-card cre-t-5-review-icon cre-groevag-card">' +
-		'                  <div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/plant-icon81.png" alt="plant-icon81.png" class="cre-ecology"></div> <p class="cre-card-copy"><strong> Every plant you’ll ever need </strong><br> for a thriving garden</p>' +
-		"                  " +
-		newstyle +
-		"              </div>" +
-		'              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
-		'              <div class="cre-groevag-card"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/chat-icon81.png" alt="chat-icon81.png" class="cre-chat"></div>' +
-		'                  <p class="cre-card-copy"><strong>Your gardening questions answered in minutes </strong> <br />by our expert gardeners, 7 days a week</p>' +
-		"                  " +
-		uspThree +
-		"              </div>" +
-		"          </div>" +
-		"      </div>" +
-		"  </div>";
-  
-	  var cre_growveg_mobile =
-		"" +
-		'<div class="cre-growveg-mobile-wrapper">' +
-		uspOne +
-		uspTwo +
-		uspThree +
-		uspFour +
-		newstyle +
-		uspFive +
-		'  <div class="cre-growveg cre-forMobile swiper bmswiper">' +
-		'      <div class="cre-groveg-container swiper-container">' +
-		'          <div class="cre-growveg-row swiper-wrapper">' +
-		'              <div class="cre-groevag-card  garden swiper-slide"> <div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/planner-icon81.png" alt="planner-icon81.png" class="cre-planer"></div>' +
-		'                  <p class="cre-card-copy"><strong>1,034,104 garden plans</strong> <br /> created by 869,812 gardeners</p>' +
-		"              </div>" +
-		'              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
-		'              <div class="cre-groevag-card climate swiper-slide"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/climate-icon81.png" alt="climate-icon81" class="cre-world"></div>' +
-		'                  <p class="cre-card-copy"><strong>Tailored to your local climate </strong><br /> using data from 5,000 weather stations</p>' +
-		"              </div>" +
-		'              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
-		'              <div class="cre-groevag-card live-support  swiper-slide"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/chat-icon81.png" alt="chat-icon81.png" class="cre-chat"></div>' +
-		'                  <p class="cre-card-copy"><strong>Instant Live Support</strong><br /> from our expert gardeners, 7 days a week</p>' +
-		"              </div>" +
-		'              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
-		'              <div class="cre-groevag-card insect swiper-slide"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/video-icon81.png" alt="video-icon81" class="cre-ecology"></div>' +
-		'                  <p class="cre-card-copy"><strong>1527 Grow Guides & Counting! </strong><br /> Including videos & pest, disease & insect guides</p>' +
-		"              </div>" +
-		'               <div class="cre-groevag-card review cre-t-5-review-slider-5-last swiper-slide">' +
-		'                  <div><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/plant-icon81.png" alt="plant-icon81" class="cre-ecology"></div> <p class="cre-card-copy"><strong> Every plant you’ll ever need  </strong><br> for a thriving garden</p></div>' +
-		"              </div>" +
-		'               <div class="cre-groevag-card reviewslider cre-t-6-review-slider-6-last swiper-slide">' +
-		'                  <div><div class="cre-img"><img src="https://api.feefo.com/api/logo?merchantidentifier=growing-interactive" alt="growing-interactive" class="cre-ecology"></div> </div>' +
-		"              </div>" +
-		"          </div>" +
-		"      </div>" +
-		"  </div>" +
-		"</div>";
-  
-  
-	  function creUspTooltipHide(bmswiper) {
-		document.querySelectorAll(".cre-groevag-card.swiper-slide").forEach(function (item) {
-		  item.classList.remove("cre-t-81-usp-active");
-		  bmswiper.autoplay.start();
-		});
-		document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
-	  }
-	  waitForElement(".CRE-navStickyItem p", function () {
-		setTimeout(function () {
-		  var sections = [
-			document.querySelector('#hero-wrapper'),
-			document.querySelector('#perfectPlan'),
-			document.querySelector('#personalized-calendar'),
-			document.querySelector('#maximizeharvest')
-		  ];
-		  if (window.innerWidth > 1023) {
-			var navItems = document.querySelectorAll('.Cre-T-81-StickyNav .CRE-navStickyItem p');
-  
-			var addActiveClass = () => {
-			  var index = sections.length;
-  
-			  while (--index && window.scrollY + 100 < sections[index].offsetTop) { }
-  
-			  // Remove active class from all nav items
-			  navItems.forEach((item) => item.classList.remove('Scrollactive'));
-  
-			  // Add active class only if the section is in the viewport
-			  if (index < sections.length && window.scrollY + window.innerHeight > sections[index].offsetTop) {
-				navItems[index].classList.add('Scrollactive');
-			  }
-			};
-  
-			addActiveClass();
-			window.addEventListener('scroll', addActiveClass);
-		  } else {
-			var navItems = document.querySelectorAll('.Cre-StickyNav-mobile .CRE-navStickyItem p');
-  
-			var addActiveClass = () => {
-			  var index = sections.length;
-  
-			  while (--index && window.scrollY + 100 < sections[index].offsetTop) { }
-  
-			  // Remove active class from all nav items
-			  navItems.forEach((item) => item.classList.remove('Scrollactive'));
-  
-			  // Add active class only if the section is in the viewport
-			  if (index < sections.length && window.scrollY + window.innerHeight > sections[index].offsetTop) {
-				navItems[index].classList.add('Scrollactive');
-				navItems[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
-			  }
-			};
-  
-			addActiveClass();
-			window.addEventListener('scroll', addActiveClass);
-		  }
-		}, 2000)
-  
-  
-	  }, 50, 15000)
-  
-	  function initTwo() {
-  
-		waitForElement(
-		  ".header-upper-pane .header-upper",
-		  function () {
-			if (!document.querySelector(".cre-forDesktop")) {
-			  document.querySelector(".header-upper-pane .header-upper").insertAdjacentHTML("afterend", cre_growveg_desktop);
-			}
-			if (!document.querySelector(".cre-forMobile")) {
-			  document.querySelector("#content-container").insertAdjacentHTML("afterbegin", cre_growveg_mobile);
-			}
-		  },
-		  50,
-		  15000
-		);
-  
-		waitForSwiper(function () {
-		  var bmswiper = new Swiper(".cre-growveg.cre-forMobile .swiper-container", {
-			// Optional parameters
-			direction: "horizontal",
-			spaceBetween: 10,
-			slidesPerView: 3,
-			roundLengths: true,
-  
-			// loop: true,
-			autoplay: {
-			  delay: 5000,
-			  disableOnInteraction: false,
-			},
-			breakpoints: {
-			  320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				slidesOffsetBefore: 0,
-			  },
-			  500: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				slidesOffsetBefore: 0,
-			  },
-			  600: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				slidesOffsetBefore: 0,
-			  },
-			  800: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				slidesOffsetBefore: 0,
-			  },
-			  1023: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				slidesOffsetBefore: 0,
-			  },
-			},
-		  });
-  
-		  bmswiper.on("slideChange", function () {
-			document.querySelectorAll(".cre-groevag-card.swiper-slide").forEach(function (item) {
-			  item.classList.remove("cre-t-81-usp-active");
-			  bmswiper.autoplay.start();
-			});
-			document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
-		  });
-  
-		  // desktop usp 1
-		  live(".cre-groevag-card .cre-t-81-usp-content-1-main .cre-t-81-usp-link", "click", function () {
-			bmScroll(".cre-t-5-draw-wrapper", 100);
-		  });
-		  live(".cre-groevag-card .cre-t-81-usp-content1-wrapper .cre-t-81-usp-button", "click", function () {
-			bmScroll(".cre-t-5-impressive-wrapper", 100);
-		  });
-		  // mobile usp 1
-		  live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content-1-main .cre-t-81-usp-link", "click", function () {
-			bmScroll(".cre-t-5-draw-wrapper", 180);
-			creUspTooltipHide(bmswiper);
-		  });
-		  live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content1-wrapper .cre-t-81-usp-button", "click", function () {
-			bmScroll(".cre-t-5-impressive-wrapper", 180);
-			creUspTooltipHide(bmswiper);
-		  });
-		  // desktop usp 2
-		  live(".cre-groevag-card .cre-t-81-usp-content2-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
-			bmScroll("#personalized-calendar", 100);
-		  });
-		  // mobile usp 2
-		  live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content2-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
-			scrollToEl("#personalized-calendar")
-			creUspTooltipHide(bmswiper);
-		  });
-  
-		  // desktop usp 3
-		  live(".cre-groevag-card .cre-t-81-usp-content3-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
-			if (document.querySelector(".intercom-lightweight-app") || document.querySelector("#intercom-container .intercom-app")) {
-			  window.Intercom("show");
-			}
-		  });
-		  // mobile usp 3
-		  live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content3-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
-			if (document.querySelector(".intercom-lightweight-app") || document.querySelector("#intercom-container .intercom-app")) {
-			  window.Intercom("show");
-			}
-			creUspTooltipHide(bmswiper);
-		  });
-  
-		  document.querySelector("body").addEventListener("click", function (e) {
-			if (!e.target.closest(".cre-growveg-mobile-wrapper")) {
-			  // console.log(e.target);
-			  document.querySelectorAll(".cre-groevag-card.swiper-slide").forEach(function (item) {
-				item.classList.remove("cre-t-81-usp-active");
-				bmswiper.autoplay.start();
-			  });
-			  document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
-			}
-		  });
-  
-		  live(".cre-groevag-card.swiper-slide", "click", function () {
-			if (!this.classList.contains("cre-t-81-usp-active")) {
-			  bmswiper.autoplay.stop();
-			  if (this.classList.contains("garden")) {
-				document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper garden";
-				this.classList.add("cre-t-81-usp-active");
-			  }
-			  if (this.classList.contains("climate")) {
-				document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper climate";
-				this.classList.add("cre-t-81-usp-active");
-			  }
-			  if (this.classList.contains("live-support")) {
-				document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper live-support";
-				this.classList.add("cre-t-81-usp-active");
-			  }
-			  if (this.classList.contains("insect")) {
-				document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper insect";
-				this.classList.add("cre-t-81-usp-active");
-			  }
-			  if (this.classList.contains("review")) {
-				document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper review";
-				this.classList.add("cre-t-81-usp-active");
-			  }
-			  if (this.classList.contains("reviewslider")) {
-				document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper reviewslider";
-				this.classList.add("cre-t-81-usp-active");
-			  }
-			} else {
-			  this.classList.remove("cre-t-81-usp-active");
-			  document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
-			  bmswiper.autoplay.start();
-			}
-		  });
-  
-		});
-  
-		window.dispatchEvent(new Event("resize"));
-		stickyButton();
-  
-  
-  
-	  }
-  
-	  function waitForVimeo(trigger) {
-		var interval = setInterval(function () {
-		  if (window.Vimeo) {
-			clearInterval(interval);
-			trigger();
-		  }
-		}, 50);
-		setTimeout(function () {
-		  clearInterval(interval);
-		}, 15000);
-	  }
-  
-	  var popupHtml =
-		"" +
-		'  <div class="cre-t-05-overlay"></div>' +
-		'  <div class="cre-t-05-popup">' +
-		'   <div class="cre-t-05-main-content">' +
-		'      <div class="cre-t-05-popupcontent">' +
-		// '    <span class="cre-t-05-cross"><img src="https://bm-test-dev.s3.us-east-2.amazonaws.com/ConversionRateExpert/Mindful/Test-14/cross-img.png" alt=""></span>' +
-		"</div>" +
-		"  </div>" +
-		"  </div>";
-  
-	  var harvest =
-		"" +
-		'  <div class="cre-t-5-new-section-harvest-wrapper">' +
-		'      <div class="cre-t-5-try-harvest-container">' +
-		'          <div class="cre-t-5-harvest-main">' +
-		'              <h1 class="cre-t-5-try-harvest-header"><span class="cre-t-5-try-harvest-header-border">See how you can' +
-		"            have your most bountiful harvest ever</span></h1>" +
-		'              <p class="cre-t-5-harvest-sub-text"><span>' +
-		"            with the Garden Planner" +
-		"          </span></p>" +
-		"  " +
-		"          </div>" +
-		"          </div>" +
-		"      </div>" +
-		"  </div>";
-  
-	  function onVimeoPlayerAPIReady() {
-		document.querySelector("body").classList.add("bmhide");
-		document.querySelector("body").insertAdjacentHTML("afterbegin", popupHtml);
-  
-		var htmlStringIframe =
-		  '<div class="croxx">X</div><iframe class="creVideo-05" src="https://player.vimeo.com/video/891419948?h=c2d5f53448&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:relative;width:100%;min-height:400px;" title="Garden Planner Introduction"></iframe>';
-  
-		if (!document.querySelector(".creVideo-05")) {
-		  document.querySelector(".cre-t-05-popupcontent").insertAdjacentHTML("afterbegin", htmlStringIframe);
-		}
-  
-		waitForElement(
-		  ".cre-t-5-harvest-img-section",
-		  function () {
-			if (!document.querySelector(".creVideo-06")) {
-			  document
-				.querySelector(".cre-t-5-harvest-img-section")
-				.insertAdjacentHTML(
-				  "afterbegin",
-				  '<iframe class="creVideo-06" src="https://player.vimeo.com/video/891419948?h=c2d5f53448&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:relative;width:100%;min-height:400px;" title="Garden Planner Introduction"></iframe>'
-				);
-			}
-		  },
-		  50,
-		  25000
-		);
-	  }
-	  function vimeoScript() {
-		// <script src="https://player.vimeo.com/api/player.js"></script>
-		var scriptOne = document.createElement("script");
-		scriptOne.src = "https://player.vimeo.com/api/player.js";
-		document.querySelector("head").appendChild(scriptOne);
-	  }
-  
-	  vimeoScript();
-  
-	  waitForElement("#page-header", initTwo, 50, 25000);
-	  waitForElement("#aspnetForm", init, 50, 25000);
-	} catch (e) {
-	  if (debug) console.log(e, "error in Test" + variation_name);
-	}
-  })();
+        function scrollToEl(el) {
+            if (window.innerWidth > 1023) {
+                var scrollHeight = document.querySelector(el);
+                scrollHeight = scrollHeight && scrollHeight.getBoundingClientRect().top || 0;
+                scrollHeight = scrollHeight + scrollY - 50;
+                scrollTo({ top: scrollHeight, behavior: 'smooth' });
+            } else {
+                var scrollHeight = document.querySelector(el);
+                scrollHeight = scrollHeight && scrollHeight.getBoundingClientRect().top || 0;
+                scrollHeight = scrollHeight + scrollY - 75;
+                scrollTo({ top: scrollHeight, behavior: 'smooth' });
+            }
+        }
+        function init() {
+            document.body.classList.add(variation_name);
+            if (!document.querySelector('.cre-t-5-hero-wrapper')) {
+                document.querySelector("#aspnetForm").insertAdjacentHTML("afterend", heroSection);
+            }
+
+            waitForElement(".cre-growveg-mobile-wrapper", function () {
+
+                if (!document.querySelector(".Cre-T-81-StickyNav")) {
+                    document.querySelector("#page-header").insertAdjacentHTML("afterbegin", sitckyNavBar);
+                }
+                if (!document.querySelector(".mobile-nav-81")) {
+                    document.querySelector("#mobile-menu .mobile-menu-inner:first-child>ul").insertAdjacentHTML("beforebegin", mobileNavitem);
+                }
+            }, 50, 15000)
+
+
+            document.querySelector(".header-upper-inner .mobile-menu-button").insertAdjacentHTML("afterend", '<div class="Feefo-parent">                  <a href="https://www.feefo.com/reviews/growing-interactive" target="_blank"><img alt="Feefo logo" border="0" src="https://api.feefo.com/api/logo?merchantidentifier=growing-interactive" title="See what our customers say about us"></a> ' + uspFive + '  </div>');
+            document.querySelector('#content-container').insertAdjacentHTML("afterend", '<div class="cre-stickycta cre-t-5-try-garden-buttons"> <a href="/account/create-account/" class="cre-t-5-try-garden-button button-one">Start planning your garden for FREE now</a> <a href="/subscribeinfo.aspx" class="cre-t-5-try-garden-button">See plans and pricing</a></div>');
+
+
+            waitForSwiper(swiperInit);
+
+            waitForVimeo(function () {
+                onVimeoPlayerAPIReady();
+            });
+
+            live(".cre-t-5-hero-right-bottom-img-section", "click", function () {
+                // if(document.querySelector('.creVideo.cre-hide')){
+                // document.querySelector('.creVideo').classList.remove('cre-hide')
+                // cre-t-5-hero-right-bottom-img-section
+                // document.querySelector('.cre-t-5-hero-right-bottom-img-section').classList.add('cre-hide')
+                document.querySelector("body").classList.remove("bmhide");
+
+                var iframeVideo1 = document.querySelector(".creVideo-06");
+                var player2 = new Vimeo.Player(iframeVideo1);
+                player2.pause();
+
+                var iframeVideo = document.querySelector(".creVideo-05");
+                var player = new Vimeo.Player(iframeVideo);
+                player.play();
+                // }
+            });
+
+            live(".cre-t-05-overlay, .croxx", "click", function () {
+                // if(document.querySelector('.creVideo.cre-hide')){
+                // document.querySelector('.creVideo').classList.remove('cre-hide')
+                // cre-t-5-hero-right-bottom-img-section
+                // document.querySelector('.cre-t-5-hero-right-bottom-img-section').classList.add('cre-hide')
+                document.querySelector("body").classList.add("bmhide");
+
+                var iframeVideo = document.querySelector(".creVideo-05");
+                var player = new Vimeo.Player(iframeVideo);
+                player.pause();
+                // }
+            });
+
+            live(".cre-t-5-grdn-plnr-created-right-link", "click", function () {
+                bmScroll(".cre-t-5-experts-wrapper", 100);
+                // bmswiper.autoplay.start();
+            });
+
+            waitForElement(
+                ".cre-t-5-recommended-wrapper",
+                function () {
+                    if (!document.querySelector(".cre-t-5-new-section-harvest-wrapper")) {
+                        document.querySelector(".cre-t-5-recommended-wrapper").insertAdjacentHTML("beforebegin", harvest);
+                    }
+                },
+                50,
+                15000
+            );
+
+            live(".harvest-img-section, .cre-newPlayBtn", "click", function () {
+                // if(document.querySelector('.creVideo.cre-hide')){
+                // document.querySelector('.creVideo').classList.remove('cre-hide')
+                // cre-t-5-hero-right-bottom-img-section
+                // document.querySelector('.cre-t-5-hero-right-bottom-img-section').classList.add('cre-hide')
+                document.querySelector("body").classList.add("cre-t-81-Hide");
+
+                var iframeVideo = document.querySelector(".creVideo-06");
+                var player = new Vimeo.Player(iframeVideo);
+                player.play();
+                // }
+            });
+        }
+
+        live("#mobile-menu-open", "click", function () {
+            document.querySelector("body").classList.toggle("cre-test8");
+            // bmswiper.autoplay.start();
+        });
+
+
+
+        // function for click element for chat open
+        live(".hidearrow", "click", function (event) {
+            event.preventDefault();
+            openIntercomChat()
+
+        });
+
+        function openIntercomChat() {
+            // Check if the Intercom object is available
+            if (window.Intercom) {
+                window.Intercom('show');
+            } else {
+                console.error('Intercom not available.');
+            }
+        }
+        waitForElement(".cre-81-review", function () {
+            live(".cre-81-review .seeMore", "click", function () {
+                if (this.parentNode.classList.contains("see-more-part")) {
+                    this.parentNode.classList.remove("see-more-part")
+                } else {
+                    this.parentNode.classList.add("see-more-part")
+                }
+            })
+        }, 50, 15000)
+        waitForElement(".cre-81-review", function () {
+            live(".cre-81-review .full-review", "click", function () {
+                if (this.parentNode.parentNode.parentNode.classList.contains("see-more-part")) {
+                    this.parentNode.parentNode.parentNode.classList.remove("see-more-part")
+                } else {
+                    this.parentNode.parentNode.parentNode.classList.add("see-more-part")
+                }
+            })
+        }, 50, 15000)
+
+
+        function stickyButton() {
+            var target = document.querySelector("#page-header");
+            function callback(entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        if (document.querySelector(".cre-t-8-Sticky")) {
+                            document.querySelector("body").classList.remove("cre-t-8-Sticky");
+                        }
+                    } else {
+                        document.querySelector("body").classList.add("cre-t-8-Sticky");
+                    }
+                });
+            }
+            let observer = new IntersectionObserver(callback);
+            observer.observe(target);
+        }
+
+        var cre_growveg_desktop =
+            "" +
+            '  <div class="cre-growveg cre-forDesktop cre-t-5">' +
+            '      <div class="cre-groveg-container">' +
+            '          <div class="cre-growveg-row">' +
+            '              <div class="cre-groevag-card"> <div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/planner-icon81.png" alt="planner-icon81" class="cre-planer"></div>' +
+            '                  <p class="cre-card-copy"><strong>1,034,104 garden plans</strong> <br /> created by 869,812 gardeners</p>' +
+            "                  " +
+            uspOne +
+            "              </div>" +
+            '              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
+            '              <div class="cre-groevag-card"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/climate-icon81.png" alt="climate-icon81" class="cre-world"></div>' +
+            '                  <p class="cre-card-copy"><strong>Tailored to your local climate</strong> <br /> using data from 5,000 weather stations</p>' +
+            "                  " +
+            uspTwo +
+            "              </div>" +
+            '              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
+            '              <div class="cre-groevag-card"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/video-icon81.png" alt="video-icon81.png" class="cre-ecology"></div>' +
+            '                  <p class="cre-card-copy"><strong>Personalized how-to videos and articles,</strong><br /> based on what you’re growing</p>' +
+            "                  " +
+            uspFour +
+            "              </div>" +
+            '<svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"></line></svg>' +
+            '              <div class="cre-groevag-card cre-t-5-review-icon cre-groevag-card">' +
+            '                  <div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/plant-icon81.png" alt="plant-icon81.png" class="cre-ecology"></div> <p class="cre-card-copy"><strong> Every plant you’ll ever need </strong><br> for a thriving garden</p>' +
+            "                  " +
+            newstyle +
+            "              </div>" +
+            '              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
+            '              <div class="cre-groevag-card"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/chat-icon81.png" alt="chat-icon81.png" class="cre-chat"></div>' +
+            '                  <p class="cre-card-copy"><strong>Your gardening questions answered in minutes </strong> <br />by our expert gardeners, 7 days a week</p>' +
+            "                  " +
+            uspThree +
+            "              </div>" +
+            "          </div>" +
+            "      </div>" +
+            "  </div>";
+
+        var cre_growveg_mobile =
+            "" +
+            '<div class="cre-growveg-mobile-wrapper">' +
+            uspOne +
+            uspTwo +
+            uspThree +
+            uspFour +
+            newstyle +
+            uspFive +
+            '  <div class="cre-growveg cre-forMobile swiper bmswiper">' +
+            '      <div class="cre-groveg-container swiper-container">' +
+            '          <div class="cre-growveg-row swiper-wrapper">' +
+            '              <div class="cre-groevag-card  garden swiper-slide"> <div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/planner-icon81.png" alt="planner-icon81.png" class="cre-planer"></div>' +
+            '                  <p class="cre-card-copy"><strong>1,034,104 garden plans</strong> <br /> created by 869,812 gardeners</p>' +
+            "              </div>" +
+            '              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
+            '              <div class="cre-groevag-card climate swiper-slide"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/climate-icon81.png" alt="climate-icon81" class="cre-world"></div>' +
+            '                  <p class="cre-card-copy"><strong>Tailored to your local climate </strong><br /> using data from 5,000 weather stations</p>' +
+            "              </div>" +
+            '              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
+            '              <div class="cre-groevag-card live-support  swiper-slide"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/chat-icon81.png" alt="chat-icon81.png" class="cre-chat"></div>' +
+            '                  <p class="cre-card-copy"><strong>Instant Live Support</strong><br /> from our expert gardeners, 7 days a week</p>' +
+            "              </div>" +
+            '              <svg width="1" height="90" viewBox="0 0 1 46" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="46" stroke="black" stroke-opacity="1"/></svg>' +
+            '              <div class="cre-groevag-card insect swiper-slide"><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/video-icon81.png" alt="video-icon81" class="cre-ecology"></div>' +
+            '                  <p class="cre-card-copy"><strong>1527 Grow Guides & Counting! </strong><br /> Including videos & pest, disease & insect guides</p>' +
+            "              </div>" +
+            '               <div class="cre-groevag-card review cre-t-5-review-slider-5-last swiper-slide">' +
+            '                  <div><div class="cre-img"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GrowVeg/T81.3/plant-icon81.png" alt="plant-icon81" class="cre-ecology"></div> <p class="cre-card-copy"><strong> Every plant you’ll ever need  </strong><br> for a thriving garden</p></div>' +
+            "              </div>" +
+            '               <div class="cre-groevag-card reviewslider cre-t-6-review-slider-6-last swiper-slide">' +
+            '                  <div><div class="cre-img"><img src="https://api.feefo.com/api/logo?merchantidentifier=growing-interactive" alt="growing-interactive" class="cre-ecology"></div> </div>' +
+            "              </div>" +
+            "          </div>" +
+            "      </div>" +
+            "  </div>" +
+            "</div>";
+
+
+        function creUspTooltipHide(bmswiper) {
+            document.querySelectorAll(".cre-groevag-card.swiper-slide").forEach(function (item) {
+                item.classList.remove("cre-t-81-usp-active");
+                bmswiper.autoplay.start();
+            });
+            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
+        }
+        waitForElement(".CRE-navStickyItem p", function () {
+            setTimeout(function () {
+                var sections = [
+                    document.querySelector('#hero-wrapper'),
+                    document.querySelector('#perfectPlan'),
+                    document.querySelector('#personalized-calendar'),
+                    document.querySelector('#maximizeharvest')
+                ];
+                if (window.innerWidth > 1023) {
+                    var navItems = document.querySelectorAll('.Cre-T-81-StickyNav .CRE-navStickyItem p');
+
+                    var addActiveClass = () => {
+                        var index = sections.length;
+
+                        while (--index && window.scrollY + 100 < sections[index].offsetTop) { }
+
+                        // Remove active class from all nav items
+                        navItems.forEach((item) => item.classList.remove('Scrollactive'));
+
+                        // Add active class only if the section is in the viewport
+                        if (index < sections.length && window.scrollY + window.innerHeight > sections[index].offsetTop) {
+                            navItems[index].classList.add('Scrollactive');
+                        }
+                    };
+
+                    addActiveClass();
+                    window.addEventListener('scroll', addActiveClass);
+                } else {
+                    const navLi = document.querySelectorAll('.Cre-StickyNav-mobile .CRE-navStickyItem p');
+                    window.addEventListener("scroll", () => {
+                        let current = "";
+
+                        sections.forEach(section => {
+                            const sectionTop = section.offsetTop;
+                            const sectionHeight = section.clientHeight;
+                            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                                current = section.getAttribute("id");
+                            }
+                        });
+
+                        navLi.forEach(li => {
+                            li.classList.remove("Scrollactive");
+                            if (li.getAttribute("dataid") === `#${current}`) {
+                                li.classList.add("Scrollactive");
+                                li.scrollIntoView({ inline: 'center', behavior: 'smooth' });
+                            }
+                        });
+                    });
+                }
+            }, 2000)
+
+
+        }, 50, 15000)
+
+        function initTwo() {
+
+            waitForElement(
+                ".header-upper-pane .header-upper",
+                function () {
+                    if (!document.querySelector(".cre-forDesktop")) {
+                        document.querySelector(".header-upper-pane .header-upper").insertAdjacentHTML("afterend", cre_growveg_desktop);
+                    }
+                    if (!document.querySelector(".cre-forMobile")) {
+                        document.querySelector("#content-container").insertAdjacentHTML("afterbegin", cre_growveg_mobile);
+                    }
+                },
+                50,
+                15000
+            );
+
+            waitForSwiper(function () {
+                var bmswiper = new Swiper(".cre-growveg.cre-forMobile .swiper-container", {
+                    // Optional parameters
+                    direction: "horizontal",
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    roundLengths: true,
+
+                    // loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            slidesOffsetBefore: 0,
+                        },
+                        500: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            slidesOffsetBefore: 0,
+                        },
+                        600: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            slidesOffsetBefore: 0,
+                        },
+                        800: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            slidesOffsetBefore: 0,
+                        },
+                        1023: {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            slidesOffsetBefore: 0,
+                        },
+                    },
+                });
+
+                bmswiper.on("slideChange", function () {
+                    document.querySelectorAll(".cre-groevag-card.swiper-slide").forEach(function (item) {
+                        item.classList.remove("cre-t-81-usp-active");
+                        bmswiper.autoplay.start();
+                    });
+                    document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
+                });
+
+                // desktop usp 1
+                live(".cre-groevag-card .cre-t-81-usp-content-1-main .cre-t-81-usp-link", "click", function () {
+                    bmScroll(".cre-t-5-draw-wrapper", 100);
+                });
+                live(".cre-groevag-card .cre-t-81-usp-content1-wrapper .cre-t-81-usp-button", "click", function () {
+                    bmScroll(".cre-t-5-impressive-wrapper", 100);
+                });
+                // mobile usp 1
+                live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content-1-main .cre-t-81-usp-link", "click", function () {
+                    bmScroll(".cre-t-5-draw-wrapper", 180);
+                    creUspTooltipHide(bmswiper);
+                });
+                live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content1-wrapper .cre-t-81-usp-button", "click", function () {
+                    bmScroll(".cre-t-5-impressive-wrapper", 180);
+                    creUspTooltipHide(bmswiper);
+                });
+                // desktop usp 2
+                live(".cre-groevag-card .cre-t-81-usp-content2-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
+                    bmScroll("#personalized-calendar", 100);
+                });
+                // mobile usp 2
+                live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content2-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
+                    scrollToEl("#personalized-calendar")
+                    creUspTooltipHide(bmswiper);
+                });
+
+                // desktop usp 3
+                live(".cre-groevag-card .cre-t-81-usp-content3-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
+                    if (document.querySelector(".intercom-lightweight-app") || document.querySelector("#intercom-container .intercom-app")) {
+                        window.Intercom("show");
+                    }
+                });
+                // mobile usp 3
+                live(".cre-growveg-mobile-wrapper .cre-t-81-usp-content3-wrapper .cre-t-81-usp-paragraph-button", "click", function () {
+                    if (document.querySelector(".intercom-lightweight-app") || document.querySelector("#intercom-container .intercom-app")) {
+                        window.Intercom("show");
+                    }
+                    creUspTooltipHide(bmswiper);
+                });
+
+                document.querySelector("body").addEventListener("click", function (e) {
+                    if (!e.target.closest(".cre-growveg-mobile-wrapper")) {
+                        // console.log(e.target);
+                        document.querySelectorAll(".cre-groevag-card.swiper-slide").forEach(function (item) {
+                            item.classList.remove("cre-t-81-usp-active");
+                            bmswiper.autoplay.start();
+                        });
+                        document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
+                    }
+                });
+
+                live(".cre-groevag-card.swiper-slide", "click", function () {
+                    if (!this.classList.contains("cre-t-81-usp-active")) {
+                        bmswiper.autoplay.stop();
+                        if (this.classList.contains("garden")) {
+                            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper garden";
+                            this.classList.add("cre-t-81-usp-active");
+                        }
+                        if (this.classList.contains("climate")) {
+                            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper climate";
+                            this.classList.add("cre-t-81-usp-active");
+                        }
+                        if (this.classList.contains("live-support")) {
+                            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper live-support";
+                            this.classList.add("cre-t-81-usp-active");
+                        }
+                        if (this.classList.contains("insect")) {
+                            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper insect";
+                            this.classList.add("cre-t-81-usp-active");
+                        }
+                        if (this.classList.contains("review")) {
+                            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper review";
+                            this.classList.add("cre-t-81-usp-active");
+                        }
+                        if (this.classList.contains("reviewslider")) {
+                            document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper reviewslider";
+                            this.classList.add("cre-t-81-usp-active");
+                        }
+                    } else {
+                        this.classList.remove("cre-t-81-usp-active");
+                        document.querySelector(".cre-growveg-mobile-wrapper").classList = "cre-growveg-mobile-wrapper";
+                        bmswiper.autoplay.start();
+                    }
+                });
+
+            });
+
+            window.dispatchEvent(new Event("resize"));
+            stickyButton();
+
+
+
+        }
+
+        function waitForVimeo(trigger) {
+            var interval = setInterval(function () {
+                if (window.Vimeo) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+
+        var popupHtml =
+            "" +
+            '  <div class="cre-t-05-overlay"></div>' +
+            '  <div class="cre-t-05-popup">' +
+            '   <div class="cre-t-05-main-content">' +
+            '      <div class="cre-t-05-popupcontent">' +
+            // '    <span class="cre-t-05-cross"><img src="https://bm-test-dev.s3.us-east-2.amazonaws.com/ConversionRateExpert/Mindful/Test-14/cross-img.png" alt=""></span>' +
+            "</div>" +
+            "  </div>" +
+            "  </div>";
+
+        var harvest =
+            "" +
+            '  <div class="cre-t-5-new-section-harvest-wrapper">' +
+            '      <div class="cre-t-5-try-harvest-container">' +
+            '          <div class="cre-t-5-harvest-main">' +
+            '              <h1 class="cre-t-5-try-harvest-header"><span class="cre-t-5-try-harvest-header-border">See how you can' +
+            "            have your most bountiful harvest ever</span></h1>" +
+            '              <p class="cre-t-5-harvest-sub-text"><span>' +
+            "            with the Garden Planner" +
+            "          </span></p>" +
+            "  " +
+            "          </div>" +
+            "          </div>" +
+            "      </div>" +
+            "  </div>";
+
+        function onVimeoPlayerAPIReady() {
+            document.querySelector("body").classList.add("bmhide");
+            document.querySelector("body").insertAdjacentHTML("afterbegin", popupHtml);
+
+            var htmlStringIframe =
+                '<div class="croxx">X</div><iframe class="creVideo-05" src="https://player.vimeo.com/video/891419948?h=c2d5f53448&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:relative;width:100%;min-height:400px;" title="Garden Planner Introduction"></iframe>';
+
+            if (!document.querySelector(".creVideo-05")) {
+                document.querySelector(".cre-t-05-popupcontent").insertAdjacentHTML("afterbegin", htmlStringIframe);
+            }
+
+            waitForElement(
+                ".cre-t-5-harvest-img-section",
+                function () {
+                    if (!document.querySelector(".creVideo-06")) {
+                        document
+                            .querySelector(".cre-t-5-harvest-img-section")
+                            .insertAdjacentHTML(
+                                "afterbegin",
+                                '<iframe class="creVideo-06" src="https://player.vimeo.com/video/891419948?h=c2d5f53448&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:relative;width:100%;min-height:400px;" title="Garden Planner Introduction"></iframe>'
+                            );
+                    }
+                },
+                50,
+                25000
+            );
+        }
+        function vimeoScript() {
+            // <script src="https://player.vimeo.com/api/player.js"></script>
+            var scriptOne = document.createElement("script");
+            scriptOne.src = "https://player.vimeo.com/api/player.js";
+            document.querySelector("head").appendChild(scriptOne);
+        }
+
+        vimeoScript();
+
+        waitForElement("#page-header", initTwo, 50, 25000);
+        waitForElement("#aspnetForm", init, 50, 25000);
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name);
+    }
+})();
