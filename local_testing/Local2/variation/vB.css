@@ -2,29 +2,32 @@
 
 html body .cre-t-193-hide {
     display: none !important;
-  }
-  html body .cre-t-193-wrapper {
+}
+
+html body .cre-t-193-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
     box-sizing: border-box;
-  }
-  /* _______________Universal CSS END________________________ */
-  /* ________________________________________________________ */
-  /* ________________________________________________________ */
-  
-  html body #cre193-banner-container {
+}
+
+/* _______________Universal CSS END________________________ */
+/* ________________________________________________________ */
+/* ________________________________________________________ */
+
+html body #cre193-banner-container {
     box-sizing: border-box;
     margin-top: 69px;
     padding: 0;
-  }
-  /* html body .cre-t-193-banner-wrapper {
+}
+
+/* html body .cre-t-193-banner-wrapper {
     padding: 16px 16px;
     border-radius: 4px;
     background: #f7fcfc;
   } */
-  html body .cre-t-193-banner-main {
+html body .cre-t-193-banner-main {
     max-width: 964px;
     width: 100%;
     padding: 16px 16px;
@@ -34,112 +37,117 @@ html body .cre-t-193-hide {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  html body .cre-t-193-banner-icon {
+}
+
+html body .cre-t-193-banner-icon {
     display: flex;
     width: 24px;
     height: 24px;
     justify-content: center;
     align-items: center;
-  }
-  html body .cre-t-193-banner-cross {
+}
+
+html body .cre-t-193-banner-cross {
     display: flex;
     width: 16px;
     height: 16px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-  }
-  html body .cre-t-193-banner-copy {
+}
+
+html body .cre-t-193-banner-copy {
     flex: 1;
     padding: 0 16px;
-  }
-  html body .cre-t-193-banner-text {
+}
+
+html body .cre-t-193-banner-text {
     color: #050d11;
     font-size: 16px;
     font-style: normal;
-    font-family: "Poppins Semibold", sans-serif;
-    /* font-family: "Poppins medium" ,sans-serif; */
+    font-family: "Poppins medium", sans-serif;
     font-weight: 500;
     line-height: 18px;
-  }
-  html body .cre-t-193-banner-text-link {
+}
+
+html body .cre-t-193-banner-text-link {
     color: #013c5a;
-    font-family: "Poppins Semibold", sans-serif;
-    /* font-family: "Poppins medium" ,sans-serif; */
+    font-family: "Poppins medium", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
     text-decoration-line: underline;
-  }
-  /* __________________________________________________________ */
-  
-  html body #cre193-headline-container {
+}
+
+/* __________________________________________________________ */
+
+html body #cre193-headline-container {
     margin-top: 37px;
-  }
-  
-  html body .cre-t-193-headline-header {
+}
+
+html body .cre-t-193-headline-header {
     color: #050d11;
     font-family: "Poppins Semibold", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 48px;
-  }
-  
-  html body .cre-t-193-headline-subheader {
+}
+
+html body .cre-t-193-headline-subheader {
     color: #050d11;
-    font-family: "Poppins Semibold", sans-serif;
+    font-family: "Poppins medium", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 26px;
-  }
-  
-  html body .cre-t-193-hide-two {
+}
+
+html body .cre-t-193-hide-two {
     margin: 0 !important;
     padding: 0 !important;
-  }
-  
-  html body .cre-t-193-hide-two .full-width-callout {
+}
+
+html body .cre-t-193-hide-two .full-width-callout {
     padding: 0 !important;
     margin: 0 !important;
     border: 0 !important;
-  }
-  
-  html body .cre-t-193-hide-two .full-width-callout .full-width-callout__content {
+}
+
+html body .cre-t-193-hide-two .full-width-callout .full-width-callout__content {
     display: none !important;
-  }
-  html body .cre-t-193-hide-two button {
+}
+
+html body .cre-t-193-hide-two button {
     display: none !important;
-  }
-  
-  html body .cre-t-193-product-name {
+}
+
+html body .cre-t-193-product-name {
     color: #050d11;
     font-family: "Poppins Semibold", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 48px;
-  }
-  
-  html body .cre-t-193-hide {
+}
+
+html body .cre-t-193-hide {
     display: none !important;
-  }
-  
-  html body .s-curve-container.site-container {
+}
+
+html body .s-curve-container.site-container {
     display: none;
-  }
-  
-  /* _______________________________faq section________________________  */
-  html body .cre-t-193-faq-main {
+}
+
+/* _______________________________faq section________________________  */
+html body .cre-t-193-faq-main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  html body .cre-t-193-faq-header {
+}
+
+html body .cre-t-193-faq-header {
     color: #050d11;
     font-family: "Poppins Semibold", sans-serif;
     font-size: 28px;
@@ -147,129 +155,142 @@ html body .cre-t-193-hide {
     font-weight: 700;
     line-height: 48px;
     /* 171.429% */
-    margin-bottom: 26px;
-  }
-  
-  html body .cre-t-193-faq-dropdown {
+    margin-bottom: 16px;
+}
+
+html body .cre-t-193-faq-dropdown {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 22px;
     width: 100%;
-  }
-  
-  html body .cre-t-193-faq-content {
+}
+
+html body .cre-t-193-faq-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-  }
-  
-  html body .cre-t-193-faq-info-wrapper {
+}
+
+html body .cre-t-193-faq-info-wrapper {
     /* margin: 16px 0 0 0; */
     margin: 16px 0 0 39px;
-  }
-  
-  html body .cre-t-193-faq-drop-header {
+}
+
+html body .cre-t-193-faq-drop-header {
     display: flex;
     align-items: center;
     width: 100%;
     cursor: pointer;
-  }
-  
-  html body .cre-t-193-faq-drop-header-text {
+}
+
+html body .cre-t-193-faq-drop-header-text {
     padding: 0 11px;
     color: #373e42;
-    font-family: "Poppins Semibold", sans-serif;
+    font-family: "Poppins Regular", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     line-height: 22px;
     /* 137.5% */
-  }
-  
-  html body .cre-t-193-faq-drop-header-icon {
+}
+
+html body .cre-t-193-faq-drop-header-icon {
     display: flex;
     width: 28px;
     height: 28px;
     align-items: center;
     justify-content: center;
-  }
-  
-  html body .cre-t-193-faq-content .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content .cre-t-193-faq-info {
     overflow: hidden;
     display: block;
-  }
-  
-  html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-info {
     max-height: 0;
     transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 1500px;
     transition: max-height 0.5s ease;
-  }
-  
-  html body .cre-t-193-faq-content1.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content1.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content2.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content2.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 450px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content3.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content3.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 350px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content4.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content4.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 1200px;
     transition: max-height 0.5s ease;
-  }
-  html body .cre-t-193-faq-content5.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content5.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 350px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content6.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content6.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content7.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content7.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content8.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content8.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content9.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content9.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content10.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content10.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content11.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content11.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content12.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content12.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content13.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content13.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 200px;
     transition: max-height 0.3s ease;
-  }
-  html body .cre-t-193-faq-content14.cre193-dropdown-active .cre-t-193-faq-info {
+}
+
+html body .cre-t-193-faq-content14.cre193-dropdown-active .cre-t-193-faq-info {
     max-height: 160px;
     transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-modal-wrapper {
+}
+
+html body .cre-t-193-modal-wrapper {
     display: none;
     position: fixed;
     width: 100%;
@@ -278,15 +299,15 @@ html body .cre-t-193-hide {
     left: 0;
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 4;
-  }
-  
-  html body .cre-t-193-modal-wrapper.cre-t-193-modal-active {
+}
+
+html body .cre-t-193-modal-wrapper.cre-t-193-modal-active {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  html body .cre-t-193-modal-container {
+}
+
+html body .cre-t-193-modal-container {
     display: block;
     max-width: 630px;
     height: auto;
@@ -302,12 +323,12 @@ html body .cre-t-193-hide {
     color: var(--color-ui-black);
     /* box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843); */
     box-shadow: 0px 2px 20px 0px rgba(5, 13, 17, 0.2);
-  
+
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-  }
-  
-  html body .cre-t-193-compare-main {
+}
+
+html body .cre-t-193-compare-main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,20 +336,22 @@ html body .cre-t-193-hide {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    /* 150% */
     letter-spacing: 0.08px;
-    margin-top: 14px;
+    margin-top: 20px;
     gap: 8px;
     width: fit-content;
     cursor: pointer;
-  }
-  html body .cre-t-193-compare-container {
+}
+
+html body .cre-t-193-compare-container {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  html body .cre-t-193-show-all-wrapper {
+}
+
+html body .cre-t-193-show-all-wrapper {
     box-sizing: border-box;
     display: flex;
     padding: 11px 15px;
@@ -342,85 +365,99 @@ html body .cre-t-193-hide {
     margin: 0 auto;
     margin-top: 35px;
     cursor: pointer;
-  }
-  
-  html body .cre-t-193-show-all-cta {
+}
+
+html body .cre-t-193-show-all-cta {
     color: #013c5a;
     font-family: "Poppins Medium", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    /* 150% */
     letter-spacing: 0.08px;
-  }
-  /* _________________________listing__parks________________________________ */
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-title {
+}
+
+/* _________________________listing__parks________________________________ */
+html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-title {
     margin: 0;
     color: #a1a1a1;
-  }
-  html body .two-tier-product-listing__parks.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title {
+}
+
+html body .two-tier-product-listing__parks.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title {
     color: var(--color-ui-dark);
-  }
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-subtitle {
+}
+
+html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-subtitle {
     display: none;
-  }
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-number {
+}
+
+html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-number {
     border: 3px solid #cacaca;
     box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843);
-  }
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-number.cre-t-193-grey-out {
+}
+
+html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-number.cre-t-193-grey-out {
     border: 3px solid var(--color-accent);
-  }
-  
-  /* ___________________________________listing__passes__________________________________ */
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-title {
+}
+
+/* ___________________________________listing__passes__________________________________ */
+html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-title {
     margin: 0;
     color: #a1a1a1;
-  }
-  html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title {
+}
+
+html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title {
     color: var(--color-ui-dark);
-  }
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-subtitle {
+}
+
+html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-subtitle {
     display: none;
-  }
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-number {
+}
+
+html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-number {
     border: 3px solid #cacaca;
     box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843);
-  }
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-number.cre-t-193-grey-out {
+}
+
+html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-number.cre-t-193-grey-out {
     border: 3px solid var(--color-accent);
-  }
-  
-  /* ____________________________________________________________________________________ */
-  
-  html body .cre-t-193-product-price-des .product-price {
+}
+
+/* ____________________________________________________________________________________ */
+
+html body .cre-t-193-product-price-des .product-price {
     position: relative;
-  }
-  
-  html body .cre-t-193-price-description {
+}
+
+html body .cre-t-193-price-description {
     color: #050d11;
     font-family: "Poppins Regular", ui-sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 17px; /* 141.667% */
+    line-height: 17px;
+    /* 141.667% */
     margin: 0;
     max-width: 306px;
     width: 100%;
     position: absolute;
     top: 115%;
-  }
-  html body .cre-t-193-faq-view-all {
+}
+
+html body .cre-t-193-faq-view-all {
     margin-top: 29px;
     width: 100%;
-  }
-  html body .cre-t-193-faq-view-all-link {
+}
+
+html body .cre-t-193-faq-view-all-link {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     cursor: pointer;
-  }
-  html body .cre-t-193-faq-view-all-text {
+}
+
+html body .cre-t-193-faq-view-all-text {
     margin-right: 9px;
     color: #013c5a;
     font-family: "Poppins Regular", sans-serif;
@@ -431,86 +468,93 @@ html body .cre-t-193-hide {
     /* 150% */
     letter-spacing: 0.08px;
     text-decoration-line: underline;
-  }
-  html body .cre-t-193-faq-view-all-icon {
+}
+
+html body .cre-t-193-faq-view-all-icon {
     display: flex;
     width: 14px;
     height: 13px;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
-  }
-  html body .cre-t-193-faq-view-all-link:hover .cre-t-193-faq-view-all-icon {
+}
+
+html body .cre-t-193-faq-view-all-link:hover .cre-t-193-faq-view-all-icon {
     transform: translateX(8px);
-  }
-  html body .cre-t-193-faq-info-img {
+}
+
+html body .cre-t-193-faq-info-img {
     max-width: 624px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  html body .cre-t-193-faq-info-img img {
+}
+
+html body .cre-t-193-faq-info-img img {
     width: 100%;
     height: 100%;
-  }
-  
-  html body .cre-t-193-faq-info-text {
+}
+
+html body .cre-t-193-faq-info-text {
     font-size: 16px;
     line-height: 22px;
     font-family: "Poppins Lite", sans-serif;
     font-weight: 400;
     cursor: auto;
-  }
-  
-  html body .cre-t-193-faq-info-wrapper > div {
+}
+
+html body .cre-t-193-faq-info-wrapper>div {
     margin-bottom: 23px;
-  }
-  
-  html body .cre-t-193-faq-info-wrapper > div:last-child {
+}
+
+html body .cre-t-193-faq-info-wrapper>div:last-child {
     margin-bottom: 0;
-  }
-  
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  
-  html body .cre-t-193-modal-header {
+}
+
+/* __________________________________ */
+/* __________________________________ */
+/* __________________________________ */
+/* __________________________________ */
+/* __________________________________ */
+/* __________________________________ */
+
+html body .cre-t-193-modal-header {
     color: #050d11;
     font-family: "Poppins Semibold", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 160% */
+    line-height: 32px;
+    /* 160% */
     letter-spacing: 0.3px;
     margin-bottom: 16px;
-  }
-  html body .cre-t-193-general-content {
+}
+
+html body .cre-t-193-general-content {
     margin-bottom: 16px;
-  }
-  html body .cre-t-193-modal-list ul li {
+}
+
+html body .cre-t-193-modal-list ul li {
     color: #373e41;
     font-family: "Poppins regular", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 22px; /* 137.5% */
+    line-height: 22px;
+    /* 137.5% */
     letter-spacing: 0.04px;
-  }
-  
-  html body .cre-t-193-modal-list ul {
+}
+
+html body .cre-t-193-modal-list ul {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-  }
-  
-  html body .cre-t-193-modal-text {
+}
+
+html body .cre-t-193-modal-text {
     color: #373e41;
     font-family: "Poppins regular", sans-serif;
     font-size: 16px;
@@ -518,9 +562,9 @@ html body .cre-t-193-hide {
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.04px;
-  }
-  
-  html body .cre-t-193-modal-button-text {
+}
+
+html body .cre-t-193-modal-button-text {
     display: flex;
     padding: 12px 24px;
     justify-content: center;
@@ -532,207 +576,226 @@ html body .cre-t-193-hide {
     width: 320px;
     cursor: pointer;
     color: #050d11;
-  
+
     font-family: "Poppins Semibold", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px; /* 137.5% */
+    line-height: 22px;
+    /* 137.5% */
     letter-spacing: 0.04px;
     transition-timing-function: ease;
     transition-duration: 300ms;
     transition-property: box-shadow, background-color, color;
-  }
-  
-  html body .cre-t-193-modal-button {
+}
+
+html body .cre-t-193-modal-button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-  }
-  
-  html body .cre-t-193-modal-button-text:hover {
+}
+
+html body .cre-t-193-modal-button-text:hover {
     box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843);
-  }
-  
-  html body .cre-193-modal {
+}
+
+html body .cre-193-modal {
     color: #003c5a;
     text-decoration: underline;
-  }
-  html body .cre-t-193-text-link {
+}
+
+html body .cre-t-193-text-link {
     color: #003c5a;
     text-decoration: underline;
-  }
-  html body .cre-t-193-modal-text a {
+}
+
+html body .cre-t-193-modal-text a {
     color: #003c5a;
     text-decoration: underline;
-  }
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  
-  html body .cre-t-193-modal-container {
+}
+
+/* __________________________ */
+/* __________________________ */
+/* __________________________ */
+/* __________________________ */
+/* __________________________ */
+
+html body .cre-t-193-modal-container {
     box-sizing: border-box;
-  }
-  
-  html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-drop-header-icon img {
+}
+
+html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-drop-header-icon img {
     display: block;
-  }
-  html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-drop-header-icon svg {
+}
+
+html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-drop-header-icon svg {
     display: none;
-  }
-  
-  html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-header-icon img {
+}
+
+html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-header-icon img {
     display: none;
-  }
-  html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-header-icon svg {
+}
+
+html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-header-icon svg {
     display: block;
-  }
-  
-  @media screen and (max-width: 665px) and (max-height: 830px) {
+}
+
+@media screen and (max-width: 665px) and (max-height: 830px) {
     html body .cre-t-193-modal-blockout .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (max-width: 665px) and (max-height: 480px) {
+}
+
+@media screen and (max-width: 665px) and (max-height: 480px) {
     html body .cre-t-193-modal-popular .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (max-width: 665px) and (max-height: 614px) {
+}
+
+@media screen and (max-width: 665px) and (max-height: 614px) {
     html body .cre-t-193-modal-parking .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  
+
     html body .cre-t-193-modal-preferred .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (max-width: 665px) and (max-height: 644px) {
+}
+
+@media screen and (max-width: 665px) and (max-height: 644px) {
     html body .cre-t-193-modal-tickets .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (max-width: 665px) and (max-height: 568px) {
+}
+
+@media screen and (max-width: 665px) and (max-height: 568px) {
     html body .cre-t-193-modal-discount .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  
-  /* __________________________ */
-  /* __________________________ */
-  
-  @media screen and (min-width: 666px) and (max-height: 544px) {
+}
+
+/* __________________________ */
+/* __________________________ */
+
+@media screen and (min-width: 666px) and (max-height: 544px) {
     html body .cre-t-193-modal-blockout .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (min-width: 666px) and (max-height: 348px) {
+}
+
+@media screen and (min-width: 666px) and (max-height: 348px) {
     html body .cre-t-193-modal-popular .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (min-width: 666px) and (max-height: 460px) {
+}
+
+@media screen and (min-width: 666px) and (max-height: 460px) {
     html body .cre-t-193-modal-parking .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
+
     html body .cre-t-193-modal-preferred .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (min-width: 666px) and (max-height: 468px) {
+}
+
+@media screen and (min-width: 666px) and (max-height: 468px) {
     html body .cre-t-193-modal-tickets .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  @media screen and (min-width: 666px) and (max-height: 436px) {
+}
+
+@media screen and (min-width: 666px) and (max-height: 436px) {
     html body .cre-t-193-modal-discount .cre-t-193-modal-container {
-      height: calc(100% - 50px);
+        height: calc(100% - 50px);
     }
-  }
-  
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  
-  @media screen and (min-width: 1024px) {
+}
+
+/* __________________________ */
+/* __________________________ */
+/* __________________________ */
+/* __________________________ */
+/* __________________________ */
+
+@media screen and (min-width: 1024px) {
     html body .pass-comparison-table .pass-comparison-table__scrolling-area {
-      overflow-x: hidden;
-      overflow: hidden;
-      max-height: 488px;
-      /* transition: max-height 0.3s ease; */
+        overflow-x: hidden;
+        overflow: hidden;
+        max-height: 488px;
+        /* transition: max-height 0.3s ease; */
     }
-  
+
     html body .pass-comparison-table.cre-t-193-show-table .pass-comparison-table__scrolling-area {
-      /* max-height: 3000px; */
-      max-height: 100%;
-      /* transition: max-height 0.3s ease; */
+        /* max-height: 3000px; */
+        max-height: 100%;
+        /* transition: max-height 0.3s ease; */
     }
-  
+
     html body .pass-comparison-table .pass-comparison-table__scrolling-area:after {
-      content: " ";
-      display: block;
-      position: absolute;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      width: 100%;
-      height: 48px;
-      background: linear-gradient(rgba(255, 255, 255, 0) 0%, var(--color-ui-white) 100%) center bottom;
-      background-repeat: no-repeat;
-      bottom: 80px;
+        content: " ";
+        display: block;
+        position: absolute;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 48px;
+        background: linear-gradient(rgba(255, 255, 255, 0) 0%, var(--color-ui-white) 100%) center bottom;
+        background-repeat: no-repeat;
+        bottom: 80px;
     }
-  
+
     html body .pass-comparison-table.cre-t-193-show-table .pass-comparison-table__scrolling-area:after {
-      display: none;
+        display: none;
     }
-  
+
     html body .cre-t-193-price-description {
-      max-width: 306px;
-      width: 306px;
+        max-width: 306px;
+        width: 306px;
     }
-  }
-  @media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 1023px) {
     html body .cre-t-193-show-all-container {
-      display: none;
+        display: none;
     }
-  }
-  @media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 767px) {
     html body .cre-t-193-price-description {
-      position: static;
-      max-width: none;
-      margin-top: 7px;
+        position: static;
+        max-width: none;
+        margin-top: 7px;
     }
-  
+
     html body .cre-t-193-product-price-des .radio-form-group {
-      display: flex;
-      align-items: flex-start;
+        display: flex;
+        align-items: flex-start;
     }
-  
+
     html body .cre-t-193-product-price-des .radio-form-group .radio-form-group__radio-button {
-      margin-top: 10px;
+        margin-top: 10px;
     }
-  }
-  
-  html body .cre-t-193-bold {
+}
+
+html body .cre-t-193-bold {
     font-family: "Poppins Semibold";
-  }
-  html body .main-padded > .two-tier-product-listing {
+}
+
+html body .main-padded>.two-tier-product-listing {
     margin-top: 40px !important;
-  }
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* ______________inactive/active for step 2 and 3_______________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* 
+}
+
+/* _____________________________________________________________________________ */
+/* _____________________________________________________________________________ */
+/* _____________________________________________________________________________ */
+/* ______________inactive/active for step 2 and 3_______________________________ */
+/* _____________________________________________________________________________ */
+/* _____________________________________________________________________________ */
+/* 
   html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-title:not(.cre-t-193-step2-header),
   html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-title:not(.cre-t-193-step3-header) {
     display: none;
@@ -752,8 +815,7 @@ html body .cre-t-193-hide {
   html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-subtitle {
     display: block;
   } */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  
+/* _____________________________________________________________________________ */
+/* _____________________________________________________________________________ */
+/* _____________________________________________________________________________ */
+/* _____________________________________________________________________________ */
