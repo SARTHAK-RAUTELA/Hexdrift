@@ -376,13 +376,13 @@ html body [class*="hero-header"]>[class*=hero-header_heroCampaignHeaderHeight] {
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     html body [class*='hero-header_filters'] .bg-white>div {
         display: block !important;
     }
 
     html body [class*='hero-header_filters'] .bg-white>div h2 {
-        font-size: 20px !important;
+        font-size: 23px !important;
         line-height: 28px !important;
         font-weight: 700 !important;
     }
@@ -390,4 +390,20 @@ html body [class*="hero-header"]>[class*=hero-header_heroCampaignHeaderHeight] {
     [class*="hero-header_heroContainer"] h1 {
         display: none;
     }
+
+
+    html body [class*='hero-header_filters'] [class*="compact-filters_wrapper"]~[class*="compact-filters_wrapper"] {
+        display: none !important;
+    }
+
+    [class*="hero-header"]>[class*=hero-header_heroCampaignHeaderHeight] div {
+        display: none !important;
+    }
+
+
+    [class*="hero-header_rootFlex"]>[class*="hero-header_heroHeaderExtendedHeight"] [class*="hero-header_heroHeaderExtendedHeight"]+div .white.relative,
+    [class*="hero-header_heroHeaderHeight"] .white.pv3.relative {
+        display: none !important;
+    }
+
 }

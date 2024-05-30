@@ -118,6 +118,7 @@ html body.cre-countryLife-t-1 .cre-productdispla-right-paragraph-inner p {
     line-height: 28px;
     text-align: left;
     font-family: 'Libre Franklin';
+    margin-bottom: 10px;
 }
 
 html body.cre-countryLife-t-1 .cre-right-li {
@@ -130,6 +131,7 @@ html body.cre-countryLife-t-1.cre-display .cre-productdispla-right-seeMore {
 
 html body.cre-countryLife-t-1.cre-display .cre-right-li {
     display: flex;
+    margin-bottom: 10px;
 }
 
 html body.cre-countryLife-t-1 li.cre-right-li {
@@ -1445,7 +1447,7 @@ html body.cre-countryLife-t-1 .cre-rooling-subscription-content .price-offer {
     }
 
 
-    .cre-productdispla-right-paragraph{
+    .cre-productdispla-right-paragraph {
         padding: 0 15px;
     }
 }
@@ -1509,8 +1511,9 @@ html body.cre-t-MAG22 img.cre-img {
     width: 100%;
 }
 
-html body.cre-countryLife-t-1 li.cre-right-li.right-li-one div{
-    font-weight: 300;
+html body.cre-countryLife-t-1 li.cre-right-li.right-li-one div {
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 
