@@ -1216,8 +1216,7 @@
 				<div class="cre-productdispla-right-paragraph-inner">
 				  <div>
 					<span>
-					<p></p><p>
-					</p><p><strong>The very best of English life, every week.</strong>
+					<p><strong>The very best of English life, every week.</strong>
 					  A subscription to Country Life — the UK’s only weekly perfect bound magazine — is a celebration of the best of British with modern rural life and all of its diverse joys and pleasures, delivered straight to your front door.</p>
 					<p class="cre-changeYear">For over 125 years, it’s been our aim to: </p>
 					<p class="cre-belowChangeYear"></p>
