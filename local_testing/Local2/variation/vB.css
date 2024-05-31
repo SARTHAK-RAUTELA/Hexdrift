@@ -189,7 +189,7 @@ html body .cre-t-193-faq-drop-header-text {
     padding: 0 11px;
     color: #373e42;
     font-family: "Poppins Regular", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
@@ -779,6 +779,12 @@ html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-head
     html body .cre-t-193-product-price-des .radio-form-group .radio-form-group__radio-button {
         margin-top: 10px;
     }
+
+    html body .cre-t-193-faq-header {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
 }
 
 html body .cre-t-193-bold {
