@@ -360,7 +360,7 @@ html body .bmhidesection {
         height: 12px;
         width: 100%;
         position: absolute;
-        background-color: #fafafa;
+        background-color: #fff;
         bottom: 4px;
         left: 0;
         right: 0;
@@ -412,6 +412,7 @@ html body [class*="homepage-hero_heavy"] span.highlight {
     color: #3c9fda;
 }
 
-html body [class*="homepage-hero_heavy"]{
-    padding: 0 8%;
+
+html body .bmhidesection {
+    background-color: #fff !important;
 }
