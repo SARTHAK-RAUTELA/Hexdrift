@@ -83,15 +83,13 @@
 
       // Putting new heading
 
-      // var heroElement = document.querySelector('html body [class*="homepage-hero_heavy"]');
+      var heroElement = document.querySelector('html body [class*="homepage-hero_heavy"]');
 
-      // if (heroElement) {
+      if (heroElement) {
 
-      //   heroElement.innerHTML = 'Home <span class="highlight">improvement,</span><br> made easy.';
+        heroElement.innerHTML = 'Home <span class="highlight">improvement,</span><br> made easy.';
 
-      // }
-      document.querySelector('html body [class*="homepage-hero_heavy"]').innerHTML =
-        'Home <span class="highlight">improvement,</span><br> made easy.';
+      }
 
 
       function wrapDivs() {
