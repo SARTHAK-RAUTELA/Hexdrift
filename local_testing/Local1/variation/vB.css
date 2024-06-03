@@ -297,7 +297,7 @@ html body .bmhidesection {
         border-radius: 4px !important;
     }
 
-    .reviewsection.disktop {
+    .reviewsection.desktop {
         display: none;
     }
 
@@ -360,7 +360,7 @@ html body .bmhidesection {
         height: 12px;
         width: 100%;
         position: absolute;
-        background-color: #fafafa;
+        background-color: #fff;
         bottom: 4px;
         left: 0;
         right: 0;
@@ -399,6 +399,19 @@ html body .bmhidesection {
     text-align: center;
 }
 
-/* .bmhidesection+div {
-    display: none;
-} */
+.wrapped-divs {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapped-divs>div:first-child {
+    order: 2;
+}
+
+html body [class*="homepage-hero_heavy"] span.highlight {
+    color: #3c9fda;
+}
+
+html body .bmhidesection {
+    background-color: #fff !important;
+}
