@@ -374,9 +374,6 @@ html body .bmhidesection {
 }
 
 @media (min-width: 768px) {
-    .reviewsection.mobile {
-        display: none;
-    }
 
     [class*="dropdown-wrapper_root"]>div:first-child:before {
         content: " ";
@@ -392,6 +389,12 @@ html body .bmhidesection {
 
     [class*=" homepage-hero_root"] [aria-label="Search on Thumbtack"] {
         padding-left: 32px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .reviewsection.mobile {
+        display: none;
     }
 }
 
