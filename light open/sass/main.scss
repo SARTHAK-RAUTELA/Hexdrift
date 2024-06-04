@@ -1,58 +1,55 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-.hero{
+.hero {
     background-color: black;
-    // background-color: #1d2026;
+    /* background-color: #1d2026; */
     min-height: 100vh;
     width: 100%;
     color: #fff;
     position: relative;
-
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     padding: 20px 8%;
 }
 
-nav .menu-img{
+nav .menu-img {
     width: 88px;
     margin-right: 20px;
     cursor: pointer;
-    border-radius: 52%;
-
+    border-radius: 50%;
 }
 
-nav .logo{
+nav .logo {
     width: 90px;
     cursor: pointer;
     filter: invert(100%);
 }
 
-nav ul{
+nav ul {
     flex: 1;
     text-align: right;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     display: inline-block;
-    margin:0 20px;
+    margin: 0 20px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #fff;
 }
 
-button{
+button {
     background: #efefef;
     height: 30px;
     width: 60px;
@@ -64,7 +61,7 @@ button{
     transition: background 0.5s;
 }
 
-button span{
+button span {
     display: block;
     background: #999;
     height: 26px;
@@ -74,41 +71,40 @@ button span{
     transition: background 0.5s, margin-left 0.5s;
 }
 
-.light{
+.lamp-container {
+    position: absolute;
+    top: -20px;
+    left: 22%;
+    width: 200px;
+}
+
+.lamp {
+    width: 100%;
+}
+
+.light {
     position: absolute;
     top: 97%;
     left: 50%;
     transform: translate(-50%);
     width: 700px;
     margin-left: -10px;
-opacity: 0;
-transition: opacity 0.5s;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.lamp-container{
-    position: absolute;
-    top: -20px;
-    left: 22%;
-    width: 200px;
-
-}
-
-.lamp{
-    width: 100%;
-}
-
-
-.text-container{
+.text-container {
     max-width: 600px;
     margin-top: 7%;
     margin-left: 50%;
+}
 
-h1{
+.text-container h1 {
     font-size: 80px;
     font-weight: 400;
 }
 
-a{
+.text-container a {
     text-decoration: none;
     background: #8f9795;
     padding: 14px 40px;
@@ -120,16 +116,14 @@ a{
     cursor: pointer;
 }
 
-}
-
-.control{
+.control {
     display: flex;
-align-items: center;
-justify-content: flex-end;
-margin-top: 150px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
 }
 
-.control .line{
+.control .line {
     width: 250px;
     height: 4px;
     background: white;
@@ -137,7 +131,7 @@ margin-top: 150px;
     border-radius: 2px;
 }
 
-.control .line span{
+.control .line span {
     width: 50%;
     height: 8px;
     margin-top: -2px;
@@ -146,15 +140,15 @@ margin-top: 150px;
     display: block;
 }
 
-.active{
+.active {
     background: #00986f;
 }
 
-.active span{
+.active span {
     background: #fff;
     margin-left: 31px;
 }
 
-.on{
+.on {
     opacity: 1;
 }
