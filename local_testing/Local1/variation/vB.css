@@ -1,850 +1,191 @@
-/* _______________Universal CSS___________________________ */
-html body .cre-t-193-hide {
-    display: none !important;
-  }
-  
-  html body .cre-t-193-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
-  }
-  
-  /* _______________Universal CSS END________________________ */
-  /* ________________________________________________________ */
-  /* ________________________________________________________ */
-  html body #cre193-banner-container {
-    box-sizing: border-box;
-    margin-top: 69px;
-    padding: 0;
-  }
-  
-  /* html body .cre-t-193-banner-wrapper {
-      padding: 16px 16px;
-      border-radius: 4px;
-      background: #f7fcfc;
-    } */
-  html body .cre-t-193-banner-main {
-    /* max-width: 964px; */
-    /* width: 100%; */
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 16px 16px;
-    border-radius: 4px;
-    background: #f7fcfc;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  html body .cre-t-193-banner-icon {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  html body .cre-t-193-banner-cross {
-    display: flex;
-    width: 16px;
-    height: 16px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  html body .cre-t-193-banner-copy {
-    flex: 1;
-    padding: 0 16px;
-  }
-  
-  html body .cre-t-193-banner-text {
-    color: #050d11;
-    font-size: 16px;
-    font-style: normal;
-    /* font-family: "Poppins medium", sans-serif; */
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 500;
-    line-height: 18px;
-  }
-  
-  html body .cre-t-193-banner-text-link {
-    color: #013c5a;
-    /* font-family: "Poppins medium", sans-serif; */
-    font-family: inherit;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    text-decoration-line: underline;
-    display: inline-flex;
-  }
-  
-  /* __________________________________________________________ */
-  html body #cre193-headline-container {
-    margin-top: 37px;
-  }
-  
-  html body .cre-t-193-headline-header {
-    color: #050d11;
-    font-family: "Poppins Semibold", sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px;
-  }
-  
-  html body .cre-t-193-headline-subheader {
-    color: #050d11;
-    font-family: "Poppins medium", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
-  }
-  
-  html body .cre-t-193-hide-two {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  html body .cre-t-193-hide-two .full-width-callout {
-    padding: 0 !important;
-    margin: 0 !important;
-    border: 0 !important;
-  }
-  
-  html body .cre-t-193-hide-two .full-width-callout .full-width-callout__content {
-    display: none !important;
-  }
-  
-  html body .cre-t-193-hide-two button {
-    display: none !important;
-  }
-  
-  html body .cre-t-193-product-name {
-    color: #050d11;
-    font-family: "Poppins Semibold", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
-  }
-  
-  html body .cre-t-193-hide {
-    display: none !important;
-  }
-  
-  html body .s-curve-container.site-container {
-    display: none;
-  }
-  
-  /* _______________________________faq section________________________  */
-  html body .cre-t-193-faq-main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  html body .cre-t-193-faq-header {
-    color: #050d11;
-    font-family: "Poppins Semibold", sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 48px;
-    /* 171.429% */
-    margin-bottom: 16px;
-  }
-  
-  html body .cre-t-193-faq-dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 22px;
-    width: 100%;
-  }
-  
-  html body .cre-t-193-faq-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-bottom: 4px;
-  }
-  
-  html body .cre-t-193-faq-info-wrapper {
-    /* margin: 16px 0 0 0; */
-    margin: 16px 0 0 39px;
-  }
-  
-  html body .cre-t-193-faq-drop-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    cursor: pointer;
-  }
-  
-  html body .cre-t-193-faq-drop-header-text {
-    padding: 0 11px;
-    color: #373e42;
-    font-family: "Poppins Regular", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    line-height: 22px;
-    /* 137.5% */
-  }
-  
-  html body .cre-t-193-faq-drop-header-icon {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  html body .cre-t-193-faq-content .cre-t-193-faq-info {
-    overflow: hidden;
-    display: block;
-  }
-  
-  html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-info {
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 1500px;
-    transition: max-height 0.5s ease;
-  }
-  
-  html body .cre-t-193-faq-content1.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content2.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 450px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content3.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 350px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content4.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 1200px;
-    transition: max-height 0.5s ease;
-  }
-  
-  html body .cre-t-193-faq-content5.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 350px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content6.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content7.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content8.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content9.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content10.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content11.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content12.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content13.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 200px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-content14.cre193-dropdown-active .cre-t-193-faq-info {
-    max-height: 160px;
-    transition: max-height 0.3s ease;
-  }
-  
-  html body .cre-t-193-modal-wrapper {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 4;
-  }
-  
-  html body .cre-t-193-modal-wrapper.cre-t-193-modal-active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  html body .cre-t-193-modal-container {
-    display: block;
-    max-width: 630px;
-    height: auto;
-    margin: 1rem;
-    padding: 40px;
-    border-radius: 8px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-color: var(--color-ui-white);
-    color: var(--color-ui-black);
-    /* box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843); */
-    box-shadow: 0px 2px 20px 0px rgba(5, 13, 17, 0.2);
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-  }
-  
-  html body .cre-t-193-compare-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #013c5a;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    /* 150% */
-    letter-spacing: 0.08px;
-    margin-top: 20px;
-    gap: 8px;
-    width: -moz-fit-content;
-    width: fit-content;
-    cursor: pointer;
-  }
-  
-  html body .cre-t-193-compare-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  html body .cre-t-193-show-all-wrapper {
-    box-sizing: border-box;
-    display: flex;
-    padding: 12px 22px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 6px;
-    background: #e6ecef;
-    max-width: 130px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 35px;
-    cursor: pointer;
-  }
-  
-  html body .cre-t-193-show-all-cta {
-    color: #013c5a;
-    font-family: "Poppins Medium", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    /* 150% */
-    letter-spacing: 0.08px;
-  }
-  
-  /* _________________________listing__parks________________________________ */
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-title {
-    margin: 0;
-    color: #a1a1a1;
-  }
-  
-  html body .two-tier-product-listing__parks.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title {
-    color: var(--color-ui-dark);
-  }
-  
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-subtitle {
-    display: none;
-  }
-  
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-number {
-    border: 3px solid #cacaca;
-    box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843);
-  }
-  
-  html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-number.cre-t-193-grey-out {
-    border: 3px solid var(--color-accent);
-  }
-  
-  /* ___________________________________listing__passes__________________________________ */
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-title {
-    margin: 0;
-    color: #a1a1a1;
-  }
-  
-  html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title {
-    color: var(--color-ui-dark);
-  }
-  
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-subtitle {
-    display: none;
-  }
-  
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-number {
-    border: 3px solid #cacaca;
-    box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843);
-  }
-  
-  html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-number.cre-t-193-grey-out {
-    border: 3px solid var(--color-accent);
-  }
-  
-  /* ____________________________________________________________________________________ */
-  html body .cre-t-193-product-price-des .product-price {
-    position: relative;
-  }
-  
-  html body .cre-t-193-price-description {
-    color: #050d11;
-    font-family: "Poppins Regular", ui-sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 17px;
-    /* 141.667% */
-    margin: 0;
-    max-width: 306px;
-    width: 100%;
-    position: absolute;
-    top: 115%;
-  }
-  
-  html body .cre-t-193-faq-view-all {
-    margin-top: 29px;
-    width: 100%;
-  }
-  
-  html body .cre-t-193-faq-view-all-link {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
-  }
-  
-  html body .cre-t-193-faq-view-all-text {
-    margin-right: 9px;
-    color: #013c5a;
-    font-family: "Poppins Regular", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    /* 150% */
-    letter-spacing: 0.08px;
-    text-decoration-line: underline;
-  }
-  
-  html body .cre-t-193-faq-view-all-icon {
-    display: flex;
-    width: 14px;
-    height: 13px;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-  }
-  
-  html body .cre-t-193-faq-view-all-link:hover .cre-t-193-faq-view-all-icon {
-    transform: translateX(8px);
-  }
-  
-  html body .cre-t-193-faq-info-img {
-    max-width: 624px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  html body .cre-t-193-faq-info-img img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  html body .cre-t-193-faq-info-text {
-    font-size: 16px;
-    line-height: 22px;
-    font-family: "Poppins Lite", sans-serif;
-    font-weight: 400;
-    cursor: auto;
-  }
-  
-  html body .cre-t-193-faq-info-wrapper > div {
-    margin-bottom: 23px;
-  }
-  
-  html body .cre-t-193-faq-info-wrapper > div:last-child {
-    margin-bottom: 0;
-  }
-  
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  /* __________________________________ */
-  html body .cre-t-193-modal-header {
-    color: #050d11;
-    font-family: "Poppins Semibold", sans-serif;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
-    /* 160% */
-    letter-spacing: 0.3px;
-    margin-bottom: 10px;
-  }
-  
-  html body .cre-t-193-general-content {
-    margin-bottom: 24px;
-  }
-  
-  html body .cre-t-193-modal-list ul li {
-    color: #373e41;
-    font-family: "Poppins regular", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    /* 137.5% */
-    letter-spacing: 0.04px;
-  }
-  
-  html body .cre-t-193-modal-list ul {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-  
-  html body .cre-t-193-modal-text {
-    color: #373e41;
-    font-family: "Poppins regular", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.04px;
-  }
-  
-  html body .cre-t-193-modal-button-text {
-    display: flex;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    align-self: stretch;
-    border-radius: 4px;
-    background: #b1e4e3;
-    width: 320px;
-    cursor: pointer;
-    color: #050d11;
-    font-family: "Poppins Medium",sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    /* 137.5% */
-    letter-spacing: 0.04px;
-    transition-timing-function: ease;
-    transition-duration: 300ms;
-    transition-property: box-shadow, background-color, color;
-  }
-  
-  html body .cre-t-193-modal-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  
-  html body .cre-t-193-modal-button-text:hover {
-    box-shadow: 0px 2px 8px rgba(5, 13, 17, 0.1019607843);
-  }
-  
-  html body .cre-193-modal {
-    color: #003c5a;
-    text-decoration: underline;
-  }
-  
-  html body .cre-t-193-text-link {
-    color: #003c5a;
-    text-decoration: underline;
-  }
-  
-  html body .cre-t-193-modal-text a {
-    color: #003c5a;
-    text-decoration: underline;
-  }
-  
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  html body .cre-t-193-modal-container {
-    box-sizing: border-box;
-  }
-  
-  html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-drop-header-icon .cre-t-193-icon-plus {
-    display: block;
-  }
-  
-  html body .cre-t-193-faq-content:not(.cre193-dropdown-active) .cre-t-193-faq-drop-header-icon .cre-t-193-icon-minus {
-    display: none;
-  }
-  
-  html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-header-icon .cre-t-193-icon-plus {
-    display: none;
-  }
-  
-  html body .cre-t-193-faq-content.cre193-dropdown-active .cre-t-193-faq-drop-header-icon .cre-t-193-icon-minus {
-    display: block;
-  }
-  
-  @media screen and (max-width: 665px) and (max-height: 830px) {
-    html body .cre-t-193-modal-blockout .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (max-width: 665px) and (max-height: 480px) {
-    html body .cre-t-193-modal-popular .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (max-width: 665px) and (max-height: 614px) {
-    html body .cre-t-193-modal-parking .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-    html body .cre-t-193-modal-preferred .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (max-width: 665px) and (max-height: 644px) {
-    html body .cre-t-193-modal-tickets .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (max-width: 665px) and (max-height: 568px) {
-    html body .cre-t-193-modal-discount .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  /* __________________________ */
-  /* __________________________ */
-  @media screen and (min-width: 666px) and (max-height: 544px) {
-    html body .cre-t-193-modal-blockout .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (min-width: 666px) and (max-height: 348px) {
-    html body .cre-t-193-modal-popular .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (min-width: 666px) and (max-height: 460px) {
-    html body .cre-t-193-modal-parking .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-    html body .cre-t-193-modal-preferred .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (min-width: 666px) and (max-height: 468px) {
-    html body .cre-t-193-modal-tickets .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  @media screen and (min-width: 666px) and (max-height: 436px) {
-    html body .cre-t-193-modal-discount .cre-t-193-modal-container {
-      height: calc(100% - 50px);
-    }
-  }
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  /* __________________________ */
-  @media screen and (min-width: 844px) {
-    html body .cre-t-193-banner-copy {
-      padding: 0 40px 0 16px;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    html body .pass-comparison-table .pass-comparison-table__scrolling-area {
-      overflow-x: hidden;
-      overflow: hidden;
-      max-height: 488px;
-      /* transition: max-height 0.3s ease; */
-    }
-    html body .pass-comparison-table.cre-t-193-show-table .pass-comparison-table__scrolling-area {
-      /* max-height: 3000px; */
-      max-height: 100%;
-      /* transition: max-height 0.3s ease; */
-    }
-    html body .pass-comparison-table .pass-comparison-table__scrolling-area:after {
-      content: " ";
+html body.seamwork14 .Cre-Join .opens.new.tab {
+  background-color: #A6645F;
+  color: #fff;
+  border: 1px solid #A6645F;
+}
+
+html body.seamwork14 .Cre-Join p {
+  font-size: 16px;
+  font-family: 'Roboto Bold';
+  color: #282829;
+}
+
+html body.seamwork14 .CreGuarantee p {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'Roboto Light';
+  margin-bottom: 0;
+}
+
+html body.seamwork14 .CreGuarantee {
+  background-color: #F7F2EB;
+  padding: 20px 35px;
+  margin-top: 32px;
+}
+
+html body.seamwork14 .CreGuarantee h3 {
+  font-size: 16px;
+  font-family: 'Roboto Bold';
+  margin-bottom: 0;
+  line-height: 25.6px;
+}
+
+/* html body.seamwork14 .product--content>div:last-child [data-turbo="false"]>p:first-child,
+html body.seamwork14 .product--content>div:last-child [data-turbo="false"] [href="/join#pricing"],
+html body.seamwork14 .product--content>div:last-child [data-turbo="false"]>p:nth-child(4),
+html body.seamwork14 .product--content>div:last-child .simple-format+.product--details,
+html body.seamwork14 .Cre-Join+p,
+html body.seamwork14 .Cre-Join+p+p,
+html body.seamwork14 .Cre-Join~p {
+  display: none;
+} */
+
+html body.seamwork14 .Cre-Join+.half-space+p {
+  display: none;
+}
+
+html body.seamwork14 .CreGuarantee h3:before {
+  content: " ";
+  display: inline-block;
+  background-image: url(https://www.seamwork.com/assets/entry/join/icon-guarantee-b100d5905863e1cd54728f1eecdaeeb34886a4de05c40f38a105fba00338892a.svg);
+  height: 45px;
+  width: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -15px;
+  top: 11px;
+}
+
+html body.seamwork14 .CreGuarantee>div {
+  padding-left: 50px;
+  position: relative;
+}
+
+html body.seamwork14 div[data-turbo="false"] a[href="/join#pricing"] {
+  background-color: #A6645F !important;
+  border: 1px solid #A6645F !important;
+  color: #fff;
+}
+
+html body.seamwork14 div[data-turbo="false"] a[href="/join#pricing"]:hover {
+  color: #fff;
+}
+
+html body.seamwork14 #checkout {
+  margin-bottom: 30px;
+}
+
+#chtml body.seamwork14 .heckout+em {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+html body.seamwork14 .product--content .product--tags.show-for-medium-up .tag {
+  color: #282829;
+  background-color: #ECDFCD;
+}
+
+html body.seamwork14 [data-turbo="false"]>#checkout button {
+  background-color: #fff;
+  border: 1px solid #333132;
+}
+
+html body.seamwork14 [data-turbo="false"] p label {
+  display: inline-block;
+}
+
+
+
+html body.seamwork14 #js--modal-skill-levels+p {
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width:767px) {
+  html body.seamwork14 .product--header .product--tags .tag {
+      color: #282829;
+      background-color: #ECDFCD;
+  }
+
+  html body.seamwork14 .product--images-container .row.collapse a.button {
+      background: #ffff;
+      color: #282829;
+      font-family: 'Roboto Light';
+      font-weight: 400;
+      font-size: 13.6px;
+      line-height: 16px;
+      letter-spacing: 1.28px;
+  }
+
+  html body.seamwork14 .CreGuarantee {
+      position: relative;
+  }
+
+  html body.seamwork14 .CreGuarantee:after {
+      content: '';
+      background: #F7F2EB;
       display: block;
+      width: 30px;
+      height: 100%;
       position: absolute;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      width: 100%;
-      height: 48px;
-      background: linear-gradient(rgba(255, 255, 255, 0) 0%, var(--color-ui-white) 100%) center bottom;
-      background-repeat: no-repeat;
-      bottom: 80px;
-    }
-    html body .pass-comparison-table.cre-t-193-show-table .pass-comparison-table__scrolling-area:after {
-      display: none;
-    }
-    html body .cre-t-193-price-description {
-      max-width: 306px;
-      width: 306px;
-    }
+      right: -15px;
+      top: 0;
   }
-  @media screen and (max-width: 1023px) {
-    html body .cre-t-193-show-all-container {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    html body .cre-t-193-price-description {
-      position: static;
-      max-width: none;
-      margin-top: 7px;
-    }
-    html body .cre-t-193-product-price-des .radio-form-group {
-      display: flex;
-      align-items: flex-start;
-    }
-    html body .cre-t-193-product-price-des .radio-form-group .radio-form-group__radio-button {
-      margin-top: 10px;
-    }
-    html body .cre-t-193-faq-header {
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-  }
-  html body .cre-t-193-bold {
-    font-family: "Poppins Semibold", sans-serif;
-  }
-  
-  html body .main-padded > .two-tier-product-listing {
-    margin-top: 40px !important;
-  }
-  
-  html body .two-tier-product-listing__product-header .two-tier-product-listing__product-tag {
-    display: none;
-  }
-  
-  html body .two-tier-product-listing__product-header {
-    margin-bottom: 0;
-  }
-  html body .two-column-card-container .two-column-card__description {
-    font-family: "Poppins Regular", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    margin: 4px 0 0;
-    font-style: normal;
-  }
-  
-  html body .two-tier-product-listing__step-header-subtitle {
-    color: #050d11;
-    font-family: "Poppins Regular", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px; /* 300% */
-  }
-  
-  html body .two-tier-product-listing__step-header-title {
-    color: #050d11;
-    font-family: "Poppins Semibold", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-  }
-  
-  html body .two-column-card-container a.two-column-card__link.two-column-card__link--left {
-    color: #013c5a;
-    font-family: "Poppins Medium", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.08px;
-  }
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* ______________inactive/active for step 2 and 3_______________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* 
-    html body .two-tier-product-listing__parks .two-tier-product-listing__step-header-title:not(.cre-t-193-step2-header),
-    html body .two-tier-product-listing__passes .two-tier-product-listing__step-header-title:not(.cre-t-193-step3-header) {
-      display: none;
-    }
-  
-    html body .two-tier-product-listing__parks.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title:not(.cre-t-193-step2-header),
-    html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title:not(.cre-t-193-step3-header) {
+
+  html body.seamwork14 .CreGuarantee:before {
+      content: '';
+      background: #F7F2EB;
       display: block;
-    }
-  
-    html body .two-tier-product-listing__parks.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title.cre-t-193-step2-header,
-    html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-title.cre-t-193-step3-header {
-      display: none;
-    }
-  
-    html body .two-tier-product-listing__parks.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-subtitle,
-    html body .two-tier-product-listing__passes.cre-t-193-parent-grey-out .two-tier-product-listing__step-header-subtitle {
-      display: block;
-    } */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */
-  /* _____________________________________________________________________________ */ /*# sourceMappingURL=a.css.map */
-  
+      width: 30px;
+      height: 100%;
+      position: absolute;
+      left: -15px;
+      top: 0;
+  }
+
+  html body.seamwork14 .CreGuarantee>div {
+      padding-left: 30px !important;
+  }
+
+  html body.seamwork14 .CreGuarantee {
+      padding: 20px 20px;
+  }
+
+  html body.seamwork14 .CreGuarantee h3 {
+      font-size: 16px;
+      font-family: 'Roboto Bold';
+      margin-bottom: 0;
+      line-height: 20.6px;
+  }
+
+  html body.seamwork14 .CreGuarantee h3:before {
+      left: -25px;
+      top: 0;
+  }
+
+  html body.seamwork14 div[data-turbo="false"] a[href="/join#pricing"] {
+      width: 100% !important;
+  }
+}
+
+html body .cre-AccessText {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25.6px;
+  letter-spacing: 0.47999998927116394px;
+  font-family: 'Roboto Bold'
+}
+
+html body #checkout+.product--details label,
+html body .js--external-links+.product--details label{
+  font-family: 'Roboto Light'
+}
+
+html body .product--details+[data-turbo="false"] >p:first-child,
+html body .js--external-links+[data-turbo="false"]>p:first-child{
+  display: none;
+}
+html body [data-turbo="false"] .cre-AccessText{
+  display: block !important;
+  margin-top: 20px;
+}
