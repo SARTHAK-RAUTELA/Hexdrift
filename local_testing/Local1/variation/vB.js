@@ -1,73 +1,73 @@
 (function () {
-    try {
-        /* main variables */
-        var debug = 1;
-        var variation_name = "imageline-17";
+	try {
+		/* main variables */
+		var debug = 1;
+		var variation_name = "imageline-17";
 
-        /* helper library */
-        var _$;
-        !(function (factory) {
-            _$ = factory();
-        })(function () {
-            var bm = function (s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-                }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function (n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function (fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function () {
-                    var items = [];
-                    for (let index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function (v) {
-                    var a = v.split(" ");
-                    return this.each(function (i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                waitForElement: function (
-                    selector,
-                    trigger,
-                    delayInterval,
-                    delayTimeout
-                ) {
-                    var interval = setInterval(function () {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger();
-                        }
-                    }, 50);
-                    setTimeout(function () {
-                        clearInterval(interval);
-                    }, 15000);
-                },
-            };
-            return function (selector) {
-                return new bm(selector);
-            };
-        });
-        // Payment section html-----------------
-        var Payment = `<div class="cre_17_gateway">
+		/* helper library */
+		var _$;
+		!(function (factory) {
+			_$ = factory();
+		})(function () {
+			var bm = function (s) {
+				if (typeof s === "string") {
+					this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+				}
+				if (typeof s === "object") {
+					this.value = [s];
+				}
+			};
+			bm.prototype = {
+				eq: function (n) {
+					this.value = [this.value[n]];
+					return this;
+				},
+				each: function (fn) {
+					[].forEach.call(this.value, fn);
+					return this;
+				},
+				log: function () {
+					var items = [];
+					for (let index = 0; index < arguments.length; index++) {
+						items.push(arguments[index]);
+					}
+					console && console.log(variation_name, items);
+				},
+				addClass: function (v) {
+					var a = v.split(" ");
+					return this.each(function (i) {
+						for (var x = 0; x < a.length; x++) {
+							if (i.classList) {
+								i.classList.add(a[x]);
+							} else {
+								i.className += " " + a[x];
+							}
+						}
+					});
+				},
+				waitForElement: function (
+					selector,
+					trigger,
+					delayInterval,
+					delayTimeout
+				) {
+					var interval = setInterval(function () {
+						if (_$(selector).value.length) {
+							clearInterval(interval);
+							trigger();
+						}
+					}, 50);
+					setTimeout(function () {
+						clearInterval(interval);
+					}, 15000);
+				},
+			};
+			return function (selector) {
+				return new bm(selector);
+			};
+		});
+		// Payment section html-----------------
+		var Payment = `<div class="cre_17_gateway">
     <div
         class="wp-block-group has-column-gap-2-px is-vertical is-layout-flex wp-container-core-group-is-layout-13 wp-block-group-is-layout-flex cre_17_gateway_1">
         <h2 class="wp-block-heading has-fw-medium has-size-0-font-size">Buy now, pay later</h2>
@@ -104,15 +104,22 @@
 
 
 <div class="sound-img">
-	<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/Image+Line/test+17/Picture.svg" alt="">
+
+	<figure class="wp-block-image size-full has-ml-auto has-mr-auto has-max-w-90-pc has-max-w-1600-px">
+	<picture loading="lazy" decoding="async" class="wp-image-6768">
+	<source type="image/webp" srcset="/static/assets/fls-gui-2342.png.acba39f.webp 1700w, /static/assets/fls-gui-2342-1536x360.png.8bfee22.webp 1536w" sizes="(max-width: 1700px) 100vw, 1700px"><img loading="lazy" decoding="async" width="1700" height="398" src="/static/assets/fls-gui-2342.a1298d0.png" alt="" srcset="/static/assets/fls-gui-2342.a1298d0.png 1700w, /static/assets/fls-gui-2342-300x70.c04e619.png 300w, /static/assets/fls-gui-2342-1024x240.51f5bae.png 1024w, /static/assets/fls-gui-2342-768x180.a2ae8c8.png 768w, /static/assets/fls-gui-2342-1536x360.dfaff24.png 1536w" sizes="(max-width: 1700px) 100vw, 1700px"></picture>
+	</figure>
+
 </div>
+
+
 		</div>`;
 
-        var helper = _$();
+		var helper = _$();
 
-        // function for generating the table with dynamic price-------------
-        function generateTableWithDynamicPrice(fruityEdition, producerEdition, signatureBundle, allPluginsBundle) {
-            var tablesection = `<div class="Cre-ImageLineSection-t-17">
+		// function for generating the table with dynamic price-------------
+		function generateTableWithDynamicPrice(fruityEdition, producerEdition, signatureBundle, allPluginsBundle) {
+			var tablesection = `<div class="Cre-ImageLineSection-t-17">
     <div
         class="wp-block-group has-column-gap-30-px is-vertical is-content-justification-center is-layout-flex wp-container-core-group-is-layout-40 wp-block-group-is-layout-flex cooseed-ition">
         <div
@@ -644,81 +651,81 @@
     </div>
 			</div>`;
 
-            return tablesection;
-        }
+			return tablesection;
+		}
 
 
-        var navContent = `<div class='cre-navContent'><h2>FL&nbsp;Studio</h2> <p>Music Production Suite for Desktop</p></div>`;
+		var navContent = `<div class='cre-navContent'><h2>FL&nbsp;Studio</h2> <p>Music Production Suite for Desktop</p></div>`;
 
-        // for updating the price--- for a certaion duration----------------
-        function updateProductPrice() {
-            var interal17 = setInterval(function () {
-                var FruityEditionPrice = document.querySelector('[data-js-product="fruity-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
-                // ProducerEditionPrice
-                var ProducerEditionPrice = document.querySelector('[data-js-product="producer-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
-                // SignatureBundlePrice
-                var SignatureBundlePrice = document.querySelector('[data-js-product="signature-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
-                // AllPluginsEditionPrice
-                var AllPluginsEditionPrice = document.querySelector('[data-js-product="all-plugins-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
+		// for updating the price--- for a certaion duration----------------
+		function updateProductPrice() {
+			var interal17 = setInterval(function () {
+				var FruityEditionPrice = document.querySelector('[data-js-product="fruity-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// ProducerEditionPrice
+				var ProducerEditionPrice = document.querySelector('[data-js-product="producer-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// SignatureBundlePrice
+				var SignatureBundlePrice = document.querySelector('[data-js-product="signature-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// AllPluginsEditionPrice
+				var AllPluginsEditionPrice = document.querySelector('[data-js-product="all-plugins-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
 
-                document.querySelector(".cre-Fruity-Edition .cre-priceElement").innerHTML = FruityEditionPrice;
-                document.querySelector(".cre-Producer-Edition .cre-priceElement").innerHTML = ProducerEditionPrice;
-                document.querySelector(".cre-Signature-Bundle .cre-priceElement").innerHTML = SignatureBundlePrice;
-                document.querySelector(".cre-All-Plugins-Edition .cre-priceElement").innerHTML = AllPluginsEditionPrice;
+				document.querySelector(".cre-Fruity-Edition .cre-priceElement").innerHTML = FruityEditionPrice;
+				document.querySelector(".cre-Producer-Edition .cre-priceElement").innerHTML = ProducerEditionPrice;
+				document.querySelector(".cre-Signature-Bundle .cre-priceElement").innerHTML = SignatureBundlePrice;
+				document.querySelector(".cre-All-Plugins-Edition .cre-priceElement").innerHTML = AllPluginsEditionPrice;
 
-            }, 50)
+			}, 50)
 
-            setTimeout(function () {
-                clearInterval(interal17)
-            }, 3000)
-        }
+			setTimeout(function () {
+				clearInterval(interal17)
+			}, 3000)
+		}
 
-        /* Variation Init */
-        function init() {
-            _$('body').addClass(variation_name)
+		/* Variation Init */
+		function init() {
+			_$('body').addClass(variation_name)
 
-            helper.waitForElement(".commercial-box__products", function () {
+			helper.waitForElement(".commercial-box__products", function () {
 
-                // FruityEdition price
-                var FruityEditionPrice = document.querySelector('[data-js-product="fruity-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
-                // ProducerEditionPrice
-                var ProducerEditionPrice = document.querySelector('[data-js-product="producer-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
-                // SignatureBundlePrice
-                var SignatureBundlePrice = document.querySelector('[data-js-product="signature-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
-                // AllPluginsEditionPrice
-                var AllPluginsEditionPrice = document.querySelector('[data-js-product="all-plugins-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// FruityEdition price
+				var FruityEditionPrice = document.querySelector('[data-js-product="fruity-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// ProducerEditionPrice
+				var ProducerEditionPrice = document.querySelector('[data-js-product="producer-edition"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// SignatureBundlePrice
+				var SignatureBundlePrice = document.querySelector('[data-js-product="signature-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
+				// AllPluginsEditionPrice
+				var AllPluginsEditionPrice = document.querySelector('[data-js-product="all-plugins-bundle"] .commercial-box__product__cell.price .current-price').innerHTML;
 
-                // Strong the table html with dynamic price------------
-                var tableHTML = generateTableWithDynamicPrice(FruityEditionPrice, ProducerEditionPrice, SignatureBundlePrice, AllPluginsEditionPrice);
+				// Strong the table html with dynamic price------------
+				var tableHTML = generateTableWithDynamicPrice(FruityEditionPrice, ProducerEditionPrice, SignatureBundlePrice, AllPluginsEditionPrice);
 
 
 
-                // Inserting the table into the DOM-------------------
-                helper.waitForElement(" section.sub-navigation", function () {
-                    if (!document.querySelector(".Cre-ImageLineSection-t-17")) {
-                        document.querySelector(" section.sub-navigation").insertAdjacentHTML("afterend", tableHTML)
-                    }
+				// Inserting the table into the DOM-------------------
+				helper.waitForElement(" section.sub-navigation", function () {
+					if (!document.querySelector(".Cre-ImageLineSection-t-17")) {
+						document.querySelector(" section.sub-navigation").insertAdjacentHTML("afterend", tableHTML)
+					}
 
-                    updateProductPrice()
-                    
-                })
+					updateProductPrice()
 
-                helper.waitForElement(".table-section", function () {
-                    if (!document.querySelector(".Payment-section")) {
-                        document.querySelector(".table-section").insertAdjacentHTML("afterend", Payment)
-                    }
-                })
+				})
 
-            })
+				helper.waitForElement(".table-section", function () {
+					if (!document.querySelector(".Payment-section")) {
+						document.querySelector(".table-section").insertAdjacentHTML("afterend", Payment)
+					}
+				})
 
-            helper.waitForElement(".site-header a.site-header__logo", function () {
-                document.querySelector(".site-header a.site-header__logo").insertAdjacentHTML("beforeend", navContent)
-            }, 50, 15000)
-        }
+			})
 
-        /* Initialise variation */
-        helper.waitForElement("body", init);
-    } catch (e) {
-        if (debug) console.log(e, "error in Test" + variation_name);
-    }
+			helper.waitForElement(".site-header a.site-header__logo", function () {
+				document.querySelector(".site-header a.site-header__logo").insertAdjacentHTML("beforeend", navContent)
+			}, 50, 15000)
+		}
+
+		/* Initialise variation */
+		helper.waitForElement("body", init);
+	} catch (e) {
+		if (debug) console.log(e, "error in Test" + variation_name);
+	}
 })();

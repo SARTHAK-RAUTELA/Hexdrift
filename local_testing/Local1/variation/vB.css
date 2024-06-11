@@ -1,6 +1,7 @@
 html body.imageline-17 .Cre-ImageLineSection-t-17 {
   max-width: 1240px;
   margin: auto;
+  width: 100%;
 }
 
 html body.imageline-17 div #buy-now-header {
@@ -240,4 +241,8 @@ html body.imageline-17 .cre-navContent {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+html body.imageline-17 .cre_17_gateway_2 figure[class*="wp-block-image"]{
+  max-width: 100%;
 }
