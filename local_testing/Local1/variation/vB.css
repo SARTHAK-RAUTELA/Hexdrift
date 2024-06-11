@@ -141,6 +141,15 @@ html body.imageline-17 .sound-img {
     max-width: 100%;
     margin: auto;
     padding: 25px 25px;
+    padding-bottom: 0;
+  }
+
+  html body.imageline-17 .cre_17_gateway_3 {
+    flex-direction: column;
+  }
+
+  html body.imageline-17 .wp-container-core-group-is-layout-39{
+    justify-content: center;
   }
 
 }
@@ -169,6 +178,10 @@ html body.imageline-17 .sound-img {
 
   html body.imageline-17 .site-header__logo .cre-navContent p {
     font-size: 84%;
+  }
+
+  html body.imageline-17 .cre_17_gateway {
+    margin-top: 20px;
   }
 
 }
