@@ -1,191 +1,219 @@
-html body.seamwork14 .Cre-Join .opens.new.tab {
-  background-color: #A6645F;
-  color: #fff;
-  border: 1px solid #A6645F;
+html body.imageline-17 .Cre-ImageLineSection-t-17 {
+  max-width: 1240px;
+  margin: auto;
 }
 
-html body.seamwork14 .Cre-Join p {
-  font-size: 16px;
-  font-family: 'Roboto Bold';
-  color: #282829;
+html body.imageline-17 div #buy-now-header {
+  display: none !important;
 }
 
-html body.seamwork14 .CreGuarantee p {
-  font-size: 16px;
-  line-height: 25px;
-  font-family: 'Roboto Light';
-  margin-bottom: 0;
+html body .cre-Fruity-Edition>.wp-block-group:first-child {
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
-html body.seamwork14 .CreGuarantee {
-  background-color: #F7F2EB;
-  padding: 20px 35px;
-  margin-top: 32px;
+
+html body.imageline-17 .table-section {
+  display: grid !important;
+  width: 100%;
+  max-width: 1350px !important;
+  margin: auto !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  gap: 25px !important;
 }
 
-html body.seamwork14 .CreGuarantee h3 {
-  font-size: 16px;
-  font-family: 'Roboto Bold';
-  margin-bottom: 0;
-  line-height: 25.6px;
-}
-
-/* html body.seamwork14 .product--content>div:last-child [data-turbo="false"]>p:first-child,
-html body.seamwork14 .product--content>div:last-child [data-turbo="false"] [href="/join#pricing"],
-html body.seamwork14 .product--content>div:last-child [data-turbo="false"]>p:nth-child(4),
-html body.seamwork14 .product--content>div:last-child .simple-format+.product--details,
-html body.seamwork14 .Cre-Join+p,
-html body.seamwork14 .Cre-Join+p+p,
-html body.seamwork14 .Cre-Join~p {
-  display: none;
-} */
-
-html body.seamwork14 .Cre-Join+.half-space+p {
+html body.imageline-17 div [class*="wp-block-group"] [class*="grid "] {
   display: none;
 }
 
-html body.seamwork14 .CreGuarantee h3:before {
-  content: " ";
-  display: inline-block;
-  background-image: url(https://www.seamwork.com/assets/entry/join/icon-guarantee-b100d5905863e1cd54728f1eecdaeeb34886a4de05c40f38a105fba00338892a.svg);
-  height: 45px;
-  width: 45px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -15px;
-  top: 11px;
+html body.imageline-17 [class*="wp-container-core-group-is-layout-81"].wp-block-group-is-layout-flex {
+  display: none;
 }
 
-html body.seamwork14 .CreGuarantee>div {
-  padding-left: 50px;
-  position: relative;
+html body.imageline-17 .cooseed-ition {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
 }
 
-html body.seamwork14 div[data-turbo="false"] a[href="/join#pricing"] {
-  background-color: #A6645F !important;
-  border: 1px solid #A6645F !important;
-  color: #fff;
+html body.imageline-17 .cooseed-ition>div:first-child {
+  flex-direction: column;
 }
 
-html body.seamwork14 div[data-turbo="false"] a[href="/join#pricing"]:hover {
-  color: #fff;
-}
+html body.imageline-17 .wp-container-core-group-is-layout-39 {
+  margin-top: 20px;
 
-html body.seamwork14 #checkout {
-  margin-bottom: 30px;
-}
-
-#chtml body.seamwork14 .heckout+em {
-  display: inline-block;
-  margin-bottom: 18px;
-}
-
-html body.seamwork14 .product--content .product--tags.show-for-medium-up .tag {
-  color: #282829;
-  background-color: #ECDFCD;
-}
-
-html body.seamwork14 [data-turbo="false"]>#checkout button {
-  background-color: #fff;
-  border: 1px solid #333132;
-}
-
-html body.seamwork14 [data-turbo="false"] p label {
-  display: inline-block;
 }
 
 
+html body.imageline-17 .content>[class^=wp-block]+div:last-child,
+html body.imageline-17 section.sub-navigation {
+  display: none;
+}
 
-html body.seamwork14 #js--modal-skill-levels+p {
-  margin-bottom: 0 !important;
+/* Payment */
+
+html body.imageline-17 .cre_17_gateway {
+  display: flex;
+  width: 1370px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  border: 1px solid #d2d2d2;
+}
+
+html body.imageline-17 .cre_17_gateway_1,
+html body.imageline-17 .cre_17_gateway_3,
+html body.imageline-17 .cre_17_gateway_2 {
+  padding: 10px 20px;
+  width: 100% !important;
+}
+
+
+html body.imageline-17 .cre_17_hr {
+  width: 1px;
+  background: #d2d2d2;
+  height: 70px;
+}
+
+
+@media screen and (max-width: 770px) {
+  html body.imageline-17 .cre_17_gateway {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 0px 4px 0px #00000026;
+    border-radius: 8px;
+    border: 1px solid #d2d2d2;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  html body.imageline-17 .cre_17_gateway_1,
+  html body.imageline-17 .cre_17_gateway_3,
+  html body.imageline-17 .cre_17_gateway_2 {
+    border: 1px solid #d2d2d2;
+  }
+
+  html body.imageline-17 .cre_17_hr {
+    display: none;
+  }
+}
+
+
+html body.imageline-17 .sound-img img {
+  width: 100%;
+  margin: auto;
+}
+
+
+html body.imageline-17 .sound-img {
+  max-width: 100%;
+}
+
+
+@media screen and (max-width: 830px) {
+  html body.imageline-17 .table-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.imageline-17 .cre-Producer-Edition.table-box>div:first-child,
+  html body.imageline-17 .cre-Signature-Bundle.table-box>div:first-child,
+  html body.imageline-17 .cre-All-Plugins-Edition.table-box>div:first-child {
+    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+  }
+
+  html body.imageline-17 .Cre-ImageLineSection-t-17 {
+    padding: 25px 25px;
+  }
+
+  html body.imageline-17 .Cre-ImageLineSection-t-17 {
+    max-width: 100%;
+    margin: auto;
+    padding: 25px 25px;
+  }
+
 }
 
 @media screen and (max-width:767px) {
-  html body.seamwork14 .product--header .product--tags .tag {
-      color: #282829;
-      background-color: #ECDFCD;
-  }
-
-  html body.seamwork14 .product--images-container .row.collapse a.button {
-      background: #ffff;
-      color: #282829;
-      font-family: 'Roboto Light';
-      font-weight: 400;
-      font-size: 13.6px;
-      line-height: 16px;
-      letter-spacing: 1.28px;
-  }
-
-  html body.seamwork14 .CreGuarantee {
-      position: relative;
-  }
-
-  html body.seamwork14 .CreGuarantee:after {
-      content: '';
-      background: #F7F2EB;
-      display: block;
-      width: 30px;
-      height: 100%;
-      position: absolute;
-      right: -15px;
-      top: 0;
-  }
-
-  html body.seamwork14 .CreGuarantee:before {
-      content: '';
-      background: #F7F2EB;
-      display: block;
-      width: 30px;
-      height: 100%;
-      position: absolute;
-      left: -15px;
-      top: 0;
-  }
-
-  html body.seamwork14 .CreGuarantee>div {
-      padding-left: 30px !important;
-  }
-
-  html body.seamwork14 .CreGuarantee {
+  /* html body.imageline-17 .cooseed-ition {
       padding: 20px 20px;
+  } */
+
+  html body.imageline-17 .Payment-section .Payment-list .Payment-icon img {
+    width: 100%;
   }
 
-  html body.seamwork14 .CreGuarantee h3 {
-      font-size: 16px;
-      font-family: 'Roboto Bold';
-      margin-bottom: 0;
-      line-height: 20.6px;
+  html body.imageline-17 .wp-container-core-group-is-layout-39 {
+    display: flex;
+    justify-content: center;
   }
 
-  html body.seamwork14 .CreGuarantee h3:before {
-      left: -25px;
-      top: 0;
-  }
 
-  html body.seamwork14 div[data-turbo="false"] a[href="/join#pricing"] {
-      width: 100% !important;
-  }
 }
 
-html body .cre-AccessText {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 25.6px;
-  letter-spacing: 0.47999998927116394px;
-  font-family: 'Roboto Bold'
+html body.imageline-17 .Cre-ImageLineSection-t-17 .table-section [class*="has-light-gray"] {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
 }
 
-html body #checkout+.product--details label,
-html body .js--external-links+.product--details label{
-  font-family: 'Roboto Light'
+html body.imageline-17 .Cre-ImageLineSection-t-17 .table-section [class*="has-light-gray"] p {
+  font-size: 13px;
 }
 
-html body .product--details+[data-turbo="false"] >p:first-child,
-html body .js--external-links+[data-turbo="false"]>p:first-child{
+html body.imageline-17 .Cre-ImageLineSection-t-17 .table-section .cre-Producer-Edition div.has-background {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+
+html body.imageline-17 .Cre-ImageLineSection-t-17 .table-section .cre-Producer-Edition div.has-background p {
+  font-size: 13px;
+}
+
+
+html body.imageline-17 header.main-nav {
+  display: flex !important;
+}
+
+html body.imageline-17 header.site-header nav,
+html body.imageline-17 header.site-header .site-header-meta {
   display: none;
 }
-html body [data-turbo="false"] .cre-AccessText{
-  display: block !important;
-  margin-top: 20px;
+
+html body.imageline-17 .site-header__logo {
+  display: flex;
+  color: #fff;
+  gap: 5px;
+  text-decoration: none;
+  align-items: center;
+}
+
+html body.imageline-17 .site-header__logo .cre-navContent h2 {
+  line-height: 1em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+html body.imageline-17 .site-header__logo .cre-navContent p {
+  line-height: 1em;
+  font-size: 90%;
+  opacity: .75;
+}
+
+html body.imageline-17 .cre-navContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
