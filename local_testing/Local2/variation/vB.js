@@ -1,179 +1,120 @@
 (function () {
-    try {
-        /* main variables */
-        var debug = 0;
-        var variation_name = "TT-144";
+	try {
+		/* main variables */
+		var debug = 1;
+		var variation_name = "cre-t-71";
 
-        /* all Pure helper functions */
-        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-            var interval = setInterval(function () {
-                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-                    clearInterval(interval);
-                    trigger();
-                }
-            }, delayInterval);
-            setTimeout(function () {
-                clearInterval(interval);
-            }, delayTimeout);
-        }
+		/* helper library */
+		var _$;
+		!(function (factory) {
+			_$ = factory();
+		})(function () {
+			var bm = function (s) {
+				if (typeof s === "string") {
+					this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+				}
+				if (typeof s === "object") {
+					this.value = [s];
+				}
+			};
+			bm.prototype = {
+				eq: function (n) {
+					this.value = [this.value[n]];
+					return this;
+				},
+				each: function (fn) {
+					[].forEach.call(this.value, fn);
+					return this;
+				},
+				log: function () {
+					var items = [];
+					for (let index = 0; index < arguments.length; index++) {
+						items.push(arguments[index]);
+					}
+					console && console.log(variation_name, items);
+				},
+				addClass: function (v) {
+					var a = v.split(" ");
+					return this.each(function (i) {
+						for (var x = 0; x < a.length; x++) {
+							if (i.classList) {
+								i.classList.add(a[x]);
+							} else {
+								i.className += " " + a[x];
+							}
+						}
+					});
+				},
+				waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
+					var interval = setInterval(function () {
+						if (_$(selector).value.length) {
+							clearInterval(interval);
+							trigger();
+						}
+					}, delayInterval);
+					setTimeout(function () {
+						clearInterval(interval);
+					}, delayTimeout);
+				},
+				live: function (selector, event, callback, context) {
+					/****Helper Functions****/
+					// helper for enabling IE 8 event bindings
+					function addEvent(el, type, handler) {
+						if (el.attachEvent) el.attachEvent("on" + type, handler);
+						else el.addEventListener(type, handler);
+					}
+					// matches polyfill
+					this.Element &&
+						(function (ElementPrototype) {
+							ElementPrototype.matches =
+								ElementPrototype.matches ||
+								ElementPrototype.matchesSelector ||
+								ElementPrototype.webkitMatchesSelector ||
+								ElementPrototype.msMatchesSelector ||
+								function (selector) {
+									var node = this,
+										nodes = (node.parentNode || node.document).querySelectorAll(selector),
+										i = -1;
+									while (nodes[++i] && nodes[i] != node);
+									return !!nodes[i];
+								};
+						})(Element.prototype);
+					// live binding helper using matchesSelector
+					function live(selector, event, callback, context) {
+						addEvent(context || document, event, function (e) {
+							var found,
+								el = e.target || e.srcElement;
+							while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+							if (found) callback.call(el, e);
+						});
+					}
+					live(selector, event, callback, context);
+				},
+			};
+			return function (selector) {
+				return new bm(selector);
+			};
+		});
 
-        var thumbtechservices = `
-            <div class="thumbtechservices">
-                <h2 class="bmheading">Popular services near you.</h2>
-                <div class="bm-item">
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png"> <p>Handyman <br> <span>j</span></p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> Removal</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local Moving<br>(Under 50 miles)</p></a></li>
-                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance Repair or Maintenance</p></a></li>
-                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor Installation or Replacement</p></a></li>
-                </div>
-            </div>
-        `;
+		var helper = _$();
 
-        var reviews = `
-            <div class="reviewsection desktop">
-                <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
-            </div>
-        `;
+		function init() {
+			_$("body").addClass(variation_name);
+		}
 
-        var mobilereviews = `
-            <div class="reviewsection mobile">
-                <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
-            </div>
-        `;
+		function homepage() {
+			var elements = document.querySelectorAll(
+				"#shopify-section-home-hi-touch-homepage .hi-touch__title , #shopify-section-home-price .affordable__title , #shopify-section-home-fifty-off .fifty-off__title , #shopify-section-mattress-guarantee .guarantee-title "
+			);
 
-        var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
+			elements.forEach(function (element) {
+				element.textContent = element.textContent.toLowerCase();
+			});
+		}
 
-        /* Variation Init */
-        function init() {
-            document.querySelector("body").classList.add(variation_name);
-            var textValuesToCheck = ['Popular services in '];
-            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
-
-            elementsToModify.forEach((element) => {
-                var fullTextContent = element.textContent.trim();
-                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
-                    var parentElement = element.closest('.bg-white');
-                    if (parentElement) {
-                        parentElement.classList.add('bmhidesection');
-                    }
-                }
-            });
-
-
-
-
-            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
-                if (!document.querySelector(".thumbtechservices")) {
-                    document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
-                }
-            } else {
-                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
-                if (rootSiblingElement) {
-                    if (!document.querySelector(".thumbtechservices")) {
-                        rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
-                    }
-                } else {
-                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
-                    if (customerHeaderSiblingElement) {
-                        if (!document.querySelector(".thumbtechservices")) {
-                            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
-                        }
-                    }
-                }
-            }
-
-            // Putting new heading
-            document.querySelector('html body [class*="homepage-hero_heavy"]').innerHTML =
-                'Home <span class="highlight">improvement,</span><br> made easy.';
-
-
-            if (!document.querySelector(".reviewsection.desktop")) {
-                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
-            }
-
-            if (!document.querySelector('.reviewsection.mobile')) {
-                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
-            }
-
-
-
-
-            function wrapDivs() {
-                // Select the starting div with class bmhidesection
-                var startDiv = document.querySelector('.bmhidesection');
-                if (!startDiv) return; // Exit if starting div is not found
-
-                // Select the next sibling divs after startDiv until we wrap 4 divs
-                var siblingDivs = [];
-                var currentDiv = startDiv.nextElementSibling;
-                for (var i = 0; i < 2; i++) {
-                    if (currentDiv && currentDiv.tagName === 'DIV' && !currentDiv.classList.contains('wrapped-divs')) {
-                        siblingDivs.push(currentDiv);
-                        currentDiv = currentDiv.nextElementSibling;
-                    } else {
-                        break; // Exit loop if not enough valid sibling divs found
-                    }
-                }
-
-                // Create a new parent div
-                var newParentDiv = document.createElement('div');
-                newParentDiv.className = 'wrapped-divs'; // Assign a class to the new parent div for styling purposes
-
-                // Append the selected divs to the new parent div
-                siblingDivs.forEach(function (div) {
-                    newParentDiv.appendChild(div);
-                });
-
-                // Insert the new parent div after startDiv
-                startDiv.parentNode.insertBefore(newParentDiv, startDiv.nextSibling);
-
-                // Check if the .wrapped-divs element is empty, then remove it
-                var wrappedDiv = document.querySelector('.wrapped-divs');
-                if (wrappedDiv && !wrappedDiv.hasChildNodes()) {
-                    wrappedDiv.parentNode.removeChild(wrappedDiv);
-                }
-            }
-
-            waitForElement(".bmhidesection", function () {
-                wrapDivs()
-            }, 50, 15000);
-
-
-
-
-
-        }
-
-        /* Initialise variation */
-        function thumbtackTest144(list, observer) {
-            list.getEntries().forEach((entry) => {
-                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
-                    observer.disconnect();
-                    clearInterval(test144Interval);
-                    waitForElement("body", init, 50, 15000);
-                    window.isHydrated = true;
-                }
-            });
-        }
-
-        if (!window.isHydrated) {
-            var test144Interval = setInterval(function () {
-                waitForElement("body", init, 50, 15000);
-            }, 50);
-            setTimeout(function () {
-                clearInterval(test144Interval);
-            }, 3000);
-
-            const observer = new PerformanceObserver(thumbtackTest144);
-            observer.observe({ entryTypes: ["mark"] });
-        } else {
-            waitForElement("body", init, 50, 15000);
-        }
-    } catch (e) {
-        if (debug) console.log(e, "error in Test" + variation_name);
-    }
+		helper.waitForElement("body ", init, 50, 15000);
+		helper.waitForElement("#shopify-section-home-price .affordable__title ", homepage, 50, 15000);
+	} catch (e) {
+		if (debug) console.log(e, "error in Test" + variation_name);
+	}
 })();
