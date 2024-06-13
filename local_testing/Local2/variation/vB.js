@@ -96,292 +96,6 @@
         </a>
     </div>`
 
-		var dropDown = `<ul class="cre-new-drop w-auto giftingNav">
-	<li class="smallerHide mega-menu-trigger dropdowns-2022" id="atoz-megamenu-display-2022" data-megamenu="atoz-mega-menu-2022">
-	<a href="/az-magazines/">Magazines A-Z</a> 
-	<i class="fa-solid fa-caret-right text-danger"></i>
-	<div id="atoz-mega-menu-2022" class="row megamenu atoz-mega-menu" style="display: none;">
-		<ul class="menu-row">
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/41489131/25-beautiful-homes-subscription.thtml">25 Beautiful Homes</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/6936399/classic-rock-magazine-subscription.thtml">Classic Rock</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34206771/country-homes-and-interiors-subscription.thtml">Country Homes &amp; Interiors</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34206691/country-life-subscription.thtml">Country Life</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/41487616/decanter-subscription.thtml">Decanter</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/6936459/four-four-two-442-magazine-subscription.thtml">FourFourTwo</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/6936499/guitar-world-magazine-subscription.thtml">Guitar World</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207256/homes-and-gardens-subscription.thtml">Homes &amp; Gardens</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207246/horse-and-hound-subscription.thtml">Horse &amp; Hound</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/6936539/how-it-works-magazine-subscription.thtml">How It Works</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207276/ideal-home-subscription.thtml">Ideal Home</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34248031/livingetc-subscription.thtml">Livingetc</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/6936649/period-living-magazine-subscription.thtml">Period Living</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/6936669/playstation-official-magazine-subscription.thtml">PLAY</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207446/style-at-home-subscription.thtml">Style at Home</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207551/the-field-subscription.thtml">The Field</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207711/woman-and-home-subscription.thtml">Woman &amp; Home</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-magazines/34207706/womans-weekly-subscription.thtml">Woman's Weekly</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent redText" href="/az-magazines/">See All Magazines</a>
-			</li>
-		</ul>
-	</div>
-</li>
-
-<li class="mega-menu-trigger dropdowns-2022" id="categories-megamenu-display-2022" data-megamenu="categories-mega-menu-2022">
-	<a href="/categories/">Categories</a>
-	<i class="fa-solid fa-caret-right text-danger"></i>
-	<div id="categories-mega-menu-2022" class="row category-mega-menu megamenu" style="display: none;">
-		<ul class="menu-row">
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/countryandequestrian/">Country and Equestrian</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/fashionandcelebrity/">Fashion and Celebrity</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/foodandlifestyle/">Food and Lifestyle</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/gaming/">Gaming</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/gifts/">Gift Ideas</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/hobbiesandleisure/">Hobbies and Leisure</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/homesandgardens/">Homes and Gardens</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/mens/">Men's</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/music/">Music</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/photography-and-design/">Photography and Design</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/sports/">Sports</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/tech/">Tech</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/tv-and-film/">TV &amp; Film</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/categories/womens/">Women's</a>
-			</li>
-	
-			<li class="">
-				<a class="wholebox navigationevent redText" href="/az-magazines/">Browse our magazines A-Z</a>
-			</li>
-		</ul>
-	</div>			
-</li>
-
-<li class="mega-menu-trigger dropdrowns-2022" data-megamenu="guides-specials-mega-menu-2022">
-	<a href="/guides-and-specials/">Guides &amp; Specials</a> 
-	<i class="fa-solid fa-caret-right text-danger"></i>	
-	<div id="guides-specials-mega-menu-2022" class="row megamenu" style="display: none;">
-		<ul class="menu-row">
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/annuals/">Annuals</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/bestsellingguides/">Bestsellers</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/bundles/">Bundles</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/celebrityandfanpacks/">Celebrity &amp; Fan Packs</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/christmasguidesspecials/">Christmas</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/design/">Design</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/tv/">Film &amp; TV</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/gaming/">Gaming</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/home-and-garden/">Home and Garden</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/knowledge/">Knowledge</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/lifestyle/">Lifestyle</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/music/">Music</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/photography/">Photography</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/royalguidesspecials/">Royal Guides &amp; Specials</a>
-			</li>
-	
-	
-			<li class="">
-				<a class="wholebox navigationevent" href="/guides-and-specials/categories/sport-and-leisure/">Sport &amp; Leisure</a>
-			</li>
-	
-		</ul>
-	</div>			
-</li>
-<li class="mega-menu-trigger dropdrowns-2022" data-megamenu="single-issues-mega-menu-2022">
-	<a href="/single-issue/">Single Issues</a> 
-	<i class="fa-solid fa-caret-right text-danger"></i>
-	<div id="single-issues-mega-menu-2022" class="row megamenu single-issues-mega-menu" style="display: none;">
-		<ul class="menu-row">
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6936929/classic-rock-magazine-single-issue.thtml">Classic Rock</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6937209/country-life-single-issue.thtml">Country Life</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6936949/edge-magazine-single-issue.thtml">Edge</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6936979/guitar-world-magazine-single-issue.thtml">Guitar World</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6937249/horse-and-hound-single-issue.thtml">Horse &amp; Hound</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6937004/imaginefx-magazine-single-issue.thtml">ImagineFX</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6937024/metal-hammer-magazine-single-issue.thtml">Metal Hammer</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/47052423/prog-magazine-single-issue.thtml">Prog</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6937134/retro-gamer-magazine-single-issue.thtml">Retro Gamer</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent" href="/az-single-issues/6937159/total-guitar-magazine-single-issue.thtml">Total Guitar</a>
-			</li>
-			<li class="">
-				<a class="wholebox navigationevent redText" href="/single-issue/">See All Single Issues</a>
-			</li>
-		</ul>
-	</div>
-</li>
-<li class="smallerHide giftingHide">
-	<a id="binders" class="navigationevent" href="/merchandise/categories/binders/">Binders</a>
-</li>
-<li class="smallerHide">
-	<a id="clearance" class="navigationevent" href="/merchandise/categories/clearance/">Clearance</a>
-</li>
-<li class="smallerHide giftingLink">
-	<a id="xmas_gifts" class="navigationevent" href="/promotions/categories/MDGIFTING/">Gifting</a>
-</li>
-                       </ul>`
-
 		var dropDown2 = `<ul class="cre-new-drop w-auto giftingNav">
         <li class="cre-smallerHide cre-mega-menu-trigger cre-dropdowns-2022" id="cre-atoz-megamenu-display-2022"
             data-megamenu="cre-atoz-mega-menu-2022">
@@ -742,7 +456,7 @@
                     <li class="cre-reviews cre-w-auto">
                         <img src="/images/reviews.png" alt="Feefo 16,000+ 5-star reviews" class="" width="76"
                             height="18">
-							 <label class="cre-review-text cre-text-bold">16,000+ 5-star reviews</label>
+							 <label class="cre-review-text cre-text-bold">16,000+ 5-Star Reviews</label>
                         
                     </li>
                     <li class="cre-discount cre-smallerHide"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG45/guaranted.png"
@@ -755,7 +469,7 @@
                     <li class="cre-delivery cre-print"><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG45/truck.png"
                             alt="Includes shipping to your door" class="" width="26" height="24">
 							<div class="cre-review-delivery-header">
-                            <label class="cre-review-text cre-text-bold">Delivery Inclided</label>
+                            <label class="cre-review-text cre-text-bold">Delivery Included</label>
                             <p class="cre-review-text">Guaranteed on-time arrival</p>
                         </div>
                     </li>
@@ -780,9 +494,7 @@
 
 		/* Variation Init */
 		function init() {
-			addClass('body', 'cre-t-1')
-
-
+			addClass('body', 'cre-t-45')
 
 			waitForElement('.desktopHeader .top-header .col-7 .row', function () {
 				if (!document.querySelector('.cre-new-drop.w-auto.giftingNav')) {
@@ -859,18 +571,6 @@
 				document.querySelector('#desktopSearch').closest('.col-8').classList.add('cre-t-45-Search')
 			});
 
-			// waitForElement('.promiseBullets.basketRemove.nonBranded .discount.smallerHide>img', function () {
-			// 	document.querySelector('.promiseBullets.basketRemove.nonBranded .discount.smallerHide>img').src = "https://i.ibb.co/x69Bby1/Vector.png"
-			// });
-
-			// waitForElement('.promiseBullets.basketRemove.nonBranded .delivery.print>img', function () {
-			// 	document.querySelector('.promiseBullets.basketRemove.nonBranded .delivery.print>img').src = "https://i.ibb.co/f0xVrd2/Vector-Car.png"
-			// });
-
-			// waitForElement('.promiseBullets.basketRemove.nonBranded .manage.smallerHide>img', function () {
-			// 	document.querySelector('.promiseBullets.basketRemove.nonBranded .manage.smallerHide>img').src = "https://i.ibb.co/Tq1W8Ws/Vector-Manage.png"
-			// });
-
 			waitForElement('#promCodeBanner>.col>strong', function () {
 				if (!document.querySelector('.cre-t-45-promo')) {
 					document.querySelector('#promCodeBanner>.col>strong').insertAdjacentHTML('afterend', '<span class="cre-t-45-promo">Father’s Day Sale! Save an extra 10% with code DAD10. <a href="#">Learn more</a></span>')
@@ -907,6 +607,13 @@
 							
 							// document.querySelector('.cre-count-Item').innerHTML =  document.querySelector('.your-basket .basket-count').innerHTML
 						});
+
+						// https://www.magazinesdirect.com/your-basket/
+
+						var url = window.location.href;
+						if(url.indexOf('/your-basket') != -1){
+							addClass('body','cre-t-45-cartPage')
+						}
 		}
 
 		function eventHandler() {
@@ -950,11 +657,6 @@
 				removeClass('body', 'cre-showNav2');
 			})
 
-
-
-			// live("#navbar-toggler svg", "click", function () {
-			// 	addClass('body', 'cre-hamburger-icon')
-			// })
 			live("#navbar-toggler", "click", function () {
 				toggleClass('body', 'cre-hamburger-icon')
 			})
@@ -970,12 +672,6 @@
 			eventHandler();
 			window.cre45EventHandler = true;
 		}
-
-
-
-		//   live("selector","click",function(){
-
-		//   })
 
 		/* Initialise variation */
 		waitForElement('body', init);
