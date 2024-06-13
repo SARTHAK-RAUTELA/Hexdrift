@@ -1,371 +1,413 @@
 /* Code from test 58 for only home pages */
-html body.cre-t-71 .test-38-hero__title{
-    font-family: miller-display, serif;
-   font-weight: 400 !important;
-    text-transform: capitalize !important;
- }
- 
- html body.cre-t-71 #shopify-section-carousel-slider h2 , 
- html body.cre-t-71 #shopify-section-ugc-video h2{
-    font-family: miller-display, serif;
-     font-weight: 400 !important;
-    text-transform: capitalize !important;
- }
- html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p,
- html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title , 
- html body.cre-t-71 #shopify-section-home-winkbed-engineering .pdp-engineering__title, 
- html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title , 
- html body.cre-t-71 #shopify-section-home-promise .promise__title , 
- html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title , 
- html body.cre-t-71 #shopify-section-home-extend .homeSectionExtend__inner h1 , 
- html body.cre-t-71 #shopify-section-home-price .affordable__title,
- html body.cre-t-71 .pdp-engineering__title,
- html body.cre-t-71 .hi-touch__title,
- html body.cre-t-71 .promise__title
- {
+html body.cre-t-71 .test-38-hero__title {
     font-family: miller-display, serif;
     font-weight: 400 !important;
     text-transform: capitalize !important;
- }
- html body.cre-t-71 #shopify-section-carousel-slider h2{
+}
+
+html body.cre-t-71 #shopify-section-carousel-slider h2,
+html body.cre-t-71 #shopify-section-ugc-video h2 {
+    font-family: miller-display, serif;
+    font-weight: 400 !important;
+    text-transform: capitalize !important;
+}
+
+html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p,
+html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title,
+html body.cre-t-71 #shopify-section-home-winkbed-engineering .pdp-engineering__title,
+html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title,
+html body.cre-t-71 #shopify-section-home-promise .promise__title,
+html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title,
+html body.cre-t-71 #shopify-section-home-extend .homeSectionExtend__inner h1,
+html body.cre-t-71 #shopify-section-home-price .affordable__title,
+html body.cre-t-71 .pdp-engineering__title,
+html body.cre-t-71 .hi-touch__title,
+html body.cre-t-71 .promise__title {
+    font-family: miller-display, serif;
+    font-weight: 400 !important;
+    text-transform: capitalize !important;
+}
+
+html body.cre-t-71 #shopify-section-carousel-slider h2 {
     font-size: 40px;
     line-height: 44px;
- }
- html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p {
+}
+
+html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p {
     font-size: 39px;
     line-height: 44px;
- }
- html body.cre-t-71 .pdp-engineering__title {
+}
+
+html body.cre-t-71 .pdp-engineering__title {
     font-size: 32px;
     line-height: 36px;
- }
- 
- html body.cre-t-71 .promise__title,
- html body.cre-t-71 .hi-touch__title
- {
+}
+
+html body.cre-t-71 .promise__title,
+html body.cre-t-71 .hi-touch__title {
     font-size: 34px;
     line-height: 44px;
- }
- 
- 
- html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title{
-   font-size: 36px;
-   line-height: 46px;
- }
- html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title{
-     max-width: 610px;
+}
+
+
+html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
+    font-size: 36px;
+    line-height: 46px;
+}
+
+html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title {
+    max-width: 610px;
     margin: auto;
- }
- html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title{
+}
+
+html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title {
     max-width: 490px;
     margin: auto;
     margin-bottom: 40px;
     font-size: 32px;
- }
- 
- @media screen and (max-width:767px) {
-    html body.cre-t-71 .pdp-engineering__title ,
-    html body.cre-t-71 .promise__title , 
+}
+
+@media screen and (max-width:767px) {
+
+    html body.cre-t-71 .pdp-engineering__title,
+    html body.cre-t-71 .promise__title,
     html body.cre-t-71 #shopify-section-home-price .affordable__title,
-    html body.cre-t-71 .hi-touch__title{
+    html body.cre-t-71 .hi-touch__title {
         font-size: 26px;
         line-height: 1.25;
     }
-   html body.cre-t-71 #shopify-section-carousel-slider h2 {
-    font-size: 24px;
-    line-height: normal;
- }
- }
- 
- @media screen and (max-width:560px) {
- html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title{
-    font-size: 27px;
-    line-height: 1.25;
- }
- html body.cre-t-71 .pdp-engineering__title{
-    padding-right: 20px;
- }
- html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title{
-   font-size: 26px;
- }
- 
- html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p{
-   font-size: 20px;
-    line-height: 1.25;
- }
- }
- 
- @media screen and (max-width:429px) {
-    html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title, 
+
+    html body.cre-t-71 #shopify-section-carousel-slider h2 {
+        font-size: 24px;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width:560px) {
+    html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
+        font-size: 27px;
+        line-height: 1.25;
+    }
+
+    html body.cre-t-71 .pdp-engineering__title {
+        padding-right: 20px;
+    }
+
+    html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title {
+        font-size: 26px;
+    }
+
+    html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p {
+        font-size: 20px;
+        line-height: 1.25;
+    }
+}
+
+@media screen and (max-width:429px) {
+
+    html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title,
     html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title span {
         font-size: 30px;
         line-height: 36px;
     }
+
     html body.cre-t-71.cre-t-56 .left-t-38 h2.test-38-hero__title,
-    html body.cre-t-71.cre-t-56 .left-t-38 h2.test-38-hero__title span{
+    html body.cre-t-71.cre-t-56 .left-t-38 h2.test-38-hero__title span {
         font-size: 38px !important;
         line-height: 40px !important;
     }
- }
- html body.cre-t-71 .test-38-hero__title {
+}
+
+html body.cre-t-71 .test-38-hero__title {
     font-family: miller-display, serif;
     font-weight: 400 !important;
     text-transform: capitalize !important;
- }
- html body.cre-t-71 #shopify-section-carousel-slider h2,
- html body.cre-t-71 #shopify-section-ugc-video h2 {
+}
+
+html body.cre-t-71 #shopify-section-carousel-slider h2,
+html body.cre-t-71 #shopify-section-ugc-video h2 {
     font-family: miller-display, serif;
     font-weight: 400 !important;
     text-transform: capitalize !important;
- }
- 
- html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p,
- html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title,
- html body.cre-t-71 #shopify-section-home-winkbed-engineering .pdp-engineering__title,
- html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title,
- html body.cre-t-71 #shopify-section-home-promise .promise__title,
- html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title,
- html body.cre-t-71 #shopify-section-home-extend .homeSectionExtend__inner h1,
- html body.cre-t-71 #shopify-section-home-price .affordable__title,
- html body.cre-t-71 .pdp-engineering__title,
- html body.cre-t-71 .hi-touch__title,
- html body.cre-t-71 .promise__title,
- html body.cre-t-71 h1.pdp-engineering__title{
+}
+
+html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p,
+html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title,
+html body.cre-t-71 #shopify-section-home-winkbed-engineering .pdp-engineering__title,
+html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title,
+html body.cre-t-71 #shopify-section-home-promise .promise__title,
+html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title,
+html body.cre-t-71 #shopify-section-home-extend .homeSectionExtend__inner h1,
+html body.cre-t-71 #shopify-section-home-price .affordable__title,
+html body.cre-t-71 .pdp-engineering__title,
+html body.cre-t-71 .hi-touch__title,
+html body.cre-t-71 .promise__title,
+html body.cre-t-71 h1.pdp-engineering__title {
     font-family: miller-display, serif;
     font-weight: 400 !important;
     text-transform: capitalize !important;
- 
- }
- html body.cre-t-71 #shopify-section-carousel-slider h2 {
+
+}
+
+html body.cre-t-71 #shopify-section-carousel-slider h2 {
     font-size: 40px;
     line-height: 44px;
- }
- html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p {
+}
+
+html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p {
     font-size: 39px;
     line-height: 44px;
- }
- html body.cre-t-71 .pdp-engineering__title {
+}
+
+html body.cre-t-71 .pdp-engineering__title {
     font-size: 32px;
     line-height: 36px;
- }
- html body.cre-t-71 .pdp-engineering__intro {
+}
+
+html body.cre-t-71 .pdp-engineering__intro {
     font-weight: 400;
     font-size: 16px;
- }
- 
- 
- html body.cre-t-71 .promise__title,
- html body.cre-t-71 .hi-touch__title{
+}
+
+
+html body.cre-t-71 .promise__title,
+html body.cre-t-71 .hi-touch__title {
     font-size: 34px;
     line-height: 44px;
- }
- html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
+}
+
+html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
     font-size: 36px;
     line-height: 46px;
- }
- html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title {
+}
+
+html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title {
     max-width: 610px;
     margin: auto;
- }
- html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title {
+}
+
+html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title {
     max-width: 490px;
     margin: auto;
     margin-bottom: 40px;
     font-size: 32px;
- }
- @media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 767px) {
     html body.cre-t-71 .pdp-engineering__title,
-    
+
     html body.cre-t-71 .promise__title,
-    
+
     html body.cre-t-71 #shopify-section-home-fifty-off .fifty-off__title,
     html body.cre-t-71 #shopify-section-home-price .affordable__title,
     html body.cre-t-71 .hi-touch__title {
         font-size: 26px;
         line-height: 1.25;
     }
+
     html body.cre-t-71 #shopify-section-carousel-slider h2 {
         font-size: 24px;
         line-height: normal;
     }
- }
- 
- @media screen and (max-width: 560px) {
+}
+
+@media screen and (max-width: 560px) {
     html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
         font-size: 27px;
         line-height: 1.25;
     }
+
     html body.cre-t-71 .pdp-engineering__title {
         padding-right: 20px;
     }
+
     html body.cre-t-71 #shopify-section-mattress-guarantee .guarantee-title {
         font-size: 26px;
     }
+
     html body.cre-t-71 #shopify-section-reviews-slider .review-item_text p {
         font-size: 20px;
         line-height: 1.25;
     }
- }
- 
- 
- @media screen and (max-width: 429px) {
+}
+
+
+@media screen and (max-width: 429px) {
+
     html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title,
     html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title span {
         font-size: 30px;
         line-height: 36px;
     }
+
     html body.cre-t-71.cre-t-56 .left-t-38 h2.test-38-hero__title,
     html body.cre-t-71.cre-t-56 .left-t-38 h2.test-38-hero__title span {
         font-size: 38px !important;
         line-height: 40px !important;
     }
- }
- 
- @media screen and (max-width: 401px) {
+}
+
+@media screen and (max-width: 401px) {
+
     html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title,
     html body.cre-t-71.Win-38_2 .left-t-38 .test-38-hero__title span {
         font-size: 38px;
         line-height: 40px;
     }
- }
- @media screen and (max-width: 380px) {
+}
+
+@media screen and (max-width: 380px) {
     html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
         font-size: 25px;
         line-height: 1.25;
     }
- }
- 
- @media screen and (max-width:380px) {
- html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title{
-    font-size: 25px;
-    line-height: 1.25;
- }
- }
- 
- /* _________________________________________________________ */
- /* New changes  */
- html body.cre-t-71,
- html body.cre-t-71 .test-38-hero__subtitle,
- html body.cre-t-71 .left-t-38 .test-38-hero__subtitle,
- html body.cre-t-71 .CRE-38-swiper-container .swiper-slide .award-subtitle,
- html body.cre-t-71 .CRE-38-swiper-container .swiper-slide .award-title,
- html body.cre-t-71 .cre37-font,
- html body.cre-t-71 .yotpo-reviews-count .yotpo .yotpo-bottomline .text-m,
- html body.cre-t-71 .usp-bar-63 .Text-test63 {
+}
+
+@media screen and (max-width:380px) {
+    html body.cre-t-71 #shopify-section-home-hi-touch-homepage .hi-touch__title {
+        font-size: 25px;
+        line-height: 1.25;
+    }
+}
+
+/* _________________________________________________________ */
+/* New changes  */
+html body.cre-t-71,
+html body.cre-t-71 .test-38-hero__subtitle,
+html body.cre-t-71 .left-t-38 .test-38-hero__subtitle,
+html body.cre-t-71 .CRE-38-swiper-container .swiper-slide .award-subtitle,
+html body.cre-t-71 .CRE-38-swiper-container .swiper-slide .award-title,
+html body.cre-t-71 .cre37-font,
+html body.cre-t-71 .yotpo-reviews-count .yotpo .yotpo-bottomline .text-m,
+html body.cre-t-71 .usp-bar-63 .Text-test63 {
     font-family: "greycliff-cf", sans-serif;
- }
- 
- html body.cre-t-71 .homeSectionExtend a.button,
- html body.cre-t-71 .affordable__footer a.button,
- html body.cre-t-71 #shopify-section-home-fifty-off section div.button,
- html body.cre-t-71 section.guarantee .guarantee__footer a.button {
+}
+
+html body.cre-t-71 .homeSectionExtend a.button,
+html body.cre-t-71 .affordable__footer a.button,
+html body.cre-t-71 #shopify-section-home-fifty-off section div.button,
+html body.cre-t-71 section.guarantee .guarantee__footer a.button {
     padding-top: 18px !important;
- }
- 
- html body.cre-t-71 .left-t-38 .t-38-button a,
- section.hi-touch .constrain-copy a.button {
+}
+
+html body.cre-t-71 .left-t-38 .t-38-button a,
+section.hi-touch .constrain-copy a.button {
     padding-top: 20px !important;
- }
- 
- html body.cre-t-71 .megamenu-item-description a.button {
+}
+
+html body.cre-t-71 .megamenu-item-description a.button {
     padding-top: 22px !important;
- }
- 
- html body.cre-t-71 .cre-t-38-herobanner .t-38-review-text {
+}
+
+html body.cre-t-71 .cre-t-38-herobanner .t-38-review-text {
     padding-top: 0px;
     position: relative;
     top: 2px;
- }
- 
- html body.cre-t-71 #shopify-section-shop-hi-touch .story__title {
+}
+
+html body.cre-t-71 #shopify-section-shop-hi-touch .story__title {
     font-family: miller-display, serif;
     font-weight: 400 !important;
     text-transform: capitalize !important;
- }
- 
- html body.cre-t-71 .cre37-navigation-link-text.cre37-active:after {
+}
+
+html body.cre-t-71 .cre37-navigation-link-text.cre37-active:after {
     bottom: 2px;
- }
- html body.cre-t-71 header.site-header .menu.menu-bar {
+}
+
+html body.cre-t-71 header.site-header .menu.menu-bar {
     line-height: normal;
- }
- 
- html body.cre-t-71 header.site-header .site-header__nav-item {
+}
+
+html body.cre-t-71 header.site-header .site-header__nav-item {
     line-height: normal;
     padding-top: 2px;
- }
- html body.cre-t-71 header.site-header .site-header__phone,
- html body.cre-t-71 header.site-header .site-header__cart-count,
- html body.cre-t-71 .promo-bar .promo-bar-bigText,
- html body.cre-t-71 .promo-bar .promo-bar-smallText,
- html body.cre-t-71 #shopify-section-order-the-winkbed .price-row__only + div,
- html body.cre-t-71 #shopify-section-order-the-winkbed .pdp-best-mattresses .main-title,
- html body.cre-t-71 .cre37-price-amount1.cre37-font,
- html body.cre-t-71 .cre37-price-amount2.cre37-font {
+}
+
+html body.cre-t-71 header.site-header .site-header__phone,
+html body.cre-t-71 header.site-header .site-header__cart-count,
+html body.cre-t-71 .promo-bar .promo-bar-bigText,
+html body.cre-t-71 .promo-bar .promo-bar-smallText,
+html body.cre-t-71 #shopify-section-order-the-winkbed .price-row__only+div,
+html body.cre-t-71 #shopify-section-order-the-winkbed .pdp-best-mattresses .main-title,
+html body.cre-t-71 .cre37-price-amount1.cre37-font,
+html body.cre-t-71 .cre37-price-amount2.cre37-font {
     padding-top: 2px;
- }
- html body.cre-t-71 #shopify-section-shop-firmness-soft .ordered-list--letters > li::before,
- html body.cre-t-71 #shopify-section-shop-firmness-luxury .ordered-list--letters > li::before,
- html body.cre-t-71 #shopify-section-shop-firmness-firm .ordered-list--letters > li::before,
- html body.cre-t-71 #shopify-section-shop-firmness-plus .ordered-list--letters > li::before {
+}
+
+html body.cre-t-71 #shopify-section-shop-firmness-soft .ordered-list--letters>li::before,
+html body.cre-t-71 #shopify-section-shop-firmness-luxury .ordered-list--letters>li::before,
+html body.cre-t-71 #shopify-section-shop-firmness-firm .ordered-list--letters>li::before,
+html body.cre-t-71 #shopify-section-shop-firmness-plus .ordered-list--letters>li::before {
     padding-top: 2px;
- }
- html body.cre-t-71 #shopify-section-shop-firmness-soft .firmness__drawer-outro li::marker,
- html body.cre-t-71 #shopify-section-shop-firmness-luxury .firmness__drawer-outro li::marker,
- html body.cre-t-71 #shopify-section-shop-firmness-firm .firmness__drawer-outro li::marker,
- html body.cre-t-71 #shopify-section-shop-firmness-plus .firmness__drawer-outro li::marker {
+}
+
+html body.cre-t-71 #shopify-section-shop-firmness-soft .firmness__drawer-outro li::marker,
+html body.cre-t-71 #shopify-section-shop-firmness-luxury .firmness__drawer-outro li::marker,
+html body.cre-t-71 #shopify-section-shop-firmness-firm .firmness__drawer-outro li::marker,
+html body.cre-t-71 #shopify-section-shop-firmness-plus .firmness__drawer-outro li::marker {
     font-size: 14px;
- }
- html body.cre-t-71 #shopify-section-order-the-winkbed .pdp-engineering.atf .pdp-engineering__bullet::before,
- html body.cre-t-71 #shopify-section-shop-the-winkbed-engineering .pdp-engineering__bullet::before,
- html body.cre-t-71 #construction .pdp-engineering__bullet:before {
+}
+
+html body.cre-t-71 #shopify-section-order-the-winkbed .pdp-engineering.atf .pdp-engineering__bullet::before,
+html body.cre-t-71 #shopify-section-shop-the-winkbed-engineering .pdp-engineering__bullet::before,
+html body.cre-t-71 #construction .pdp-engineering__bullet:before {
     padding-top: 4px;
- }
- html body.cre-t-71 #shopify-section-shop-sleepcool .heat-disperse__tip-number,
- html body.cre-t-71 section.guarantee .guarantee__step_item div.guarantee__step-number {
+}
+
+html body.cre-t-71 #shopify-section-shop-sleepcool .heat-disperse__tip-number,
+html body.cre-t-71 section.guarantee .guarantee__step_item div.guarantee__step-number {
     padding-top: 4px;
- }
- html body.cre-t-71 .cre37-navigation-link-text {
+}
+
+html body.cre-t-71 .cre37-navigation-link-text {
     padding: 9.5px 4px 7.5px 4px;
- }
- html body.cre-t-71 .shop-press__quote-logo {
+}
+
+html body.cre-t-71 .shop-press__quote-logo {
     margin-bottom: 2px;
- }
- html body.cre-t-71 .Cre-T54-RightContainer {
+}
+
+html body.cre-t-71 .Cre-T54-RightContainer {
     padding-top: 32px !important;
- }
- /*below selector effecting 100+ Selectors */
- /* #shopify-section-testimonials .testimonial__suffix, */
- 
- html body.cre-t-71 .popup .testimonial .testimonial__suffix {
+}
+
+/*below selector effecting 100+ Selectors */
+/* #shopify-section-testimonials .testimonial__suffix, */
+
+html body.cre-t-71 .popup .testimonial .testimonial__suffix {
     /* padding-top: 2px; */
     top: 2px;
- }
- html body.cre-t-71 #shopify-section-image-text-cta [title="START YOUR RISK-FREE TRIAL"] {
+}
+
+html body.cre-t-71 #shopify-section-image-text-cta [title="START YOUR RISK-FREE TRIAL"] {
     padding: 15px 25px 14px 25px;
- } /*# sourceMappingURL=a.css.map */
- 
- 
- html body.cre-t-71 .cre-t-60-sub-header,
- html body.cre-t-71 .cre-t-60-swiper-container .swiper-slide .award-subtitle,
- html body.cre-t-71 .cre-t-60-swiper-container .swiper-slide .award-title{
-    font-family: "greycliff-cf", sans-serif ;
- }
- 
- html body.cre-t-71 .winkbed-featured-review h1.headline, 
- html body.cre-t-71 .order-form h1.order-form__title,
- html body.cre-t-71 #shopify-section-shop-sleepcool h1.heat-disperse__title,
- html body.cre-t-71 #shopify-section-shop-innovations h1.shop-innovations__title,
- html body.cre-t-71 #shopify-section-shop-firmness h1.firmness__title,
- html body.cre-t-71 #shopify-section-shop-frames h1.frames__title,
- html body.cre-t-71 #shopify-section-shop-box h1.shop-box__title,
- html body.cre-t-71 #shopify-section-shop-the-winkbed-warranty h1.shop-warranty__title,
- html body.cre-t-71 #shopify-section-shop-videos h1.videos__title,
- html body.cre-t-71 #shopify-section-testimonials h1.testimonials__title,
- html body.cre-t-71 #shopify-section-image-text-cta  .image-cta-extend__info > h2,
- html body.cre-t-71 #shopify-section-customer-services h1.customer-services__title,
- html body.cre-t-71 #shopify-section-faq-content h1.faq-hero__title,
- html body.cre-t-71 #shopify-section-shop-eco h1.eco__title > div,
- html body.cre-t-71 #shopify-section-shop-the-winkbed-warranty h2.shop-warranty__subtitle{
+}
+
+/*# sourceMappingURL=a.css.map */
+
+
+html body.cre-t-71 .cre-t-60-sub-header,
+html body.cre-t-71 .cre-t-60-swiper-container .swiper-slide .award-subtitle,
+html body.cre-t-71 .cre-t-60-swiper-container .swiper-slide .award-title {
+    font-family: "greycliff-cf", sans-serif;
+}
+
+html body.cre-t-71 .winkbed-featured-review h1.headline,
+html body.cre-t-71 .order-form h1.order-form__title,
+html body.cre-t-71 #shopify-section-shop-sleepcool h1.heat-disperse__title,
+html body.cre-t-71 #shopify-section-shop-innovations h1.shop-innovations__title,
+html body.cre-t-71 #shopify-section-shop-firmness h1.firmness__title,
+html body.cre-t-71 #shopify-section-shop-frames h1.frames__title,
+html body.cre-t-71 #shopify-section-shop-box h1.shop-box__title,
+html body.cre-t-71 #shopify-section-shop-the-winkbed-warranty h1.shop-warranty__title,
+html body.cre-t-71 #shopify-section-shop-videos h1.videos__title,
+html body.cre-t-71 #shopify-section-testimonials h1.testimonials__title,
+html body.cre-t-71 #shopify-section-image-text-cta .image-cta-extend__info>h2,
+html body.cre-t-71 #shopify-section-customer-services h1.customer-services__title,
+html body.cre-t-71 #shopify-section-faq-content h1.faq-hero__title,
+html body.cre-t-71 #shopify-section-shop-eco h1.eco__title>div,
+html body.cre-t-71 #shopify-section-shop-the-winkbed-warranty h2.shop-warranty__subtitle,
+html body.cre-t-71 .drawer h1[class*="rvw__title"] {
     font-family: miller-display, serif;
- }
+}
