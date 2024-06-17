@@ -158,10 +158,6 @@
                   var lowercaseProfessionResult = profession_result.toLowerCase();
                   // console.log(profession_result, "profession_result")
                   var count = extractNumberFromString(document.querySelector(`div[class*="hero-header_filters"] h2 + div button`).textContent)
-                  // console.log(count, "count")
-                  // if (count == 1) {
-                  //     lowercaseProfessionResult = removeLastS(lowercaseProfessionResult);
-                  // }
                   const searchString = "https://www.thumbtack.com/k/";
                   if (window.location.href.startsWith(searchString)) {
                       document.querySelector(`[class*="hero-header_filters"] [class*="Type_title3"]`).textContent = "Check out   " + result_number + " " + lowercaseProfessionResult + " near you";
