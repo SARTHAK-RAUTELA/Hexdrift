@@ -114,12 +114,6 @@ html body.cre-t-30 .cre_category_title {
   /* 128% */
 }
 
-@media only screen and (max-width: 1366px) {
-  html body.cre-t-30 .cre_book {
-    width: 220px;
-  }
-}
-
 @media only screen and (max-width: 1199px) {
   html body.cre-t-30 .books_container {
     flex-wrap: wrap;
@@ -187,7 +181,7 @@ html body.cre-t-30 .cre_category_title {
   }
 }
 
-@media only screen and (min-width: 1200px)and (max-width: 1298px) {
+@media only screen and (min-width: 1250px)and (max-width: 1298px) {
   html body.cre-t-30 .cre_book {
     width: 210px;
   }
