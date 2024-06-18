@@ -126,15 +126,15 @@
       // If there's a match, join the parts and return it as a number; otherwise, return null
       return match ? parseInt(match.join(''), 10) : null;
   }
-  function removeLastS(str) {
-      // Find the index of the last 's'
-      let lastIndex = str.lastIndexOf('s');
-      // If 's' is found, remove it; otherwise, return the original string
-      if (lastIndex !== -1) {
-          return str.slice(0, lastIndex) + str.slice(lastIndex + 1);
-      }
-      return str;
-  }
+  // function removeLastS(str) {
+  //     // Find the index of the last 's'
+  //     let lastIndex = str.lastIndexOf('s');
+  //     // If 's' is found, remove it; otherwise, return the original string
+  //     if (lastIndex !== -1) {
+  //         return str.slice(0, lastIndex) + str.slice(lastIndex + 1);
+  //     }
+  //     return str;
+  // }
   __name(extractWordsBeforeNear, "extractWordsBeforeNear");
   // Test 145 changes-------------------------
   var interval = setInterval(function () {
@@ -158,6 +158,10 @@
                   var lowercaseProfessionResult = profession_result.toLowerCase();
                   // console.log(profession_result, "profession_result")
                   var count = extractNumberFromString(document.querySelector(`div[class*="hero-header_filters"] h2 + div button`).textContent)
+                  // console.log(count, "count")
+                  // if (count == 1) {
+                  //     lowercaseProfessionResult = removeLastS(lowercaseProfessionResult);
+                  // }
                   const searchString = "https://www.thumbtack.com/k/";
                   if (window.location.href.startsWith(searchString)) {
                       document.querySelector(`[class*="hero-header_filters"] [class*="Type_title3"]`).textContent = "Check out   " + result_number + " " + lowercaseProfessionResult + " near you";
@@ -212,7 +216,7 @@
                   // var count = extractNumberFromString(document.querySelector(`div[class*="hero-header_filters"] h2 + div button`).textContent)
                   // console.log(count, "count")
                   // if (count == 1) {
-                  lowercaseProfessionResult = removeLastS(lowercaseProfessionResult);
+                  // lowercaseProfessionResult = removeLastS(lowercaseProfessionResult);
                   // }
                   const searchString = "https://www.thumbtack.com/k/";
                   if (window.location.href.startsWith(searchString)) {
