@@ -400,7 +400,6 @@ html body.cre-t-81 .cre-t-5-impressive-image-wrapper img {
   width: 100%;
   height: 100%;
   max-width: 100%;
-  /* max-height: 503px !important; */
 }
 
 html body.cre-t-81 .cre-t-5-impressive-container .swiper-button-prev::after,
@@ -1103,25 +1102,6 @@ html body.cre-t-81 .cre-t-5-hero-right-bottom-header-icon-one img {
     max-width: 459px;
   }
 
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow img {
-    max-width: 200px;
-  } */
-
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img .content {
-    font-size: 30px;
-  } */
-
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow {
-    position: absolute;
-    bottom: -60px;
-    right: -48px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  } */
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img {
-    top: 0;
-  } */
   html body.cre-t-81 .cre-t-5-best-gardener-image-and-arrow .img svg {
     top: -14px;
   }
@@ -1378,12 +1358,10 @@ html body.cre-t-81 .cre-t-5-updates-features-content2-header-text {
   font-size: 23px;
   font-weight: 700;
   line-height: 32px;
-  /* max-width: 795px; */
   width: 55%;
   display: flex;
   align-items: center;
   position: relative;
-  /* top: 1.5px; */
 }
 
 html body.cre-t-81 .cre-t-5-updates-features-content2-header-line {
@@ -1391,22 +1369,7 @@ html body.cre-t-81 .cre-t-5-updates-features-content2-header-line {
   width: 45%;
   height: 1px;
   background: #c3c3c3;
-  /* display: none; */
-  /* position: relative; */
-  /* top: 1rem; */
 }
-
-/* .cre-t-5-updates-features-content2-header-text::after {
-  content: "";
-  display: block;
-  max-width: 311px;
-  width: 70%;
-  height: 1px;
-  background: #c3c3c3;
-  position: absolute;
-  left: 100%;
-  bottom: 1rem;
-}  */
 
 html body.cre-t-81 .cre-t-5-updates-features-content2 .cre-t-5-updates-features-info {
   border-radius: 8px;
@@ -3531,9 +3494,7 @@ html body.cre-t-81 .cre-t-5-experts-sldr-container {
     height: unset;
   }
 
-  /* html body.cre-t-81   .cre-t-5-experts-content.cre-t-5-experts-content5 .cre-t-5-experts-card-content {
-    display: none;
-  } */
+
 
   html body.cre-t-81 .cre-t-5-experts-content.cre-t-5-experts-content5 {
     gap: 20px;
@@ -3636,9 +3597,7 @@ html body.cre-t-81 .cre-t-5-experts-sldr-container {
     padding-right: 5%;
   }
 
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img .content {
-    font-size: 25px;
-  } */
+ 
 
   html body.cre-t-81 .cre-t-5-perfect-garden-wrapper {
     padding-left: 5%;
@@ -3764,14 +3723,7 @@ html body.cre-t-81 .cre-t-5-experts-sldr-container {
     max-width: none;
   }
 
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow {
-    right: 3rem;
-    bottom: -85px;
-  } */
 
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img {
-    top: -36px;
-  } */
   html body.cre-t-81 .cre-t-5-any-gardener-header {
     max-width: none;
   }
@@ -3942,24 +3894,6 @@ html body.cre-t-81 .cre-t-5-best-gardener-image-and-arrow .arrow img {
     max-width: 320px;
   }
 
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .arrow {
-    top: -44px;
-    left: -7px;
-  } 
-  html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow img {
-    max-width: 130px;
-  }
-  html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow {
-    bottom: -44px;
-    right: 40px;
-  }
-  html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img .content {
-    width: 30px;
-  }
-  html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img {
-    left: -5px;
-    top: -29px;
-  } */
   html body.cre-t-81 .cre-t-5-any-gardener-right-main-image img {
     width: 100%;
   }
@@ -4047,12 +3981,6 @@ html body.cre-t-81 .cre-t-5-best-gardener-image-and-arrow .arrow img {
 }
 
 @media (max-width: 650px) {
-  /* html body.cre-t-81   .cre-t-5-live-support-container {
-    overflow: hidden;
-  } */
-  /* html body.cre-t-81   .cre-t-5-live-support-main {
-    overflow: scroll;
-  } */
 
   html body.cre-t-81 .cre-t-5-live-support-container {
     border: unset !important;
@@ -4075,10 +4003,6 @@ html body.cre-t-81 .cre-t-5-best-gardener-image-and-arrow .arrow img {
     border: 2px solid #e0e0e0;
   }
 
-  /* html body.cre-t-81 .cre-t-5-live-support-items > div:nth-child(1),
-    html body.cre-t-81 .cre-t-5-live-support-items > div:nth-child(2) {
-        border-right: unset !important;
-    } */
 }
 
 @media (max-width: 767px) and (min-width: 560px) {
@@ -4132,12 +4056,7 @@ body.logged-out.cre-test8 {
     margin: auto;
   }
 
-  /* html body.cre-t-81  .cre-growveg .cre-groevag-card img {
-      width: 30px;
-  } */
-  /* html body.cre-t-81  .cre-growveg .cre-groevag-card {
-      width: 240px;
-  } */
+ 
   html body.cre-t-81 #aspnetForm #page #hero {
     padding-top: 10px;
   }
@@ -4590,16 +4509,6 @@ html body.cre-t-81 .cre-t-5-try-garden-buttons a:last-child:hover {
 html body.cre-t-81 .cre-t-5-hero-right-bottom-header {
   position: relative;
   z-index: 99;
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-  /* html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .img {
-    top: -37px;
-    left: -8px;
-  }
-  html body.cre-t-81  .cre-t-5-best-gardener-image-and-arrow .arrow {
-    left: 0px;
-  } */
 }
 
 html body.cre-t-81 .cre-t-5-try-garden-wrapper.cre-t-5-try-garden-wrapper-bottom {
@@ -5082,7 +4991,6 @@ iframe.creVideo-05 {
 
   html body .cre-t-05-popup {
     max-width: 340px;
-    /* padding: 25px 20px; */
     height: 200px;
   }
 
@@ -5168,8 +5076,6 @@ p.cre-t-5-harvest-sub-text {
 
 .cre-t-5-try-harvest-container .harvest-img-section {
   max-width: 708px;
-  /* padding-bottom: 40px; */
-  /* padding-top: 10px; */
 }
 
 html body.cre-t-81 .cre-t-5-harvest-img-section {
@@ -5334,31 +5240,6 @@ html body.cre-t-81 .cre-t-5-experts-container .cre-t-5-experts-wrapper::after {
 
 /* ---------------------------------------------------------- */
 /* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
-/* ---------------------------------------------------------- */
 html body.cre-t-81 .cre-t-5-grdn-plnr-created-wrapper {
   display: none;
 }
@@ -5403,10 +5284,6 @@ html body.cre-t-81 .cre-forDesktop .cre-growveg-row>.cre-groevag-card {
   cursor: pointer;
 }
 
-/* html body.cre-t-81 .cre-t-81-usp-content-1-container,
-  html body.cre-t-81 .cre-t-81-usp-content-2-container,
-  html body.cre-t-81 .cre-t-81-usp-content-3-container,
-  html body.cre-t-81 .cre-t-81-usp-content-4-container, */
 html body.cre-t-81 .cre-t-81-usp-content-container {
   position: absolute;
   background: #ffffff;
@@ -5488,19 +5365,6 @@ html body.cre-t-81 .cre-81-personalized-calendar-inner .cre-t-5-draw-sub-header 
   }
 }
 
-/* @media screen and (max-width: 1800px) {
-      html body.cre-t-81 .cre-t-81-usp-content-container.cre-t-81-usp-content-1-container {
-          left: 0;
-      }
-      html body.cre-t-81 .cre-t-81-usp-content-5-container.cre-t-81-usp-content-container {
-          right: 0;
-          left: unset;
-      }
-  } */
-/* html body.cre-t-81 .cre-forDesktop .cre-growveg-row > .cre-groevag-card:hover .cre-t-81-usp-content-1-container,
-  html body.cre-t-81 .cre-forDesktop .cre-growveg-row > .cre-groevag-card:hover .cre-t-81-usp-content-2-container,
-  html body.cre-t-81 .cre-forDesktop .cre-growveg-row > .cre-groevag-card:hover .cre-t-81-usp-content-3-container,
-  html body.cre-t-81 .cre-forDesktop .cre-growveg-row > .cre-groevag-card:hover .cre-t-81-usp-content-4-container, */
 html body.cre-t-81 .cre-forDesktop .cre-growveg-row>.cre-groevag-card:hover .cre-t-81-usp-content-container {
   visibility: visible !important;
   z-index: 1 !important;
@@ -6551,16 +6415,6 @@ html body.cre-t-81 .Cre-T-81-StickyNav-CTA {
 html body.cre-t-81 .Cre-T-81-StickyNav-CTA>a {
   color: #fff;
 }
-
-/* html body.cre-t-81 .review-bottom-seemore{
-    display: none;
-}
-html body.cre-t-81 .see-more-part .review-bottom{
-    display: none !important;
-}
-html body.cre-t-81 .see-more-part .review-bottom-seemore{
-    display: block;
-} */
 html body.cre-t-81 .Cre-T-81-StickyNav-CTA a:hover {
   color: #fff !important;
   text-decoration: none !important;
@@ -6883,13 +6737,6 @@ html body.cre-t-81 .cre-81-best-gardener-list-item .cre-t-5-best-gardener-sub-he
   font-weight: 700 !important;
   line-height: 28.64px !important;
 }
-
-/* .cre-81-save-money .cre-t-5-best-gardener-sub-header-two,.cre-81-Avoid-wastage .cre-t-5-best-gardener-sub-header,.cre-81-Protect-your-crops .cre-t-5-best-gardener-sub-header,.cre-81-best-in-your-garden .cre-t-5-best-gardener-sub-header{
-    font-family: PT Sans,Nunito Sans, sans-serif;
-font-size: 19px !important;
-font-weight: 700 !important;
-line-height: 24.59px !important;
-} */
 html body.cre-t-81 .cre-81-Garden-Planner-inner .cre-t-5-best-gardener-sub-header {
   font-weight: 700 !important;
   margin-bottom: 20px;
