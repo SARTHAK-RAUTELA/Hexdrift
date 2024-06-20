@@ -1635,33 +1635,37 @@
 		});
 
 		function dynamicPriceUpdate(price) {
-			// Select all elements with the class 'price-statement'
-			var priceElements = price;
-
-			// Loop through each price element
-			// priceElements.forEach(function(priceElement) {
-			// Extract the text content from the element
-			var priceText = price.textContent.trim();
-
-			// Extract the price value from the text
-			var priceValue = priceText.match(/£([\d.]+)/);
-			var priceValuex = priceText.match(/\$([\d.]+)/);
-			console.log("Price:", priceText);
-			// If a price value is found, log it
-			if (priceValue) {
-				console.log("Price:", priceValue[0]);
-				document.querySelector('.cre-rooling-subscription-totalPrice span').innerHTML = priceValue[0]
-				document.querySelector('.cre-rooling-subscription-subtotalPrice').innerHTML = priceElements.innerHTML;
-			}
-
-			if (priceValuex) {
-				console.log("Price:", priceValuex[0]);
-				document.querySelector('.cre-rooling-subscription-totalPrice span').innerHTML = priceValuex[0]
-				document.querySelector('.cre-rooling-subscription-subtotalPrice').innerHTML = priceElements.innerHTML;
-			}
-			// });
-
-		}
+            // Select all elements with the class 'price-statement'
+            var priceElements = price;
+        
+            // Extract the text content from the element
+            var priceText = price.textContent.trim();
+        
+            // Extract the price value from the text
+            var priceValue = priceText.match(/£([\d.]+)/);
+            var priceValuex = priceText.match(/\$([\d.]+)/);
+            var priceValueEuro = priceText.match(/€([\d.]+)/);
+            console.log("Price:", priceText);
+        
+            // If a price value is found, log it and update HTML
+            if (priceValue) {
+                console.log("Price:", priceValue[0]);
+                document.querySelector('.cre-rooling-subscription-totalPrice span').innerHTML = priceValue[0];
+                document.querySelector('.cre-rooling-subscription-subtotalPrice').innerHTML = priceElements.innerHTML;
+            }
+        
+            if (priceValuex) {
+                console.log("Price:", priceValuex[0]);
+                document.querySelector('.cre-rooling-subscription-totalPrice span').innerHTML = priceValuex[0];
+                document.querySelector('.cre-rooling-subscription-subtotalPrice').innerHTML = priceElements.innerHTML;
+            }
+        
+            if (priceValueEuro) {
+                console.log("Price:", priceValueEuro[0]);
+                document.querySelector('.cre-rooling-subscription-totalPrice span').innerHTML = priceValueEuro[0];
+                document.querySelector('.cre-rooling-subscription-subtotalPrice').innerHTML = priceElements.innerHTML;
+            }
+        }
 
 		/* Initialise variation */
 		waitForElement('body', init);
