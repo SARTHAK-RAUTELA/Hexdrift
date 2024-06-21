@@ -881,6 +881,7 @@
 		function init() {
 			// -----------------------------------MAG22---------------------------------------------------
 			addClass('body', 'cre-t-MAG22')
+			addClass('body', 'cre-t-MAG-47')
 			if (!document.querySelector('.cre-t-22-heroHeading')) {
 				insertHtml('.magazine-intro', heroIntro, 'beforeend')
 			}
@@ -1020,13 +1021,13 @@
 			});
 
 
-			waitForElement('#print-pricing .print [data-category="choose subscription"] .pricing', function () {
+			waitForElement('#print-pricing .print [data-category*="subscription"] .pricing', function () {
 				setTimeout(function () {
-					if (!document.querySelector('#print-pricing .print.travel [data-category="choose subscription"] .pricing')) {
+					if (!document.querySelector('#print-pricing .print.travel [data-category*="subscription"] .pricing')) {
 						printPricing()
 					}
 
-					if (document.querySelector('#print-pricing .print.travel [data-category="choose subscription"] .pricing')) {
+					if (document.querySelector('#print-pricing .print.travel [data-category*="subscription"] .pricing')) {
 						addClass("body", "cre-MagSize-option")
 						addClass("body", "cre-standard-option")
 						printPricingTravel();
@@ -1036,7 +1037,7 @@
 				}, 1000)
 			});
 
-			waitForElement('#digital-pricing .digital [data-category="choose subscription"] .pricing', function () {
+			waitForElement('#digital-pricing .digital [data-category*="subscription"] .pricing', function () {
 				setTimeout(function () {
 					digitalPricing()
 				}, 1000)
@@ -1077,7 +1078,7 @@
 				setTimeout(function () {
 					document.querySelectorAll('.cre-rooling-subscription-options .cre-rooling-subscription-text strong').forEach(function (e) {
 						if (e.innerHTML.indexOf('Rolling subscription') != -1) {
-							e.closest('.cre-rooling-subscription-options').classList.add('cre-t-34-rollSubscription')
+							e.closest('.cre-rooling-subscription-options').classList.add('cre-t-47-rollSubscription')
 							e.innerHTML = "Rolling subscription <br><span>Cancel anytime</span>"
 						}
 					})
@@ -1096,7 +1097,7 @@
 						}
 
 						if (e.innerHTML.indexOf('per issue') != -1) {
-							e.classList.add('cre-t-34-Hide')
+							e.classList.add('cre-t-47-Hide')
 						}
 					})
 				}, 1200)
@@ -1164,10 +1165,10 @@
 
 
 			// 
-			waitForElement('.cre-rooling-printing-subscription .cre-rooling-subscription-options.cre-t-34-rollSubscription [role="button"].cre-rooling-subscription-btn', function () {
+			waitForElement('.cre-rooling-printing-subscription .cre-rooling-subscription-options.cre-t-47-rollSubscription [role="button"].cre-rooling-subscription-btn', function () {
 				// setTimeout(function(){
 				// if(!document.querySelector('.cre-ShowMoreBTN')){
-				document.querySelector('.cre-rooling-printing-subscription .cre-rooling-subscription-options.cre-t-34-rollSubscription [role="button"].cre-rooling-subscription-btn') && document.querySelector('.cre-rooling-printing-subscription .cre-rooling-subscription-options.cre-t-34-rollSubscription [role="button"].cre-rooling-subscription-btn').click()
+				document.querySelector('.cre-rooling-printing-subscription .cre-rooling-subscription-options.cre-t-47-rollSubscription [role="button"].cre-rooling-subscription-btn') && document.querySelector('.cre-rooling-printing-subscription .cre-rooling-subscription-options.cre-t-47-rollSubscription [role="button"].cre-rooling-subscription-btn').click()
 				// }
 				// },500)
 			})
@@ -1175,7 +1176,7 @@
 			waitForElement('.cre-rooling-subscription-btn .red-text', function () {
 				document.querySelectorAll('.cre-rooling-subscription-btn .red-text').forEach(function (e) {
 					if (e.innerHTML.indexOf('per issue') != -1) {
-						e.classList.add('cre-t-34-hidePerIssue')
+						e.classList.add('cre-t-47-hidePerIssue')
 					}
 				})
 			})
@@ -1280,16 +1281,16 @@
 		}
 
 		function printPricing() {
-			document.querySelectorAll('#print-pricing .print [data-category="choose subscription"] strong').forEach(function (e) {
-				e.closest('p').classList.add('cre-t-34-boldHeading')
+			document.querySelectorAll('#print-pricing .print [data-category*="subscription"] strong').forEach(function (e) {
+				e.closest('p').classList.add('cre-t-47-boldHeading')
 			})
 
 			var valueX = 1;
-			console.log('Length', document.querySelectorAll('#print-pricing .print [data-category="choose subscription"] .pricing').length)
-			document.querySelectorAll('#print-pricing .print [data-category="choose subscription"] .pricing').forEach(function (e) {
+			console.log('Length', document.querySelectorAll('#print-pricing .print [data-category*="subscription"] .pricing').length)
+			document.querySelectorAll('#print-pricing .print [data-category*="subscription"] .pricing').forEach(function (e) {
 				valueX = valueX + 1;
-				var pHeading = e.querySelector('.cre-t-34-boldHeading');
-				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-34-boldHeading)');
+				var pHeading = e.querySelector('.cre-t-47-boldHeading');
+				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-47-boldHeading)');
 				var formId = e.querySelector('form');
 				formId = formId.getAttribute('id');
 
@@ -1298,7 +1299,7 @@
 				var signleIssue = e.closest('.singleissue')
 
 				if (signleIssue) {
-					addingClassForSingleIssue = 'cre-t-34-singleIssue';
+					addingClassForSingleIssue = 'cre-t-47-singleIssue';
 				}
 
 				var pTagInnerHTML = '';
@@ -1334,16 +1335,16 @@
 		}
 
 		function printPricingTravel() {
-			document.querySelectorAll('#print-pricing .print.travel [data-category="choose subscription"] strong').forEach(function (e) {
-				e.closest('p').classList.add('cre-t-34-boldHeading')
+			document.querySelectorAll('#print-pricing .print.travel [data-category*="subscription"] strong').forEach(function (e) {
+				e.closest('p').classList.add('cre-t-47-boldHeading')
 			})
 
 			var valueX = 1;
-			console.log('Length', document.querySelectorAll('#print-pricing .print.travel [data-category="choose subscription"] .pricing').length)
-			document.querySelectorAll('#print-pricing .print.travel [data-category="choose subscription"] .pricing').forEach(function (e) {
+			console.log('Length', document.querySelectorAll('#print-pricing .print.travel [data-category*="subscription"] .pricing').length)
+			document.querySelectorAll('#print-pricing .print.travel [data-category*="subscription"] .pricing').forEach(function (e) {
 				valueX = valueX + 1;
-				var pHeading = e.querySelector('.cre-t-34-boldHeading');
-				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-34-boldHeading)');
+				var pHeading = e.querySelector('.cre-t-47-boldHeading');
+				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-47-boldHeading)');
 				var formId = e.querySelector('form');
 				formId = formId.getAttribute('id');
 
@@ -1352,7 +1353,7 @@
 				var signleIssue = e.closest('.singleissue')
 
 				if (signleIssue) {
-					addingClassForSingleIssue = 'cre-t-34-singleIssue';
+					addingClassForSingleIssue = 'cre-t-47-singleIssue';
 				}
 
 				var pTagInnerHTML = '';
@@ -1388,16 +1389,16 @@
 		}
 
 		function printPricingStandard() {
-			document.querySelectorAll('#print-pricing .print.standard [data-category="choose subscription"] strong').forEach(function (e) {
-				e.closest('p').classList.add('cre-t-34-boldHeading')
+			document.querySelectorAll('#print-pricing .print.standard [data-category*="subscription"] strong').forEach(function (e) {
+				e.closest('p').classList.add('cre-t-47-boldHeading')
 			})
 
 			var valueX = 9;
-			console.log('Length', document.querySelectorAll('#print-pricing .print.standard [data-category="choose subscription"] .pricing').length)
-			document.querySelectorAll('#print-pricing .print.standard [data-category="choose subscription"] .pricing').forEach(function (e) {
+			console.log('Length', document.querySelectorAll('#print-pricing .print.standard [data-category*="subscription"] .pricing').length)
+			document.querySelectorAll('#print-pricing .print.standard [data-category*="subscription"] .pricing').forEach(function (e) {
 				valueX = valueX + 1;
-				var pHeading = e.querySelector('.cre-t-34-boldHeading');
-				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-34-boldHeading)');
+				var pHeading = e.querySelector('.cre-t-47-boldHeading');
+				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-47-boldHeading)');
 				var formId = e.querySelector('form');
 				formId = formId.getAttribute('id');
 
@@ -1406,7 +1407,7 @@
 				var signleIssue = e.closest('.singleissue')
 
 				if (signleIssue) {
-					addingClassForSingleIssue = 'cre-t-34-singleIssue';
+					addingClassForSingleIssue = 'cre-t-47-singleIssue';
 				}
 
 				var pTagInnerHTML = '';
@@ -1442,13 +1443,13 @@
 		}
 
 		function digitalPricing() {
-			document.querySelectorAll('#digital-pricing .digital [data-category="choose subscription"] strong').forEach(function (e) {
-				e.closest('p').classList.add('cre-t-34-boldHeading')
+			document.querySelectorAll('#digital-pricing .digital [data-category*="subscription"] strong').forEach(function (e) {
+				e.closest('p').classList.add('cre-t-47-boldHeading')
 			})
 
-			document.querySelectorAll('#digital-pricing .digital [data-category="choose subscription"] .pricing').forEach(function (e) {
-				var pHeading = e.querySelector('.cre-t-34-boldHeading');
-				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-34-boldHeading)');
+			document.querySelectorAll('#digital-pricing .digital [data-category*="subscription"] .pricing').forEach(function (e) {
+				var pHeading = e.querySelector('.cre-t-47-boldHeading');
+				var pTags = e.querySelectorAll('.pricing > p:not(.cre-t-47-boldHeading)');
 				var formId = e.querySelector('form');
 				formId = formId.getAttribute('id')
 
@@ -1456,7 +1457,7 @@
 				var signleIssue = e.closest('.singleissue')
 
 				if (signleIssue) {
-					addingClassForSingleIssue = 'cre-t-34-singleIssue';
+					addingClassForSingleIssue = 'cre-t-47-singleIssue';
 				}
 
 				var pTagInnerHTML = '';
@@ -1666,6 +1667,7 @@
                 document.querySelector('.cre-rooling-subscription-subtotalPrice').innerHTML = priceElements.innerHTML;
             }
         }
+        
 
 		/* Initialise variation */
 		waitForElement('body', init);

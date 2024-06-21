@@ -1571,11 +1571,20 @@ html body.cre-countryLife-t-1 li.cre-right-li.right-li-one div {
 
 
 @media (max-width: 1180px) and (min-width: 768px) {
-    html body.cre-countryLife-t-1 .cre-rooling-subscription-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+  html body.cre-countryLife-t-1 .cre-rooling-subscription-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+html body.cre-countryLife-t-1 .cre-rooling-subscription-content p {
+  text-transform: lowercase;
+
+}
+
+html body.cre-countryLife-t-1 .cre-rooling-subscription-content .price-statement {
+  text-transform: none !important;
 }
