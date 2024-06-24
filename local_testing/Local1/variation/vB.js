@@ -1,264 +1,282 @@
 (function () {
-	try {
-		/* main variables */
-		var debug = 1;
-		var variation_name = "mag-33";
+    try {
+        /* main variables */
+        var debug = 0;
+        var variation_name = "";
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+        function live(selector, event, callback, context) {
+            // helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent("on" + type, handler);
+                else el.addEventListener(type, handler);
+            }
+            // matches polyfill
+            this &&
+                this.Element &&
+                (function (ElementPrototype) {
+                    ElementPrototype.matches =
+                        ElementPrototype.matches ||
+                        ElementPrototype.matchesSelector ||
+                        ElementPrototype.webkitMatchesSelector ||
+                        ElementPrototype.msMatchesSelector ||
+                        function (selector) {
+                            var node = this,
+                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                                i = -1;
+                            while (nodes[++i] && nodes[i] != node);
+                            return !!nodes[i];
+                        };
+                })(Element.prototype);
+            // live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found,
+                        el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e);
+                });
+            }
+            live(selector, event, callback, context);
+        }
+        function addClass(el, cls) {
+            var el = document.querySelector(el);
+            if (el) {
+                el.classList.add(cls);
+            }
+        }
+        var creSuperSaver =
+            "" +
+            '  <div class="cre-superSaver">' +
+            '      <div class="cre-superSaver-container">' +
+            '          <div class="cre-superSaver-row">' +
+            '              <div class="cre-textItem">' +
+            '                  <p class="cre-card-text">AVOID THE CROWDS AND SAVE ~30% IN OFF-PEAK TIMES!</p>' +
+            '                   <p class="cre-card-boldText">2 Flight Super Saver Special - $<span class="cre-dataPrice"></span>/person</p>' +
+            '                  <p class="cre-card-subText">The Super Saver offer is valid Monday-Friday from 11am - 4:30pm and select times on Saturday and Sunday, excluding peak times.</p>' +
+            "              </div>" +
+            '              <div class="cre-quantity">' +
+            '                <p class="cre-quantity">QUANTITY</p>' +
+            '              <div class="cre-quantityBtn-container">' +
+            '               <div class="cre-quantityBtn">' +
+            '                  <button id="decreaseButton">-</button>' +
+            '                  <input type="text" id="inputField" min="0" max="13" value="0">' +
+            '                  <button id="increaseButton">+</button>' +
+            "               </div>" +
+            '                  <button id="cre-addToCart-mobile">ADD TO CART</button>' +
+            "              </div>" +
+            '                  <button id="cre-addToCart">ADD TO CART</button>' +
+            '                  <p class="cre-card-subText_mobile">The Super Saver offer is valid Monday-Friday from 11am - 4:30pm and select times on Saturday and Sunday, excluding peak times.</p>' +
+            "              </div>" +
+            "          </div>" +
+            "      </div>" +
+            "  </div>";
+        var cre_card_fourFlights =
+            "" +
+            '  <div class="cre-card-copy-fourFlights">' +
+            "      <h2>Double the flying time of the 2 Flight and more than twice the fun!</h2>" +
+            '      <p>This is where you can begin to develop your flying skills. <span class="cre-bold">We recommend this package to get the most from your visit.</span></p>' +
+            "  </div>";
+        var cre_card_twoFlights =
+            "" +
+            '  <div class="cre-card-copy-twoFlights">' +
+            "      <h2>The perfect taster experience.</h2>" +
+            "      <p>Most people leave wishing they'd flown more, but this offers great introductory value.</span>" +
+            "      </p>" +
+            "  </div>";
+        var cre_card_tenFlights =
+            "" +
+            '  <div class="cre-card-copy-tenFlights">' +
+            "      <h2>Share 10 flights with up to 5 flyers on one fun-filled visit.</h2>" +
+            "      <p>Designed for groups who want the ultimate flying experience in one convenient package.</p>" +
+            "  </div>";
+        function inputValue() {
+            var input1 = document.getElementById("inputField");
+            var input2 = document.querySelector(".cre_superSaverproduct .qty-value");
+            if (input1 && input2) {
+                input1.value = input2.value;
+            }
+            //('Trigger Input value')
+        }
+        function updateValues() {
+            var input1 = document.getElementById("inputField");
+            var input2 = document.querySelector(".cre_superSaverproduct .qty-value");
+            if (input1 && input2) {
+                if (input1.value > parseInt(input2.max)) {
+                    input1.value = 13;
+                }
+                input2.value = input1.value;
+            }
+            //('Trigger Update value')
+        }
+        function addClassToParent(inputValue, className) {
+            waitForElement('.ProductGridForm input[value="' + inputValue + '"]', function () {
+                var parent = document.querySelector('.ProductGridForm input[value="' + inputValue + '"]').closest('.product-grid-item');
+                if (parent) {
+                    parent.classList.add(className);
+                }
+            });
+        }
+        function eventListener() {
+            live("#inputField", "input", function () {
+                updateValues();
+            });
+            live("#increaseButton", "click", function () {
+                // console.log('click')
 
-		/* helper library */
-		var _$;
-		!(function (factory) {
-			_$ = factory();
-		})(function () {
-			var bm = function (s) {
-				if (typeof s === "string") {
-					this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-				}
-				if (typeof s === "object") {
-					this.value = [s];
-				}
-			};
-			bm.prototype = {
-				eq: function (n) {
-					this.value = [this.value[n]];
-					return this;
-				},
-				each: function (fn) {
-					[].forEach.call(this.value, fn);
-					return this;
-				},
-				log: function () {
-					var items = [];
-					for (let index = 0; index < arguments.length; index++) {
-						items.push(arguments[index]);
-					}
-					console && console.log(variation_name, items);
-				},
-				addClass: function (v) {
-					var a = v.split(" ");
-					return this.each(function (i) {
-						for (var x = 0; x < a.length; x++) {
-							if (i.classList) {
-								i.classList.add(a[x]);
-							} else {
-								i.className += " " + a[x];
-							}
-						}
-					});
-				},
-				waitForElement: function (
-					selector,
-					trigger,
-					delayInterval,
-					delayTimeout
-				) {
-					var interval = setInterval(function () {
-						if (_$(selector).value.length) {
-							clearInterval(interval);
-							trigger();
-						}
-					}, delayInterval);
-					setTimeout(function () {
-						clearInterval(interval);
-					}, delayTimeout);
-				},
-			};
-			return function (selector) {
-				return new bm(selector);
-			};
-		});
-
-		var temp1Url = ["https://www.magazinesdirect.com/az-magazines/6936349/all-about-history-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34206656/chat-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34206771/country-homes-and-interiors-subscription",
-			"https://www.magazinesdirect.com/az-magazines/41489131/25-beautiful-homes-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34206691/country-life-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34206701/country-life-special-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34206751/cycling-weekly-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936449/edge-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207231/golf-monthly-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936529/homebuilding-renovating-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207256/homes-and-gardens-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936539/how-it-works-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207276/ideal-home-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34248031/livingetc-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936589/maclife-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936599/maximum-pc-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936609/metal-hammer-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207321/motorboat-and-yachting-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936649/period-living-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936814/photography-week-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936824/plotfinder-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207381/practical-boat-owner-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207421/rugby-world-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207446/style-at-home-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207551/the-field-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207516/tv-and-satellite-week-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207496/tv-times-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207731/wallpaper-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207726/woman-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207711/woman-and-home-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34257846/woman-and-home-feel-good-you-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34257816/womans-own-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207706/womans-weekly-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207741/yachting-monthly-subscription",
-			"https://www.magazinesdirect.com/az-magazines/41487616/decanter-subscription",
-			"https://www.magazinesdirect.com/az-magazines/47028262/yachting-world-subscription"];
-
-		var temp2Url = ["https://www.magazinesdirect.com/az-magazines/6936329/3d-world-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936359/all-about-space-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936399/classic-rock-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936419/computer-music-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936429/digital-camera-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936439/digital-photographer-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936459/four-four-two-442-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936469/future-music-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936489/guitar-techniques-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936509/guitarist-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936519/history-of-war-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/34207246/horse-and-hound-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936559/imaginefx-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936569/linux-format-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936579/macformat-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936619/nphoto-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936629/pc-gamer-uk-edition-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936659/photoplus-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936669/play-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936679/practical-caravan-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936689/practical-motorhome-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936709/prog-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936729/retro-gamer-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936739/sfx-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936759/t3-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/47083043/the-history-anthology-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936769/total-911-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936779/total-film-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936789/total-guitar-magazine-subscription",
-			"https://www.magazinesdirect.com/az-magazines/6936799/what-hifi-magazine-subscription"];
-
-		var normalUrlList = {
-			"normalStructure": {
-				url: ["https://www.magazinesdirect.com/az-magazines/34207726/woman-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34207711/woman-and-home-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34257846/woman-and-home-feel-good-you-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34257816/womans-own-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34207706/womans-weekly-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34206691/country-life-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34207516/tv-and-satellite-week-subscription",
-					"https://www.magazinesdirect.com/az-magazines/34207731/wallpaper-subscription",
-					"https://www.magazinesdirect.com/az-magazines/41487616/decanter-subscription"],
-				content: "<strong>CHOOSE YOUR DEAL</strong>&nbsp;<br>	Spread the cost with easy regular payments."
-			}
-		}
-
-
-		var helper = _$();
-		// #Template 1 Chnages-----------------------------------------------
-		function Template01() {
-			// cancel anytime---------------- For Print---------
-			helper.waitForElement("body.Temp1CRE .pricing-block.print.standard .plain.chosen .pricing p:nth-child(2)", function () {
-				var cancelanytime = document.querySelector("body.Temp1CRE .pricing-block.print.standard .plain.chosen .pricing p:nth-child(2)");
-				var removedCancelAnyTime = document.querySelector("body.Temp1CRE .pricing-block.print.standard .plain.chosen .pricing p:nth-child(2)").innerHTML.replace("(cancel anytime)", "");
-				if (cancelanytime) {
-					cancelanytime.innerHTML = removedCancelAnyTime;
-				}
-			}, 50, 15000)
-
-			// cancel anytime---------------- For Digital---------
-			helper.waitForElement("body.Temp1CRE #digital-pricing .pricing-block.digital #singleIssuePricing+div .pricing >p:nth-child(2)", function () {
-				var cancelanytimeDigital = document.querySelector("body.Temp1CRE #digital-pricing .pricing-block.digital #singleIssuePricing+div .pricing >p:nth-child(2)");
-				if (cancelanytimeDigital) {
-					cancelanytimeDigital.innerHTML = cancelanytimeDigital.innerHTML.replace("(cancel anytime)", "");
-				}
-			}, 50, 15000)
-
-			// Removing the "."----------------------
-			helper.waitForElement("body.Temp1CRE .pricing .price-statement+p+.price-statement", function () {
-				document.querySelectorAll(".pricing .price-statement+p+.price-statement").forEach(function (ele) {
-					var removedPeriod = ele.innerHTML.replace("issues.", "issue");
-					ele.innerText = removedPeriod;
-					console.log(removedPeriod, "removedPeriod")
-				})
-
-				// document.querySelector(".pricing .price-statement+p+.price-statement").innerText = removedPeriod;
-
-			}, 50, 15000)
-		}
-
-		function Template02() {
-			// changing the delivery text------------------
-			helper.waitForElement(".subscription .subscription-column:last-child .billedAt", function () {
-				document.querySelector(".subscription .subscription-column:last-child .billedAt").innerHTML = "Includes delivery.";
-			}, 50, 15000)
-		}
-
-		/* Variation Init */
-		function init() {
-			_$('body').addClass(variation_name)
-
-			var url = window.location.href;
-			var urlString = "";
-			if (url.includes("_.thtml")) {
-				console.log("_.thtml")
-				urlString = url.split("_.thtml");
-			} else {
-				console.log(".thtml")
-				urlString = url.split(".thtml");
-			}
-
-			normalUrlList.normalStructure.url.forEach(function(url){
-				if(url.includes(urlString[0])){
-					console.log("url found")
-					helper.waitForElement("#lefthandside_text ul:first-of-type  li:first-child p", function () {
-						console.log("element found----------------------------")
-						var text = document.querySelector("#lefthandside_text ul:first-of-type li:first-child p");
-						if (text) {
-							text.innerHTML = normalUrlList.normalStructure.content;
-						}
-					}, 50, 15000)
-				}
-			})
-
-			helper.waitForElement("#lefthandside_text h5", function () {
-
-				if (window.location.href.includes("https://www.magazinesdirect.com/az-magazines/34206656/chat-subscription") ||  window.location.href.includes("https://www.magazinesdirect.com/az-magazines/34206701/country-life-special-subscription")){
-					var text = document.querySelector("#lefthandside_text h5 + ul  li:first-child p");
-					if (text) {
-						text.innerHTML = `<strong>Choose the deal that suits you</strong> - spread the cost with easy regular payments.&nbsp;`;
-					}
-				}	
-				else if (window.location.href.includes("https://www.magazinesdirect.com/az-magazines/34207551/the-field-subscription")){
-					var text = document.querySelector("#lefthandside_text>ul:first-of-type li:first-child p");
-					if (text) {
-						text.innerHTML = `<p><strong>CHOOSE THE DEAL THAT SUITS YOU</strong>&nbsp;- spread the cost with easy regular payments.</p>`;
-					}
-				}
-			}, 50, 15000)
-
-			//Adding a class if url includes the first templete--------------
-			if (temp1Url.includes(urlString[0])) {
-
-				document.querySelector("body").classList.add("Temp1CRE");
-				
-			}
-			//Adding a class if url includes the Second templete--------------
-			if (temp2Url.includes(urlString[0])) {
-				document.querySelector("body").classList.add("Temp2CRE");
-			}
-			// For Template 01-----------------------
-			helper.waitForElement(".Temp1CRE", function () {
-				Template01()
-			}, 50, 15000)
-			// For Template 02------------------------
-			helper.waitForElement(".Temp2CRE", function () {
-				Template02();
-			}, 50, 15000)
-
-			
-		}
-
-		/* Initialise variation */
-		helper.waitForElement("body", init, 50, 15000);
-	} catch (e) {
-		if (debug) console.log(e, "error in Test" + variation_name);
-	}
+                document.querySelector(".cre_superSaverproduct .btn-add").click();
+                inputValue();
+            });
+            live("#decreaseButton", "click", function () {
+                // console.log('click')
+                document.querySelector(".cre_superSaverproduct .btn-subtract").click();
+                inputValue();
+            });
+            live("#cre-addToCart , #cre-addToCart-mobile", "click", function () {
+                document.querySelector(".cre_superSaverproduct .btn-add-to-cart").click();
+            });
+        }
+        function addingData() {
+            retrivePrice();
+            if (!document.querySelector(".cre-card-copy-fourFlights") && document.querySelector(".cre_fourFlights .features")) {
+                document.querySelector(".cre_fourFlights .features").insertAdjacentHTML("beforebegin", cre_card_fourFlights);
+            }
+            if (!document.querySelector(".cre-card-copy-twoFlights") && document.querySelector(".cre_twoFlights .features")) {
+                document.querySelector(".cre_twoFlights .features").insertAdjacentHTML("beforebegin", cre_card_twoFlights);
+            }
+            if (!document.querySelector(".cre-card-copy-tenFlights") && document.querySelector(".cre_familyFlights .features")) {
+                document.querySelector(".cre_familyFlights .features").insertAdjacentHTML("beforebegin", cre_card_tenFlights);
+            }
+            if (!document.querySelector(".cre_twoFlights .cre-person-text") && document.querySelector(".cre_twoFlights .qty-select-method-3")) {
+                document.querySelector(".cre_twoFlights .qty-select-method-3").insertAdjacentHTML("beforebegin", '<h2 class="cre-person-text">PER PERSON</h2><p class="cre-person-subtext">Select the number of flyers</p>');
+            }
+            if (!document.querySelector(".cre_fourFlights .cre-person-text") && document.querySelector(".cre_fourFlights .qty-select-method-3")) {
+                document.querySelector(".cre_fourFlights .qty-select-method-3").insertAdjacentHTML("beforebegin", '<h2 class="cre-person-text">PER PERSON</h2><p class="cre-person-subtext">Select the number of flyers</p>');
+            }
+            if (!document.querySelector(".cre_familyFlights div .cre-person-text") && document.querySelector(".cre_familyFlights .qty-select-method-3")) {
+                document.querySelector(".cre_familyFlights .qty-select-method-3").insertAdjacentHTML("beforebegin", '<h2 class="cre-person-text">For 10 flights</h2><p class="cre-person-subtext">Select the number of 10 flight packages</p>');
+            }
+        }
+        function productPrice() {
+            var jsonObjects = [];
+            var dataRegularAmount; // Define dataRegularAmount here
+            document.querySelectorAll(".btn.btn-add").forEach(function (e) {
+                var parent = e.closest(".product-grid-item");
+                var features = parent.querySelector(".features");
+                var listItems = parent ? parent.querySelectorAll(".features li") : null;
+                if (e.getAttribute("data-name") && e.getAttribute("data-price")) {
+                    var dataName = e.getAttribute("data-name");
+                    var dataPrice = parseFloat(e.getAttribute("data-price"));
+                    var jsonObject = {
+                        dataName: dataName,
+                        dataPrice: dataPrice,
+                    };
+                    if (listItems) {
+                        listItems.forEach(function (item) {
+                            var text = item.textContent;
+                            var percentMatch = text.match(/\d+%/); // Match one or more digits followed by '%'
+                            if (percentMatch) {
+                                var dataOfferPrice = parseFloat(percentMatch[0].replace("%", ""));
+                                dataRegularAmount = (dataOfferPrice * dataPrice) / 100 + dataPrice;
+                                dataRegularAmount = Math.round(dataRegularAmount * 100) / 100;
+                                jsonObject.dataOfferPrice = dataOfferPrice;
+                                jsonObject.dataRegularAmount = dataRegularAmount;
+                            }
+                        });
+                    }
+                    // Add class to the parent based on dataName
+                    if (dataName.indexOf("2 Flights Super Saver") !== -1) {
+                        // parent.classList.add("cre_superSaverproduct");
+                    } else if (dataName.indexOf("4 Flights") !== -1) {
+                        // parent.classList.add("cre_fourFlights");
+                        if (features && !document.querySelector('.cre_fourFlights .cre-regularPrice')) {
+                            features.insertAdjacentHTML("afterend", '<p class="cre-regularPrice">Regularly $<span>' + dataRegularAmount + "</span></p>");
+                        }
+                    } else if (dataName.indexOf("Family 10 Flights") !== -1) {
+                        // parent.classList.add("cre_familyFlights");
+                        if (features && !document.querySelector('.cre_familyFlights .cre-regularPrice')) {
+                            features.insertAdjacentHTML("afterend", '<p class="cre-regularPrice">Regularly $<span>' + dataRegularAmount + "</span></p>");
+                        }
+                    } else if (dataName === "2 Flights") {
+                        // parent.classList.add("cre_twoFlights");
+                    }
+                    addClassToParent('2 Flights Super Saver ~30% Off', 'cre_superSaverproduct');
+                    addClassToParent('2 Flights', 'cre_twoFlights');
+                    addClassToParent('4 Flights: Our Most Popular Product!', 'cre_fourFlights');
+                    addClassToParent('Friends and Family 10 Flights', 'cre_familyFlights');
+                    waitForElement(".cre_fourFlights", function () {
+                        addingData();
+                    });
+                    jsonObjects.push(jsonObject);
+                }
+            });
+            var jsonString = JSON.stringify(jsonObjects);
+            sessionStorage.setItem("CRE-t-Data", jsonString);
+        }
+        function retrivePrice() {
+            var jsonString = sessionStorage.getItem("CRE-t-Data");
+            if (jsonString) {
+                var jsonObjects = JSON.parse(jsonString);
+                jsonObjects.forEach(function (jsonObject) {
+                    if (jsonObject.dataName.indexOf("2 Flights Super Saver") !== -1) {
+                        // console.log("dataPrice: " + jsonObject.dataPrice);
+                        if (document.querySelector(".cre-dataPrice")) {
+                            document.querySelector(".cre-dataPrice").innerHTML = jsonObject.dataPrice;
+                        }
+                    }
+                });
+            }
+        }
+        /* Variation Init */
+        function init() {
+            // console.log('Ifly-3')
+            addClass("body", "cre-iFly3");
+            waitForElement(".primaryContainer .mainStore .category  .category-footer", function () {
+                if (!document.querySelector(".cre-superSaver")) {
+                    document.querySelector(".primaryContainer .mainStore .category  .category-footer").insertAdjacentHTML("beforebegin", creSuperSaver);
+                }
+            });
+            eventListener();
+        }
+        /* Initialise variation */
+        // waitForElement('body', function () {
+        //  addClass("body", "cre-iFly3");
+        // });
+        // waitForElement('.ProductGridForm input[value="2 Flights Super Saver ~30% Off"]', function () {
+        //  init();
+        //  waitForElement(".btn.btn-add", productPrice);
+        // });
+        function activateTestBasedOnTile() {
+            var isSuperSaverPackAvailable = false;
+            // Check the super saver pack available or not
+            document.querySelectorAll(".category .product-grid .product-grid-item .product-name").forEach(function (elm) {
+                var gridItem = elm.closest(".product-grid-item");
+                if (!gridItem) return;
+                var cardName = elm.innerText.toLowerCase().trim(" ");
+                // If Current card is supper saver
+                if (cardName.indexOf("2 flights super saver") != -1 && gridItem.querySelector(".ProductGridForm")) {
+                    isSuperSaverPackAvailable = true;
+                }
+            });
+            // If super saver is available then made changes in site
+            if (isSuperSaverPackAvailable && !document.querySelector(".cre-iFly3")) {
+                init();
+                waitForElement(".btn.btn-add", productPrice);
+            }
+        }
+        /* Initialise variation */
+        waitForElement(".category .product-grid .product-grid-item .product-name", activateTestBasedOnTile);
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name);
+    }
 })();
