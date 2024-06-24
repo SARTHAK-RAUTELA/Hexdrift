@@ -1580,3 +1580,13 @@ html body.cre-countryLife-t-1 li.cre-right-li.right-li-one div {
         flex-wrap: wrap;
     }
 }
+
+
+html body.cre-countryLife-t-1 .cre-rooling-subscription-content p {
+  text-transform: lowercase;
+
+}
+
+html body.cre-countryLife-t-1 .cre-rooling-subscription-content .price-statement {
+  text-transform: none !important;
+}
