@@ -733,17 +733,18 @@ html body.cre-countryLife-t-1 .cre-rooling-subscription-content p {
   font-weight: 400;
   line-height: 24px;
   text-align: right;
+  text-transform: lowercase;
 }
 
 .cre-gift.cre-gift-disable .cre-gift-wrapper .cre-gift-inner {
   display: none;
 }
 
-.cre-rooling-subscription-options.cre-t-47-singleIssue {
+.cre-rooling-subscription-options.cre-t-34-singleIssue {
   display: none;
 }
 
-html body.cre-show-SignleIssue .cre-rooling-subscription-options.cre-t-47-singleIssue {
+html body.cre-show-SignleIssue .cre-rooling-subscription-options.cre-t-34-singleIssue {
   display: block;
 }
 
@@ -1463,13 +1464,13 @@ html body.cre-countryLife-t-1 .cre-rooling-subscription-content .price-offer {
   font-weight: 700;
 }
 
-.cre-rooling-printing-subscription .cre-rooling-subscription-options:not(.cre-t-47-rollSubscription) [role="button"] {
+.cre-rooling-printing-subscription .cre-rooling-subscription-options:not(.cre-t-34-rollSubscription) [role="button"] {
   min-height: 70px;
   display: flex;
   justify-content: center;
 }
 
-p.price-offer.red-text.cre-t-47-Hide {
+p.price-offer.red-text.cre-t-34-Hide {
   display: none !important;
 }
 
@@ -1477,7 +1478,7 @@ html body.cre-t-MAG22 img.cre-img {
   display: none;
 }
 
-.cre-rooling-subscription-btn .red-text.cre-t-47-hidePerIssue {
+.cre-rooling-subscription-btn .red-text.cre-t-34-hidePerIssue {
   display: none;
 }
 
@@ -1511,7 +1512,7 @@ html body.cre-countryLife-t-1 li.cre-right-li.right-li-one div {
 }
 
 
-.cre-rooling-printing-subscription .cre-rooling-subscription-options:not(.cre-t-47-rollSubscription) [role="button"] {
+.cre-rooling-printing-subscription .cre-rooling-subscription-options:not(.cre-t-34-rollSubscription) [role="button"] {
   min-height: 80px;
 }
 
@@ -1571,20 +1572,11 @@ html body.cre-countryLife-t-1 li.cre-right-li.right-li-one div {
 
 
 @media (max-width: 1180px) and (min-width: 768px) {
-  html body.cre-countryLife-t-1 .cre-rooling-subscription-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
-
-html body.cre-countryLife-t-1 .cre-rooling-subscription-content p {
-  text-transform: lowercase;
-
-}
-
-html body.cre-countryLife-t-1 .cre-rooling-subscription-content .price-statement {
-  text-transform: none !important;
+    html body.cre-countryLife-t-1 .cre-rooling-subscription-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
