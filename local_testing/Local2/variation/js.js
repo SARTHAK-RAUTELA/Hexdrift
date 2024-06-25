@@ -1,162 +1,48 @@
-(function () {
-    try {
-      /* main variables */
-      var debug = 1;
-      var variation_name = "cre-t-23";
-      /* helper library */
-      var _$;
-      !(function (factory) {
-        _$ = factory();
-      })(function () {
-        var bm = function (s) {
-          if (typeof s === "string") {
-            this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-          }
-          if (typeof s === "object") {
-            this.value = [s];
-          }
-        };
-        bm.prototype = {
-          eq: function (n) {
-            this.value = [this.value[n]];
-            return this;
-          },
-          each: function (fn) {
-            [].forEach.call(this.value, fn);
-            return this;
-          },
-          log: function () {
-            var items = [];
-            for (let index = 0; index < arguments.length; index++) {
-              items.push(arguments[index]);
-            }
-            console && console.log(variation_name, items);
-          },
-          addClass: function (v) {
-            var a = v.split(" ");
-            return this.each(function (i) {
-              for (var x = 0; x < a.length; x++) {
-                if (i.classList) {
-                  i.classList.add(a[x]);
-                } else {
-                  i.className += " " + a[x];
-                }
-              }
-            });
-          },
-          waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-            var interval = setInterval(function () {
-              if (_$(selector).value.length) {
-                clearInterval(interval);
-                trigger();
-              }
-            }, delayInterval);
-            setTimeout(function () {
-              clearInterval(interval);
-            }, delayTimeout);
-          },
-        };
-        return function (selector) {
-          return new bm(selector);
-        };
-      });
-      var helper = _$();
-      var reviewProfile = ` <div class="ti-profile-img creProfile"> <img src="https://lh3.googleusercontent.com/a-/ALV-UjW6v7fy6wf-jae7AEclEXdmiohWV4ETuYTp1luCCgDZHag=s120-c-rp-mo-br100" alt="Patricia Meneses"> 
-        <div class="creText"> 
-        <h1>
-        Particia Meneses
-        </h1>
-        <p> February 9, 2024</p>
-        </div>
-        </div>`;
-  
-      var reviewImg = ` <div class="creReview"> 
-      <div class="googleReview">
-      <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/iFLY/Test+23/logo.svg" alt="Patricia Meneses"> </div>
-      <div class="startReview">
-      <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/iFLY/Test+23/start.svg" alt="Patricia Meneses"> 
-      <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/iFLY/Test+23/start.svg" alt="Patricia Meneses"> 
-      <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/iFLY/Test+23/start.svg" alt="Patricia Meneses"> 
-      <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/iFLY/Test+23/start.svg" alt="Patricia Meneses"> 
-      <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/iFLY/Test+23/start.svg" alt="Patricia Meneses"> 
-      </div>
-      
-        </div>`
-      var addContent = `<div class="cre-t-23-wrapper">
-                            <div class="cre-t-23-container">
-                              <div class="cre-t-23-heading">
-                                <div class="cre-t-23-txtContent">
-                                  <div class="cre-t-23-header">
-                                    <h3>Join over 10 million people and experience the freedom of indoor flight!</h3>
-                                  </div>
-                                  <div class="cre-t-23-subHeading">
-                                    <p>“The instructor was amazing. He knew how to calm my kids and help them experience such a fun activity. We will be back again. For anyone with kids, this place is worth the $$ and time. Thank you, iFLY, for the great experience”</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>`;
-      /* Variation Init */
-      function init() {
-        _$("body").addClass(variation_name);
-  
-          helper.waitForElement('.primaryContainer', function() {
-            // setTimeout(function () {
-            //   window.scrollTo({ top: 0, behavior: "smooth" });
-            // }, 3000);
-            document.querySelector(".primaryContainer").insertAdjacentHTML("beforebegin", addContent);
-          },50, 25000)
-            
-          helper.waitForElement('.cre-t-23-wrapper', function(){
-            if (document.querySelector('.cre-t-23-wrapper')) {
-              document.querySelector(".cre-t-23-wrapper").insertAdjacentHTML("afterend", reviewProfile);
-            }
-          },50,25000)
-          helper.waitForElement('.creProfile', function(){
-            if (document.querySelector('.creProfile')) {
-              document.querySelector(".creProfile").insertAdjacentHTML('afterend', reviewImg)
-            }
-          },50,25000)
-  
-        
-      }
-  
-      function waitForClientScroll(trigger) {
-        var interval = setInterval(function() {
-          if (typeof window.scrollToSmoothly != "undefined") {
-            clearInterval(interval);
-            trigger();
-          }
-        }, 50);
-        setTimeout(function() {
-          clearInterval(interval);
-        }, 15000);
-      }
-  
-  
-  
-  
-  
-  waitForClientScroll(function(){
-    var originalScrollTo = window.scrollTo;
-    window.scrollTo({ top: 0 });
-    window.scrollTo = function() {};
-    setTimeout(function() {
-        window.scrollTo = originalScrollTo;
-    },600);
-  })
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      /* Initialise variation */
-      helper.waitForElement(".primaryContainer", init, 50, 25000);
-    } catch (e) {
-      if (debug) console.log(e, "error in Test" + variation_name);
+// Define the selectors for elements that should trigger the $20 message
+var save20Selectors = [
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_twoFlights .product-container[style='background-image: url('productImages/prod_2735.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_fourFlights .product-container[style='background-image: url('productImages/prod_696.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5907.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5757.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5647.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5907.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_4995.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_8716.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_2186.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_1597.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_3574.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_3573.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5867.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_3277.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5868.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_4431.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_11194.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_5908.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_1842.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_1015.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_8720.gif')']",
+  "html body.cre-t-6 #category-1237 .product-grid-item.cre_familyFlights .product-container[style='background-image: url('productImages/prod_1306.gif')']"
+];
+// Function to update the content based on the presence of elements
+function updateContent() {
+  const uspBarSpan = document.querySelector("html body.cre-t-6 .cre-usp-bar span");
+  if (!uspBarSpan) return; // Exit if the target element is not found
+
+  let found = false;
+
+  // Check for each selector and update the content if found
+  save20Selectors.forEach(selector => {
+    const element = document.querySelector(selector);
+    if (element) {
+      uspBarSpan.innerHTML = "SAVE $20/person - 2";
+      found = true;
     }
-  })();
+  });
+  // If no matching element is found, set the default message
+  if (!found) {
+    uspBarSpan.innerHTML = "SAVE $30/person - 2";
+  }
+}
+
+// Run the function to update the content
+updateContent();
