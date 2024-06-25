@@ -264,7 +264,7 @@
                 if (!gridItem) return;
                 var cardName = elm.innerText.toLowerCase().trim(" ");
                 // If Current card is supper saver
-                if (cardName.indexOf("2 flights super saver") != -1 && gridItem.querySelector(".ProductGridForm")) {
+                if (cardName.indexOf("4 Flights: Our Most Popular Product!") != -1 && gridItem.querySelector(".ProductGridForm")) {
                     isSuperSaverPackAvailable = true;
                 }
             });
