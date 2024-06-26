@@ -1,0 +1,222 @@
+/* Pros avialiblity section css end----------->  */
+/* Reviews Section CSS  */
+html body.tt-141 .tt-reviews {
+    padding: 50px 16px 15px;
+}
+
+html body.tt-141 .tt-reviews h2 {
+    color: #2F3033;
+    line-height: 32px !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: normal;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+html body.tt-141 [class*="homepage-hero_hideAboveExtraLarge"] picture img {
+    max-width: 310px;
+    width: 100%;
+    position: absolute;
+    right: 6px;
+    top: 0px;
+}
+
+html body.tt-141 .tt-reviews .tt_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+html body.tt-141 [class*="composable-customer-header"]+[class*="bg-white bb b-gray-300"] {
+    border: none !important;
+}
+
+html body.tt-141 [class*="homepage-hero_overflowOnTallScreens"]>div:first-child>div>.no-underline {
+    margin-top: 0 !important;
+}
+
+/* Reviews Section CSS end -------------> */
+/* Home resource css  */
+/* footer css ends--------> */
+/* Media queriews for mobile devices ------------ */
+html body.tt-141 [class*="homepage-hero_showAboveExtraLarge"][class*="homepage-hero_fitImageTallScreens"] {
+    display: none;
+}
+
+html body [class*=homepage-hero_fitImageTallScreensVariant] {
+    position: static !important;
+}
+
+[class*="homepage-hero_overflowOnTallScreens"]>.items-center form[class*="search-bar-form_root"] {
+    max-width: 550px;
+    height: 54px;
+}
+
+@media(min-width:1025px) {
+    html body.tt-141 [Class*="homepage-hero_fitImageTallScreens"][class*="homepage-hero_showAboveExtraLarge"] img {
+        max-width: 400px;
+        position: absolute;
+        right: 0;
+    }
+
+    html body.tt-141 .bg-white [class*=homepage-hero_overflowOnTallScreens] {
+        height: inherit;
+        overflow: inherit !important;
+    }
+
+    html body.tt-141 [class*="homepage-hero_overflowOnTallScreens"]>div:first-child {
+        padding-top: 25px;
+    }
+
+    html body.tt-141 [class*="homepage-hero_fitImageTallScreens"][class*="homepage-hero_showAboveExtraLarge"]+div {
+        display: none;
+    }
+
+    .bg-white>[class*=homepage-hero_overflowOnTallScreens] {
+        overflow: visible !important;
+    }
+}
+
+@media(max-width:700px) {
+    html body.tt-141 [class*=homepage-hero_root] {
+        height: auto;
+        padding-top: 20px;
+    }
+
+    [class*="homepage-hero_fitImageTallScreens"][class*="homepage-hero_showAboveExtraLarge"]+div {
+        display: none;
+    }
+
+    [class*="app-upsell-banner-shared_fadeIn"]+.bg-white {
+        border: none !important;
+    }
+
+    html body.tt-141 .tt-reviews h2 {
+        font-size: 22px !important;
+    }
+
+    html body.tt-141 .tt-reviews {
+        padding: 15px 0px 40px;
+    }
+
+    html body.tt-141 [class*="homepage-hero_fitImageTallScreens"] picture {
+        display: none;
+    }
+
+    html body.tt-141 [class*="homepage-hero_overflowOnTallScreens"]>div:first-child>div>.no-underline {
+        margin-top: 16px !important;
+    }
+}
+
+@media (min-width: 1442px) {
+    html body.tt-141 [class*="homepage-hero_showAboveExtraLarge"][class*="homepage-hero_fitImageTallScreens"] {
+        top: -54px;
+        overflow: inherit !important;
+    }
+}
+
+@media (min-height: 601px) {
+    .homepage-hero_fitImageTallScreens__sSVMF {
+        height: 100% !important;
+        overflow: inherit !important;
+    }
+}
+
+html body [class*="homepage-hero_fitImageTallScreens__sSVMF homepage-hero_hideAboveExtraLarge"] {
+    overflow: inherit !important;
+}
+
+html body.tt-141 [class*="composable-customer-header"]+[class*="bg-white bb b-gray-300"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 946px;
+}
+
+html body.tt-141 [class*="homepage-hero_mainSectionVariant"] {
+    margin-left: 0 !important;
+}
+
+html body.tt-141 [class*="homepage-hero_mainSection"] {
+    margin-left: 0 !important;
+}
+
+@media(min-width:1026px) {
+    html body.tt-141:has([class*="homepage-hero_mainSectionVariant"]>div:first-child>div:nth-child(2) [class*="hero-upsell-wrapper_selectedTabButton"]) .tt-reviews {
+        padding: 130px 16px 15px;
+    }
+}
+
+.bm_homepage-hero {
+    font-size: 50px !important;
+    line-height: 52px;
+    /* height: 1.2em; */
+    line-height: 1.2em;
+    position: relative;
+    font-size: 50px !important;
+    line-height: 50px;
+    text-align: left;
+    font-weight: 800;
+}
+
+.bm_homepage-hero_textCarousel {
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.bm_homepage-herolist {
+    position: relative;
+    animation: homepage-hero_scroller__RgPOD 10s ease-in-out infinite;
+}
+
+.bm_homepage-herolist li {
+    display: inline-block;
+}
+
+.bm_homepage-herolist li span {
+    color: rgba(47, 48, 51, 1);
+}
+
+.bm_homepage-herolist li {
+    display: inline-block;
+}
+
+[class*="homepage-hero_mainSection"] [class*=homepage-hero_heavy] {
+    margin-bottom: 20px !important;
+
+}
+
+.bmhideheading .bm_homepage-hero {
+    display: none;
+}
+
+.bm_homepage-hero+.mb3+[class*="homepage-hero_heavy"],
+.bm_homepage-hero+div svg,
+.hidebannerheading [class*="homepage-hero_mainSection"]>div:first-child svg {
+    display: none !important;
+}
+
+.hidebannerheading [class*="homepage-hero_mainSection"] [class*=homepage-hero_heavy] {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .bm_homepage-hero {
+        font-size: 38px !important;
+        line-height: 40px;
+    }
+
+    .bm_homepage-hero [class*="blue db"] {
+        display: none !important;
+    }
+
+}
+
+/* To remove the arrow on herobanner */
+html body.tt-141 .bg-white [class*=homepage-hero_overflowOnTallScreens] [class*="homepage-hero_navButton"]{
+display: none;
+}
