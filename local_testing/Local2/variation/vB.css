@@ -1,420 +1,76 @@
-html body [class*="homepage-hero_overflowOnTallScreens"] [class*="homepage-hero_fitImageTallScreens"] {
-  display: none !important;
-}
-
-html body [class*="homepage-hero_mainSection"] {
-  max-width: 730px !important;
-  padding-left: inherit !important;
-  padding-right: inherit !important;
-  margin-left: 0 !important;
-  width: 100% !important;
-}
-
-html body [class*="homepage-hero_overflowOnTallScreens"]>div {
-  justify-content: center;
-}
-
-html body [class*="pre-line homepage-hero_heavy"]+.mb3 {
-  display: none;
-}
-
-html body [class*="homepage-hero_mainSection"]>div:first-child {
-  display: flex !important;
-  justify-content: center;
-}
-
-html body [class*="homepage-hero_heavy"] {
-  text-align: center;
-}
-
-html body .bg-white [class*="homepage-hero_scroll"] {
-  position: inherit;
-}
-
-html body .bg-white [class*="homepage-hero_scroll"] li {
-  color: #3c9fda;
-}
-
-html body .bm-item li p {
-  color: rgba(47, 48, 51, 1);
-  font-size: 16px;
-  font-weight: 600;
-  position: relative;
-  line-height: 24px;
-}
-
-html body .bm-item li:hover {
-  background-color: #fafafa;
-}
-
-html body .bm-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-html body .bm-item img {
-  max-width: 32px;
-}
-
-html body .bm-item p {
-  text-align: center;
-}
-
-html body .bm-item li {
-  box-sizing: border-box;
-  margin: 5px;
-  list-style-type: none;
-  text-align: center;
-  border: 1px solid rgba(233, 236, 237, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 152px;
-  flex: 1 1 calc(25% - 10px);
-  position: relative;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-html body .thumbtechservices {
-  max-width: 792px;
-  margin: 0 auto;
-  margin-bottom: 64px;
-}
-
-html body .bmhidesection [class*="Type_title5"] span {
-  color: rgba(0, 159, 217, 1);
-}
-
-html body .bmhidesection [class*="Type_title5"] {
-  font-size: 20px !important;
-  font-weight: 700 !important;
-  text-align: center;
-}
-
-html body .bmhidesection>div>div:nth-child(2) {
-  display: none;
-}
-
-html body .bmhidesection [class*="Type_title5"] span:after {
-  content: ".";
-  position: absolute;
-}
-
-html body .bg-white [class*="homepage-hero_scroll"] {
-  animation: inherit;
-}
-
-html body [class*="homepage-hero_overflowOnTallScreens"] {
-  height: inherit;
-  background-color: rgba(234, 246, 250, 1);
-  padding: 30px 0;
-}
-
-html body [class*="homepage-hero_overflowOnTallScreens"] [class*="homepage-hero_fitImageTallScreens"]+div {
-  display: none;
-}
-
-html body .bmhidesection .bmheading {
-  display: none;
-}
-
-html body .bmheading {
-  font-size: 20px !important;
-  font-weight: 700 !important;
-  text-align: center;
-  margin-top: 64px;
-  margin-bottom: 15px;
-}
-
-html body .reviewsection p {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-html body .reviewsection p span img {
-  max-width: 20px;
-}
-
-html body .reviewsection p span {
-  margin: 0 3px;
-  display: flex;
-}
-
-html body .reviewsection p span:first-child {
-  margin: 0 8px;
-}
-
-html body [class*="homepage-hero_mainSection"] .no-underline {
-  display: none;
-}
-
-html body .bm-item li a:before {
-  content: " ";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-html body form[class*="search-bar-form_root"] {
-  background-color: #fff;
-}
-
-html body .bm-item li span {
-  visibility: hidden;
-}
-
-html body .bmhidesection {
-  padding-top: 50px !important;
-  padding-bottom: 0px !important;
-}
-
-@media (max-width: 768px) {
-  html body .bm-item li {
-      flex: 1 1 calc(50% - 10px);
-  }
-
-  .bmhideservice {
-      display: none !important;
-  }
-
-  html body [class*="homepage-hero_overflowOnTallScreens"]>div {
-      padding: 0 10px;
-  }
-
-  html body .thumbtechservices {
-      padding-left: 16px;
-      padding-right: 16px;
-      margin-bottom: 20px;
-  }
-
-  html body .bmhidesection [class*="Type_title5"],
-  html body .bmheading {
-      font-size: 18px !important;
-      line-height: 24px !important;
-  }
-
-  html body .bm-item li p {
-      font-size: 14px;
-      line-height: 20px;
-  }
-
-  html body form[class*="search-bar-form_root"] {
-      display: inline !important;
-  }
-
-  [class*="homepage-hero_mobileSearchBar"] [class*=submit-button_submitButton] {
-      width: 100%;
-      margin-top: 15px;
-      border-radius: 5px;
-  }
-
-  [class*="search-bar-form_rootLarge"] [data-test="search-button"] {
-      height: 54px;
-      border-radius: 5px;
+@media screen and (max-width:768px) {
+  html body.seamwork-20 section.front-page--snippets {
       overflow: hidden;
-      /* text-align: center; */
   }
 
-  [class*="homepage-hero_mobileSearchBar"] form>div {
-      height: 54px;
-  }
-
-  [class*="search-bar-form_rootLarge"] [data-test="search-button"] span {
-      display: none !important;
-  }
-
-  html body .bmhidesection [class*="Type_title5"] span {
-      display: block;
-  }
-
-  html body .reviewsection p span {
-      display: block;
-  }
-
-  html body .reviewsection p {
-      display: block;
-  }
-
-  html body .reviewsection p span img {
-      max-width: 20px;
-      top: 4px;
-      position: relative;
-      left: -2px;
-  }
-
-  [class*="homepage-hero_mobileSearchBar"] {
+  html body.seamwork-20 .promo-banner h6 {
       display: none;
   }
 
-  [class*="dropdown-wrapper_root"] {
-      flex-direction: column;
-      border: none !important;
+  html body.seamwork-20 .promo-banner {
+      height: auto !important;
+      line-height: 0 !important;
+      padding: 6px 0;
   }
 
-  [class*="search-bar_zipCodeSection"] {
-      padding: 12px 0;
-      background-color: #fff;
-      flex: inherit !important;
-      margin-bottom: 10px;
-      border: 1px solid #E9ECED;
-      border-radius: 4px;
+  html body.seamwork-20 .promo-banner p {
+      font-size: 0;
   }
 
-  [class*="search-bar-form_rootLarge"] [data-test="search-button"] {
-      width: 100%;
-      border-radius: 4px !important;
+  html body.seamwork-20 .promo-banner p::after {
+      content: "Get 50% Off Seamwork Unlimited!";
+      color: #fff !important;
+      font-size: 17px;
+      line-height: 25.6px;
+      font-weight: 500;
+      letter-spacing: 1.28px;
   }
 
-  [class*="homepage-hero_mobileSearchBar"]+div {
-      display: block !important;
+  html body.seamwork-20 .page-container--content a.mobile-nav--icon {
+      margin-top: -5px;
   }
 
-  [class*=" homepage-hero_root"] [aria-label="Search on Thumbtack"] {
-      padding: 15px;
-      margin-bottom: 10px;
-      padding-left: 32px !important;
+  html body.seamwork-20 div.space.show-for-small-only {
+      height: auto;
   }
 
-  [class*="search-bar_zipCodeSection"]:after {
-      display: none;
-  }
-
-  [class*="dropdown-wrapper_root"]>div input {
-      border-radius: 4px !important;
-  }
-
-  .reviewsection.desktop {
-      display: none;
-  }
-
-  html body .reviewsection p {
-      font-size: 14px;
-      font-weight: 700;
-  }
-
-  .bmhidesection {
-      padding-top: 30px !important;
-      padding-bottom: 15px !important;
-  }
-
-  html body [class*="homepage-hero_overflowOnTallScreens"] {
-      padding-bottom: 10px;
-  }
-
-  [class*="dropdown-wrapper_root"]>div:first-child:before {
-      content: " ";
-      height: 15px;
-      width: 15px;
-      background-image: url(https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Icon2x.png);
-      position: absolute;
-      display: inline-block;
-      background-size: cover;
-      top: 18px;
-      left: 9px;
-  }
-
-  html body [class*="homepage-hero_heavy"] {
-      font-size: 31px !important;
-  }
-
-  html body .bmhidesection {
-      padding-top: 36px !important;
-      padding-bottom: 34px !important;
-  }
-
-  [class*=" homepage-hero_root"] [aria-label="Search on Thumbtack"] {
-      padding-left: 32px !important;
-  }
-
-  [class*="search-bar_variant"] {
-      margin-top: 0 !important;
-      height: 52px !important;
-      margin-bottom: 10px;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid #e9eced;
-  }
-
-  [class*="search-bar-form_root"] [class*="dropdown-wrapper_root"] {
-      border: none !important;
-  }
-
-  html body .bmhidesection [class*="Type_title5"]:before {
-      content: " ";
-      content: " ";
-      display: inline-block;
-      height: 12px;
-      width: 100%;
-      position: absolute;
-      background-color: #fff;
-      bottom: 4px;
-      left: 0;
-      right: 0;
+  html body.seamwork-20 header.primary>.row {
       display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  html body.seamwork-20 .cre_join-button .join-cta {
+      border-radius: 50px;
+      border: 1px solid #282829;
+      background: #A1523F;
+      display: flex;
+      width: 93px;
+      padding: 11px 20px;
       justify-content: center;
+      align-items: center;
+      color: #FFF;
+      text-align: center;
+      font-size: 13.6px;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.28px;
+      text-transform: uppercase;
   }
 
-  html body .bmhidesection [class*="Type_title5"] {
-      position: relative;
-  }
-}
-
-@media (min-width: 768px) {
-
-  [class*="dropdown-wrapper_root"]>div:first-child:before {
-      content: " ";
-      height: 18px;
-      width: 18px;
-      background-image: url(https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Icon2x.png);
-      position: absolute;
-      display: inline-block;
-      background-size: cover;
-      top: 18px;
-      left: 9px;
+  html body.seamwork-20 header.primary>.row>div:nth-child(3) {
+      order: -1;
   }
 
-  [class*=" homepage-hero_root"] [aria-label="Search on Thumbtack"] {
-      padding-left: 32px !important;
+  html body.seamwork-20 .page-container header.primary>.row>div:nth-child(2) {
+      width: auto;
   }
-}
 
-@media (min-width: 769px) {
-  .reviewsection.mobile {
-      display: none;
+  html body.seamwork-20 .page-container .page-container--content header.primary{
+      padding-top: 0;
+      height: 70px;
   }
-}
-
-[class*="zipCodeError"] {
-  text-align: center;
-}
-
-.wrapped-divs {
-  display: flex;
-  flex-direction: column;
-}
-
-.wrapped-divs>div:first-child {
-  order: 2;
-}
-
-html body [class*="homepage-hero_heavy"] span.highlight {
-  color: #3c9fda;
-}
-
-html body .bmhidesection {
-  background-color: #fff !important;
+  html body.seamwork-20{
+      padding-top: 60px;
+  }
 }
