@@ -1,76 +1,86 @@
-@media screen and (max-width:768px) {
-  html body.seamwork-20 section.front-page--snippets {
-      overflow: hidden;
-  }
+html body.genderGP-01 .module_box .module-content .module-heading {
+    color: #BF577C !important;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30.8px;
+    padding-bottom: 20px;
+}
 
-  html body.seamwork-20 .promo-banner h6 {
-      display: none;
-  }
+html body.genderGP-01 .module_box .module-content .module-test {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.8px;
+}
 
-  html body.seamwork-20 .promo-banner {
-      height: auto !important;
-      line-height: 0 !important;
-      padding: 6px 0;
-  }
+html body.genderGP-01 .module_box .module-bottom-list {
+    padding-left: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
 
-  html body.seamwork-20 .promo-banner p {
-      font-size: 0;
-  }
+html body.genderGP-01 .module-bottom_content {
+    padding-top: 40px;
+}
 
-  html body.seamwork-20 .promo-banner p::after {
-      content: "Get 50% Off Seamwork Unlimited!";
-      color: #fff !important;
-      font-size: 17px;
-      line-height: 25.6px;
-      font-weight: 500;
-      letter-spacing: 1.28px;
-  }
+html body.genderGP-01 .module-bottom_conten-heading {
+    color: #BF577C !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23.8px;
+}
 
-  html body.seamwork-20 .page-container--content a.mobile-nav--icon {
-      margin-top: -5px;
-  }
+html body.genderGP-01 .module_box .module-bottom-item {
+    list-style: none;
+    padding-bottom: 1em;
+}
 
-  html body.seamwork-20 div.space.show-for-small-only {
-      height: auto;
-  }
+html body.genderGP-01 .module_box .module-bottom-item .item-content {
+    list-style: none;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.8px;
+}
 
-  html body.seamwork-20 header.primary>.row {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-  }
+html body.genderGP-01 .module-bottom-list .module-bottom-item:last-child {
+    padding-bottom: 0 !important;
+}
 
-  html body.seamwork-20 .cre_join-button .join-cta {
-      border-radius: 50px;
-      border: 1px solid #282829;
-      background: #A1523F;
-      display: flex;
-      width: 93px;
-      padding: 11px 20px;
-      justify-content: center;
-      align-items: center;
-      color: #FFF;
-      text-align: center;
-      font-size: 13.6px;
-      font-weight: 700;
-      line-height: normal;
-      letter-spacing: 1.28px;
-      text-transform: uppercase;
-  }
+html body.genderGP-01 .module_box .module-bottom-item .item-content>span {
+    color: #BF577C !important;
+    font-weight: 700;
+}
 
-  html body.seamwork-20 header.primary>.row>div:nth-child(3) {
-      order: -1;
-  }
+html body.genderGP-01 .module_box .book-consultation {
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 23.8px;
+    font-weight: 700;
+    cursor: pointer;
+}
 
-  html body.seamwork-20 .page-container header.primary>.row>div:nth-child(2) {
-      width: auto;
-  }
+html body.genderGP-01 [class*="et_pb_section_0"].et_pb_with_background {
+    padding-top: 120px;
+}
 
-  html body.seamwork-20 .page-container .page-container--content header.primary{
-      padding-top: 0;
-      height: 70px;
-  }
-  html body.seamwork-20{
-      padding-top: 60px;
-  }
+html body.genderGP-01 #et-boc .et-l--body>.et_builder_inner_content>div:first-child .et_pb_fullwidth_post_content_0_tb_body .et_builder_inner_content>div:first-child .et_pb_row {
+    display: none
+}
+
+html body.genderGP-01 #c-about.et_pb_section_1 {
+    padding-top: 30px !important;
+}
+
+.module-bottom-list .module-bottom-item:nth-child(3) .item-content a {
+    text-decoration: underline !important;
+    font-size: 16px;
+    line-height: 23.8px;
+    font-weight: 700;
+    cursor: pointer;
+    color: black;
 }
