@@ -448,6 +448,19 @@ only screen and (max-device-width: 768px) {
 		line-height: 1.333;
 	}
 
+	html body .Bnnerimg+p {
+		font-size: 20px;
+	}
+
+	.Cre-banner h3 {
+		font-size: 20px;
+	}
+
+	html body .Cre-banner .Cre-ctabanner {
+		flex-direction: column;
+		gap: 15px;
+	}
+
 
 }
 
@@ -538,9 +551,9 @@ html body .youare60second .Cre-container ul li {
 
 .youare60second .Headingorsbu h2 {
 	color: #251c4d;
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 20px;
+	font-size: 48px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 .youare60second p {
@@ -550,9 +563,9 @@ html body .youare60second .Cre-container ul li {
 
 .youare60second h5 {
 	font-size: 36px;
-    color: rgba(51, 51, 51, 0.75);
-    line-height: 46px;
-    margin-bottom: 30px;
+	color: rgba(51, 51, 51, 0.75);
+	line-height: 46px;
+	margin-bottom: 30px;
 }
 
 .requestdemo {
@@ -1192,25 +1205,29 @@ html body .second-swiper-container-CRE-T30 {
 	}
 
 	html body .Cre-banner .Cre-ctabanner a {
-		padding: 10px 15px;
-		font-size: 14px;
+		padding: 18px 30px;
+		font-size: 20px;
 	}
 
 	html body .Cre-banner .Cre-bannerbottom .item {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		width: 100%;
 	}
 
 	html body .Cre-banner .Cre-bannerbottom .item h3 {
 		margin-bottom: 10px;
+		font-size: 22px;
+		line-height: 28px;
 	}
 
 	html body .Cretrustpilot h3 {
-		font-size: 22px;
+		font-size: 24px;
 	}
 
-	html body .Cretrustpilot h3 {
-		font-size: 22px;
+
+	.Headingorsbu h3 {
+		font-size: 20px;
+		margin-bottom: 20px;
 	}
 
 	html body .Cretrustpilot h3 br {
@@ -1219,10 +1236,29 @@ html body .second-swiper-container-CRE-T30 {
 
 	.product-section h3 {
 		font-size: 22px;
+		line-height: 32px;
 	}
 
 	.product-section p {
 		font-size: 16px;
+	}
+
+	.cre_try {
+		flex-direction: column;
+		gap: 18px !important;
+	}
+
+
+	.CREtryItFree {
+		padding: 18px 30px;
+		font-size: 20px;
+	}
+
+	.requestdemo{
+		padding: 14px 54px;
+	}
+	.Headingorsbu h3{
+		line-height: 23px;
 	}
 
 	.youare60second .Headingorsbu h2 {
@@ -1258,6 +1294,15 @@ html body .second-swiper-container-CRE-T30 {
 
 	.Headingorsbu h2 {
 		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	.Aboutproduct h3 {
+		font-size: 22px;
+	}
+
+	.Aboutproduct p {
+		font-size: 18px;
 	}
 
 	html body .billing-switch {
@@ -1294,17 +1339,19 @@ html body .second-swiper-container-CRE-T30 {
 
 	.Cre-container ul li {
 		margin-right: 20px;
-		/* Optional spacing between list items */
+		font-size: 18px;
 		width: auto;
 	}
 
 	.TabContent.right .Product-image {
 		order: 2;
 	}
-
-	.Monitoring .Headingorsbu h4 {
+	.GetAlerts p{
 		font-size: 18px;
-		line-height: 25px;
+	}
+	.Monitoring .Headingorsbu h4 {
+		font-size: 20px !important;
+		line-height: 25px !important;
 	}
 
 	.Monitoring .Headingorsbu h4 br,
@@ -1315,15 +1362,30 @@ html body .second-swiper-container-CRE-T30 {
 
 	html body .Integrations .Headingorsbu p,
 	html body .Diagnose__fix .Headingorsbu p {
+		font-size: 18px;line-height: 23px;
+	}
+
+	.Cre-banner h3 {
+		margin-bottom: 40px;
+	}
+
+
+	html body .Cre-banner .Cre-bannerbottom .item p {
+		max-width: 375px;
 		font-size: 18px;
 	}
 
+	.CREtryItFree{
+	padding: 18px 30px;
+	font-size: 20px;
+	}
 }
 
 .Monitoring .Headingorsbu h4 {
 	font-size: 32px;
 	line-height: 41px;
-	font-weight: 400;color: #333;
+	font-weight: 400;
+	color: #333;
 }
 
 /* get item style */
@@ -1464,6 +1526,6 @@ html body .youare60second .Cre-container ul li:before {
 	text-align: center;
 }
 
-.Diagnose__fix .Cre-container h2{
+.Diagnose__fix .Cre-container h2 {
 	margin-bottom: 20px;
 }

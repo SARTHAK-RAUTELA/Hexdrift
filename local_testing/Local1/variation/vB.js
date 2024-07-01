@@ -748,8 +748,8 @@ sending an alert.</p>
     <div class="Cre-container">
          <div class="Headingorsbu">
             <h2>Easy Diagnosis and Fix</h2>
-            <p>Instant alerts with easy-to-understand reports, and live <br>support to help
-            solve the issue if you need it</p>
+            <h3>Instant alerts with easy-to-understand reports, and live <br>support to help
+            solve the issue if you need it</h3>
         </div>
 
        <div class="TabContent left">
@@ -976,7 +976,7 @@ sending an alert.</p>
     <div class="Cre-container">
          <div class="Headingorsbu">
             <h2>Work with your team</h2>
-            <p>Alert the right people or teams for any specific issue</p>
+            <h3>Alert the right people or teams for any specific issue</h3>
         </div>
         <div class="TabContent right">
             <div class="product-section">
