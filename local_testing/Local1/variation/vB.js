@@ -270,7 +270,7 @@
 
         <div class="Cre-ctabanner">
             <a href="https://app.statuscake.com/Try/"> Try it FREE for 7 days  <br><span>No credit card needed</span></a>
-            <a href="https://www.statuscake.com/pricing/">See plans and pricing</a>
+            <a href="https://www.statuscake.com/pricing/">See Plans and Pricing</a>
         </div>
 
         <div class="Cre-bannerbottom">
@@ -296,7 +296,7 @@
 
 <div class="Cretrustpilot">
     <div class="Cre-container slide-Container-CRE-T30">
-        <h3>Trusted by over 120,000 customers, from small businesses to <br> enterprise, including </h3>
+        <h3>Trusted by over 120,000 customers, from small businesses to enterprise, including </h3>
         <div class="container-CRE-T30">
         <div class="swiper-container-CRE-T30">
         <div class="swiper-wrapper" id="swiper-wrapper">
@@ -511,7 +511,7 @@
             <h5>from the protection of the most powerful, accurate,<br> and best-value monitoring suite on the market</h5>
             <p>Ensure superior site performance with robust global monitoring, <br> real-time alerts and instant live support</p>
             <ul>
-                <li><b>Try it free for 14 days</b> - risk-free </li>  
+                <li><b>Try it free for 14 Days</b> - risk-free </li>  
                 <li><b> No credit card needed</b> - get started straight away </li>    
                 <li><b>Instant live support</b> - if you need any to help set you up</li>
             </ul>
@@ -640,7 +640,7 @@ customer satisfaction and loyalty.</p>
             <h5>from the protection of the most powerful, accurate,<br> and best-value monitoring suite on the market</h5>
             <p>Ensure superior site performance with robust global monitoring, <br> real-time alerts and instant live support</p>
             <ul>
-                <li><b>Try it free for 14 days</b> - risk-free. </li>  
+                <li><b>Try it free for 14 Days</b> - risk-free. </li>  
                 <li><b> No credit card needed</b> - get started straight away </li>    
                 <li><b>Instant live support</b> - if you need any to help set you up</li>
             </ul>
@@ -659,6 +659,7 @@ customer satisfaction and loyalty.</p>
     <div class="Cre-container">
          <div class="Headingorsbu">
             <h3>How it works</h3>
+            <h2>Uptime Monitoring</h2>
             <h4>Downtime happens. Are you confident your monitoring suite will <br> catch it
             every time, AND help get you back up and running faster?</h4>
         </div>
@@ -695,7 +696,7 @@ customer satisfaction and loyalty.</p>
             <h3>Constant check rates available</h3>
             <p>
             The fastest check rates in the industry - choose from
-Constant. 30-second or 60-second check rates</p>
+Constant, 30-second or 60-second check rates</p>
         </div>
         <div class="Product-image">
             <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007477/T30_img16.png">
@@ -728,7 +729,7 @@ sending an alert.</p>
             <h5>from the protection of the most powerful, accurate,<br> and best-value monitoring suite on the market</h5>
             <p>Ensure superior site performance with robust global monitoring, <br> real-time alerts and instant live support</p>
             <ul>
-                <li><b>Try it free for 14 days</b> - risk-free. </li>  
+                <li><b>Try it free for 14 Days</b> - risk-free. </li>  
                 <li><b> No credit card needed</b> - get started straight away </li>    
                 <li><b>Instant live support</b> - if you need any to help set you up</li>
             </ul>
@@ -746,7 +747,7 @@ sending an alert.</p>
    <div class="Diagnose__fix">
     <div class="Cre-container">
          <div class="Headingorsbu">
-            <h3>Easy Diagnosis and Fix</h3>
+            <h2>Easy Diagnosis and Fix</h2>
             <p>Instant alerts with easy-to-understand reports, and live <br>support to help
             solve the issue if you need it</p>
         </div>
@@ -787,7 +788,7 @@ sending an alert.</p>
             <h5>from the protection of the most powerful, accurate,<br> and best-value monitoring suite on the market</h5>
             <p>Ensure superior site performance with robust global monitoring, <br> real-time alerts and instant live support</p>
             <ul>
-                <li><b>Try it free for 14 days</b> - risk-free. </li>  
+                <li><b>Try it free for 14 Days</b> - risk-free. </li>  
                 <li><b> No credit card needed</b> - get started straight away </li>    
                 <li><b>Instant live support</b> - if you need any to help set you up</li>
             </ul>
@@ -936,7 +937,7 @@ sending an alert.</p>
             <h5>from the protection of the most powerful, accurate, <br> and best-value monitoring suite on the market</h5>
             <p>Ensure superior site performance with robust global monitoring, <br> real-time alerts and instant live support</p>
             <ul>
-                <li><b>Try it free for 14 days</b> - risk-free. </li>  
+                <li><b>Try it free for 14 Days</b> - risk-free. </li>  
                 <li><b> No credit card needed</b> - get started straight away </li>    
                 <li><b>Instant live support</b> - if you need any to help set you up</li>
             </ul>

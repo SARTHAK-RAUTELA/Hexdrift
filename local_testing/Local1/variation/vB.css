@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 #page {
-    display: none;
+	display: none;
 }
 
 /* .Cremain * {
@@ -9,284 +9,293 @@
 } */
 
 html body .Cre-banner h1 {
-    font-size: 48px;
+	font-size: 48px;
 }
 
 html body .Bnnerimg+p {
-    font-size: 24px;
-    font-weight: 300;
-    color: rgb(94, 94, 94);
-    margin-top: 10px;
-    line-height: 30px;
+	font-size: 24px;
+	font-weight: 300;
+	color: rgb(94, 94, 94);
+	margin-top: 10px;
+	line-height: 30px;
 }
 
 html body .Cre-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .Cre-banner h3 {
-    color: #75747C;
-    font-size: 20px;
-    font-weight: 500;
+	color: #75747C;
+	font-size: 22px;
+	font-weight: 500;
 }
 
 html body .Cre-banner {
-    background-color: #F8F8FD;
-    padding-top: 50px;
-    margin-top: 107px;
+	background-color: #F8F8FD;
+	padding-top: 50px;
+	margin-top: 107px;
 
 }
 
 html body .Cre-banner .Cre-bannerbottom .item p {
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba(51, 51, 51, 0.55);
-    max-width: 190px;
-    margin: 0 auto;
-    font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(51, 51, 51, 0.55);
+	max-width: 190px;
+	margin: 0 auto;
+	font-weight: 500;
 }
 
 html body .Bnnerimg img {
-    max-width: 700px;
-    width: 100%;
+	max-width: 700px;
+	width: 100%;
 }
 
 html body .Bnnerimg {
-    text-align: center;
-    margin-top: 40px;
+	text-align: center;
+	margin-top: 40px;
 }
 
 html body .Cre-banner>* {
-    text-align: center;
+	text-align: center;
 }
 
 html body .Cre-banner .topper {
-    color: #1077D1;
-    font-family: "Apercu-medium", sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: 500;
+	color: #1077D1;
+	font-family: "Apercu-medium", sans-serif;
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: 500;
 }
 
 html body .Cre-banner p b {
-    font-family: "Apercu-medium", sans-serif;
-    border-bottom: 1px solid #095699;
+	font-family: "Apercu-medium", sans-serif;
+	border-bottom: 1px solid #095699;
+	font-weight: 500;
 }
 
 html body .Cre-banner .Cre-bannerbottom {
-    display: flex;
-    padding: 25px 0;
-    flex-wrap: wrap;
+	display: flex;
+	padding: 25px 0;
+	flex-wrap: wrap;
 }
 
 html body .Cre-banner .Cre-bannerbottom .item {
-    width: 25%;
-    position: relative;
-    padding: 0 20px;
-    box-sizing: border-box;
+	width: 25%;
+	position: relative;
+	padding: 0 20px;
+	box-sizing: border-box;
 
 }
 
 html body .Cre-banner .Cre-bannerbottom .item:after {
-    content: " ";
-    display: inline-flex;
-    height: 80px;
-    width: 1px;
-    background-color: rgba(51, 51, 51, 0.26);
-    top: 10px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+	content: " ";
+	display: inline-flex;
+	height: 80px;
+	width: 1px;
+	background-color: rgba(51, 51, 51, 0.26);
+	top: 10px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 html body .Cre-banner .Cre-bannerbottom .item h3 {
-    color: #333333;
-    font-size: 16px;
-    padding: 0 38px;
-    line-height: 20px;
-    margin-bottom: 5px;
+	color: #333333;
+	font-size: 17px;
+	padding: 0 38px;
+	line-height: 20px;
+	margin-bottom: 5px;
 }
 
 html body .Cre-banner .Cre-ctabanner a:last-child {
-    background-color: transparent;
-    text-decoration: underline;
-    color: #095699 !important;
-    font-weight: 200 !important;
+	background-color: transparent;
+	text-decoration: underline;
+	color: #095699 !important;
+	font-weight: 200 !important;
 }
 
 html body .Cre-banner .Cre-bannerbottom .item:last-child:after {
-    display: none;
+	display: none;
 }
 
 
 html body .Cre-banner .Cre-ctabanner a {
-    text-align: center;
-    background-color: #724be7;
-    display: inline-block;
-    line-height: normal;
-    font-size: 18px;
-    padding: 10px 24px;
-    color: #fff !important;
-    font-family: "Apercu-medium", sans-serif;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: capitalize;
+	text-align: center;
+	background-color: #724be7;
+	display: inline-block;
+	line-height: normal;
+	font-size: 18px;
+	padding: 10px 24px;
+	color: #fff !important;
+	font-family: "Apercu-medium", sans-serif;
+	border-radius: 4px;
+	font-weight: 600;
+	letter-spacing: 0.6px;
 }
 
 .Cre-ctabanner a span {
-    font-family: "Apercu-light", sans-serif;
-    font-weight: 600;
-    text-transform: capitalize;
-    font-size: 12px;
+	font-family: "Apercu-light", sans-serif;
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 12px;
 }
 
 html body .Cre-banner .Cre-ctabanner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 35px 0;
-    gap: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 35px 0;
+	gap: 30px;
 }
 
 /* trustpoilot section */
 
 
 html body .Cretrustpilot ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
+	display: flex;
+	justify-content: center;
+	margin-top: 70px;
 }
 
 html body .Cretrustpilot ul li {
-    width: 15%;
-    align-items: center;
-    display: flex;
+	width: 15%;
+	align-items: center;
+	display: flex;
 }
 
 html body .Cretrustpilot ul li img {
-    width: 100%;
-    max-width: 75px;
+	width: 100%;
+	max-width: 75px;
 }
 
 html body .Cretrustpilot h3 {
-    text-align: center;
-    color: #333333;
-    font-size: 36px;
-    line-height: normal;
-    margin-bottom: 50px;
-    font-weight: 500;
+	text-align: center;
+	font-family: "Recoleta";
+	color: #251c4d;
+	font-size: 30px;
+	line-height: normal;
+	margin-bottom: 32px;
+	font-weight: 600;
 }
 
 html body .Cretrustpilot {
-    padding: 50px 0;
+	padding: 50px 0;
 }
 
 /* tab styling ***************************/
 .Cretab {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 0px 0;
-    background-color: rgba(248, 248, 253, 1);
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 0px 0;
+	background-color: rgba(248, 248, 253, 1);
 }
 
 .Cretab .Cre-container ul li.active {
 
-    color: #1077D1;
-    border-bottom: 1px solid #1077D1;
+	color: #1077D1;
+	border-bottom: 1px solid #1077D1;
 
 }
 
 .Cretab ul li {
-    list-style: none;
-    width: 20%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 17px;
-    color: #333333;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid transparent;
-    cursor: pointer;
+	list-style: none;
+	width: 20%;
+	text-align: center;
+	cursor: pointer;
+	font-size: 17px;
+	color: #333333;
+	font-weight: 500;
+	padding: 10px 0;
+	border-bottom: 1px solid transparent;
+	cursor: pointer;
 }
 
 .Cretab ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
+	display: flex;
+	padding: 0;
+	margin: 0;
 }
 
 /* Cretabrelatedconten  ************/
 .Cretabrelatedcontent>* {
-    text-align: center;
+	text-align: center;
 }
 
 .Cretabrelatedcontent {
-    margin-bottom: 50px;
-    background-color: rgba(72, 199, 164, 0.12);
+	margin-bottom: 50px;
+	background-color: rgba(72, 199, 164, 0.12);
 }
 
 .Headingorsbu h3 {
-    font-size: 30px;
-    line-height: normal;
-    font-weight: 400;
-    color: #333;
+	font-size: 32px;
+	line-height: normal;
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 30px;
 }
 
 .Headingorsbu h2 {
-    font-size: 40px;
-    font-weight: 600;
+	font-size: 48px;
+	font-weight: 600;
+	margin-bottom: 42px;
+	color: #251c4d;
 }
 
 .Aboutproduct h3 {
-    font-size: 22px;
-    color: #333333;
-    font-weight: 500;
-    margin: 30px 0 20px;
+	font-size: 25px;
+	color: #333333;
+	font-weight: 500;
+	margin: 30px 0 20px;
+}
+
+.Aboutproduct p {
+	font-size: 22px;
 }
 
 .TabContent {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    margin-top: 50px;
+	display: flex;
+	align-items: center;
+	gap: 100px;
+	margin-top: 50px;
 }
 
 .TabContent>div {
-    width: 50%;
+	width: 50%;
 }
 
 .product-section h3 {
-    font-size: 36px;
-    line-height: 48px;
-    color: #333333;
-    font-weight: 600;
-    font-family: "recoleta";
+	font-size: 36px;
+	line-height: 48px;
+	color: #333333;
+	font-weight: 600;
+	font-family: "recoleta";
 }
 
 .product-section p {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 .TabContent {
-    margin-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 .left .product-section {
-    text-align: left;
+	text-align: left;
 }
 
 .TabContent.right .Product-image {
-    text-align: left;
+	text-align: left;
 }
 
 .TabContent.right .product-section {
-    order: 2;
+	order: 2;
 }
 
 .TabContent.right .product-section {
-    text-align: left;
+	text-align: left;
 }
 
 
@@ -296,134 +305,131 @@ html body .Cretrustpilot {
 
 /* You're just 60 seconds away */
 .Cretable {
-    max-width: 1041px;
-    margin: 0 auto;
-    width: 100%;
-    margin-top: 50px;
+	max-width: 1041px;
+	margin: 0 auto;
+	width: 100%;
+	margin-top: 50px;
 }
 
 @-webkit-viewport {
-    width: extend-to-zoom 100%;
-    zoom: 1;
-    orientation: auto;
-    initial-scale: auto;
+	width: extend-to-zoom 100%;
+	zoom: 1;
+	orientation: auto;
+	initial-scale: auto;
 }
 
 @-moz-viewport {
-    width: extend-to-zoom 100%;
-    zoom: 1;
-    orientation: auto;
-    initial-scale: auto;
+	width: extend-to-zoom 100%;
+	zoom: 1;
+	orientation: auto;
+	initial-scale: auto;
 }
 
 @-ms-viewport {
-    width: extend-to-zoom 100%;
-    zoom: 1;
-    orientation: auto;
-    initial-scale: auto;
+	width: extend-to-zoom 100%;
+	zoom: 1;
+	orientation: auto;
+	initial-scale: auto;
 }
 
 @-o-viewport {
-    width: extend-to-zoom 100%;
-    zoom: 1;
-    orientation: auto;
-    initial-scale: auto;
+	width: extend-to-zoom 100%;
+	zoom: 1;
+	orientation: auto;
+	initial-scale: auto;
 }
 
 @viewport {
-    width: extend-to-zoom 100%;
-    zoom: 1;
-    orientation: auto;
-    initial-scale: auto;
+	width: extend-to-zoom 100%;
+	zoom: 1;
+	orientation: auto;
+	initial-scale: auto;
 }
 
 
 .Cretable .sr-only,
 .Cretable .uncheck span,
 .Cretable .dollars span:first-child {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .Cretable table {
-    cursor: default;
-    background-color: #fff;
-    border-collapse: collapse;
-    border-spacing: 0;
-    position: relative;
-    margin: 2rem auto 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+	cursor: default;
+	background-color: #fff;
+	border-collapse: collapse;
+	border-spacing: 0;
+	position: relative;
+	margin: 2rem auto 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 
 .Cretable thead {
-    background: #faf8fe;border-width: 1.5px 1.5px 0 1.5px;
-    border-style: solid;
-    border-color: #9EADBA;
+	border-width: 1.5px 1.5px 0 1.5px;
+	border-style: solid;
+	border-color: #9EADBA;
 }
 
 .Cretable thead th {
-    width: 13.75%;
-    font-weight: 700;border-width: 1.5px 1.5px 0 1.5px;
-    border-style: solid;
-    border-color: #9EADBA;
+	width: 13.75%;
+	font-weight: 700;
+	border-width: 1.5px 1.5px 0 1.5px;
+	border-style: solid;
+	border-color: #9EADBA;
 }
 
 .Cretable thead th:first-child {
-    text-align: left;
-    padding: 0 10px;
-    width: 46%;
+	text-align: left;
+	padding: 0 10px;
+	width: 46%;
 }
 
 .Cretable tbody {
-    line-height: 1.925;
-    text-align: center;
-    font-weight: 300;
+	line-height: 1.925;
+	text-align: center;
+	font-weight: 300;
 }
 
 .Cretable tbody th {
-    text-align: left;
-    font-weight: 300;
-    padding: 5px 10px;
+	text-align: left;
+	font-weight: 300;
+	padding: 5px 10px;
 }
 
 .Cretable tbody tr sup {
-    font-size: 10px;
-    line-height: 10px;
+	font-size: 10px;
+	line-height: 10px;
 }
 
 .Cretable tbody th,
 .Cretable tbody tr td {
-    border-width: 1.5px 1.5px 0 1.5px;
-    border-style: solid;
-    border-color: #9EADBA;
-    padding: 4px 10px;
+	border-width: 1.5px 1.5px 0 1.5px;
+	border-style: solid;
+	border-color: #9EADBA;
+	padding: 4px 10px;
 }
 
 .Cretable tbody tr:last-child {
-    border-bottom: 1.5px solid #9EADBA;
-}
-
-.Cretable .even,
-.Cretable tbody tr:nth-child(2n-1) {
-    background: #f9f8fd;
+	border-bottom: 1.5px solid #9EADBA;
+	background-color: #faf8fe;
 }
 
 .Cretable tbody tr {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
 }
 
 .Cretable .hide {
-    opacity: 0;
+	opacity: 0;
 }
 
 
@@ -432,15 +438,15 @@ html body .Cretrustpilot {
 
 @media only screen and (max-width: 768px),
 only screen and (max-device-width: 768px) {
-    .Cretable table {
-        font-size: 14px;
-    }
+	.Cretable table {
+		font-size: 14px;
+	}
 
-    .Cretable tbody th,
-    .Cretable tbody td {
-        padding: 10px;
-        line-height: 1.333;
-    }
+	.Cretable tbody th,
+	.Cretable tbody td {
+		padding: 10px;
+		line-height: 1.333;
+	}
 
 
 }
@@ -448,58 +454,58 @@ only screen and (max-device-width: 768px) {
 @media only screen and (max-width: 639px),
 only screen and (max-device-width: 639px) {
 
-    .Cretable tbody th,
-    .Cretable tbody td {
-        padding: 10px 5px;
-        line-height: 1.333;
-    }
+	.Cretable tbody th,
+	.Cretable tbody td {
+		padding: 10px 5px;
+		line-height: 1.333;
+	}
 
-    .Cretable tbody th[scope="row"] {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+	.Cretable tbody th[scope="row"] {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 @media only screen and (max-width: 479px),
 only screen and (max-device-width: 479px) {
-    .Cretable table {
-        margin: 0;
-        font-size: 11px;
-    }
+	.Cretable table {
+		margin: 0;
+		font-size: 11px;
+	}
 
-    .Cretabl table {
-        top: 3.5rem;
-        margin: 0 0 64px;
-    }
+	.Cretabl table {
+		top: 3.5rem;
+		margin: 0 0 64px;
+	}
 
-    .Cretabl thead {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1;
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-        border-bottom: 1px solid #666;
-    }
+	.Cretabl thead {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+		border-bottom: 1px solid #666;
+	}
 
-    .Cretabl th[scope="col"] {
-        width: 21%;
-    }
+	.Cretabl th[scope="col"] {
+		width: 21%;
+	}
 
-    .Cretabl th[scope="col"] {
-        padding: 5px;
-    }
+	.Cretabl th[scope="col"] {
+		padding: 5px;
+	}
 
-    .Cretabl th[scope="col"]:first-child {
-        padding: 5px 5px 5px 10px;
-    }
+	.Cretabl th[scope="col"]:first-child {
+		padding: 5px 5px 5px 10px;
+	}
 
-    .Cretabl tbody td {
-        width: 17%;
-    }
+	.Cretabl tbody td {
+		width: 17%;
+	}
 
-    .Cretabl tfoot p {
-        margin-top: 1rem;
-    }
+	.Cretabl tfoot p {
+		margin-top: 1rem;
+	}
 }
 
 
@@ -507,105 +513,105 @@ only screen and (max-device-width: 479px) {
 /* you are just 60 second away ********************/
 
 html body .youare60second .Cre-container ul {
-    max-width: 440px;
-    margin: 0 auto;
-    text-align: left;
-    width: 100%;
+	max-width: 440px;
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
 }
 
 .youare60second {
-    background-color: #fff;
-    padding-bottom: 30px;
+	background-color: #fff;
+	padding-bottom: 50px;
 }
 
 html body .youare60second .Cre-container ul li b {
-    font-family: "Apercu-medium", sans-serif;
+	font-family: "Apercu-medium", sans-serif;
 }
 
 html body .youare60second .Cre-container ul li {
-    list-style: none;
-    line-height: 29px;
-    padding-left: 16px;
-    position: relative;
-    padding-left: 30px;
+	list-style: none;
+	line-height: 34px;
+	padding-left: 16px;
+	position: relative;
+	padding-left: 30px;
 }
 
 .youare60second .Headingorsbu h2 {
-    color: #333;
-    font-size: 40px;
+	color: #251c4d;
+    font-size: 48px;
     font-weight: 600;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 }
 
 .youare60second p {
-    font-size: 20px;
-    color: rgba(51, 51, 51, 0.75);
+	font-size: 24px;
+	color: rgba(51, 51, 51, 0.75);
 }
 
 .youare60second h5 {
-    font-size: 26px;
+	font-size: 36px;
     color: rgba(51, 51, 51, 0.75);
-    line-height: 33px;
-    margin-bottom: 32px;
+    line-height: 46px;
+    margin-bottom: 30px;
 }
 
 .requestdemo {
-    background-color: #fff;
-    display: inline-block;
-    padding: 10px 33px;
-    color: #1AAE9F !important;
-    font-size: 18px;
-    line-height: 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    /* margin-top: 45px; */
-    border: 1.5px solid #6cf1c9;
+	background-color: #fff;
+	display: inline-block;
+	padding: 10px 33px;
+	color: #1AAE9F !important;
+	font-size: 18px;
+	line-height: 24px;
+	border-radius: 4px;
+	font-weight: 600;
+	/* margin-top: 45px; */
+	border: 1.5px solid #6cf1c9;
 }
 
-.requestdemo:hover{
-    background-color: #6cf1c9;
-    color: #fff !important;
-} 
+.requestdemo:hover {
+	background-color: #6cf1c9;
+	color: #fff !important;
+}
 
 
 
 
 /* GetAlerts ******************************/
 html body .GetAlerts .Cre-container ul li img {
-    max-width: 80px;
+	max-width: 80px;
 }
 
 .GetAlerts p {
-    font-size: 26px;
-    color: rgba(51, 51, 51, 0.75);
+	font-size: 26px;
+	color: rgba(51, 51, 51, 0.75);
 
 }
 
 .GetAlerts {
-    background-color: rgba(220, 219, 222, 0.25);
-    padding-bottom: 50px;
+	background-color: rgba(220, 219, 222, 0.25);
+	padding-bottom: 50px;
 }
 
 .Headingorsbu {
-    text-align: center;
-    padding-top: 50px;
+	text-align: center;
+	padding-top: 50px;
 }
 
 html body .GetAlerts .Cre-container ul li {
-    list-style: none;
-    width: 25%;
-    text-align: center;
-    margin-bottom: 17px;
+	list-style: none;
+	width: 25%;
+	text-align: center;
+	margin-bottom: 17px;
 }
 
 .GetAlerts ul {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	max-width: 600px;
+	margin: 0 auto;
+	width: 100%;
 }
 
 
@@ -613,292 +619,292 @@ html body .GetAlerts .Cre-container ul li {
 /* Pricing Table section---------------------- */
 /* Hero pricing table CSS  */
 html body .pricing_tiles {
-    padding-top: 50px;
-    padding-bottom: 0;
+	padding-top: 50px;
+	padding-bottom: 0;
 
 }
 
 html body .cre-popularTile>span {
-    font-size: 22px;
-    line-height: 110%;
-    font-family: "Apercu-medium", sans-serif;
-    font-weight: 400;
-    color: #000;
+	font-size: 22px;
+	line-height: 110%;
+	font-family: "Apercu-medium", sans-serif;
+	font-weight: 400;
+	color: #000;
 }
 
 html body .inner_container {
-    max-width: 1390px;
-    margin: auto;
-    width: 100%;
+	max-width: 1390px;
+	margin: auto;
+	width: 100%;
 
 }
 
 .cre-annualPlanActive .inner_container {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 html body .pricing_tiles h2 {
-    font-size: 40px;
-    line-height: 48px;
-    color: #251c4d;
-    font-weight: 700;
-    text-align: center;
+	font-size: 48px;
+	line-height: 48px;
+	color: #251c4d;
+	font-weight: 700;
+	text-align: center;
 }
 
 html body .pricing_tiles .pricing_cards {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    gap: 38px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+	/* display: flex; */
+	/* justify-content: space-between; */
+	gap: 38px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 html body .pricing_cards .yearly_bill.monthly {
-    color: #1CAE9F;
+	color: #1CAE9F;
 }
 
 html body .pricing_cards .yearly_bill.monthly .cre-highlightedText {
-    font-weight: 900;
+	font-weight: 900;
 }
 
 html body .pricing_tiles .card {
-    padding: 30px 15px;
-    max-width: 330px;
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid #C2D0D9;
-    background: #FFF;
-    box-sizing: border-box;
+	padding: 30px 15px;
+	max-width: 330px;
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	border: 1px solid #C2D0D9;
+	background: #FFF;
+	box-sizing: border-box;
 }
 
 html body .custom_card .annualPrice {
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: 500;
+	margin-top: 10px;
+	font-size: 30px;
+	font-weight: 500;
 }
 
 html body .free_card .annualWasPrice {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 html body .pricing_tiles .popular_card .card {
-    border: 1px solid #1CAE9F;
-    border-top: unset;
-    border-radius: 0px 0px 6px 6px;
-    background-color: #D1F0EC;
+	border: 1px solid #1CAE9F;
+	border-top: unset;
+	border-radius: 0px 0px 6px 6px;
+	background-color: #D1F0EC;
 }
 
 html body .pricing_tiles .card>h2 {
-    font-size: 30px;
-    line-height: 36px;
-    margin-bottom: 10px;
-    color: #000000;
+	font-size: 30px;
+	line-height: 36px;
+	margin-bottom: 10px;
+	color: #000000;
 }
 
 html body .pricing_tiles .card>h5 {
-    font-size: 17px;
-    line-height: 24px;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    min-height: 62px;
-    border-bottom: 1px solid #ddd;
+	font-size: 17px;
+	line-height: 24px;
+	text-align: center;
+	font-weight: 500;
+	color: #000000;
+	min-height: 62px;
+	border-bottom: 1px solid #ddd;
 }
 
 html body .pricing_tiles .card>p {
-    text-align: center;
-    margin-bottom: 15px;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 html body .pricing_cards .border-col {
-    min-height: 78px;
+	min-height: 78px;
 }
 
 html body .pricing_cards .ideal {
-    margin-bottom: 0;
-    font-size: 15px;
-    text-align: center;
+	margin-bottom: 0;
+	font-size: 15px;
+	text-align: center;
 
 }
 
 html body .pricing_cards .ideal+p {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 10px;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 10px;
 
 }
 
 html body .pricing_tiles .card>p.no_CC {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 12px;
-    font-size: 11px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 12px;
+	font-size: 11px;
 
 }
 
 html body .pricing_cards .ideal>strong {
-    display: block;
-    color: #000000;
-    font-size: 17px;
+	display: block;
+	color: #000000;
+	font-size: 17px;
 }
 
 html body .pricing_tiles .price {
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	border-top: 1px solid #ddd;
+	padding-top: 15px;
+	margin-top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 html body .pricing_tiles .business_card .price {
-    padding-top: 12px;
+	padding-top: 12px;
 
 }
 
 html body .pricing_tiles .price>p {
-    margin: 0;
+	margin: 0;
 }
 
 html body .pricing_tiles .price {
-    margin-bottom: 12px;
+	margin-bottom: 12px;
 }
 
 html body .card .card-cta {
-    background-color: #5af1c8;
-    padding: 10px 15px;
-    font-family: "Apercu-medium", sans-serif;
-    font-size: 17px;
-    line-height: 26px;
-    font-weight: 400;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    display: block;
-    text-align: center;
-    color: black;
+	background-color: #5af1c8;
+	padding: 10px 15px;
+	font-family: "Apercu-medium", sans-serif;
+	font-size: 17px;
+	line-height: 26px;
+	font-weight: 400;
+	border-radius: 4px;
+	margin-bottom: 8px;
+	display: block;
+	text-align: center;
+	color: black;
 
 
 }
 
 html body .free_card .card-cta {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    color: black;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	color: black;
 
 }
 
 html body .card_details>ul {
-    list-style: none;
-    margin: 0;
+	list-style: none;
+	margin: 0;
 
 }
 
 html body .card_details>ul>li {
-    font-size: 17px;
-    line-height: 26px;
-    color: #5e5e5e;
-    margin-bottom: 5px;
+	font-size: 17px;
+	line-height: 26px;
+	color: #5e5e5e;
+	margin-bottom: 5px;
 }
 
 html body .card_details>ul>li>i {
-    margin-right: 7px;
-    color: #1CAE9F;
+	margin-right: 7px;
+	color: #1CAE9F;
 }
 
 html body .card_details li.list_light {
-    color: #DCDBDE;
+	color: #DCDBDE;
 }
 
 html body .card_details li.list_light:before {
-    content: '';
-    background: #DCDBDE;
-    width: 12px;
-    height: 2.5px;
-    display: inline-block;
-    margin-bottom: 3px;
-    margin-right: 12px;
+	content: '';
+	background: #DCDBDE;
+	width: 12px;
+	height: 2.5px;
+	display: inline-block;
+	margin-bottom: 3px;
+	margin-right: 12px;
 }
 
 html body .pricing_tiles .view_fullPlan {
-    color: #1077D1;
-    text-decoration: underline;
-    text-align: center;
-    display: block;
-    margin-top: 20px;
+	color: #1077D1;
+	text-decoration: underline;
+	text-align: center;
+	display: block;
+	margin-top: 20px;
 }
 
 html body a.view_fullPlan .down-arrow {
-    display: none;
+	display: none;
 }
 
 html body.pricingPageTest41 a.view_fullPlan .down-arrow {
-    display: inline-block !important;
-    width: 10px;
-    height: 11px;
-    position: relative;
-    top: 8px;
-    left: 3px;
+	display: inline-block !important;
+	width: 10px;
+	height: 11px;
+	position: relative;
+	top: 8px;
+	left: 3px;
 }
 
 html body .yearly_bill.monthly {
-    text-align: center;
+	text-align: center;
 }
 
 html body .card_details>p {
-    color: #000000;
-    font-family: "Apercu-medium", sans-serif;
-    margin: 30px 0 12px 0;
-    text-align: center;
+	color: #000000;
+	font-family: "Apercu-medium", sans-serif;
+	margin: 30px 0 12px 0;
+	text-align: center;
 }
 
 html body .custom_card .price>strong {
 
-    font-size: 12px;
+	font-size: 12px;
 }
 
 html body .custom_card .price>p {
-    font-size: 25px;
-    font-weight: 700;
-    color: #000;
-    font-family: "Apercu-medium", sans-serif;
+	font-size: 25px;
+	font-weight: 700;
+	color: #000;
+	font-family: "Apercu-medium", sans-serif;
 }
 
 html body .free_card .ideal {
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 html body .bottom_statement {
-    text-align: center;
-    padding: 45px 30px;
-    margin-bottom: 0;
+	text-align: center;
+	padding: 45px 30px;
+	margin-bottom: 0;
 }
 
 html body .custom_card .card_details a {
-    text-decoration: underline;
+	text-decoration: underline;
 
 }
 
 
 html body .pricing_tiles.cre-annualPlanActive .yearly_bill.monthly,
 html body .pricing_tiles.cre-annualPlanActive .monthlyPlan {
-    display: none !important;
+	display: none !important;
 }
 
 html body .pricing_tiles .saving {
-    display: none;
-    color: #1CAE9F;
+	display: none;
+	color: #1CAE9F;
 }
 
 html body .pricing_tiles.cre-annualPlanActive .yearly_bill.annual,
 html body .pricing_tiles.cre-annualPlanActive .saving {
-    display: block !important;
+	display: block !important;
 }
 
 html body .pricing_tiles.cre-annualPlanActive .annualPlan {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* html body .pricing_tiles.cre-monthlyPlanActive .yearly_bill.annual,
@@ -908,502 +914,502 @@ html body .pricing_tiles.cre-monthlyPlanActive .annualPlan {
 
 html body .pricing_tiles.cre-monthlyPlanActive .annualPlan .annualPrice,
 html body .pricing_tiles.cre-monthlyPlanActive .yearly_bill.annual {
-    display: none !important;
+	display: none !important;
 }
 
 html body .pricing_tiles.cre-monthlyPlanActive .annualPlan .annualWasPrice {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 html body .pricing_tiles.cre-monthlyPlanActive .yearly_bill.monthly {
-    display: block !important;
+	display: block !important;
 }
 
 html body .pricing_tiles.cre-monthlyPlanActive .monthlyPlan {
-    display: flex !important;
+	display: flex !important;
 }
 
 html body .annualWasPrice strong {
-    text-decoration: line-through;
-    opacity: 0.6;
-    font-size: 18px;
+	text-decoration: line-through;
+	opacity: 0.6;
+	font-size: 18px;
 }
 
 html body .annualPrice strong,
 html body .monthlyPlan strong {
-    font-size: 30px;
-    color: #000;
+	font-size: 30px;
+	color: #000;
 }
 
 html body .price .annualPrice,
 html body .price .monthlyPlan {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
 html body .cre-annualPlanActive .cre-annualBilling-heading,
 html body .cre-monthlyPlanActive .cre-monthlyBilling-heading {
-    color: #1CAE9F;
+	color: #1CAE9F;
 }
 
 html body .card .view_fullPlan {
-    display: none;
+	display: none;
 }
 
 html body.pricingPageTest41 .card .view_fullPlan {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
 }
 
 html body .cre-popularTile {
-    visibility: hidden;
-    padding: 10px;
-    border: 1px solid #1CAE9F;
-    border-radius: 6px 6px 0 0;
+	visibility: hidden;
+	padding: 10px;
+	border: 1px solid #1CAE9F;
+	border-radius: 6px 6px 0 0;
 }
 
 html body .popular_card .cre-popularTile {
-    visibility: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d2e4e1;
+	visibility: visible;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #d2e4e1;
 }
 
 /* hero toggle button  */
 /* Rounded sliders */
 html body .billing-switch {
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-    width: 100%;
+	max-width: 400px;
+	margin: auto;
+	text-align: center;
+	width: 100%;
 }
 
 html body .billing-switch .display {
 
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	align-items: center;
+	margin-bottom: 50px;
 }
 
 html body .billing-switch>p {
-    position: relative;
-    left: 50%;
-    font-weight: 600;
+	position: relative;
+	left: 50%;
+	font-weight: 600;
 }
 
 html body .billing-switch>p:after {
-    content: '';
-    background-image: url(https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T41/1.png);
-    background-image: url(https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T41/1.png);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    left: 42%;
-    background-size: contain;
+	content: '';
+	background-image: url(https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T41/1.png);
+	background-image: url(https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T41/1.png);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	left: 42%;
+	background-size: contain;
 }
 
 html body .billing-switch>p>span {
-    display: block;
+	display: block;
 }
 
 html body .billing-switch .slider.round {
-    border-radius: 34px;
+	border-radius: 34px;
 }
 
 html body .billing-switch .slider.round:before {
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 html body .billing-switch .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
 }
 
 html body .billing-switch .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+	opacity: 0;
+	width: 0;
+	height: 0;
 }
 
 html body .billing-switch .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 html body .billing-switch .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 html body .billing-switch input:checked+.slider {
-    background-color: #1CAE9F;
+	background-color: #1CAE9F;
 }
 
 html body input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
 }
 
 @media(max-width:1024px) {
-    html body .pricing_tiles .pricing_cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	html body .pricing_tiles .pricing_cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-    html body .pricing_tiles .card {
-        max-width: 100%;
-    }
+	html body .pricing_tiles .card {
+		max-width: 100%;
+	}
 
-    html body .cre-price-table .plan .join {
-        padding: 10px 5px;
-    }
+	html body .cre-price-table .plan .join {
+		padding: 10px 5px;
+	}
 
-    html body .cre-price-table .plan .join {
-        font-size: 12px;
-    }
+	html body .cre-price-table .plan .join {
+		font-size: 12px;
+	}
 
-    html body .feature_table {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+	html body .feature_table {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 }
 
 /* first slider css */
 html body .slide-Container-CRE-T30 .swiper-container-CRE-T30,
 html body .second-swiper-container-CRE-T30 {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .container-CRE-T30 {
-    position: relative;
+	position: relative;
 }
 
 .container-CRE-T30 .swiper-button-next,
 .container-CRE-T30 .swiper-button-prev {
-    background-image: none !important;
+	background-image: none !important;
 }
 
 .container-CRE-T30 .swiper-slide img {
-    max-width: 133px;
-    width: 100%;
+	max-width: 133px;
+	width: 100%;
 }
 
 .container-CRE-T30 .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .container-CRE-T30 .swiper-slide img {
-    max-width: 100px;
+	max-width: 100px;
 }
 
 #swiper-wrapper {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .container-CRE-T30 .swiper-button-prev:after,
 .container-CRE-T30 .swiper-button-next:after {
-    color: rgba(51, 51, 51, 0.85);
-    font-size: 18px;
+	color: rgba(51, 51, 51, 0.85);
+	font-size: 18px;
 }
 
 @media screen and (max-width:767px) {
-    html body .pricing_tiles {
-        padding-top: 112px;
-    }
+	html body .pricing_tiles {
+		padding-top: 112px;
+	}
 
-    html body .pricing_tiles .inner_container>h2 {
-        font-size: 30px;
-        line-height: 36px;
-    }
+	html body .pricing_tiles .inner_container>h2 {
+		font-size: 30px;
+		line-height: 36px;
+	}
 
-    html body .billing-switch>p>span {
-        display: unset;
-    }
+	html body .billing-switch>p>span {
+		display: unset;
+	}
 
-    html body .pricing_tiles .pricing_cards {
-        grid-template-columns: repeat(1, 1fr);
-    }
+	html body .pricing_tiles .pricing_cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
 
-    html body .billing-switch>p {
-        left: 0;
-    }
+	html body .billing-switch>p {
+		left: 0;
+	}
 
-    /* banner style */
-    html body .Cre-container {
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
+	/* banner style */
+	html body .Cre-container {
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
 
-    .TabContent>div {
-        width: 100%;
-    }
+	.TabContent>div {
+		width: 100%;
+	}
 
-    .TabContent {
-        flex-direction: column;
-    }
+	.TabContent {
+		flex-direction: column;
+	}
 
-    .TabContent {
-        gap: 10px;
-    }
+	.TabContent {
+		gap: 10px;
+	}
 
-    .TabContent.left .Product-image {
-        order: 1;
-    }
+	.TabContent.left .Product-image {
+		order: 1;
+	}
 
-    html body .Cre-banner h1 {
-        font-size: 24px;
-    }
+	html body .Cre-banner h1 {
+		font-size: 24px;
+	}
 
-    html body .Cre-banner h1 br {
-        display: none;
-    }
+	html body .Cre-banner h1 br {
+		display: none;
+	}
 
-    html body .Cre-banner .Cre-ctabanner a {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
+	html body .Cre-banner .Cre-ctabanner a {
+		padding: 10px 15px;
+		font-size: 14px;
+	}
 
-    html body .Cre-banner .Cre-bannerbottom .item {
-        margin-bottom: 20px;
-        width: 100%;
-    }
+	html body .Cre-banner .Cre-bannerbottom .item {
+		margin-bottom: 20px;
+		width: 100%;
+	}
 
-    html body .Cre-banner .Cre-bannerbottom .item h3 {
-        margin-bottom: 10px;
-    }
+	html body .Cre-banner .Cre-bannerbottom .item h3 {
+		margin-bottom: 10px;
+	}
 
-    html body .Cretrustpilot h3 {
-        font-size: 22px;
-    }
+	html body .Cretrustpilot h3 {
+		font-size: 22px;
+	}
 
-    html body .Cretrustpilot h3 {
-        font-size: 22px;
-    }
+	html body .Cretrustpilot h3 {
+		font-size: 22px;
+	}
 
-    html body .Cretrustpilot h3 br {
-        display: none;
-    }
+	html body .Cretrustpilot h3 br {
+		display: none;
+	}
 
-    .product-section h3 {
-        font-size: 22px;
-    }
+	.product-section h3 {
+		font-size: 22px;
+	}
 
-    .product-section p {
-        font-size: 16px;
-    }
+	.product-section p {
+		font-size: 16px;
+	}
 
-    .youare60second .Headingorsbu h2 {
-        font-size: 24px;
-    }
+	.youare60second .Headingorsbu h2 {
+		font-size: 24px;
+	}
 
-    .youare60second h5 {
+	.youare60second h5 {
 
-        font-size: 18px;
-        line-height: 22px;
+		font-size: 18px;
+		line-height: 22px;
 
-    }
+	}
 
-    .youare60second p {
-        font-size: 16px;
-    }
+	.youare60second p {
+		font-size: 16px;
+	}
 
-    .youare60second p br {
-        display: none;
-    }
+	.youare60second p br {
+		display: none;
+	}
 
-    html body .youare60second .Cre-container ul li {
-        font-size: 14px;
-    }
+	html body .youare60second .Cre-container ul li {
+		font-size: 14px;
+	}
 
-    .Aboutproduct p br {
-        display: none;
-    }
+	.Aboutproduct p br {
+		display: none;
+	}
 
-    .Headingorsbu h2 br {
-        display: none;
-    }
+	.Headingorsbu h2 br {
+		display: none;
+	}
 
-    .Headingorsbu h2 {
-        font-size: 24px;
-    }
+	.Headingorsbu h2 {
+		font-size: 24px;
+	}
 
-    html body .billing-switch {
-        overflow: hidden;
-    }
+	html body .billing-switch {
+		overflow: hidden;
+	}
 
-    html body .Cre-banner .Cre-bannerbottom {
-        flex-direction: column;
-    }
+	html body .Cre-banner .Cre-bannerbottom {
+		flex-direction: column;
+	}
 
-    html body .Cre-banner .Cre-bannerbottom .item:after {
-        display: none;
-    }
+	html body .Cre-banner .Cre-bannerbottom .item:after {
+		display: none;
+	}
 
-    .Cretab {
-        width: 100%;
-        /* Assuming you want the entire width */
-        overflow-x: auto;
-        /* Add horizontal scroll if content overflows */
-    }
+	.Cretab {
+		width: 100%;
+		/* Assuming you want the entire width */
+		overflow-x: auto;
+		/* Add horizontal scroll if content overflows */
+	}
 
-    .Cretab .Cre-container {
-        white-space: nowrap;
-        /* Prevent line breaks */
-    }
+	.Cretab .Cre-container {
+		white-space: nowrap;
+		/* Prevent line breaks */
+	}
 
-    /* Optional: Add some padding or styling to improve appearance */
-    .Cre-container ul {
-        padding: 10px;
-        margin: 0;
-        list-style: none;
-        margin-left: 10px;
-    }
+	/* Optional: Add some padding or styling to improve appearance */
+	.Cre-container ul {
+		padding: 10px;
+		margin: 0;
+		list-style: none;
+		margin-left: 10px;
+	}
 
-    .Cre-container ul li {
-        margin-right: 20px;
-        /* Optional spacing between list items */
-        width: auto;
-    }
+	.Cre-container ul li {
+		margin-right: 20px;
+		/* Optional spacing between list items */
+		width: auto;
+	}
 
-    .TabContent.right .Product-image {
-        order: 2;
-    }
+	.TabContent.right .Product-image {
+		order: 2;
+	}
 
-    .Monitoring .Headingorsbu h4 {
-        font-size: 18px;
-        line-height: 25px;
-    }
+	.Monitoring .Headingorsbu h4 {
+		font-size: 18px;
+		line-height: 25px;
+	}
 
-    .Monitoring .Headingorsbu h4 br,
-    .Integrations .Headingorsbu p br,
-    .Diagnose__fix .Headingorsbu p br {
-        display: none;
-    }
+	.Monitoring .Headingorsbu h4 br,
+	.Integrations .Headingorsbu p br,
+	.Diagnose__fix .Headingorsbu p br {
+		display: none;
+	}
 
-    html body .Integrations .Headingorsbu p,
-    html body .Diagnose__fix .Headingorsbu p {
-        font-size: 18px;
-    }
+	html body .Integrations .Headingorsbu p,
+	html body .Diagnose__fix .Headingorsbu p {
+		font-size: 18px;
+	}
 
 }
 
 .Monitoring .Headingorsbu h4 {
-    font-size: 32px;
-    line-height: 41px;
-    font-weight: 400;
+	font-size: 32px;
+	line-height: 41px;
+	font-weight: 400;color: #333;
 }
 
 /* get item style */
 .googleimages ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
+	display: flex;
+	list-style: none;
+	justify-content: center;
 }
 
 .googleimages ul li {
-    margin: 0 15px;
+	margin: 0 15px;
 }
 
 .googleimages ul li img {
-    width: 100%;
+	width: 100%;
 }
 
 .Work_with .Headingorsbu p {
-    font-size: 26px;
-    color: rgba(51, 51, 51, 0.75);
+	font-size: 26px;
+	color: rgba(51, 51, 51, 0.75);
 }
 
 .Work_with .Headingorsbu h2 {
-    margin-bottom: 0;
+	margin-bottom: 20;
 }
 
 .Work_with {
-    background-color: #E5F3FF;
+	background-color: #E5F3FF;
 }
 
 .googleimages {
-    padding-bottom: 50px;
+	padding-bottom: 50px;
 }
 
 /*intorgation section  ***************************/
 .Integrations .product-section ul li {
-    text-align: left;
-    list-style: disc;
+	text-align: left;
+	list-style: disc;
 }
 
 .Integrations .Product-image img {
-    max-width: 360px;
+	max-width: 360px;
 }
 
 .Integrations .product-section ul li {
-    text-align: left;
-    font-size: 20px;
-    color: #333333;
-    line-height: 33px;
+	text-align: left;
+	font-size: 20px;
+	color: #333333;
+	line-height: 33px;
 }
 
 .Integrations .Headingorsbu p,
 .Diagnose__fix .Headingorsbu p {
-    font-size: 26px;
-    color: rgba(51, 51, 51, 0.75);
-    line-height: 33px;
+	font-size: 26px;
+	color: rgba(51, 51, 51, 0.75);
+	line-height: 33px;
 }
 
 .Integrations .product-section p {
-    text-align: left;
+	text-align: left;
 }
 
 .Integrations .product-section ul li::marker {
-    color: #48C7A4;
+	color: #48C7A4;
 }
 
 html body .youare60second .Cre-container ul li:before {
-    content: " ";
-    display: inline-block;
-    background-image: url(https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T+30/bullets.png);
-    height: 25px;
-    width: 25px;
-    background-size: cover;
-    position: absolute;
-    left: 0px;
-    top: 6px;
+	content: " ";
+	display: inline-block;
+	background-image: url(https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T+30/bullets.png);
+	height: 25px;
+	width: 25px;
+	background-size: cover;
+	position: absolute;
+	left: 0px;
+	top: 6px;
 }
 
 .Work_with .TabContent.right .Product-image {
-    text-align: right
+	text-align: right
 }
 
 
 .Cretable table tbody tr:nth-child(7) th,
 .Cretable table tbody tr:nth-child(7) td {
-    font-weight: 600;
+	font-weight: 600;
 
 }
 
@@ -1411,7 +1417,7 @@ html body .youare60second .Cre-container ul li:before {
 .Cretable table tr:nth-child(3)>td:nth-child(5),
 .Cretable table tr:nth-child(5)>td:nth-child(4),
 .Cretable table tr:nth-child(4)>td:nth-child(5) {
-    background-color: #F6DADE;
+	background-color: #F6DADE;
 }
 
 .Cretable table tr:nth-child(1) td,
@@ -1419,42 +1425,45 @@ html body .youare60second .Cre-container ul li:before {
 .Cretable table tr:nth-child(3) td,
 .Cretable table tr:nth-child(4) td,
 .Cretable table tr:nth-child(5) td {
-    background-color: #D1EFEC;
+	background-color: #D1EFEC;
 }
 
-.CREtryItFree{
-    text-align: center;
-    background-color: #724be7;
-    display: inline-block;
-    line-height: normal;
-    font-size: 18px;
-    padding: 10px 24px;
-    color: #fff !important;
-    font-family: "Apercu-medium", sans-serif;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: capitalize;
+.CREtryItFree {
+	text-align: center;
+	background-color: #724be7;
+	display: inline-block;
+	line-height: normal;
+	font-size: 18px;
+	padding: 10px 24px;
+	color: #fff !important;
+	font-family: "Apercu-medium", sans-serif;
+	border-radius: 4px;
+	font-weight: 600;
 
 }
 
 .CREtryItFree span {
-    font-family: "Apercu-light", sans-serif;
-    font-weight: 600;
-    text-transform: capitalize;
-    font-size: 12px;
+	font-family: "Apercu-light", sans-serif;
+	font-weight: 600;
+	text-transform: capitalize;
+	font-size: 12px;
 }
 
 .cre_try {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding-top: 50px;
 }
 
 .cre_try p {
-    font-size: 20px;
-    margin: 0;
-    line-height: 26px;
-    text-align: center;
+	font-size: 20px;
+	margin: 0;
+	line-height: 26px;
+	text-align: center;
+}
+
+.Diagnose__fix .Cre-container h2{
+	margin-bottom: 20px;
 }
