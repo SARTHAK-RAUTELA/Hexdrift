@@ -1207,6 +1207,72 @@
         function init() {
             _$('body').addClass(variation_name);
             _$('body').prepend(htmlTemplate);
+            if (!window.scrollfunction) {
+                window.scrollfunction = true;
+                setTimeout(function () {
+                    var sections = [
+                        document.querySelector('#section1'),
+                        document.querySelector('#section2'),
+                        document.querySelector('#section3'),
+                        document.querySelector('#section4'),
+                        document.querySelector('#section5')
+                    ];
+
+                    var navLi = document.querySelectorAll('.Cretab .Cre-container ul li'); // Assuming sections represent the corresponding content
+
+                    // Debounce function
+                    function debounce(func, wait, immediate) {
+                        var timeout;
+                        return function () {
+                            var context = this, args = arguments;
+                            var later = function () {
+                                timeout = null;
+                                if (!immediate) func.apply(context, args);
+                            };
+                            var callNow = immediate && !timeout;
+                            clearTimeout(timeout);
+                            timeout = setTimeout(later, wait);
+                            if (callNow) func.apply(context, args);
+                        };
+                    };
+
+                    // Scroll event handler with debounce
+                    var handleScroll = debounce(function () {
+                        var current = "";
+
+                        sections.forEach(function (section) {
+                            var sectionTop = section.offsetTop;
+                            var sectionHeight = section.clientHeight;
+                            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                                current = section.getAttribute("id");
+                            }
+                        });
+
+                        navLi.forEach(function (li) {
+                            li.classList.remove("activenav");
+                            if (li.querySelector('a').getAttribute("href") === `#${current}`) {
+                                li.classList.add("activenav");
+
+                                // Custom horizontal scroll to center the active nav item
+                                var container = document.querySelector('.Cretab .Cre-container');
+                                var containerWidth = container.offsetWidth;
+                                var itemOffsetLeft = li.offsetLeft;
+                                var itemWidth = li.offsetWidth;
+                                var targetScrollLeft = itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2);
+
+                                container.scrollTo({
+                                    left: targetScrollLeft,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        });
+                    }, 200);
+
+                    window.addEventListener("scroll", handleScroll);
+                }, 2000);
+            }
+
+
             //Home page--------------------------inserting Table section------------------
             if (window.location.pathname === "/") {
                 //Inserting the Billing Table on HomePage------------------------
@@ -1246,9 +1312,15 @@
                 waitForSwiper(initializeSwiper);
                 waitForSwiper(initializeSwiperTwo);
             }
-            document.querySelector('#top-nav [href="/why/"]').innerHTML = 'Home'
-            document.querySelector(' .mobile-only [href="/why/"]').innerHTML = 'Home'
-            document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
+            helper.waitForElement('#top-nav [href="/why/"]', function () {
+                document.querySelector('#top-nav [href="/why/"]').innerHTML = 'Home'
+            }, 50, 15000)
+            helper.waitForElement('.mobile-only [href="/why/"]', function () {
+                document.querySelector('.mobile-only [href="/why/"]').innerHTML = 'Home'
+            }, 50, 15000)
+            helper.waitForElement('#sign-up', function () {
+                document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
+            }, 50, 15000)
             _$('#top-nav [href="/pricing/"] ').insertAfter(`<a class="nav-link hide hide-mobile desktop-only" href="https://developers.statuscake.com/api/">
     API</a>`)
             document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
@@ -1258,13 +1330,14 @@
             _$('.mobile-only .overlay-content .inline-button:nth-child(2)').insertAfter('<a class="inline-button mobilecta" href="https://app.statuscake.com/Try/"> Try it FREE for 7 days  <br><span>No credit card needed</span></a>')
             _$('#features ').insertAfter(`<a href="/features/" class="nav-link--with-children hide hide-mobile cre_mobileonly">Features</a>
     `)
+
         }
         helper.live(".Cre-container li", "click", function () {
             // Remove the 'activenav' class from all li elements
             document.querySelectorAll('.Cre-container li').forEach(item => {
                 item.classList.remove('activenav');
             });
-           
+
         })
         //click on Toggle Price Button-------------------------
         helper.live(".billing-switch .toggle_btn", "click", function () {
@@ -1288,42 +1361,42 @@
 
         helper.live(".Cre-container li a", "click", function (e) {
             e.preventDefault(); // Use e.preventDefault() instead of event.preventDefault()
-        
+
             // Remove 'activenav' class from all li elements
             document.querySelectorAll('.Cre-container li').forEach(item => {
                 item.classList.remove('activenav');
             });
-        
+
             // Add 'activenav' class to the clicked li element
             this.parentElement.classList.add('activenav');
-        
+
             // Get the target section
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-        
+
             // Calculate offset to add margin from the top
             const offset = 140; // Adjust this value as needed
-        
+
             // Smooth scroll to the target section with margin
             window.scrollTo({
                 top: targetElement.offsetTop - offset,
                 behavior: 'smooth'
             });
         });
-        
+
         // Function to remove 'paddingtop' class from the body
         function removePaddingTop() {
             if (document.body.classList.contains('paddingtop')) {
                 document.body.classList.remove('paddingtop');
             }
         }
-        
+
         // Remove the 'paddingtop' class on scroll
         window.addEventListener('scroll', removePaddingTop);
-        
 
 
-        
+
+
         //click on Toggle Price Button-------------------------
         helper.waitForElement("body", init, 50, 25000);
     } catch (e) {

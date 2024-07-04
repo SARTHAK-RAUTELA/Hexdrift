@@ -1857,6 +1857,7 @@ ul.Cre_lastimag li img {
 }
 
 
+
 .Cre-container li.activenav a:hover {
     text-decoration: none;
 }
@@ -1875,4 +1876,23 @@ ul.Cre_lastimag li img {
 
 .Cretab ul li {
     position: relative;
+}
+
+
+@media screen and (max-width:768px) {
+
+    .Cretab .Cre-container {
+        display: flex;
+        overflow: scroll;
+    }
+
+    html body .billing-switch>p:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body.home .billing-switch>p>img {
+        right: 0px !important;
+    }
 }
