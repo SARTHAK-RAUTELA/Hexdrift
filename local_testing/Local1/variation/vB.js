@@ -1,271 +1,271 @@
 if (!window.statuscaketest30) {
-    window.statuscaketest30 = true;
-    (function () {
-        try {
-            /* main variables */
-            var debug = 1;
-            var variation_name = "CRE-T-30";
-            /* helper library */
-            var _$;
-            !(function (factory) {
-                _$ = factory();
-            })(function () {
-                var bm = function (s) {
-                    if (typeof s === "string") {
-                        this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-                    }
-                    if (typeof s === "object") {
-                        this.value = [s];
-                    }
-                };
-                bm.prototype = {
-                    eq: function (n) {
-                        this.value = [this.value[n]];
-                        return this;
-                    },
-                    each: function (fn) {
-                        [].forEach.call(this.value, fn);
-                        return this;
-                    },
-                    append: function (v) {
-                        return this.each(function (i) {
-                            i.insertAdjacentHTML('beforeEnd', v);
-                        });
-                    },
-                    prepend: function (v) {
-                        return this.each(function (i) {
-                            i.insertAdjacentHTML("afterBegin", v);
-                        });
-                    },
-                    insertAfter: function (v) {
-                        return this.each(function (i) {
-                            i.insertAdjacentHTML("afterEnd", v);
-                        });
-                    },
-                    log: function () {
-                        var items = [];
-                        for (let index = 0; index < arguments.length; index++) {
-                            items.push(arguments[index]);
-                        }
-                        console && console.log(variation_name, items);
-                    },
-                    addClass: function (v) {
-                        var a = v.split(" ");
-                        return this.each(function (i) {
-                            for (var x = 0; x < a.length; x++) {
-                                if (i.classList) {
-                                    i.classList.add(a[x]);
-                                } else {
-                                    i.className += " " + a[x];
-                                }
-                            }
-                        });
-                    },
-                    live: function (selector, event, callback, context) {
-                        /****Helper Functions****/
-                        // helper for enabling IE 8 event bindings
-                        function addEvent(el, type, handler) {
-                            if (el.attachEvent) el.attachEvent("on" + type, handler);
-                            else el.addEventListener(type, handler);
-                        }
-                        // matches polyfill
-                        this && this.Element &&
-                            (function (ElementPrototype) {
-                                ElementPrototype.matches =
-                                    ElementPrototype.matches ||
-                                    ElementPrototype.matchesSelector ||
-                                    ElementPrototype.webkitMatchesSelector ||
-                                    ElementPrototype.msMatchesSelector ||
-                                    function (selector) {
-                                        var node = this,
-                                            nodes = (
-                                                node.parentNode || node.document
-                                            ).querySelectorAll(selector),
-                                            i = -1;
-                                        while (nodes[++i] && nodes[i] != node);
-                                        return !!nodes[i];
-                                    };
-                            })(Element.prototype);
-                        // live binding helper using matchesSelector
-                        function live(selector, event, callback, context) {
-                            addEvent(context || document, event, function (e) {
-                                var found,
-                                    el = e.target || e.srcElement;
-                                while (
-                                    el &&
-                                    el.matches &&
-                                    el !== context &&
-                                    !(found = el.matches(selector))
-                                )
-                                    el = el.parentElement;
-                                if (found) callback.call(el, e);
-                            });
-                        }
-                        live(selector, event, callback, context);
-                    },
-                    waitForElement: function (
-                        selector,
-                        trigger,
-                        delayInterval,
-                        delayTimeout
-                    ) {
-                        var interval = setInterval(function () {
-                            if (_$(selector).value.length) {
-                                clearInterval(interval);
-                                trigger();
-                            }
-                        }, delayInterval);
-                        setTimeout(function () {
-                            clearInterval(interval);
-                        }, delayTimeout);
-                    },
-                };
-                return function (selector) {
-                    return new bm(selector);
-                };
-            });
-            function addScript(src, isCSS) {
-                const element = isCSS ? document.createElement('link') : document.createElement('script');
-                if (isCSS) {
-                    element.rel = 'stylesheet';
-                    element.type = 'text/css';
-                    element.href = src;
-                } else {
-                    element.type = 'text/javascript';
-                    element.src = src;
-                }
-                document.head.appendChild(element);
-            }
-            addScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js", false);
-            addScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css", true);
-            var FirstSliderImageUrls = [
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/accenture-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/Akamai_Technologies__Inc.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/asana-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/audi-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/betfair-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/delivery_hero-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/DOJ-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/elastic-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/GamCom-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/Group1.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/harvard_university-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/hp-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/ibm-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/jetbrains-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/lastminute-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/mastercard-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/medium-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Mercedes-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Monster-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Moodys-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Netflix-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Nikkei-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/RBS-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Roche-removebg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/invesco-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/lastminute-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/telefonica-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/ticketmaster-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/TomTom-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/universal_music-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/university_of_cambridge-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/Verizon-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/vw-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/zendesk-bg-preview.png",
-                "https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/zurich-bg-preview.png",
-            ];
-            var SecondSliderImageUrls =
-                [
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/DataDog.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/Discord.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/Mattermost.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/Microsoft_Teams.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/opengenie.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/PagerDuty.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/08/phone-call.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/PushBullet.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/Pushover.svg',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/Slack.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/Telegram.png',
-                    'https://www.statuscake.com/wp-content/uploads/2020/11/VictorOps.png'
-                ]
-            function waitForSwiper(trigger) {
-                var interval = setInterval(() => {
-                    if (typeof Swiper !== 'undefined') {
-                        clearInterval(interval);
-                        trigger();
-                    }
-                });
-                setTimeout(() => {
-                    clearInterval(interval);
-                }, 15e3);
-            }
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    var j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
-            }
-            var shuffledImageUrls = shuffleArray(FirstSliderImageUrls);
-            function extractAltTagFromUrl(url) {
-                var filename = url.substring(url.lastIndexOf('/') + 1);
-                var altTag = filename.substring(0, filename.lastIndexOf('.'));
-                return altTag;
-            }
-            function buildRandomizedSwiperSlides(imageArray) {
-                var html = "";
-                imageArray.forEach(function (link, i) {
-                    var altTag = extractAltTagFromUrl(link);
-                    html += `
+	window.statuscaketest30 = true;
+	(function () {
+		try {
+			/* main variables */
+			var debug = 1;
+			var variation_name = "CRE-T-30";
+			/* helper library */
+			var _$;
+			!(function (factory) {
+				_$ = factory();
+			})(function () {
+				var bm = function (s) {
+					if (typeof s === "string") {
+						this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+					}
+					if (typeof s === "object") {
+						this.value = [s];
+					}
+				};
+				bm.prototype = {
+					eq: function (n) {
+						this.value = [this.value[n]];
+						return this;
+					},
+					each: function (fn) {
+						[].forEach.call(this.value, fn);
+						return this;
+					},
+					append: function (v) {
+						return this.each(function (i) {
+							i.insertAdjacentHTML('beforeEnd', v);
+						});
+					},
+					prepend: function (v) {
+						return this.each(function (i) {
+							i.insertAdjacentHTML("afterBegin", v);
+						});
+					},
+					insertAfter: function (v) {
+						return this.each(function (i) {
+							i.insertAdjacentHTML("afterEnd", v);
+						});
+					},
+					log: function () {
+						var items = [];
+						for (let index = 0; index < arguments.length; index++) {
+							items.push(arguments[index]);
+						}
+						console && console.log(variation_name, items);
+					},
+					addClass: function (v) {
+						var a = v.split(" ");
+						return this.each(function (i) {
+							for (var x = 0; x < a.length; x++) {
+								if (i.classList) {
+									i.classList.add(a[x]);
+								} else {
+									i.className += " " + a[x];
+								}
+							}
+						});
+					},
+					live: function (selector, event, callback, context) {
+						/****Helper Functions****/
+						// helper for enabling IE 8 event bindings
+						function addEvent(el, type, handler) {
+							if (el.attachEvent) el.attachEvent("on" + type, handler);
+							else el.addEventListener(type, handler);
+						}
+						// matches polyfill
+						this && this.Element &&
+							(function (ElementPrototype) {
+								ElementPrototype.matches =
+									ElementPrototype.matches ||
+									ElementPrototype.matchesSelector ||
+									ElementPrototype.webkitMatchesSelector ||
+									ElementPrototype.msMatchesSelector ||
+									function (selector) {
+										var node = this,
+											nodes = (
+												node.parentNode || node.document
+											).querySelectorAll(selector),
+											i = -1;
+										while (nodes[++i] && nodes[i] != node);
+										return !!nodes[i];
+									};
+							})(Element.prototype);
+						// live binding helper using matchesSelector
+						function live(selector, event, callback, context) {
+							addEvent(context || document, event, function (e) {
+								var found,
+									el = e.target || e.srcElement;
+								while (
+									el &&
+									el.matches &&
+									el !== context &&
+									!(found = el.matches(selector))
+								)
+									el = el.parentElement;
+								if (found) callback.call(el, e);
+							});
+						}
+						live(selector, event, callback, context);
+					},
+					waitForElement: function (
+						selector,
+						trigger,
+						delayInterval,
+						delayTimeout
+					) {
+						var interval = setInterval(function () {
+							if (_$(selector).value.length) {
+								clearInterval(interval);
+								trigger();
+							}
+						}, delayInterval);
+						setTimeout(function () {
+							clearInterval(interval);
+						}, delayTimeout);
+					},
+				};
+				return function (selector) {
+					return new bm(selector);
+				};
+			});
+			function addScript(src, isCSS) {
+				const element = isCSS ? document.createElement('link') : document.createElement('script');
+				if (isCSS) {
+					element.rel = 'stylesheet';
+					element.type = 'text/css';
+					element.href = src;
+				} else {
+					element.type = 'text/javascript';
+					element.src = src;
+				}
+				document.head.appendChild(element);
+			}
+			addScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js", false);
+			addScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css", true);
+			var FirstSliderImageUrls = [
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/accenture-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/Akamai_Technologies__Inc.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/asana-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/audi-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/betfair-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/delivery_hero-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/DOJ-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/elastic-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/GamCom-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/Group1.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/harvard_university-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/hp-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/ibm-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/jetbrains-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/lastminute-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/mastercard-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/medium-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Mercedes-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Monster-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Moodys-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Netflix-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Nikkei-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/RBS-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscake/Roche-removebg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/invesco-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/lastminute-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/telefonica-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/ticketmaster-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/TomTom-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/universal_music-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/university_of_cambridge-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/Verizon-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/vw-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/zendesk-bg-preview.png",
+				"https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/StatusCake/T46/statuscakeT46/zurich-bg-preview.png",
+			];
+			var SecondSliderImageUrls =
+				[
+					'https://www.statuscake.com/wp-content/uploads/2020/11/DataDog.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/Discord.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/Mattermost.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/Microsoft_Teams.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/opengenie.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/PagerDuty.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/08/phone-call.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/PushBullet.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/Pushover.svg',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/Slack.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/Telegram.png',
+					'https://www.statuscake.com/wp-content/uploads/2020/11/VictorOps.png'
+				]
+			function waitForSwiper(trigger) {
+				var interval = setInterval(() => {
+					if (typeof Swiper !== 'undefined') {
+						clearInterval(interval);
+						trigger();
+					}
+				});
+				setTimeout(() => {
+					clearInterval(interval);
+				}, 15e3);
+			}
+			function shuffleArray(array) {
+				for (let i = array.length - 1; i > 0; i--) {
+					var j = Math.floor(Math.random() * (i + 1));
+					[array[i], array[j]] = [array[j], array[i]];
+				}
+				return array;
+			}
+			var shuffledImageUrls = shuffleArray(FirstSliderImageUrls);
+			function extractAltTagFromUrl(url) {
+				var filename = url.substring(url.lastIndexOf('/') + 1);
+				var altTag = filename.substring(0, filename.lastIndexOf('.'));
+				return altTag;
+			}
+			function buildRandomizedSwiperSlides(imageArray) {
+				var html = "";
+				imageArray.forEach(function (link, i) {
+					var altTag = extractAltTagFromUrl(link);
+					html += `
         <div class="swiper-slide">
         <img src="${link}" alt="${altTag}"/>
         </div>`;
-                });
-                return html;
-            }
-            function initializeSwiper() {
-                var swiper = new Swiper(".swiper-container-CRE-T30", {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    loop: true,
-                    autoplay: {
-                        delay: 2000,
-                    },
-                    breakpoints: {
-                        767: {
-                            slidesPerView: 8,
-                            spaceBetween: 30,
-                        },
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            }
-            function initializeSwiperTwo() {
-                var swiper = new Swiper(".second-swiper-container-CRE-T30", {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    loop: true,
-                    autoplay: {
-                        delay: 2000,
-                    },
-                    breakpoints: {
-                        767: {
-                            slidesPerView: 8,
-                            spaceBetween: 30,
-                        },
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            }
-            const htmlTemplate = `
+				});
+				return html;
+			}
+			function initializeSwiper() {
+				var swiper = new Swiper(".swiper-container-CRE-T30", {
+					slidesPerView: 3,
+					spaceBetween: 30,
+					loop: true,
+					autoplay: {
+						delay: 2000,
+					},
+					breakpoints: {
+						767: {
+							slidesPerView: 8,
+							spaceBetween: 30,
+						},
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+				});
+			}
+			function initializeSwiperTwo() {
+				var swiper = new Swiper(".second-swiper-container-CRE-T30", {
+					slidesPerView: 3,
+					spaceBetween: 30,
+					loop: true,
+					autoplay: {
+						delay: 2000,
+					},
+					breakpoints: {
+						767: {
+							slidesPerView: 8,
+							spaceBetween: 30,
+						},
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+				});
+			}
+			const htmlTemplate = `
         <div class="Cremain">
         <div class="Cre-banner">
         <div class="Cre-container">
@@ -951,9 +951,9 @@ if (!window.statuscaketest30) {
         </div>
         </div>
         </div>`;
-            //generating the Pricing table--------------------------------------------------------
-            function generateData(currentCurrency, SuperiorMonthlyPrice, SuperiorAnuallyPrice, SuperiorTotalSaving, SuperiorTotalPrice, BusinessMonthlyPrice, BusinessAnuallyPrice, BusinessTotalPrice, BusinessTotalSaving) {
-                var creBillingTable = `<section class="pricing_tiles test-30-price cre-annualPlanActive">
+			//generating the Pricing table--------------------------------------------------------
+			function generateData(currentCurrency, SuperiorMonthlyPrice, SuperiorAnuallyPrice, SuperiorTotalSaving, SuperiorTotalPrice, BusinessMonthlyPrice, BusinessAnuallyPrice, BusinessTotalPrice, BusinessTotalSaving) {
+				var creBillingTable = `<section class="pricing_tiles test-30-price cre-annualPlanActive">
         <div class="inner_container">
         <h2> Which StatusCake plan is right for me?</h2>
         <!-- TogglePlan section -->
@@ -1184,237 +1184,254 @@ if (!window.statuscaketest30) {
         </p>
         </div>
         </section>`;
-                return creBillingTable;
-            }
-            //Function for extracting the Price and Currency from Price String---------------------
-            function extractCurrencyAndPrice(inputString) {
-                // Define a regular expression pattern to match currency symbols and numeric values
-                const regex = /([^\d.,]+)([\d.,]+)/;
-                // Use the match method to find matches in the input string
-                const matches = inputString.match(regex);
-                // Check if there are matches
-                if (matches && matches.length === 3) {
-                    // Extract the currency and price from the matches
-                    const currency = matches[1].trim();
-                    const price = parseFloat(matches[2].replace(/,/g, '')); // Remove commas and convert to a floating-point number
-                    // Return an object with the extracted values
-                    return { currency, price };
-                } else {
-                    // Return null if no matches are found
-                    return null;
-                }
-            }
-            var helper = _$();
-            /* Variation Init */
-            function init() {
-                _$('body').addClass(variation_name);
-                _$('body').prepend(htmlTemplate);
-                if (!window.scrollfunction) {
-                    window.scrollfunction = true;
-                    setTimeout(function () {
-                        var sections = [
-                            document.querySelector('#section1'),
-                            document.querySelector('#section2'),
-                            document.querySelector('#section3'),
-                            document.querySelector('#section4'),
-                            document.querySelector('#section5')
-                        ];
+				return creBillingTable;
+			}
+			//Function for extracting the Price and Currency from Price String---------------------
+			function extractCurrencyAndPrice(inputString) {
+				// Define a regular expression pattern to match currency symbols and numeric values
+				const regex = /([^\d.,]+)([\d.,]+)/;
+				// Use the match method to find matches in the input string
+				const matches = inputString.match(regex);
+				// Check if there are matches
+				if (matches && matches.length === 3) {
+					// Extract the currency and price from the matches
+					const currency = matches[1].trim();
+					const price = parseFloat(matches[2].replace(/,/g, '')); // Remove commas and convert to a floating-point number
+					// Return an object with the extracted values
+					return { currency, price };
+				} else {
+					// Return null if no matches are found
+					return null;
+				}
+			}
+			var helper = _$();
+			/* Variation Init */
+			function init() {
+				_$('body').addClass(variation_name);
+				_$('body').prepend(htmlTemplate);
+				if (!window.scrollfunction) {
+					window.scrollfunction = true;
+					setTimeout(function () {
+						var sections = [
+							document.querySelector('#section1'),
+							document.querySelector('#section2'),
+							document.querySelector('#section3'),
+							document.querySelector('#section4'),
+							document.querySelector('#section5')
+						];
 
-                        var navLi = document.querySelectorAll('.Cretab .Cre-container ul li'); // Assuming sections represent the corresponding content
+						var navLi = document.querySelectorAll('.Cretab .Cre-container ul li'); // Assuming sections represent the corresponding content
 
-                        // Debounce function
-                        function debounce(func, wait, immediate) {
-                            var timeout;
-                            return function () {
-                                var context = this, args = arguments;
-                                var later = function () {
-                                    timeout = null;
-                                    if (!immediate) func.apply(context, args);
-                                };
-                                var callNow = immediate && !timeout;
-                                clearTimeout(timeout);
-                                timeout = setTimeout(later, wait);
-                                if (callNow) func.apply(context, args);
-                            };
-                        };
+						// Debounce function
+						function debounce(func, wait, immediate) {
+							var timeout;
+							return function () {
+								var context = this, args = arguments;
+								var later = function () {
+									timeout = null;
+									if (!immediate) func.apply(context, args);
+								};
+								var callNow = immediate && !timeout;
+								clearTimeout(timeout);
+								timeout = setTimeout(later, wait);
+								if (callNow) func.apply(context, args);
+							};
+						};
 
-                        // Scroll event handler with debounce
-                        var handleScroll = debounce(function () {
-                            var current = "";
+						// Scroll event handler with debounce
+						var handleScroll = debounce(function () {
+							var current = "";
 
-                            sections.forEach(function (section) {
-                                var sectionTop = section.offsetTop;
-                                var sectionHeight = section.clientHeight;
-                                if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                                    current = section.getAttribute("id");
-                                }
-                            });
+							sections.forEach(function (section) {
+								var sectionTop = section.offsetTop;
+								var sectionHeight = section.clientHeight;
+								if (pageYOffset >= sectionTop - sectionHeight / 3) {
+									current = section.getAttribute("id");
+								}
+							});
 
-                            navLi.forEach(function (li) {
-                                li.classList.remove("activenav");
-                                if (li.querySelector('a').getAttribute("href") === `#${current}`) {
-                                    li.classList.add("activenav");
+							navLi.forEach(function (li) {
+								li.classList.remove("activenav");
+								if (li.querySelector('a').getAttribute("href") === `#${current}`) {
+									li.classList.add("activenav");
 
-                                    // Custom horizontal scroll to center the active nav item
-                                    var container = document.querySelector('.Cretab .Cre-container');
-                                    var containerWidth = container.offsetWidth;
-                                    var itemOffsetLeft = li.offsetLeft;
-                                    var itemWidth = li.offsetWidth;
-                                    var targetScrollLeft = itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2);
+									// Custom horizontal scroll to center the active nav item
+									var container = document.querySelector('.Cretab .Cre-container');
+									var containerWidth = container.offsetWidth;
+									var itemOffsetLeft = li.offsetLeft;
+									var itemWidth = li.offsetWidth;
+									var targetScrollLeft = itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2);
 
-                                    container.scrollTo({
-                                        left: targetScrollLeft,
-                                        behavior: 'smooth'
-                                    });
-                                }
-                            });
-                        }, 200);
+									container.scrollTo({
+										left: targetScrollLeft,
+										behavior: 'smooth'
+									});
+								}
+							});
+						}, 200);
 
-                        window.addEventListener("scroll", handleScroll);
-                    }, 2000);
-                }
+						window.addEventListener("scroll", handleScroll);
+					}, 2000);
+				}
 
 
-                //Home page--------------------------inserting Table section------------------
-                if (window.location.pathname === "/") {
-                    //Inserting the Billing Table on HomePage------------------------
-                    helper.waitForElement('[data-id="68e5adfe"]', function () {
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function () {
-                            if (this.readyState == 4 && this.status == 200) {
-                                var parse = new DOMParser();
-                                var doc = parse.parseFromString(this.response, 'text/html');
-                                var SuperiorMonthlyPrice = doc.querySelector(".superior .monthly").innerHTML;
-                                var priceContainer = extractCurrencyAndPrice(SuperiorMonthlyPrice)
-                                //Price without string------------------
-                                SuperiorMonthlyPrice = priceContainer.price;
-                                //Current currency----------------------
-                                var currentCurrency = priceContainer.currency;
-                                var SuperiorAnuallyPrice = doc.querySelector(".superior .annually").innerHTML;
-                                SuperiorAnuallyPrice = extractCurrencyAndPrice(SuperiorAnuallyPrice);
-                                SuperiorAnuallyPrice = SuperiorAnuallyPrice.price;
-                                var BusinessMonthlyPrice = doc.querySelector(".business .monthly").innerHTML;
-                                BusinessMonthlyPrice = extractCurrencyAndPrice(BusinessMonthlyPrice);
-                                BusinessMonthlyPrice = BusinessMonthlyPrice.price;
-                                var BusinessAnuallyPrice = doc.querySelector(".business .annually").innerHTML;
-                                BusinessAnuallyPrice = extractCurrencyAndPrice(BusinessAnuallyPrice);
-                                BusinessAnuallyPrice = BusinessAnuallyPrice.price;
-                                var SuperiorTotalSaving = ((SuperiorMonthlyPrice * 12) - (SuperiorAnuallyPrice * 12)).toFixed(2);
-                                var SuperiorTotalPrice = (SuperiorAnuallyPrice * 12).toFixed(2);
-                                var BusinessTotalPrice = (BusinessAnuallyPrice * 12).toFixed(2);
-                                var BusinessTotalSaving = ((BusinessMonthlyPrice * 12) - (BusinessAnuallyPrice * 12)).toFixed(2);
-                                var html = generateData(currentCurrency, SuperiorMonthlyPrice, SuperiorAnuallyPrice, SuperiorTotalSaving, SuperiorTotalPrice, BusinessMonthlyPrice, BusinessAnuallyPrice, BusinessTotalPrice, BusinessTotalSaving);
-                                // document.querySelector('[data-id="68e5adfe"]').innerHTML = html;
-                                if (!document.querySelector(".test-30-price")) {
-                                    document.querySelector("#page").insertAdjacentHTML("afterend", html)
-                                }
-                            }
-                        };
-                        xhttp.open('GET', 'https://www.statuscake.com/pricing/', true);
-                        if (!window.gettingData) {
-                            xhttp.send();
-                            window.gettingData = true;
-                        }
+				//Home page--------------------------inserting Table section------------------
+				if (window.location.pathname === "/") {
+					//Inserting the Billing Table on HomePage------------------------
+					helper.waitForElement('[data-id="68e5adfe"]', function () {
+						var xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function () {
+							if (this.readyState == 4 && this.status == 200) {
+								var parse = new DOMParser();
+								var doc = parse.parseFromString(this.response, 'text/html');
+								var SuperiorMonthlyPrice = doc.querySelector(".superior .monthly").innerHTML;
+								var priceContainer = extractCurrencyAndPrice(SuperiorMonthlyPrice)
+								//Price without string------------------
+								SuperiorMonthlyPrice = priceContainer.price;
+								//Current currency----------------------
+								var currentCurrency = priceContainer.currency;
+								var SuperiorAnuallyPrice = doc.querySelector(".superior .annually").innerHTML;
+								SuperiorAnuallyPrice = extractCurrencyAndPrice(SuperiorAnuallyPrice);
+								SuperiorAnuallyPrice = SuperiorAnuallyPrice.price;
+								var BusinessMonthlyPrice = doc.querySelector(".business .monthly").innerHTML;
+								BusinessMonthlyPrice = extractCurrencyAndPrice(BusinessMonthlyPrice);
+								BusinessMonthlyPrice = BusinessMonthlyPrice.price;
+								var BusinessAnuallyPrice = doc.querySelector(".business .annually").innerHTML;
+								BusinessAnuallyPrice = extractCurrencyAndPrice(BusinessAnuallyPrice);
+								BusinessAnuallyPrice = BusinessAnuallyPrice.price;
+								var SuperiorTotalSaving = ((SuperiorMonthlyPrice * 12) - (SuperiorAnuallyPrice * 12)).toFixed(2);
+								var SuperiorTotalPrice = (SuperiorAnuallyPrice * 12).toFixed(2);
+								var BusinessTotalPrice = (BusinessAnuallyPrice * 12).toFixed(2);
+								var BusinessTotalSaving = ((BusinessMonthlyPrice * 12) - (BusinessAnuallyPrice * 12)).toFixed(2);
+								var html = generateData(currentCurrency, SuperiorMonthlyPrice, SuperiorAnuallyPrice, SuperiorTotalSaving, SuperiorTotalPrice, BusinessMonthlyPrice, BusinessAnuallyPrice, BusinessTotalPrice, BusinessTotalSaving);
+								// document.querySelector('[data-id="68e5adfe"]').innerHTML = html;
+								if (!document.querySelector(".test-30-price")) {
+									document.querySelector("#page").insertAdjacentHTML("afterend", html)
+								}
+							}
+						};
+						xhttp.open('GET', 'https://www.statuscake.com/pricing/', true);
+						if (!window.gettingData) {
+							xhttp.send();
+							window.gettingData = true;
+						}
 
-                    }, 50, 15000)
+					}, 50, 15000)
 
-                    waitForSwiper(initializeSwiper);
-                    waitForSwiper(initializeSwiperTwo);
-                    window.addEventListener("resize", function () {
-                        waitForSwiper(initializeSwiper);
-                        waitForSwiper(initializeSwiperTwo);
-                    })
-                }
-                helper.waitForElement('#top-nav [href="/why/"]', function () {
-                    document.querySelector('#top-nav [href="/why/"]').innerHTML = 'Home'
-                }, 50, 15000)
-                helper.waitForElement('.mobile-only [href="/why/"]', function () {
-                    document.querySelector('.mobile-only [href="/why/"]').innerHTML = 'Home'
-                }, 50, 15000)
-                helper.waitForElement('#sign-up', function () {
-                    document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
-                }, 50, 15000)
-                _$('#top-nav [href="/pricing/"] ').insertAfter(`<a class="nav-link hide hide-mobile desktop-only" href="https://developers.statuscake.com/api/">
+					waitForSwiper(initializeSwiper);
+					waitForSwiper(initializeSwiperTwo);
+				}
+				// helper.waitForElement('#top-nav [href="/why/"]', function () {
+				//     document.querySelector('#top-nav [href="/why/"]').innerHTML = 'Home'
+				// }, 50, 15000)
+				// helper.waitForElement('.mobile-only [href="/why/"]', function () {
+				//     document.querySelector('.mobile-only [href="/why/"]').innerHTML = 'Home'
+				// }, 50, 15000)
+
+
+				// Function to wait for element and then update innerHTML and href.......................................................
+				helper.waitForElement('#top-nav [href="/why/"]', function () {
+					var element = document.querySelector('#top-nav [href="/why/"]');
+					if (element) {
+						element.innerHTML = 'Home'; // Change the displayed name to "Home"
+						element.href = 'https://www.statuscake.com/'; // Change the link redirection
+					}
+				}, 50, 15000);
+
+				helper.waitForElement('.mobile-only [href="/why/"]', function () {
+					var element = document.querySelector('.mobile-only [href="/why/"]');
+					if (element) {
+						element.innerHTML = 'Home'; // Change the displayed name to "Home"
+						element.href = 'https://www.statuscake.com/'; // Change the link redirection
+					}
+				}, 50, 15000);
+
+
+
+				helper.waitForElement('#sign-up', function () {
+					document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
+				}, 50, 15000)
+				_$('#top-nav [href="/pricing/"] ').insertAfter(`<a class="nav-link hide hide-mobile desktop-only" href="https://developers.statuscake.com/api/">
         API</a>`)
 
-                document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
-                _$(' .mobile-only [href="/pricing/"] ').insertAfter(`<a class="nav-link hide hide-mobile desktop-only" href="https://developers.statuscake.com/api/">
+				document.querySelector('#sign-up').innerHTML = 'Try it FREE for 7 days'
+				_$(' .mobile-only [href="/pricing/"] ').insertAfter(`<a class="nav-link hide hide-mobile desktop-only" href="https://developers.statuscake.com/api/">
         API</a>`)
-                _$('#top-nav .nav-link.right > a:first-child').insertAfter('<a href="https://app.statuscake.com/Try/"> Try it FREE for 7 days  <br><span>No credit card needed</span></a>')
-                _$('.mobile-only .overlay-content .inline-button:nth-child(2)').insertAfter('<a class="inline-button mobilecta" href="https://app.statuscake.com/Try/"> Try it FREE for 7 days  <br><span>No credit card needed</span></a>')
-                _$('#features ').insertAfter(`<a href="/features/" class="nav-link--with-children hide hide-mobile cre_mobileonly">Features</a>
+				_$('#top-nav .nav-link.right > a:first-child').insertAfter('<a href="https://app.statuscake.com/Try/"> Try it FREE for 7 days  <br><span>No credit card needed</span></a>')
+				_$('.mobile-only .overlay-content .inline-button:nth-child(2)').insertAfter('<a class="inline-button mobilecta" href="https://app.statuscake.com/Try/"> Try it FREE for 7 days  <br><span>No credit card needed</span></a>')
+				_$('#features ').insertAfter(`<a href="/features/" class="nav-link--with-children hide hide-mobile cre_mobileonly">Features</a>
         `)
 
-            }
-            helper.live(".Cre-container li", "click", function () {
-                // Remove the 'activenav' class from all li elements
-                document.querySelectorAll('.Cre-container li').forEach(item => {
-                    item.classList.remove('activenav');
-                });
+			}
+			helper.live(".Cretab .Cre-container li", "click", function () {
+				// Remove the 'activenav' class from all li elements
+				document.querySelectorAll('.Cretab .Cre-container li').forEach(item => {
+					item.classList.remove('activenav');
+				});
 
-            })
-            //click on Toggle Price Button-------------------------
-            helper.live(".billing-switch .toggle_btn", "click", function () {
-                //If Toggle button is checked--------------------
-                if (this.querySelector('input[type="checkbox"]').checked) {
-                    //If monthly plan active first removing the monthly class and adding annual Price class----------
-                    if (document.querySelector(".cre-monthlyPlanActive")) {
-                        document.querySelector(".cre-monthlyPlanActive").classList.remove("cre-monthlyPlanActive");
-                    }
-                    document.querySelector(".pricing_tiles.test-30-price") && document.querySelector(".pricing_tiles.test-30-price").classList.add("cre-annualPlanActive");
-                }
-                //If Toggle button is Not-checked----------------
-                else {
-                    //If annual plan active first removing the Annual class and adding Monthly Price class----------
-                    if (document.querySelector(".cre-annualPlanActive")) {
-                        document.querySelector(".cre-annualPlanActive").classList.remove("cre-annualPlanActive");
-                    }
-                    document.querySelector(".pricing_tiles.test-30-price") && document.querySelector(".pricing_tiles.test-30-price").classList.add("cre-monthlyPlanActive");
-                }
-            })
+			})
+			//click on Toggle Price Button-------------------------
+			helper.live(".billing-switch .toggle_btn", "click", function () {
+				//If Toggle button is checked--------------------
+				if (this.querySelector('input[type="checkbox"]').checked) {
+					//If monthly plan active first removing the monthly class and adding annual Price class----------
+					if (document.querySelector(".cre-monthlyPlanActive")) {
+						document.querySelector(".cre-monthlyPlanActive").classList.remove("cre-monthlyPlanActive");
+					}
+					document.querySelector(".pricing_tiles.test-30-price") && document.querySelector(".pricing_tiles.test-30-price").classList.add("cre-annualPlanActive");
+				}
+				//If Toggle button is Not-checked----------------
+				else {
+					//If annual plan active first removing the Annual class and adding Monthly Price class----------
+					if (document.querySelector(".cre-annualPlanActive")) {
+						document.querySelector(".cre-annualPlanActive").classList.remove("cre-annualPlanActive");
+					}
+					document.querySelector(".pricing_tiles.test-30-price") && document.querySelector(".pricing_tiles.test-30-price").classList.add("cre-monthlyPlanActive");
+				}
+			})
 
-            helper.live(".Cre-container li a", "click", function (e) {
-                e.preventDefault(); // Use e.preventDefault() instead of event.preventDefault()
+			helper.live(".Cretab .Cre-container li a", "click", function (e) {
+				e.preventDefault(); // Use e.preventDefault() instead of event.preventDefault()
 
-                // Remove 'activenav' class from all li elements
-                document.querySelectorAll('.Cre-container li').forEach(item => {
-                    item.classList.remove('activenav');
-                });
+				// Remove 'activenav' class from all li elements
+				document.querySelectorAll('.Cretab .Cre-container li').forEach(item => {
+					item.classList.remove('activenav');
+				});
 
-                // Add 'activenav' class to the clicked li element
-                this.parentElement.classList.add('activenav');
+				// Add 'activenav' class to the clicked li element
+				this.parentElement.classList.add('activenav');
 
-                // Get the target section
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+				// Get the target section
+				const targetId = this.getAttribute('href').substring(1);
+				const targetElement = document.getElementById(targetId);
 
-                // Calculate offset to add margin from the top
-                const offset = 140; // Adjust this value as needed
+				// Calculate offset to add margin from the top
+				const offset = 140; // Adjust this value as needed
 
-                // Smooth scroll to the target section with margin
-                window.scrollTo({
-                    top: targetElement.offsetTop - offset,
-                    behavior: 'smooth'
-                });
-            });
+				// Smooth scroll to the target section with margin
+				window.scrollTo({
+					top: targetElement.offsetTop - offset,
+					behavior: 'smooth'
+				});
+			});
 
-            // Function to remove 'paddingtop' class from the body
-            function removePaddingTop() {
-                if (document.body.classList.contains('paddingtop')) {
-                    document.body.classList.remove('paddingtop');
-                }
-            }
+			// Function to remove 'paddingtop' class from the body
+			function removePaddingTop() {
+				if (document.body.classList.contains('paddingtop')) {
+					document.body.classList.remove('paddingtop');
+				}
+			}
 
-            // Remove the 'paddingtop' class on scroll
-            window.addEventListener('scroll', removePaddingTop);
-
-
+			// Remove the 'paddingtop' class on scroll
+			window.addEventListener('scroll', removePaddingTop);
 
 
-            //click on Toggle Price Button-------------------------
-            helper.waitForElement("body", init, 50, 25000);
-        } catch (e) {
-            if (debug) console.log(e, "error in Test" + variation_name);
-        }
-    })();
+
+
+			//click on Toggle Price Button-------------------------
+			helper.waitForElement("body", init, 50, 25000);
+		} catch (e) {
+			if (debug) console.log(e, "error in Test" + variation_name);
+		}
+	})();
 }

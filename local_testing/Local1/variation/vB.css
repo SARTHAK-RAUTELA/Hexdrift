@@ -1,43 +1,5 @@
-.box_item h2 {
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24.2px;
-    text-align: left;
-}
-
-.box_item h5 {
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 18.15px;
-    text-align: left;
-    margin-top: 24px;
-}
-
-.box_item p {
-    font-size: 15px;
-    line-height: 18.15px;
-    text-align: left;
-    margin-top: 12px;
-}
-.box_item span {
-    color: #00a1d0;
-    font-weight: 700;
-}
-.box_item h2 {
-    color: rgba(230, 149, 175, 1);
-}
-.Crelearcta{
-    color: #FFFFFF !important;
-    border-width: 1px !important;
-    border-color: #e695af;
-    font-size: 15px;
-    font-weight: 700 !important;
-    background-color: #e695af;
-    display: inline-block;
-    padding: 10px 32px;
-    margin-top: 40px;
-    border-radius: 4px;
-    margin-bottom: 40px;
+html body.cre-t-200 #product-catalog-container-.cre-t-200-card2,
+html body.cre-t-200 #product-catalog-container-.cre-t-200-card3,
+html body.cre-t-200 .page-banner.page-banner--image-only+.info-callout.site-container {
+    display: none !important;
 }
