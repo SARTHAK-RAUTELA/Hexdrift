@@ -160,8 +160,8 @@
                                                 </button>
 	`
 
-	var renewalButtonTwo = `<div class="cre-t-MAG28-RenewalBTNCreT50 accordion-item columns large-10 small-11" style="background: #c39d79; background: #c39d79">
-			<p class="mobileCenter" style="font-weight: 600; text-align: left; margin-bottom: 10px; margin-top: 10px; padding: 9px 0; color: white; border: 0px solid !important;text-transform: initial;">View renewal offers</p>
+	var renewalButtonTwo = `<div class="cre-t-MAG28-RenewalBTNCreT50 accordion-item columns large-10 small-11" >
+			<p class="mobileCenter">View renewal offers</p>
 		  </div>`
 
 	function init() {
@@ -175,6 +175,8 @@
 	  
 			helper.waitForElement('.cre-t-MAG28-RenewalBTN',function(){
 			  document.querySelector('.cre-t-MAG28-RenewalBTN').insertAdjacentHTML('afterend',renewalButtonTwo);
+			  document.querySelector('.cre-t-MAG28-RenewalBTNCreT50').setAttribute('style',document.querySelector('.cre-t-MAG28-RenewalBTN').getAttribute('style'));
+			  document.querySelector('.cre-t-MAG28-RenewalBTNCreT50 p').setAttribute('style',document.querySelector('.cre-t-MAG28-RenewalBTN p').getAttribute('style'));
 			},50,15000);
 	  
 	  
