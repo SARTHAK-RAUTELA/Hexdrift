@@ -26,7 +26,7 @@
 						 <p>Explore SFG20’s unique software for yourself with an expert-led demo.</p>
 						 <p><strong>What to expect from an SFG20 demo</strong></p>
 						 <ul>
-							 <li>To meet a friendly, salaried product expert</li>
+							 <li>To meet a friendly product expert</li>
 							 <li>A focused, tailored demonstration that highlights the functionality most beneficial to you</li>
 							 <li>Spend about 30 minutes with a team member to discover how SFG20 can address your specific challenges</li>
 							 <li>No hard sell, monologues or lengthy product demonstration</li>

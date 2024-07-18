@@ -1,0 +1,152 @@
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* html[lang="en"] body[data-path="/"] #main-body>div>div.fill-container,
+html[lang="en"] body[data-path="/"] #main-body>div>div.fill-container+.product-snippits,
+html[lang="en"] body[data-path="//"] #main-body>div>div.fill-container,
+html[lang="en"] body[data-path="//"] #main-body>div>div.fill-container+.product-snippits {
+	display: none;
+} */
+
+html[lang="en"] body[data-path="/"] .cre-t-18-cards-heading,
+html[lang="en"] body[data-path="//"] .cre-t-18-cards-heading {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 57px !important;
+    letter-spacing: 0em;
+    text-align: center;
+    max-width: 613px !important;
+    margin: 0 auto;
+    margin-bottom: 30px !important;
+}
+
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetionCards .card-container,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetionCards .card-container {
+    color: #fff;
+}
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+
+}
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards .card-container,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards .card-container {
+    max-width: 320px;
+}
+
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .card-wrapper .card-ImageContainer,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .card-wrapper .card-ImageContainer {
+    max-width: 325px;
+}
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .card-wrapper .card-ImageContainer img,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .card-wrapper .card-ImageContainer img {
+    width: 100%;
+}
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .card-wrapper,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .card-wrapper {
+    color: #fff;
+}
+
+html[lang="en"] body[data-path="/"] .cre-card-tagName,
+html[lang="en"] body[data-path="//"] .cre-card-tagName {
+    padding: 5px 15px;
+    margin-right: 5px;
+    border: 1px solid var(--el-color-white);
+    height: 2em;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-weight: 600;
+    font-family: Roboto, sans-serif;
+}
+
+html[lang="en"] body[data-path="/"] .card-container .card-wrapper .card-Imagebody,
+html[lang="en"] body[data-path="//"] .card-container .card-wrapper .card-Imagebody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+html[lang="en"] body[data-path="/"] .card-wrapper .cre-cardTitleContainer .cre-cardTitle,
+html[lang="en"] body[data-path="//"] .card-wrapper .cre-cardTitleContainer .cre-cardTitle {
+    line-height: 1.2em;
+    font-size: 1.2em;
+    height: 2.4em;
+    color: var(--el-color-white);
+}
+
+
+html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-heading,
+html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-heading {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 78px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+html[lang="en"] body[data-path="/"] .cre-SeeAllTutorials,
+html[lang="en"] body[data-path="//"] .cre-SeeAllTutorials {
+    width: 315px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width:1080px) {
+
+    html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards,
+    html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards,
+    html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards {
+        grid-template-columns: 1fr;
+        gap: 10px !important;
+    }
+
+    /* html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards .card-container{
+	max-width: 100% !important;
+} */
+
+    html[lang="en"] body[data-path="/"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards .card-container,
+    html[lang="en"] body[data-path="//"] .cre-TutorialsSetion-body .cre-TutorialsSetionCards .card-container {
+        margin-bottom: 35px;
+    }
+
+    html[lang="en"] body[data-path="/"] .cre-SeeAllTutorials,
+    html[lang="en"] body[data-path="//"] .cre-SeeAllTutorials {
+        margin-top: 6px !important;
+    }
+
+}
+
+html[lang="en"] body[data-path="/"] .card-container .card-link:hover .cre-cardTitle,
+html[lang="en"] body[data-path="//"] .card-container .card-link:hover .cre-cardTitle {
+    color: #88dbdf;
+}
