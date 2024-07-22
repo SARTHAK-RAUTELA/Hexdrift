@@ -1,12 +1,177 @@
-html body.Cre_Demo_Page_Content .row-number-1.dnd-section [data-hs-cos-type="module"] .two-col-content-form .inner.left  .tertiary_color , 
-html body.Cre_Demo_Page_Content .row-number-1.dnd-section form .hs_recaptcha.hs-recaptcha.field.hs-form-field{
-     display: none;
+html body .hide-login-page-form {
+    display: none !important;
+}
+html body .cre-t-04-full-width,
+html body .content-side.cre-t-04-full-width {
+    width: 100%;
+    max-width: unset;
 }
 
-html body.Cre_Demo_Page_Content .content-wrapper .inner.left .Crecontent .hs-video-widget {
-    margin-top: 20px;
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner > .h2 {
+    display: none;
+}
+html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner .info > p:not(.cre-t-04-img-parent) {
+    display: none;
+}
+html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+html body.cre-t-4-maintenance .left .content.cre-t-04-full-width {
+    width: 100%;
+}
+html body.cre-t-4-maintenance .left .cre-t-4-wrapper {
+    width: 57%;
+}
+html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner > .info {
+    width: 38%;
+    padding: 0;
+}
+html body.cre-t-4-maintenance .right.cre-t-4-form-parent .info p:not(.cre-t-04-img-parent1) {
+    display: none;
+}
+html body.cre-t-4-maintenance .right.cre-t-4-form-parent .info h5 {
+    display: none;
+}
+html body.cre-t-4-maintenance .right.cre-t-4-form-parent .content-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+html body.cre-t-4-maintenance .right.cre-t-4-form-parent .content.cre-t-04-full-width {
+    width: 100%;
+}
+html body.cre-t-4-maintenance .right.cre-t-4-form-parent .info {
+    width: 38%;
+    padding: 0;
+}
+html body.cre-t-4-maintenance .right .cre-t-4-wrapper {
+    width: 57%;
+}
+html body.cre-t-4-maintenance .cre-t-04-img-parent1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+@media screen and (max-width: 991px) {
+    html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner {
+        flex-direction: column-reverse;
+    }
+    html body.cre-t-4-maintenance .left .cre-t-4-wrapper {
+        width: 100%;
+        padding-top: 14px;
+    }
+    html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner > .info {
+        max-width: 660px;
+        width: 100%;
+        margin-bottom: 17px;
+    }
+    html body.cre-t-4-maintenance #main-content .cre-t-4-form-grand-parent .two-col-content-form {
+        padding: 0;
+    }
+    html body.cre-t-4-maintenance .right.cre-t-4-form-parent .content-inner {
+        flex-direction: column-reverse;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    html body.cre-t-4-maintenance .right .cre-t-4-wrapper {
+        width: 100%;
+        padding-top: 17px;
+    }
+    html body.cre-t-4-maintenance .right.cre-t-4-form-parent .info {
+        width: 100%;
+    }
 }
 
-html body.Cre_Demo_Page_Content .row-number-1.dnd-section form .legal-consent-container{
+/* --------------------------------------------- */
+/* ----------------Home Page-------------------- */
+/* --------------------------------------------- */
+html body.cre-t-4-home-page .sfg20-software-section .content-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+html body.cre-t-4-home-page .sfg20-software-section .content-box .card-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    align-self: flex-start;
+}
+html body.cre-t-4-home-page .sfg20-software-section ul.popular-features {
+    width: 100%;
+}
+
+/* --------------------------------------------- */
+/* -------------Industries Page----------------- */
+/* --------------------------------------------- */
+html body.cre-t-4-industries-page .row-fluid.cre-t-4-form-parent {
+    max-width: 1264px !important;
+}
+html body.cre-t-4-industries-page .cre-t-4-img-parent3 {
+    display: none;
+}
+html body.cre-t-4-industries-page #main-content .hs_cos_wrapper.cre-t-4-img-parent1 {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+html body.cre-t-4-industries-page .span6.cre-t-04-full-width {
+    width: 100%;
+}
+html body.cre-t-4-industries-page .cre-t-4-wrapper.cre-t-4-wrapper-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48.612%;
+}
+html body.cre-t-4-industries-page p.cre-t-4-img-parent3 + p {
+    display: none;
+}
+html body.cre-t-4-industries-page .hs_cos_wrapper.cre-t-4-img-parent2 > div + p + p + p {
+    display: none;
+}
+html body.cre-t-4-industries-page .row-depth-1.row-number-1.cre-t-4-form-grand-parent {
+    padding-bottom: 50px !important;
+}
+html body.cre-t-4-industries-page .hs_cos_wrapper.cre-t-4-img-parent2 {
+    width: 47%;
+}
+@media screen and (max-width: 991px) {
+    html body.cre-t-4-industries-page #main-content .hs_cos_wrapper.cre-t-4-img-parent1 {
+        flex-direction: column-reverse;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+    html body.cre-t-4-industries-page .hs_cos_wrapper.cre-t-4-img-parent2 {
+        width: 100%;
+    }
+    html body.cre-t-4-industries-page .cre-t-4-wrapper.cre-t-4-wrapper-img {
+        width: 100%;
+        margin-bottom: 17px;
+        padding-bottom: 12px;
+    }
+}
+
+/* --------------------------------------------- */
+/* -------------HVAC Page----------------------- */
+/* --------------------------------------------- */
+html body.cre-t-4-hvac-page .content.cre-t-04-full-width {
+    width: 100%;
+}
+
+/* --------------------------------------------- */
+/* ------Preventative Software Page------------- */
+/* --------------------------------------------- */
+html body.cre-t-4-preventative-software-page .row-fluid-wrapper.row-depth-1.row-number-9 {
+    display: none;
+}
+html body.cre-t-4-preventative-software-page #main-content .row-depth-1.row-number-10 .logo-gallery {
     padding-top: 0;
 }
