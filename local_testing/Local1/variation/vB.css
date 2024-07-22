@@ -61,7 +61,8 @@ html body.cre-t-4-maintenance .cre-t-04-img-parent1 {
 }
 @media screen and (max-width: 991px) {
     html body.cre-t-4-maintenance .left .content.cre-t-04-full-width .content-inner {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        gap: 24px;
     }
     html body.cre-t-4-maintenance .left .cre-t-4-wrapper {
         width: 100%;
@@ -76,7 +77,7 @@ html body.cre-t-4-maintenance .cre-t-04-img-parent1 {
         padding: 0;
     }
     html body.cre-t-4-maintenance .right.cre-t-4-form-parent .content-inner {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -145,9 +146,10 @@ html body.cre-t-4-industries-page .hs_cos_wrapper.cre-t-4-img-parent2 {
 }
 @media screen and (max-width: 991px) {
     html body.cre-t-4-industries-page #main-content .hs_cos_wrapper.cre-t-4-img-parent1 {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-left: 35px !important;
         padding-right: 35px !important;
+        gap: 30px;
     }
     html body.cre-t-4-industries-page .hs_cos_wrapper.cre-t-4-img-parent2 {
         width: 100%;

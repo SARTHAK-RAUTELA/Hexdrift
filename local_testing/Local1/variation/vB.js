@@ -314,7 +314,7 @@
         }
 
         function pageDetectionWithConsole() {
-            console.log("Test 4 Activated");
+            // console.log("Test 4 Activated");
             if (window.location.pathname === "/building-maintenance-planning-solution") {
                 _$("body").addClass("cre-t-4-building-page");
                 helper.waitForElement(".hs-form.stacked.hs-custom-form", buildingPage, 50, 15000);
@@ -370,7 +370,6 @@
 
         /* Variation Init */
         function init() {
-            helper.log("Log inside from init");
             _$("body").addClass(variation_name);
 
             // pageDetection();
