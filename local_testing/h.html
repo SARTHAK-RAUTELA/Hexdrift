@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS3 Image</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #f0f0f0;
         }
-        .image-container {
-            width: 200px;
-            height: 250px;
-            background: white;
-            border: 1px solid #ccc;
-            position: relative;
-            font-family: Arial, sans-serif;
+
+        nav li {
+            margin: 0 1rem;
         }
-        .image-container::before,
-        .image-container::after {
-            content: '';
-            position: absolute;
+
+        nav a {
+            color: white;
+            text-decoration: none;
         }
-        /* Sky background */
-        .image-container::before {
-            width: 100%;
-            height: 60%;
-            background: #00BCD4;
-            top: 0;
-            left: 0;
-        }
-        /* Mountain 1 */
-        .image-container::after {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 100px solid #009688;
-            bottom: 70px;
-            left: 25px;
-        }
-        /* Mountain 2 */
-        .image-container::before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 70px solid transparent;
-            border-right: 70px solid transparent;
-            border-bottom: 140px solid #4CAF50;
-            bottom: 40px;
-            left: 60px;
-        }
-        /* Cloud */
-        .image-container .cloud {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: white;
-            border-radius: 50%;
-            top: 20px;
-            right: 20px;
-            box-shadow:
-                10px 0 0 0 white,
-                20px 0 0 0 white,
-                5px -10px 0 0 white,
-                15px -10px 0 0 white;
-        }
-        /* Text */
-        .image-container .text {
-            position: absolute;
-            width: 100%;
-            bottom: 10px;
-            left: 0;
+
+        section {
+            padding: 2rem;
             text-align: center;
-            font-size: 20px;
-            color: #E0E0E0;
+        }
+
+        #home {
+            background: url('images/home-bg.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        #projects .project {
+            display: inline-block;
+            margin: 1rem;
+            width: 300px;
+        }
+
+        #projects img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            #projects .project {
+                width: 100%;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="image-container">
-        <div class="cloud"></div>
-        <div class="text">ALL CSS3</div>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my skills, projects, and achievements.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="images/project1.jpg" alt="Project 1">
+            <p>Project 1 description</p>
+        </div>
+        <div class="project">
+            <img src="images/project2.jpg" alt="Project 2">
+            <p>Project 2 description</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
