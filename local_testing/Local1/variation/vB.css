@@ -1,154 +1,261 @@
-html body .new-homepage-banner-v2>div:first-child {
-	display: none;
+html[lang="en"] body .guarantee_section {
+	display: block !important;
 }
 
-html body .Cre_Mainbanner>div>div {
-	width: 50%;
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_top-heading span {
+	background-color: rgb(204, 255, 237);
+	display: inline;
+	margin-left: 5px;
+	padding: 0 10px;
 }
 
-html body .Cre_Mainbanner {
-
-	background-color: #005C71;
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_top-heading {
+	font-size: 46px;
+	line-height: 51px;
+	color: rgb(19, 22, 21);
+	letter-spacing: -2px;
+	font-weight: 700;
+	text-align: center;
+	font-family: "Public Sans";
+	margin-bottom: 20px;
 }
 
-html body .Cre_Mainbanner>div {
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_money svg {
+	max-width: 20px;
+	color: #BDBDBD;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_money {
 	display: flex;
+	justify-content: center;
+	gap: 10px;
 	align-items: center;
 }
 
-
-html body .Cre_bannerleftsection ul {
-	display: flex;
-	padding: 0;
-	gap: 20px;
-	align-items: center;
-}
-
-html body .Cre_bannerleftsection ul li {
-	list-style: none;
-}
-
-html body .Cre_Mainbanner .hs-video-widget {
-	padding: 100px 30px;
-}
-
-html body .Cre_paragraph {
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_money span {
+	font-family: "Public Sans";
 	font-size: 18px;
 	line-height: 24px;
-	margin: 25px 0;
-	color: #D9D9D9 !important;
-}
-
-html body .Cre_bannerleftsection h2 {
-	font-size: 46px;
-	line-height: 50px;
-	font-weight: 500;
-}
-
-html body .Cre_bannerleftsection h2 span {
-	color: #FF7F00;
-}
-
-html body .logoheading {
-	font-size: 18px;
-	color: #D9D9D9 !important;
-}
-
-html body .Crevideocontent {
-	font-size: 14px;
-	color: #D9D9D9;
+	font-weight: 600;
+	color: #BDBDBD;
 	text-align: center;
-	margin-top: 12px;
+	cursor: pointer;
 }
 
-html body .Cre_bottomimg {
-	margin-top: -49px;
+html[lang="en"] body #pricing_banner {
+	row-gap: 20px;
 }
 
 
-
-html body .Cre_bannerleftsection h2 span {
-	font-weight: 700;
+html[lang="en"] body #pricing_banner+h2+div button+div,
+html[lang="en"] body #pricing_banner+h2+div button {
+	color: #BDBDBD;
 }
 
-html body .Cre_bottomimg img {
+
+html[lang="en"] body div:has(>#pricing_banner) {
+	row-gap: 20px;
+}
+
+
+/* new css */
+
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_logo {
+	max-width: 45px;
+	margin: auto;
+}
+
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_logo_2 {
+	max-width: 60px;
+	margin: auto;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(3) .guarantee_item:nth-child(2) .guarantee_logo_2 {
+	max-width: 75px !important;
+	margin-bottom: -20px;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_logo_2>img {
 	width: 100%;
 }
 
-html body section.sfg20-software-section:before {
-	display: none !important;
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_logo>img {
+	width: 100%;
 }
 
-@media (max-width: 1280px) {
-	html body .Cre_bannerleftsection h2 {
-		font-size: 34px;
-	}
-
-	html body .logoheading {
-		margin-top: 30px;
-	}
-
-
-	html body .Cre_bannerleftsection h2 {
-		font-size: 30px;
-	}
-
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_heading {
+	color: #252525;
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 600;
+	text-align: center;
+	padding: 5px 0;
 }
 
-@media (max-width: 884px) {
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_prera {
+	font-size: 16px;
+	line-height: 22px;
+	max-width: 240px;
+	margin: 0 auto;
+	width: 100%;
+	color: #252525;
+	font-weight: 500;
+	text-align: center;
+}
 
-	html body .Cre_Mainbanner>div {
-		flex-direction: column;
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	padding: 40px 0;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(2) {
+	position: relative;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(2)::after {
+	content: "";
+	border-bottom: 1.5px solid rgb(197, 211, 206);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 85%;
+	margin: auto;
+}
+
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item {
+	position: relative;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item::after {
+	content: "";
+	border-left: 1.5px solid rgb(197, 211, 206);
+	position: absolute;
+	top: 10px;
+	bottom: 0;
+	min-height: 135px;
+	right: 0;
+	left: 0;
+}
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item,
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(2) .guarantee_item {
+	width: 33%;
+}
+
+
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list .guarantee_item:first-child::after {
+	display: none;
+}
+
+
+html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(2) {
+	padding: 45px 0;
+}
+
+
+
+
+
+@media screen and (max-width:767px) {
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_top-heading {
+		font-size: 32px !important;
+		line-height: 40px;
 	}
 
-	html body .Cre_Mainbanner>div>div {
+	html[lang="en"] body #pricing_banner+h2+div button+div {
+		text-align: center;
+	}
+
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item,
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(2) .guarantee_item {
 		width: 100%;
-		margin-top: 52px;
 	}
 
-	html body .Cre_Mainbanner .hs-video-widget {
-		padding: 10px 0px;
-		margin-top: 15px;
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item::after,
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(2)::after,
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list:nth-child(1)::after {
+		display: none !important;
 	}
 
-	html body .Cre_bottomimg {
-		margin-top: -2px;
-	}
-
-
-}
-
-@media (max-width: 650px) {
-
-	html body .Cre_Mainbanner ul {
-		display: flex;
-		flex-wrap: wrap;
-		list-style-type: none;
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list {
 		padding: 0;
 	}
 
-	html body .Cre_Mainbanner ul li {
-		width: 29.33%;
-		display: flex;
-		justify-content: left;
-		align-items: center;
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_list {
+		flex-direction: column;
+		gap: 30px;
 	}
 
-	html body .Cre_bannerleftsection ul {
-		gap: 15px;
+
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item {
+		border-bottom: 1.5px solid rgb(197, 211, 206);
+		padding-bottom: 30px;
 	}
 
-	html body .Cre_bannerleftsection h2 {
-		font-size: 32px;
-		line-height: 35px;
+	html[lang="en"] body div:has(>#pricing_banner) {
+		row-gap: 40px;
 	}
 
-	html body .Cre_bottomimg {
-		border-bottom: 18px solid #f17e3a;
-	}
-
-	html body .Cre_bottomimg img {
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_money svg {
 		display: none;
 	}
 
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_item::after {
+		content: "";
+		border-left: 1.5px solid rgb(197, 211, 206);
+		position: absolute;
+		top: 40px;
+		bottom: 0;
+		right: 0;
+		left: 0px;
+	}
+
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_heading {
+		color: #252525;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 600;
+		text-align: center;
+		padding: 5px 0;
+	}
+
+	html[lang="en"] body .guarantee_section .guarantee_container .guarantee_prera {
+		font-size: 16px;
+		line-height: 22px;
+		max-width: 200px;
+		margin: 0 auto;
+		width: 100%;
+		color: #252525;
+		font-weight: 500;
+		text-align: center;
+	}
+
+
+	html[lang="en"] body #pricing_banner+h2+div button+div {
+		font-size: 14px;
+	}
+}
+
+html[lang="en"] body #pricing_banner+h2,
+html[lang="en"] body #pricing_banner+h2+div {
+	display: none !important;
+}
+
+
+@media screen and (max-width:768px) {
+	html[lang="en"] body .guarantee_section {
+		margin-top: -70px;
+	}
 }
