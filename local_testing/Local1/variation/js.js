@@ -61,14 +61,65 @@
               clearInterval(interval);
             }, delayTimeout);
           },
+  
+          live: function (selector, event, callback, context) {
+            /****Helper Functions****/
+            // helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+              if (el.attachEvent) el.attachEvent("on" + type, handler);
+              else el.addEventListener(type, handler);
+            }
+            // matches polyfill
+            this && this.Element &&
+              (function (ElementPrototype) {
+                ElementPrototype.matches =
+                  ElementPrototype.matches ||
+                  ElementPrototype.matchesSelector ||
+                  ElementPrototype.webkitMatchesSelector ||
+                  ElementPrototype.msMatchesSelector ||
+                  function (selector) {
+                    var node = this,
+                      nodes = (
+                        node.parentNode || node.document
+                      ).querySelectorAll(selector),
+                      i = -1;
+                    while (nodes[++i] && nodes[i] != node);
+                    return !!nodes[i];
+                  };
+              })(Element.prototype);
+            // live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+              addEvent(context || document, event, function (e) {
+                var found,
+                  el = e.target || e.srcElement;
+                while (
+                  el &&
+                  el.matches &&
+                  el !== context &&
+                  !(found = el.matches(selector))
+                )
+                  el = el.parentElement;
+                if (found) callback.call(el, e);
+              });
+            }
+            live(selector, event, callback, context);
+          }
         };
         return function (selector) {
           return new bm(selector);
         };
       });
   
-      var undetectable_guarantee = `<div class="guarantee_section">
+      var undetectable_guarantee = `<div class="guarantee_section" style="display:none">
       <div class="guarantee_container">
+  <div class="guarantee_top-content">
+      <h2 class="guarantee_top-heading">Simple, transparent and <span>flexible pricing</span> </h2>
+      <div class="guarantee_subheading">
+         <div class="guarantee_money"><svg viewBox="0 0 32 32" data-icon-set="fa" style="width: 100%; height: 100%;">
+          <use width="32" height="32" href="/static/icon_libraries/fontawesome-4.7.0.svg#fa-tags"></use>
+      </svg><span>Try our AI Humanizer and Detector rated #1 on Forbes!</span></div>
+      </div>
+  </div>
           <div class="guarantee_list">
               <div class="guarantee_item">
                   <div class="guarantee_logo">
@@ -130,19 +181,15 @@
       function init() {
         _$('body').addClass(variation_name)
   
-        helper.waitForElement("#pricing_banner+h2", function () {
-          document.querySelector("#pricing_banner+h2").innerHTML = 'Simple, transparent and <span>flexible pricing</span>'
-        }, 50, 15000)
-  
-        helper.waitForElement("#pricing_banner+h2+div button+div ", function () {
-          document.querySelector("#pricing_banner+h2+div button+div ").innerHTML = 'Try our AI Humanizer and Detector rated #1 on Forbes!'
-        }, 50, 15000)
-  
         helper.waitForElement("#pricing_banner+h2+div ", function () {
           if (!document.querySelector(".guarantee_section")) {
             document.querySelector("#pricing_banner+h2+div ").insertAdjacentHTML("afterend", undetectable_guarantee)
           }
         }, 50, 15000)
+  
+        helper.live(".guarantee_subheading .guarantee_money span", "click", function () {
+          document.querySelector("#pricing_banner + h2 + div .clickable-element") && document.querySelector("#pricing_banner + h2 + div .clickable-element").click()
+        })
       }
   
       /* Initialise variation */
