@@ -1,3 +1,24 @@
-#smc-v5-overlay-123655 {
-  display: none !important;
+/* src/conversion-rate-experts/iFLY-Test33/variation1/styles/style.scss */
+html body.CRE-33 .cre-33-container {
+  color: #000 !important;
+  font-family:
+    Flama,
+    Arial,
+    sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 23px !important;
 }
+html body.CRE-33 .cre-33-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+html body.CRE-33 .pageHeader >div:first-child{
+  font-size: 28px !important;
+  }
+html body.CRE-33  .cre-33-container{
+  max-width: 796px;
+  margin: auto;
+  margin-bottom: 10px;
+    }

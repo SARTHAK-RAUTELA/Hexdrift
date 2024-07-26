@@ -4,6 +4,6 @@
         "./variation/vB.css"
     ],
     "urls": [
-        "https://booking.iflyworld.com/?convert_optout=1"
+        "https://booking.iflyworld.com/"
     ]
 }

@@ -1,123 +1,110 @@
-//custom code for optimizely callback
-
-function trigger(activate, options) {
-
-    (function () {
+(() => {
+    var __defProp = Object.defineProperty;
+    var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
+  
+    // lib/bm-js/lib/index.js
+    var waitFor = /* @__PURE__ */ __name((check, invoke, poll) => {
+      if (check()) {
+        invoke();
+        return;
+      }
+      let polling = setInterval(() => {
         try {
-
-            // Wait for Element
-            function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-                var interval = setInterval(function () {
-                    if (
-                        document &&
-                        document.querySelector(selector) &&
-                        document.querySelectorAll(selector).length > 0
-                    ) {
-                        clearInterval(interval);
-                        trigger();
-                    }
-                }, 50);
-                setTimeout(function () {
-                    clearInterval(interval);
-                }, 15000);
-            }
-            // Live click event
-            function live(selector, event, callback, context) {
-                /****Helper Functions****/
-                // helper for enabling IE 8 event bindings
-                function addEvent(el, type, handler) {
-                    if (el.attachEvent) el.attachEvent("on" + type, handler);
-                    else el.addEventListener(type, handler);
-                }
-                // matches polyfill
-                this &&
-                    this.Element &&
-                    (function (ElementPrototype) {
-                        ElementPrototype.matches =
-                            ElementPrototype.matches ||
-                            ElementPrototype.matchesSelector ||
-                            ElementPrototype.webkitMatchesSelector ||
-                            ElementPrototype.msMatchesSelector ||
-                            function (selector) {
-                                var node = this,
-                                    nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                                    i = -1;
-                                while (nodes[++i] && nodes[i] != node);
-                                return !!nodes[i];
-                            };
-                    })(Element.prototype);
-                // live binding helper using matchesSelector
-                function live(selector, event, callback, context) {
-                    addEvent(context || document, event, function (e) {
-                        var found,
-                            el = e.target || e.srcElement;
-                        while (el && el.matches && el !== context && !(found = el.matches(selector)))
-                            el = el.parentElement;
-                        if (found) callback.call(el, e);
-                    });
-                }
-                live(selector, event, callback, context);
-            }
-
-            var pageURL = window.location.href;
-            var pathname = window.location.pathname;
-
-            // Activate cart
-            function activateCurrentExp() {
-
-                if (pageURL.includes("https://seaworld.com/") && ((pathname == '/orlando/tickets/') || (pathname == '/orlando/tickets/fun-card/') || (pathname == '/orlando/annual-pass/') || (pathname == '/orlando/upgrades/') || (pathname == '/orlando/upgrades/rides-and-shows/') || (pathname == '/orlando/upgrades/animal-experiences/') || (pathname == '/orlando/upgrades/parking-and-rentals/'))) {
-
-                    if (!window.isOptimizelyExpTriggered) {
-
-                        window.isOptimizelyExpTriggered = true;
-                        waitForElement(".site-header__checkout .site-header__checkout-badge", activate);
-                    }
-                }
-
-            }
-
-            waitForElement(".site-header__checkout .site-header__checkout-badge", () => {
-
-                activate();
-                // console.log("Experiment202_activated")
-            });
-
-            //the below code is for the mini cart click
-            if (window.innerWidth < 767) {
-
-                live(".modal__footer a[class*=button],.product-catalog-card__order-button,a[class*=product-listing__button]", "touchend", function () {
-                    activateCurrentExp()
-                    //Adding class If the ticket is single day ticket---------------
-                    if (this.parentElement && this.parentElement.closest('[data-display-name="Single-Day Ticket"]')) {
-                        console.log("single day ticket--------------")
-                        document.querySelector("body").classList.add("cre-202-singleDayTicketActive")
-                    }
-                    else {
-                        // Removing single day ticket class -------------
-                        if (document.querySelector("body.cre-202-singleDayTicketActive")) {
-                            document.querySelector("body.cre-202-singleDayTicketActive").classList.remove("cre-202-singleDayTicketActive")
-                        }
-                    }
-                });
-            } else {
-                live(".modal__footer a[class*=button],.product-catalog-card__order-button,a[class*=product-listing__button]", "click", function () {
-                    activateCurrentExp()
-                    //Adding class If the ticket is single day ticket---------------
-                    if (this.parentElement && this.parentElement.closest('[data-display-name="Single-Day Ticket"]')) {
-                        document.querySelector("body").classList.add("cre-202-singleDayTicketActive")
-                    }
-                    else {
-                        // Removing single day ticket class -------------
-                        if (document.querySelector("body.cre-202-singleDayTicketActive")) {
-                            document.querySelector("body.cre-202-singleDayTicketActive").classList.remove("cre-202-singleDayTicketActive")
-                        }
-                    }
-                });
-            }
-
+          if (check()) {
+            invoke();
+            clearInterval(polling);
+            polling = null;
+          }
         } catch (e) {
-            console.log(e, "Variation201");
+          console.info("listener not processed");
         }
-    })();
+      }, poll.interval);
+      setTimeout(() => {
+        if (!polling)
+          return;
+        clearInterval(polling);
+        console.info("render listener timeout", poll);
+        window.evolvRenderTimeout = {
+          msg: "evolv render listener timeout",
+          poll
+        };
+      }, poll.duration);
+    }, "waitFor");
+    var $refs = /* @__PURE__ */ __name((selector) => {
+      if (!selector) {
+        console.error(`Invalid selector!`);
+        return;
+      }
+      const els = document.querySelectorAll(selector);
+      if (!els || !els.length) {
+        console.error(`Selector ${selector} does not exist in DOM!`);
+        return;
+      }
+      return els;
+    }, "$refs");
+    var $addClass = /* @__PURE__ */ __name((selector, classes) => {
+      if (!classes) {
+        console.error("At least one class is required!");
+        return;
+      }
+      const elements = $refs(selector);
+      if (!elements)
+        return;
+      if (Array.isArray(classes)) {
+        elements.forEach((el) => {
+          el.classList.add(...classes);
+        });
+        return;
+      }
+      if (typeof classes === "string") {
+        elements.forEach((el) => {
+          el.classList.add(classes);
+        });
+      }
+    }, "$addClass");
+  
+    // src/conversion-rate-experts/iFLY-Test33/variation1/index.js
+    var locationSuperSaver = [
+        { "tunnel": "Loudoun" },
+        { "tunnel": "Westchester" },
+        { "tunnel": "Atlanta" },
+        { "tunnel": "Phoenix" },
+        { "tunnel": "New Jersey Paramus" },
+        { "tunnel": "Dallas" },
+        { "tunnel": "Fort Lauderdale" },
+        { "tunnel": "Houston" }
+    ];
 
-}
+    waitFor(
+      () => document.querySelector("body") ? true : false,
+      () => {
+        var pageHeaderDivs = document.querySelectorAll(".pageHeader > div");
+        var found = false;
+  
+        pageHeaderDivs.forEach(function (div) {
+          var text = div.textContent.trim();
+          locationSuperSaver.forEach(function (location) {
+            if (text.includes(location.tunnel)) {
+              found = true;
+              return;
+            }
+          });
+
+          if (found) {
+            div.innerHTML = div.innerHTML.replace('2 Flights Super Saver ~30% Off [1]', '2 Flights Super Saver ~20% Off [1]');
+          }
+        });
+
+        if (document.querySelector(".pageHeader > div").innerHTML.includes("2 Flights Super Saver")) {
+          $addClass("body", "CRE-33");
+          if (!document.querySelector(".cre-33-container")) {
+            document.querySelector(".pageHeader > div").insertAdjacentHTML("afterend", "<div class='cre-33-container'><div class='cre-33-heading'>Limited Availability Notice</div><div>Thank you for your interest in our Super Saver package! Please note that Super Saver package has limited availability and can only be booked at select times during the week. If your desired date and time is unavailable, please check out our regular 2 flight and 4 flight packages.</div></div>");
+          }
+        }
+      },
+      {
+        interval: 50,
+        duration: 15e3
+      }
+    );
+  })();
