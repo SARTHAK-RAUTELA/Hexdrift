@@ -1,186 +1,126 @@
 (function () {
   try {
     /* main variables */
-    var debug = 1;
-    var variation_name = "undetectable-10";
-    /* helper library */
-    var _$;
-    !(function (factory) {
-      _$ = factory();
-    })(function () {
-      var bm = function (s) {
-        if (typeof s === "string") {
-          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+    var debug = 0;
+    var variation_name = "Cre_sfg20";
+    /* all Pure helper functions */
+    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+      var interval = setInterval(function () {
+        if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+          clearInterval(interval);
+          trigger();
         }
-        if (typeof s === "object") {
-          this.value = [s];
+      }, delayInterval);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, delayTimeout);
+    }
+    function addLiveEventListener(selector, event, callback, context) {
+      // Helper for enabling IE 8 event bindings
+      function addEvent(el, type, handler) {
+        if (el.attachEvent) el.attachEvent('on' + type, handler);
+        else el.addEventListener(type, handler);
+      }
+      // Matches polyfill
+      this.Element && function (ElementPrototype) {
+        ElementPrototype.matches = ElementPrototype.matches ||
+          ElementPrototype.matchesSelector ||
+          ElementPrototype.webkitMatchesSelector ||
+          ElementPrototype.msMatchesSelector ||
+          function (selector) {
+            var node = this,
+              nodes = (node.parentNode || node.document).querySelectorAll(selector),
+              i = -1;
+            while (nodes[++i] && nodes[i] != node);
+            return !!nodes[i];
+          };
+      }(Element.prototype);
+      // Live binding helper using matchesSelector
+      function live(selector, event, callback, context) {
+        addEvent(context || document, event, function (e) {
+          var found, el = e.target || e.srcElement;
+          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+          if (found) callback.call(el, e);
+        });
+      }
+      live(selector, event, callback, context);
+    }
+    try {
+      window.addEventListener("message", function (event) {
+        if (event.data.type == "PLAYER_PLAY") {
+          window._conv_q = window._conv_q || [];
+          _conv_q.push(["triggerConversion", "100033272"]);
         }
-      };
-      bm.prototype = {
-        eq: function (n) {
-          this.value = [this.value[n]];
-          return this;
-        },
-        each: function (fn) {
-          [].forEach.call(this.value, fn);
-          return this;
-        },
-        log: function () {
-          var items = [];
-          for (let index = 0; index < arguments.length; index++) {
-            items.push(arguments[index]);
-          }
-          console && console.log(variation_name, items);
-        },
-        addClass: function (v) {
-          var a = v.split(" ");
-          return this.each(function (i) {
-            for (var x = 0; x < a.length; x++) {
-              if (i.classList) {
-                i.classList.add(a[x]);
-              } else {
-                i.className += " " + a[x];
-              }
-            }
-          });
-        },
-        waitForElement: function (
-          selector,
-          trigger,
-          delayInterval,
-          delayTimeout
-        ) {
-          var interval = setInterval(function () {
-            if (_$(selector).value.length) {
-              clearInterval(interval);
-              trigger();
-            }
-          }, delayInterval);
-          setTimeout(function () {
-            clearInterval(interval);
-          }, delayTimeout);
-        },
-        live: function (selector, event, callback, context) {
-          /****Helper Functions****/
-          // helper for enabling IE 8 event bindings
-          function addEvent(el, type, handler) {
-            if (el.attachEvent) el.attachEvent("on" + type, handler);
-            else el.addEventListener(type, handler);
-          }
-          // matches polyfill
-          this && this.Element &&
-            (function (ElementPrototype) {
-              ElementPrototype.matches =
-                ElementPrototype.matches ||
-                ElementPrototype.matchesSelector ||
-                ElementPrototype.webkitMatchesSelector ||
-                ElementPrototype.msMatchesSelector ||
-                function (selector) {
-                  var node = this,
-                    nodes = (
-                      node.parentNode || node.document
-                    ).querySelectorAll(selector),
-                    i = -1;
-                  while (nodes[++i] && nodes[i] != node);
-                  return !!nodes[i];
-                };
-            })(Element.prototype);
-          // live binding helper using matchesSelector
-          function live(selector, event, callback, context) {
-            addEvent(context || document, event, function (e) {
-              var found,
-                el = e.target || e.srcElement;
-              while (
-                el &&
-                el.matches &&
-                el !== context &&
-                !(found = el.matches(selector))
-              )
-                el = el.parentElement;
-              if (found) callback.call(el, e);
-            });
-          }
-          live(selector, event, callback, context);
-        }
-      };
-      return function (selector) {
-        return new bm(selector);
-      };
-    });
-    var undetectable_guarantee = `<div class="guarantee_section" style="display:none">
-  <div class="guarantee_container">
-  <div class="guarantee_top-content">
-  <h2 class="guarantee_top-heading">Simple, transparent and <span>flexible pricing</span> </h2>
-  <div class="guarantee_subheading">
-  <div class="guarantee_money"><svg viewBox="0 0 32 32" data-icon-set="fa" style="width: 100%; height: 100%;">
-  <use width="32" height="32" href="/static/icon_libraries/fontawesome-4.7.0.svg#fa-tags"></use>
-  </svg><span>Try our AI Humanizer and Detector rated #1 on Forbes!</span></div>
-  </div>
-  </div>
-  <div class="guarantee_list">
-  <div class="guarantee_item">
-  <div class="guarantee_logo">
-  <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/UndetectableAI/10/input_logo.svg" alt="input_logo" width="50"  height"50">
-  </div>
-  <h3 class="guarantee_heading">Pay as you use</h3>
-  <p class="guarantee_prera">Control your budget and only pay for what you need with our flexible and affordable plans.</p>
-  </div>
-  <div class="guarantee_item">
-  <div class="guarantee_logo">
-  <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/UndetectableAI/10/cross_logo.svg" alt="cross_logo" width="50"  height"50">
-  </div>
-  <h3 class="guarantee_heading">Cancel anytime</h3>
-  <p class="guarantee_prera">You'll love using our Al tool, or smply cancel your plan anytime, no questions asked.</p>
-  </div>
-  <div class="guarantee_item">
-  <div class="guarantee_logo">
-  <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/UndetectableAI/10/doller_logo.svg" alt="doller_logo" width="50"  height"50">
-  </div>
-  <h3 class="guarantee_heading">Money back guarantee</h3>
-  <p class="guarantee_prera">If any text we produce is flagged as not human, we will refund you the cost of humanization.</p>
-  </div>
-  </div>
-  <!--list 2-->
-  <div class="guarantee_list">
-  <div class="guarantee_item">
-  <div class="guarantee_logo_2">
-  <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/UndetectableAI/10/batch_logo.svg" alt="batch_logo" width="50"  height"50">
-  </div>
-  <h3 class="guarantee_heading">Rated #1 on FORBES!</h3>
-  <p class="guarantee_prera">"Undetectable.ai delves deeper into the fabric of the text. The #1 best Al detector rated by Forbes."</p>
-  </div>
-  <div class="guarantee_item">
-  <div class="guarantee_logo_2">
-  <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/UndetectableAI/10/direction_logo.svg" alt="direction_logo" width="50"  height"50">
-  </div>
-  <h3 class="guarantee_heading">Easy to use</h3>
-  <p class="guarantee_prera">Our intuitive interface makes it easy detect and humanize AI-generated text with just a few clicks.</p>
-  </div>
-  <div class="guarantee_item">
-  <div class="guarantee_logo_2">
-  <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/UndetectableAI/10/percentage_logo.svg" alt="percentage_logo" width="50"  height"50">
-  </div>
-  <h3 class="guarantee_heading">50% OFF on yearly plans</h3>
-  <p class="guarantee_prera">For a limited time, our yearly plans are currently half-price! Save 50% now!</p>
-  </div>
-  </div>
-  </div>
-  </div>`
-    var helper = _$();
-    /* Variation Init */
+      });
+    } catch (error) {
+      console.log("error excuting the script ===", error);
+    }
+
+
+
+    var banner = `
+    <div class="Cre_Mainbanner">
+         <div class="content-wrapper">
+    <div class="Cre_bannerleftsection">
+      <h2>The <span>industry standard</span> for building maintenance</h2>
+      <p class="Cre_paragraph">Only SFG20 offers comprehensive maintenance schedules, accessed via cutting-edge software, to help users control risk, achieve compliance, and ensure buildings are safe and efficient.</p>
+      <p class="logoheading">Developed & referenced by:</p>
+      <ul>
+      <li><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG05/BESA Logo 1.svg"></li>
+      <li><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG05/RICS Logo 1.svg"></li>
+      <li><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG05/BSRIA White 1.svg"></li>
+      <li><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG05/CIBSE Logo 1.svg"></li>
+        <li><img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG05/image+22.svg"></li>
+        
+      </ul>
+     </div>
+
+     <div class="hs-video-widget" data-hsv-embed-id="01b0757b-f1db-4529-83c3-81f6fb48da57" data-hsv-status="loaded">
+     <div class="hs-video-container" style="max-width: 1920px; margin: 0 auto;">
+       <div class="hs-video-wrapper" style="position: relative; height: 0; padding-bottom: 56.25%">
+       <iframe referrerpolicy="origin" sandbox="allow-forms allow-scripts allow-same-origin allow-popups" allow="autoplay; fullscreen;" style="position: absolute !important; width: 100% !important; height: 100% !important; left: 0; top: 0; border: 0 none; pointer-events: initial" title="HubSpot Video" loading="lazy" data-hsv-id="89515008748" data-hsv-style="" data-hsv-width="1920" data-hsv-height="1080" data-hsv-autoplay="false" data-hsv-loop="false" data-hsv-muted="false" data-hsv-hidden-controls="false" data-hsv-full-width="false" src="https://play-eu1.hubspotvideo.com/v/139678265/id/89515008748?parentOrigin=https%3A%2F%2Fwww.sfg20.co.uk&amp;renderContext=hubl-iframe#hsvid=01b0757b-f1db-4529-83c3-81f6fb48da57"></iframe>
+       </div>
+     </div>
+     <p class="Crevideocontent"> Our Facilities-iQ software uses color-coding to distinguish between legally required tasks and those that are optimal and discretionary.</P>
+     </div>
+     
+     </div>
+     </div>
+   <div class="Cre_bottomimg">	   <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/Bottom.png"></di>
+    `;
+
+
     function init() {
-      _$('body').addClass(variation_name)
-      helper.waitForElement("#pricing_banner+h2+div ", function () {
-        if (!document.querySelector(".guarantee_section")) {
-          document.querySelector("#pricing_banner+h2+div ").insertAdjacentHTML("afterend", undetectable_guarantee)
-        }
-      }, 50, 15000)
-      helper.live(".guarantee_subheading .guarantee_money span", "click", function () {
-        document.querySelector("#pricing_banner + h2 + div .clickable-element") && document.querySelector("#pricing_banner + h2 + div .clickable-element").click()
-      })
+      // Insert the new span element after the .th_homepage-heroheading element
+      if (!document.querySelector('.Cre_Mainbanner')) {
+        document.querySelector('.new-homepage-banner-v2 > div').insertAdjacentHTML('afterend', banner);
+
+      }
+
     }
     /* Initialise variation */
-    helper.waitForElement("body", init, 50, 15000);
+    function sfg20(list, observer) {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+          observer.disconnect();
+          clearInterval(sfg20interval);
+          waitForElement("body", init, 50, 15000);
+          window.isHydrated = true;
+        }
+      });
+    }
+    if (!window.isHydrated) {
+      var sfg20interval = setInterval(function () {
+        waitForElement("body", init, 50, 15000);
+      }, 50);
+      setTimeout(function () {
+        clearInterval(sfg20interval);
+      }, 3000);
+      const observer = new PerformanceObserver(sfg20);
+      observer.observe({ entryTypes: ["mark"] });
+    } else {
+      waitForElement("body", init, 50, 15000);
+    }
   } catch (e) {
     if (debug) console.log(e, "error in Test" + variation_name);
   }
