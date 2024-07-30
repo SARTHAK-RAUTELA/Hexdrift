@@ -1,167 +1,192 @@
-html body .new-homepage-banner-v2>div:first-child {
+/* src/conversion-rate-experts/SFG06/variation1/styles/style.scss */
+html body.CRE06 a.top-strip-link:last-child {
+	background-color: transparent !important;
+}
+
+html body.CRE06 .main-header .secondary-button.login-btn {
 	display: none;
 }
 
-html body .Cre_Mainbanner>div>div {
-	width: 50%;
-}
-
-html body .Cre_Mainbanner {
-
-	background-color: #005C71;
-}
-
-html body .Cre_Mainbanner>div {
-	display: flex;
-	align-items: center;
-}
-
-
-html body .Cre_bannerleftsection ul {
-	display: flex;
-	padding: 0;
-	gap: 25px;
-	align-items: center;
-}
-
-html body .Cre_bannerleftsection ul li {
-	list-style: none;
-}
-
-html body .Cre_Mainbanner .hs-video-widget {
-	padding: 100px 30px;
-}
-
-html body .Cre_paragraph {
-	font-size: 18px;
-	line-height: 24px;
-	margin: 25px 0;
-	color: #D9D9D9 !important;
-}
-
-html body .Cre_bannerleftsection h2 {
-	font-size: 46px;
-	line-height: 50px;
-	font-weight: 500;
-}
-
-html body .Cre_bannerleftsection h2 span {
-	color: #FF7F00;
-}
-
-html body .logoheading {
-	font-size: 18px;
-	color: #D9D9D9 !important;
-}
-
-html body .Crevideocontent {
-	font-size: 14px;
-	color: #D9D9D9;
-	text-align: center;
-	margin-top: 12px;
-}
-
-html body .Cre_bottomimg {
-	margin-top: -49px;
-}
-
-
-
-html body .Cre_bannerleftsection h2 span {
-	font-weight: 700;
-}
-
-html body .Cre_bottomimg img {
-	width: 100%;
-}
-
-html body section.sfg20-software-section:before {
+html body.CRE06 .megamenu-dropdown .left-side .description {
 	display: none !important;
 }
 
-@media (max-width: 1280px) {
-	html body .Cre_bannerleftsection h2 {
-		font-size: 34px;
-	}
-
-	html body .logoheading {
-		margin-top: 30px;
-	}
-
-
-	html body .Cre_bannerleftsection h2 {
-		font-size: 30px;
-	}
-
+html body.CRE06 .megamenu-dropdown .left-side h6 {
+	display: none;
 }
 
-@media (max-width: 884px) {
-
-	html body .Cre_Mainbanner>div {
-		flex-direction: column;
-	}
-
-	html body .Cre_Mainbanner>div>div {
-		width: 100%;
-		margin-top: 52px;
-	}
-
-	html body .Cre_Mainbanner .hs-video-widget {
-		padding: 10px 0px;
-		margin-top: 15px;
-	}
-
-	html body .Cre_bottomimg {
-		margin-top: -2px;
-	}
-
-
+html body.CRE06 .megamenu-dropdown .right-side .related-articles {
+	display: none;
 }
 
-@media (max-width: 650px) {
-
-	html body .Cre_Mainbanner ul {
-		display: flex;
-		flex-wrap: wrap;
-		list-style-type: none;
-		padding: 0;
-	}
-
-	html body .Cre_Mainbanner ul li {
-		width: 29.33%;
-		display: flex;
-		justify-content: left;
-		align-items: center;
-	}
-
-	html body .Cre_bannerleftsection ul {
-		gap: 15px;
-	}
-
-	html body .Cre_bannerleftsection h2 {
-		font-size: 32px;
-		line-height: 35px;
-	}
-
-	html body .Cre_bottomimg {
-		border-bottom: 18px solid #f17e3a;
-	}
-
-	html body .Cre_bottomimg img {
-		display: none;
-	}
-
-	html body .logoheading {
-		font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 22px;
-	}
-
+html body.CRE06 .megamenu-dropdown .right-side .mm-dropdown-actions {
+	display: none;
 }
 
+html body.CRE06 .megamenu-dropdown [data-id=faqs] {
+	display: none !important;
+}
 
-@media screen and (min-width: 1653px) {
-    html body .Cre_bottomimg img {
-      max-height: 160px;
-  }
-  }
+html body.CRE06 .megamenu-dropdown div#faqs {
+	display: none !important;
+}
+
+html body.CRE06 .megamenu-dropdown [data-id=sfg20_member_list] {
+	display: none !important;
+}
+
+html body.CRE06 .megamenu-dropdown #sfg20_member_list {
+	display: none !important;
+}
+
+html body.CRE06 .dropdown-content .right-side:before {
+	background-color: transparent;
+}
+
+html body.CRE06 .megamenu-dropdown .right-content-box .right-content-box-inner {
+	display: flex;
+	flex-direction: column;
+}
+
+html body.CRE06 .megamenu-dropdown .right-content-box-inner .feature-img {
+	order: 5;
+}
+
+html body.CRE06 .right-content-box-inner h6 {
+	margin-top: 30px;
+}
+
+html body.CRE06 #facilities_iq.active .feature-img {
+	display: none;
+}
+
+html body.CRE06 #facilities_iq.active.cre-active .feature-img {
+	display: block;
+}
+
+html body.CRE06 .dropdown-content #core_library.active .right-content-box-inner h6 {
+	display: none;
+}
+
+html body.CRE06 .dropdown-content #core_library.active .right-content-box-inner .description {
+	display: none;
+}
+
+html body.CRE06 .dropdown-content #core_library.active .right-content-box-inner .feature-img {
+	display: none;
+}
+
+html body.CRE06 .dropdown-content #core_library.active .right-content-box-inner h6.cre_maintain_heading {
+	display: block;
+}
+
+html body.CRE06 .dropdown-content #core_library.active .right-content-box-inner .description.cre_maintain_desc {
+	display: block;
+}
+
+html body.CRE06 .dropdown-content #core_library.active.cre-active .right-content-box-inner h6 {
+	display: block;
+}
+
+html body.CRE06 .dropdown-content #core_library.active.cre-active .right-content-box-inner .description {
+	display: block;
+}
+
+html body.CRE06 .dropdown-content #core_library.active.cre-active .right-content-box-inner .feature-img {
+	display: block;
+}
+
+html body.CRE06 .dropdown-content #core_library.active.cre-active .right-content-box-inner h6.cre_maintain_heading {
+	display: none;
+}
+
+html body.CRE06 .dropdown-content #core_library.active.cre-active .right-content-box-inner .description.cre_maintain_desc {
+	display: none;
+}
+
+.dropdown-content #learning_lab.active .right-content-box-inner h6 {
+	display: none;
+}
+
+.dropdown-content #learning_lab.active .right-content-box-inner .description {
+	display: none;
+}
+
+.dropdown-content #learning_lab.active .right-content-box-inner .feature-img {
+	display: none;
+}
+
+.dropdown-content #learning_lab.active .right-content-box-inner h6.cre_resource_heading {
+	display: block;
+}
+
+.dropdown-content #learning_lab.active .right-content-box-inner .description.cre_resource_desc {
+	display: block;
+}
+
+.dropdown-content #learning_lab.active.cre-active .right-content-box-inner h6 {
+	display: block;
+}
+
+.dropdown-content #learning_lab.active.cre-active .right-content-box-inner .description {
+	display: block;
+}
+
+.dropdown-content #learning_lab.active.cre-active .right-content-box-inner .feature-img {
+	display: block;
+}
+
+.dropdown-content #learning_lab.active.cre-active .right-content-box-inner h6.cre_resource_heading {
+	display: none;
+}
+
+.dropdown-content #learning_lab.active.cre-active .right-content-box-inner .description.cre_resource_desc {
+	display: none;
+}
+
+.main-header ul.main-menu>li {
+	margin: 0 20px 0 0 !important;
+}
+
+.header-container.header-desktop .actions {
+	margin-left: 20px !important;
+}
+
+.content-wrapper {
+	max-width: 1366px !important;
+}
+
+.cre-drop-icon {
+	height: 5px;
+	width: 10px;
+	margin-top: -2px;
+}
+
+.megamenu-dropdown {
+	height: 100vh !important;
+	max-height: 100vh !important;
+}
+
+@media screen and (min-width: 1240px) and (max-width: 1300px) {
+	.main-header ul.main-menu>li {
+		margin: 0 10px 0 0 !important;
+		font-size: 15px;
+	}
+
+	.main-header ul.main-menu>li.megamenu {
+		margin-right: 16px !important;
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1240px) {
+	.main-header ul.main-menu>li {
+		margin: 0 12px 0 0 !important;
+		font-size: 14px !important;
+	}
+
+	.main-header ul.main-menu>li.megamenu {
+		margin-right: 16px !important;
+		font-size: 14px !important;
+	}
+}
