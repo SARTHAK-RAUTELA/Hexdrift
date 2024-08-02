@@ -1,96 +1,106 @@
-if (!window.location.href.includes("https://www.gendergp.com/next-steps/")){
+(function () {
+  try {
+    /* main variables */
+    var debug = 0;
+    var variation_name = "";
 
-(() => {
-  var __defProp = Object.defineProperty;
-  var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
+    /* all Pure helper functions */
 
-  // lib/bm-js/lib/index.js
-  var waitFor = /* @__PURE__ */ __name((check, invoke, poll) => {
-    if (check()) {
-      invoke();
-      return;
-    }
-    let polling = setInterval(() => {
-      try {
-        if (check()) {
-          invoke();
-          clearInterval(polling);
-          polling = null;
+    function waitForElement(selector, trigger) {
+      var interval = setInterval(function () {
+        if (
+          document &&
+          document.querySelector(selector) &&
+          document.querySelectorAll(selector).length > 0
+        ) {
+          clearInterval(interval);
+          trigger();
         }
-      } catch (e) {
-        console.info("listener not processed");
-      }
-    }, poll.interval);
-    setTimeout(() => {
-      if (!polling)
-        return;
-      clearInterval(polling);
-      console.info("render listener timeout", poll);
-      window.evolvRenderTimeout = {
-        msg: "evolv render listener timeout",
-        poll
-      };
-    }, poll.duration);
-  }, "waitFor");
-
-  // src/conversion-rate-experts/GenderGP-Test7/variation2/index.js
-  var CRET3hero = `
-  <div class="CRE-T7-hero-container">
-	  <div class="CRE-T7-hero-text">
-		  <h1 class="CRE-T7-hero-heading">
-			  Skip the NHS's <span class="pink-underline">5-10 year </span> wait times. Get gender-altering medications in just 3-5 days. 
-		  </h1>
-		  <div class="CRE-T7-hero-bullets-section">
-			  <div class="CRE-T7-bullet-point">
-				  <p class="CRE-T7-bullet-text">
-					 
- <span class="bullet-bold">We organise medical transition private prescriptions so you can quickly and easily access the care you need,</span>  with compassionate guidance every step of the way.
-
-
-				  </p>
-			  </div>
-			  <div class="CRE-T7-bullet-point">
-				  <p class="CRE-T7-bullet-text">
-                    <span class="bullet-bold">Join thousands of transgender and non-binary people we\u2019ve helped transition</span>  and support their health and wellbeing. You are not alone! 
-					
-				  </p>
-			  </div>
-			 
-			 
-		  </div>
-		  <div class="cre-ctastart">
-			<div class="journey"> 
-			  <a href="https://www.gendergp.com/accessing-gender-affirming-care/" class="Crestart-journey-button"> Get my medication</a>
-			</div>
-			
-		  </div>
-	  </div>
-	  <div class="CRE-T7-hero-image">
-		  <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/banner-min.jpg" width="850" />
-            <div class="cre-text-image">
-            
-"Without GenderGP, I would have had to wait 5-7 years for HRT through the NHS. I would be dead if it were not for GGP. Now I\u2019m 11 months on HRT, my life has done a 180\xB0.\u201D    
-             
-            </div>                                                
-                                                            
-            <div>  \u2014Customer survey respondent, Jul 2024</div>
-	  </div>
-  </div>
-  </div>
-  `;
-  waitFor(
-    () => document.querySelector('[class*="css_mix_blend_mode_passthrough"] + div .et_pb_text_inner'),
-    () => {
-      document.querySelector("body").classList.add("cre-7");
-      var sliderDiv = document.querySelector("#welcome-gate");
-      if (!document.querySelector(".CRE-T7-hero-container")) {
-        sliderDiv && sliderDiv.insertAdjacentHTML("afterend", CRET3hero);
-      }
-    },
-    {
-      interval: 50,
-      duration: 15e3
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
     }
-  );
+
+    function live(selector, event, callback, context) {
+      // helper for enabling IE 8 event bindings
+      function addEvent(el, type, handler) {
+        if (el.attachEvent) el.attachEvent("on" + type, handler);
+        else el.addEventListener(type, handler);
+      }
+      // matches polyfill
+      this &&
+        this.Element &&
+        (function (ElementPrototype) {
+          ElementPrototype.matches =
+            ElementPrototype.matches ||
+            ElementPrototype.matchesSelector ||
+            ElementPrototype.webkitMatchesSelector ||
+            ElementPrototype.msMatchesSelector ||
+            function (selector) {
+              var node = this,
+                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                i = -1;
+              while (nodes[++i] && nodes[i] != node);
+              return !!nodes[i];
+            };
+        })(Element.prototype);
+      // live binding helper using matchesSelector
+      function live(selector, event, callback, context) {
+        addEvent(context || document, event, function (e) {
+          var found,
+            el = e.target || e.srcElement;
+          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+          if (found) callback.call(el, e);
+        });
+      }
+      live(selector, event, callback, context);
+    }
+
+    function addClass(el, cls) {
+      var el = document.querySelector(el);
+      if (el) {
+        el.classList.add(cls);
+      }
+    }
+
+    function trigger() {
+      var doneTypingInterval = 9000;  //time in ms, 5 seconds for example
+      var intervalCallAgain = setInterval(function () {
+        waitForElement('.page-banner.page-banner--image-only ~ #product-catalog-container-[data-columns="three"]', function () {
+          if (document.querySelectorAll('.page-banner.page-banner--image-only ~ #product-catalog-container-[data-columns="three"]') >= 3) {
+            init();
+          }
+        })
+      }, 400);
+
+      //start the countdown
+      var Timer = setTimeout(function () {
+        clearInterval(intervalCallAgain);
+      }, doneTypingInterval);
+
+    }
+
+    /* Variation Init */
+    function init() {
+      addClass('body', 'cre-t-200')
+      waitForElement('.page-banner.page-banner--image-only ~ #product-catalog-container-[data-columns="three"]', function () {
+        // Select all elements matching the given selector
+        var elements = document.querySelectorAll('.page-banner.page-banner--image-only ~ #product-catalog-container-[data-columns="three"]');
+
+        // Loop through each element and add the unique class
+        elements.forEach((element, index) => {
+          element.classList.add(`cre-t-200-card${index + 1}`);
+        });
+
+      });
+
+      trigger();
+    }
+
+    waitForElement('body', init);
+
+  } catch (e) {
+    if (debug) console.log(e, "error in Test" + variation_name);
+  }
 })();
-}
