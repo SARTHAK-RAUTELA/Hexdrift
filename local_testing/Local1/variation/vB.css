@@ -1,4 +1,7 @@
-html body.cre-t-200 #product-catalog-container-.cre-t-200-card1,
-html body.cre-t-200 #product-catalog-container-.cre-t-200-card3{
+html body.cre-patternIndex.cre-patternIndex-active .product--thumbnail-image-container a:hover .cre-patternImage {
+    display: block !important;
+}
+
+html body.cre-patternIndex.cre-patternIndex-active .product--thumbnail-image-container a:hover img:nth-child(1) {
     display: none !important;
 }
