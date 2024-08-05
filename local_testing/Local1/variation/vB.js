@@ -1,99 +1,18 @@
 (function () {
   try {
     /* main variables */
-    var debug = 1;
-    var variation_name = "cre-patternIndex";
+    var debug = 0;
+    var variation_name = "cre-t-209";
 
-    /* helper library */
-    var _$;
-    !(function (factory) {
-      _$ = factory();
-    })(function () {
-      var bm = function (s) {
-        if (typeof s === "string") {
-          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-        }
-        if (typeof s === "object") {
-          this.value = [s];
-        }
-      };
-      bm.prototype = {
-        eq: function (n) {
-          this.value = [this.value[n]];
-          return this;
-        },
-        each: function (fn) {
-          [].forEach.call(this.value, fn);
-          return this;
-        },
-        log: function () {
-          var items = [];
-          for (let index = 0; index < arguments.length; index++) {
-            items.push(arguments[index]);
-          }
-          console && console.log(variation_name, items);
-        },
-        addClass: function (v) {
-          var a = v.split(" ");
-          return this.each(function (i) {
-            for (var x = 0; x < a.length; x++) {
-              if (i.classList) {
-                i.classList.add(a[x]);
-              } else {
-                i.className += " " + a[x];
-              }
-            }
-          });
-        },
-        waitForElement: function (selector, trigger) {
-          var interval = setInterval(function () {
-            if (_$(selector).value.length) {
-              clearInterval(interval);
-              trigger();
-            }
-          }, 50);
-          setTimeout(function () {
-            clearInterval(interval);
-          }, 15000);
-        },
-      };
-      return function (selector) {
-        return new bm(selector);
-      };
-    });
+    /* all Pure helper functions */
 
-    var helper = _$();
-
-    function fetchDetect(url, item) {
-      fetch(url)
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.text();
-        })
-        .then(function (html) {
-          // Use DOMParser to parse the HTML string into a Document
-          var parser = new DOMParser();
-          var doc = parser.parseFromString(html, "text/html");
-          var ourImage = doc.querySelector('.product--images-container .product--images .product--image-slider img:last-child');
-          ourImage.classList.add('cre-patternImage');
-          ourImage.style.display = 'none';
-          if (!item.querySelector(".cre-patternImage")) {
-
-            item.insertAdjacentElement('beforeend', ourImage);
-
-          }
-        })
-        .catch(function (error) {
-          console.error("There was a problem with the fetch operation:", error);
-        });
-
-    }
-
-    function waitForPageLoad(trigger) {
+    function waitForElement(selector, trigger) {
       var interval = setInterval(function () {
-        if (document.readyState === "complete") {
+        if (
+          document &&
+          document.querySelector(selector) &&
+          document.querySelectorAll(selector).length > 0
+        ) {
           clearInterval(interval);
           trigger();
         }
@@ -103,38 +22,83 @@
       }, 15000);
     }
 
-    /* Variation Init */
-    function init() {
+    function live(selector, event, callback, context) {
+      // helper for enabling IE 8 event bindings
+      function addEvent(el, type, handler) {
+        if (el.attachEvent) el.attachEvent("on" + type, handler);
+        else el.addEventListener(type, handler);
+      }
+      // matches polyfill
+      this &&
+        this.Element &&
+        (function (ElementPrototype) {
+          ElementPrototype.matches =
+            ElementPrototype.matches ||
+            ElementPrototype.matchesSelector ||
+            ElementPrototype.webkitMatchesSelector ||
+            ElementPrototype.msMatchesSelector ||
+            function (selector) {
+              var node = this,
+                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                i = -1;
+              while (nodes[++i] && nodes[i] != node);
+              return !!nodes[i];
+            };
+        })(Element.prototype);
+      // live binding helper using matchesSelector
+      function live(selector, event, callback, context) {
+        addEvent(context || document, event, function (e) {
+          var found,
+            el = e.target || e.srcElement;
+          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+          if (found) callback.call(el, e);
+        });
+      }
+      live(selector, event, callback, context);
+    }
 
+    function addClass(el, cls) {
+      var el = document.querySelector(el);
+      if (el) {
+        el.classList.add(cls);
+      }
+    }
 
-      _$('body').addClass(variation_name)
+    function trigger() {
+      var doneTypingInterval = 9000;  //time in ms, 5 seconds for example
+      var intervalCallAgain = setInterval(function () {
+        waitForElement('.page-banner.page-banner--image-only ~.product-placement-container__wrapper', function () {
+          if (document.querySelectorAll('.page-banner.page-banner--image-only ~.product-placement-container__wrapper') >= 3) {
+            init();
+          }
+        })
+      }, 400);
 
-      var products = document.querySelectorAll('[data-bookmarkable-type="Product"] .product--thumbnail-image-container a');
-
-      products.forEach(function (item) {
-        var pdItem = item;
-        fetchDetect(item.href, pdItem);
-      })
-
-      // setTimeout(function () {
-      _$('body').addClass('cre-patternIndex-active')
-      // }, 1000)
-
+      //start the countdown
+      var Timer = setTimeout(function () {
+        clearInterval(intervalCallAgain);
+      }, doneTypingInterval);
 
     }
 
-    waitForPageLoad(function () {
-      if (window.location.href.includes("https://www.seamwork.com/") && (window.location.href.includes("/catalog") || window.location.href.includes("/catalog/filters/")) || window.location.href.includes("/search?c=products")) {
-        console.log("feasibility test condition true---------")
-        setTimeout(function () {
-          helper.waitForElement('[data-bookmarkable-type="Product"] .product--thumbnail-image-container a', init, 50, 15000);
-        }, 1000)
+    /* Variation Init */
+    function init() {
+      addClass('body', 'cre-t-209')
+      waitForElement('.page-banner.page-banner--image-only ~.product-placement-container__wrapper', function () {
+        // Select all elements matching the given selector
+        var elements = document.querySelectorAll('.page-banner.page-banner--image-only ~.product-placement-container__wrapper');
 
+        // Loop through each element and add the unique class
+        elements.forEach((element, index) => {
+          element.classList.add(`cre-t-209-card${index + 1}`);
+        });
 
-      }
-    })
+      });
 
-    /* Initialise variation */
+      trigger();
+    }
+
+    waitForElement('body', init);
 
   } catch (e) {
     if (debug) console.log(e, "error in Test" + variation_name);
