@@ -354,20 +354,31 @@
     () => document.querySelector("#atoz-mega-menu-2022 ul.menu-row") ? true : false,
     () => {
       $addClass("body", "cre-61");
-      var menu = document.querySelector("#atoz-mega-menu-2022 ul.menu-row");
-      if (!document.querySelector("#atoz-mega-menu-2022 ul.menu-row.cre-list-61")) {
-        menu.innerHTML = ``;
-        document.querySelector("#atoz-mega-menu-2022 ul.menu-row").classList.add("cre-list-61");
-        productList.forEach(function(product) {
-          var li = document.createElement("li");
-          var a = document.createElement("a");
-          a.className = "wholebox navigationevent cre-atoz-link";
-          a.href = product.href;
-          a.textContent = product.title;
-          li.appendChild(a);
-          menu.appendChild(li);
-        });
+      var menu1 = document.querySelector("#atoz-mega-menu-2022 ul.menu-row");
+      if (!document.querySelector(".cre-61-new-list")) {
+        menu1.insertAdjacentHTML("afterend", '<ul class="cre-61-new-list menu-row"></ul>');
       }
+      waitFor(
+        () => document.querySelector(".cre-61-new-list") ? true : false,
+        () => {
+          if (!document.querySelector("#atoz-mega-menu-2022 ul.menu-row.cre-list-61")) {
+            document.querySelector("#atoz-mega-menu-2022 ul.menu-row").classList.add("cre-list-61");
+            productList.forEach(function(product) {
+              var li = document.createElement("li");
+              var a = document.createElement("a");
+              a.className = "wholebox navigationevent cre-atoz-link";
+              a.href = product.href;
+              a.textContent = product.title;
+              li.appendChild(a);
+              document.querySelector(".cre-61-new-list").appendChild(li);
+            });
+          }
+        },
+        {
+          interval: 50,
+          duration: 15e3
+        }
+      );
     },
     {
       interval: 50,
