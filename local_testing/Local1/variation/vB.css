@@ -1,7 +1,13 @@
-html body.cre-patternIndex.cre-patternIndex-active .product--thumbnail-image-container a:hover .cre-patternImage {
-    display: block !important;
+html body.cre-t-209 #product-catalog-container-.cre-t-209-card2,
+html body.cre-t-209 #product-catalog-container-.cre-t-209-card3,
+html body.cre-t-209 #product-catalog-container-.cre-t-209-card4,
+html body.cre-t-209 #product-catalog-container-.cre-t-209-card5 {
+    display: none !important;
 }
 
-html body.cre-patternIndex.cre-patternIndex-active .product--thumbnail-image-container a:hover img:nth-child(1) {
+html body.cre-t-209 .product-placement-container__wrapper.cre-t-209-card2,
+html body.cre-t-209 .product-placement-container__wrapper.cre-t-209-card3,
+html body.cre-t-209 .product-placement-container__wrapper.cre-t-209-card4,
+html body.cre-t-209 .product-placement-container__wrapper.cre-t-209-card5 {
     display: none !important;
 }
