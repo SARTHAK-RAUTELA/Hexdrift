@@ -16,8 +16,18 @@ html body.cre-sfg-14 .cre-t-39-testimonial-container h2 ,
 html body.cre-sfg-14 .cre-t-39-testimonial-container p {
     text-align: center;
 }
+
+html body.cre-sfg-14 .cre-t-39-testimonial-container h2{
+    font-weight: 500;
+    color: #117380;
+}
+html body.cre-sfg-14 .cre-t-39-testimonial-container p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
 html body.cre-sfg-14 .cre-t-39-testimonial-wrapper {
-    margin-top: 60px!important;
+    margin-top: 80px!important;
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
@@ -31,10 +41,7 @@ html body.cre-sfg-14 .cre-t-sfg14-box {
     margin: 10px 0;
     box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, .1);
     text-align: center;
-}
-
-html body.cre-sfg-14 .cre-swiper-pagination.swiper-pagination-clickable {
-    margin-top: 20px;
+    min-height: 600px;
 }
 html body.cre-sfg-14 .cre-swiper-pagination .swiper-pagination-bullet-active {
     background-color: #2d7480;
@@ -45,8 +52,8 @@ html body.cre-sfg-14 .cre-t-sfg14-box img {
 
 html body.cre-sfg-14 .cre-swiper-button-prev:before {
     content: " ";
-    height: 60px;
-    width: 60px;
+    height: 38px;
+    width: 38px;
     display: inline-block;
     background-image: url(https://www.sfg20.co.uk/hubfs/SFG20_Web_Theme_Nov2023/arrow_forward_ios-1.svg);
     position: absolute;
@@ -58,11 +65,15 @@ html body.cre-sfg-14 .cre-swiper-button-prev:before {
     background-size: contain;
     filter: grayscale(100%);
     cursor: pointer;
+    border-radius: 50px;
+    background-color: #ebeeef;
+    background-position: center center;
+    background-size: 29px;
 }
 html body.cre-sfg-14 .cre-swiper-button-next::after {
     content: " ";
-    height: 60px;
-    width: 60px;
+    height: 38px;
+    width: 38px;
     display: inline-block;
     background-image: url(https://www.sfg20.co.uk/hubfs/SFG20_Web_Theme_Nov2023/arrow_forward_ios-1.svg);
     position: absolute;
@@ -72,6 +83,10 @@ html body.cre-sfg-14 .cre-swiper-button-next::after {
     background-size: contain;
     filter: grayscale(100%);
     cursor: pointer;
+    border-radius: 50px;
+    background-color:#ebeeef;
+    background-position: center center;
+    background-size: 29px;
 }
 
 html body.cre-sfg-14 section.sfg20-software-section:before {
