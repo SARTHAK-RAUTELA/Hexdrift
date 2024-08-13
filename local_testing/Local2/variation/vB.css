@@ -1,24 +1,113 @@
-/* src/conversion-rate-experts/iFLY-Test33/variation1/styles/style.scss */
-html body.CRE-33 .cre-33-container {
-  color: #000 !important;
-  font-family:
-    Flama,
-    Arial,
-    sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  line-height: 23px !important;
-}
-html body.CRE-33 .cre-33-heading {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-html body.CRE-33 .pageHeader >div:first-child{
-  font-size: 28px !important;
+@media screen and (min-width:1024px) {
+  html body #main-content .cre-t-39-testimonial-wrapper {
+    display: block !important;
   }
-html body.CRE-33  .cre-33-container{
-  max-width: 796px;
-  margin: auto;
-  margin-bottom: 10px;
-    }
+}
+
+html body.cre-sfg-14 .cre-swiper-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+html body.cre-sfg-14 .cre-t-sfg14-box p {
+  text-align: center;
+  padding: 18px 50px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+}
+
+html body.cre-sfg-14 .cre-t-39-testimonial-container h2,
+html body.cre-sfg-14 .cre-t-39-testimonial-container p {
+  text-align: center;
+}
+
+html body.cre-sfg-14 .cre-t-39-testimonial-container h2 {
+  margin-bottom: 22px;
+  font-size: 36px;
+}
+
+html body.cre-sfg-14 .cre-t-39-testimonial-container p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+html body.cre-sfg-14 .cre-t-39-testimonial-wrapper {
+  margin-top: 80px !important;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+html body.cre-sfg-14 .cre_headinger {
+  margin-bottom: 60px;
+}
+
+html body.cre-sfg-14 .cre-t-sfg14-box {
+  border: 1px solid #ebeeef;
+  box-shadow: 2px 0px 10px #b6b6b6;
+  margin: 10px 0;
+  box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, .1);
+  text-align: center;
+  min-height: 600px;
+}
+
+html body.cre-sfg-14 .cre-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #2d7480;
+}
+
+html body.cre-sfg-14 .cre-t-sfg14-box img {
+  width: 100%;
+}
+
+html body.cre-sfg-14 .cre-swiper-button-prev:before {
+  content: " ";
+  height: 38px;
+  width: 38px;
+  display: inline-block;
+  background-image: url(https://www.sfg20.co.uk/hubfs/SFG20_Web_Theme_Nov2023/arrow_forward_ios-1.svg);
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #ebeeef;
+  background-position: center center;
+  background-size: 29px;
+  z-index: 1;
+}
+
+html body.cre-sfg-14 .cre-swiper-button-next::after {
+  content: " ";
+  height: 38px;
+  width: 38px;
+  display: inline-block;
+  background-image: url(https://www.sfg20.co.uk/hubfs/SFG20_Web_Theme_Nov2023/arrow_forward_ios-1.svg);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(100%);
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #ebeeef;
+  background-position: center center;
+  background-size: 29px;
+  z-index: 1;
+}
+
+html body.cre-sfg-14 section.sfg20-software-section:before {
+  display: none !important;
+}
+
+.cre-t-sfg14-boxslider-wrapper {
+  padding-bottom: 50px;
+}

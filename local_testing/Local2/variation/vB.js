@@ -1,129 +1,224 @@
-if (!window.location.href.includes("https://www.gendergp.com/next-steps/")){
-
-(() => {
-  var __defProp = Object.defineProperty;
-  var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
-
-  // lib/bm-js/lib/index.js
-  var waitFor = /* @__PURE__ */ __name((check, invoke, poll) => {
-    if (check()) {
-      invoke();
-      return;
-    }
-    let polling = setInterval(() => {
-      try {
-        if (check()) {
-          invoke();
-          clearInterval(polling);
-          polling = null;
-        }
-      } catch (e) {
-        console.info("listener not processed");
+(function () {
+  try {
+      /* main variables */
+      var debug = 1;
+      var variation_name = "cre-sfg-14";
+      /* helper library */
+      var _$;
+      !(function (factory) {
+          _$ = factory();
+      })(function () {
+          var bm = function (s) {
+              if (typeof s === "string") {
+                  this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+              }
+              if (typeof s === "object") {
+                  this.value = [s];
+              }
+          };
+          bm.prototype = {
+              eq: function (n) {
+                  this.value = [this.value[n]];
+                  return this;
+              },
+              each: function (fn) {
+                  [].forEach.call(this.value, fn);
+                  return this;
+              },
+              log: function () {
+                  var items = [];
+                  for (var index = 0; index < arguments.length; index++) {
+                      items.push(arguments[index]);
+                  }
+                  console && console.log(variation_name, items);
+              },
+              addClass: function (v) {
+                  var a = v.split(" ");
+                  return this.each(function (i) {
+                      for (var x = 0; x < a.length; x++) {
+                          if (i.classList) {
+                              i.classList.add(a[x]);
+                          } else {
+                              i.className += " " + a[x];
+                          }
+                      }
+                  });
+              },
+              live: function (selector, event, callback, context) {
+                  /****Helper Functions****/
+                  // helper for enabling IE 8 event bindings
+                  function addEvent(el, type, handler) {
+                      if (el.attachEvent) el.attachEvent("on" + type, handler);
+                      else el.addEventListener(type, handler);
+                  }
+                  // matches polyfill
+                  this.Element &&
+                      (function (ElementPrototype) {
+                          ElementPrototype.matches =
+                              ElementPrototype.matches ||
+                              ElementPrototype.matchesSelector ||
+                              ElementPrototype.webkitMatchesSelector ||
+                              ElementPrototype.msMatchesSelector ||
+                              function (selector) {
+                                  var node = this,
+                                      nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                                      i = -1;
+                                  while (nodes[++i] && nodes[i] != node);
+                                  return !!nodes[i];
+                              };
+                      })(Element.prototype);
+                  // live binding helper using matchesSelector
+                  function live(selector, event, callback, context) {
+                      addEvent(context || document, event, function (e) {
+                          var found,
+                              el = e.target || e.oldElement;
+                          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                          if (found) callback.call(el, e);
+                      });
+                  }
+                  live(selector, event, callback, context);
+              },
+              waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
+                  var interval = setInterval(function () {
+                      if (_$(selector).value.length) {
+                          clearInterval(interval);
+                          trigger();
+                      }
+                  }, delayInterval);
+                  setTimeout(function () {
+                      clearInterval(interval);
+                  }, delayTimeout);
+              },
+          };
+          return function (selector) {
+              return new bm(selector);
+          };
+      });
+      function waitForSwiper(trigger) {
+          var interval = setInterval(function () {
+              if (typeof window.Swiper != "undefined") {
+                  clearInterval(interval);
+                  trigger();
+              }
+          }, 50);
+          setTimeout(function () {
+              clearInterval(interval);
+          }, 15000);
       }
-    }, poll.interval);
-    setTimeout(() => {
-      if (!polling)
-        return;
-      clearInterval(polling);
-      console.info("render listener timeout", poll);
-      window.evolvRenderTimeout = {
-        msg: "evolv render listener timeout",
-        poll
-      };
-    }, poll.duration);
-  }, "waitFor");
-  var $refs = /* @__PURE__ */ __name((selector) => {
-    if (!selector) {
-      console.error(`Invalid selector!`);
-      return;
-    }
-    const els = document.querySelectorAll(selector);
-    if (!els || !els.length) {
-      console.error(`Selector ${selector} does not exist in DOM!`);
-      return;
-    }
-    return els;
-  }, "$refs");
-  var $addClass = /* @__PURE__ */ __name((selector, classes) => {
-    if (!classes) {
-      console.error("Atleast one class is required!");
-      return;
-    }
-    const elements = $refs(selector);
-    if (!elements)
-      return;
-    if (Array.isArray(classes)) {
-      elements.forEach((el) => {
-        el.classList.add(...classes);
-      });
-      return;
-    }
-    if (typeof classes === "string") {
-      elements.forEach((el) => {
-        el.classList.add(classes);
-      });
-    }
-  }, "$addClass");
-
-  // src/conversion-rate-experts/GenderGP-Test7/variation1/index.js
-  var banner_html = `<div class="cre-t7-banner">
-        <div class="cre-t7-hero-banner">
-            <div class="left-s-block">
-                <h1>Empowering transgender and non-binary people to get the care they deserve, wherever they are.</h1>
-                <a href="https://www.gendergp.com/accessing-gender-affirming-care/" class="cre-start-now-btn">Start now</a>
-            </div>
-        </div>
-        <div class="cre-t7-below-hero-banner">
-            <div class="left-bh-sec">
-                <div class="list-heading">GenderGP is committed to providing gender-affirming care that supports your journey every step of the way.</div>
-                <div class="list-point-container">
-                    <div class="list-point">
-                        <div class="list-point-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8.37891 12.0001L10.7889 14.4201L15.6189 9.58008" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.7489 2.45007C11.4389 1.86007 12.5689 1.86007 13.2689 2.45007L14.8489 3.81007C15.1489 4.07007 15.7089 4.28007 16.1089 4.28007H17.8089C18.8689 4.28007 19.7389 5.15007 19.7389 6.21007V7.91007C19.7389 8.30007 19.9489 8.87007 20.2089 9.17007L21.5689 10.7501C22.1589 11.4401 22.1589 12.5701 21.5689 13.2701L20.2089 14.8501C19.9489 15.1501 19.7389 15.7101 19.7389 16.1101V17.8101C19.7389 18.8701 18.8689 19.7401 17.8089 19.7401H16.1089C15.7189 19.7401 15.1489 19.9501 14.8489 20.2101L13.2689 21.5701C12.5789 22.1601 11.4489 22.1601 10.7489 21.5701L9.16891 20.2101C8.86891 19.9501 8.30891 19.7401 7.90891 19.7401H6.17891C5.11891 19.7401 4.24891 18.8701 4.24891 17.8101V16.1001C4.24891 15.7101 4.03891 15.1501 3.78891 14.8501L2.43891 13.2601C1.85891 12.5701 1.85891 11.4501 2.43891 10.7601L3.78891 9.17007C4.03891 8.87007 4.24891 8.31007 4.24891 7.92007V6.20007C4.24891 5.14007 5.11891 4.27007 6.17891 4.27007H7.90891C8.29891 4.27007 8.86891 4.06007 9.16891 3.80007L10.7489 2.45007Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </div>
-                        <div class="list-point-text">Treatment recommendations in 24 hours</div>
-                    </div>
-                    <div class="list-point">
-                        <div class="list-point-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8.37891 12.0001L10.7889 14.4201L15.6189 9.58008" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.7489 2.45007C11.4389 1.86007 12.5689 1.86007 13.2689 2.45007L14.8489 3.81007C15.1489 4.07007 15.7089 4.28007 16.1089 4.28007H17.8089C18.8689 4.28007 19.7389 5.15007 19.7389 6.21007V7.91007C19.7389 8.30007 19.9489 8.87007 20.2089 9.17007L21.5689 10.7501C22.1589 11.4401 22.1589 12.5701 21.5689 13.2701L20.2089 14.8501C19.9489 15.1501 19.7389 15.7101 19.7389 16.1101V17.8101C19.7389 18.8701 18.8689 19.7401 17.8089 19.7401H16.1089C15.7189 19.7401 15.1489 19.9501 14.8489 20.2101L13.2689 21.5701C12.5789 22.1601 11.4489 22.1601 10.7489 21.5701L9.16891 20.2101C8.86891 19.9501 8.30891 19.7401 7.90891 19.7401H6.17891C5.11891 19.7401 4.24891 18.8701 4.24891 17.8101V16.1001C4.24891 15.7101 4.03891 15.1501 3.78891 14.8501L2.43891 13.2601C1.85891 12.5701 1.85891 11.4501 2.43891 10.7601L3.78891 9.17007C4.03891 8.87007 4.24891 8.31007 4.24891 7.92007V6.20007C4.24891 5.14007 5.11891 4.27007 6.17891 4.27007H7.90891C8.29891 4.27007 8.86891 4.06007 9.16891 3.80007L10.7489 2.45007Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </div>
-                        <div class="list-point-text">Referrals to prescribers instantly</div>
-                    </div>
-                    <div class="list-point">
-                        <div class="list-point-img">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8.37891 12.0001L10.7889 14.4201L15.6189 9.58008" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.7489 2.45007C11.4389 1.86007 12.5689 1.86007 13.2689 2.45007L14.8489 3.81007C15.1489 4.07007 15.7089 4.28007 16.1089 4.28007H17.8089C18.8689 4.28007 19.7389 5.15007 19.7389 6.21007V7.91007C19.7389 8.30007 19.9489 8.87007 20.2089 9.17007L21.5689 10.7501C22.1589 11.4401 22.1589 12.5701 21.5689 13.2701L20.2089 14.8501C19.9489 15.1501 19.7389 15.7101 19.7389 16.1101V17.8101C19.7389 18.8701 18.8689 19.7401 17.8089 19.7401H16.1089C15.7189 19.7401 15.1489 19.9501 14.8489 20.2101L13.2689 21.5701C12.5789 22.1601 11.4489 22.1601 10.7489 21.5701L9.16891 20.2101C8.86891 19.9501 8.30891 19.7401 7.90891 19.7401H6.17891C5.11891 19.7401 4.24891 18.8701 4.24891 17.8101V16.1001C4.24891 15.7101 4.03891 15.1501 3.78891 14.8501L2.43891 13.2601C1.85891 12.5701 1.85891 11.4501 2.43891 10.7601L3.78891 9.17007C4.03891 8.87007 4.24891 8.31007 4.24891 7.92007V6.20007C4.24891 5.14007 5.11891 4.27007 6.17891 4.27007H7.90891C8.29891 4.27007 8.86891 4.06007 9.16891 3.80007L10.7489 2.45007Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </div>
-                        <div class="list-point-text">Prescriptions delivered in 2-3 days</div>
-                    </div>
-                </div>
-            </div>
-            <div class="right-bh-section">
-            <div>
-                <a href="https://book.gendergp.com/#/ggp-5" class="cre-t7-card">
-                    <div class="link-text">
-						Counselling \u2192</div>
-                </a>
-                </div>
-                  <div>
-                <a href="https://www.gendergp.com/subscription-payments/" class="cre-t7-card">
-                    <div class="link-text">
-						Become a member \u2192</div>
-                </a>
-                  </div>
-										
-            </div>
-        </div>
-    </div>`;
-  waitFor(
-    () => document.querySelector("#welcome-gate") ? true : false,
-    () => {
-      $addClass("body", "CRE-7");
-      document.querySelector("#welcome-gate").insertAdjacentHTML("beforebegin", banner_html);
-    },
-    {
-      interval: 50,
-      duration: 15e3
-    }
-  );
+      // Helper functions
+      function addScript() {
+          var bmScript = document.createElement("script");
+          bmScript.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+          document.getElementsByTagName("head")[0].appendChild(bmScript);
+          var bmcsslink = document.createElement("link");
+          bmcsslink.rel = "stylesheet";
+          bmcsslink.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+          document.getElementsByTagName("head")[0].appendChild(bmcsslink);
+      }
+      var CreSlider = `
+<div class="cre-t-39-testimonial-wrapper" style="display:none">
+<div class="cre-t-39-testimonial-container ">
+<div class="cre_headinger">
+<h2>SFG20 is the industry standard for building maintenance, <br> which we deliver using cutting-edge software.</h2>
+<p>Customize task details like duration, frequency, criticality and skill set for better resource planning and allocation.</p>
+</div>
+<div class="cre-t-sfg14-boxslider swiper content-wrapper">
+<div class="cre-t-sfg14-boxslider-wrapper swiper-wrapper">
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_1.svg">
+<p>With over 1000 regularly updated maintenance schedules, all aligned with the latest legislation, you can quickly find what you need using keywords, Uniclass, SFG20, or NRM codes.</P>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_2.svg">
+<p>Tailor and organize maintenance schedules with custom Maintenance Regimes, then securely share them with your team in the field.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_3.svg">
+<p>Customize task details like duration, frequency, criticality and skill set for better resource planning and allocation.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_4.svg">
+<p>Create tailored maintenance schedules with Derived or Custom options, perfect for focusing on critical tasks and managing specialist assets.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_5.svg">
+<p>Easily and securely share Maintenance Regimes with authorized teams, ensuring everyone works under the latest SFG20 standard.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_6.svg">
+<p>Quickly access your most-used schedules by creating personalized Favourite Lists, saving you time and effort.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_9.svg">
+<p>Use custom Tags to quickly identify schedules, helping you and your team save valuable time.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_10.svg">
+<p>Take full control by adding new users and assigning licenses and roles directly from the Admin area.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_11.svg">
+<p>Stay on top of tasks with the 'Actions' area, your personal reminder and to-do list at a tap.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_7.svg">
+<p>Stay compliant with automated schedule updates, compare changes side-by-side, and implement them at your convenience.</p>
+</div>
+<div class="cre-t-sfg14-box swiper-slide">
+<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_8.svg">
+<p>Integrate Facilities-iQ to your FM system via our free API, automating Maintenance Regimes and saving hours of manual entry.</p>
+</div>
+</div>
+</div>
+<!-- If we need pagination -->
+<div class="cre-swiper-pagination"></div>
+</div>
+<!-- If we need navigation buttons -->
+<div class="cre-swiper-button-prev"></div>
+<div class="cre-swiper-button-next"></div>
+<!-- </div> -->
+<!-- </div> -->
+</div>
+`;
+      function intializeSwiper() {
+          var swiper = document.querySelector(".cre-t-sfg14-boxslider");
+          new Swiper(swiper, {
+              slidesPerView: 1.5,
+              centeredSlides: true,
+              grabCursor: true,
+              spaceBetween: 30,
+              loop: true,
+              // autoplay: {
+              //     delay: 2000, // 2000 milliseconds = 2 seconds
+              //     disableOnInteraction: false,
+              // },
+              pagination: {
+                  el: ".cre-swiper-pagination",
+                  clickable: true,
+              },
+              navigation: {
+                  nextEl: ".cre-swiper-button-next",
+                  prevEl: ".cre-swiper-button-prev",
+              },
+          });
+      }
+      var helper = _$();
+      function init() {
+          _$("body").addClass(variation_name);
+          if (!document.querySelector(".cre-t-39-testimonial-container")) {
+              document.querySelector(".body-container--home .widget-type-cell .row-number-1").insertAdjacentHTML("afterend", CreSlider);
+          }
+          waitForSwiper(
+              function () {
+                  intializeSwiper();
+              },
+              50,
+              15000
+          );
+      }
+      addScript();
+      helper.waitForElement(".body-container--home .widget-type-cell .row-number-1", init, 50, 25000);
+  } catch (e) {
+      if (debug) console.log(e, "error in Test" + variation_name);
+  }
 })();
-}
