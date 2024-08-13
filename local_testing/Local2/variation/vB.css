@@ -46,12 +46,9 @@ html body.cre-sfg-14 .cre_headinger {
 }
 
 html body.cre-sfg-14 .cre-t-sfg14-box {
-  border: 1px solid #ebeeef;
-  box-shadow: 2px 0px 10px #b6b6b6;
   margin: 10px 0;
-  box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, .1);
   text-align: center;
-  min-height: 600px;
+  /* min-height: 600px; */
 }
 
 html body.cre-sfg-14 .cre-swiper-pagination .swiper-pagination-bullet-active {
@@ -60,6 +57,11 @@ html body.cre-sfg-14 .cre-swiper-pagination .swiper-pagination-bullet-active {
 
 html body.cre-sfg-14 .cre-t-sfg14-box img {
   width: 100%;
+  object-fit: fill;
+  border: 1px solid #ebeeef;
+  box-shadow: 2px 0px 10px #b6b6b6;
+  border-radius: 10px;
+  height: 480px;
 }
 
 html body.cre-sfg-14 .cre-swiper-button-prev:before {
