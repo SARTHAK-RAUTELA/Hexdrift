@@ -7,6 +7,9 @@
 html body.cre-sfg-14 .cre-swiper-pagination {
   display: flex;
   justify-content: center;
+  z-index: 2;
+  position: absolute;
+  bottom: 48px;
 }
 
 html body.cre-sfg-14 .cre-t-sfg14-box p {
@@ -31,7 +34,6 @@ html body.cre-sfg-14 .cre-t-39-testimonial-container h2 {
 
 html body.cre-sfg-14 .cre-t-39-testimonial-container p {
   font-size: 18px;
-  font-weight: 500;
 }
 
 html body.cre-sfg-14 .cre-t-39-testimonial-wrapper {
@@ -45,10 +47,15 @@ html body.cre-sfg-14 .cre_headinger {
   margin-bottom: 60px;
 }
 
-html body.cre-sfg-14 .cre-t-sfg14-box {
+html body.cre-sfg-14 .cre-t-sfg14-box img {
+  border: 1px solid #ebeeef;
+  box-shadow: 2px 0px 10px #b6b6b6;
   margin: 10px 0;
+  box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, .1);
   text-align: center;
-  /* min-height: 600px; */
+  border-radius: 10px;
+  height: 480px;
+  object-fit: fill;
 }
 
 html body.cre-sfg-14 .cre-swiper-pagination .swiper-pagination-bullet-active {
@@ -57,11 +64,6 @@ html body.cre-sfg-14 .cre-swiper-pagination .swiper-pagination-bullet-active {
 
 html body.cre-sfg-14 .cre-t-sfg14-box img {
   width: 100%;
-  object-fit: fill;
-  border: 1px solid #ebeeef;
-  box-shadow: 2px 0px 10px #b6b6b6;
-  border-radius: 10px;
-  height: 480px;
 }
 
 html body.cre-sfg-14 .cre-swiper-button-prev:before {
