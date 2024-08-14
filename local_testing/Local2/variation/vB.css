@@ -589,3 +589,22 @@ ul.homepage-hero_scroll {
 
 
 }
+
+
+@media (max-width: 768px) and (min-width: 701px) {
+  body [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] {
+    display: block !important;
+    border-right: 1px solid #d3d4d5 !important;
+        border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  body [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"]{
+    border-right: 1px solid #d3d4d5 !important;
+    border-radius: 3px;
+  }
+  body [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]{
+    width: 99% !important;
+  }
+}
