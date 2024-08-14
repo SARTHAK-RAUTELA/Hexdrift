@@ -171,7 +171,6 @@ html body .bm-item li a:before {
 
 html body form[class*="search-bar-form_root"] {
 	background-color: #fff;
-	box-shadow: none;
 }
 
 html body .bm-item li span {
@@ -236,7 +235,7 @@ html body [class*="composable-customer-header"]+.bg-white.bb.b-gray-300.pa0 {
 
 	[class*="homepage-hero_mobileSearchBar"] form>div {
 		height: 54px;
-    border-color: #d3d4d5 !important;
+		border-color: #d3d4d5 !important;
 	}
 
 	[class*="search-bar-form_rootLarge"] [data-test="search-button"] span {
@@ -528,7 +527,7 @@ ul.homepage-hero_scroll {
 
 @media screen and (min-width: 1024px) {
 	html body [class*="homepage-hero_overflowOnTallScreens"]>div:before {
-		background-image: url(//cdn.optimizely.com/img/20611073899/4608585555ce408ca875af7a8e105d12.png);
+		background-image: url(//cdn.optimizely.com/img/20611073899/2677d2afd21142419866b01fb2285530.png);
 		height: 176px;
 		width: 263px;
 		top: 92px;
@@ -587,24 +586,55 @@ ul.homepage-hero_scroll {
 		margin-left: 20px;
 	}
 
+	html body [class*="homepage-hero_mainSection"] {
+		padding-top: 54px;
+	}
+
+	html body [class*="homepage-hero_mainSection"]>div:first-child {
+		margin-top: 28px !important;
+	}
+
+	html body [class*="homepage-hero_heavy"] {
+		margin-bottom: 80px !important;
+	}
+
+	html body .bmhidesection {
+		padding-top: 50px !important;
+		padding-bottom: 0px !important;
+	}
 
 }
 
 
 @media (max-width: 768px) and (min-width: 701px) {
-  body [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] {
-    display: block !important;
-    border-right: 1px solid #d3d4d5 !important;
-        border-radius: 3px;
-  }
+	body.TT-148 [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] {
+		display: block !important;
+		border-right: 1px solid #d3d4d5 !important;
+		border-radius: 3px;
+	}
 }
 
-@media screen and (max-width: 768px){
-  body [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"]{
-    border-right: 1px solid #d3d4d5 !important;
-    border-radius: 3px;
-  }
-  body [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]{
-    width: 99% !important;
-  }
+@media screen and (max-width: 768px) {
+	body.TT-148 [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] {
+		border-right: 1px solid #d3d4d5 !important;
+		border-radius: 3px;
+	}
+
+	body.TT-148 [class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] {
+		width: 99% !important;
+	}
+}
+
+
+html body.TT-148 form[class*="search-bar-form_root"] [class*="dropdown-wrapper_root"] {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+body.TT-148 [class*="category-header_root"] [class*="category-header_tabItem"] {
+	cursor: pointer;
+}
+
+body.TT-148 div[class*="top-banner_root"]+div {
+	border-bottom: 0 !important;
 }
