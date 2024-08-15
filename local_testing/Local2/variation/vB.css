@@ -1,162 +1,14 @@
-html[lang="en"] body.cre-t-5 .cre-t-5_hide {
-    display: none !important;
-}
-
-/* html[lang="en"] body.cre-t-5 #bCheckForAi::after {
-    content: "IS THIS DETECTED AS AI?";
-    font-size: 14px;
-    color: #fff;
-} */
-
-/* html[lang="en"] body.cre-t-5 #bCheckForAi.cre-t-5_checking::after {
-    content: "Checking...";
-} */
-
-html[lang="en"] body.cre-t-5 .cre-t-5_button-container {
-    margin: auto !important;
-    /* column-gap: 30px !important; */
-    margin-right: 0 !important;
-}
-
-html[lang="en"] body.cre-t-5 .cre-t-5_button-container button {
-    /* border-radius: 0 !important; */
-}
-
-/* html[lang="en"] body.cre-t-5 .cre-t-5_button-container #bCheckForAi {
-    background-color: #000 !important;
-    color: #fff;
-    font-size: 0 !important;
-} */
-
-/* html[lang="en"] body.cre-t-5 .cre-t-5_button-container #bHumanize {
-    background-color: #fff !important;
-    border: 1px solid #000;
-    color: #000 !important;
-} */
-
-html[lang="en"] body.cre-t-5 .paste_custom {
-    display: block;
-    position: absolute;
-    user-select: none;
-    text-transform: uppercase;
-    font-size: 24px;
-    color: #000;
-    pointer-events: none;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
-
-html[lang="en"] body.cre-t-5 .paste_custom.cre-t-5_hide {
-    display: none;
-}
-
-html[lang="en"] body.cre-t-5 span.blinking_cursor {
-    font-size: 30px;
-    font-weight: 400;
-    color: #000;
-    animation: blink 1s step-end infinite;
-}
-
-html[lang="en"] body.cre-t-5 .cre-t-5_subcopy {
-    margin: auto !important;
-    margin-bottom: 15px !important;
-    color: #000 !important;
-}
-
-html[lang="en"] body.cre-t-5 .cre-t-5_dark.paste_custom {
-    color: #fff;
-
-}
-
-html[lang="en"] body.cre-t-5 .cre-t-5_dark.paste_custom span.blinking_cursor {
-    color: #fff;
-    animation: blink_dark 1s step-end infinite;
-}
-
-
-@keyframes blink {
-
-    from,
-    to {
-        color: transparent;
-    }
-
-    30% {
-        color: #000;
-    }
-}
-
-@keyframes blink_dark {
-
-    from,
-    to {
-        color: transparent;
-    }
-
-    30% {
-        color: #fff;
-    }
-}
-
-html[lang="en"] body.cre-t-5 .cre-t-5_box-footer {
-    margin-top: 7px !important;
-    margin-bottom: 6px !important;
-}
-
-html[lang="en"] body.cre-t-5 .cre-t-5_box-footer>div {
-    display: none;
-}
-
-
-html[lang="en"] body.cre-t-5 .cre-t-5_hide_desktop {
-    display: none;
-}
-
-@media screen and (max-width:788px) {
-    html[lang="en"] body.cre-t-5 .paste_custom {
-        /* left: 19%; */
-        font-size: 16px;
-    }
-
-    html[lang="en"] body.cre-t-5 span.blinking_cursor {
-        font-size: 24px;
-        position: relative;
-        top: 2px;
-    }
-
-    html[lang="en"] body.cre-t-5 .cre-t-5_hide_desktop {
-        display: unset;
-        margin-top: -32px !important;
-    }
-}
-
-/* html[lang="en"] body.cre-t-5 #bHumanize::after {
-    content: "HUMANIZE THIS TEXT";
-    font-size: 14px;
-} */
-
-html[lang="en"] body.cre-t-5 #bHumanize {
-    /* font-size: 0 !important; */
-}
-
 
 
 /* -----------New---------- */
-html[lang="en"] body.cre-t-5 #bHumanize {
+html[lang="en"] body #bHumanize {
     background-color: #25AB2B !important;
     min-width: 200px !important;
     font-size: 0 !important;
     text-transform: uppercase !important;
 }
 
-html[lang="en"] body.cre-t-5 #bCheckForAi {
+html[lang="en"] body #bCheckForAi {
     border-color: #51CA89 !important;
     color: #51CA89 !important;
     min-width: 150px !important;
@@ -164,20 +16,20 @@ html[lang="en"] body.cre-t-5 #bCheckForAi {
     text-transform: uppercase !important;
 }
 
-html[lang="en"] body.cre-t-5 button#bCheckForAi:after {
+html[lang="en"] body button#bCheckForAi:after {
     content: 'Detect AI';
     font-size: 14px;
 }
 
-html[lang="en"] body.cre-t-5 button#bHumanize:after {
+html[lang="en"] body button#bHumanize:after {
     content: 'Humanize This Text';
     font-size: 14px !important;
 }
 
-html[lang="en"] body.cre-t-5 .bubble-element.Group.cmaWaNaH.bubble-r-container.flex.row {
+html[lang="en"] body .bubble-element.Group.cmaWaNaH.bubble-r-container.flex.row {
     width: 100% !important;
 }
 
-html[lang="en"] body.cre-t-5 .bubble-element.Group.cmcaIo.bubble-r-container-wrapper {
+html[lang="en"] body .bubble-element.Group.cmcaIo.bubble-r-container-wrapper {
     display: none;
 }
