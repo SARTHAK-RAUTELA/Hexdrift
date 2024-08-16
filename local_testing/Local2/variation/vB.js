@@ -95,6 +95,10 @@
                 document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder","Describe your project or problem")
             },50,15000)
 
+            waitForElement('[class*="search-bar-form_root"] input:placeholder-shown"]',function(){
+                document.querySelector('[class*="search-bar-form_root"] input:placeholder-shown"]').setAttribute("placeholder","Describe your project or problem")
+            },50,15000)
+
             waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]',function(){
                 document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "Describe your project or problem"
             },50,15000)
