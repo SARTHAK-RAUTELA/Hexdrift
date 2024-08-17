@@ -92,11 +92,11 @@
             document.querySelector("body").classList.add(variation_name);
 
             waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]',function(){
-                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder","Describe your project or problem")
+                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder","Describe your project or problem - be as detailed as you’d like!")
             },50,15000)
 
             waitForElement('[class*="search-bar-form_root"] input:placeholder-shown"]',function(){
-                document.querySelector('[class*="search-bar-form_root"] input:placeholder-shown"]').setAttribute("placeholder","Describe your project or problem")
+                document.querySelector('[class*="search-bar-form_root"] input:placeholder-shown"]').setAttribute("placeholder","Describe your project or problem - be as detailed as you’d like!")
             },50,15000)
 
             waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]',function(){
