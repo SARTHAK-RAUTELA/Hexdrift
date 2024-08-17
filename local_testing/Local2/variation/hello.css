@@ -68,7 +68,7 @@
     min-height: inherit;
     padding: 0 !important;
     margin: 0 !important;
-    display: flex;
+    display: flex !important;
     padding: 60px;
     max-height: 432px;
 }

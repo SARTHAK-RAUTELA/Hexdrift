@@ -59,7 +59,7 @@
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/521917630962245638",
                 title: "How much does it cost to install a fence?",
                 price: "$1,676-$7,357",
-                subheading: "The national average cost to install a fence is $3,999, and prices range from $1,676-$7,357."
+                subheading: "The national average cost to install a fence is $3,999, and prices range from $1,676-$7,357. The fence's height, length, and material will impact the total cost."
             },
             {
                 url: "https://www.thumbtack.com/p/deep-cleaning-cost",
@@ -176,9 +176,9 @@
             {
                 url: "https://www.thumbtack.com/p/hair-stylist-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/521922066709282822",
-                title: "How much does a haircut cost?",
-                price: "$15-$150",
-                subheading: "The national average cost of a haircut ranges from $40-$66. However, expect to pay $15-$150 for a haircut, depending on the location and the hair salon."
+                title: "How much does a hair stylist cost?",
+                price: "$142-$298",
+                subheading: "The national average cost to hire a hairtsylist is $206, with prices ranging from $142-$298. The type of hairstyle you want and the type of event you're attending can impact pricing."
             }
         ];
         
