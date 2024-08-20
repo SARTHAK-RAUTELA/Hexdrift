@@ -77,7 +77,7 @@ if(!window.location.href.includes("https://www.sfg20.co.uk/webinar/thanks/facili
               </h1>
               <p class="cre_12_subtitle">Skip straight to the features that interest you. No registration required.</p>
               <a href="https://www.sfg20.co.uk/webinar/thanks/facilities-iq-launch" class="cre_12_image_container">
-                <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/image%2028.png" alt="">
+                <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/image 28.png" alt="">
               </a>
               <a href="https://www.sfg20.co.uk/webinar/thanks/facilities-iq-launch" class="cre_12_watch">WATCH NOW</a>
             </div>
@@ -97,7 +97,7 @@ if(!window.location.href.includes("https://www.sfg20.co.uk/webinar/thanks/facili
 
     function eventListeners() {
 
-      document.addEventListener('mouseleave', function (event) {
+      document.querySelector("body").addEventListener('mouseleave', function (event) {
         var session = sessionStorage.getItem("cre_12_modal_triggered");
         if (event.clientY <= 0 && !session && !document.querySelector(".cre_12_modal_triggered")) {
           document.querySelector(".cre_12_container").classList.remove("cre_12_hide");
