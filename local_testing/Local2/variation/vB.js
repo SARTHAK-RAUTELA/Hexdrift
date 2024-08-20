@@ -1,148 +1,217 @@
-if(!window.location.href.includes("https://www.sfg20.co.uk/webinar/thanks/facilities-iq-launch")){
-
-  
 (function () {
-  try {
-    /* main variables */
-    var debug = 1;
-    var variation_name = "cre-t-12";
-
-
-    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-      var interval = setInterval(function () {
-        if (
-          document &&
-          document.querySelector(selector) &&
-          document.querySelectorAll(selector).length > 0
-        ) {
-          clearInterval(interval);
-          trigger();
+    try {
+        /* main variables */
+        var debug = 0;
+        var variation_name = "TT-148";
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, delayInterval);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, delayTimeout);
         }
-      }, delayInterval);
-      setTimeout(function () {
-        clearInterval(interval);
-      }, delayTimeout);
-    }
-
-    function live(selector, event, callback, context) {
-      function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent("on" + type, handler);
-        else el.addEventListener(type, handler);
-      }
-      // matches polyfill
-      this.Element &&
-        (function (ElementPrototype) {
-          ElementPrototype.matches =
-            ElementPrototype.matches ||
-            ElementPrototype.matchesSelector ||
-            ElementPrototype.webkitMatchesSelector ||
-            ElementPrototype.msMatchesSelector ||
-            function (selector) {
-              var node = this,
-                nodes = (node.parentNode || node.document).querySelectorAll(
-                  selector
-                ),
-                i = -1;
-              while (nodes[++i] && nodes[i] != node);
-              return !!nodes[i];
-            };
-        })(Element.prototype);
-
-
-      function live(selector, event, callback, context) {
-        addEvent(context || document, event, function (e) {
-          var found,
-            el = e.target || e.srcElement;
-          while (
-            el &&
-            el.matches &&
-            el !== context &&
-            !(found = el.matches(selector))
-          )
-            el = el.parentElement;
-          if (found) callback.call(el, e);
-        });
-      }
-      live(selector, event, callback, context);
-    }
-
-
-    function addModal() {
-      var modalHtml = `
-        <div class="cre_12_container cre_12_hide">
-          <div class="cre_12_modal_container">
-            <div class="cre_12_modal_content">
-              <h1 class="cre_12_title">
-                Watch a quick tour of<br>Facilities-iQ's key features
-              </h1>
-              <p class="cre_12_subtitle">Skip straight to the features that interest you. No registration required.</p>
-              <a href="https://www.sfg20.co.uk/webinar/thanks/facilities-iq-launch" class="cre_12_image_container">
-                <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/image 28.png" alt="">
-              </a>
-              <a href="https://www.sfg20.co.uk/webinar/thanks/facilities-iq-launch" class="cre_12_watch">WATCH NOW</a>
-            </div>
-            <span class="cre_12_close">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 20L0 18L8 10L0 2L2 0L10 8L18 0L20 2L12 10L20 18L18 20L10 12L2 20Z" fill="#929393"/>
-              </svg>
-            </span>
-          </div>
-        </div>
-      `;
-      if (!document.querySelector(".cre_12_container")) {
-        document.querySelector(".cre-t-12").insertAdjacentHTML("beforeend", modalHtml);
-      }
-    }
-
-
-    function eventListeners() {
-
-      document.querySelector("body").addEventListener('mouseleave', function (event) {
-        var session = sessionStorage.getItem("cre_12_modal_triggered");
-        if (event.clientY <= 0 && !session && !document.querySelector(".cre_12_modal_triggered")) {
-          document.querySelector(".cre_12_container").classList.remove("cre_12_hide");
-          document.querySelector("body.cre-t-12").classList.add("cre_12_modal_triggered");
-        }
-      });
-
-      live(".cre_12_container", "click", function (e) {
-        sessionStorage.setItem("cre_12_modal_triggered", true);
-        if (document.querySelector(".cre_12_modal_container").contains(e.target)) {
-          if (e.target === document.querySelector(".cre_12_close")) {
-            document.querySelector(".cre_12_container").classList.add("cre_12_hide");
+        function addLiveEventListener(selector, event, callback, context) {
+            // Helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+              if (el.attachEvent) el.attachEvent('on' + type, handler);
+              else el.addEventListener(type, handler);
+            }
+            // Matches polyfill
+            this.Element && function (ElementPrototype) {
+              ElementPrototype.matches = ElementPrototype.matches ||
+                ElementPrototype.matchesSelector ||
+                ElementPrototype.webkitMatchesSelector ||
+                ElementPrototype.msMatchesSelector ||
+                function (selector) {
+                  var node = this,
+                    nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                    i = -1;
+                  while (nodes[++i] && nodes[i] != node);
+                  return !!nodes[i];
+                };
+            }(Element.prototype);
+            // Live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+              addEvent(context || document, event, function (e) {
+                var found, el = e.target || e.srcElement;
+                while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                if (found) callback.call(el, e);
+              });
+            }
+            live(selector, event, callback, context);
           }
+        var thumbtechservices = `
+            <div class="thumbtechservices bg-white bmhidesection">
+                <h2 class="bmheading Type_title5__FuNNq">Popular services near you.</h2>
+                <div class="bm-item">
+                    <li title="House cleaning"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
+                    <li title="Handyman"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png" > <p>Handyman <br> <span>j</span></p></a></li>
+                    <li title="Local electricians" ><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> Removal</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local Moving<br>(Under 50 miles)</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance Repair or Maintenance</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor Installation or Replacement</p></a></li>
+                </div>
+            </div>
+        `;
+        var reviews = `
+            <div class="reviewsection desktop">
+                <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
+            </div>
+        `;
+        var mobilereviews = `
+            <div class="reviewsection mobile">
+                <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
+            </div>
+        `;
+        var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
+       
+       
+        var heroheading = 
+        `<div class="thmobilebanner"><img src="//cdn.optimizely.com/img/20611073899/2b43f5d6b9954b86a2a9df7fd4b9f96e.png"></div>
+        <h1 class="mb5  homepage-hero_heavy">
+            <div class="homepage-hero_textCarousel">
+                <ul class="homepage-hero_scroll">
+                    <li>Home improvement,</li>
+                    <li>Home repair,</li>
+                    <li>Home inspection,</li>
+                    <li>Home cleaning,</li>
+                    <li>Home improvement,</li>
+                </ul>
+            </div>
+            <br>made easy.
+        </h1> `;
+        /* Variation Init */
+        function init() {
+            document.querySelector("body").classList.add(variation_name);
+            waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]',function(){
+                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder","Describe your project or problem - be as detailed as you’d like!")
+            },50,15000)
+            waitForElement('[class*="search-bar-form_root"] input:placeholder-shown"]',function(){
+                document.querySelector('[class*="search-bar-form_root"] input:placeholder-shown"]').setAttribute("placeholder","Describe your project or problem - be as detailed as you’d like!")
+            },50,15000)
+            waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]',function(){
+                document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "Describe your project or problem"
+            },50,15000)
+            var textValuesToCheck = ['Popular services'];
+            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
+            elementsToModify.forEach((element) => {
+                var fullTextContent = element.textContent.trim();
+                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
+                    var parentElement = element.closest('.bg-white');
+                    if (parentElement) {
+                        console.log('run ite')
+                        parentElement.classList.add('bmhidesection');
+                    }
+                }
+            });
+            
+            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
+                if (!document.querySelector(".thumbtechservices")) {
+                    document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
+                }
+            } else {
+                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
+                if (rootSiblingElement) {
+                    if (!document.querySelector(".thumbtechservices")) {
+                        rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                    }
+                } else {
+                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
+                    if (customerHeaderSiblingElement) {
+                        if (!document.querySelector(".thumbtechservices")) {
+                            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                        }
+                    }
+                }
+            }
+            // Putting new heading
+            if (!document.querySelector(".thmobilebanner")) {
+                document.querySelector('html body [class*="homepage-hero_heavy"]').insertAdjacentHTML('afterend', heroheading);
+            
+            }
+                
+            if (!document.querySelector(".reviewsection.desktop")) {
+                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
+            }
+            if (!document.querySelector('.reviewsection.mobile')) {
+                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
+            }
+            function wrapDivs() {
+                // Select the starting div with class bmhidesection
+                var startDiv = document.querySelector('.bmhidesection');
+                if (!startDiv) return; // Exit if starting div is not found
+                // Select the next sibling divs after startDiv until we wrap 4 divs
+                var siblingDivs = [];
+                var currentDiv = startDiv.nextElementSibling;
+                for (var i = 0; i < 2; i++) {
+                    if (currentDiv && currentDiv.tagName === 'DIV' && !currentDiv.classList.contains('wrapped-divs')) {
+                        siblingDivs.push(currentDiv);
+                        currentDiv = currentDiv.nextElementSibling;
+                    } else {
+                        break; // Exit loop if not enough valid sibling divs found
+                    }
+                }
+                // Create a new parent div
+                var newParentDiv = document.createElement('div');
+                newParentDiv.className = 'wrapped-divs'; // Assign a class to the new parent div for styling purposes
+                // Append the selected divs to the new parent div
+                siblingDivs.forEach(function (div) {
+                    newParentDiv.appendChild(div);
+                });
+                // Insert the new parent div after startDiv
+                startDiv.parentNode.insertBefore(newParentDiv, startDiv.nextSibling);
+                // Check if the .wrapped-divs element is empty, then remove it
+                var wrappedDiv = document.querySelector('.wrapped-divs');
+                if (wrappedDiv && !wrappedDiv.hasChildNodes()) {
+                    wrappedDiv.parentNode.removeChild(wrappedDiv);
+                }
+            }
+            waitForElement(".bmhidesection", function () {
+                wrapDivs()
+            }, 50, 15000);
+            // Get the zip code value from the input field
+      var zipCode = document.querySelector('[class*="search-bar_zipCodeInput"]').value;
+      // Select all the links inside the thumbtechservices div
+      var links = document.querySelectorAll('.thumbtechservices a');
+      // Loop through each link and replace the zip code in the href attribute
+      links.forEach(function(link) {
+          var href = link.getAttribute('href');
+          href = href.replace(/zip_code=([0-9]+)/, 'zip_code=' + zipCode);
+          link.setAttribute('href', href);
+      });
+    
         }
-        else {
-          document.querySelector(".cre_12_container").classList.add("cre_12_hide");
+        /* Initialise variation */
+        function thumbtackTest144(list, observer) {
+            list.getEntries().forEach((entry) => {
+                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+                    observer.disconnect();
+                    clearInterval(test144Interval);
+                    waitForElement("body", init, 50, 15000);
+                    window.isHydrated = true;
+                }
+            });
         }
-      })
-
+        if (!window.isHydrated) {
+            var test144Interval = setInterval(function () {
+                waitForElement("body", init, 50, 15000);
+            }, 50);
+            setTimeout(function () {
+                clearInterval(test144Interval);
+            }, 3000);
+            const observer = new PerformanceObserver(thumbtackTest144);
+            observer.observe({ entryTypes: ["mark"] });
+        } else {
+            waitForElement("body", init, 50, 15000);
+        }
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name);
     }
-
-    function init() {
-      if (!document.body.classList.contains(variation_name)) {
-        document.body.classList.add(variation_name);
-
-        if (!window.location.href.includes("/webinar/thanks/facilities-iq-launch")) {
-          addModal();
-        }
-
-        if (!window.cre_12_events) {
-          waitForElement(".cre_12_close", eventListeners, 50, 15000);
-          window.cre_12_events = true;
-        }
-
-      }
-    }
-
-    waitForElement("body", init, 50, 25000);
-
-  } catch (e) {
-    if (debug) console.log(e, "error in Test" + variation_name);
-  }
-})();
-
-
-
-
-}
+  })();

@@ -140,7 +140,11 @@ html body.cre-t-64 li.cre-t-64-searchBar.visiblecategory {
     padding-right: 20px !important;
 }
 
-html body.cre-t-64 ul.collapsableMenu li:not(.mymagazineMobileLink) {
+html body.cre-t-64 ul.collapsableMenu > li:not(.mymagazineMobileLink) {
     font-weight: bold;
 }
 
+/* Reset the styles for any <li> elements inside those <li> elements */
+html body.cre-t-64 ul.collapsableMenu > li > ul li {
+    font-weight: normal;
+}
