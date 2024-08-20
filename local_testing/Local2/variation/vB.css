@@ -1,101 +1,146 @@
-html body.cre-t-12 .cre_12_container{
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	overflow-y: scroll;
-	top: 0;
-	left: 0;
-	background-color: rgba(18, 17, 17, 0.55);
-	z-index: 99999;
-  }
-  
-  html body.cre-t-12 .cre_12_container.cre_12_hide{
-	display: none;
-  }
-  
-  html body.cre-t-12 .cre_12_modal_container{
-	max-width: 844px;
-	padding: 55px 0;
-	margin: auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	border-radius: 8px;
-	background-color: #fff;
-	position: relative;
-  }
-  
-  html body.cre-t-12 .cre_12_modal_content{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  
-  html body.cre-t-12 .cre_12_title{
-	font-size: 42px;
-	font-weight: 500;
-	line-height: 44px;
-	letter-spacing: 4px;
-	text-align: center;
-	color: rgba(17, 115, 128, 1);
-	margin: 0;
-	margin-bottom: 20px;
-  }
-  
-  html body.cre-t-12 .cre_12_subtitle{
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 24px;
-	letter-spacing: 0.9599999785423279px;
-	text-align: center;
-	color: rgba(17, 115, 128, 1);
-	margin: 0;
-	margin-bottom: 42px;
-  }
-  
-  html body.cre-t-12 .cre_12_image_container{
-	height: 385px;
-	width: 662px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.12);
-	margin: 0;
-	margin-bottom: 47px;
-  }
-  
-  html body.cre-t-12 .cre_12_watch{
-	background: rgba(255, 137, 10, 1);
-	box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.1);
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 18px;
-	letter-spacing: 1.600000023841858px;
-	text-align: center;
-	color: rgba(255, 255, 255, 1);
-	width: 346px;
-	padding-top: 18px;
-	padding-bottom: 17px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	border-radius: 8px;
-	border: 1px solid rgba(255, 137, 10, 1);
-  }
-  
-  html body.cre-t-12 .cre_12_watch:hover{
-	background-color: #fff;
-	color: rgba(255, 137, 10, 1);
-  }
-  
-  html body.cre-t-12 .cre_12_close{
-	position: absolute;
-	top: 32px;
-	right: 31px;
-	cursor: pointer;
-  }
-  
-  html body.cre-t-12 .cre_12_close svg{
-	width: 20px;
-	height: 20px;
-	pointer-events: none;
-  }
+html body.cre-t-64 .collapsableMenu {
+    max-height: 550px;
+    overflow: scroll;
+}
+
+html body.cre-t-64 .az-expand-image {
+    margin-top: 3px;
+}
+
+.cre-t-64_redText a {
+    color: #db071a !important;
+}
+
+html body.cre-t-64 .cre-t-64_mag-name .collapsibleMagazines {
+    display: none;
+    float: none;
+    padding-top: 3px;
+    margin: 7px -10px 0;
+    border-top: 1px solid #c2c2c2;
+    background: #f9f9f9;
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+html body.cre-t-64 .cre-t-64_mag-name .collapsibleMagazines.cre-t-64_show {
+    display: block;
+    opacity: 1;
+}
+
+/* ------------NEW------------ */
+
+
+html body.cre-t-64 .collapsableMenu {
+    max-height: 550px;
+    overflow: scroll;
+}
+
+html body.cre-t-64 .az-expand-image {
+    margin-top: 3px;
+}
+
+.cre-t-64_redText a {
+    color: #db071a !important;
+}
+
+html body.cre-t-64 .cre-t-64_mag-name .collapsibleMagazines {
+    display: none;
+    float: none;
+    padding-top: 3px;
+    margin: 7px -10px 0;
+    border-top: 1px solid #c2c2c2;
+    background: #f9f9f9;
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+
+
+html body.cre-t-64.cre-t-64_navShow .mobileShow.mobileNav {
+    height: auto !important;
+}
+
+
+html body.cre-t-64.cre-t-64_show .cre-t-64_mag-name .collapsibleMagazines.cre-t-64_show {
+    padding-top: 50px;
+}
+
+html body.cre-t-64_show ul.search-autocomplete {
+    width: 100%;
+    left: 0 !important;
+}
+
+li.cre-t-64-searchBar.visiblecategory {
+    position: relative;
+}
+
+i#cre-t-magnify {
+    position: absolute;
+    left: 10px;
+    padding-left: 20px;
+    top: 22px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+}
+
+input#cre-search-words-mobile {
+    padding-left: 30px;
+    width: 100%;
+    /* max-width: 336px; */
+    border-radius: 10px;
+}
+
+li.cre-t-64_mag-name span {
+    display: block;
+    width: 100%;
+}
+
+html body.cre-t-64 .search-autocomplete {
+    width: 100% !important;
+    left: 0 !important;
+}
+
+html body.cre-t-64 li.cre-t-52_mag-name {
+    display: none;
+}
+
+li.cre-t-64-searchBar.visiblecategory {
+    position: relative;
+}
+
+div#cre-suggestions>div {
+    border-bottom: 1px solid #c2c2c2;
+
+}
+
+
+html body.cre-t-64 div#cre-suggestions {
+    display: none;
+    border: 1px solid #c2c2c2;
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #fff;
+    max-width: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+html body.cre-t-64 div#cre-suggestions div a {
+    width: 100%;
+    display: block;
+    padding: 10px 7px;
+    cursor: pointer;
+}
+
+html body.cre-t-64 li.cre-t-64-searchBar.visiblecategory {
+    padding-right: 20px !important;
+}
+
+html body.cre-t-64 ul.collapsableMenu li:not(.mymagazineMobileLink) {
+    font-weight: bold;
+}
+
