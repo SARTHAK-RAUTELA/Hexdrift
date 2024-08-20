@@ -1,14 +1,12 @@
 
-html[lang="en"] body #bHumanize,
-html[lang="en"] body #humanize-tooltip {
+html[lang="en"] body #bHumanize{
     background-color: #25AB2B !important;
     min-width: 200px !important;
     font-size: 0 !important;
     text-transform: uppercase !important;
 }
 
-html[lang="en"] body #bCheckForAi,
-html[lang="en"] body #checkForAI-tooltip {
+html[lang="en"] body #bCheckForAi {
     border-color: #51CA89 !important;
     color: #51CA89 !important;
     min-width: 150px !important;
@@ -16,14 +14,12 @@ html[lang="en"] body #checkForAI-tooltip {
     text-transform: uppercase !important;
 }
 
-html[lang="en"] body button#bCheckForAi:after,
-html[lang="en"] body #checkForAI-tooltip:after {
+html[lang="en"] body button#bCheckForAi:after {
     content: 'Detect AI';
     font-size: 14px;
 }
 
-html[lang="en"] body button#bHumanize:after,
-html[lang="en"] body #humanize-tooltip:after {
+html[lang="en"] body button#bHumanize:after {
     content: 'Humanize This Text';
     font-size: 14px !important;
 }
