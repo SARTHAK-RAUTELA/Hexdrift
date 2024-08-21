@@ -1,240 +1,214 @@
 (function () {
     try {
         /* main variables */
-        var debug = 1;
-        var variation_name = "cre-sfg-14";
-  
-        // Desktop check: Execute only if screen width is greater than or equal to 1024px
-        if (window.innerWidth < 1024) {
-            return; // Exit the function if the screen width is less than 1024px (not desktop)
-        }
-  
-        /* helper library */
-        var _$;
-        !(function (factory) {
-            _$ = factory();
-        })(function () {
-            var bm = function (s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-                }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function (n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function (fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function () {
-                    var items = [];
-                    for (var index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function (v) {
-                    var a = v.split(" ");
-                    return this.each(function (i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                live: function (selector, event, callback, context) {
-                    /****Helper Functions****/
-                    // helper for enabling IE 8 event bindings
-                    function addEvent(el, type, handler) {
-                        if (el.attachEvent) el.attachEvent("on" + type, handler);
-                        else el.addEventListener(type, handler);
-                    }
-                    // matches polyfill
-                    this.Element &&
-                        (function (ElementPrototype) {
-                            ElementPrototype.matches =
-                                ElementPrototype.matches ||
-                                ElementPrototype.matchesSelector ||
-                                ElementPrototype.webkitMatchesSelector ||
-                                ElementPrototype.msMatchesSelector ||
-                                function (selector) {
-                                    var node = this,
-                                        nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                                        i = -1;
-                                    while (nodes[++i] && nodes[i] != node);
-                                    return !!nodes[i];
-                                };
-                        })(Element.prototype);
-                    // live binding helper using matchesSelector
-                    function live(selector, event, callback, context) {
-                        addEvent(context || document, event, function (e) {
-                            var found,
-                                el = e.target || e.oldElement;
-                            while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-                            if (found) callback.call(el, e);
-                        });
-                    }
-                    live(selector, event, callback, context);
-                },
-                waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-                    var interval = setInterval(function () {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger();
-                        }
-                    }, delayInterval);
-                    setTimeout(function () {
-                        clearInterval(interval);
-                    }, delayTimeout);
-                },
-            };
-            return function (selector) {
-                return new bm(selector);
-            };
-        });
-  
-        function waitForSwiper(trigger) {
+        var debug = 0;
+        var variation_name = "TT-148";
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
             var interval = setInterval(function () {
-                if (typeof window.Swiper != "undefined") {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
                     clearInterval(interval);
                     trigger();
                 }
-            }, 50);
+            }, delayInterval);
             setTimeout(function () {
                 clearInterval(interval);
-            }, 15000);
+            }, delayTimeout);
         }
-  
-        // Helper functions
-        function addScript() {
-            var bmScript = document.createElement("script");
-            bmScript.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
-            document.getElementsByTagName("head")[0].appendChild(bmScript);
-            var bmcsslink = document.createElement("link");
-            bmcsslink.rel = "stylesheet";
-            bmcsslink.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
-            document.getElementsByTagName("head")[0].appendChild(bmcsslink);
-        }
-  
-        var CreSlider = `
-    <div class="cre-t-39-testimonial-wrapper">
-    <div class="cre-t-39-testimonial-container ">
-      <div class="cre_headinger">
-        <h2>SFG20 is the industry standard for building maintenance, <br> which we deliver using cutting-edge software.</h2>
-        <p>Customize task details like duration, frequency, criticality and skill set for better resource planning and allocation.</p>
-      </div>
-      <div class="cre-t-sfg14-boxslider swiper content-wrapper">
-        <div class="cre-t-sfg14-boxslider-wrapper swiper-wrapper">
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_1.svg">
-             <p>With over 1000 regularly updated maintenance schedules, all aligned with the latest legislation, you can quickly find what you need using keywords, Uniclass, SFG20, or NRM codes.</P>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_2.svg">
-             <p>Tailor and organize maintenance schedules with custom Maintenance Regimes, then securely share them with your team in the field.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_3.svg">
-             <p>Customize task details like duration, frequency, criticality and skill set for better resource planning and allocation.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_4.svg">
-             <p>Create tailored maintenance schedules with Derived or Custom options, perfect for focusing on critical tasks and managing specialist assets.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_5.svg">
-             <p>Easily and securely share Maintenance Regimes with authorized teams, ensuring everyone works under the latest SFG20 standard.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_6.svg">
-             <p>Quickly access your most-used schedules by creating personalized Favourite Lists, saving you time and effort.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_9.svg">
-             <p>Use custom Tags to quickly identify schedules, helping you and your team save valuable time.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_10.svg">
-             <p>Take full control by adding new users and assigning licenses and roles directly from the Admin area.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_11.svg">
-             <p>Stay on top of tasks with the 'Actions' area, your personal reminder and to-do list at a tap.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_7.svg">
-             <p>Stay compliant with automated schedule updates, compare changes side-by-side, and implement them at your convenience.</p>
-          </div>
-          <div class="cre-t-sfg14-box swiper-slide">
-             <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_8.svg">
-             <p>Integrate Facilities-iQ to your FM system via our free API, automating Maintenance Regimes and saving hours of manual entry.</p>
-          </div>
-  
-        </div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="cre-swiper-pagination"></div>
-    </div>
-    <!-- If we need navigation buttons -->
-    <div class="cre-swiper-button-prev"></div>
-    <div class="cre-swiper-button-next"></div>
-    <!-- </div> -->
-    <!-- </div> -->
-  </div>
-    `;
-        function intializeSwiper() {
-            var swiper = document.querySelector(".cre-t-sfg14-boxslider");
-      new Swiper(swiper, {
-        slidesPerView: 1.5,
-        centeredSlides: true, 
-        grabCursor: true,
-        spaceBetween: 30,
-        loop: true,
-                autoplay: {
-                    delay: 2000, // 2000 milliseconds = 2 seconds
-                    disableOnInteraction: false,
-                },
-              pagination: {
-          el: ".cre-swiper-pagination",
-          clickable: true,
-        },
-                
-        navigation: {
-          nextEl: ".cre-swiper-button-next",
-          prevEl: ".cre-swiper-button-prev",
-        },
-      });
-        }
-  
-        var helper = _$();
-        function init() {
-  
-            _$("body").addClass(variation_name);
-            if (!document.querySelector(".cre-t-39-testimonial-container")) {
-                document.querySelector(".body-container--home .widget-type-cell .row-number-1").insertAdjacentHTML("afterend", CreSlider);
-  
+        function addLiveEventListener(selector, event, callback, context) {
+            // Helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent('on' + type, handler);
+                else el.addEventListener(type, handler);
             }
-            waitForSwiper(
-                function () {
-                    intializeSwiper();
-                },
-                50,
-                15000
-            );
-  
+            // Matches polyfill
+            this.Element && function (ElementPrototype) {
+                ElementPrototype.matches = ElementPrototype.matches ||
+                    ElementPrototype.matchesSelector ||
+                    ElementPrototype.webkitMatchesSelector ||
+                    ElementPrototype.msMatchesSelector ||
+                    function (selector) {
+                        var node = this,
+                            nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                            i = -1;
+                        while (nodes[++i] && nodes[i] != node);
+                        return !!nodes[i];
+                    };
+            }(Element.prototype);
+            // Live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found, el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e);
+                });
+            }
+            live(selector, event, callback, context);
         }
-        addScript();
-        helper.waitForElement(".body-container--home .widget-type-cell .row-number-1", init, 50, 25000);
+        var thumbtechservices = `
+            <div class="thumbtechservices bg-white bmhidesection">
+                <h2 class="bmheading Type_title5__FuNNq">Popular services near you.</h2>
+                <div class="bm-item">
+                    <li title="House cleaning"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
+                    <li title="Handyman"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png" > <p>Handyman <br> <span>j</span></p></a></li>
+                    <li title="Local electricians" ><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> Removal</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local Moving<br>(Under 50 miles)</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance Repair or Maintenance</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor Installation or Replacement</p></a></li>
+                </div>
+            </div>
+        `;
+        var reviews = `
+            <div class="reviewsection desktop">
+                <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
+            </div>
+        `;
+        var mobilereviews = `
+            <div class="reviewsection mobile">
+                <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
+            </div>
+        `;
+        var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
+
+
+        var heroheading =
+            `<div class="thmobilebanner"><img src="//cdn.optimizely.com/img/20611073899/2b43f5d6b9954b86a2a9df7fd4b9f96e.png"></div>
+        <h1 class="mb5  homepage-hero_heavy">
+            <div class="homepage-hero_textCarousel">
+                <ul class="homepage-hero_scroll">
+                    <li>Home improvement,</li>
+                    <li>Home repair,</li>
+                    <li>Home inspection,</li>
+                    <li>Home cleaning,</li>
+                    <li>Home improvement,</li>
+                </ul>
+            </div>
+            <br>made easy.
+        </h1> `;
+        /* Variation Init */
+        function init() {
+            document.querySelector("body").classList.add(variation_name);
+            waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]', function () {
+                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder", "Describe your project or problem - be as detailed as you’d like!")
+            }, 50, 15000)
+            waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]', function () {
+                document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "Describe your project or problem"
+            }, 50, 15000)
+            var textValuesToCheck = ['Popular services'];
+            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
+            elementsToModify.forEach((element) => {
+                var fullTextContent = element.textContent.trim();
+                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
+                    var parentElement = element.closest('.bg-white');
+                    if (parentElement) {
+                        console.log('run ite')
+                        parentElement.classList.add('bmhidesection');
+                    }
+                }
+            });
+
+            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
+                if (!document.querySelector(".thumbtechservices")) {
+                    document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
+                }
+            } else {
+                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
+                if (rootSiblingElement) {
+                    if (!document.querySelector(".thumbtechservices")) {
+                        rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                    }
+                } else {
+                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
+                    if (customerHeaderSiblingElement) {
+                        if (!document.querySelector(".thumbtechservices")) {
+                            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                        }
+                    }
+                }
+            }
+            // Putting new heading
+            if (!document.querySelector(".thmobilebanner")) {
+                document.querySelector('html body [class*="homepage-hero_heavy"]').insertAdjacentHTML('afterend', heroheading);
+
+            }
+
+            if (!document.querySelector(".reviewsection.desktop")) {
+                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
+            }
+            if (!document.querySelector('.reviewsection.mobile')) {
+                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
+            }
+            function wrapDivs() {
+                // Select the starting div with class bmhidesection
+                var startDiv = document.querySelector('.bmhidesection');
+                if (!startDiv) return; // Exit if starting div is not found
+                // Select the next sibling divs after startDiv until we wrap 4 divs
+                var siblingDivs = [];
+                var currentDiv = startDiv.nextElementSibling;
+                for (var i = 0; i < 2; i++) {
+                    if (currentDiv && currentDiv.tagName === 'DIV' && !currentDiv.classList.contains('wrapped-divs')) {
+                        siblingDivs.push(currentDiv);
+                        currentDiv = currentDiv.nextElementSibling;
+                    } else {
+                        break; // Exit loop if not enough valid sibling divs found
+                    }
+                }
+                // Create a new parent div
+                var newParentDiv = document.createElement('div');
+                newParentDiv.className = 'wrapped-divs'; // Assign a class to the new parent div for styling purposes
+                // Append the selected divs to the new parent div
+                siblingDivs.forEach(function (div) {
+                    newParentDiv.appendChild(div);
+                });
+                // Insert the new parent div after startDiv
+                startDiv.parentNode.insertBefore(newParentDiv, startDiv.nextSibling);
+                // Check if the .wrapped-divs element is empty, then remove it
+                var wrappedDiv = document.querySelector('.wrapped-divs');
+                if (wrappedDiv && !wrappedDiv.hasChildNodes()) {
+                    wrappedDiv.parentNode.removeChild(wrappedDiv);
+                }
+            }
+            waitForElement(".bmhidesection", function () {
+                wrapDivs()
+            }, 50, 15000);
+            // Get the zip code value from the input field
+            var zipCode = document.querySelector('[class*="search-bar_zipCodeInput"]').value;
+            // Select all the links inside the thumbtechservices div
+            var links = document.querySelectorAll('.thumbtechservices a');
+            // Loop through each link and replace the zip code in the href attribute
+            links.forEach(function (link) {
+                var href = link.getAttribute('href');
+                href = href.replace(/zip_code=([0-9]+)/, 'zip_code=' + zipCode);
+                link.setAttribute('href', href);
+            });
+
+        }
+        /* Initialise variation */
+        function thumbtackTest144(list, observer) {
+            list.getEntries().forEach((entry) => {
+                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+                    observer.disconnect();
+                    clearInterval(test144Interval);
+                    waitForElement("body", init, 50, 15000);
+                    window.isHydrated = true;
+                }
+            });
+        }
+        if (!window.isHydrated) {
+            var test144Interval = setInterval(function () {
+                waitForElement("body", init, 50, 15000);
+            }, 50);
+            setTimeout(function () {
+                clearInterval(test144Interval);
+            }, 3000);
+            const observer = new PerformanceObserver(thumbtackTest144);
+            observer.observe({ entryTypes: ["mark"] });
+        } else {
+            waitForElement("body", init, 50, 15000);
+        }
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
-  })();
-  
+})();
