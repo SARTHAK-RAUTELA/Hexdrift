@@ -2,7 +2,7 @@
     try {
         /* main variables */
         var debug = 0;
-        var variation_name = "TT_Cost_Page";
+        var variation_name = "TT-148";
         /* all Pure helper functions */
         function waitForElement(selector, trigger, delayInterval, delayTimeout) {
             var interval = setInterval(function () {
@@ -45,123 +45,146 @@
             }
             live(selector, event, callback, context);
         }
+        var thumbtechservices = `
+            <div class="thumbtechservices bg-white bmhidesection">
+                <h2 class="bmheading Type_title5__FuNNq">Popular services near you.</h2>
+                <div class="bm-item">
+                    <li title="House cleaning"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
+                    <li title="Handyman"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png" > <p>Handyman <br> <span>j</span></p></a></li>
+                    <li title="Local electricians" ><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> Removal</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local Moving<br>(Under 50 miles)</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance Repair or Maintenance</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor Installation or Replacement</p></a></li>
+                </div>
+            </div>
+        `;
+        var reviews = `
+            <div class="reviewsection desktop">
+                <p> Trusted by +4.5M people &nbsp;•&nbsp; 4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
+            </div>
+        `;
+        var mobilereviews = `
+            <div class="reviewsection mobile">
+                <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
+            </div>
+        `;
+        var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
 
-        // Add swiper slider script
-        function addScript() {
-            var bmScript = document.createElement("script");
-            bmScript.src = "https://unpkg.com/swiper@7/swiper-bundle.min.js";
-            document.getElementsByTagName("head")[0].appendChild(bmScript);
 
-            var bmcsslink = document.createElement("link");
-            bmcsslink.rel = "stylesheet";
-            bmcsslink.href = "https://unpkg.com/swiper@7/swiper-bundle.min.css";
-            document.getElementsByTagName("head")[0].appendChild(bmcsslink);
-        }
-        addScript();
-
-        //wait for swiper slider
-        function onwaitforswiper(trigger) {
-            var interval = setInterval(function () {
-                if (typeof Swiper != "undefined") {
-                    clearInterval(interval);
-                    trigger();
-                }
-            }, 50);
-            setTimeout(function () {
-                clearInterval(interval);
-            }, 15000);
-        }
-
-        var topnav = `<h2 class="Type_title1__byBr1 pro-testimonials_title__Ywmk8 ph4 m_ph0 mb5 tl m_tc">Why pros love Thumbtack</h2><div class="swiper-container pro-testimonials-Carousel">
-  <div class="swiper-wrapper">
-      <div class="swiper-slide">
-          <div class="imagesection"> <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/Pro+Landing+Page%3A+Update+testimonials/grow_more.jpg"></div>
-          <div class="textcontent">
-             <div class="shadowdiv">
-              <h5>We have been able to <b>grow more</b> since joining Thumbtack and it has also allowed us to branch out to<b> new areas of our business.</b></h5>
-              <p>Business owner <span> Landscaping and Hardscaping, Greenwood, IN</span></p>
-               </div>
-          </div>
-      </div>
-      <div class="swiper-slide">
-          <div class="imagesection"> <img src="https://cdn.optimizely.com/img/20611073899/d5e4447eef6a43e0bc367a9b00995bbb.jpg"></div>
-          <div class="textcontent">
-          <div class="shadowdiv">
-              <h5>Having the <b>reliability</b> of Thumbtack as a platform has allowed me to set a new franchise first year <b>record for revenue.</b></h5>
-              <p>Jerald Roberts <span>Five Star Painting, Manassas, VA</span></p>
-              </div>
-          </div>
-      </div>
-      <div class="swiper-slide">
-          <div class="imagesection"> <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/Pro+Landing+Page%3A+Update+testimonials/customer.jpg"></div>
-          <div class="textcontent">
-          <div class="shadowdiv">
-              <h5>The app is super easy to use...one Thumbtack<b> customer can turn into several referrals.</b></h5>
-              <p>Ricc Brindicci <span>HVAC</span></p>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Add Arrows -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
-</div>`;
-
-        function generateSwiperSlider() {
-            var isMobile = window.innerWidth <= 767;
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: true,  // Enable loop only for mobile
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                on: {
-                    reachEnd: function () {
-                        if (!isMobile) {
-                            // If it's desktop, when we reach the end, wait for a click on the Next button
-                            document.querySelector('.swiper-button-next').addEventListener('click', function () {
-                                swiper.slideTo(0, 1000);  // Smoothly slide back to the first slide
-                            }, { once: true });  // Ensure the event listener is removed after the first click
-                        }
-                    }
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    991: {
-                        slidesPerView: 1,
-                    },
-                    1366: {
-                        slidesPerView: 1,
-                    }
-                },
-
-            });
-        }
-
+        var heroheading =
+            `<div class="thmobilebanner"><img src="//cdn.optimizely.com/img/20611073899/2b43f5d6b9954b86a2a9df7fd4b9f96e.png"></div>
+        <h1 class="mb5  homepage-hero_heavy">
+            <div class="homepage-hero_textCarousel">
+                <ul class="homepage-hero_scroll">
+                    <li>Home improvement,</li>
+                    <li>Home repair,</li>
+                    <li>Home inspection,</li>
+                    <li>Home cleaning,</li>
+                    <li>Home improvement,</li>
+                </ul>
+            </div>
+            <br>made easy.
+        </h1> `;
         /* Variation Init */
         function init() {
             document.querySelector("body").classList.add(variation_name);
-            console.log('run test');
-            if (!document.querySelector('.swiper-container')) {
-                document.querySelector('[class*="pro-testimonials_wrapper"]').innerHTML = topnav;
+            waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]', function () {
+                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder", "Describe your project or problem - be as detailed as you’d like!")
+            }, 50, 15000)
+            waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]', function () {
+                document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "Describe your project or problem"
+            }, 50, 15000)
+            var textValuesToCheck = ['Popular services'];
+            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
+            elementsToModify.forEach((element) => {
+                var fullTextContent = element.textContent.trim();
+                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
+                    var parentElement = element.closest('.bg-white');
+                    if (parentElement) {
+                        console.log('run ite')
+                        parentElement.classList.add('bmhidesection');
+                    }
+                }
+            });
+
+            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
+                if (!document.querySelector(".thumbtechservices")) {
+                    document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
+                }
+            } else {
+                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
+                if (rootSiblingElement) {
+                    if (!document.querySelector(".thumbtechservices")) {
+                        rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                    }
+                } else {
+                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
+                    if (customerHeaderSiblingElement) {
+                        if (!document.querySelector(".thumbtechservices")) {
+                            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                        }
+                    }
+                }
             }
-            if (!document.querySelector(".pro-testimonials-Carousel.swiper-initialized") && document.querySelector(".pro-testimonials-Carousel")) {
-                console.log("initialize swiper");
-                onwaitforswiper(generateSwiperSlider);
+            // Putting new heading
+            if (!document.querySelector(".thmobilebanner")) {
+                document.querySelector('html body [class*="homepage-hero_heavy"]').insertAdjacentHTML('afterend', heroheading);
+
             }
+
+            if (!document.querySelector(".reviewsection.desktop")) {
+                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
+            }
+            if (!document.querySelector('.reviewsection.mobile')) {
+                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
+            }
+            function wrapDivs() {
+                // Select the starting div with class bmhidesection
+                var startDiv = document.querySelector('.bmhidesection');
+                if (!startDiv) return; // Exit if starting div is not found
+                // Select the next sibling divs after startDiv until we wrap 4 divs
+                var siblingDivs = [];
+                var currentDiv = startDiv.nextElementSibling;
+                for (var i = 0; i < 2; i++) {
+                    if (currentDiv && currentDiv.tagName === 'DIV' && !currentDiv.classList.contains('wrapped-divs')) {
+                        siblingDivs.push(currentDiv);
+                        currentDiv = currentDiv.nextElementSibling;
+                    } else {
+                        break; // Exit loop if not enough valid sibling divs found
+                    }
+                }
+                // Create a new parent div
+                var newParentDiv = document.createElement('div');
+                newParentDiv.className = 'wrapped-divs'; // Assign a class to the new parent div for styling purposes
+                // Append the selected divs to the new parent div
+                siblingDivs.forEach(function (div) {
+                    newParentDiv.appendChild(div);
+                });
+                // Insert the new parent div after startDiv
+                startDiv.parentNode.insertBefore(newParentDiv, startDiv.nextSibling);
+                // Check if the .wrapped-divs element is empty, then remove it
+                var wrappedDiv = document.querySelector('.wrapped-divs');
+                if (wrappedDiv && !wrappedDiv.hasChildNodes()) {
+                    wrappedDiv.parentNode.removeChild(wrappedDiv);
+                }
+            }
+            waitForElement(".bmhidesection", function () {
+                wrapDivs()
+            }, 50, 15000);
+            // Get the zip code value from the input field
+            var zipCode = document.querySelector('[class*="search-bar_zipCodeInput"]').value;
+            // Select all the links inside the thumbtechservices div
+            var links = document.querySelectorAll('.thumbtechservices a');
+            // Loop through each link and replace the zip code in the href attribute
+            links.forEach(function (link) {
+                var href = link.getAttribute('href');
+                href = href.replace(/zip_code=([0-9]+)/, 'zip_code=' + zipCode);
+                link.setAttribute('href', href);
+            });
 
         }
-
         /* Initialise variation */
         function thumbtackTest144(list, observer) {
             list.getEntries().forEach((entry) => {
