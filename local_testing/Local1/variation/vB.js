@@ -1,214 +1,810 @@
 (function () {
     try {
-        /* main variables */
-        var debug = 0;
-        var variation_name = "TT-148";
-        /* all Pure helper functions */
-        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-            var interval = setInterval(function () {
-                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-                    clearInterval(interval);
-                    trigger();
-                }
-            }, delayInterval);
-            setTimeout(function () {
-                clearInterval(interval);
-            }, delayTimeout);
-        }
-        function addLiveEventListener(selector, event, callback, context) {
-            // Helper for enabling IE 8 event bindings
-            function addEvent(el, type, handler) {
-                if (el.attachEvent) el.attachEvent('on' + type, handler);
-                else el.addEventListener(type, handler);
+      /* main variables */
+      var debug = 1;
+      var variation_name = "cre-t-02";
+  
+      /* helper library */
+      var _$;
+      !(function (factory) {
+        _$ = factory();
+      })(function () {
+        var bm = function (s) {
+          if (typeof s === "string") {
+            this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+          }
+          if (typeof s === "object") {
+            this.value = [s];
+          }
+        };
+        bm.prototype = {
+          eq: function (n) {
+            this.value = [this.value[n]];
+            return this;
+          },
+          each: function (fn) {
+            [].forEach.call(this.value, fn);
+            return this;
+          },
+          log: function () {
+            var items =[];
+            for (let index = 0; index < arguments.length; index++) {
+              items.push(arguments[index]);
             }
-            // Matches polyfill
-            this.Element && function (ElementPrototype) {
-                ElementPrototype.matches = ElementPrototype.matches ||
+            console && console.log(variation_name, items);
+          },
+          addClass: function (v) {
+            var a = v.split(" ");
+            return this.each(function (i) {
+              for (var x = 0; x < a.length; x++) {
+                if (i.classList) {
+                  i.classList.add(a[x]);
+                } else {
+                  i.className += " " + a[x];
+                }
+              }
+            });
+          },
+  
+           live : function(selector, event, callback, context) {
+              /****Helper Functions****/
+              // helper for enabling IE 8 event bindings
+              function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent("on" + type, handler);
+                else el.addEventListener(type, handler);
+              }
+              // matches polyfill
+              this.Element &&
+                (function (ElementPrototype) {
+                  ElementPrototype.matches =
+                    ElementPrototype.matches ||
                     ElementPrototype.matchesSelector ||
                     ElementPrototype.webkitMatchesSelector ||
                     ElementPrototype.msMatchesSelector ||
                     function (selector) {
-                        var node = this,
-                            nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                            i = -1;
-                        while (nodes[++i] && nodes[i] != node);
-                        return !!nodes[i];
+                      var node = this,
+                        nodes = (
+                          node.parentNode || node.document
+                        ).querySelectorAll(selector),
+                        i = -1;
+                      while (nodes[++i] && nodes[i] != node);
+                      return !!nodes[i];
                     };
-            }(Element.prototype);
-            // Live binding helper using matchesSelector
-            function live(selector, event, callback, context) {
+                })(Element.prototype);
+              // live binding helper using matchesSelector
+              function live(selector, event, callback, context) {
                 addEvent(context || document, event, function (e) {
-                    var found, el = e.target || e.srcElement;
-                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-                    if (found) callback.call(el, e);
+                  var found,
+                    el = e.target || e.srcElement;
+                  while (
+                    el &&
+                    el.matches &&
+                    el !== context &&
+                    !(found = el.matches(selector))
+                  )
+                    el = el.parentElement;
+                  if (found) callback.call(el, e);
                 });
-            }
-            live(selector, event, callback, context);
-        }
-        var thumbtechservices = `
-            <div class="thumbtechservices bg-white bmhidesection">
-                <h2 class="bmheading Type_title5__FuNNq">Popular services near you.</h2>
-                <div class="bm-item">
-                    <li title="House cleaning"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
-                    <li title="Handyman"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png" > <p>Handyman <br> <span>j</span></p></a></li>
-                    <li title="Local electricians" ><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> Removal</p></a></li>
-                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local Moving<br>(Under 50 miles)</p></a></li>
-                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance Repair or Maintenance</p></a></li>
-                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor Installation or Replacement</p></a></li>
-                </div>
-            </div>
-        `;
-        var reviews = `
-            <div class="reviewsection desktop">
-                <p> Trusted by +4.5M people <span> • </span>4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
-            </div>
-        `;
-        var mobilereviews = `
-            <div class="reviewsection mobile">
-                <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
-            </div>
-        `;
-        var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
-
-
-        var heroheading =
-            `<div class="thmobilebanner"><img src="//cdn.optimizely.com/img/20611073899/2b43f5d6b9954b86a2a9df7fd4b9f96e.png"></div>
-        <h1 class="mb5  homepage-hero_heavy">
-            <div class="homepage-hero_textCarousel">
-                <ul class="homepage-hero_scroll">
-                    <li>Home improvement,</li>
-                    <li>Home repair,</li>
-                    <li>Home inspection,</li>
-                    <li>Home cleaning,</li>
-                    <li>Home improvement,</li>
-                </ul>
-            </div>
-            <br>made easy.
-        </h1> `;
-        /* Variation Init */
-        function init() {
-            document.querySelector("body").classList.add(variation_name);
-            waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]', function () {
-                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder", "Describe your project or problem - be as detailed as you’d like!")
-            }, 50, 15000)
-            waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]', function () {
-                document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "Describe your project or problem"
-            }, 50, 15000)
-            var textValuesToCheck = ['Popular services'];
-            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
-            elementsToModify.forEach((element) => {
-                var fullTextContent = element.textContent.trim();
-                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
-                    var parentElement = element.closest('.bg-white');
-                    if (parentElement) {
-                        console.log('run ite')
-                        parentElement.classList.add('bmhidesection');
-                    }
-                }
-            });
-
-            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
-                if (!document.querySelector(".thumbtechservices")) {
-                    document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
-                }
-            } else {
-                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
-                if (rootSiblingElement) {
-                    if (!document.querySelector(".thumbtechservices")) {
-                        rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
-                    }
-                } else {
-                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
-                    if (customerHeaderSiblingElement) {
-                        if (!document.querySelector(".thumbtechservices")) {
-                            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
-                        }
-                    }
-                }
-            }
-            // Putting new heading
-            if (!document.querySelector(".thmobilebanner")) {
-                document.querySelector('html body [class*="homepage-hero_heavy"]').insertAdjacentHTML('afterend', heroheading);
-
-            }
-
-            if (!document.querySelector(".reviewsection.desktop")) {
-                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
-            }
-            if (!document.querySelector('.reviewsection.mobile')) {
-                document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
-            }
-            function wrapDivs() {
-                // Select the starting div with class bmhidesection
-                var startDiv = document.querySelector('.bmhidesection');
-                if (!startDiv) return; // Exit if starting div is not found
-                // Select the next sibling divs after startDiv until we wrap 4 divs
-                var siblingDivs = [];
-                var currentDiv = startDiv.nextElementSibling;
-                for (var i = 0; i < 2; i++) {
-                    if (currentDiv && currentDiv.tagName === 'DIV' && !currentDiv.classList.contains('wrapped-divs')) {
-                        siblingDivs.push(currentDiv);
-                        currentDiv = currentDiv.nextElementSibling;
-                    } else {
-                        break; // Exit loop if not enough valid sibling divs found
-                    }
-                }
-                // Create a new parent div
-                var newParentDiv = document.createElement('div');
-                newParentDiv.className = 'wrapped-divs'; // Assign a class to the new parent div for styling purposes
-                // Append the selected divs to the new parent div
-                siblingDivs.forEach(function (div) {
-                    newParentDiv.appendChild(div);
-                });
-                // Insert the new parent div after startDiv
-                startDiv.parentNode.insertBefore(newParentDiv, startDiv.nextSibling);
-                // Check if the .wrapped-divs element is empty, then remove it
-                var wrappedDiv = document.querySelector('.wrapped-divs');
-                if (wrappedDiv && !wrappedDiv.hasChildNodes()) {
-                    wrappedDiv.parentNode.removeChild(wrappedDiv);
-                }
-            }
-            waitForElement(".bmhidesection", function () {
-                wrapDivs()
-            }, 50, 15000);
-            // Get the zip code value from the input field
-            var zipCode = document.querySelector('[class*="search-bar_zipCodeInput"]').value;
-            // Select all the links inside the thumbtechservices div
-            var links = document.querySelectorAll('.thumbtechservices a');
-            // Loop through each link and replace the zip code in the href attribute
-            links.forEach(function (link) {
-                var href = link.getAttribute('href');
-                href = href.replace(/zip_code=([0-9]+)/, 'zip_code=' + zipCode);
-                link.setAttribute('href', href);
-            });
-
-        }
-        /* Initialise variation */
-        function thumbtackTest144(list, observer) {
-            list.getEntries().forEach((entry) => {
-                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
-                    observer.disconnect();
-                    clearInterval(test144Interval);
-                    waitForElement("body", init, 50, 15000);
-                    window.isHydrated = true;
-                }
-            });
-        }
-        if (!window.isHydrated) {
-            var test144Interval = setInterval(function () {
-                waitForElement("body", init, 50, 15000);
-            }, 50);
+              }
+              live(selector, event, callback, context);
+            },
+          waitForElement: function (
+            selector,
+            trigger,
+            delayInterval,
+            delayTimeout
+          ) {
+            var interval = setInterval(function () {
+              if (_$(selector).value.length) {
+                clearInterval(interval);
+                trigger();
+              }
+            }, delayInterval);
             setTimeout(function () {
-                clearInterval(test144Interval);
-            }, 3000);
-            const observer = new PerformanceObserver(thumbtackTest144);
-            observer.observe({ entryTypes: ["mark"] });
-        } else {
-            waitForElement("body", init, 50, 15000);
-        }
-    } catch (e) {
-        if (debug) console.log(e, "error in Test" + variation_name);
+              clearInterval(interval);
+            }, delayTimeout);
+          },
+        };
+        return function (selector) {
+          return new bm(selector);
+        };
+      });
+  
+      var helper = _$();
+  
+     // yearly pro html for price block 
+      var yearlyPro = `
+      <div class="cre-t-2-pro-yearly-price-wrapper">
+      <div class="cre-t-2-pro-yearly-price">
+          <span class="currency"></span>
+          <span class="integer-part"></span>
+          <span class="time price-without-decimal"></span>
+        </div>
+        <div class="total">
+  
+        </div>
+  </div>
+      `;
+  
+  
+      // yearly starter html for price block 
+      var yearlyStarter = `
+      <div class="cre-t-2-started-yearly-price-wrapper">
+      <div class="cre-t-2-started-yearly-price">
+          <span class="currency"></span>
+          <span class="integer-part"></span>
+          <span class="time price-without-decimal"></span>
+        </div>
+        <div class="total">
+          
+        </div>
+  </div>
+      `;
+  
+  
+      //input box toggle for price section 1
+      var inputToggleHTML = `
+      
+      <div class="cre-t-02-toggle-wrapper">
+      <div class="cre-t-02-toggle-container">
+          <div class="cre-t-02-toggle-main">
+              <div class="cre-t-02-monthly">
+                  Monthly
+              </div>
+              <div class="cre-t-02-toggle-box">
+                  <input class="input" type="checkbox" checked name="darkmode" id="dark-mode"/>
+                  <label for="dark-mode" class="label">
+                    <span class="circle"></span>
+                  </label>
+              </div>
+              <div class="cre-t-02-yearly">
+                  Annual
+              </div>
+              <div class="cre-t-02-discount">
+                  (Save 30%)
+              </div>
+          </div>
+      </div>
+  </div>	
+      `;
+  
+  //input box toggle for price section 2
+      var inputToggleHTMLOne = `
+      
+      <div class="cre-t-02-toggle-wrapper">
+      <div class="cre-t-02-toggle-container">
+          <div class="cre-t-02-toggle-main">
+              <div class="cre-t-02-monthly">
+                  Monthly
+              </div>
+              <div class="cre-t-02-toggle-box">
+                  <input class="input" type="checkbox" checked name="darkmodeOne" id="dark-mode-one"/>
+                  <label for="dark-mode-one" class="label">
+                    <span class="circle"></span>
+                  </label>
+              </div>
+              <div class="cre-t-02-yearly">
+                  Annual
+              </div>
+              <div class="cre-t-02-discount">
+                  (Save 30%)
+              </div>
+          </div>
+      </div>
+  </div>	
+      `;
+  
+  
+      //subscribe content where its not present 
+      var subscribeContent = `
+      <div class="cre-t-02-subscribe-wrapper">
+   <div class="cre-t-02-subscribe-container">
+    <div class="cre-t-02-subscribe-main">
+  
+      <h2>Subscribe today</h2>
+      <div>
+        <p style="text-align: left;">Start using the fastest, most user-friendly,&nbsp;<strong>value betting</strong>&nbsp;and&nbsp;<strong>sure betting</strong> service on the market. At any given time, RebelBetting finds thousands of profitable bets for you to bet on.</p>
+        
+      </div>
+  
+    </div>
+   </div>
+  </div>
+      
+      `
+  
+      // format the number from 1162 to 1,162
+      function formatNumber(n) {
+          if (n >= 1000) {
+              return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
+          return n.toString();
+      }
+  
+  
+      // monthly toggle enable for single price block
+      function monthlyToggle(){
+          document.body.classList.add('cre-t-02-monthly-activated')
+          if(document.body.classList.contains('cre-t-02-yearly-activated')){
+              document.body.classList.remove('cre-t-02-yearly-activated')
+          }
+      }
+  
+       // yearly  toggle enable for single price block
+      function yearlyToggle(){
+          document.body.classList.add('cre-t-02-yearly-activated')
+          if(document.body.classList.contains('cre-t-02-monthly-activated')){
+              document.body.classList.remove('cre-t-02-monthly-activated')
+          }
+      }
+  
+      
+  
+  
+  
+  
+  // toggle function for single price block
+  function toggle(){
+  
+  var inputElmt = document.querySelector(".cre-t-02-toggle-box .input");
+  
+  inputElmt.addEventListener('input',function(){
+      updateStatus();
+  })
+  
+  // update status of price block 
+  function updateStatus(){
+    if(inputElmt.checked){
+       yearlyToggle();
+  
     }
-})();
+    else {
+      monthlyToggle();
+    }
+  }
+  
+  }
+  
+  
+  // toggle for multiple price section
+      function toggleHome(){
+          var inputElmt = document.querySelector(".cre-t-02-pricing-one  .cre-t-02-toggle-box .input");
+          
+  
+          inputElmt.addEventListener('input',function(){
+              updateStatusHome();
+          })
+  
+          helper.waitForElement('.cre-t-02-pricing-two .cre-t-02-toggle-box .input',function(){
+              var inputElmtOne = document.querySelector(".cre-t-02-pricing-two .cre-t-02-toggle-box .input");
+              inputElmtOne.addEventListener('input',function(){
+                  updateStatusHomeOne(inputElmtOne);
+              })
+          },50,15000);
+  
+          
+          // update status of price block 
+          function updateStatusHome(){
+            if(inputElmt.checked){
+              document.body.classList.add('cre-t-02-yearly-activated')
+              if(document.body.classList.contains('cre-t-02-monthly-activated')){
+                  document.body.classList.remove('cre-t-02-monthly-activated')
+              }
+          
+            }
+            else {
+              document.body.classList.add('cre-t-02-monthly-activated')
+              if(document.body.classList.contains('cre-t-02-yearly-activated')){
+                  document.body.classList.remove('cre-t-02-yearly-activated')
+              }
+            }
+  
+  
+      }
+  // update status of price block 
+      function updateStatusHomeOne(inputElmtOne){
+          if(inputElmtOne.checked){
+              document.body.classList.add('cre-t-02-yearly-activated-one')
+              if(document.body.classList.contains('cre-t-02-monthly-activated-one')){
+                  document.body.classList.remove('cre-t-02-monthly-activated-one')
+              }
+        
+          }
+          else {
+              document.body.classList.add('cre-t-02-monthly-activated-one')
+              if(document.body.classList.contains('cre-t-02-yearly-activated-one')){
+                  document.body.classList.remove('cre-t-02-yearly-activated-one')
+              }
+          }
+  
+  
+    }
+  
+  }
+  
+  
+    function updateDynamicPriceSingleBlock(){
+     
+      helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row',function(){
+          helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row',function(){
+            document.querySelector('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row').insertAdjacentHTML('afterend',yearlyPro);
+            document.querySelector('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row').insertAdjacentHTML('afterend',yearlyStarter);
+  
+            document.querySelector('.cre-t-2-pro .fusion-button-wrapper a ').classList.add('cre-pro-without-discount');
+            document.querySelector('.cre-t-2-starter .fusion-button-wrapper a ').classList.add('cre-starter-without-discount');
+  
+            document.querySelector('.cre-t-2-pro .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creProDiscount);
+            document.querySelector('.cre-t-2-starter .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creStarterDiscount);
+  
+  
+            setTimeout(function(){
+               helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row .price .currency',function(){
+                   helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row .price .integer-part',function(){
+                       helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row .price .time.price-without-decimal',function(){
+                           
+                           var currency = document.querySelector('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row .price .currency').textContent;
+                           var pricePro = document.querySelector('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row .price .integer-part').textContent;
+                           var priceType = document.querySelector('.cre-t-02-pricing-section .cre-t-2-pro .pricing-row .price .time.price-without-decimal').textContent;
+                            
+                           var pricePro = parseFloat(pricePro).toFixed(2);
+                           var priceProNewYearly  = parseFloat(pricePro/100).toFixed(2);
+                           var priceProDiscount = parseFloat(priceProNewYearly*30).toFixed(2);
+                           var priceProYearlyAfterDiscount = parseInt(pricePro - priceProDiscount);
+  
+                           var total = parseFloat((pricePro - priceProDiscount)*12);
+                           total = Math.round(total);
+                            total = formatNumber(total);
+  
+                           document.querySelector('.cre-t-2-pro-yearly-price .currency').textContent = currency;
+                           document.querySelector('.cre-t-2-pro-yearly-price .integer-part').textContent = priceProYearlyAfterDiscount;
+                           document.querySelector('.cre-t-2-pro-yearly-price .price-without-decimal').textContent = priceType;
+                           document.querySelector('.cre-t-2-pro-yearly-price-wrapper .total').textContent = currency +total +'/year';
+  
+                           document.querySelector('.cre-t-2-pro .cre-pro-discount').href = document.querySelector('html body .cre-t-2-pro .panel-footer a:not(.fusion-button)').href;
+  
+                       },50,15000);
+  
+  
+                   },50,15000);
+  
+  
+                },50,15000);
+  
+  
+                helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row .price .currency',function(){
+  
+                   helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row .price .integer-part',function(){
+                       helper.waitForElement('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row .price .time.price-without-decimal',function(){
+  
+                           var currency = document.querySelector('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row .price .currency').textContent;
+                           var pricePro = document.querySelector('.cre-t-02-pricing-section .cre-t-2-starter .pricing-row .price .integer-part').textContent;
+                           var priceType = document.querySelector('.cre-t-02-pricing-section .cre-t-2-starter  .pricing-row .price .time.price-without-decimal').textContent;
+                            
+                           var pricePro = parseFloat(pricePro).toFixed(2);
+                           var priceProNewYearly  = parseFloat(pricePro/100).toFixed(2);
+                           var priceProDiscount = parseFloat(priceProNewYearly*30).toFixed(2);
+                           var priceProYearlyAfterDiscount = parseInt(pricePro - priceProDiscount);
+  
+                           var total = parseFloat((pricePro - priceProDiscount)*12);
+                           total = Math.round(total);
+                            total = formatNumber(total);
+  
+  
+  
+                           document.querySelector('.cre-t-2-started-yearly-price .currency').textContent = currency;
+                           document.querySelector('.cre-t-2-started-yearly-price .integer-part').textContent = priceProYearlyAfterDiscount;
+                           document.querySelector('.cre-t-2-started-yearly-price .price-without-decimal').textContent = priceType;
+                           document.querySelector('.cre-t-2-started-yearly-price-wrapper .total').textContent = currency +total +'/year';
+  
+                           document.querySelector('.cre-t-2-starter .cre-starter-discount').href = document.querySelector('html body .cre-t-2-starter .panel-footer a:not(.fusion-button)').href;
+  
+  
+                       },50,15000);
+  
+  
+                   },50,15000);
+  
+  
+                },50,15000);
+  
+            },2000);
+  
+          },50,15000);
+       },50,15000);
+  
+    }
+  
+  
+    function updateDynamicPriceMultipleBlock(){
+  
+      helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row',function(){
+          helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter .pricing-row',function(){
+            document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row').insertAdjacentHTML('afterend',yearlyPro);
+            document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter .pricing-row').insertAdjacentHTML('afterend',yearlyStarter);
+  
+            document.querySelector('.cre-t-02-pricing-one  .cre-t-2-pro .fusion-button-wrapper a ').classList.add('cre-pro-without-discount');
+            document.querySelector('.cre-t-02-pricing-one  .cre-t-2-starter .fusion-button-wrapper a ').classList.add('cre-starter-without-discount');
+  
+            document.querySelector('.cre-t-02-pricing-one  .cre-t-2-pro .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creProDiscount);
+            document.querySelector('.cre-t-02-pricing-one  .cre-t-2-starter .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creStarterDiscount);
+  
+            document.querySelector('.cre-t-02-pricing-two  .cre-t-2-pro .fusion-button-wrapper a ').classList.add('cre-pro-without-discount');
+            document.querySelector('.cre-t-02-pricing-two  .cre-t-2-starter .fusion-button-wrapper a ').classList.add('cre-starter-without-discount');
+  
+            document.querySelector('.cre-t-02-pricing-two  .cre-t-2-pro .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creProDiscount);
+            document.querySelector('.cre-t-02-pricing-two  .cre-t-2-starter .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creStarterDiscount);
+  
+  
+           
+            document.body.classList.add('cre-t-02-yearly-activated')
+            document.body.classList.add('cre-t-02-yearly-activated-one')
+            setTimeout(function(){
+               helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row .price .currency',function(){
+  
+                   helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row .price .integer-part',function(){
+  
+  
+                       helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row .price .time.price-without-decimal',function(){
+                           
+                           var currency = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row .price .currency').textContent;
+                           var pricePro = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row .price .integer-part').textContent;
+                           var priceType = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro .pricing-row .price .time.price-without-decimal').textContent;
+                            
+                           var pricePro = parseFloat(pricePro).toFixed(2);
+                           var priceProNewYearly  = parseFloat(pricePro/100).toFixed(2);
+                           var priceProDiscount = parseFloat(priceProNewYearly*30).toFixed(2);
+                           var priceProYearlyAfterDiscount = parseInt(pricePro - priceProDiscount);
+  
+                           var total = parseFloat((pricePro - priceProDiscount)*12);
+                           total = Math.round(total);
+                            total = formatNumber(total);
+  
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro-yearly-price .currency').textContent = currency;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro-yearly-price .integer-part').textContent = priceProYearlyAfterDiscount;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro-yearly-price .price-without-decimal').textContent = priceType;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-pro-yearly-price-wrapper .total').textContent = currency +total +'/year';
+  
+  
+                           document.querySelector('.cre-t-02-pricing-one .cre-t-2-pro .cre-pro-discount').href = document.querySelector('html body .cre-t-2-pro .panel-footer a:not(.fusion-button)').href;
+  
+                           
+  
+                       },50,15000);
+  
+  
+                   },50,15000);
+  
+  
+                },50,15000);
+  
+  
+  
+  
+                helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one  .cre-t-2-starter .pricing-row .price .currency',function(){
+  
+                   helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter .pricing-row .price .integer-part',function(){
+  
+  
+                       helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter .pricing-row .price .time.price-without-decimal',function(){
+  
+                           var currency = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter .pricing-row .price .currency').textContent;
+                           var pricePro = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter .pricing-row .price .integer-part').textContent;
+                           var priceType = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-starter  .pricing-row .price .time.price-without-decimal').textContent;
+                            
+                           var pricePro = parseFloat(pricePro).toFixed(2);
+                           var priceProNewYearly  = parseFloat(pricePro/100).toFixed(2);
+                           var priceProDiscount = parseFloat(priceProNewYearly*30).toFixed(2);
+                           var priceProYearlyAfterDiscount = parseInt(pricePro - priceProDiscount);
+  
+                           var total = parseFloat((pricePro - priceProDiscount)*12);
+                           total = Math.round(total);
+                            total = formatNumber(total);
+  
+  
+  
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-started-yearly-price .currency').textContent = currency;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-started-yearly-price .integer-part').textContent = priceProYearlyAfterDiscount;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-started-yearly-price .price-without-decimal').textContent = priceType;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-one .cre-t-2-started-yearly-price-wrapper .total').textContent = currency +total +'/year';
+  
+  
+                           document.querySelector('.cre-t-02-pricing-one .cre-t-2-starter .cre-starter-discount').href = document.querySelector('html body .cre-t-2-starter .panel-footer a:not(.fusion-button)').href;
+  
+                       },50,15000);
+  
+  
+                   },50,15000);
+  
+  
+                },50,15000);
+  
+            },2000);
+  
+  
+          },50,15000);
+       },50,15000);
+  
+  
+  
+       helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row',function(){
+          helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter .pricing-row',function(){
+            document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row').insertAdjacentHTML('afterend',yearlyPro);
+            document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter .pricing-row').insertAdjacentHTML('afterend',yearlyStarter);
+  
+            setTimeout(function(){
+               helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row .price .currency',function(){
+  
+                   helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row .price .integer-part',function(){
+  
+  
+                       helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row .price .time.price-without-decimal',function(){
+                           
+                           var currency = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row .price .currency').textContent;
+                           var pricePro = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row .price .integer-part').textContent;
+                           var priceType = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro .pricing-row .price .time.price-without-decimal').textContent;
+                            
+                           var pricePro = parseFloat(pricePro).toFixed(2);
+                           var priceProNewYearly  = parseFloat(pricePro/100).toFixed(2);
+                           var priceProDiscount = parseFloat(priceProNewYearly*30).toFixed(2);
+                           var priceProYearlyAfterDiscount = parseInt(pricePro - priceProDiscount);
+  
+                           var total = parseFloat((pricePro - priceProDiscount)*12);
+                           total = Math.round(total);
+                            total = formatNumber(total);
+  
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro-yearly-price .currency').textContent = currency;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro-yearly-price .integer-part').textContent = priceProYearlyAfterDiscount;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro-yearly-price .price-without-decimal').textContent = priceType;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-pro-yearly-price-wrapper .total').textContent = currency +total +'/year';
+   
+                           document.querySelector('.cre-t-02-pricing-two .cre-t-2-pro .cre-pro-discount').href = document.querySelector('html body .cre-t-2-pro .panel-footer a:not(.fusion-button)').href;
+  
+  
+                           
+  
+                       },50,15000);
+  
+  
+                   },50,15000);
+  
+  
+                },50,15000);
+  
+  
+  
+  
+                helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two  .cre-t-2-starter .pricing-row .price .currency',function(){
+  
+                   helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter .pricing-row .price .integer-part',function(){
+  
+  
+                       helper.waitForElement('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter .pricing-row .price .time.price-without-decimal',function(){
+  
+                           var currency = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter .pricing-row .price .currency').textContent;
+                           var pricePro = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter .pricing-row .price .integer-part').textContent;
+                           var priceType = document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-starter  .pricing-row .price .time.price-without-decimal').textContent;
+                            
+                           var pricePro = parseFloat(pricePro).toFixed(2);
+                           var priceProNewYearly  = parseFloat(pricePro/100).toFixed(2);
+                           var priceProDiscount = parseFloat(priceProNewYearly*30).toFixed(2);
+                           var priceProYearlyAfterDiscount = parseInt(pricePro - priceProDiscount);
+  
+                           var total = parseFloat((pricePro - priceProDiscount)*12);
+                           total = Math.round(total);
+                            total = formatNumber(total);
+  
+  
+  
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-started-yearly-price .currency').textContent = currency;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-started-yearly-price .integer-part').textContent = priceProYearlyAfterDiscount;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-started-yearly-price .price-without-decimal').textContent = priceType;
+                           document.querySelector('.cre-t-02-pricing-section.cre-t-02-pricing-two .cre-t-2-started-yearly-price-wrapper .total').textContent = currency +total +'/year';
+  
+                           document.querySelector('.cre-t-02-pricing-two .cre-t-2-starter .cre-starter-discount').href = document.querySelector('html body .cre-t-2-starter .panel-footer a:not(.fusion-button)').href;
+  
+  
+                       },50,15000);
+  
+  
+                   },50,15000);
+  
+  
+                },50,15000);
+  
+            },2000);
+  
+           
+  
+  
+  
+  
+  
+  
+  
+          },50,15000);
+       },50,15000);
+  
+    }
+  
+  
+  
+  
+      //adding attributes for sections 
+      function addAttribute(){
+  
+          helper.waitForElement('#toc_Subscribe_today',function(){
+              document.querySelector('#toc_Subscribe_today').closest('#pricing').classList.add('cre-t-02-subscribe-section');
+          },50,15000);
+  
+          helper.waitForElement('#pricing h3',function(){
+            document.querySelectorAll('#pricing h3').forEach(function(item){
+             item.closest('#pricing').classList.add('cre-t-02-pricing-section');
+             
+             if(item.textContent.includes('Starter')){
+                item.closest('.fusion-pricingtable-column').classList.add('cre-t-2-starter')
+  
+             }
+             else if(item.textContent.includes('Pro')){
+              item.closest('.fusion-pricingtable-column').classList.add('cre-t-2-pro')
+             }
+            })
+          },50,15000);
+      }
+  
+      var creProDiscount = `
+      <a class="fusion-button cre-pro-discount button-flat button-xlarge button-default fusion-button-default button-1 fusion-button-default-span fusion-button-default-type" target="_self" href="https://rebelbetting.com/subscribe/Payment.aspx?item=Pro1Month"><span class="fusion-button-text">Sign up</span></a>
+      `;
+  
+      var creStarterDiscount = `
+      <a class="fusion-button cre-starter-discount button-flat button-xlarge button-default fusion-button-default button-1 fusion-button-default-span fusion-button-default-type" target="_self" href="https://rebelbetting.com/subscribe/Payment.aspx?item=Pro1Month"><span class="fusion-button-text">Sign up</span></a>
+      `;
+  
+      
+  
+  
+  
+      // moving sections for some pages 
+      function moveSections(){
+          helper.waitForElement('#what-you-get',function(){
+              helper.waitForElement('.cre-t-02-subscribe-section',function(){
+                 helper.waitForElement('.cre-t-02-pricing-section',function(){
+                  document.querySelector('#what-you-get').insertAdjacentElement('beforebegin',document.querySelector('.cre-t-02-subscribe-section'));
+                  document.querySelector('#what-you-get').insertAdjacentElement('beforebegin',document.querySelector('.cre-t-02-pricing-section'));
+  
+                  // document.querySelector('.cre-t-2-pro .fusion-button-wrapper a ').classList.add('cre-pro-without-discount');
+                  // document.querySelector('.cre-t-2-starter .fusion-button-wrapper a ').classList.add('cre-starter-without-discount');
+  
+                  // document.querySelector('.cre-t-2-pro .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creProDiscount);
+                  // document.querySelector('.cre-t-2-starter .fusion-button-wrapper a ').insertAdjacentHTML('afterend',creStarterDiscount);
+  
+  
+                  document.querySelector('.cre-t-02-pricing-section').insertAdjacentHTML('beforebegin',inputToggleHTML);
+                  document.body.classList.add('cre-t-02-yearly-activated');
+                  updateDynamicPriceSingleBlock();
+                  toggle();
+                 },50,15000);
+              },50,15000);
+           
+          },50,15000);
+      }
+  
+  
+      function moveSectionsHomepage(){
+          helper.waitForElement('.fusion-builder-row-13',function(){
+              helper.waitForElement('.fusion-builder-column-37',function(){
+                  document.querySelector('.fusion-builder-row-13').insertAdjacentElement('beforebegin',document.querySelector('.fusion-builder-column-37').closest('#pricing'));
+                  helper.waitForElement('.pricing-table-2',function(){
+                      document.querySelector('.fusion-builder-column-37').closest('#pricing').insertAdjacentElement('afterend',document.querySelector('.pricing-table-2').closest('#pricing'));
+                  },50,15000);
+              },50,15000);
+          },50,15000);
+       } 
+  
+  
+       function addingAttributesHomepage(){
+          helper.waitForElement('#pricing h3',function(){
+              document.querySelectorAll('#pricing h3').forEach(function(item){
+               item.closest('#pricing').classList.add('cre-t-02-pricing-section');
+               
+               if(item.textContent.includes('Starter')){
+                  item.closest('.fusion-pricingtable-column').classList.add('cre-t-2-starter')
+    
+               }
+               else if(item.textContent.includes('Pro')){
+                item.closest('.fusion-pricingtable-column').classList.add('cre-t-2-pro')
+               }
+              })
+            },50,15000);
+       }
+  
+       function addingInputToggleHomepage(){
+          helper.waitForElement('.fusion-builder-row-22',function(){
+              document.querySelector('.fusion-builder-row-22').closest("#pricing").classList.add('cre-t-02-pricing-one');
+              document.querySelector('.cre-t-02-pricing-one').insertAdjacentHTML('afterbegin',inputToggleHTML)
+              toggleHome();
+                },50,15000);
+            helper.waitForElement('.fusion-builder-row-16',function(){
+                document.querySelector('.fusion-builder-row-16').closest("#pricing").classList.add('cre-t-02-pricing-two');
+                document.querySelector('.cre-t-02-pricing-two').insertAdjacentHTML('afterbegin',inputToggleHTMLOne)
+              },50,15000);
+       }
+  
+  
+      
+  
+  
+      function init() {
+          _$('body').addClass(variation_name)
+          _$('body').addClass('cre-t-02-valuebetting')
+          addAttribute();
+          moveSections();
+        }
+  
+  
+  
+  
+      function initTwo(){
+          _$('body').addClass(variation_name)
+          _$('body').addClass('cre-t-02-homepage');
+            addingInputToggleHomepage();
+            addingAttributesHomepage();
+            moveSectionsHomepage();
+            updateDynamicPriceMultipleBlock();	
+      }
+  
+  
+  
+      
+  
+  
+      function initThree(){
+          _$('body').addClass(variation_name)
+          _$('body').addClass('cre-t-02-others')
+          addAttribute();
+              helper.waitForElement('.cre-t-02-subscribe-section',function(){
+                 helper.waitForElement('.cre-t-02-pricing-section',function(){
+                  document.querySelector('.cre-t-02-pricing-section').insertAdjacentHTML('beforebegin',inputToggleHTML);		
+                  document.body.classList.add('cre-t-02-yearly-activated');
+                   updateDynamicPriceSingleBlock();
+                   toggle();
+                 },50,15000);
+              },50,15000);
+      }
+  
+      function initFour(){
+          _$('body').addClass(variation_name)
+          _$('body').addClass('cre-t-02-others')
+          addAttribute();
+          helper.waitForElement('.cre-t-02-pricing-section',function(){
+               document.querySelector('.cre-t-02-pricing-section').insertAdjacentHTML('beforebegin',inputToggleHTML);
+               document.querySelector('.cre-t-02-toggle-wrapper').insertAdjacentHTML('beforebegin',subscribeContent);			 
+               document.body.classList.add('cre-t-02-yearly-activated');
+               updateDynamicPriceSingleBlock();
+               toggle();
+          },50,15000);
+           
+      }
+  
+  
+  
+  
+      switch (window.location.pathname) {
+          case '/':
+              helper.waitForElement("body", initTwo, 50, 15000);
+              break;
+          case '/valuebetting/value-betting-guide':
+              helper.waitForElement("body", initThree, 50, 15000);
+              break;
+          case '/surebetting/the-ultimate-guide-to-sure-betting-sports-arbitrage':
+              helper.waitForElement("body", initFour, 50, 15000);
+              break;
+          default:
+              helper.waitForElement("body", init, 50, 15000);
+              break;
+      }
+      
+      
+    } catch (e) {
+      if (debug) console.log(e, "error in Test" + variation_name);
+    }
+  })();
