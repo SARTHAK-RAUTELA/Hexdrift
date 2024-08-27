@@ -67,13 +67,22 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] {
 
 html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-button-next:after,
 html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-button-prev:after {
-	font-size: 28px !important;
-	color: rgba(103, 109, 115, 1);
+	font-size: 18px !important;
+	color: black;
+	font-weight: 700;
 }
 
 html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-button-next,
 html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-rtl .swiper-button-prev {
 	right: 30px !important;
+	border: 2px solid #FAFAFA;
+	border-radius: 50px;
+	width: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 38px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .15) !important;
 }
 
 html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .shadowdiv h5:before {
@@ -142,6 +151,10 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-container .sw
 		box-sizing: border-box;
 		padding: 0 116px;
 	}
+
+	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-container .swiper-slide>div img {
+		box-shadow: 9px 6px 20px 0px rgba(0, 0, 0, 0.15);
+	}
 }
 
 @media screen and (max-width:1023px) {
@@ -175,10 +188,11 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-container .sw
 	}
 
 	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .textcontent p {
-		margin-top: 12px;padding: 0 85px 0 70px;
+		margin-top: 12px;
+		padding: 0 85px 0 70px;
 	}
 
-	
+
 }
 
 @media screen and (max-width:820px) {
@@ -205,6 +219,7 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-container .sw
 
 	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-container .swiper-slide>div:first-child {
 		padding-left: 0;
+		padding-top: 0;
 	}
 
 	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-horizontal>.swiper-pagination-bullets,
@@ -248,6 +263,11 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-container .sw
 		border-radius: 4px;
 		padding: 53px;
 	}
+
+	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] [class*="pro-testimonials_title"] {
+		margin-bottom: 30px !important;
+	}
+
 }
 
 html body.TT_Cost_Page .swiper-container.swiper-initialized.swiper-horizontal.swiper-android {
@@ -269,8 +289,8 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] {
 
 @media screen and (max-width: 500px) {
 	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .shadowdiv {
-		height: 270px;
-		padding: 53px 53px 32px;
+		height: 230px;
+		padding: 32px 53px 32px;
 	}
 
 	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-horizontal>.swiper-pagination-bullets,
@@ -279,11 +299,25 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] {
 	}
 }
 
+@media screen and (max-width: 400px) {
+	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .shadowdiv {
+		height: 270px;
+		padding: 32px 53px 32px;
+	}
+
+	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-horizontal>.swiper-pagination-bullets,
+	html body.TT_Cost_Page .swiper-pagination-bullets.swiper-pagination-horizontal {
+		bottom: 0px !important;
+		position: absolute;
+	}
+}
+
 @media only screen and (max-width: 820px) and (min-width: 500px) {
-	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .textcontent h5{
+	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .textcontent h5 {
 		padding: 0 20px;
 	}
-	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .textcontent p{
+
+	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .textcontent p {
 		padding: 0px 85px 0 20px;
 	}
 }
@@ -296,8 +330,13 @@ html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] {
 
 
 @media screen and (max-width: 378px) {
+
 	html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] .swiper-horizontal>.swiper-pagination-bullets,
 	html body.TT_Cost_Page .swiper-pagination-bullets.swiper-pagination-horizontal {
 		bottom: 0px !important;
 	}
+}
+
+html body.TT_Cost_Page [class*="pro-testimonials_wrapper"] [class*="pro-testimonials_title"] {
+	margin-bottom: 42px !important;
 }
