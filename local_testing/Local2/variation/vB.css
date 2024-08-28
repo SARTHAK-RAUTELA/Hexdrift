@@ -443,7 +443,7 @@ html body [class*="hero-header"]>[class*=hero-header_heroCampaignHeaderHeight] {
 [class*="hero-header_root"]>[class*="hero-header_heroHeaderHeight"]+[class*="hero-header_filters"] {
 	display: flex;
 	position: relative !important;
-	max-width: 1530px;
+	max-width: 1240px;
 	margin: 0 auto;
 }
 
@@ -487,6 +487,7 @@ html body [class*="hero-header"]>[class*=hero-header_heroCampaignHeaderHeight] {
 @media only screen and (min-width: 700px) and (max-width: 1024px) {
 	[class*="hero-header_filters"]>div>div:first-child {
 		margin: 8px 0;
+		padding-left: 0 !important;
 	}
 
 	[class*="hero-header_heroContainer"]+[class*="hero-header_filters"]>div.banner_img {
@@ -495,5 +496,12 @@ html body [class*="hero-header"]>[class*=hero-header_heroCampaignHeaderHeight] {
 
 	.banner_img img {
 		object-fit: cover;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	[class*="hero-header_root"]>[class*="hero-header_heroHeaderHeight"]+[class*="hero-header_filters"] {
+		min-height: 475px;
+		align-items: center;
 	}
 }
