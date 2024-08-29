@@ -396,7 +396,7 @@
                 var tt_peragraph =  `
                 <div class="Bm-peragraph">
                   <p>${matchingData.subheading}</p>
-                  <p class="tt_tooltipmain"> *Based on our data  <span class="hideitem"><img src="//cdn.optimizely.com/img/20611073899/d12b4b361bb54ce39f76832340062851.png"> <span class="tt_tooltip">We track estimates customers get from local professionals and perform additional research.</span></span> </p>
+                  <p class="tt_tooltipmain"> *Based on our research  <span class="hideitem"><img src="//cdn.optimizely.com/img/20611073899/d12b4b361bb54ce39f76832340062851.png"> <span class="tt_tooltip">We track estimates customers get from local professionals and perform additional research.</span></span> </p>
                   
 
                 </div> `;
