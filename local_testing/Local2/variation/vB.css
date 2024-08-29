@@ -242,7 +242,8 @@ html body.TT_Cost_Page .tt-reviewsection {
 span.tt_tooltip {
 	display: none;
 	position: absolute;
-	background-color: white;
+	background-color: #2f3033;
+	color: white;
 	box-shadow: rgba(100, 115, 130, 0.5) 0px 2px 4px 0px;
 	max-width: 200px;
 	text-align: left;
@@ -274,4 +275,103 @@ html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext
 	content: " Get an estimate";
 	position: absolute;
 	color: #fff;
+}
+
+
+/* ........ */
+
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_stickyHeaderVisible"] {
+	display: block !important;
+}
+
+@media screen and (max-width: 950px) and (min-width: 700px) {
+	html body.TT_Cost_Page .bannerimg {
+		font-size: 30px;
+	}
+
+	html body.TT_Cost_Page .price {
+		font-size: 30px;
+	}
+
+	html body.TT_Cost_Page [class*="composable-customer-header"]+div .tp-wrap {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .m_db .tp-input-row {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	html body.TT_Cost_Page .Bm-peragraph {
+		max-width: 325px;
+	}
+
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .m_db {
+		width: 325px;
+	}
+
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext {
+		padding: 40px;
+	}
+}
+
+
+@media screen and (max-width: 700px) {
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root"] {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		max-height: fit-content;
+	}
+
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext {
+		width: 100%;
+		padding: 35px;
+		text-align: left;
+	}
+
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] {
+		width: 100%;
+		align-items: unset;
+		text-align: left;
+		justify-content: flex-start;
+		margin-top: 20px;
+	}
+
+	html body.TT_Cost_Page .Bm-peragraph .tt_tooltipmain {
+		margin-bottom: 15px;
+	}
+
+	html body.TT_Cost_Page [class*="composable-customer-header"]+div .tp-wrap {
+		padding-bottom: 20px;
+	}
+}
+
+html body.TT_Cost_Page span.hideitem:hover .tt_tooltip {
+	display: block;
+	transform: translateX(-45%);
+}
+
+html body.TT_Cost_Page span.hideitem .tt_tooltip::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	/* Arrow pointing up */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #333 transparent;
+	/* Arrow color matching tooltip background */
+
+}
+
+html body.TT_Cost_Page header h1 {
+	display: none;
+}
+
+html body.TT_Cost_Page .tt-reviewsection .innnersection>div {
+    margin-bottom: 20px;
 }

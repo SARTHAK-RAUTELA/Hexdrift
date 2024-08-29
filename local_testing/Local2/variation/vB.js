@@ -51,77 +51,77 @@
                 url: "https://www.thumbtack.com/p/house-cleaning-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524505069709688836",
                 title: "How much does house cleaning cost?",
-                price: "$175-$218",
+                price: "$175-$218*",
                 subheading: "The national average cost of house cleaning ranges from $175-$218, depending on your home's size. The type of cleaning service you request (like deep cleaning) will also impact pricing."
             },
             {
                 url: "https://www.thumbtack.com/p/fence-installation-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524500707980140548",
                 title: "How much does it cost to install a fence?",
-                price: "$1,676-$7,357",
+                price: "$1,676-$7,357*",
                 subheading: "The national average cost to install a fence is $3,999, and prices range from $1,676-$7,357. The fence's height, length, and material will impact the total cost."
             },
             {
                 url: "https://www.thumbtack.com/p/deep-cleaning-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524512323436249102",
                 title: "How much does deep cleaning a house cost?",
-                price: "$170-$320",
+                price: "$170-$320*",
                 subheading: "The national average cost to deep clean a house is $261, and prices range from $170-$320. Your home's size will be a key factor in determining the cost."
             },
             {
                 url: "https://www.thumbtack.com/p/handyman-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524500827902320652",
                 title: "How much are handyman hourly rates?",
-                price: "$60-$70 per hour",
+                price: "$60-$70 per hour*",
                 subheading: "National average handyman hourly rates range from $60-$70, depending on the work being done and the scope of your project."
             },
             {
                 url: "https://www.thumbtack.com/p/concrete-driveway-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524431852736323598",
                 title: "How much does a concrete driveway cost?",
-                price: "$2,250-$8,000",
+                price: "$2,250-$8,000*",
                 subheading: "On average, a concrete driveway costs $6,268 in the U.S. Prices typically range from $2,250-$8,000."
             },
             {
                 url: "https://www.thumbtack.com/p/pet-sitting-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502055601053701",
                 title: "How much does pet sitting cost?",
-                price: "$35-$60 per visit",
+                price: "$35-$60 per visit*",
                 subheading: "National average pet sitter rates range from $35-$60 per visit. The length and frequency of the visit will impact the cost."
             },
             {
                 url: "https://www.thumbtack.com/p/personal-trainer-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501970182086662",
                 title: "How much does a personal trainer cost?",
-                price: "$50-$60 per hour",
+                price: "$50-$60 per hour*",
                 subheading: "Personal trainers charge $50-$60 per hour, on average, in the U.S. Trainers may also charge per session and offer packages with discounted rates."
             },
             {
                 url: "https://www.thumbtack.com/p/power-washing-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502109136551948",
                 title: "How much does pressure washing cost?",
-                price: "$250-$350",
+                price: "$250-$350*",
                 subheading: "National average pressure washing prices range from $250-$350. The size of the surface or object largely impacts pricing."
             },
             {
                 url: "https://www.thumbtack.com/p/seamstress-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502290142396428",
                 title: "How much does a seamstress cost?",
-                price: "$139-$536",
+                price: "$139-$536*",
                 subheading: "The national average cost to hire a professional seamstress for alterations, tailoring, or clothing design is $221. Prices typically range from $139-$536, depending on the type of alteration."
             },
             {
                 url: "https://www.thumbtack.com/p/house-painting-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501411160481795",
                 title: "How much does it cost to paint the interior of a house?",
-                price: "$5,401-$24,282",
+                price: "$5,401-$24,282*",
                 subheading: "It costs $5,401-$24,282 to paint a home's entire interior. This national average cost includes the cost of painting a home that ranges from 1,400 to 2,800 square feet in size."
             },
             {
                 url: "https://www.thumbtack.com/p/concrete-price-per-yard",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524432282728112132",
                 title: "How much does concrete cost?",
-                price: "$4.30-$8.53 per square foot",
+                price: "$4.30-$8.53 per square foot*",
                 subheading: "The national average cost of poured concrete ranges from $4.30-$8.53 per square foot, according to Thumbtack data. The average cost of concrete per yard ranges from $140-$170, according to the Concrete Network."
             },
             {
@@ -129,35 +129,35 @@
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501295730614276",
                 subline: " Contributing author",
                 title: "How much does it cost to build a house?",
-                price: "$153 per square foot",
+                price: "$153 per square foot*",
                 subheading: "The national average cost to build a house is $153 per square foot (or $392,241), according to the most recent data from the National Association of Home Builders."
             },
             {
                 url: "https://www.thumbtack.com/p/ceiling-fan-install-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524504357916745733",
                 title: "How much does ceiling fan installation cost?",
-                price: "$120-$250",
+                price: "$120-$250*",
                 subheading: "It costs an average of $214 to install a ceiling fan in the U.S., and prices range from $120-$250. Expect to pay more if your pro needs to supply the fan and light."
             },
             {
                 url: "https://www.thumbtack.com/p/commercial-cleaning-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524431429824528387",
                 title: "How much does commercial cleaning cost?",
-                price: "$205-$568",
+                price: "$205-$568*",
                 subheading: "Commercial cleaning for U.S. offices costs $491, on average, and prices tend to range from $205-$568. An office's size or square footage is a big cost factor."
             },
             {
                 url: "https://www.thumbtack.com/p/junk-removal-cost",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501757909876750",
                 title: "How much does junk removal cost?",
-                price: "$160-$250",
+                price: "$160-$250*",
                 subheading: "National average junk removal costs range from $160-$250, largely depending on the amount of junk being removed."
             },
             {
                 url: "https://www.thumbtack.com/p/lawn-service-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501823501967366",
                 title: "How much does lawn care cost?",
-                price: "$75-$340",
+                price: "$75-$340*",
                 subheading: "The national average cost of lawn care is $299, and prices range from $75-$340. Lawn care prices depend on the type of services you require, such as lawn mowing, aeration, fertilizing, and more."
             },
             {
@@ -165,21 +165,21 @@
                 subline: " Contributing author",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501552893747203",
                 title: "How much does it cost to paint a house?",
-                price: "$3,014-$24,282",
+                price: "$3,014-$24,282*",
                 subheading: "The national average cost to paint a home's exterior is $3,014-$8,117 (for a 2,500 sq. ft. home). For interior painting, costs range from $5,401-$24,282 (for homes ranging from 1,400-2,800 sq. ft.)."
             },
             {
                 url: "https://www.thumbtack.com/p/propane-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502204946071564",
                 title: "How much does propane cost?",
-                price: "$2.60 per gallon",
+                price: "$2.60 per gallon*",
                 subheading: "The national cost of propane is approximately $2.60 per gallon, according to the most recent data from the U.S. Energy Information Administration. Check local retailers to see how much propane costs near you."
             },
             {
                 url: "https://www.thumbtack.com/p/hair-stylist-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524500755363889157",
                 title: "How much does a hair stylist cost?",
-                price: "$142-$298",
+                price: "$142-$298*",
                 subheading: "The national average cost to hire a hairtsylist is $206, with prices ranging from $142-$298. The type of hairstyle you want and the type of event you're attending can impact pricing."
             },
             {
@@ -187,7 +187,7 @@
                subline: "Contributing author",
                imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501894673055758",
                title: "How much do movers cost?",
-               price: " $100-$120 per hour (local moves) $799-$5,377 (long-distance moves) ",
+               price: " $100-$120 per hour (local moves) $799-$5,377 (long-distance moves)* ",
                subheading: "It costs on average of $100-$120 per hour to hire a local mover in the U.S. National long-distance moving costs range from $799-$5,377, on average. "
               
             }

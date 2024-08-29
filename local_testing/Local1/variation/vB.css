@@ -1,9 +1,11 @@
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_graph"] {
     display: none;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] {
     display: inline;
 }
+
 html body.TT_Cost_Page .tt_Heading {
     /* font-family: Mark For Thumbtack; */
     font-size: 38px;
@@ -12,6 +14,7 @@ html body.TT_Cost_Page .tt_Heading {
     text-align: center;
     margin-top: 26px;
 }
+
 html body.TT_Cost_Page .price {
     font-size: 38px;
     font-weight: 700;
@@ -20,9 +23,11 @@ html body.TT_Cost_Page .price {
     margin-top: 11px;
     color: #009FD9;
 }
+
 html body.TT_Cost_Page .peragraph {
     margin-top: 30px;
 }
+
 html body.TT_Cost_Page .peragraph p {
     font-size: 16px;
     font-weight: 400;
@@ -30,41 +35,52 @@ html body.TT_Cost_Page .peragraph p {
     text-align: center;
     margin-bottom: 30px;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>* {
     display: none;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext,
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] {
     display: block;
     margin: 0 auto;
     margin-top: 58px;
 }
-html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext{
+
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext {
     margin-top: 0;
 }
+
 html body.TT_Cost_Page .bannerimg {
     text-align: center;
 }
+
 html body.TT_Cost_Page [class*="composable-customer-header"]+div {
     padding-top: 0 !important;
 }
+
 html body.TT_Cost_Page .bannerimg img {
     width: 501.16px;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-text-input {
     padding: 13px 16px;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-button {
     padding: 12px 50px;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] {
     max-width: 416px;
     margin-top: 13px;
 }
+
 html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] {
     display: inline !important;
 }
-.tt_tooltipmain{
+
+.tt_tooltipmain {
     text-align: center;
     margin-top: 10px;
     display: flex;
@@ -75,12 +91,14 @@ html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] {
     font-weight: 400;
     /* line-height: 20px; */
     text-align: center;
-    
+
 }
+
 span.tt_tooltip {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #2f3033;
+    color: white;
     box-shadow: rgba(100, 115, 130, 0.5) 0px 2px 4px 0px;
     max-width: 200px;
     text-align: left;
@@ -89,24 +107,66 @@ span.tt_tooltip {
     padding: 10px;
     border-radius: 3px;
 }
-span.hideitem{
+
+span.hideitem {
     height: 20px;
     width: 20px;
     display: inline-block;
     cursor: pointer;
-    }
-span.hideitem:hover  .tt_tooltip{
+}
+
+span.hideitem:hover .tt_tooltip {
     display: block;
 }
 
-html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] > .Bm-bannertext + [class*="cobaltized-cost-page-hero_zipForm"] .tp-button{
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-button {
     color: transparent;
     display: flex;
     justify-content: center;
 
 }
-html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] > .Bm-bannertext + [class*="cobaltized-cost-page-hero_zipForm"] .tp-button:before {
+
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-button:before {
     content: " Get an estimate";
     position: absolute;
     color: #fff;
+}
+
+/* ........ */
+
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_stickyHeaderVisible"] {
+    display: block !important;
+}
+
+
+@media (max-width: 700px) {
+    html body.TT_Cost_Page [class*="composable-customer-header"]+div {
+        padding-bottom: 32px !important;
+    }
+}
+
+html body.TT_Cost_Page span.hideitem:hover .tt_tooltip {
+    display: block;
+    transform: translateX(-45%);
+}
+
+html body.TT_Cost_Page span.hideitem .tt_tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    /* Arrow pointing up */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    /* Arrow color matching tooltip background */
+
+}
+
+html body.TT_Cost_Page header h1{
+    display: none;
+}
+html body.TT_Cost_Page .tt-reviewsection .innnersection>div {
+    margin-bottom: 20px;
 }
