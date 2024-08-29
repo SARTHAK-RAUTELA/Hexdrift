@@ -59,7 +59,7 @@
               imgSrc: "https://cdn.optimizely.com/img/20611073899/c12b29150b994e49a7718272f0907cc6.png",
               title: "How much does it cost to install a fence?",
               price: "$1,676-$7,357*",
-              subheading: "TThe national average cost to install a fence is $3,999, and prices range from $1,676-$7,357. The fence's height, length, and material will impact the total cost."
+              subheading: "The national average cost to install a fence is $3,999, and prices range from $1,676-$7,357. The fence's height, length, and material will impact the total cost."
           },
           {
               url: "https://www.thumbtack.com/p/deep-cleaning-cost",
@@ -121,8 +121,8 @@
               url: "https://www.thumbtack.com/p/concrete-price-per-yard",
               imgSrc: "https://cdn.optimizely.com/img/20611073899/33d237fdded94973afefbd15f8c87d8a.png",
               title: "How much does concrete cost?",
-              price: "$4.30-$8.53 per square foot*",
-              subheading: "The national average cost of poured concrete ranges from $4.30-$8.53 per square foot, according to Thumbtack data. The average cost of concrete per yard ranges from $140-$170, according to the Concrete Network."
+              price: "$5,544-$7,883*",
+              subheading: "The national average cost to install concrete for patios, driveways, foundations, and other types of projects ranges from $5,544-$7,883. The amount of concrete needed for your project is a major cost factor."
           },
           {
               url: "https://www.thumbtack.com/p/home-building-cost-by-sqft",
@@ -140,7 +140,7 @@
           },
           {
               url: "https://www.thumbtack.com/p/commercial-cleaning-prices",
-              imgSrc: "https://cdn.optimizely.com/img/20611073899/d4ba19d857334ce18a397992654cd453.png",
+              imgSrc: "https://cdn.optimizely.com/img/20611073899/4ee863cb6f90420fad0b4dcb4676fcca.png",
               title: "How much does commercial cleaning cost?",
               price: "$205-$568*",
               subheading: "Commercial cleaning for U.S. offices costs $491, on average, and prices tend to range from $205-$568. An office's size or square footage is a big cost factor."
@@ -171,22 +171,21 @@
               imgSrc: "https://cdn.optimizely.com/img/20611073899/57e2d632b0924e73ac75968b27e9edf4.png",
               title: "How much does propane cost?",
               price: "$2.60 per gallon*",
-              subheading: "The national cost of propane is approximately $2.60 per gallon, according to the most recent data from the U.S. Energy Information Administration. Check local retailers to see how much propane costs near you."
+              subheading: "Propane costs approximately $2.60 per gallon, according to the most recent data from the U.S. Energy Information Administration. If you need to install a propane tank, contact a pro for gas line installation quotes."
           },
           {
               url: "https://www.thumbtack.com/p/hair-stylist-prices",
               imgSrc: "https://cdn.optimizely.com/img/20611073899/bcbea53ce1814fa1ad25742ba01d8af5.png",
               title: "How much does a hair stylist cost?",
               price: "$142-$298*",
-              subheading: "The national average cost to hire a hairtsylist is $206, with prices ranging from $142-$298. The type of hairstyle you want and the type of event you're attending can impact pricing."
+              subheading: "The national average cost to hire a hairstylist is $206, with prices ranging from $142-$298. The type of hairstyle you want and the type of event you're attending can impact pricing."
           },
     {
               url: "https://www.thumbtack.com/p/moving-companies-prices",
               imgSrc: "https://cdn.optimizely.com/img/20611073899/61ded4c2b1a0412796b522c050f6837d.png",
               title: "How much do movers cost?",
-              price: " $100-$120 per hour (local moves) $799-$5,377 (long-distance moves)*  ",
-            
-              subheading: "It costs on average of $100-$120 per hour to hire a local mover in the U.S. National long-distance moving costs range from $799-$5,377, on average. "
+              price: " 359-$1,803*",
+              subheading: "The national average cost for local and long-distance moves ranges from $359-$1,803. Keep in mind that local movers typically charge per hour, and long-distance movers often have fixed rates. "
           }
       ];
 
