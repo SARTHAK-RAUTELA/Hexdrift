@@ -102,7 +102,7 @@
 <div class="CRE-191-Banner">
 <div class="lower-row">
 <div class="calender-icon"><img src="https://cdn.optimizely.com/img/10196690105/f31edc8250ea44538ea7f6a01eee937a.png"></div>
-<div class="lower-row-sub"><span class="cre-191-bold">Book now, prices for April are lower than average. </span><span><span> </span>
+<div class="lower-row-sub"><span class="cre-191-bold">Book now, prices for September are lower than average. </span><span><span> </span>
 </div>
 
 `;
