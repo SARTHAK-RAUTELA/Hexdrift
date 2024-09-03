@@ -78,7 +78,10 @@
                       Be among the first in America to get GenderGP’s <b>quick and easy access to transition medication</b> and gender-affirming care.
                     </p>
                     <p class="cre_12_paragraph">
-                      Leave your email below and we’ll notify you the minute we open the doors.
+                      Leave your email to <b>join the Early Programme Gold Member list.</b>
+                    </p>
+                    <p class="cre_12_paragraph">
+                      Once we launch, you can <b>get your medication shipped in as little as 3 days.</b>
                     </p>
                     <div class="cre_12_input_container">
                       
@@ -163,7 +166,7 @@
           waitForElement(".footer-widget #block-10", moveForm, 25, 25000);
   
   
-            if (!window.cre_12_events) {
+          if (!window.cre_12_events) {
             waitForElement(".cre_12_close", eventListeners, 50, 15000);
             window.cre_12_events = true;
           }
