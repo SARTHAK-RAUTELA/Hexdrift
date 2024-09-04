@@ -2,7 +2,7 @@
     try {
         /* main variables */
         var debug = 0;
-        var variation_name = "TT_Cost_Page";
+        var variation_name = "TT_149";
         /* all Pure helper functions */
         function waitForElement(selector, trigger, delayInterval, delayTimeout) {
             var interval = setInterval(function () {
@@ -5802,2011 +5802,2011 @@
             },
             {
                 "url": "/k/crawl-space-encapsulation/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/atlanta/crawl-space-encapsulation",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/pipe-insulation/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/building-maintenance-services/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/laborers/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/ceiling-fan-repair/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/pet-door-installation/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/west-hollywood/repair-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/anaheim/repair-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/puyallup/repair-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/dc/washington/repair-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/al/alabaster/repair-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/repair-services/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/monroeville/repair-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/driveway-gate-installation/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/pet-door-removal/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/atlanta/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/knoxville/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/local-handyman-services/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/raleigh/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/charleston/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/seattle/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/denver/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ok/oklahoma-city/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/columbus/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/winston-salem/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/pittsburgh/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wi/madison/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ky/louisville/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/columbia/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/marietta/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/el-paso/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/savannah/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/fremont/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ok/tulsa/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/irvine/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/cape-coral/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/hi/honolulu/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/cincinnati/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ne/omaha/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/newnan/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/thousand-oaks/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/chicago/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/buffalo/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/torrance/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/augusta/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/stockton/local-handyman-services",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/home-repair/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ne/lincoln/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/albany/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ky/bowling-green/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/surprise/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/fort-wayne/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/hagerstown/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/flagstaff/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/mooresville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/state-college/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/saint-paul/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/grand-junction/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/huntersville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ok/broken-arrow/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/loveland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/detroit/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/saint-petersburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/west-chester/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/syracuse/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/tallahassee/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/maple-grove/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/wichita-falls/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/columbus/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/irvine/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ut/west-jordan/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-clemente/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/college-station/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/pinellas-park/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/chandler/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/cuyahoga-falls/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/hi/honolulu/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/chattanooga/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/winchester/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/la/lafayette/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nm/santa-fe/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/eugene/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/glendale/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/fayetteville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ri/providence/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/ventura/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/vacaville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/allentown/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/richardson/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/clovis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/concord/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/raleigh/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/deltona/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/new-port-richey/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/delray-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ma/worcester/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/vancouver/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/downers-grove/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/me/portland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/dallas/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/saint-cloud/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ia/council-bluffs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/fort-worth/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/fairfax/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/hendersonville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/farmington-hills/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ia/cedar-rapids/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/alpharetta/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-diego/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/killeen/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/parker/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/douglasville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ks/olathe/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/prescott-valley/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nm/las-cruces/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ri/warwick/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/laguna-woods/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/springfield/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/de/wilmington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/temple/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/sugar-land/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/chula-vista/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/south-lake-tahoe/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-cruz/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/greenwood/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/casa-grande/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/mission-viejo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ak/anchorage/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/akron/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/rochester-hills/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/north-port/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/nashville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/new-braunfels/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/harrisonburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/seattle/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/columbia/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/salinas/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/spartanburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/corona/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ma/barnstable-town/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/annapolis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-maria/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-francisco/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nh/manchester/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/sebastian/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/hillsboro/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/sammamish/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/myrtle-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/la/new-orleans/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/plano/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/scottsdale/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/anaheim/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/austin/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/littleton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/cary/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wi/green-bay/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/indianapolis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/savannah/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/springfield/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/buffalo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/pembroke-pines/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/charlottesville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/augusta/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/waco/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/palm-beach-gardens/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/kalamazoo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/palm-desert/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/huntington-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/fresno/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/arlington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ar/fayetteville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/eden-prairie/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ut/saint-george/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/knoxville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/manassas/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/mckinney/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/al/tuscaloosa/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/maryville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/dc/washington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/al/mobile/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/bullhead-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ar/bentonville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/apache-junction/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/lombard/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/rockford/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/leesburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/fort-walton-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/gainesville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/victorville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/id/coeur-d-alene/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/binghamton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/riverside/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/kansas-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/corpus-christi/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/philadelphia/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/apple-valley/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/charlotte/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ut/salt-lake-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/winston-salem/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/menifee/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/winter-garden/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ok/oklahoma-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/daytona-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/asheville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/lake-forest/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-rosa/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/aurora/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/spokane/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/athens/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/hollywood/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nv/north-las-vegas/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/fort-lauderdale/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/poughkeepsie/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/bothell/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-luis-obispo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/allen/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/bend/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/federal-way/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/gilbert/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/jacksonville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/greer/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/cedar-park/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/crystal-lake/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ks/kansas-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/belleville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/new-smyrna-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/broomfield/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/bellingham/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/lancaster/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ia/des-moines/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/handyman/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/bay-area/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/thousand-oaks/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/tyler/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/davis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/vero-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/columbus/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/lakeland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/palm-bay/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/hemet/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ma/cambridge/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/west-palm-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/merced/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-marcos/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ar/hot-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/summerville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/stockton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/round-rock/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/center-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/toledo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/georgetown/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/tracy/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nj/ocean-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/de/dover/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/rancho-cucamonga/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/westminster/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/chino-hills/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/fort-myers/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/frisco/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/port-orange/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/gainesville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/prescott/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/clarksville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/champaign/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/al/huntsville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/id/boise/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ct/new-haven/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/brentwood/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/visalia/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ne/omaha/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/naples/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/walnut-creek/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/springfield/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/pearland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/beaverton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/erie/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/tempe/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nh/nashua/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/columbia/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/panama-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/frederick/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/saint-louis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/san-antonio/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/pflugerville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/oceanside/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/mesa/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/olympia/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/kirkland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/lansing/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/new-york/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/youngstown/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/baltimore/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/memphis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/la/baton-rouge/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/lafayette/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/greensburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/redding/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/mcminnville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/florissant/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/westerville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/yorba-linda/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/arvada/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/brooklyn/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/norfolk/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/cleveland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/el-paso/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/york/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/burlington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/roanoke/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/saratoga-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/greenville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/pleasanton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sd/sioux-falls/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/boulder/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/gaithersburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/salem/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/boca-raton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/irving/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/long-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/hampton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nv/reno/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/bradenton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-jose/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/bethlehem/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/jacksonville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/abilene/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/winter-haven/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/saint-peters/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/palmdale/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/cape-coral/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/greenville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/rockville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/harrisburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/high-point/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/tucson/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ks/topeka/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nv/las-vegas/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/schenectady/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/arlington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/sunnyvale/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/morgan-hill/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ok/tulsa/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/florence/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/durham/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wi/milwaukee/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ar/north-little-rock/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/rochester/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/aiken/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/lawrenceville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/woodbury/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/coral-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/ormond-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/minneapolis/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/melbourne/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/dayton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/murrieta/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/sacramento/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/kernersville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/homestead/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/chicago/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/livermore/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-rafael/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/ocala/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-clarita/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/holland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nm/rio-rancho/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/longmont/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/paso-robles/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/pompano-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/westminster/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ma/boston/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/de/newark/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/bonita-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/westside/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ar/little-rock/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/la/shreveport/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/peoria/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/lees-summit/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/morristown/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/grand-rapids/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ma/springfield/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/al/montgomery/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/temecula/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/miami-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/suffolk/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mn/apple-valley/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nv/henderson/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/saint-joseph/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/rocky-mount/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/macon/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/greenwood/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/fort-collins/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/pensacola/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/tampa/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/richmond/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-mateo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/hilton-head-island/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/desert-hot-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/fremont/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wv/morgantown/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/kissimmee/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/venice/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/columbus/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/miami/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/sumter/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/conroe/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/carlsbad/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/oh/cincinnati/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/league-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/palm-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ks/lawrence/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/clearwater/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/oakland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-clara/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/weatherford/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/in/bloomington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/fountain-hills/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/lakewood/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/lake-worth/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nm/albuquerque/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/denver/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/portsmouth/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/centennial/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/pittsburgh/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/castle-rock/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/orange/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/port-saint-lucie/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/alexandria/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/phoenix/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/virginia-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/lake-havasu-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/rock-hill/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/murfreesboro/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/greensboro/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ny/rochester/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ks/overland-park/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/marietta/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/tacoma/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/al/birmingham/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/garland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/newport-news/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/or/portland/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/lubbock/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/md/bowie/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nv/carson-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/sarasota/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/wilmington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/simi-valley/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/colorado-springs/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/largo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/pa/lancaster/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/johnson-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/denton/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-barbara/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wi/madison/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mo/saint-charles/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/bakersfield/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/pueblo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/san-bernardino/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/lynnwood/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/laguna-niguel/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nc/chapel-hill/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/la/bossier-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/los-angeles/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/mi/ann-arbor/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/palm-coast/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tx/houston/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/naperville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ky/louisville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/boynton-beach/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/leesburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/charleston/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/modesto/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ia/davenport/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/chico/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/co/aurora/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ky/lexington/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/orlando/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/fredericksburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/wa/mount-vernon/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/arroyo-grande/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/tn/franklin/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ks/wichita/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/va/chesapeake/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/mount-pleasant/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/roseville/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/santa-monica/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ca/camarillo/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/az/sierra-vista/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/atlanta/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/nj/jersey-city/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/il/schaumburg/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/sc/anderson/handyman",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/gelcoat-repair/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/bathroom-vanity-installation/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/dog-door-installers/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/caulking/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/ga/atlanta/mailbox-installers",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/mailbox-installers/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/general-maintenance-services/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/k/maintenance-services/near-me",
-                "imgv2": "https://production-next-images-cdn.thumbtack.com/i/524500827902320652"
+                "imgv2": "https://cdn.optimizely.com/img/20611073899/35510b7310ed496a9b605f1ec5555a6d.png"
             },
             {
                 "url": "/fl/safety-harbor/deck-cleaners",
@@ -11708,10 +11708,6 @@
                 "imgv2": "https://cdn.optimizely.com/img/20611073899/fa2ed14a99c948db930d52b794a0b087.png"
             },
             {
-                "url": "/k/heavy-lifting-contractors/near-me",
-                "imgv2": "https://cdn.optimizely.com/img/20611073899/fa2ed14a99c948db930d52b794a0b087.png"
-            },
-            {
                 "url": "/k/machine-movers/near-me",
                 "imgv2": "https://cdn.optimizely.com/img/20611073899/fa2ed14a99c948db930d52b794a0b087.png"
             },
@@ -12652,22 +12648,6 @@
                 "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
             },
             {
-                "url": "/k/last-minute-movers/near-me",
-                "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
-            },
-            {
-                "url": "/k/movers/near-me",
-                "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
-            },
-            {
-                "url": "/k/cheap-moving/near-me",
-                "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
-            },
-            {
-                "url": "/k/moving-labor/near-me",
-                "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
-            },
-            {
                 "url": "/k/small-moving-companies/near-me",
                 "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
             },
@@ -12726,10 +12706,6 @@
             {
                 "url": "/k/fitness-equipment-movers/near-me",
                 "imgv2": "https://cdn.optimizely.com/img/20611073899/147b0c564eba49c5befc8c827ee9ae5f.png"
-            },
-            {
-                "url": "/k/movers/near-me",
-                "imgv2": "https://cdn.optimizely.com/img/20611073899/881bcf9648c34316a6d5ec89f9073d93.png"
             },
             {
                 "url": "/k/cross-country-movers/near-me",
