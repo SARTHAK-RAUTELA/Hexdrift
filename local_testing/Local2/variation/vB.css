@@ -1,13 +1,148 @@
-https://www.thumbtack.com/ga/albany/piano-lessons?QA=tt151
-https://www.thumbtack.com/ga/albany/dog-trainers?QA=tt151
-https://www.thumbtack.com/ga/albany/wedding-planners?QA=tt151
-https://www.thumbtack.com/ga/alpharetta/resume-writers-and-editors?QA=tt151
-https://www.thumbtack.com/ga/alpharetta/hypnosis?QA=tt151
-https://www.thumbtack.com/ga/alpharetta/bodybuilding-trainers?QA=tt151
-https://www.thumbtack.com/ga/albany/wedding-decorators?QA=tt151
-https://www.thumbtack.com/ga/albany/couples-therapy?QA=tt151
-https://www.thumbtack.com/ga/albany/web-design?QA=tt151
-https://www.thumbtack.com/ga/albany/carpenters?QA=tt151
-https://www.thumbtack.com/ga/alpharetta/washer-and-dryer-repair-services?QA=tt151
-https://www.thumbtack.com/ga/alpharetta/mobile-dog-grooming?QA=tt151
-https://www.thumbtack.com/ga/alpharetta/decluttering-services?QA=tt151
+@media only screen and (min-width: 1024px) {
+    html body.TT_procard [class*="pro-list-result-image_proImage"] {
+        height: auto !important;
+        margin-top: 7px !important;
+    }
+
+    html body.TT_procard .ttviewcta {
+        height: auto !important;
+        margin-top: 12px !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+        align-items: start !important;
+    }
+
+    html body.TT_procard .ttctamore {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] * {
+        justify-content: start !important;
+        width: 100%;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"]+div>div:nth-child(2) {
+        display: none !important;
+    }
+
+    html body.TT_procard [class*="Wrap_bleedBelowSmall"] [class*="pro-list-results-front-door_proListResultsWrapper"]>div>div {
+        width: 49%;
+    }
+
+    html body.TT_procard [class*="Wrap_bleedBelowSmall"] [class*="pro-list-results-front-door_proListResultsWrapper"]>div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    html body.TT_procard [class*="Wrap_bleedBelowSmall"] [class*="pro-list-results-front-door_proListResultsWrapper"] [class*="pro-list-results-front-door_loadMoreSection"] [class*="ButtonRow_root"] a {
+        padding: 2px 36px;
+    }
+
+    html body.TT_procard [data-test="pro-cost-estimate"]>div {
+        align-items: start !important;
+    }
+
+    html body.TT_procard [class*="Wrap_bleedBelowSmall"] [class*="pro-list-results-front-door_proListResultsWrapper"]>div>div>div {
+        border: none !important;
+    }
+
+    html body.TT_procard [class*="Wrap_bleedBelowSmall"] [class*="pro-list-results-front-door_proListResultsWrapper"]>div {
+        gap: 9px 0;
+        box-sizing: border-box;
+    }
+
+    html body.TT_procard [class*="pro-list-results-front-door"]>[class*="Wrap_bleedBelowSmall"] {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    html body.TT_procard [class*="hero-header_root"]+div {
+        max-width: 1160px;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] .ttviewcta svg {
+        width: auto;
+    }
+
+    html body.TT_procard [class*=pro-list-results] [class*=pro-list-results]>.ph3>div {
+        background-color: #fff;
+        padding: 0 16px;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    html body.TT_procard [class*=pro-list-results] [class*=pro-list-results]>.ph3>div:hover {
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    html body.TT_procard [class*=pro-list-results] [class*=pro-list-results]>.ph3>div>div {
+        border: none !important;
+    }
+
+    html body.TT_procard #pro_list_header+div {
+        border: none !important;
+    }
+
+    html body.TT_procard [class*=pro-list-results] [class*=pro-list-results]>.ph3>div.mh3 {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    html body.TT_procard {
+        background-color: #fafafa;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] [class*="cost-information_mobileCostSubtext"] {
+        text-align: left !important;
+    }
+
+    html body.TT_procard [class*="pro-list-result_profileInfoContainer"] .hover-blue {
+        display: flex;
+    }
+
+    html body.TT_procard [class*="pro-list-result_profileInfoContainer"] .hover-blue+div {
+        align-items: center;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] * button span {
+        justify-content: center !important;
+    }
+
+    html body.TT_procard [data-test="pro-cost-estimate"] [class*="pro-cost-estimate_price"] p {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+    }
+
+    /* html body.TT_procard [class*="pro-list-result_profileInfoContainer"] [class*="pro-review_root"] [class*="pro-review_truncateForSeeMore"] {
+        max-height: 82px;
+    } */
+    html body.TT_procard [class*="pro-list-results-front-door_loadMoreSection"] {
+        justify-content: center !important;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] .tt_itemadd {
+        display: flex !important;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] .tt_itemadd>div:first-child {
+        width: auto;
+    }
+
+    html body.TT_procard [class*="pro-list-result-image_proImage"] .tt_itemadd>div:last-child {
+        margin-top: 2px;
+        margin-left: 4px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 560px) {
+    html body.TT_Cost_Page .tt-reviewsection .rightsection img {
+        width: 45px;
+        height: 45px;
+    }
+}
