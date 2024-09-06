@@ -94,14 +94,14 @@
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501970182086662",
                 title: "How much does a personal trainer cost?",
                 price: "$50-$60 per hour*",
-                subheading: "In the U.S., personal trainers charge $50-$60 per hour, on average."
+                subheading: "In the U.S., personal trainers charge $50-$60 per hour, on average. Trainers may also charge per session and offer packages with discounted rates."
             },
             {
                 url: "https://www.thumbtack.com/p/power-washing-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502109136551948",
                 title: "How much does pressure washing cost?",
                 price: "$250-$350*",
-                subheading: "National average pressure washing prices range from $250-$350. The size of the surface or structure largely impacts pricing"
+                subheading: "National average pressure washing prices range from $250-$350. The size of the surface or structure largely impacts pricing."
             },
             {
                 url: "https://www.thumbtack.com/p/seamstress-prices",
@@ -162,7 +162,6 @@
             },
             {
                 url: "https://www.thumbtack.com/p/how-much-does-it-cost-to-paint-a-house",
-                subline: " Contributing author",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501552893747203",
                 title: "How much does it cost to paint a house?",
                 price: "$3,014-$24,282*",
@@ -178,7 +177,7 @@
             {
                 url: "https://www.thumbtack.com/p/hair-stylist-prices",
                 imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524500755363889157",
-                title: "How much does a hair stylist cost?",
+                title: "How much does a hairstylist cost?",
                 price: "$142-$298*",
                 subheading: "The national average cost to hire a hairstylist is $206, with prices ranging from $142-$298. The type of hairstyle you want and the type of event you're attending can impact pricing."
             },
@@ -253,7 +252,7 @@
             },
             {
               url: "https://www.thumbtack.com/p/power-washing-prices",
-              authorBylineName: "Written by Sydney Champion",
+              authorBylineName: "Sydney Champion",
               subline: "Contributing author",
               authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg",
               expertBylineName: "Shawn Myers",
@@ -271,7 +270,7 @@
             },
             {
               url: "https://www.thumbtack.com/p/house-painting-cost",
-              authorBylineName: "Written by Melanie Fourie",
+              authorBylineName: "Melanie Fourie",
               subline: " Contributing author",
               authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/7ccf78555e6440e388a33dfb8206178f.png",
               expertBylineName: " ",
@@ -288,7 +287,7 @@
             },
             {
               url: "https://www.thumbtack.com/p/home-building-cost-by-sqft",
-              authorBylineName: "Written by Kristy Snyder",
+              authorBylineName: "Kristy Snyder",
               subline: " Contributing author",
               authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/183677312a214cc4aa1047c11a25ac53.png",
               expertBylineName: " ",
@@ -332,7 +331,8 @@
             },
             {
               url: "https://www.thumbtack.com/p/how-much-does-it-cost-to-paint-a-house",
-              authorBylineName: "Written by Nicki Escudero",
+              authorBylineName: "Nicki Escudero",
+              subline: " Contributing author",
               authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522538471725907978",
               expertBylineName: " ",
               linkForExpertByline: " ",
@@ -356,7 +356,7 @@
             },
             {
               url: "https://www.thumbtack.com/p/moving-companies-prices",
-              authorBylineName: "Written by Sydney Champion,",
+              authorBylineName: "Sydney Champion,",
               subline: "Contributing author",
               authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg",
               expertBylineName: "Chris Davaa",
