@@ -120,53 +120,29 @@
 <div class="cre-t-39-testimonial-container ">
 <div class="cre_headinger">
 <h2>Introducing Facilities-iQ—our cutting-edge <br> facilities management software</h2>
-<p style="font-size: 16px;">Combining the <strong>latest SFG20 maintenance standards</strong> with <strong> advanced facility management automation</strong>, <br> Facilities-iQ ensures unmatched efficiency, compliance, and peace of mind.</p>
+<p style="font-size: 16px;">Combining the <strong>latest SFG20 maintenance guidance</strong> with <strong> advanced facility management automation.</strong> <br> Facilities-iQ ensures unmatched efficiency, compliance, and peace of mind.</p>
 </div>
 <div class="cre-t-sfg14-boxslider swiper content-wrapper">
 <div class="cre-t-sfg14-boxslider-wrapper swiper-wrapper">
 <div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_1.svg">
-<p>With over 1000 regularly updated maintenance schedules, all aligned with the latest legislation, you can quickly find what you need using keywords, Uniclass, SFG20, or NRM codes.</P>
+<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/Facilities-iQ%20Screenshots_%201%20Home%20Page.png">
+<p class="slider-caption-header" >Dashboard:</p>
+<p>With over 1000 regularly updated maintenance schedules, all aligned with the latest legislation, you can quickly find what you need using keywords, Uniclass, SFG20, or NRM codes.</p>
 </div>
 <div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_2.svg">
-<p>Tailor and organize maintenance schedules with custom Maintenance Regimes, then securely share them with your team in the field.</p>
+<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/Facilities-iQ%20Screenshots_%207%20Tailoring%20A%20Schedule.png">
+<p class="slider-caption-header" >Maintenance Schedules:</p>
+<p>Each schedule contains clear task instructions along with task, timings, frequencies and colour-coded criticality.</p>
 </div>
 <div class="cre-t-sfg14-box swiper-slide">
-<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/dashboard_screens_3-(1).jpg">
-<p>Customize task details like duration, frequency, criticality and skill set for better resource planning and allocation.</p>
+<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/Facilities-iQ%20Screenshots_%202%20Technical%20Updates.png">
+<p class="slider-caption-header" >Technical Updates:</p>
+<p>SFG20 guidance is updated on a regular basis to ensure it always aligns with the latest legislation and codes of practice.</p>
 </div>
 <div class="cre-t-sfg14-box swiper-slide">
-<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/dashboard_screens_4.jpg">
-<p>Create tailored maintenance schedules with Derived or Custom options, perfect for focusing on critical tasks and managing specialist assets.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_5.svg">
-<p>Easily and securely share Maintenance Regimes with authorized teams, ensuring everyone works under the latest SFG20 standard.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_6.svg">
-<p>Quickly access your most-used schedules by creating personalized Favourite Lists, saving you time and effort.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_9.svg">
-<p>Use custom Tags to quickly identify schedules, helping you and your team save valuable time.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_10.svg">
-<p>Take full control by adding new users and assigning licenses and roles directly from the Admin area.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_11.svg">
-<p>Stay on top of tasks with the 'Actions' area, your personal reminder and to-do list at a tap.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_7.svg">
-<p>Stay compliant with automated schedule updates, compare changes side-by-side, and implement them at your convenience.</p>
-</div>
-<div class="cre-t-sfg14-box swiper-slide">
-<img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG14/dashboard_screens_8.svg">
-<p>Integrate Facilities-iQ to your FM system via our free API, automating Maintenance Regimes and saving hours of manual entry.</p>
+<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007638/Facilities-iQ%20Screenshots_%206%20Sharelink.png">
+<p class="slider-caption-header" >Share Link:</p>
+<p>Share your maintenance regimes securely for tendering or completion of works.</p>
 </div>
 </div>
 </div>
