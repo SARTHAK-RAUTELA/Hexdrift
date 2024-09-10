@@ -1,272 +1,270 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-html body.cre-t-62 .cre-t-62_wrapper {
-    width: 100%;
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_graph"] {
+    display: none;
 }
-
-html body.cre-t-62 .cre-t-62_main-container {
-    width: 100%;
-    margin: auto;
-    padding: 32px 0px;
-    max-width: 1500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] {
+    display: inline;
 }
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding-inline: 38px;
-}
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section h3.cre-t-62_section-title {
-    font-family: Montserrat !important;
-    font-size: 26px;
+html body.TT_Cost_Page .tt_Heading {
+    /* font-family: Mark For Thumbtack; */
+    font-size: 38px;
     font-weight: 700;
-    line-height: 31.69px;
-    letter-spacing: -0.02em;
-    text-align: left;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 26px;
 }
-
-html body.cre-t-62 .cre-t-62_main-container a.cre-t-62_all-link {
+html body.TT_Cost_Page .price {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 11px;
+    color: #009FD9;
+}
+html body.TT_Cost_Page .peragraph {
+    margin-top: 30px;
+}
+html body.TT_Cost_Page .peragraph p {
     font-size: 16px;
-    font-weight: 600;
-    line-height: 19px;
-    text-align: right;
-    color: #000;
-    font-family: "Montserrat", system-ui;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 30px;
 }
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section a.cre-t-62_all-link {
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>* {
+    display: none;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext,
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 58px;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext {
+    margin-top: 0;
+}
+html body.TT_Cost_Page .bannerimg {
+    text-align: center;
+}
+html body.TT_Cost_Page [class*="composable-customer-header"]+div {
+    padding-top: 0 !important;
+}
+html body.TT_Cost_Page .bannerimg img {
+    width: 501.16px;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-text-input {
+    padding: 13px 16px;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-button {
+    padding: 12px 50px;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] {
+    max-width: 416px;
+    margin-top: 13px;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"] {
+    display: inline !important;
+}
+.tt_tooltipmain {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: Mark For Thumbtack; */
+    font-size: 14px;
+    font-weight: 400;
+    /* line-height: 20px; */
+    text-align: center;
+}
+span.tt_tooltip {
+    display: none;
+    position: absolute;
+    background-color: #2f3033;
+    color: white;
+    box-shadow: rgba(100, 115, 130, 0.5) 0px 2px 4px 0px;
+    max-width: 200px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px;
+    border-radius: 3px;
+}
+span.hideitem {
+   height: 20px;
+   width: 20px;
+   display: inline-block;
+   cursor: pointer;
+}
+span.hideitem img{
+    max-width: 16px;
+    margin-top: 2px;
+}
+span.hideitem:hover .tt_tooltip {
     display: block;
 }
-
-html body.cre-t-62 .cre-t-62_main-container>a.cre-t-62_all-link {
-    display: none;
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-button {
+    color: transparent;
+    display: flex;
+    justify-content: center;
 }
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_buttons_container {
-    display: grid;
-    gap: 11px;
-    grid-template-columns: repeat(auto-fill, minmax(43px, 1fr));
-    margin-top: 30px;
-    padding-inline: 38px;
-}
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_buttons_container .cre-t-62_letter-button {
-    width: 43px;
-    height: 43px;
-    background: rgba(253, 236, 237, 1);
-    border: none;
-    font-family: Montserrat !important;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18.29px;
-    text-align: center;
-    font-family: "Montserrat", system-ui;
-    color: black;
-}
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_buttons_container .cre-t-62_letter-button:hover {
-    background: rgba(219, 63, 73, 0.5);
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] .tp-button:before {
+    content: " Get an estimate";
+    position: absolute;
     color: #fff;
 }
-
-html body.cre-t-62 .cre-t-62_main-container .cre-t-62_buttons_container .cre-t-62_letter-button.cre-t-62_letter_selected {
-    background: rgba(219, 63, 73, 1);
-    color: #fff;
-}
-
-html body.cre-t-62 .cre-t-62_main-container .cre_t-62-product_container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    justify-content: start;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    row-gap: 20px;
-}
-
-html body.cre-t-62 .cre-t-62_book {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    height: auto;
-    flex: 0 0 auto;
-}
-
-html body.cre-t-62 .cre-t-62_book.cre-t-62_display {
-    display: flex;
-}
-
-html body.cre-t-62 .cre-t-62_book-img {
-    width: 173px;
-    height: 220px;
-}
-
-html body.cre-t-62 .cre-t-62_book-name {
-    text-align: center;
-    color: #000;
-    margin: 0 auto;
-    width: 173px;
-    font-size: 14px;
-    line-height: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    height: 40px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: pre-wrap;
-    margin-top: 5px;
-}
-
-html body.cre-t-62 .cre-t-62_no_products {
-    display: none;
-    padding-inline: 38px;
-    margin: auto;
-}
-
-html body.cre-t-62 .cre-t-62_no_products.cre-t-62_display {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-html body.cre-t-62 .cre-t-62_no_products p.cre-t-62_no_products-text {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 1);
+html body.TT_Cost_Page .tt-reviewsection .name {
+    /* font-family: Mark For Thumbtack; */
+    font-size: 16px;
     font-weight: 600;
-    text-align: center;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(47, 48, 51, 1);
 }
-
-
-
-html body.cre-t-62 .cre-t-62_no_products p.cre-t-62_no_products-text a {
-    color: #000;
+html body.TT_Cost_Page .tt-reviewsection .name .ttright {
+    font-size: 14px;
+    display: block;
+    color: rgba(103, 109, 115, 1);
+    font-weight: 400;
 }
-
-@media only screen and (max-width: 1366px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 220px;
-    }
+html body.TT_Cost_Page .tt-reviewsection .leftsection img {
+    /* max-width: 34px;
+    border-radius: 50px; */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-
-@media only screen and (max-width: 1199px) {
-    html body.cre-t-30 .books_container {
-        flex-wrap: wrap;
-        gap: 0px;
-    }
-
-    html body.cre-t-62 .cre-t-62_book {
-        width: 25%;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section,
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_buttons_container {
-        padding: 0 45px;
-    }
+html body.TT_Cost_Page .tt-reviewsection .rightsection img {
+   
+    width: 100px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-
-@media only screen and (max-width: 991px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 33.33333333%;
-    }
+html body.TT_Cost_Page .tt-reviewsection .innnersection>div {
+    width: 40%;
 }
-
-@media only screen and (max-width: 767px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 50%;
-        height: auto;
-        margin-bottom: 15px;
+html body.TT_Cost_Page .tt-reviewsection .innnersection>div:last-child {
+    width: 60%;
+    align-items: flex-start;
+}
+html body.TT_Cost_Page .tt-reviewsection .innnersection>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+html body.TT_Cost_Page .tt-reviewsection .rightsection .flex-div {
+    display: flex;
+}
+html body.TT_Cost_Page .tt-reviewsection .reviewtextor {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(47, 48, 51, 1);
+}
+html body.TT_Cost_Page .tt-reviewsection .textdiv .reviewtextortext {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: rgba(103, 109, 115, 1);
+}
+html body.TT_Cost_Page .tt-reviewsection .tt-reviewsection {
+    margin-top: 30px;
+}
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+html body.TT_Cost_Page .tt-reviewsection {
+    margin-top: 20px;
+}
+/* ........ */
+html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_stickyHeaderVisible"] {
+    display: block !important;
+}
+@media (max-width: 700px) {
+ 
+    html body.TT_Cost_Page .tt-reviewsection .innnersection>div:last-child {
+        width: 100%;
     }
-
-    html body.cre-t-62 .cre-t-62_book-img {
-        width: 152px !important;
-        height: 202px !important;
+    html body.TT_Cost_Page .tt-reviewsection .innnersection>div {
+        width: 100%;
     }
-
-    html body.cre-t-62 .cre-t-62_book-img {
-        width: 152px;
+    html body.TT_Cost_Page .innnersection{
+        flex-direction: column;
     }
-
-    html body.cre-t-30 .cre_category_all {
-        font-size: 15px;
-        line-height: 19px;
-    }
-
-    html body.cre-t-30 .cre_category_title {
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container {
-        padding-bottom: 0;
-        padding-top: 0;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section,
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_buttons_container {
-        padding: 0 17px;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section {
-        align-items: center;
-        justify-content: center;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section h3.cre-t-62_section-title {
-        font-size: 24px;
-        letter-spacing: -0.48px;
-        font-weight: 700;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container .cre-t-62_top-section a.cre-t-62_all-link {
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_stickyHeader"] + div >  p:first-child  , 
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_stickyHeader"] + div > h2:nth-child(2)  {
         display: none;
-    }
-
-    html body.cre-t-62 .cre-t-62_main-container>a.cre-t-62_all-link {
-        font-size: 16px;
-        display: block;
-        text-align: center;
-        font-weight: 600;
-        line-height: 19px;
-        padding: 0 17px;
-        margin-bottom: 30px;
-    }
-
-
-    html body.cre-t-62 .cre-t-62_no_products p.cre-t-62_no_products-text {
-        font-size: 14px;
-    }
-
-
-
+	}
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_redesignRoot"] {
+		height: auto;
+	}
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_redesignRoot"] > div + div {
+		padding-bottom: 20px !important;
+	}
+	
+	html body.TT_Cost_Page .Bm-bannertext +[class*="cobaltized-cost-page-hero_zipForm"] + p{
+		display: none;
+	}
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_redesignRoot"] > div + div  [class*="Image_picture"]{
+		display: none;
+	}
+	html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_redesignRoot"] > div .white{
+		display: none;
+	}
+	
 }
-
-@media only screen and (min-width: 1366px) and (max-width: 1440px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 240px;
-    }
+html body.TT_Cost_Page span.hideitem:hover .tt_tooltip {
+    display: block;
+    transform: translateX(-45%);
 }
-
-@media only screen and (min-width: 1298px) and (max-width: 1366px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 220px;
-    }
+html body.TT_Cost_Page span.hideitem .tt_tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
 }
-
-@media only screen and (min-width: 1250px) and (max-width: 1298px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 210px;
-    }
+html body.TT_Cost_Page header h1{
+    display: none;
 }
+html body.TT_Cost_Page .tt-reviewsection .innnersection>div {
+    margin-bottom: 20px;
+}
+html body.TT_Cost_Page .tt_hideitem > p:first-child , 
+html body.TT_Cost_Page .tt_hideitem > p:nth-child(2){
+     display: none;
+}
+html body.TT_Cost_Page .innnersection {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+}
+html body.TT_Cost_Page .tt-reviewsection .rightsection.tt_hide{
+    display: none;
+ } 
+@media only screen and (max-width: 560px) {
+    html body.TT_Cost_Page .bannerimg img {
+        width: 328.16px;
+    }
+    html body.TT_Cost_Page .tt_Heading {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    html body.TT_Cost_Page .price{
+        font-size: 32px;
+    }
 
-@media only screen and (min-width: 1200px) and (max-width: 1250px) {
-    html body.cre-t-62 .cre-t-62_book {
-        width: 192px;
+    span.tt_tooltip {
+        max-width: 148px;
+        width: 100%;
     }
 }
