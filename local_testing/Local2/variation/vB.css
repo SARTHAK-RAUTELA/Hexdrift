@@ -280,6 +280,7 @@ html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_stickyHeaderVisible"] 
         width: 100%;
         padding: 35px;
         text-align: left;
+        align-items: center;
     }
     html body.TT_Cost_Page [class*="cobaltized-cost-page-hero_root_"]>.Bm-bannertext+[class*="cobaltized-cost-page-hero_zipForm"] {
         width: 100%;
