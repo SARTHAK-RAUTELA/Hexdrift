@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap");
 
-html body.cre-t-68 .magazine-categories > div.mx-auto{
+html body.cre-t-68 .magazine-categories>div.mx-auto {
     display: none;
 }
 
-html body.cre-t-68 .magazine-categories .magazine-categories{
+html body.cre-t-68 .magazine-categories .magazine-categories {
     display: none;
 }
 
-html body.cre-t-68 .cre-t-68-category-heading{
+html body.cre-t-68 .cre-t-68-category-heading {
     color: #000;
     font-size: 26px;
     font-style: normal;
@@ -17,21 +17,21 @@ html body.cre-t-68 .cre-t-68-category-heading{
     text-align: center;
 }
 
-html body.cre-t-68 .cre-t-68-category-inr{
+html body.cre-t-68 .cre-t-68-category-inr {
     background: #FFF;
     display: flex;
     justify-content: center;
 }
 
-html body.cre-t-68 .cre-t-logo-content{
+html body.cre-t-68 .cre-t-logo-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
-   
+
 }
 
-html body.cre-t-68 .cre-t-68-category-text{
+html body.cre-t-68 .cre-t-68-category-text {
     color: #000;
     text-align: center;
     font-size: 16px;
@@ -43,13 +43,13 @@ html body.cre-t-68 .cre-t-68-category-text{
     margin: auto;
 }
 
-html body.cre-t-68 .cre-t-68-category-logos{
+html body.cre-t-68 .cre-t-68-category-logos {
     width: 11%;
     margin: 0px 5.5px;
     padding-bottom: 35px;
 }
 
-html body.cre-t-68 .cre-t-68-category-img{
+html body.cre-t-68 .cre-t-68-category-img {
     display: flex;
     justify-content: center;
     background-color: rgba(219, 63, 73, 0.10);
@@ -57,30 +57,38 @@ html body.cre-t-68 .cre-t-68-category-img{
     height: 100px;
     align-items: center;
     border-radius: 50%;
-    margin: 0px auto 15px 
+    margin: 0px auto 15px
 }
 
-html body.cre-t-68 .cre-t-68-category-img img{
+html body.cre-t-68 .cre-t-68-category-img img {
     width: 65px;
     height: 65px;
 }
 
-html body.cre-t-68 .cre-t-68-category-logos-link{
+html body.cre-t-68 .cre-t-68-category-logos-link {
     text-decoration: none;
 }
 
+html body.cre-t-68 .cre-t-68-category-img img.new-icons {
+    width: 50px;
+    height: 50px;
+}
 
-@media only screen and (max-width:991px){
+html body.cre-t-68 .cre-t-68-category-img .camera-icon{
+  margin-left: 10px;
+}
+
+@media only screen and (max-width:991px) {
     html body.cre-t-68 .cre-t-68-category-logos {
         margin: 0px 13px;
         width: 13%;
     }
 
-    html body.cre-t-68 .cre-t-logo-content{
+    html body.cre-t-68 .cre-t-logo-content {
         justify-content: center;
     }
 
-   
+
 }
 
 @media screen and (max-width: 750px) {
@@ -89,28 +97,29 @@ html body.cre-t-68 .cre-t-68-category-logos-link{
         width: 132px;
         margin: 0;
     }
+
     html body.cre-t-68 .cre-t-logo-content {
         width: 1057px;
         justify-content: left;
     }
 
-    html body.cre-t-68 .cre-t-68-category-inr{
+    html body.cre-t-68 .cre-t-68-category-inr {
         overflow: auto;
         display: block;
     }
 
-    html body.cre-t-68 .guide-categories .magazine-categories{
+    html body.cre-t-68 .guide-categories .magazine-categories {
         padding: 0 !important;
     }
 
-    html body.cre-t-68 .guide-categories{
+    html body.cre-t-68 .guide-categories {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    
-    html body.cre-t-68 .increasedPaddingBottom{
+
+    html body.cre-t-68 .increasedPaddingBottom {
         padding: 0px 22px;
     }
 
-   
+
 }

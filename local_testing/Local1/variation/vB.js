@@ -1,34 +1,34 @@
 (function () {
-	try {
-	  /* main variables */
-	  var debug = 0;
-	  var variation_name = "cre-t-68";
-	  /* all Pure helper functions */
-  
-	  function waitForElement(selector, trigger) {
-		var interval = setInterval(function () {
-		  if (
-			document &&
-			document.querySelector(selector) &&
-			document.querySelectorAll(selector).length > 0
-		  ) {
-			clearInterval(interval);
-			trigger();
-		  }
-		}, 50);
-		setTimeout(function () {
-		  clearInterval(interval);
-		}, 15000);
-	  }
-	  
-	  function addClass(el, cls) {
-		var el = document.querySelector(el);
-		if (el) {
-		  el.classList.add(cls);
-		}
-	  }
+    try {
+        /* main variables */
+        var debug = 0;
+        var variation_name = "cre-t-68";
+        /* all Pure helper functions */
 
-      var category = `
+        function waitForElement(selector, trigger) {
+            var interval = setInterval(function () {
+                if (
+                    document &&
+                    document.querySelector(selector) &&
+                    document.querySelectorAll(selector).length > 0
+                ) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+
+        function addClass(el, cls) {
+            var el = document.querySelector(el);
+            if (el) {
+                el.classList.add(cls);
+            }
+        }
+
+        var category = `
       <div class="cre-t-68-category-sec">
       <div class="cre-t-68-category-wrapper">
           <div class="cre-t-68-category-container">
@@ -38,42 +38,42 @@
       
                   <div class="cre-t-68-category-logos">
                   <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/celebrityandfanpacks/"> 
-                     <div class="cre-t-68-category-img"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Celebrity_and_Fan_Packs-removebg-preview.png" alt="Celebrity & Fan Packs guides and specials"></div>
+                     <div class="cre-t-68-category-img"> <img class="camera-icon new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_2.svg" alt="Celebrity & Fan Packs guides and specials"></div>
                      <p class="cre-t-68-category-text">Celebrity & Fan Packs</p>
                      </a>
                   </div>
       
                   <div class="cre-t-68-category-logos">
                   <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/christmasguidesspecials/"> 
-                      <div class="cre-t-68-category-img"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Christmas-removebg-preview.png" alt="Christmas guides and specials"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_3.svg" alt="Christmas guides and specials"></div>
                       <p class="cre-t-68-category-text">Christmas</p>
                       </a>
                    </div>
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/annuals/"> 
-                      <div class="cre-t-68-category-img"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Annuals-removebg-preview.png" alt="Annuals guides and specials"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_4.svg" alt="Annuals guides and specials"></div>
                       <p class="cre-t-68-category-text">Annuals</p>
                       </a>
                    </div>
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/royalguidesspecials/"> 
-                      <div class="cre-t-68-category-img"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Royal%20Guides%20&%20Specials.png"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_5.svg"></div>
                       <p class="cre-t-68-category-text">Royal Guides & Specials</p>
                      </a>
                    </div>
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/bestsellingguides/"> 
-                      <div class="cre-t-68-category-img"> <img class="cre-t-68-category-homes-logo" src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Bestsellers-removebg-preview.png"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" class="cre-t-68-category-homes-logo" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_6.svg"></div>
                       <p class="cre-t-68-category-text">Bestsellers</p>
                       </a>
                    </div>
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/bundles/"> 
-                      <div class="cre-t-68-category-img"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Bundles-removebg-preview.png" alt="Bundles guides and specials"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_7.svg" alt="Bundles guides and specials"></div>
                       <p class="cre-t-68-category-text">Bundles</p>
                       </a>
                    </div>
@@ -108,7 +108,7 @@
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/lifestyle/"> 
-                      <div class="cre-t-68-category-img"> <img class="cre-t-68-category-mens-logo" src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Lifestyle.png" alt="Lifestyle guides and specials"></div>
+                      <div class="cre-t-68-category-img"> <img class="cre-t-68-category-mens-logo new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_1.svg" alt="Lifestyle guides and specials"></div>
                       <p class="cre-t-68-category-text">Lifestyle</p>
                       </a>
                    </div>
@@ -122,7 +122,7 @@
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/knowledge/"> 
-                      <div class="cre-t-68-category-img"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007537/Knowledge.png" alt="Knowledge guides and specials"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_8.svg" alt="Knowledge guides and specials"></div>
                       <p class="cre-t-68-category-text">Knowledge</p>
                       </a>
                    </div>
@@ -153,24 +153,24 @@
       </div>
       `;
 
-      
-	  /* Variation Init */
-	  function init() {
-		
-		addClass("body", variation_name);
 
-          if (!document.querySelector('.cre-t-68-category-sec')) {
-         document.querySelector(".magazine-categories > div.mx-auto").insertAdjacentHTML("afterend", category)
-            
+        /* Variation Init */
+        function init() {
+
+            addClass("body", variation_name);
+
+            if (!document.querySelector('.cre-t-68-category-sec')) {
+                document.querySelector(".magazine-categories > div.mx-auto").insertAdjacentHTML("afterend", category)
+
+            }
         }
-          }
-    
 
-		/* Initialise variation */
-		waitForElement('.magazine-categories > div.mx-auto', init);
 
-		
-	} catch (e) {
-	  if (debug) console.log(e, "error in Test" + variation_name);
-	}
+        /* Initialise variation */
+        waitForElement('.magazine-categories > div.mx-auto', init);
+
+
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name);
+    }
 })();
