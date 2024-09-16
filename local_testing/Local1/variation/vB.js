@@ -66,7 +66,7 @@
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/bestsellingguides/"> 
-                      <div class="cre-t-68-category-img"> <img class="new-icons" class="cre-t-68-category-homes-logo" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_6.svg"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" class="cre-t-68-category-homes-logo" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/bestseller.svg"></div>
                       <p class="cre-t-68-category-text">Bestsellers</p>
                       </a>
                    </div>
@@ -122,7 +122,7 @@
       
                    <div class="cre-t-68-category-logos">
                    <a class="cre-t-68-category-logos-link" href="/guides-and-specials/categories/knowledge/"> 
-                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/Component_8.svg" alt="Knowledge guides and specials"></div>
+                      <div class="cre-t-68-category-img"> <img class="new-icons" src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/magazinesdirect/MAG68/knowledge.svg" alt="Knowledge guides and specials"></div>
                       <p class="cre-t-68-category-text">Knowledge</p>
                       </a>
                    </div>
