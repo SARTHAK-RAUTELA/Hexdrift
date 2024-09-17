@@ -165,7 +165,7 @@ html body.TT_Cost_Page .tt-reviewsection .leftsection img {
 }
 
 html body.TT_Cost_Page .tt-reviewsection .rightsection img {
-    width: 45pxpx;
+    width: 45px;
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
