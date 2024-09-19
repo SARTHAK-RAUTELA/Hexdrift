@@ -1,489 +1,219 @@
 (function () {
   try {
-    /* main variables */
-    var debug = 0;
-    var variation_name = "TT_Cost_Page";
-    /* all Pure helper functions */
-    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-      var interval = setInterval(function () {
-        if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-          clearInterval(interval);
-          trigger();
-        }
-      }, delayInterval);
-      setTimeout(function () {
-        clearInterval(interval);
-      }, delayTimeout);
-    }
-    function addLiveEventListener(selector, event, callback, context) {
-      // Helper for enabling IE 8 event bindings
-      function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent('on' + type, handler);
-        else el.addEventListener(type, handler);
+      /* main variables */
+      var debug = 0;
+      var variation_name = "TT-148";
+      /* all Pure helper functions */
+      function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+          var interval = setInterval(function () {
+              if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                  clearInterval(interval);
+                  trigger();
+              }
+          }, delayInterval);
+          setTimeout(function () {
+              clearInterval(interval);
+          }, delayTimeout);
       }
-      // Matches polyfill
-      this.Element && function (ElementPrototype) {
-        ElementPrototype.matches = ElementPrototype.matches ||
-          ElementPrototype.matchesSelector ||
-          ElementPrototype.webkitMatchesSelector ||
-          ElementPrototype.msMatchesSelector ||
-          function (selector) {
-            var node = this,
-              nodes = (node.parentNode || node.document).querySelectorAll(selector),
-              i = -1;
-            while (nodes[++i] && nodes[i] != node);
-            return !!nodes[i];
-          };
-      }(Element.prototype);
-      // Live binding helper using matchesSelector
-      function live(selector, event, callback, context) {
-        addEvent(context || document, event, function (e) {
-          var found, el = e.target || e.srcElement;
-          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-          if (found) callback.call(el, e);
-        });
-      }
-      live(selector, event, callback, context);
-    }
-
-    var data = [
-      {
-        url: "https://www.thumbtack.com/p/house-cleaning-prices",
-        imgSrc: "https://cdn.optimizely.com/img/20611073899/eb4751f64f2d41d0a7f08c6342d272a9.png",
-        title: "How much does house cleaning cost?",
-        price: "$175-$218*",
-        subheading: "The national average cost of house cleaning ranges from $175-$218, depending on your home's size. The type of cleaning service you request (like deep cleaning) will also impact pricing."
-      },
-      {
-        url: "https://www.thumbtack.com/p/fence-installation-cost",
-        imgSrc: "https://cdn.optimizely.com/img/20611073899/6110aee5e30b4516ac59f3f452b9e74e.png",
-        title: "How much does it cost to install a fence?",
-        price: "$1,676-$7,357*",
-        subheading: "The national average cost to install a fence is $3,999, and prices range from $1,676-$7,357. The fence's height, length, and material will impact the total cost."
-      },
-      {
-        url: "https://www.thumbtack.com/p/deep-cleaning-cost",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524512323436249102",
-        title: "How much does deep cleaning a house cost?",
-        price: "$170-$320*",
-        subheading: "The national average cost to deep clean a house is $261, and prices range from $170-$320. Your home's size will be a key factor in determining the cost."
-      },
-      {
-        url: "https://www.thumbtack.com/p/handyman-prices",
-        imgSrc: "https://cdn.optimizely.com/img/20611073899/d6f725bd85134b5a996f1f02402bcfa9.png",
-        title: "How much are handyman hourly rates?",
-        price: "$60-$70 per hour*",
-        subheading: "National average handyman hourly rates range from $60-$70, depending on the work being done and the scope of your project."
-      },
-      {
-        url: "https://www.thumbtack.com/p/concrete-driveway-cost",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524431852736323598",
-        title: "How much does a concrete driveway cost?",
-        price: "$2,250-$8,000*",
-        subheading: "On average, a concrete driveway costs $6,268 in the U.S. Prices typically range from $2,250-$8,000."
-      },
-      {
-        url: "https://www.thumbtack.com/p/pet-sitting-prices",
-        imgSrc: "https://cdn.optimizely.com/img/20611073899/d35fc0f06d3e4e8da8eee5f4c9536dfb.png",
-        title: "How much does pet sitting cost?",
-        price: "$35-$60 per visit*",
-        subheading: "National average pet sitter rates range from $35-$60 per visit. The length and frequency of the visit will impact the cost."
-      },
-      {
-        url: "https://www.thumbtack.com/p/personal-trainer-cost",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501970182086662",
-        title: "How much does a personal trainer cost?",
-        price: "$50-$60 per hour*",
-        subheading: "In the U.S., personal trainers charge $50-$60 per hour, on average. Trainers may also charge per session and offer packages with discounted rates."
-      },
-      {
-        url: "https://www.thumbtack.com/p/power-washing-prices",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502109136551948",
-        title: "How much does pressure washing cost?",
-        price: "$250-$350*",
-        subheading: "National average pressure washing prices range from $250-$350. The size of the surface or structure largely impacts pricing."
-      },
-      {
-        url: "https://www.thumbtack.com/p/seamstress-prices",
-        imgSrc: "https://cdn.optimizely.com/img/20611073899/5c5f574d1b1a4b48bb0fb41aa1057934.png",
-        title: "How much does a seamstress cost?",
-        price: "$139-$536*",
-        subheading: "The national average cost to hire a professional seamstress for alterations, tailoring, or clothing design is $221. Prices typically range from $139-$536, depending on the type of alteration."
-      },
-      {
-        url: "https://www.thumbtack.com/p/house-painting-cost",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501411160481795",
-        title: "How much does it cost to paint the interior of a house?",
-        price: "$5,401-$24,282*",
-        subheading: "It costs $5,401-$24,282 to paint a home's entire interior. This national average cost includes the cost of painting a home that ranges from 1,400 to 2,800 square feet in size."
-      },
-      {
-        url: "https://www.thumbtack.com/p/concrete-price-per-yard",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524432282728112132",
-        title: "How much does concrete cost?",
-        price: "$5,544-$7,883*",
-        subheading: "The national average cost to install concrete for patios, driveways, foundations, and other types of projects ranges from $5,544-$7,883. The amount of concrete needed for your project is a major cost factor."
-      },
-      {
-        url: "https://www.thumbtack.com/p/home-building-cost-by-sqft",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501295730614276",
-        subline: " Contributing author",
-        title: "How much does it cost to build a house?",
-        price: "$153 per square foot*",
-        subheading: "The national average cost to build a house is $153 per square foot (or $392,241 for a 2,561-sq-ft home), according to the most recent data from the National Association of Home Builders."
-      },
-      {
-        url: "https://www.thumbtack.com/p/ceiling-fan-install-cost",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524504357916745733",
-        title: "How much does ceiling fan installation cost?",
-        price: "$120-$250*",
-        subheading: "It costs an average of $214 to install a ceiling fan in the U.S., and prices range from $120-$250. Expect to pay more if your pro needs to supply the fan and light."
-      },
-      {
-        url: "https://www.thumbtack.com/p/commercial-cleaning-prices",
-        imgSrc: "https://cdn.optimizely.com/img/20611073899/2808aebecc7d4ef3b0f6e4fcf4f971d2.png",
-        title: "How much does commercial cleaning cost?",
-        price: "$205-$568*",
-        subheading: "Commercial cleaning for U.S. offices costs $491, on average, and prices tend to range from $205-$568. An office's size or square footage is a big cost factor."
-      },
-      {
-        url: "https://www.thumbtack.com/p/junk-removal-cost",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501757909876750",
-        title: "How much does junk removal cost?",
-        price: "$160-$250*",
-        subheading: "National average junk removal costs range from $160-$250, largely depending on the amount of junk being removed."
-      },
-      {
-        url: "https://www.thumbtack.com/p/lawn-service-prices",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501823501967366",
-        title: "How much does lawn care cost?",
-        price: "$75-$340*",
-        subheading: "The national average cost of lawn care is $299, and prices range from $75-$340. Lawn care prices depend on the type of services you require, such as lawn mowing, aeration, fertilizing, and more."
-      },
-      {
-        url: "https://www.thumbtack.com/p/how-much-does-it-cost-to-paint-a-house",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501552893747203",
-        title: "How much does it cost to paint a house?",
-        price: "$3,014-$24,282*",
-        subheading: "The national average cost to paint a home's exterior is $3,014-$8,117 (for a 2,500 sq. ft. home). For interior painting, costs range from $5,401-$24,282 (for homes ranging from 1,400-2,800 sq. ft.)."
-      },
-      {
-        url: "https://www.thumbtack.com/p/propane-prices",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524502204946071564",
-        title: "How much does propane cost?",
-        price: "$2.60 per gallon*",
-        subheading: "Propane costs approximately $2.60 per gallon, according to the most recent data from the U.S. Energy Information Administration. If you need to install a propane tank, contact a pro for gas line installation quotes."
-      },
-      {
-        url: "https://www.thumbtack.com/p/hair-stylist-prices",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524500755363889157",
-        title: "How much does a hairstylist cost?",
-        price: "$142-$298*",
-        subheading: "The national average cost to hire a hairstylist is $206, with prices ranging from $142-$298. The type of hairstyle you want and the type of event you're attending can impact pricing."
-      },
-      {
-        url: "https://www.thumbtack.com/p/moving-companies-prices",
-        subline: "Contributing author",
-        imgSrc: "https://production-next-images-cdn.thumbtack.com/i/524501894673055758",
-        title: "How much do movers cost?",
-        price: " $359-$1,803* ",
-        subheading: "The national average cost for local and long-distance moves ranges from $359-$1,803. Keep in mind that local movers typically charge per hour, and long-distance movers often have fixed rates. "
-
-      }
-    ];
-
-
-    var updaterevie = [
-      {
-        url: "https://www.thumbtack.com/p/house-cleaning-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: '',
-        linkForExpertByline: '',
-        expertBylinePhoto: ''
-      },
-      {
-        url: "https://www.thumbtack.com/p/fence-installation-cost",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/deep-cleaning-cost",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/handyman-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/concrete-driveway-cost",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/pet-sitting-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/personal-trainer-cost",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/power-washing-prices",
-        authorBylineName: "Sydney Champion",
-        subline: "Contributing author",
-        authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg",
-        expertBylineName: "Shawn Myers",
-        linkForExpertByline: "https://www.thumbtack.com/content/pro-advisory-board",
-        expertBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/514347101827743758/width/2200.webp",
-        expertcomment: "  Expert reviewed by Shawn Myers, owner of <a href='https://www.thumbtack.com/ga/cartersville/pressure-washing/skilled-pugs-pressure-wash-gutter-cleaning/service/485915601361354785'> Skilled Pugs Pressure Wash & Gutter Cleaning </a> in Cartersville, GA."
-      },
-      {
-        url: "https://www.thumbtack.com/p/seamstress-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/house-painting-cost",
-        authorBylineName: "Melanie Fourie",
-        subline: " Contributing author",
-        authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/7ccf78555e6440e388a33dfb8206178f.png",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/concrete-price-per-yard",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/home-building-cost-by-sqft",
-        authorBylineName: "Kristy Snyder",
-        subline: " Contributing author",
-        authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/183677312a214cc4aa1047c11a25ac53.png",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/ceiling-fan-install-cost",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/commercial-cleaning-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/junk-removal-cost",
-        authorBylineName: "Sydney Champion",
-        subline: " Contributing author",
-        authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg",
-        expertBylineName: "Daniel Jones",
-        linkForExpertByline: "https://www.thumbtack.com/content/pro-advisory-board",
-        expertBylinePhoto: "https://cdn.optimizely.com/img/20611073899/7ce7e8fd6f854b02ace82e59be6fad09.png",
-        expertcomment: " Expert reviewed by Daniel Jones, a <a href='https://www.thumbtack.com/content/pro-advisory-board'>Thumbtack Pro Advisory Board</a> member and the owner of <a href='https://www.thumbtack.com/ca/carlsbad/junk-removal/junk-miners/service/275863999598453779'>Junk Miners</a> in Carlsbad, CA."
-
-      },
-      {
-        url: "https://www.thumbtack.com/p/lawn-service-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/how-much-does-it-cost-to-paint-a-house",
-        authorBylineName: "Nicki Escudero",
-        subline: " Contributing author",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522538471725907978",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/propane-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/hair-stylist-prices",
-        authorBylineName: "Written by Thumbtack Staff",
-        authorBylinePhoto: "https://production-next-images-cdn.thumbtack.com/i/522528727836483603",
-        expertBylineName: " ",
-        linkForExpertByline: " ",
-        expertBylinePhoto: " "
-      },
-      {
-        url: "https://www.thumbtack.com/p/moving-companies-prices",
-        authorBylineName: "Sydney Champion",
-        subline: "Contributing author",
-        authorBylinePhoto: "https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg",
-        expertBylineName: "Chris Davaa",
-        linkForExpertByline: "https://www.thumbtack.com/content/pro-advisory-board",
-        expertBylinePhoto: "//cdn.optimizely.com/img/20611073899/25292421492643be914e6589cd3dd5fd.jpg",
-        expertcomment: " Expert reviewed by Chris Davaa, a <a href='https://www.thumbtack.com/content/pro-advisory-board'>Thumbtack Pro Advisory Board</a> and the owner of <a href='https://www.thumbtack.com/ca/los-angeles/movers/24-seven-moving/service/431466909043875851'>24 Seven Moving</a> in Los Angeles, CA."
-
-
-      }
-    ];
-
-
-
-    /* Variation Init */
-    function init() {
-      document.querySelector("body").classList.add(variation_name)
-      var currentURL = window.location.href;
-      var matchingData = data.find(function (item) {
-        return currentURL.startsWith(item.url);
-      });
-      if (matchingData && document.querySelector('[class*="cobaltized-cost-page-hero"] [class*="cobaltized-cost-page-hero_zipForm"]')) {
-        var bannerhtml = `
-                  <div class="Bm-bannertext leftsection" style="background-image: url('${matchingData.imgSrc}'); background-size: cover;">
-                      <div class="bannerimg">${matchingData.title}</div>
-                      <div class="price">${matchingData.price}</div>
-                  </div>
-              `;
-
-        if (!document.querySelector(".Bm-bannertext")) {
-          document.querySelector('[class*="cobaltized-cost-page-hero"] [class*="cobaltized-cost-page-hero_zipForm"]').insertAdjacentHTML('beforebegin', bannerhtml);
-        }
-        var tt_peragraph = `
-              <div class="Bm-peragraph">
-                <p>${matchingData.subheading}</p>
-                <p class="tt_tooltipmain"> *Based on our research  <span class="hideitem"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/Cost+Page+Redesign_test+1/icon-info.svg"> <span class="tt_tooltip">We track estimates customers get from local professionals and perform additional research.</span></span> </p>
-                
-
-              </div> `;
-        if (!document.querySelector(".Bm-peragraph")) {
-          document.querySelector('[class*="cobaltized-cost-page-hero"] [class*="cobaltized-cost-page-hero_zipForm"] > div:first-child').insertAdjacentHTML('beforebegin', tt_peragraph);
-        }
-
-
-
-
-      }
-
-
-
-
-
-      var currentURL = window.location.href;
-      console.log("Current URL:", currentURL); // Debugging the current URL
-
-      var datamatch = updaterevie.find(function (item1) {
-        return currentURL.startsWith(item1.url);
-      });
-
-      if (datamatch) {
-        if (document.querySelector('[class*="composable-customer-header"] + div.bg-gray-200')) {
-          console.log("Author Byline Photo:", datamatch.authorBylinePhoto); // Debugging author photo URL
-
-          var tt_review = `
-  <div class="tt-reviewsection">
-      <div class="innnersection">
-          <div class="leftsection">
-          ${datamatch.authorBylinePhoto ? `<img class="photp" src="${datamatch.authorBylinePhoto}">` : ''}
-          ${datamatch.authorBylineName ? `<p class="name">${datamatch.authorBylineName} ${datamatch.subline ? `<span class="ttright">${datamatch.subline}</span>` : ''}</p>` : ''}
-          </div>
-          <div class="rightsection">
-          ${datamatch.expertBylinePhoto ? `<img class="photp" src="${datamatch.expertBylinePhoto}" >` : ''}
-          <div class="textdiv">
-          ${datamatch.expertBylineName ? `<p class="reviewtextor link">${datamatch.expertBylineName}</p>` : ''}
-          ${datamatch.expertcomment ? `<p class="reviewtextortext ">${datamatch.expertcomment}</p>` : ''}
-          </div>
-          </div>
-      </div>
-  </div>`;
-
-          if (!document.querySelector(".tt-reviewsection")) {
-            document.querySelector('[aria-label="Breadcrumb"]').insertAdjacentHTML('afterend', tt_review);
+      function addLiveEventListener(selector, event, callback, context) {
+          // Helper for enabling IE 8 event bindings
+          function addEvent(el, type, handler) {
+              if (el.attachEvent) el.attachEvent('on' + type, handler);
+              else el.addEventListener(type, handler);
           }
-        }
+          // Matches polyfill
+          this.Element && function (ElementPrototype) {
+              ElementPrototype.matches = ElementPrototype.matches ||
+                  ElementPrototype.matchesSelector ||
+                  ElementPrototype.webkitMatchesSelector ||
+                  ElementPrototype.msMatchesSelector ||
+                  function (selector) {
+                      var node = this,
+                          nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                          i = -1;
+                      while (nodes[++i] && nodes[i] != node);
+                      return !!nodes[i];
+                  };
+          }(Element.prototype);
+          // Live binding helper using matchesSelector
+          function live(selector, event, callback, context) {
+              addEvent(context || document, event, function (e) {
+                  var found, el = e.target || e.srcElement;
+                  while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                  if (found) callback.call(el, e);
+              });
+          }
+          live(selector, event, callback, context);
+      }
+      var thumbtechservices = `
+          <div class="thumbtechservices bg-white bmhidesection">
+              <h2 class="bmheading Type_title5__FuNNq">Popular services near you.</h2>
+              <div class="bm-item">
+                  <li title="House cleaning"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Sparkle_Icon_%C2%B7_Medium.png"> <p>House <br>Cleaning</p></a></li>
+                  <li title="Handyman"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png" > <p>Handyman <br> <span>j</span></p></a></li>
+                  <li title="Local electricians" ><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> Wiring Repair</p></a></li>
+                  <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> Painting</p></a></li>
+                  <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> Removal</p></a></li>
+                  <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local Moving<br>(Under 50 miles)</p></a></li>
+                  <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance Repair or Maintenance</p></a></li>
+                  <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor Installation or Replacement</p></a></li>
+              </div>
+          </div>
+      `;
+      var reviews = `
+          <div class="reviewsection desktop">
+              <p> Trusted by +4.5M people &nbsp;•&nbsp; 4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
+          </div>
+      `;
+      var mobilereviews = `
+          <div class="reviewsection mobile">
+              <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
+          </div>
+      `;
+      var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
+      var heroheading =
+          `<div class="thmobilebanner"><img src="//cdn.optimizely.com/img/20611073899/2b43f5d6b9954b86a2a9df7fd4b9f96e.png"></div>
+      <h1 class="mb5  homepage-hero_heavy">
+          <div class="homepage-hero_textCarousel">
+              <ul class="homepage-hero_scroll">
+                  <li>Home improvement,</li>
+                  <li>Home repair,</li>
+                  <li>Home inspection,</li>
+                  <li>Home cleaning,</li>
+                  <li>Home improvement,</li>
+              </ul>
+          </div>
+          <br>made easy.
+      </h1> `;
+      /* Variation Init */
+      function init() {
+          document.querySelector("body").classList.add(variation_name);
+          waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]', function () {
+              document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder", "Describe your project or problem - be as detailed as you’d like!")
+          }, 50, 15000)
+          waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]', function () {
+              document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "Describe your project or problem"
+          }, 50, 15000)
+          var textValuesToCheck = ['Popular services'];
+          var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
+          elementsToModify.forEach((element) => {
+              var fullTextContent = element.textContent.trim();
+              if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
+                  var parentElement = element.closest('.bg-white');
+                  if (parentElement) {
+                      parentElement.classList.add('bmhidesection');
+                  }
+              }
+          });
+          if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
+              if (!document.querySelector(".thumbtechservices")) {
+                  document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
+              }
+          } else {
+              var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
+              if (rootSiblingElement) {
+                  if (!document.querySelector(".thumbtechservices")) {
+                      rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                  }
+              } else {
+                  var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
+                  if (customerHeaderSiblingElement) {
+                      if (!document.querySelector(".thumbtechservices")) {
+                          customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                      }
+                  }
+              }
+          }
+          // Putting new heading
+          waitForElement('[class*="homepage-hero_heavy"]', function () {
+            var heroElement = document.querySelector('[class*="homepage-hero_heavy"]');
+            if(!document.querySelector('.thmobilebanner')) {
+              heroElement.insertAdjacentHTML('afterend', heroheading);
+            }
+          }, 50, 15000);
+
+          waitForElement('#uniqueId4 ~ [class*="search-bar_zipCodeError"]', function () {
+            if (!document.querySelector(".reviewsection.desktop")) {
+              document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
+          }
+        }, 50, 15000);
+         waitForElement('#uniqueId4 ~ [class*="search-bar_zipCodeError"]', function () {
+          if (!document.querySelector('.reviewsection.mobile')) {
+              document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
+          }
+        }, 50, 15000);
+         
+          function wrapDivs() {
+              // Select the starting div with class bmhidesection
+              var startDiv = document.querySelector('.bmhidesection');
+              if (!startDiv) return; // Exit if starting div is not found
+              // Select the next sibling divs after startDiv until we wrap 4 divs
+              var siblingDivs = [];
+              var currentDiv = startDiv.nextElementSibling;
+              for (var i = 0; i < 2; i++) {
+                  if (currentDiv && currentDiv.tagName === 'DIV' && !currentDiv.classList.contains('wrapped-divs')) {
+                      siblingDivs.push(currentDiv);
+                      currentDiv = currentDiv.nextElementSibling;
+                  } else {
+                      break; // Exit loop if not enough valid sibling divs found
+                  }
+              }
+              // Create a new parent div
+              var newParentDiv = document.createElement('div');
+              newParentDiv.className = 'wrapped-divs'; // Assign a class to the new parent div for styling purposes
+              // Append the selected divs to the new parent div
+              siblingDivs.forEach(function (div) {
+                  newParentDiv.appendChild(div);
+              });
+              // Insert the new parent div after startDiv
+              startDiv.parentNode.insertBefore(newParentDiv, startDiv.nextSibling);
+              // Check if the .wrapped-divs element is empty, then remove it
+              var wrappedDiv = document.querySelector('.wrapped-divs');
+              if (wrappedDiv && !wrappedDiv.hasChildNodes()) {
+                  wrappedDiv.parentNode.removeChild(wrappedDiv);
+              }
+          }
+          waitForElement(".bmhidesection", function () {
+              wrapDivs()
+          }, 50, 15000);
+          // Get the zip code value from the input field
+          waitForElement('[class*="search-bar_zipCodeInput"]', function () {
+          var zipCode = document.querySelector('[class*="search-bar_zipCodeInput"]').value;
+       
+          // Select all the links inside the thumbtechservices div
+          var links = document.querySelectorAll('.thumbtechservices a');
+          // Loop through each link and replace the zip code in the href attribute
+          links.forEach(function (link) {
+              var href = link.getAttribute('href');
+              href = href.replace(/zip_code=([0-9]+)/, 'zip_code=' + zipCode);
+              link.setAttribute('href', href);
+          });
+        }, 50, 15000);
+      }
+      /* Initialise variation */
+      function thumbtackTest144(list, observer) {
+          list.getEntries().forEach((entry) => {
+              if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+                  observer.disconnect();
+                  clearInterval(test144Interval);
+                  waitForElement("body", init, 50, 15000);
+                  window.isHydrated = true;
+              }
+          });
+      }
+      if (!window.isHydrated) {
+          var test144Interval = setInterval(function () {
+              waitForElement("body", init, 50, 15000);
+          }, 50);
+          setTimeout(function () {
+              clearInterval(test144Interval);
+          }, 3000);
+          const observer = new PerformanceObserver(thumbtackTest144);
+          observer.observe({ entryTypes: ["mark"] });
       } else {
-        console.log("No data match found."); // Debugging if no match is found
-      }
-      var element = document.querySelector('.formatted-content p em #back-to-top');
-      if (element) {
-        element.closest('.formatted-content').classList.add('tt_hideitem');
-      }
-      var element = document.querySelector('.formatted-content p em #top');
-      if (element) {
-        element.closest('.formatted-content').classList.add('tt_hideitem');
-      }
-      var textDiv = document.querySelector('.tt-reviewsection .rightsection');
-      var reviewTextor = textDiv.querySelector('.reviewtextor');
-
-      // Check if the .reviewtextor element has text content
-      if (!reviewTextor || !reviewTextor.textContent.trim()) {
-        textDiv.classList.add('tt_hide');
-      }
-
-    }
-    /* Initialise variation */
-    function thumbtackTest144(list, observer) {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === "mark" && entry.name === "afterHydrate") {
-          observer.disconnect();
-          clearInterval(test144Interval);
           waitForElement("body", init, 50, 15000);
-          window.isHydrated = true;
-        }
-      });
-    }
-    if (!window.isHydrated) {
-      var test144Interval = setInterval(function () {
-        waitForElement("body", init, 50, 15000);
-      }, 50);
-      setTimeout(function () {
-        clearInterval(test144Interval);
-      }, 3000);
-      const observer = new PerformanceObserver(thumbtackTest144);
-      observer.observe({ entryTypes: ["mark"] });
-    } else {
-      waitForElement("body", init, 50, 15000);
-    }
+      }
   } catch (e) {
-    if (debug) console.log(e, "error in Test" + variation_name);
+      if (debug) console.log(e, "error in Test" + variation_name);
   }
 })();
