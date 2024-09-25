@@ -166,7 +166,7 @@
             checkIfAnySelected()
             setTimeout(function () {
                 visibleTheCard()
-                visibiltyCheck()
+                // visibiltyCheck()
             }, 100)
 
         }
@@ -466,55 +466,23 @@
                 }
             }
         }
-        function visibiltyCheck() {
+        // function visibiltyCheck() {
 
-            // Select all elements with the class '.product-placement-card__wrapper'
-            var productCards = document.querySelectorAll('.product-placement-card__wrapper');
+        //     // Select all elements with the class '.product-placement-card__wrapper'
+        //     var productCards = document.querySelectorAll('.product-placement-card__wrapper');
 
-            // Function to check display and add a class to the parent
-            productCards.forEach(card => {
-                var parent = document.querySelector('.product-container');
+        //     // Function to check display and add a class to the parent
+        //     productCards.forEach(card => {
+        //         var parent = document.querySelector('.product-container');
 
-                // Check if the element is hidden (display: none)
-                if (window.getComputedStyle(card).display === 'none') {
-                    parent.classList.add('parent-has-hidden-child');
-                } else {
-                    parent.classList.remove('parent-has-hidden-child'); // Optionally remove the class if no longer hidden
-                }
-            });
-            // Select all the products in the container
-            // var products = document.querySelectorAll('.product-placement-card__wrapper ');
-
-            // Function to check how many products have display: block
-            // function checkDisplayBlock() {
-            //     let displayBlockCount = 0;
-
-            //     // Loop through the products and check their display style
-            //     products.forEach(product => {
-            //         var productStyle = window.getComputedStyle(product);
-
-            //         if (productStyle.display === 'block') {
-            //             displayBlockCount++;
-            //         }
-            //     });
-
-            //     Perform your desired action if more than one product has display: block
-            //     if (displayBlockCount > 1) {
-            //          Select all the promo-label elements
-            //         var promoLabels = document.querySelectorAll('.promo-label.product-placement-card__promo-label');
-
-            //          Loop through the promo-label elements, skip the first one and hide the rest
-            //         promoLabels.forEach((promoLabel, index) => {
-            //             if (index !== 0) {  // Leave the first element (index 0) visible
-            //                 promoLabel.style.display = 'none';
-            //             }
-            //         });
-
-            //         Add your logic here, e.g., hide, modify styles, etc.
-            //     }
-            // }
-            // checkDisplayBlock()
-        }
+        //         // Check if the element is hidden (display: none)
+        //         if (window.getComputedStyle(card).display === 'none') {
+        //             parent.classList.add('parent-has-hidden-child');
+        //         } else {
+        //             parent.classList.remove('parent-has-hidden-child'); // Optionally remove the class if no longer hidden
+        //         }
+        //     });
+        // }
 
         var filter = `<div class="filter-container site-container">
         <div class="full-width-callout">
@@ -579,7 +547,7 @@
                 checkIfAnySelected()
                 setTimeout(function () {
                     visibleTheCard()
-                    visibiltyCheck()
+                    // visibiltyCheck()
                 }, 100)
             }, 50, 15000)
         }
