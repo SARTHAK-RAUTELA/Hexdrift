@@ -13,7 +13,7 @@ html body.SeaWorld_T205 .btn-group {
 html body.SeaWorld_T205 .btn-group button {
 	max-width: 145px;
 	min-width: fit-content;
-	padding: 0px 12px 0px 12px;
+	padding: 0px 13px 0px 13px;
 	border: 1px solid #13203A;
 	border-radius: 25px;
 	background-color: #fff;
@@ -53,11 +53,10 @@ html body.SeaWorld_T205 .invalidPark .results {
 }
 
 html body.SeaWorld_T205 .results {
-	margin-bottom: 20px;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 22px;
-	margin-top: 30px;
+	margin-top: 17px;
 	width: 100%;
 }
 
@@ -73,31 +72,17 @@ html body.SeaWorld_T205 .product-tile-heading {
 	width: 100%;
 }
 
-@media (min-width: 768px) {
-	html body.SeaWorld_T205 .filter-container button {
-		font-family: "Poppins Regular", sans-serif;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 22px;
-		font-family: "Poppins Lite", sans-serif;
-		font-weight: 400;
-		line-height: 24px;
-	}
-}
-
 html body.SeaWorld_T205 .filter-container button {
-	font-family: "Poppins Regular", sans-serif;
-	font-weight: 400;
 	font-size: 14px;
 	line-height: 20px;
 	font-family: "Poppins Lite", sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 html body.SeaWorld_T205 .filter-wrapper {
 	display: flex;
 	gap: 40px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-bottom: 20px;
 }
 
@@ -108,12 +93,12 @@ html body.SeaWorld_T205 .All-product-tile {
 }
 
 html body.SeaWorld_T205 .product-tile-heading {
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 	margin-top: 15px;
 }
 
 html body.SeaWorld_T205 .filter-wrapper strong {
-	font-family: "Poppins Medium", sans-serif;
+	font-family: "Poppins Semibold", sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 }
@@ -123,6 +108,7 @@ html body.SeaWorld_T205 .filter-container .full-width-callout__title {
 	font-weight: 600;
 	line-height: 48px;
 	text-align: left;
+	font-family: "Poppins Semibold", sans-serif;
 }
 
 html body.SeaWorld_T205 #parksSection {
@@ -183,6 +169,11 @@ html body.SeaWorld_T205 #parksSection {
 		min-width: 1px;
 		height: auto;
 	}
+
+	html body.SeaWorld_T205 .filter-container .full-width-callout {
+		padding: 24px 43px;
+		padding-bottom: 42px;
+	}
 }
 
 @media(max-width:1024px) {
@@ -230,4 +221,24 @@ html body.SeaWorld_T205 #parksSection {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
+}
+
+html body.SeaWorld_T205 .product-tiles .product-placement-card__wrapper[data-index="1"] .product-placement-card__promo-label {
+	display: none !important;
+}
+
+html body.SeaWorld_T205 .info-callout {
+	display: none;
+}
+
+html body.SeaWorld_T205 .filter-container {
+	margin-top: 40px !important;
+}
+
+html body.SeaWorld_T205 .filter-container.invalidPark .filter-wrapper {
+	margin-bottom: 0px;
+}
+
+html body.SeaWorld_T205 .filter-container.invalidPark .full-width-callout {
+	padding-bottom: 30px;
 }
