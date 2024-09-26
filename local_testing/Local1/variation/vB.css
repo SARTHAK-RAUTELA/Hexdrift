@@ -352,13 +352,14 @@ html body.TT-149 .white [class*="Type_title2"] {
 
 html body.TT-149 [class*="hero-header_filters"] form#uniqueId2>div svg {
 	width: 16px;
+	color: transparent;
 }
 
 @media (max-width: 768px) {
 
 	html body.TT-149 [class*="hero-header_heroHeaderHeight"] picture+div,
 	html body.TT-149 [class*="hero-header_filters"] {
-		padding-bottom: 16px !important;
+		padding-bottom: 24px !important;
 	}
 
 	html body.TT-149 [class*="hero-header_heroHeaderHeight"] picture+div {
@@ -492,5 +493,38 @@ html body.TT-149 [class*="hero-header_root"] {
 	html body.TT-149 .banner_img img {
 		max-width: 300px;
 		height: 148px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	html body.TT-149 .banner_img img {
+		max-width: 300px;
+		height: 148px;
+	}
+}
+
+html body.TT-149 [class*="hero-header_filters"] form#uniqueId2>div svg {
+	content: " ";
+	display: inline-block;
+	background-image: url(https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT149/Frame+633356.svg);
+	height: 18px;
+	width: 18px;
+}
+
+@media only screen and (min-width: 880px) and (max-width: 1011px) {
+	html body.TT-149 [class*="hero-header_filters"]>div>div:first-child {
+		margin-top: 78px;
+	}
+	html body.TT-149 [class*="hero-header_root"]{
+		height: 420px;
+	}
+}
+
+@media only screen and (min-width: 701px) and (max-width: 881px) {
+	html body.TT-149 [class*="hero-header_filters"]>div>div:first-child {
+		margin-top: 55px;
+	}
+	html body.TT-149 [class*="hero-header_root"]{
+		height: 375px;
 	}
 }
