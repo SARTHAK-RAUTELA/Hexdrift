@@ -99,3 +99,9 @@ html body.TTValue-152 .Tt_heading svg {
 		display: none !important;
 	}
 }
+
+@media (max-width: 415px) {
+    html body.SeaWorld_T205 .product-tile-heading {
+        font-size: 17px;
+    }
+}
