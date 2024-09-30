@@ -1,278 +1,287 @@
-html body.SeaWorld_T205 .product-placement-container__wrapper {
-	display: none;
-}
-
-html body.SeaWorld_T205 .btn-group {
-	display: flex;
-	gap: 10px;
-	margin-bottom: 10px;
-	overflow: auto;
-	margin-top: 10px;
-}
-
-html body.SeaWorld_T205 .btn-group button {
-	max-width: 145px;
-	min-width: fit-content;
-	padding: 0px 13px 0px 13px;
-	border: 1px solid #13203A;
-	border-radius: 25px;
-	background-color: #fff;
-	color: #13203A;
-	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
-	font-size: 16px;
+#pro_list_header {
+	font-size: 32px !important;
+	font-weight: 700;
 	line-height: 40px !important;
 }
 
-html body.SeaWorld_T205 .filter-container .full-width-callout {
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-html body.SeaWorld_T205 #parksSection p {
-	margin: 0;
-}
-
-html body.SeaWorld_T205 .btn-group button.selected {
-	background-color: #13203A;
-	color: #fff;
-	border-color: #13203A;
-}
-
-html body.SeaWorld_T205 .results a {
-	color: #003C5A;
-	cursor: pointer;
-	text-decoration: none;
-	font-weight: 600;
-}
-
-html body.SeaWorld_T205 .invalidPark .results {
-	display: none;
-}
-
-html body.SeaWorld_T205 .results {
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 22px;
-	margin-top: 19px;
-	width: 100%;
-}
-
-html body.SeaWorld_T205 .filter-container.invalidPark #parksSection {
-	display: none;
-}
-
-html body.SeaWorld_T205 .product-tile-heading {
-	font-size: 22px;
-	font-weight: 600;
-	line-height: 22px;
-	text-align: left;
-	width: 100%;
-	font-family: "Poppins Semibold", sans-serif;
-}
-
-html body.SeaWorld_T205 .filter-container button {
+[aria-label="Breadcrumb"] ol li * {
 	font-size: 14px;
+	font-weight: 400;
 	line-height: 20px;
-	font-family: "Poppins Lite", sans-serif;
-	font-weight: 500;
-}
-
-html body.SeaWorld_T205 .filter-wrapper {
-	display: flex;
-	gap: 40px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-html body.SeaWorld_T205 .All-product-tile {
-	display: flex;
-	max-width: 100%;
-	overflow: auto;
-}
-
-html body.SeaWorld_T205 .product-tile-heading {
-	margin-bottom: 22px;
-	margin-top: 15px;
-}
-
-html body.SeaWorld_T205 .filter-wrapper strong {
-	font-family: "Poppins Semibold", sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-}
-
-html body.SeaWorld_T205 .filter-container .full-width-callout__title {
-	font-size: 29px;
-	font-weight: 600;
-	line-height: 48px;
 	text-align: left;
-	font-family: "Poppins Semibold", sans-serif;
 }
 
-html body.SeaWorld_T205 #parksSection {
-	font-size: 14px;
-	font-weight: 400;
+[class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div.ph3>div [class*="Avatar_root"] img,
+[class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div.ph3>div [class*="Avatar_root"],
+[class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"] [class*="pro-list-result-image_proImage"] {
+	width: 100px !important;
+	height: 100px !important;
+	min-width: auto !important;
 }
 
-
-html body.SeaWorld_T205 .heading_205 {
-	font-size: 40px;
-	line-height: 48px;
-	margin-top: 40px;
-	font-family: "Poppins Semibold", sans-serif;
+[class*="pro-list-results-front-door_root"]>[class*="Wrap_root"] {
+	max-width: 1030px;
+	width: 100%;
 }
 
-html body.SeaWorld_T205 #product-catalog-container-[data-columns="three"] {
-	margin-top: 40px;
+/* card styling */
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue * {
+	font-size: 22px !important;
+	font-weight: 700 !important;
+	line-height: 28px !important;
+	text-align: left;
+	margin-bottom: 8px;
+
+
 }
 
-@media (min-width: 1024px) {
-	html body.SeaWorld_T205 .product-placement-card__promo-label {
-		max-width: 100%;
-		bottom: -14px;
-		top: 20px;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__image-wrapper {
-		grid-area: image-wrapper;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__content-wrapper {
-		grid-area: content-wrapper;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__price-wrapper {
-		grid-area: price-wrapper;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card {
-		width: 525px;
-		display: grid;
-		grid-template-areas:
-			'image-wrapper content-wrapper'
-			'image-wrapper price-wrapper';
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__image {
-		max-height: 100%;
-		width: 160px;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__image-wrapper {
-		max-height: 100%;
-	}
-
-	html body.SeaWorld_T205 .product-container {
-		min-width: 100%;
-		max-width: 100%;
-		overflow: auto;
-	}
-
-	html body.SeaWorld_T205 .product-tiles {
-		display: flex;
-		max-width: 100%;
-		justify-content: space-between;
-		min-width: 100%;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__wrapper {
-		min-width: 1px;
-		height: auto;
-	}
-
-	html body.SeaWorld_T205 .filter-container .full-width-callout {
-		padding: 24px 43px;
-		padding-bottom: 42px;
-	}
+[class*="cost-information_mobileCostSubtext"] span {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: left;
 }
 
-@media(max-width:1024px) {
-	html body.SeaWorld_T205 .filter-wrapper {
-		flex-direction: column;
-		display: flex;
-		gap: 10px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-
-	html body.SeaWorld_T205 .product-tiles {
-		display: flex;
-		overflow: auto;
-		gap: 40px;
-	}
-
-	html body.SeaWorld_T205 .product-placement-card__wrapper {
-		min-width: 260px;
-		height: auto;
-		max-width: 375px;
-		width: 100%;
-	}
-
-	html body.SeaWorld_T205 #product-catalog-container-[data-columns="three"] {
-		margin-top: 25px;
-	}
-
-	html body.SeaWorld_T205 .heading_205 {
-		font-family: "Poppins Semibold", sans-serif;
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 32px;
-	}
+.tt_chnagesposition .br-pill svg {
+	display: none;
 }
 
-@media(max-width:500px) {
-	html body.SeaWorld_T205 .filter-container .full-width-callout__title {
-		font-size: 26px;
-	}
-
-	html body.SeaWorld_T205 .btn-group button {
-		line-height: 32px !important;
-	}
-
-	html body.SeaWorld_T205 .product-tile-heading {
-		font-size: 20px;
-	}
-
-	html body.SeaWorld_T205 .results {
-		font-size: 16px;
-		line-height: 20px;
-	}
-
-	html body.SeaWorld_T205 .btn-group {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
-
-	html body.SeaWorld_T205 .filter-container .full-width-callout {
-		padding-bottom: 20px;
-	}
-}
-
-html body.SeaWorld_T205 .product-tiles .product-placement-card__wrapper[data-index="1"] .product-placement-card__promo-label {
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue .pre {
 	display: none !important;
 }
 
-html body.SeaWorld_T205 .info-callout {
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue div {
+	padding-right: 106px;
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue {
+	display: flex;
+}
+
+[class*="pro-list-results-front-door"] [class*="pro-review_root"] {
+	max-width: 644px;
+	padding: 12px;
+	gap: 10px;
+	border-radius: 4px;
+	opacity: 0px;
+	background: rgba(250, 250, 250, 1);
+	width: 100%;
+	margin-top: 20px !important;
+}
+
+[class*="pro-list-result_profileInfoContainer"]>div:first-child {
+	max-width: 544px !important;
+	width: 100% !important;
+	position: relative;
+}
+
+[class*="pro-list-results-front-door"]>div>div [data-test="pro-list-result"] {
+	position: relative;
+}
+
+[class*="pro-list-result_profileInfoContainer"]>div:nth-child(2)>div:last-child {
+	position: absolute;
+	bottom: 0;
+	max-width: 278px;
+	width: 100%;
+}
+
+[class*="pro-list-result_profileInfoContainer"]>div:nth-child(2)>div:last-child button {
+	display: inline-block;
+	width: 100% !important;
+}
+
+/* [class*="pro-list-results-front-door_root"] [class*="pro-list-results-front-door"] > div > div ,  */
+[class*="pro-list-results-front-door_root"] [class*="pro-list-results-front-door"]>.ph3>div {
+	box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.15);
+	padding: 0px 24px;
+	margin-bottom: 32px;
+	border-radius: 4px;
+
+}
+
+[class*="pro-list-result_profileInfoContainer"]>div:nth-child(2) {
+	max-width: 278px;
+	width: 100%;
+	align-items: flex-start !important;
+	justify-content: end !important;
+}
+
+[class*="pro-list-result_profileInfoContainer"] [class*="pro-information_clampLines"] {
 	display: none;
 }
 
-html body.SeaWorld_T205 .filter-container {
-	margin-top: 40px !important;
+[data-test="pro-cost-estimate"] .items-end {
+	align-items: flex-start !important;
 }
 
-html body.SeaWorld_T205 .filter-container.invalidPark .filter-wrapper {
-	margin-bottom: 0px;
+.circle_itemstyle {
+	width: 13px;
+	height: 13px;
+	transform: scale(1);
+	opacity: .4;
+	animation: pulsing-circle_pulsefx___k1Ds 2.5s linear 0s infinite;
+	position: absolute !important;
+	background-color: #2db783 !important;
+	border-radius: 50% !important;
 }
 
-html body.SeaWorld_T205 .filter-container.invalidPark .full-width-callout {
-	padding-bottom: 30px;
+.tt_pulsing-circle {
+	width: 13px;
+	height: 13px;
+	background-color: #2db783 !important;
+	border-radius: 50% !important;
+	position: absolute;
+
+
 }
 
+html body .main_pulsing-circle {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.Type_text2__2_pIm.flex.items-center.black-300.flex-shrink-0.flex-grow-0:after {
+	content: "Review";
+	margin-left: 3px;
+}
+
+[class*="green-star-rating_small"] {
+	display: none !important;
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"] .green p {
+	font-size: 22px !important;
+	font-weight: 700;
+	line-height: 28px !important;
+	text-align: left;
+	color: rgba(22, 133, 91, 1);
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"]>div>div>div {
+	flex-direction: column !important;
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"] .green {
+	justify-content: flex-end;
+	width: 100%;
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"] .green p:before {
+	content: " ";
+	display: inline-block;
+	background-image: url(https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT153/Star-Filled+Icon+%C2%B7+Small.svg);
+	height: 16px;
+	width: 24px;
+	background-repeat: no-repeat;
+	/* text-align: center; */
+	background-position: center center;
+}
+
+[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]>div>div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"]>div>div>div>p {
+	font-size: 12px !important;
+}
+
+[class*="pro-list-result_profileInfoContainer"]>div:first-child>div ul.flex-column {
+	flex-direction: inherit !important;
+	margin-top: 10px;
+	gap: 5px 14px;
+}
+
+[class*="hero-header_root"]+div {
+	max-width: 1030px;
+}
+
+#pro_list_header span span span:first-child {
+	line-height: 0;
+}
+
+.tt_chnagesposition>div {
+	margin-top: 0 !important;
+}
+
+.flex.flex-wrap.tt_chnagesposition {
+	order: 2;
+}
+
+.flex.flex-wrap.tt_chnagesposition+[class*="lazy-tooltip_root"] svg,
+[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div [class*="lazy-tooltip_root"] .m_mr2 svg {
+	display: none;
+}
+
+.flex.flex-wrap.tt_chnagesposition+[class*="lazy-tooltip_root"],
+[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div [class*="lazy-tooltip_root"] .m_mr2 {
+	background: rgba(234, 246, 250, 1);
+	border-radius: 50px;
+	align-items: center;
+	display: flex;
+	margin-right: 6px;
+	gap: 4px;
+	color: rgba(56, 60, 128, 1);
+	font-size: 14px;
+	font-weight: 600;
+}
+
+[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div [class*="lazy-tooltip_root"] .m_mr2 {
+	padding: 0px 4px !important;
+	display: flex !important;
+	justify-content: center !important;
+	margin: 0 !important;
+}
+
+html body [class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div [class*="lazy-tooltip_root"] .m_mr2 span {
+	margin: 0 !important;
+	padding: 2px 10px !important;
+	color: #005979 !important;
+}
+
+html body .tt_chnagesposition .br-pill {
+	font-size: 14px !important;
+}
+
+[class*="pro-list-result_profileInfoContainer"] .nowrap.black-300 .flex-none,
+[class*="pro-list-result_profileInfoContainer"] .nowrap.black-300 .flex-none+.truncate {
+	display: none;
+}
+
+html body .ttline_addline {
+	position: absolute;
+	height: 100%;
+	width: 1px;
+	border: 1px solid rgba(233, 236, 237, 1);
+	left: 69%;
+	top: 0;
+}
+
+[class*="pro-list-results-front-door_loadMoreSection"]>div,
+[class*="pro-list-results-front-door_loadMoreSection"]>div>div {
+	box-shadow: none !important;
+	/* padding: inherit !important; */
+	padding: 0 !important;
+	margin-bottom: inherit !important;
+	border-radius: inherit !important;
+}
+
+/* #pro_list_header span span{
+	vertical-align: top !important;
+} */
 
 
-@media (max-width: 415px) {
-	html body.SeaWorld_T205 .product-tile-heading {
-		font-size: 17px;
-	}
+
+/* CTA see more width  */
+
+[class*="pro-list-results-front-door_loadMoreSection"]>div a,
+[class*="pro-list-results-front-door_loadMoreSection"]>div>div a {
+	width: 240px;
 }
