@@ -270,7 +270,7 @@
               if (parksValue === "seaworld") {
                   document.querySelector('.single-day-ticket').style.display = "block";
                   document.querySelector('.any-day-ticket').style.display = "block";
-                  setheading(`These two tickets match your criteria:`);
+                  setheading(`These products meet your criteria:`);
                   headingElem.style.display = 'block'
                   resultElem.style.display = 'none'
               } else if (parksValue === "seaworld,aquatica" ||
@@ -327,22 +327,22 @@
               if (parksValue === "seaworld" || parksValue === "seaworld,aquatica") {
                   document.querySelector('[class*=aquatica-2024-fun-card]').style.display = "block";
                   document.querySelector('.two-park-ticket').style.display = "block";
-                  setheading(`These two tickets match your criteria:`);
+                  setheading(`These products meet your criteria:`);
                   headingElem.style.display = 'block'
                   resultElem.style.display = 'none'
               } else if (parksValue === "seaworld,buschgardens" || parksValue === "seaworld,adventureisland") {
                   document.querySelector('.two-park-ticket').style.display = "block";
-                  setheading(`This ticket matches your criteria:`);
+                  setheading(`This product meets your criteria:`);
                   headingElem.style.display = 'block'
                   resultElem.style.display = 'none'
               } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 1)) {
-                  setheading(`This ticket matches your criteria:`);
+                  setheading(`This product meets your criteria:`);
                   headingElem.style.display = 'block'
                   resultElem.style.display = 'none'
                   document.querySelector('.two-park-ticket').style.display = "block";
               }
               else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 2)) {
-                  setheading(`This ticket matches your criteria:`);
+                  setheading(`This product meets your criteria:`);
                   headingElem.style.display = 'block'
                   resultElem.style.display = 'none'
                   document.querySelector('.two-park-ticket').style.display = "block";
@@ -373,29 +373,29 @@
                   document.querySelector('.three-park-ticket').style.display = "block";
                   headingElem.style.display = "block"
                   resultElem.style.display = 'none'
-                  setheading(`These two tickets match your criteria:`);
+                  setheading(`These products meet your criteria:`);
               } else if (parksValue === "seaworld,buschgardens" || parksValue === "seaworld,adventureisland") {
                   headingElem.style.display = "block"
                   resultElem.style.display = "none"
-                  setheading(`These two tickets match your criteria:`);
+                  setheading(`These products meet your criteria:`);
                   document.querySelector('.three-park-ticket').style.display = "block";
                   document.querySelector('.four-park-ticket').style.display = "block";
               } else if (parksValue.split(',').length === 4) {
                   headingElem.style.display = "block"
-                  setheading(`This ticket matches your criteria:`)
+                  setheading(`This product meets your criteria:`)
                   document.querySelector('.four-park-ticket').style.display = "block";
                   setResultMessage(`Based on your selections, you may also wish to explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
               } else if (!parksGroup.getAttribute('value').includes('seaworld') && (document.querySelectorAll('#parksGroup .selected').length == 3 || document.querySelectorAll('#parksGroup .selected').length == 2 || document.querySelectorAll('#parksGroup .selected').length == 1)) {
                   headingElem.style.display = "block"
                   resultElem.style.display = "none"
-                  setheading(`These two tickets match your criteria:`);
+                  setheading(`These products meet your criteria:`);
                   document.querySelector('.three-park-ticket').style.display = "block";
                   document.querySelector('.four-park-ticket').style.display = "block";
               }
               else if (parksGroup.getAttribute('value').includes('seaworld') && (document.querySelectorAll('#parksGroup .selected').length == 3)) {
                   headingElem.style.display = "block"
                   resultElem.style.display = "none"
-                  setheading(`These two tickets match your criteria:`);
+                  setheading(`These products meet your criteria:`);
                   document.querySelector('.three-park-ticket').style.display = "block";
                   document.querySelector('.four-park-ticket').style.display = "block";
               }
@@ -412,7 +412,7 @@
                   document.querySelector('[class*=aquatica-2024-fun-card]').style.display = "block";
                   headingElem.style.display = "block";
                   setResultMessage(`Based on your selections, you may also wish to explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
-                  setheading("This ticket matches your criteria:")
+                  setheading("This product meets your criteria:")
 
               } else if (parksValue === "seaworld,buschgardens" || parksValue === "seaworld,adventureisland" || parksValue === "aquatica,buschgardens,adventureisland" || ((parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 3))) {
                   setResultMessage(`Based on your selections, please explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
@@ -511,7 +511,7 @@
                   </div>
               </div>
           </div>
-          <div class="product-tile-heading">These two tickets match your criteria:</div>
+          <div class="product-tile-heading">These products meet your criteria:</div>
         
           
           <div class="product-container">
