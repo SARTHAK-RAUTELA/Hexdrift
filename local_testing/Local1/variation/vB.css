@@ -597,7 +597,7 @@ html body.TT_149 [class*="hero-header_filters"] form#uniqueId2>div svg {
 	}
 
 	html body.TT_149 .banner_img img {
-		object-fit: cover;
+		object-fit: unset;
 	}
 }
 
