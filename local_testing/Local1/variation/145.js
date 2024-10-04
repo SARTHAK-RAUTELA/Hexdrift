@@ -121,7 +121,7 @@
             "https://www.gendergp.com/help-centre/surgery-referral/": "https://new.gendergp.com/surgery/",
             "https://www.gendergp.com/consent-session/": "https://new.gendergp.com/igs/",
             "https://www.gendergp.com/what-happens-next/": "https://new.gendergp.com/next-steps/",
-            "https://www.gendergp.com/new-form-test/": "https://new.gendergp.com/next-steps/",
+            "https://www.gendergp.com/next-steps/": "https://new.gendergp.com/next-steps/",
             "https://www.gendergp.com/new-form-test/": "https://new.gendergp.com/",
             "https://www.gendergp.com/jobs/": "https://new.gendergp.com/",
             "https://www.gendergp.com/payments_travelling-with-medication-fee/": "https://new.gendergp.com/",
