@@ -546,8 +546,8 @@
                 }
             });
             if (!document.querySelector('.filter-container')) {
-                if (document.querySelector('.product-placement-container__wrapper')) {
-                    document.querySelector('.product-placement-container__wrapper').insertAdjacentHTML('afterend', filter)
+                if (document.querySelector('.info-callout + .product-placement-container__wrapper')) {
+                    document.querySelector('.info-callout + .product-placement-container__wrapper').insertAdjacentHTML('afterend', filter)
                 }
             }
 

@@ -1,4 +1,4 @@
-html body.SeaWorld_T205 .product-placement-container__wrapper {
+html body.SeaWorld_T205 .info-callout + .product-placement-container__wrapper {
 	display: none;
 }
 
