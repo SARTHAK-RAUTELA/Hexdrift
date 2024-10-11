@@ -1,582 +1,494 @@
 (function() {
     try {
         /* main variables */
-        var debug = 1;
-        var variation_name = "SeaWorld_T205";
+        var debug = 0;
+        var variation_name = "TT-153";
 
-        /* helper library */
-        var _$;
-        !(function(factory) {
-            _$ = factory();
-        })(function() {
-            var bm = function(s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+            var interval = setInterval(function() {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
                 }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function(n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function(fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function() {
-                    var items = [];
-                    for (let index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function(v) {
-                    var a = v.split(" ");
-                    return this.each(function(i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                waitForElement: function(
-                    selector,
-                    trigger,
-                    delayInterval,
-                    delayTimeout
-                ) {
-                    var interval = setInterval(function() {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger();
-                        }
-                    }, delayInterval);
-                    setTimeout(function() {
-                        clearInterval(interval);
-                    }, delayTimeout);
-                },
-                live: function(selector, event, callback, context) {
-                    /****Helper Functions****/
-                    // helper for enabling IE 8 event bindings
-                    function addEvent(el, type, handler) {
-                        if (el.attachEvent) el.attachEvent("on" + type, handler);
-                        else el.addEventListener(type, handler);
-                    }
-                    // matches polyfill
-                    this &&
-                        this.Element &&
-                        (function(ElementPrototype) {
-                            ElementPrototype.matches =
-                                ElementPrototype.matches ||
-                                ElementPrototype.matchesSelector ||
-                                ElementPrototype.webkitMatchesSelector ||
-                                ElementPrototype.msMatchesSelector ||
-                                function(selector) {
-                                    var node = this,
-                                        nodes = (
-                                            node.parentNode || node.document
-                                        ).querySelectorAll(selector),
-                                        i = -1;
-                                    while (nodes[++i] && nodes[i] != node);
-                                    return !!nodes[i];
-                                };
-                        })(Element.prototype);
-                    // live binding helper using matchesSelector
-                    function live(selector, event, callback, context) {
-                        addEvent(context || document, event, function(e) {
-                            var found,
-                                el = e.target || e.srcElement;
-                            while (
-                                el &&
-                                el.matches &&
-                                el !== context &&
-                                !(found = el.matches(selector))
-                            )
-                                el = el.parentElement;
-                            if (found) callback.call(el, e);
-                        });
-                    }
-                    live(selector, event, callback, context);
-                },
-            };
-            return function(selector) {
-                return new bm(selector);
-            };
-        });
-
-        function clickAdeed() {
-            helper.live("#daysGroup", 'click', function(e) {
-                if (e.target.tagName === 'BUTTON') {
-                    // Remove the selected class from all day buttons and add to the clicked one
-                    document.querySelectorAll('#daysGroup button').forEach(button => button.classList.remove('selected'));
-                    e.target.classList.add('selected');
-                    selectedDays = e.target.dataset.value;
-                    console.log(selectedDays)
-                    // Reveal the parks section once a day is selected
-
-
-                    // Update the result based on the new day and already selected parks
-                    updateResult();
-                }
-            })
-            helper.live("#parksGroup", "click", function(e) {
-                if (e.target.tagName === 'BUTTON') {
-                    var park = e.target.dataset.value;
-                    if (selectedParks.includes(park)) {
-                        // Deselect the park if it was already selected
-                        selectedParks = selectedParks.filter(p => p !== park);
-                        e.target.classList.remove('selected');
-                    } else {
-                        // Select the park
-                        selectedParks.push(park);
-                        e.target.classList.add('selected');
-                    }
-                    updateResult();
-                }
-
-            })
-        }
-
-        function updateResult() {
-            var headingElem = document.querySelector('.product-tile-heading');
-            if (selectedDays && selectedParks.length > 0) {
-                result.textContent = `You selected ${selectedDays} and the following parks: ${selectedParks.join(', ')}`;
-                result.style.display = 'block'; // Show result once selections are made
-            } else if (selectedDays && selectedParks.length === 0) {
-                if (selectedDays == 1) {
-                    headingElem.style.display = 'none'
-                    result.textContent = 'Please select a park';
-                    result.style.display = 'block';
-                } else {
-
-                    result.textContent = "Please select at least one park";
-                    result.style.display = 'block';
-
-                }
-
-            } else {
-                result.textContent = 'Select your options above to see available tickets.';
-                result.style.display = selectedDays ? 'block' : 'none';
-                headingElem.style.display = 'none' // Hide result if no selections
-            }
-            checkIfAnySelected()
+            }, delayInterval);
             setTimeout(function() {
-                visibleTheCard()
-                // visibiltyCheck()
-            }, 100)
-
+                clearInterval(interval);
+            }, delayTimeout);
         }
 
-        function insertProductCards() {
-            // Select the #result container
-            var resultContainer = document.querySelector('.product-container .product-tiles');
-
-            // Ensure the container exists
-            if (!resultContainer) {
-                console.error('#result container not found');
-                return;
-            }
-
-            // Define the product classes
-            var productClasses = [
-                '.single-day-ticket',
-                '.seaworld-2025-fun-card',
-                '[class*=aquatica-2025-fun-card]',
-                '.any-day-ticket',
-                '.two-park-ticket',
-                '.three-park-ticket',
-                '.four-park-ticket'
-            ];
-
-            // Loop through each class and append its elements to the #result container
-            productClasses.forEach(productClass => {
-                var products = document.querySelectorAll(productClass);
-                products.forEach(product => {
-                    resultContainer.appendChild(product);
-                });
-            });
-        }
-
-        function checkIfAnySelected() {
-            let anySelected = false;
-            var headingElem = document.querySelector('.product-tile-heading');
-            document.querySelectorAll("#daysGroup button").forEach(function(day) {
-                if (day.classList.contains("selected")) {
-                    anySelected = true;
-                }
-            });
-
-            if (anySelected) {
-                if (document.querySelector(".filter-container").classList.contains("invalidPark")) {
-
-                    document.querySelector(".filter-container").classList.remove("invalidPark")
-                }
-            } else {
-                document.querySelector(".filter-container").classList.add("invalidPark")
-                headingElem.style.display = 'none'
-            }
-        }
-
-        function visibleTheCard() {
-            var parksGroup = document.querySelector('#parksGroup');
-            var selectedButtons = parksGroup.querySelectorAll('.selected');
-
-            // Create an array of the selected data-values
-            var selectedValues = Array.from(selectedButtons).map(btn => btn.getAttribute('data-value'));
-
-            // Store the selected values as a comma-separated list in #parksGroup's value attribute
-            parksGroup.setAttribute('value', selectedValues.join(','));
-
-            // Log the selected values for debugging
-            console.log('Selected parks:', selectedValues.join(','));
-            var parksGroup = document.querySelector('#parksGroup');
-            var resultElem = document.querySelector('#result');
-            var daysGroup = document.querySelector('#daysGroup');
-            var headingElem = document.querySelector('.product-tile-heading');
-
-            // Hide all product cards initially
-            document.querySelectorAll('.product-placement-card__wrapper').forEach(wrapper => {
-                wrapper.style.display = "none";
-            });
-
-            // No data value case
-            if (parksGroup && parksGroup.getAttribute('value') === "null") {
-                console.log('No data value');
-                return;
-            }
-
-            // Utility function to set result message
-            function setResultMessage(message) {
-                resultElem.innerHTML = message;
-            }
-
-            function setheading(heading) {
-                headingElem.textContent = heading;
-            }
-
-            // Check selected day value
-            var daysSelected = daysGroup.querySelector('.selected');
-            if (!daysSelected) {
-                return;
-            }
-            var selectedDayValue = daysSelected.getAttribute('data-value');
-
-            // Park group values
-            var parksValue = parksGroup.getAttribute('value');
-
-            // Handle 1-day selection
-            if (selectedDayValue === "1") {
-                document.querySelector('.seaworld-2025-fun-card').style.order = "inherit"
-                document.querySelector('[class*=aquatica-2025-fun-card]').style.order = "inherit"
-                if (parksValue === "seaworld") {
-                    document.querySelector('.single-day-ticket').style.display = "block";
-                    document.querySelector('.any-day-ticket').style.display = "block";
-                    setheading(`These products meet your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                } else if (parksValue === "seaworld,aquatica" ||
-                    parksValue === "seaworld,buschgardens" ||
-                    parksValue === "seaworld,adventureisland") {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 2 days for this park combination");
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 1)) {
-                    var parkname = parksGroup.getAttribute('value')
-                    // Check for different park names and update accordingly
-                    if (parkname === 'buschgardens') {
-                        parkname = `<a href="https://buschgardens.com/tampa/" target="blank">Busch Gardens</a>`;
-                    } else if (parkname === 'seaworld') {
-                        parkname = `<a href="https://seaworld.com/orlando" target="blank">SeaWorld</a>`;
-                    } else if (parkname === 'aquatica') {
-                        parkname = `<a href="https://aquatica.com/orlando/" target="blank">Aquatica</a>`;
-                    } else if (parkname === 'adventureisland') {
-                        parkname = `<a href="https://adventureisland.com/" target="blank">Adventure Island</a>`;
-                    }
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage(`Please visit the ${parkname} website to buy this ticket`);
-
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 2)) {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 2 days for this park combination");
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 3)) {
-                    var parkname = parksGroup.getAttribute('value')
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 3 days for this park combination");
-                } else if ((parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 3)) {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 3 days for this park combination");
-                } else if (parksValue.split(',').length === 4) {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 4 days for this park combination");
-                } else if (parksValue === '') {
-                    headingElem.style.display = 'none'
-                }
-            }
-
-            // Handle 2-day selection
-            if (selectedDayValue === "2") {
-                if (parksValue === "seaworld") {
-                    document.querySelector('.seaworld-2025-fun-card').style.display = "block";
-                    document.querySelector('.two-park-ticket').style.display = "block";
-                    setTimeout(function() {
-                        document.querySelector('.seaworld-2025-fun-card').style.order = "1"
-                        document.querySelector('.seaworld-2025-fun-card').setAttribute('data-index', "1")
-                        document.querySelector('.two-park-ticket').setAttribute('data-index', "0")
-                    }, 300)
-                    setheading(`These products meet your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                } else if (parksValue === "seaworld,aquatica") {
-                    document.querySelector('[class*=aquatica-2025-fun-card]').style.display = "block";
-                    document.querySelector('.two-park-ticket').style.display = "block";
-                    setTimeout(function() {
-                        document.querySelector('[class*=aquatica-2025-fun-card]').style.order = "1"
-                        document.querySelector('[class*=aquatica-2025-fun-card]').setAttribute('data-index', "1")
-                        document.querySelector('.two-park-ticket').setAttribute('data-index', "0")
-                    }, 300)
-                    setheading(`This product meets your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                } else if (parksValue === "seaworld,buschgardens" || parksValue === "seaworld,adventureisland") {
-                    document.querySelector('.two-park-ticket').style.display = "block";
-                    setheading(`This product meets your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 1)) {
-                    setheading(`This product meets your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                    document.querySelector('.two-park-ticket').style.display = "block";
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 2)) {
-                    setheading(`This product meets your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                    document.querySelector('.two-park-ticket').style.display = "block";
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 3)) {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 3 days for this park combination");
-                } else if ((parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 3)) {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 3 days for this park combination");
-                } else if (parksValue.split(',').length === 4) {
-                    headingElem.style.display = 'none'
-                    resultElem.style.display = 'block'
-                    setResultMessage("Please select at least 4 days for this park combination");
-                } else if (parksValue === '') {
-                    headingElem.style.display = 'none'
-                }
-            }
-
-            // Handle 3-14 day selection
-            if (selectedDayValue === "3-14") {
-                document.querySelector('.seaworld-2025-fun-card').style.order = "inherit"
-                document.querySelector('[class*=aquatica-2025-fun-card]').style.order = "inherit"
-                if (parksValue === "seaworld") {
-                    document.querySelector('.seaworld-2025-fun-card').style.display = "block";
-                    document.querySelector('.three-park-ticket').style.display = "block";
-                    headingElem.style.display = "block"
-                    resultElem.style.display = 'none'
-                    setheading(`These products meet your criteria:`);
-                } else if (parksValue === "seaworld,aquatica") {
-                    document.querySelector('[class*=aquatica-2025-fun-card]').style.display = "block";
-                    document.querySelector('.three-park-ticket').style.display = "block";
-                    setheading(`This product meets your criteria:`);
-                    headingElem.style.display = 'block'
-                    resultElem.style.display = 'none'
-                } else if (parksValue === "seaworld,buschgardens" || parksValue === "seaworld,adventureisland") {
-                    headingElem.style.display = "block"
-                    resultElem.style.display = "none"
-                    setheading(`These products meet your criteria:`);
-                    document.querySelector('.three-park-ticket').style.display = "block";
-                    document.querySelector('.four-park-ticket').style.display = "block";
-                } else if (parksValue.split(',').length === 4) {
-                    headingElem.style.display = "block"
-                    setheading(`This product meets your criteria:`)
-                    document.querySelector('.four-park-ticket').style.display = "block";
-                    setResultMessage(`Based on your selections, you may also wish to explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
-                } else if (!parksGroup.getAttribute('value').includes('seaworld') && (document.querySelectorAll('#parksGroup .selected').length == 3 || document.querySelectorAll('#parksGroup .selected').length == 2 || document.querySelectorAll('#parksGroup .selected').length == 1)) {
-                    headingElem.style.display = "block"
-                    resultElem.style.display = "none"
-                    setheading(`These products meet your criteria:`);
-                    document.querySelector('.three-park-ticket').style.display = "block";
-                    document.querySelector('.four-park-ticket').style.display = "block";
-                } else if (parksGroup.getAttribute('value').includes('seaworld') && (document.querySelectorAll('#parksGroup .selected').length == 3)) {
-                    headingElem.style.display = "block"
-                    resultElem.style.display = "none"
-                    setheading(`These products meet your criteria:`);
-                    document.querySelector('.three-park-ticket').style.display = "block";
-                    document.querySelector('.four-park-ticket').style.display = "block";
-                } else if (parksValue === '') {
-                    headingElem.style.display = 'none'
-                }
-
-            }
-
-            // Handle unlimited day selection
-            if (selectedDayValue === "unlimited") {
-                document.querySelector('.seaworld-2025-fun-card').style.order = "inherit"
-                document.querySelector('[class*=aquatica-2025-fun-card]').style.order = "inherit"
-                if (parksValue === "seaworld") {
-                    var headingElem = document.querySelector('.product-tile-heading');
-                    document.querySelector('.seaworld-2025-fun-card').style.display = "block";
-                    headingElem.style.display = "block";
-                    setResultMessage(`Based on your selections, you may also wish to explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
-                    setheading("This product meets your criteria:")
-
-                } else if (parksValue === "seaworld,aquatica") {
-                    var headingElem = document.querySelector('.product-tile-heading');
-                    document.querySelector('[class*=aquatica-2025-fun-card]').style.display = "block";
-                    headingElem.style.display = "block";
-                    setResultMessage(`Based on your selections, you may also wish to explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
-                    setheading("This product meets your criteria:")
-                } else if (parksValue === "seaworld,buschgardens" || parksValue === "seaworld,adventureisland" || parksValue === "aquatica,buschgardens,adventureisland" || ((parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 3))) {
-                    setResultMessage(`Based on your selections, please explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
-                    headingElem.style.display = "none";
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 1)) {
-                    var parkname = parksGroup.getAttribute('value')
-                    // Check for different park names and update accordingly
-                    if (parkname === 'buschgardens') {
-                        parkname = `<a href="https://buschgardens.com/tampa/" target="blank">Busch Gardens</a>`;
-                    } else if (parkname === 'seaworld') {
-                        parkname = `<a href="https://seaworld.com/orlando" target="blank">SeaWorld</a>`;
-                    } else if (parkname === 'aquatica') {
-                        parkname = `<a href="https://aquatica.com/orlando/" target="blank">Aquatica</a>`;
-                    } else if (parkname === 'adventureisland') {
-                        parkname = `<a href="https://adventureisland.com/" target="blank">Adventure Island</a>`;
-                    }
-                    setResultMessage(`Based on your selections, please visit the ${parkname} website for options`);
-                    headingElem.style.display = "none";
-                } else if ((!parksGroup.getAttribute('value').includes('seaworld') && document.querySelectorAll('#parksGroup .selected').length == 2)) {
-                    var valueAttr = parksGroup.getAttribute('value');
-                    var parksArray = valueAttr.split(',');
-                    console.log(parksArray)
-
-                    function formatParkName(parkname) {
-                        if (parkname === 'buschgardens') {
-                            return `<a href="https://buschgardens.com/tampa/" target="blank">Busch Gardens</a>`;
-                        } else if (parkname === 'seaworld') {
-                            return `<a href="https://seaworld.com/orlando" target="blank">SeaWorld</a>`;
-                        } else if (parkname === 'aquatica') {
-                            return `<a href="https://aquatica.com/orlando/" target="blank">Aquatica</a>`;
-                        } else if (parkname === 'adventureisland') {
-                            return `<a href="https://adventureisland.com/" target="blank">Adventure Island</a>`;
-                        } else {
-                            return parkname; // Return as is if no match
-                        }
-                    }
-                    // Format the first and second park names
-                    var valueAttr1 = formatParkName(parksArray[0]);
-                    var valueAttr2 = formatParkName(parksArray[1]);
-                    console.log(valueAttr1)
-                    console.log(valueAttr2)
-
-                    setResultMessage(`Based on your selections, please visit the ${valueAttr1} or ${valueAttr2} website for options`);
-                    headingElem.style.display = "none";
-                } else if (parksValue.split(',').length === 4) {
-                    // document.querySelector('.four-park-ticket').style.display = "block";
-                    setResultMessage(`Based on your selections, please explore our <a href="https://seaworld.com/orlando/annual-pass/">Annual Passes</a>`);
-                    headingElem.style.display = "none";
-                } else if (parksValue === '') {
-                    headingElem.style.display = 'none'
-                }
-            }
-        }
-        var filter = `<div class="filter-container site-container">
-        <div class="full-width-callout">
-            <p class="full-width-callout__title">Find Your Ideal Ticket</p>
-            <div class="filter-wrapper">
-                <div>
-                    <strong>Number of days visiting</strong>
-                    <div class="btn-group" id="daysGroup">
-                        <button data-value="1">1 day</button>
-                        <button data-value="2">2 days</button>
-                        <button data-value="3-14">3-14 days</button>
-                        <button data-value="unlimited">Unlimited</button>
-                    </div>
-                </div>
-    
-                <div id="parksSection">
-                    <p><strong>Florida Parks</strong> Select all that apply</p>
-                    <div class="btn-group" id="parksGroup" value="null">
-                        <button data-value="seaworld">SeaWorld</button>
-                        <button data-value="aquatica">Aquatica</button>
-                        <button data-value="buschgardens">Busch Gardens</button>
-                        <button data-value="adventureisland">Adventure Island</button>
-                    </div>
-                </div>
+        /* HTML strings */
+        var circle_itemstyle = `
+        <div class="main_pulsing-circle">
+            <div class="tt_pulsing-circle">
+                <div class="circle_itemstyle"></div>
             </div>
-            <div class="product-tile-heading">These products meet your criteria:</div>
-    
-    
-            <div class="product-container">
-    
-                <div class="product-tiles"></div>
-            </div>
-            <div class="results" id="result">
-                Select your options above to see available tickets.
-            </div>
-        </div>
-        <div class="heading_205">All Products</div>
-    </div>`
-        var helper = _$();
-        let selectedDays = null;
-        let selectedParks = [];
+        </div>`;
+
+
+
         /* Variation Init */
         function init() {
-            helper.log('Log inside from init');
-            _$('body').addClass(variation_name)
-            document.querySelectorAll('.product-placement-card__wrapper').forEach(wrapper => {
-                const titleElement = wrapper.querySelector('.product-placement-card__title');
-                if (titleElement) {
-                    const title = titleElement.textContent.trim().replace(/\s+/g, '-').toLowerCase(); // Transform the title into a class-friendly format
-                    wrapper.classList.add(`${title}`);
+            document.querySelector("body").classList.add(variation_name);
+
+            // Wait for elements to be available
+            waitForElement('[class*="pro-list-result_profileInfoContainer"] [class*="pro-review_root"]', function() {
+                document.querySelectorAll('[class*="pro-list-results-front-door_proListResultsWrapper"] > div > div a').forEach((wrapper) => {
+                    var firstElement = wrapper.querySelector('[class*="pro-list-result_profileInfoContainer"] [class*="pro-review_root"]');
+                    var secondElement = wrapper.querySelector('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"] > div:first-child ');
+
+                    if (firstElement && secondElement) {
+                        // Move firstElement after secondElement
+                        secondElement.parentNode.insertBefore(firstElement, secondElement.nextSibling);
+                    }
+                });
+            }, 50, 15000);
+
+            // Process each card in a single loop
+            document.querySelectorAll('[class*="pro-list-results-front-door_root"] [class*="pro-list-results-front-door"] > div > div').forEach((element) => {
+                // add online circle html 
+                if (element.querySelector('[class*="pulsing-circle_root"]')) {
+                    var targetElement = element.querySelector('[class*="pro-list-result-image_proImage"]');
+                    if (targetElement && !element.querySelector('.main_pulsing-circle')) {
+                        targetElement.insertAdjacentHTML('beforeend', circle_itemstyle);
+                    }
                 }
+
+                // add saprater line 
+                var lineelement = element.querySelector('[data-test="pro-list-result"]');
+                if (lineelement && !element.querySelector('.ttline_addline')) {
+                    lineelement.insertAdjacentHTML('beforeend', "<div class='ttline_addline'></div>");
+                }
+
+                // Extract and update review rating
+                var reviewElement = element.querySelector('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"] > div > div[class*="pro-list-result_profileInfoContainer"] > div .hover-blue + div > [class*="hideAtOrBelow"] .green p');
+                if (reviewElement && !element.querySelector('.review_rating')) {
+                    let textContent = reviewElement.textContent;
+                    let number = textContent.match(/\d+(\.\d+)?/); // Extract number with decimal
+                    if (number) {
+                        reviewElement.textContent = number[0]; // Replace text with extracted number
+                    }
+                }
+
+                // Move flex-wrap class element
+                if (window.matchMedia('(min-width: 700px)').matches) {
+                    var flexWrapChild = element.querySelector('.flex-wrap .mt2.mr1');
+                    if (flexWrapChild) {
+                        var flexWrapParent = flexWrapChild.closest('.flex-wrap');
+                        if (flexWrapParent) {
+                            flexWrapParent.classList.add('tt_chnagesposition');
+                            var targetElement = element.querySelector('[class*="pro-list-result_profileInfoContainer"] > div .hover-blue + .flex-wrap [class*="lazy-tooltip_root"]');
+                            if (targetElement) {
+                                targetElement.after(flexWrapParent);
+                            }
+                        }
+                    }
+                }
+
+                if (window.matchMedia('(max-width: 699px)').matches) { 
+             // chnages pill position for mobile device wrap code 
+             waitForElement('[class*="pro-list-results-front-door"] [class*="pro-review_root"]', function() {
+                // Card ke andar sabhi elements ko dhundhein jo [class*="lazy-tooltip_root"] se match karte hain
+                var tooltipElements = element.querySelectorAll('[class*="lazy-tooltip_root"]');
+                // Ab [class*="pro-review_root"] element ko dhundhein
+                var reviewElement = element.querySelector('[class*="pro-list-results-front-door"] [class*="pro-review_root"]');
+            
+                // Check if there are tooltip elements
+                if (tooltipElements.length > 0) {
+                    // Check if the wrapper already exists
+                    var existingWrapper = element.querySelector('.tt_tooltip-wrapper');
+                    
+                    // If wrapper doesn't exist, create one
+                    if (!existingWrapper) {
+                        // Naya div banayein jo tooltip elements ko wrap karega
+                        var wrapperDiv = document.createElement('div');
+                        // Div me class add karen
+                        wrapperDiv.classList.add('tt_tooltip-wrapper');
+                        
+                        // Har tooltip element ko naye div me move karte hain
+                        tooltipElements.forEach((tooltip) => {
+                            // Check if the tooltip is not empty before appending
+                            if (tooltip.children.length > 0) {
+                                wrapperDiv.appendChild(tooltip);
+                            } else {
+                                // If the tooltip is empty, remove it from the DOM
+                                tooltip.remove();
+                            }
+                        });
+            
+                        // Check if wrapperDiv has any children before inserting
+                        if (wrapperDiv.children.length > 0 && reviewElement) {
+                            // Naye div ko [class*="pro-review_root"] ke pehle insert karte hain
+                            reviewElement.insertAdjacentElement('beforebegin', wrapperDiv);
+                        } else {
+                            // If wrapperDiv is empty, remove it
+                            wrapperDiv.remove();
+                        }
+                    } else {
+                        // Agar wrapper pehle se maujood hai, to bas existing wrapper ke andar tooltip elements ko add karte hain
+                        tooltipElements.forEach((tooltip) => {
+                            if (tooltip.children.length > 0) {
+                                existingWrapper.appendChild(tooltip);
+                            } else {
+                                tooltip.remove();
+                            }
+                        });
+                    }
+                }
+            
+                var profileInfoElement = element.querySelector('[class*="pro-list-result_profileInfoContainer"]>div:first-child + div');
+            
+                if (profileInfoElement && reviewElement) {
+                    // Element ko clone karke move karna (taaki original structure na toote)
+                    var clonedElement = profileInfoElement.cloneNode(true);
+            
+                    // Move karne ke baad original element ko remove karenge
+                    profileInfoElement.remove();
+            
+                    // Cloned element ko review element ke baad insert karenge
+                    reviewElement.insertAdjacentElement('afterend', clonedElement);
+            
+                    // Cloned element me 'sticky' class add karte hain
+                    clonedElement.classList.add('tt_sticky');
+                }
+            }, 50, 15000);
+            
+                    
+                    document.querySelectorAll('p[class*="pro-cost-estimate_subTex"] span').forEach(function(span) {
+                        if (span.textContent.includes('estimated price')) {
+                            span.textContent = span.textContent.replace('estimated price', 'est.');
+                        }
+                    });
+                    document.querySelectorAll('[class*="cost-information_mobileCostSubtext"]').forEach(function(element) {
+                        if (element.textContent.trim().toLowerCase() === 'contact for price') {
+                            element.textContent = element.textContent.split(' ').map(function(word) {
+                                return word.charAt(0).toUpperCase() + word.slice(1);
+                            }).join(' ');
+                        }
+                    });
+                    }
+
             });
-            if (!document.querySelector('.filter-container')) {
-                if (document.querySelector('.info-callout + .product-placement-container__wrapper')) {
-                    document.querySelector('.info-callout + .product-placement-container__wrapper').insertAdjacentHTML('afterend', filter)
+
+            // Select all the cards that match the provided selector
+            document.querySelectorAll('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]').forEach(card => {
+                // Find the element inside the card that matches the specific nested selector
+                var targetElement = card.querySelector('div > div[class*="pro-list-result_profileInfoContainer"] > div .hover-blue + div > [class*="hideAtOrBelow"]');
+
+                // Check if the element exists and if its text content is "New on Thumbtack"
+                if (targetElement && targetElement.textContent.trim() === "New on Thumbtack") {
+                    // Add the class 'newtt' to the element
+                    targetElement.classList.add('newtt');
+                    targetElement.parentElement.classList.add('newtt');
                 }
+
+
+            });
+
+document.querySelectorAll('[class*="lazy-tooltip_root"]').forEach(function(element) {
+    if (element.textContent.trim() === 'Top Pro') {
+        element.classList.add('tttoppro');
+    }
+});
+
+document.querySelectorAll('[class*="pro-list-result_profileInfoContainer"] > div:first-child > div ul.flex-column').forEach(function(ulElement) {
+    let parentElement = ulElement.parentElement; // The parent of the ul element
+    if (parentElement) {
+        parentElement.classList.add('TTmobileshowitem');
+    }
+});
+      
+
+
+
+document.querySelectorAll('[class*="pro-list-result_profileInfoContainer"] > div:first-child > div ul.flex-column li span').forEach(span => {
+    let text = span.textContent;
+    if (text.includes('on Thumbtack')) {
+        span.textContent = text.replace('on Thumbtack', '').trim(); // Remove "on Thumbtack"
+    }
+});
+          
+// document.querySelectorAll('.tt_tooltip-wrapper').forEach((tooltipWrapper) => {
+//     const itemToMove = tooltipWrapper.parentElement.querySelector('.TTmobileshowitem');
+    
+//     if (itemToMove) {
+//         tooltipWrapper.after(itemToMove);
+//     }
+// });
+
+
+document.querySelectorAll('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]').forEach(card => {
+    // First, find the .dn.m_db.mt2 element inside the card and add the tthide class
+    const targetElement = card.querySelector('.dn.m_db.mt2');
+    if (targetElement) {
+        targetElement.classList.add('tthide');
+    }
+
+    // Select the ul within the current card where the li will be appended
+    const ul = card.querySelector('.TTmobileshowitem ul'); // Change this to select within the card
+
+    // Function to create li with the given text and append the svg at the beginning
+    function createAndAppendLi(text) {
+        const li = document.createElement('li');
+
+        // Add the required classes to the li
+        li.classList.add('Type_text2__2_pIm', 'nowrap', 'black-300', 'flex', 'pre', 'items-center', 'tt_Available');
+
+        // Create the SVG element
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("height", "14");
+        svg.setAttribute("width", "14");
+        svg.setAttribute("fill", "currentColor");
+        svg.setAttribute("viewBox", "0 0 14 14");
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", "M4.968 10.08l.897-2.855a.751.751 0 00-.716-.975H4.141L6.604 2.5h3.019L8.101 5.123A.748.748 0 008.75 6.25h.898l-4.68 3.83zm7.488-4.832a.748.748 0 00-.706-.498h-1.698l1.523-2.623A.752.752 0 0010.925 1H6.201a.75.75 0 00-.628.338l-3.45 5.25A.75.75 0 002.75 7.75h1.378l-1.344 4.275a.749.749 0 001.19.806l8.25-6.75a.749.749 0 00.232-.833z");
+
+        // Append the path to the svg
+        svg.appendChild(path);
+
+        // Append the svg at the start of the li
+        li.appendChild(svg);
+
+        // Add the text after the svg
+        const textNode = document.createTextNode(text);
+        li.appendChild(textNode);
+
+        // Append the li to the ul within the current card
+        if (ul) {
+            ul.appendChild(li);
+        }
+    }
+
+    // Check if the card contains "Available for a service call"
+    if (card.textContent.includes('Available for a service call')) {
+        const existingLi = [...(ul ? ul.querySelectorAll('li') : [])].some(li => li.textContent.includes('Available for a service call'));
+        if (!existingLi) {
+            createAndAppendLi('Available for a service call');
+        }
+
+        // Add the hidetext class to the parent div of the first div containing the text
+       const selectedElement = card.querySelector('.dn.m_db.mt2');
+      const parentDiv = selectedElement ? selectedElement.closest('div') : null;
+
+        if (parentDiv) {
+            parentDiv.classList.add('hidetext');
+        }
+    }
+
+
+    
+
+    // Check if the card contains "Instant Book availability"
+    if (card.textContent.includes('Instant Book availability')) {
+        const existingLi = [...(ul ? ul.querySelectorAll('li') : [])].some(li => li.textContent.includes('Instant Book availability'));
+        if (!existingLi) {
+            createAndAppendLi('Instant Book availability');
+        }
+
+        // Add the hidetext class to the parent div of the first div containing the text
+        const selectedElement = card.querySelector('.dn.m_db.mt2');
+        const parentDiv = selectedElement ? selectedElement.closest('div') : null;
+        if (parentDiv) {
+            parentDiv.classList.add('hidetext');
+        }
+
+        // Find the .black.flex.items-center parent and add the hideitem class
+        const parentElement = card.querySelector('.black.flex.items-center');
+        if (parentElement) {
+            parentElement.classList.add('hideitem');
+        }
+    }
+});
+
+
+waitForElement('[class*="pro-list-result_profileInfoContainer"] > div:first-child > div > div', function() {
+   
+document.querySelectorAll('[class*="pro-list-result_profileInfoContainer"] > div:first-child > div > div').forEach(function(element) {
+    // Trim the text content to remove any leading/trailing whitespace and check if it's empty
+    if (element.textContent.trim() === '') {
+        element.classList.add('tt_empty'); // Add the 'empty' class if the element has no text
+    }
+});
+
+
+  
+}, 900, 15000);
+
+
+
+
+if (window.matchMedia('(max-width: 699px)').matches) { 
+    waitForElement('.tt_tooltip-wrapper', function() {
+    const cards = document.querySelectorAll('[class*="pro-list-results-front-door_root"] [class*="pro-list-results-front-door"]>.ph3>div > div'); // Update '.card-selector' with your card class
+
+    cards.forEach(card => {
+        const mobileShowItem = card.querySelector('.TTmobileshowitem');
+        const tooltipWrapper = card.querySelector('[class*="pro-list-results-front-door"] [class*="pro-review_root"]');
+    
+        // Check if both elements exist in the current card
+        if (mobileShowItem && tooltipWrapper) {
+            // Move .TTmobileshowitem after .tt_tooltip-wrapper
+            tooltipWrapper.insertAdjacentElement('beforebegin', mobileShowItem);
+        }
+    });
+}, 50, 15000);
+
+waitForElement('.tt_sticky', function() {
+    var stickyElements = document.querySelectorAll('.tt_sticky');
+
+    stickyElements.forEach(sticky => {
+        // Select the child divs within the sticky element
+        var childDivs = sticky.querySelectorAll('div');
+    
+        // Check if there is only one child div
+        if (childDivs.length === 1) {
+            // Add the 'single' class to the sticky element itself
+            sticky.classList.add('single');
+        }
+    });
+}, 50, 15000);
+
+document.querySelectorAll('.black.flex.items-center').forEach(element => {
+    // Check if the element contains the specific text for "Instant Book availability for"
+    const instantBookText = element.querySelector('.Type_text2__2_pIm span').innerText.includes('Instant Book availability for');
+
+    // If the text is found, add the class to the parent of <svg>
+    if (instantBookText) {
+        let targetElement = element.querySelector('svg').parentElement; // Get the parent of the <svg> element
+        targetElement.classList.add('hideinstant'); // Add 'hide' class
+    }
+});
+}
+
+
+document.querySelectorAll('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]').forEach(card => {
+    // Navigate to the desired element inside the card
+    const targetElement = card.querySelector('div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"]:first-child');
+
+    if (targetElement) {
+        // Traverse to the parent of the parent div
+        const grandParentDiv = targetElement.closest('div').parentElement;
+        if (grandParentDiv) {
+            grandParentDiv.classList.add('positionchnages');
+        }
+    }
+});
+
+
+// Select all matching elements
+const elements = document.querySelectorAll('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"] > div > div[class*="pro-list-result_profileInfoContainer"] > div .hover-blue + div > [class*="hideAtOrBelow"] > div > div > div > p');
+
+// Loop through each element and apply the changes
+elements.forEach(element => {
+    // Extract the text content of each element
+    let text = element.textContent;
+
+    // Use a regular expression to remove parentheses and keep only the number inside
+    let numberOnly = text.replace(/[()]/g, '').trim();
+
+    // Update the element's text content with the number only
+    element.textContent = numberOnly;
+});
+
+
+
+
+
+
+waitForElement('.TTmobileshowitem ul li', function() {
+  
+    const liElements = document.querySelectorAll('.TTmobileshowitem ul li');
+
+    // Array of text phrases to match, including individual words
+    const phrases = [
+        "similar jobs done near you",
+        "Thumbtack pay",
+        "offers remote services",
+        "discounts available",
+        "Serves"
+    ];
+    
+    // Loop through each <li> element
+    liElements.forEach(li => {
+        // Get the text content of the <li> and check if it matches any part of the phrases
+        phrases.forEach(phrase => {
+            if (li.textContent.trim().toLowerCase().includes(phrase.toLowerCase())) {
+                // Add the class 'hideservices' if any part of the phrase matches
+                li.classList.add('hideservices');
             }
+        });
+    });
+  
+}, 1000, 15000);
 
 
-            helper.waitForElement('.filter-container', function() {
-                // Call the function to insert the product cards
-                insertProductCards();
-                checkIfAnySelected()
-                setTimeout(function() {
-                    visibleTheCard()
-                    // visibiltyCheck()
-                }, 100)
-            }, 50, 15000)
+
+
+// Select all the cards that match the provided selector
+document.querySelectorAll('[class*="pro-list-results-front-door"] a[data-test="pro-list-result"]').forEach(card => {
+    // Find the target element which is the second child of [class*="pro-list-result_profileInfoContainer"]
+    var targetParent = card.querySelector('[class*="pro-list-result_profileInfoContainer"] > div:nth-child(2)');
+
+    // Check if the targetParent exists and if it has exactly one child div
+    if (targetParent && targetParent.querySelectorAll('div').length === 1) {
+        // Add the class 'singleitem' to the parent element
+        targetParent.classList.add('singleitem');
+        
+        // Create the new element to insert
+        var newElement = document.createElement('div');
+        newElement.classList.add('flex', 'items-center', 'contactforprice');
+        newElement.innerHTML = '<p>Contact for price</p>';
+
+        // Insert the new element before the first child div inside targetParent
+        var firstChildDiv = targetParent.querySelector('div');
+        targetParent.insertBefore(newElement, firstChildDiv);
+    }
+});
+// Select all matching elements
+waitForElement('.br-pill', function() {
+    const pillelements = document.querySelectorAll(' .br-pill');
+
+    // Loop through each element and check the text content
+    pillelements.forEach(element => {
+        // Check if the text is "In high demand"
+        if (element.textContent.trim() === "In high demand") {
+            // Replace the text with "In demand"
+            element.textContent = "In demand";
+            
+            // Add a class to the parent element
+            element.parentElement.classList.add('highlight-color'); // Change 'highlight-color' to whatever class you need
         }
-        if (window.location.href.includes('https://seaworld.com/orlando/tickets/')) {
-            helper.waitForElement(".filter-container", function() {
-                if (!window.clickAdeedT205) {
-                    clickAdeed()
-                    window.clickAdeedT205 = true
-                }
-            }, 50, 15000)
+    });
+}, 3000, 15000);
         }
-
 
         /* Initialise variation */
-        if (window.location.href.includes('https://seaworld.com/orlando/tickets/')) {
-            helper.waitForElement(".product-placement-card__wrapper", init, 50, 5000);
+        function thumbtackTest144(list, observer) {
+            list.getEntries().forEach((entry) => {
+                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+                    observer.disconnect();
+                    clearInterval(test144Interval);
+                    waitForElement("body", init, 50, 15000);
+                    window.isHydrated = true;
+                }
+            });
         }
 
+        if (!window.isHydrated) {
+            var test144Interval = setInterval(function() {
+                waitForElement("body", init, 50, 15000);
+            }, 50);
+            setTimeout(function() {
+                clearInterval(test144Interval);
+            }, 3000);
+            var observer = new PerformanceObserver(thumbtackTest144);
+            observer.observe({
+                entryTypes: ["mark"]
+            });
+        } else {
+            waitForElement("body", init, 50, 15000);
+        }
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
