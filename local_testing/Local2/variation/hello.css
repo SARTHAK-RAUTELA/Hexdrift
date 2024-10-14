@@ -514,6 +514,10 @@ html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroCampaignHe
     .banner_img img {
         object-fit: cover;
     }
+    html body.TT_149 [class*="hero-header_flexFilters"]>div>div:first-child, html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_filters"]>div>div:first-child {
+        margin-right: 0px !important;
+        padding-left: 0 !important;
+    }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -534,8 +538,7 @@ html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroCampaignHe
         margin-right: 470px !important;
     }
 
-    html body.TT_149 [class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_flexFilters"]>div.banner_img,
-    html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_filters"]>div.banner_img {
+    html body.TT_149 [class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_flexFilters"]>div.banner_img {
         right: -114px;
     }
 
