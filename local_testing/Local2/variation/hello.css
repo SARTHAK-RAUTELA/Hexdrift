@@ -72,10 +72,10 @@ html body.elliptic-E2 .container-fluid .hs_cos_wrapper .logos-wrap {
 
 
 @media screen and (max-width:767px) {
-    html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
+    /* html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
         max-width: 366px;
         margin: auto;
-    }
+    } */
 
     html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box .testimonial_logo {
         left: 0px;
@@ -87,6 +87,13 @@ html body.elliptic-E2 .container-fluid .hs_cos_wrapper .logos-wrap {
 }
 
 
+@media screen and (min-width: 1081px) and (max-width: 1198px) {
+    html body.elliptic-E2 .elliptic_testimonial_section {
+        margin-top: 18px;
+    }
+}
+
+
 
 @media screen and (min-width:1080px) {
     html body.elliptic-E2.Elliptic-1 .elliptic_testimonial_section {
@@ -94,29 +101,29 @@ html body.elliptic-E2 .container-fluid .hs_cos_wrapper .logos-wrap {
     }
 }
 
-@media screen and (min-width:767px) {
-    html body.elliptic-E2.Elliptic-1 .elliptic_testimonial_section .elliptic_testimonial_box {
+@media screen and (max-width:767px) {
+    html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
         min-width: 366px;
         margin: 0 17px;
     }
 }
 
-@media screen and (min-width:556px) {
-    html body.elliptic-E2.Elliptic-1 .elliptic_testimonial_section .elliptic_testimonial_box {
+@media screen and (max-width:556px) {
+    html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
         max-width: 490px;
         margin: auto;
     }
 }
 
 @media screen and (min-width: 534px) and (max-width: 556px) {
-    html body.elliptic-E2.Elliptic-1 .elliptic_testimonial_section .elliptic_testimonial_box .testimonial_logo {
+    html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box .testimonial_logo {
         left: -1%;
     }
 }
 
 
-@media screen and (min-width:534px) {
-    html body.elliptic-E2.Elliptic-1 .elliptic_testimonial_section .elliptic_testimonial_box .testimonial_logo {
+@media screen and (max-width:534px) {
+    html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box .testimonial_logo {
         left: -3%;
         max-width: 56px;
         top: -33px;

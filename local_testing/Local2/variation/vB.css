@@ -82,10 +82,10 @@ html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box .e
 
 
 @media screen and (max-width:767px) {
-    html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
+    /* html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
         max-width: 366px;
         margin: auto;
-    }
+    } */
 
     html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box .testimonial_logo {
         left: 0px;
@@ -135,7 +135,7 @@ html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box .e
 
 @media screen and (max-width:556px) {
     html body.elliptic-E2 .elliptic_testimonial_section .elliptic_testimonial_box {
-        max-width: 490px;
+        max-width: 490px !important;
         margin: auto;
     }
 }
