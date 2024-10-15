@@ -783,9 +783,13 @@ html body .in-demand {
 	color: #492782 !important;
 }
 
-@media screen and (max-width: 433px) {
-	[class*="pro-list-results-front-door"] [class*="pro-review_root"] {
-		max-width: 326px;
+@media screen and (min-width: 1200px) {
+	html body.TT-149 [class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_filters"]>div {
+		height: 457px;
+	}
+	
+	html body.TT-149 [class*=hero-header_heroCampaignHeaderHeight]+[class*="hero-header_filters"]>div>div:first-child {
+		margin-top: 120px;
 	}
 }
 
@@ -796,3 +800,5 @@ html body .in-demand {
 		margin-left: 24px !important;
 	}
 }
+
+
