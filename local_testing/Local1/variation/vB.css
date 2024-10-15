@@ -788,3 +788,11 @@ html body .in-demand {
 		max-width: 326px;
 	}
 }
+
+
+
+@media only screen and (min-width: 1010px) and (max-width: 1050px) {
+	html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_filters"]>div>div:first-child {
+		margin-left: 24px !important;
+	}
+}
