@@ -1,9 +1,32 @@
-@media only screen and (min-width: 1300px) {
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid="price_Lock_timer"] {
+    line-height: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding-right: 24px;
+    color: #FF0000;
+    font-size: 12px;
+}
 
-    html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroHeaderHeight"]+[class*="hero-header_filters"],
-    html body.TT_149 [class*="hero-header_root"]>[class*="hero-header_heroCampaignHeaderHeight"]+[class*="hero-header_flexFilters"] {
-        max-width: 1160px;
-        height: inherit;
-        align-items: center;
-    }
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid="price_Lock_timer"] span {
+    font-weight: 700;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid*="product_card"]>div:nth-child(2) {
+    position: relative;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [class*=MobileStickyFooter_footerMainContentFlexContainer] {
+    position: relative;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 .mobile_timer_container {
+    position: absolute;
+    bottom: -10px;
+    color: #FF0000;
+    font-size: 12px;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 #stickyFooter>div {
+    height: 120px;
 }
