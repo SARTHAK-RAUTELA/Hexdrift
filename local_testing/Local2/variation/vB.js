@@ -1,355 +1,66 @@
 (function () {
     try {
         /* main variables */
-        var debug = 1;
-        var variation_name = "travelShift-T45";
-
-        /* helper library */
-        var _$;
-        !(function (factory) {
-            _$ = factory();
-        })(function () {
-            var bm = function (s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+        var debug = 0;
+        var variation_name = "TT-155";
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
                 }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function (n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function (fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function () {
-                    var items = [];
-                    for (let index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function (v) {
-                    var a = v.split(" ");
-                    return this.each(function (i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                waitForElement: function (
-                    selector,
-                    trigger,
-                    delayInterval,
-                    delayTimeout
-                ) {
-                    var interval = setInterval(function () {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger();
-                        }
-                    }, delayInterval);
-                    setTimeout(function () {
-                        clearInterval(interval);
-                    }, delayTimeout);
-                },
-            };
-            return function (selector) {
-                return new bm(selector);
-            };
-        });
-        function observeSelector(selector, callback, options = {}) {
-            const doc = options.document || window.document;
-            const processed = new Map();
-
-            if (options.timeout || options.onTimeout) {
-                throw new Error(`observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`);
-            }
-
-            let obs;
-            let isDone = false;
-
-            const done = () => {
-                if (obs) obs.disconnect();
-                isDone = true;
-            };
-
-            const processElement = el => {
-                if (!processed.has(el)) {
-                    processed.set(el, true);
-                    callback(el);
-                    if (options.once) {
-                        done();
-                        return true;
-                    }
-                }
-                return false;
-            };
-
-            const lookForSelector = elParent => {
-                if (elParent.nodeType === Node.ELEMENT_NODE) {
-                    if (elParent.matches(selector) && processElement(elParent)) {
-                        return true;
-                    }
-                    const elements = elParent.querySelectorAll(selector);
-                    for (const el of elements) {
-                        if (processElement(el)) return true;
-                    }
-                }
-                return false;
-            };
-
-            lookForSelector(doc.documentElement);
-
-            if (!isDone) {
-                obs = new MutationObserver(mutationsList => {
-                    for (const record of mutationsList) {
-                        if (record.addedNodes && record.addedNodes.length) {
-                            for (const addedNode of record.addedNodes) {
-                                if (addedNode.nodeType === Node.ELEMENT_NODE) {
-                                    if (lookForSelector(addedNode)) return true;
-                                }
-                            }
-                        }
-                    }
-                });
-                obs.observe(doc, {
-                    attributes: false,
-                    childList: true,
-                    subtree: true,
-                });
-            }
-
-            return done;
-        }
-        // Helper functions for cookie handling
-        function setCookie(name, value, minutes) {
-            var expires = "";
-            if (minutes) {
-                var date = new Date();
-                date.setTime(date.getTime() + (minutes * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-        function eraseCookie(name) {
-            document.cookie = name + '=; Max-Age=-99999999;';
-        }
-        function eraseSpecificCookies(cookieNames) {
-            cookieNames.forEach(function (name) {
-                document.cookie = name + '=; Max-Age=-99999999; path=/;';
-                document.cookie = name + '=; Max-Age=-99999999; path=/; domain=' + window.location.hostname;
-            });
-        }
-
-        const initialTimeInMinutes = 30;
-
-
-        function updateCountdown() {
-            var countdownElement = document.getElementById('timer');
-            var now = Date.now();
-            var remainingTime = parseInt(getCookie('endTime')) - now;
-
-            if (remainingTime > 0) {
-                var minutes = Math.floor((remainingTime / 1000) / 60);
-                var seconds = Math.floor((remainingTime / 1000) % 60);
-                if (countdownElement) {
-                    countdownElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-                }
-                // Call updateCountdown again after 1 second
-                setTimeout(updateCountdown, 1000);
-            } else {
-                eraseCookie('endTime'); // Clear the end time cookie
-                setTimeout(() => {
-                    // Reset the timer
-                    setCookie('endTime', Date.now() + (initialTimeInMinutes * 60 * 1000), initialTimeInMinutes);
-                    updateCountdown(); // Start countdown immediately after resetting
-                }, 1000); // Delay before restarting
-            }
-        }
-
-        function startCountdown() {
-            // Set the end time in a cookie if it doesn't exist
-            if (!getCookie('endTime')) {
-                setCookie('endTime', Date.now() + (initialTimeInMinutes * 60 * 1000), initialTimeInMinutes);
-            }
-            updateCountdown(); // Initial call to update the countdown immediately
-        }
-
-        var scriptCookies = [
-            'endTime',           // Cookie storing the countdown end time
-            'firstTimeTimer',    // Cookie indicating the first time the timer was set
-            'timerProductTitle'  // Cookie storing the product title associated with the timer
-        ];
-
-
-        var helper = _$();
-        // Variation Init
-        function init() {
+            }, delayInterval);
             setTimeout(function () {
-                helper.log('Log inside from init');
-                _$('body').addClass(variation_name);
-
-                if (!getCookie('firstTimeTimer')) {
-                    // Product not a flight nor a car and only one item in cart
-                    if (document.querySelectorAll('[data-crid*="product_card--cart"]').length === 1) {
-                        if (document.querySelector('[data-path*="/cart"]') && !document.querySelector('[data-crid="product_card product_card--cart product_card--flight"]') && !document.querySelector('[data-crid="product_card product_card--cart product_card--car"]')) {
-                            setCookie('firstTimeTimer', "True", 30);
-                            if (window.innerWidth > 960) {
-                                helper.waitForElement('[data-crid="price_Lock_timer"]', function () {
-                                    if (!document.querySelector('.lock_time')) {
-                                        document.querySelector('[data-crid="price_Lock_timer"]').insertAdjacentHTML('afterbegin', `Price locked for <span class="lock_time" id="timer"></span>`);
-                                        var timeproduct = document.querySelector('.lock_time').closest('[data-crid*="product_card"]');
-                                        var timerProductTitle = timeproduct.querySelector('[data-crid="product_card_heading"]').textContent;
-                                        setCookie('timerProductTitle', timerProductTitle, 30);
-                                    }
-                                }, 50, 15000);
-                            }
-                            else {
-                                if (!document.querySelector('.lock_time_mobile')) {
-                                    document.querySelector('[class*=MobileStickyFooter_leftWrapper]').insertAdjacentHTML('afterend', `<div class="mobile_timer_container">Price locked for <span class="lock_time_mobile" id="timer"></span></div>`);
-                                }
-                                if (document.querySelectorAll('[data-crid="Selected-package-section"]>div').length == 1) {
-                                    var timerProductTitle = document.querySelector('[data-crid="card_item_details"]').textContent;
-                                    setCookie('timerProductTitle', timerProductTitle, 30);
-                                }
-                            }
-                        }
-                    }
-                } else if (getCookie('firstTimeTimer')) {
-                    console.log("firtstbda")
-                    var privioustitle = getCookie('timerProductTitle');
-                    var lastMatch = null; // Variable to store the last matching element
-                    var matchCount = 0; // Initialize a counter to track matches
-
-                    document.querySelectorAll('[data-crid*="product_card--cart"] [data-crid="product_card_heading"]').forEach(function (ele) {
-                        if (ele.textContent == privioustitle) {
-                            matchCount++; // Increment the counter for each match
-                            lastMatch = ele; // Store the last matching element
-
-                            console.log('product available');
-                        }
-                    });
-                    if (window.innerWidth > 960) {
-                        if (matchCount > 1 && lastMatch) {
-                            // If there is more than one match, insert the timer in the last matching element
-                            if (!document.querySelector('.lock_time')) {
-                                lastMatch.closest('[data-crid*="product_card--cart"]').querySelector('[data-crid="price_Lock_timer"]').insertAdjacentHTML('afterbegin', `Price locked for <span class="lock_time" id="timer"></span>`);
-                            }
-                        } else if (matchCount === 1 && lastMatch) {
-                            // If only one match, insert the timer in that single matched element
-                            if (!document.querySelector('.lock_time')) {
-                                lastMatch.closest('[data-crid*="product_card--cart"]').querySelector('[data-crid="price_Lock_timer"]').insertAdjacentHTML('afterbegin', `Price locked for <span class="lock_time" id="timer"></span>`);
-                            }
-                        }
-                    } else {
-                        helper.waitForElement('[class*=MobileStickyFooter_leftWrapper]', function () {
-                            console.log("hello")
-                            if (lastMatch) {
-                                if (!document.querySelector('.lock_time_mobile')) {
-                                    document.querySelector('[class*=MobileStickyFooter_leftWrapper]').insertAdjacentHTML('afterend', `<div class="mobile_timer_container">Price locked for <span class="lock_time_mobile" id="timer"></span></div>`);
-                                }
-                            } else {
-                                if (!document.querySelector('.lock_time_mobile') && privioustitle) {
-                                    document.querySelector('[class*=MobileStickyFooter_leftWrapper]').insertAdjacentHTML('afterend', `<div class="mobile_timer_container">Price locked for <span class="lock_time_mobile" id="timer"></span></div>`);
-                                }
-                            }
-                        }, 50, 15000)
-                    }
-
-
-                    console.log(`Total matches found: ${matchCount}`);
-
-
-                }
-                helper.waitForElement('#timer', function () {
-                    // Start the countdown
-                    startCountdown();
-                }, 50, 15000);
-            }, 2000);
-
+                clearInterval(interval);
+            }, delayTimeout);
         }
-        if (!window.observeSelectorT45) {
-            window.observeSelectorT45 = true;
-            observeSelector('#navBardesktopCart', function () {
-                console.log("item removed")
-                if (window.innerWidth > 960) {
-                    setTimeout(function () {
-                        if (window.location.href.includes('/cart')) {
-                            var privioustitle = getCookie('timerProductTitle');
-                            if (privioustitle) {
-                                var foundMatch = false; // Initialize a flag to track if any match is found
-
-                                document.querySelectorAll('[data-crid*="product_card--cart"] [data-crid="product_card_heading"]').forEach(function (ele) {
-                                    if (ele.textContent === privioustitle) {
-                                        foundMatch = true; // Set flag to true if a match is found
-                                    }
-                                });
-
-                                if (!foundMatch) {
-                                    // If no match is found after checking all product titles, remove the session storage item
-                                    eraseSpecificCookies(scriptCookies);
-                                    document.querySelector('body').classList.remove(variation_name)
-                                    console.log("all session cookies")
-                                    console.log('Session removed because no matching product title was found');
-                                } else {
-                                    console.log('Matching product title found');
-                                }
-                            }
-                            init()
-                        }
-                    }, 2000);
+        /* Variation Init */
+        function init() {
+            document.querySelector("body").classList.add(variation_name);
+            if (document.querySelector('[aria-label="Breadcrumb"] ol li:last-child p')) {
+                var profession_content = document.querySelector(`[aria-label="Breadcrumb"] ol li:last-child p`).textContent;
+                if (window.location.href.startsWith("https://www.thumbtack.com/k/")) {
+                    document.querySelector(`[class*="hero-header_filters"] [class*="Type_title3"]`).textContent =
+                        "Hire a highly-rated " + profession_content + " pro with confidence.";
+                } else {
+                    document.querySelector(`[class*="hero-header_filters"] [class*="Type_title3"]`).innerHTML =
+                        "Hire a highly-rated " + profession_content + " pro with confidence.";
                 }
-            })
-
-
+                if (document.querySelector('[class*="hero-header_rootFlex"]>[class*=hero-header_heroHeaderExtendedHeight] picture+div h1')) {
+                    document.querySelector('[class*="hero-header_rootFlex"]>[class*=hero-header_heroHeaderExtendedHeight] picture+div h1').innerHTML =
+                        "Hire a highly-rated " + profession_content + " <span>pro with confidence.</span>";
+                }
+                if (document.querySelector('[class*="hero-header_heroHeaderHeight"] [class*="hero-header_flexHeaderContentTitle"]')) {
+                    document.querySelector('[class*="hero-header_heroHeaderHeight"] [class*="hero-header_flexHeaderContentTitle"]').textContent =
+                        "Hire a highly-rated " + profession_content + " pro with confidence.";
+                }
+            }
+            document.querySelector('[class*="hero-header_filters"]  p').innerHTML = "Confirm your location and browse pros — you've got this.";
         }
-        function Test_45perfObserver(list, observer) {
+        /* Initialise variation */
+        function thumbtackTest155(list, observer) {
             list.getEntries().forEach((entry) => {
                 if (entry.entryType === "mark" && entry.name === "afterHydrate") {
                     observer.disconnect();
-                    // Trigger the testVariable
-                    if (!window.location.href.includes('/payment')) {
-                        helper.waitForElement('html[lang="en"] [data-path*="/cart"]', init, 50, 5000);
-                    }
-                    console.log("test triggered");
+                    clearInterval(test144Interval);
+                    waitForElement("body", init, 50, 15000);
                     window.isHydrated = true;
                 }
             });
         }
-
-        if (window._travelshift && window._travelshift.chunksLoadingData && window._travelshift.chunksLoadingData.status != "loaded") {
-            const observer = new PerformanceObserver(Test_45perfObserver);
+        if (!window.isHydrated) {
+            var test144Interval = setInterval(function () {
+                waitForElement("body", init, 50, 15000);
+            }, 50);
+            setTimeout(function () {
+                clearInterval(test144Interval);
+            }, 3000);
+            const observer = new PerformanceObserver(thumbtackTest155);
             observer.observe({ entryTypes: ["mark"] });
         } else {
-            setTimeout(function () {
-                if (!window.location.href.includes('/payment')) {
-                    helper.waitForElement('html[lang="en"] [data-path*="/cart"]', init, 50, 5000);
-                    console.log("test triggered set timeout");
-                }
-            }, 2000);
+            waitForElement("body", init, 50, 15000);
         }
-        /* Initialise variation */
-
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
