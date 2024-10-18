@@ -1,80 +1,94 @@
 (function () {
-	try {
-		/* main variables */
-		var debug = 0;
-		var variation_name = "TT-155";
-		/* all Pure helper functions */
-		function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-			var interval = setInterval(function () {
-				if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-					clearInterval(interval);
-					trigger();
-				}
-			}, delayInterval);
-			setTimeout(function () {
-				clearInterval(interval);
-			}, delayTimeout);
-		}
-	
-		
-	   
-		/* Variation Init */
-		function init() {
-			document.querySelector("body").classList.add(variation_name);
+    try {
+        /* main variables */
+        var debug = 0;
+        var variation_name = "TT-155";
 
-			if (document.querySelector('[aria-label="Breadcrumb"] ol li:last-child p')) {
-        var profession_content = document.querySelector(`[aria-label="Breadcrumb"] ol li:last-child p`).textContent;
-          
-       
-        if (window.location.href.startsWith("https://www.thumbtack.com/k/")) {
-          document.querySelector(`[class*="hero-header_filters"] [class*="Type_title3"]`).textContent =
-            "Hire a highly-rated " + profession_content + " pro with confidence.";
-        } else {
-          document.querySelector(`[class*="hero-header_filters"] [class*="Type_title3"]`).innerHTML =
-            "Hire a highly-rated " + profession_content + " pro with confidence.";
+        /* Helper function to extract numbers and services */
+        function extractNumbersWithPlus(content) {
+            const numberMatch = content.match(/(\d+)\+?/);
+            return numberMatch ? numberMatch[0] : null;
         }
-        if (document.querySelector('[class*="hero-header_rootFlex"]>[class*=hero-header_heroHeaderExtendedHeight] picture+div h1')) {
-          document.querySelector('[class*="hero-header_rootFlex"]>[class*=hero-header_heroHeaderExtendedHeight] picture+div h1').innerHTML =
-            "Hire a highly-rated " + profession_content + " <span>pro with confidence.</span>";
-        }
-        if (document.querySelector('[class*="hero-header_heroHeaderHeight"] [class*="hero-header_flexHeaderContentTitle"]')) {
-          document.querySelector('[class*="hero-header_heroHeaderHeight"] [class*="hero-header_flexHeaderContentTitle"]').textContent =
-            "Hire a highly-rated " + profession_content + " pro with confidence.";
-        }
-        
-		  } 
-      document.querySelector('[class*="hero-header_filters"]  p').innerHTML = "Confirm your location and browse pros — you've got this.";
-       
-		   
-		   
-		  
-		 
+
+		function extractServices(content) {
+			// Match "Find a" or "Find an" (optional), then extract the profession, ignoring "near you" or any location.
+			const services = content.match(/(?:Find (?:a|an)\s+)?(.*?)(?:\s+near\s+\w+|\s+near\s+you|$)/i);
+			return services && services[1] ? services[1].trim() : null;
 		}
 		
-		/* Initialise variation */
-		function thumbtackTest155(list, observer) {
-			list.getEntries().forEach((entry) => {
-				if (entry.entryType === "mark" && entry.name === "afterHydrate") {
-					observer.disconnect();
-					clearInterval(test144Interval);
-					waitForElement("body", init, 50, 15000);
-					window.isHydrated = true;
-				}
-			});
-		}
-		if (!window.isHydrated) {
-			var test144Interval = setInterval(function () {
-				waitForElement("body", init, 50, 15000);
-			}, 50);
-			setTimeout(function () {
-				clearInterval(test144Interval);
-			}, 3000);
-			const observer = new PerformanceObserver(thumbtackTest155);
-			observer.observe({ entryTypes: ["mark"] });
-		} else {
-			waitForElement("body", init, 50, 15000);
-		}
-	} catch (e) {
-		if (debug) console.log(e, "error in Test" + variation_name);
-	}
-  })();
+
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+
+        /* Variation Init */
+        function init() {
+            document.querySelector("body").classList.add(variation_name);
+            var profession_content = "";
+
+            // New selector for profession content
+            if (document.querySelector('[class*="hero-header_filters"] h2[class*="Type_title3"]')) {
+                // Extract the profession from the content
+                var professionElement = document.querySelector('[class*="hero-header_filters"] h2[class*="Type_title3"]');
+                profession_content = professionElement.textContent.toLowerCase(); // Convert to lowercase
+
+                // Extract the profession name cleanly
+                var profession_result = extractServices(profession_content);
+
+                // Update the text content only if it hasn't been set before
+                if (!professionElement.dataset.updated) {
+                    professionElement.textContent = "Find your partner in " + profession_result + " projects.";
+                    professionElement.dataset.updated = "true";  // Mark as updated
+                }
+
+                // Extract numbers (if needed)
+                var number_content = professionElement.textContent; // Assuming this is where the number is found
+                var result_number = extractNumbersWithPlus(number_content);
+
+                // Example usage: console.log or any other logic based on the results
+                // console.log("Result Number:", result_number);
+                // console.log("Profession Result:", profession_result);
+            }
+
+            // Additional updates using profession_content for other elements
+            if (document.querySelector('[class*="hero-header_rootFlex"]>[class*=hero-header_heroHeaderExtendedHeight] picture+div h1')) {
+                var h1Element = document.querySelector('[class*="hero-header_rootFlex"]>[class*=hero-header_heroHeaderExtendedHeight] picture+div h1');
+                if (!h1Element.dataset.updated) {
+                    h1Element.innerHTML = "Find your partner in " + profession_result + " <span>projects.</span>";
+                    h1Element.dataset.updated = "true";  // Mark as updated
+                }
+            }
+
+            if (document.querySelector('[class*="hero-header_heroHeaderHeight"] [class*="hero-header_flexHeaderContentTitle"]')) {
+                var flexHeaderElement = document.querySelector('[class*="hero-header_heroHeaderHeight"] [class*="hero-header_flexHeaderContentTitle"]');
+                if (!flexHeaderElement.dataset.updated) {
+                    flexHeaderElement.textContent = "Find your partner in " + profession_result + " projects.";
+                    flexHeaderElement.dataset.updated = "true";  // Mark as updated
+                }
+            }
+            waitForElement('[class*="hero-header_filters"] p',function(){
+                document.querySelector('[class*="hero-header_filters"] p').innerHTML = "Confirm your location to find expert guidance in your area.";
+            })
+            
+        }
+
+            var test144Interval = setInterval(function () {
+                waitForElement("body", init);
+            }, 50);
+            setTimeout(function () {
+                clearInterval(test144Interval);
+            }, 15000);
+    
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name);
+    }
+})();
