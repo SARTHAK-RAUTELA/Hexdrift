@@ -1,73 +1,42 @@
-html body [data-id="5262c93"] .elementor-button-wrapper{
-    position: relative;
-}
-
-html body [data-id="5262c93"] .elementor-button-wrapper::after {
-    content: "Our Trial is truly FREE. No Credit Card Required.";
-    display: block;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: capitalize;
-    color: #ffff;
+html body div [data-testid^="global-header__link-bar"] a>button{
+    color: #676d73;
+    background-color: inherit !important;
+    border: none;
     font-weight: 400;
-    position: absolute;
-    bottom: -32px;
-    left: -20px;
-    right: 0;
-}
-
-html body [data-elementor-id="5354"] #ResultsContainer {
-    margin-top: 0;
-}
-
-@media screen and (max-width:1180px){
-    html body [data-id="5262c93"] .elementor-button-wrapper::after{
-        font-size: 14px;
-        line-height: 20px;
-        left: 0;
-
-    }
+    text-decoration: none !important;
 }
 
 
-html body  #top-menu-nav #top-menu .TryItFreeBtn  {
-    position: relative;
+html body div [data-testid^="global-header__link-bar"] a>button:focus{
+    color: #676d73;
+    background-color: inherit !important;
+    text-decoration: none !important;
 }
 
-html body #top-menu-nav #top-menu .TryItFreeBtn::after {
-    content: "Our Trial is truly FREE. No Credit Card Required.";
-    display: block;
-    font-size: 16px !important;
-    line-height: 20px !important;
-    font-weight: 400;
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    right: 0;
-    font-family: Poppins, Helvetica, Arial, Lucida, sans-serif !important;
-    text-align: center;
-    text-transform: capitalize !important;
-    color: #ffff !important;
+
+html body [data-testid^="global-header__link-bar"] a>button:hover{
+    color: #676d73 !important;
 }
 
-html body #et_mobile_nav_menu #mobile_menu .TryItFreeBtn {
-    position: relative;
+
+html body [data-testid^="global-header__link-bar"] [class*="links_linksContainer"] div:first-child a:hover{
+    box-shadow: inset 0 -3px 0 #d3d4d5;
+    outline: none;
 }
 
-html body #et_mobile_nav_menu #mobile_menu .TryItFreeBtn::after {
-    content: "Our Trial is truly FREE. No Credit Card Required.";
-    display: block;
-    font-size: 14px !important;
-    line-height: 20px !important;
-    font-weight: 400;
-    position: absolute;
-    bottom: -25px;
-    left: 15px;
-    text-align: center;
-    text-transform: capitalize !important;
-    color: #ffff !important;
+
+html body div [data-testid^="global-header__link-bar"] .content-stretch+a {
+    order: 1;
+    max-height: 34px;
+    margin-left: 14px;
+    margin-right: 14px;
+    background-color: #009fd9;
+    border-color: #009fd9;
+    padding: 20px 30px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: none !important;
 }
 
-html body #et_mobile_nav_menu #mobile_menu{
-    padding-bottom: 35px;
-}
