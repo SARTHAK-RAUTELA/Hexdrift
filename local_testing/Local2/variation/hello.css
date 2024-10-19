@@ -1,45 +1,204 @@
-html body div [data-testid^="global-header__link-bar"] a>button {
-    color: #676d73;
-    background-color: inherit !important;
-    border: none;
-    font-weight: 400;
-    text-decoration: none !important;
+html body.TT-157 .tt_filter ul {
+    display: flex;
+    gap: 8px;
+    height: 34px;
+}
+
+html body.TT-157 .tt_filter ul li {
+    padding: 6px 15px;
+    border: 1px solid #e9eced;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #009FD9;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+html body.TT-157 .tt_filter ul li:first-child:before {
+    content: " ";
+    background-image: url(https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT157/Icon.svg);
+    height: 13px;
+    width: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html body.TT-157 .tt_filter ul li.active {
+    background-color: #EAF6FA;
+    border-color: #EAF6FA;
+}
+
+html body.TT-157 #pro_list_header+div {
+    padding-bottom: 0;
+}
+
+html body.TT-157 .tt_filter {
+    border-bottom: 1px solid #e9eced !important;
+    padding-bottom: 15px;
+}
+
+html body.TT-157 #pro_list_header+div {
+    padding-bottom: 25px !important;
+    border: none !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-1 {
+    order: 1 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-2 {
+    order: 2 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-3 {
+    order: 3 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-4 {
+    order: 4 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-5 {
+    order: 5 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-6 {
+    order: 6 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-7 {
+    order: 7 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-8 {
+    order: 8 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-9 {
+    order: 9 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-10 {
+    order: 10 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-11 {
+    order: 11 !important;
+}
+
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div {
+    display: flex;
+    flex-direction: column;
+}
+
+html body.TT-157 .order-1 .pro-title span:before {
+    content: "1.";
+}
+
+html body.TT-157 .order-2 .pro-title span:before {
+    content: "2.";
+}
+
+html body.TT-157 .order-3 .pro-title span:before {
+    content: "3.";
+}
+
+html body.TT-157 .order-4 .pro-title span:before {
+    content: "4.";
+}
+
+html body.TT-157 .order-5 .pro-title span:before {
+    content: "5.";
+}
+
+html body.TT-157 .order-6 .pro-title span:before {
+    content: "6.";
+}
+
+html body.TT-157 .order-7 .pro-title span:before {
+    content: "7.";
+}
+
+html body.TT-157 .order-8 .pro-title span:before {
+    content: "8.";
+}
+
+html body.TT-157 .order-9 .pro-title span:before {
+    content: "9.";
+}
+
+html body.TT-157 .order-10 .pro-title span:before {
+    content: "10.";
+}
+
+html body.TT-157 .pro-title span:before {
+    color: #2f3033 !important;
+}
+
+html body.TT-157 .tt_filter ul li:first-child {
+    padding-left: 28px;
+    position: relative;
+}
+
+html body.TT-157.orderitem .pro-title span {
+    color: transparent;
+    font-size: 0 !important;
+    margin-right: 7px;
+}
+
+html body.TT-157 .pro-title span:before {
+    color: #2f3033 !important;
+    /* position: absolute; */
+    font-size: 16px;
 }
 
 
-html body div [data-testid^="global-header__link-bar"] a>button:focus {
-    color: #676d73;
-    background-color: inherit !important;
-    text-decoration: none !important;
+html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div>div.mh3 {
+    order: 4;
 }
 
+/* Optional: Adjust the size or behavior on mobile screens */
+@media (max-width: 768px) {
+    html body.TT-157 .tt_filter ul {
+        padding: 0 10px;
+        /* Add padding for spacing */
+    }
 
-html body [data-testid^="global-header__link-bar"] a>button:hover {
-    color: #676d73 !important;
-}
+    html body.TT-157 .tt_filter {
+        overflow: hidden;
+        /* Prevents the whole page from scrolling */
+    }
 
+    html body.TT-157 .tt_filter ul {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+        scrollbar-width: thin;
+        /* Thin scrollbar for Firefox */
+    }
 
-html body [data-testid^="global-header__link-bar"] [class*="links_linksContainer"] div:first-child a:hover {
-    box-shadow: inset 0 -3px 0 #d3d4d5;
-    outline: none;
-}
+    html body.TT-157 .tt_filter ul li {
+        flex: 0 0 auto;
+        /* Prevents shrinking */
+        margin-right: 10px;
+        /* Add spacing between items */
+    }
 
+    /* Optional: Hide scrollbar for Webkit browsers (Safari/Chrome) */
+    html body.TT-157 .tt_filter ul::-webkit-scrollbar {
+        display: none;
+    }
 
-html body div [data-testid^="global-header__link-bar"] .content-stretch+a {
-    order: 1;
-    max-height: 34px;
-    margin-left: 14px;
-    margin-right: 14px;
-    background-color: #009fd9;
-    border-color: #009fd9;
-    padding: 20px 30px;
-    margin-top: 10px;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 5px;
-    box-shadow: none !important;
-}
-
-html body div [data-testid^="global-header__link-bar"] [class*="links_linkBarThemedLink"] button {
-    padding: 0 !important;
+    html body.TT-157 .tt_filter ul {
+        gap: 0px;
+      }
 }
