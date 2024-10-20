@@ -168,7 +168,7 @@ html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-result
 @media (max-width: 768px) {
     html body.TT-157 .tt_filter ul {
         padding: 0 10px;
-        /* Add padding for spacing */
+        padding-left: 0px;
     }
 
     html body.TT-157 .tt_filter {
@@ -200,5 +200,5 @@ html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-result
 
     html body.TT-157 .tt_filter ul {
         gap: 0px;
-      }
+    }
 }
