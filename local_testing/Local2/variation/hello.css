@@ -150,15 +150,15 @@ html body.TT-157 .tt_filter ul li:first-child {
 html body.TT-157.orderitem .pro-title span {
     color: transparent;
     font-size: 0 !important;
-    margin-right: 7px;
+    margin-right: 4px;
 }
 
 html body.TT-157 .pro-title span:before {
     color: #2f3033 !important;
     /* position: absolute; */
     font-size: 16px;
+    margin-right: 4px;
 }
-
 
 html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div>div.mh3 {
     order: 4;
@@ -168,7 +168,7 @@ html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-result
 @media (max-width: 768px) {
     html body.TT-157 .tt_filter ul {
         padding: 0 10px;
-        padding-left: 0px;
+        /* Add padding for spacing */
     }
 
     html body.TT-157 .tt_filter {
@@ -200,5 +200,10 @@ html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-result
 
     html body.TT-157 .tt_filter ul {
         gap: 0px;
+        padding-left: 0;
+    }
+
+    html body.TT-157.orderitem .pro-title span {
+        margin-right: 0;
     }
 }
