@@ -222,11 +222,12 @@ html body.TT-153 #pro_list_header span span span:first-child {
 
 html body.TT-153 .tt_chnagesposition>div {
     margin-top: 0 !important;
+    margin-right: 0 !important;
 }
 
 html body.TT-153 .flex.flex-wrap.tt_chnagesposition {
     order: 2;
-    gap: 10px;
+    gap: 8px;
 }
 
 html body.TT-153 .flex.flex-wrap.tt_chnagesposition+[class*="lazy-tooltip_root"] svg,
@@ -628,7 +629,7 @@ html body.TT-153 [class*="pro-list-results-front-door_root"] [class*="pro-list-r
 
     html body.TT-153 .tt_tooltip-wrapper {
         margin-bottom: 12px;
-        gap: 10px;
+        gap: 8px;
     }
 
     html body.TT-153 .TTmobileshowitem li svg {
@@ -647,17 +648,26 @@ html body.TT-153 [class*="pro-list-results-front-door_root"] [class*="pro-list-r
         position: inherit;
     }
 
-    html body.TT-153 .circle_itemstyle,
-    html body.TT-153 .tt_pulsing-circle {
-        width: 10px;
-        height: 10px;
-    }
+    
 
     html body.TT-153 [class*="cost-information_mobileCostSubtext"] span,
     html body.TT-153 .cost-information_mobileCostSubtext__fwQNE {
         font-size: 14px;
     }
 
+    html body .main_pulsing-circle {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 4px;
+        right: 2px;
+    }
+
+    html body.TT-153 .circle_itemstyle,
+    html body.TT-153 .tt_pulsing-circle {
+        width: 8px;
+        height: 8px;
+    }
 
 }
 
