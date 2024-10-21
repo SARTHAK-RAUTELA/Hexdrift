@@ -240,7 +240,7 @@ html body.TT-153 [class*="pro-list-result_profileInfoContainer"]>div .hover-blue
     border-radius: 50px;
     align-items: center;
     display: flex;
-    margin-right: 6px;
+    /* margin-right: 6px; */
     gap: 4px;
     color: rgba(56, 60, 128, 1);
     font-size: 14px;
@@ -711,7 +711,7 @@ html body.TT-153 .TTmobileshowitem.tthide+div+.tt_tooltip-wrapper {
     }
 
     html body.TT-153 .contactforprice p {
-        font-size: 16px;
+        font-size: 14px !important;
     }
 }
 
