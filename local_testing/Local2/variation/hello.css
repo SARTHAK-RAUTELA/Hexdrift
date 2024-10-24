@@ -1,209 +1,269 @@
-html body.TT-157 .tt_filter ul {
-    display: flex;
-    gap: 8px;
-    height: 34px;
+html body #content .cre-t-21-parent-container {
+    max-width: 370px;
+    width: 100%;
 }
-
-html body.TT-157 .tt_filter ul li {
-    padding: 6px 15px;
-    border: 1px solid #e9eced;
-    border-radius: 50px;
+html body .cre-t-21-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 344px;
+    width: 100%;
+    margin-top: 32px;
+}
+html body .cre-t-21-header {
+    margin-bottom: 7px;
+    color: #ed4968;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", Sans-serif;
+    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1em;
+    margin-bottom: 12px;
+}
+html body .cre-t-21-dropdown {
+    position: relative;
+    width: 100%;
+}
+html body .cre-t-21-dropdown-input {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
-    color: #009FD9;
-    font-weight: 600;
-    font-size: 12px;
+    gap: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+}
+html body .cre-t-21-dropdown-input-text {
+    color: #666;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     display: flex;
     align-items: center;
 }
 
-html body.TT-157 .tt_filter ul li:first-child:before {
-    content: " ";
-    background-image: url(https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT157/Icon.svg);
-    height: 13px;
-    width: 15px;
-    display: inline-block;
-    background-repeat: no-repeat;
+html body .cre-t-21-dropdown-option {
     position: absolute;
-    left: 12px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option {
+    padding: 21px 16px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    color: #074a5a;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+}
+html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option:hover {
+    background-color: #f0f0f0;
+}
+
+html body .cre-t-21-cta.cre-t-21-active {
+    cursor: pointer;
+    pointer-events: auto;
+    /* opacity: 1; */
+}
+html body .cre-t-21-cta .cre-t-21-cta-link {
+    font-family: "Plus Jakarta Sans", Sans-serif;
+    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1em;
+    color: #ffffff;
+    background-color: #ed4968;
+    border-radius: 12px 12px 12px 12px;
+    padding: 14px 36px 14px 36px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+html body .cre-t-21-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px;
+    width: 100%;
+    justify-content: flex-start;
+}
+html body .cre-t-21-content1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html body .cre-t-21-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+html body .cre-t-21-dropdown-option-wrapper {
+    display: flex;
+    margin-top: 8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+html body .cre-t-21-dropdown .cre-t-21-dropdown-option .cre-t-21-dropdown-option-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+}
+html body .cre-t-21-dropdown.cre-t-21-show .cre-t-21-dropdown-option .cre-t-21-dropdown-option-wrapper {
+    max-height: 300px;
+}
+html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 32px);
+    height: 1px;
+    background-color: #f1f1f1;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option:last-child::after {
+    display: none;
+}
+html body .cre-t-21-cta .cre-t-21-cta-link:hover {
+    background-color: #da3455;
+    color: #ffffff;
+}
+
+/* __________________________________________________________________ */
+html body.cre-t-21-gendergp #page-container .CRE-T7-hero-container .Crestart-journey-button {
+    display: none;
+}
+
+html body.cre-t-21-gendergp #page-container .cre-t-21-header {
+    font-family:
+        Open Sans,
+        Arial,
+        sans-serif;
+}
+
+html body.cre-t-21-gendergp #page-container .cre-t-21-dropdown-input {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+html body.cre-t-21-gendergp #page-container .cre-t-21-dropdown-input-icon {
+    width: 12px;
+    height: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-html body.TT-157 .tt_filter ul li.active {
-    background-color: #EAF6FA;
-    border-color: #EAF6FA;
+html body.cre-t-21-gendergp #page-container .cre-t-21-dropdown-input-icon svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+html body.cre-t-21-gendergp #page-container .cre-t-21-cta .cre-t-21-cta-link {
+    transition: all 0.3s !important;
+    font-size: 1.1rem !important;
+    line-height: 1em !important;
+    color: #ffffff !important;
 }
 
-html body.TT-157 #pro_list_header+div {
-    padding-bottom: 0;
+html body.cre-t-21-gendergp #page-container .cre-t-21-cta .cre-t-21-cta-link::after {
+    display: none;
 }
 
-html body.TT-157 .tt_filter {
-    border-bottom: 1px solid #e9eced !important;
-    padding-bottom: 15px;
+html body.cre-t-21-gendergp #page-container .cre-t-21-container {
+    z-index: 3;
 }
 
-html body.TT-157 #pro_list_header+div {
-    padding-bottom: 25px !important;
-    border: none !important;
+
+html body.cre-t-21-drop-down-not-activated  [data-step="choice-medication-step"] [data-component="pagebreak-next"] {
+    display: none !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-1 {
-    order: 1 !important;
+html body.cre-t-21-female-activated #text_329 > p {
+    display: none !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-2 {
-    order: 2 !important;
+html body.cre-t-21-female-activated #id_280 {
+    display: none !important;
+}
+html body.cre-t-21-female-activated #text_329 .cre-t-21-t-p {
+    display: block !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-3 {
-    order: 3 !important;
+html body.cre-t-21-female-activated #form-pagebreak-next_318_new {
+    display: none !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-4 {
-    order: 4 !important;
+html body.cre-t-21-female-activated  [data-step="testosterone-hormone-step"] [data-component="pagebreak-next"]  {
+    display: none !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-5 {
-    order: 5 !important;
+html body.cre-t-21-female-activated #form-pagebreak-next_318_new {
+    display: block !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-6 {
-    order: 6 !important;
+#cre-t-21-t-1 {
+    display: none ;
+}
+#form-pagebreak-next_318_new {
+    display: none;
+}
+.cre-t-21-t-p {
+    display: none;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-7 {
-    order: 7 !important;
+html body.cre-t-21-female-activated  #cre-t-21-t-1 {
+    display: block !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-8 {
-    order: 8 !important;
+
+html body.cre-t-21-female-activated.cre-t-21-tst-complete #form-pagebreak-next_318_new {
+    display: none !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-9 {
-    order: 9 !important;
+html body.cre-t-21-female-activated.cre-t-21-tst-complete [data-step="testosterone-hormone-step"] [data-component="pagebreak-next"] {
+    display: block !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-10 {
-    order: 10 !important;
+[data-step="testosterone-hormone-step"] .form-button-error + .form-button-error  {
+    display: none !important;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div .order-11 {
-    order: 11 !important;
+#cre-t-21-t-1 .form-error-message {
+    max-width: fit-content;
 }
 
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div {
-    display: flex;
-    flex-direction: column;
+html body.cre-t-21 [data-step="choice-medication-step"]  #id_306.form-line-active{
+    background-color: #fff;
 }
 
-html body.TT-157 .order-1 .pro-title span:before {
-    content: "1.";
-}
-
-html body.TT-157 .order-2 .pro-title span:before {
-    content: "2.";
-}
-
-html body.TT-157 .order-3 .pro-title span:before {
-    content: "3.";
-}
-
-html body.TT-157 .order-4 .pro-title span:before {
-    content: "4.";
-}
-
-html body.TT-157 .order-5 .pro-title span:before {
-    content: "5.";
-}
-
-html body.TT-157 .order-6 .pro-title span:before {
-    content: "6.";
-}
-
-html body.TT-157 .order-7 .pro-title span:before {
-    content: "7.";
-}
-
-html body.TT-157 .order-8 .pro-title span:before {
-    content: "8.";
-}
-
-html body.TT-157 .order-9 .pro-title span:before {
-    content: "9.";
-}
-
-html body.TT-157 .order-10 .pro-title span:before {
-    content: "10.";
-}
-
-html body.TT-157 .pro-title span:before {
-    color: #2f3033 !important;
-}
-
-html body.TT-157 .tt_filter ul li:first-child {
-    padding-left: 28px;
-    position: relative;
-}
-
-html body.TT-157.orderitem .pro-title span {
-    color: transparent;
-    font-size: 0 !important;
-    margin-right: 4px;
-}
-
-html body.TT-157 .pro-title span:before {
-    color: #2f3033 !important;
-    /* position: absolute; */
-    font-size: 16px;
-    margin-right: 4px;
-}
-
-html body.TT-157 [class*="pro-list-results-front-door"] [class*="pro-list-results-front-door"]>div>div.mh3 {
-    order: 4;
-}
-
-/* Optional: Adjust the size or behavior on mobile screens */
-@media (max-width: 768px) {
-    html body.TT-157 .tt_filter ul {
-        padding: 0 10px;
-        /* Add padding for spacing */
+@media only screen and (max-width: 600px) {
+    html body .cre-t-21-header {
+        line-height: 1.1em;
+        text-align: left;
     }
-
-    html body.TT-157 .tt_filter {
-        overflow: hidden;
-        /* Prevents the whole page from scrolling */
-    }
-
-    html body.TT-157 .tt_filter ul {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        /* Smooth scrolling on iOS */
-        scrollbar-width: thin;
-        /* Thin scrollbar for Firefox */
-    }
-
-    html body.TT-157 .tt_filter ul li {
-        flex: 0 0 auto;
-        /* Prevents shrinking */
-        margin-right: 10px;
-        /* Add spacing between items */
-    }
-
-    /* Optional: Hide scrollbar for Webkit browsers (Safari/Chrome) */
-    html body.TT-157 .tt_filter ul::-webkit-scrollbar {
-        display: none;
-    }
-
-    html body.TT-157 .tt_filter ul {
-        gap: 0px;
-        padding-left: 0;
-    }
-
-    html body.TT-157.orderitem .pro-title span {
-        margin-right: 0;
-    }
-}
+  }
