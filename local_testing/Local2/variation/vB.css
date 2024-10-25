@@ -848,3 +848,7 @@ html body.TT-153 .signal-parent .tt_Available{
 html body.TT-153 .tt_Available svg{
 color: #676d73!important;
 }
+
+html body.TT-153 .pro-cost-estimate{
+    margin-top: 5px;
+}
