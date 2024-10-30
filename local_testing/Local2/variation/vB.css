@@ -1,145 +1,86 @@
-/* banner orange */
-
-html body.cre-t-34 .cre_34_banner_section {
-    background-color: #FFB800;
-}
-
-html body.cre-t-34 .cre_34_banner_container {
-    max-width: 1366px;
-    margin: auto;
+html body [data-id="5262c93"] .elementor-button-wrapper a {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
 }
 
-html body.cre-t-34 span.cre_34_banner_text {
-    text-align: center;
-    margin: auto;
-    font-size: 15px;
+html body [data-id="5262c93"] .elementor-button-wrapper a::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #ffff;
     font-weight: 400;
-    letter-spacing: 0.96px;
-}
-
-html body.cre-t-34 span.cre_34_banner_text a {
-    color: #243033;
-    font-weight: 400;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-html body.cre-t-34 span.cre_34_banner_text a:hover {
-    color: #fff;
-}
-
-html body.cre-t-34 span.cre_34_banner_close {
     position: absolute;
-    right: 22px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    bottom: -32px;
+    left: 0;
+    right: 0;
 }
 
-html body.cre-t-34 span.cre_34_banner_close svg path {
-    transition: all 0.2s linear;
+html body [data-id="67b58b13"] .elementor-button-wrapper::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #ffff;
+    font-weight: 400;
+    position: absolute;
+    bottom: -12px;
+    left: 61px;
+    right: 0;
 }
 
-html body.cre-t-34 span.cre_34_banner_close:hover path {
-    fill: #fff;
+
+
+@media screen and (max-width: 766px) {
+    html body [data-id="67b58b13"] .elementor-button-wrapper a::after {
+        right: 0;
+    }
 }
 
 
-
-html body.cre-t-34 .cre_34_modified_form.row-fluid {
-    max-width: 1113px !important;
+html body [data-elementor-id="5354"] #ResultsContainer {
+    margin-top: 0;
 }
 
-html body.cre-t-34 .cre_34_modified_form.row-fluid .content-wrapper {
-    padding-left: 0;
-    padding-right: 0;
+html body #top-menu-nav #top-menu .TryItFreeBtn {
+    position: relative;
 }
 
-html body.cre-t-34.cre_34_hide_chat .cre_34_banner_section {
-    display: none;
-}
-
-html body.cre-t-34 .cre_34_banner_main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-left: 30px;
-}
-
-html body.cre-t-34 .cre_34_banner_new {
-    background: #27BD1A;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 10px;
-    line-height: 12px;
-    width: 36px;
-    height: 20px;
+html body #top-menu-nav #top-menu .TryItFreeBtn::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    font-weight: 400;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    font-family: Poppins, Helvetica, Arial, Lucida, sans-serif !important;
     text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-weight: 700;
+    text-transform: capitalize !important;
+    color: #ffff !important;
 }
 
-
-
-@media screen and (max-width: 510px) {
-    html body.cre-t-34 span.cre_34_banner_text {
-
-        text-align: left;
-        font-size: 14px;
-        max-width: 315px;
-    }
-
-    html body.cre-t-34 span.cre_34_banner_close {
-        right: 10px;
-    }
-
-
+html body #et_mobile_nav_menu #mobile_menu .TryItFreeBtn {
+    position: relative;
 }
 
-@media screen and (min-width:510px) and (max-width: 745px) {
-    html body.cre-t-34 span.cre_34_banner_text {
-        text-align: left;
-        max-width: 435px;
-    }
-
-    html body.cre-t-34 .cre_34_banner_main {
-        align-items: unset;
-    }
-
-    .cre_34_banner_close {
-        margin-top: 5px;
-    }
-
-    html body.cre-t-34 .cre_34_banner_new {
-        width: 55px;
-    }
+html body #et_mobile_nav_menu #mobile_menu .TryItFreeBtn::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    font-weight: 400;
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    text-align: center;
+    text-transform: capitalize !important;
+    color: #ffff !important;
 }
 
-@media screen and (max-width: 375px) {
-    html body.cre-t-34 .cre_34_banner_container {
-        justify-content: flex-start;
-        padding: 0 5px;
-    }
-
-    html body.cre-t-34 .cre_34_banner_new {
-        width: 55px;
-    }
-}
-
-html body.cre-t-34 .nav-drill {
-    margin-top: 127px;
-}
-
-html body.cre-t-34.cre_34_hide_chat .nav-drill {
-    margin-top: 85px;
+html body #et_mobile_nav_menu #mobile_menu {
+    padding-bottom: 35px;
 }

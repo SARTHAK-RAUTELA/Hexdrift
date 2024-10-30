@@ -1,269 +1,90 @@
-html body #content .cre-t-21-parent-container {
-    max-width: 370px;
-    width: 100%;
-}
-html body .cre-t-21-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 344px;
-    width: 100%;
-    margin-top: 32px;
-}
-html body .cre-t-21-header {
-    margin-bottom: 7px;
-    color: #ed4968;
-    text-align: center;
-    font-family: "Plus Jakarta Sans", Sans-serif;
-    font-style: normal;
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1em;
-    margin-bottom: 12px;
-}
-html body .cre-t-21-dropdown {
+html body [data-id="5262c93"] .elementor-button-wrapper a {
     position: relative;
-    width: 100%;
-}
-html body .cre-t-21-dropdown-input {
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    gap: 10px;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
-}
-html body .cre-t-21-dropdown-input-text {
-    color: #666;
-    font-family: inherit;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
-    align-items: center;
 }
 
-html body .cre-t-21-dropdown-option {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-}
-html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option {
-    padding: 21px 16px;
-    cursor: pointer;
-    width: 100%;
-    position: relative;
-    font-family: inherit;
-    font-size: 15px;
-    font-weight: 400;
-    color: #074a5a;
-    text-align: center;
-    font-style: normal;
-    line-height: normal;
-}
-html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option:hover {
-    background-color: #f0f0f0;
-}
-
-html body .cre-t-21-cta.cre-t-21-active {
-    cursor: pointer;
-    pointer-events: auto;
-    /* opacity: 1; */
-}
-html body .cre-t-21-cta .cre-t-21-cta-link {
-    font-family: "Plus Jakarta Sans", Sans-serif;
-    font-style: normal;
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1em;
-    color: #ffffff;
-    background-color: #ed4968;
-    border-radius: 12px 12px 12px 12px;
-    padding: 14px 36px 14px 36px;
-    transition: all 0.3s;
-    width: 100%;
-}
-
-html body .cre-t-21-content2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 21px;
-    width: 100%;
-    justify-content: flex-start;
-}
-html body .cre-t-21-content1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-html body .cre-t-21-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-html body .cre-t-21-dropdown-option-wrapper {
-    display: flex;
-    margin-top: 8px;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-html body .cre-t-21-dropdown .cre-t-21-dropdown-option .cre-t-21-dropdown-option-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s linear;
-}
-html body .cre-t-21-dropdown.cre-t-21-show .cre-t-21-dropdown-option .cre-t-21-dropdown-option-wrapper {
-    max-height: 300px;
-}
-html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option::after {
-    content: "";
+html body [data-id="5262c93"] .elementor-button-wrapper a::after {
+    content: "No Credit Card Required.";
     display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #ffff;
+    font-weight: 400;
     position: absolute;
-    width: calc(100% - 32px);
-    height: 1px;
-    background-color: #f1f1f1;
-    bottom: 0px;
+    bottom: -32px;
     left: 0;
     right: 0;
-    margin: 0 auto;
-}
-html body .cre-t-21-dropdown-option-wrapper .cre-t-21-option:last-child::after {
-    display: none;
-}
-html body .cre-t-21-cta .cre-t-21-cta-link:hover {
-    background-color: #da3455;
-    color: #ffffff;
 }
 
-/* __________________________________________________________________ */
-html body.cre-t-21-gendergp #page-container .CRE-T7-hero-container .Crestart-journey-button {
-    display: none;
+html body [data-id="67b58b13"] .elementor-button-wrapper a::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #ffff;
+    font-weight: 400;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 44%;
 }
 
-html body.cre-t-21-gendergp #page-container .cre-t-21-header {
-    font-family:
-        Open Sans,
-        Arial,
-        sans-serif;
-}
-
-html body.cre-t-21-gendergp #page-container .cre-t-21-dropdown-input {
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-html body.cre-t-21-gendergp #page-container .cre-t-21-dropdown-input-icon {
-    width: 12px;
-    height: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-html body.cre-t-21-gendergp #page-container .cre-t-21-dropdown-input-icon svg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-html body.cre-t-21-gendergp #page-container .cre-t-21-cta .cre-t-21-cta-link {
-    transition: all 0.3s !important;
-    font-size: 1.1rem !important;
-    line-height: 1em !important;
-    color: #ffffff !important;
-}
-
-html body.cre-t-21-gendergp #page-container .cre-t-21-cta .cre-t-21-cta-link::after {
-    display: none;
-}
-
-html body.cre-t-21-gendergp #page-container .cre-t-21-container {
-    z-index: 3;
-}
-
-
-html body.cre-t-21-drop-down-not-activated  [data-step="choice-medication-step"] [data-component="pagebreak-next"] {
-    display: none !important;
-}
-
-html body.cre-t-21-female-activated #text_329 > p {
-    display: none !important;
-}
-
-html body.cre-t-21-female-activated #id_280 {
-    display: none !important;
-}
-html body.cre-t-21-female-activated #text_329 .cre-t-21-t-p {
-    display: block !important;
-}
-
-html body.cre-t-21-female-activated #form-pagebreak-next_318_new {
-    display: none !important;
-}
-
-html body.cre-t-21-female-activated  [data-step="testosterone-hormone-step"] [data-component="pagebreak-next"]  {
-    display: none !important;
-}
-
-html body.cre-t-21-female-activated #form-pagebreak-next_318_new {
-    display: block !important;
-}
-
-#cre-t-21-t-1 {
-    display: none ;
-}
-#form-pagebreak-next_318_new {
-    display: none;
-}
-.cre-t-21-t-p {
-    display: none;
-}
-
-html body.cre-t-21-female-activated  #cre-t-21-t-1 {
-    display: block !important;
-}
-
-
-html body.cre-t-21-female-activated.cre-t-21-tst-complete #form-pagebreak-next_318_new {
-    display: none !important;
-}
-
-html body.cre-t-21-female-activated.cre-t-21-tst-complete [data-step="testosterone-hormone-step"] [data-component="pagebreak-next"] {
-    display: block !important;
-}
-
-[data-step="testosterone-hormone-step"] .form-button-error + .form-button-error  {
-    display: none !important;
-}
-
-#cre-t-21-t-1 .form-error-message {
-    max-width: fit-content;
-}
-
-html body.cre-t-21 [data-step="choice-medication-step"]  #id_306.form-line-active{
-    background-color: #fff;
-}
-
-@media only screen and (max-width: 600px) {
-    html body .cre-t-21-header {
-        line-height: 1.1em;
-        text-align: left;
-    }
+html body [data-id="67b58b13"] .elementor-button-wrapper a:hover::after {
+    bottom: -28px;
+    left: 0;
+    right: 0;
   }
+
+@media screen and (max-width: 766px) {
+    html body [data-id="67b58b13"] .elementor-button-wrapper a::after {
+        right: 0;
+    }
+}
+
+
+html body [data-elementor-id="5354"] #ResultsContainer {
+    margin-top: 0;
+}
+
+html body #top-menu-nav #top-menu .TryItFreeBtn {
+    position: relative;
+}
+
+html body #top-menu-nav #top-menu .TryItFreeBtn::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    font-weight: 400;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    font-family: Poppins, Helvetica, Arial, Lucida, sans-serif !important;
+    text-align: center;
+    text-transform: capitalize !important;
+    color: #ffff !important;
+}
+
+html body #et_mobile_nav_menu #mobile_menu .TryItFreeBtn {
+    position: relative;
+}
+
+html body #et_mobile_nav_menu #mobile_menu .TryItFreeBtn::after {
+    content: "No Credit Card Required.";
+    display: block;
+    font-size: 12px !important;
+    line-height: 20px !important;
+    font-weight: 400;
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    text-align: center;
+    text-transform: capitalize !important;
+    color: #ffff !important;
+}
+
+html body #et_mobile_nav_menu #mobile_menu {
+    padding-bottom: 35px;
+}
