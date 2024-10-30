@@ -28,13 +28,13 @@ html body [data-id="67b58b13"] .elementor-button-wrapper::after {
     bottom: -12px;
     left: 61px;
     right: 0;
-}
+}   
 
 
 
 @media screen and (max-width: 766px) {
-    html body [data-id="67b58b13"] .elementor-button-wrapper a::after {
-        right: 0;
+    html body [data-id="67b58b13"] .elementor-button-wrapper::after {
+       left: 0  ;
     }
 }
 
