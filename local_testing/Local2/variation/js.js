@@ -842,7 +842,7 @@ if (!window.statuscaketest30) {
         </div>
         <div class="TabContent">
         <div class="Product-image">
-        <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007477/send-img.jpg">
+        <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007477/updated-send.png">
         </div>
         <div class="product-section">
         <ul>
