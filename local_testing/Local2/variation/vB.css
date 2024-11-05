@@ -1,0 +1,37 @@
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid="price_Lock_timer"] {
+    line-height: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding-right: 24px;
+    color: #FF0000;
+    font-size: 12px;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid="price_Lock_timer"] span {
+    font-weight: 700;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid*="product_card"]>div:nth-child(2) {
+    position: relative;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [class*=MobileStickyFooter_footerMainContentFlexContainer] {
+    position: relative;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 .mobile_timer_container {
+    position: absolute;
+    bottom: -10px;
+    color: #FF0000;
+    font-size: 12px;
+    display: block !important;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 #stickyFooter>div {
+    height: 120px;
+}
+
+html[lang="en"] body[data-path*="/cart"].travelShift-T45 [class*="CartProductOverview_discount-and-expire-timer-container"] [class*=CartProductOverview_discount-information]{
+margin-top: 45px;
+}
