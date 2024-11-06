@@ -1,37 +1,53 @@
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid="price_Lock_timer"] {
-    line-height: 20px;
+html body.TravelShift_T54 #dropdownContainer-trips-activities-idAutocomplete a svg {
+    display: none;
+}
+
+html body.TravelShift_T54 #dropdownContainer-trips-activities-idAutocomplete a svg+img {
     position: absolute;
-    bottom: 0px;
-    right: 0px;
-    padding-right: 24px;
-    color: #FF0000;
-    font-size: 12px;
-}
+    left: 15px;
+    width: 24px;
+    height: 24px;
 
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid="price_Lock_timer"] span {
-    font-weight: 700;
 }
+@media(min-width:961px) {
 
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 [data-crid*="product_card"]>div:nth-child(2) {
-    position: relative;
-}
+    html body.TravelShift_T54 .Icon_T54 {
+       position: absolute;
+        top: 46%;
+        z-index: 100;
+        margin: -9px 12px;
+        width: 18px;
+        height: 18px;
+        pointer-events: none;
+    }
 
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 [class*=MobileStickyFooter_footerMainContentFlexContainer] {
-    position: relative;
-}
+    html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span>svg {
+        display: none;
+    }
 
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 .mobile_timer_container {
-    position: absolute;
-    bottom: -10px;
-    color: #FF0000;
-    font-size: 12px;
+    html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span.open-test>svg {
+        display: block !important;
+    }
+html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span .Icon_T54{
     display: block !important;
 }
-
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 #stickyFooter>div {
-    height: 120px;
+html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span .destination54.Icon_T54{
+    display: none !important;
 }
+    html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span.open-test .Icon_T54 {
+        display: none !important;
+    }
+}
+@media(max-width:960px) {
+    html body.TravelShift_T54 #dropdownContainer-autocompleteAutocomplete a svg {
+        display: none;
+    }
 
-html[lang="en"] body[data-path*="/cart"].travelShift-T45 [class*="CartProductOverview_discount-and-expire-timer-container"] [class*=CartProductOverview_discount-information]{
-margin-top: 45px;
+    html body.TravelShift_T54 #dropdownContainer-autocompleteAutocomplete a svg+img {
+        position: absolute;
+        left: 15px;
+        width: 24px;
+        height: 24px;
+
+    }
 }
