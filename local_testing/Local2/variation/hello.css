@@ -1,0 +1,99 @@
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child>ul,
+html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:first-child>.form-title+div+div,
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child>ul,
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child>ul+div:not([class]),
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .form-title+div {
+    display: none;
+}
+
+html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:first-child>.form-title {
+    color: #000000;
+    margin-top: 20px;
+}
+
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child {
+    display: flex;
+    align-items: center;
+}
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_plan_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_banner_box_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0px;
+    margin-top: 25px;
+}
+
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_plan_box {
+    border: 1px solid #0B3D8F;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 12px;
+    gap: 7px;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_plan_new {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+    color: #000000;
+}
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164-icon {
+    max-width: 34px;
+}
+
+html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164-para {
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 163px;
+    margin: 0 auto;
+    text-align: center;
+    color: #0B3D8F;
+    letter-spacing: .3px;
+}
+
+html body[data-path="/a/welcome"].cre-t-164 .cre-t-164-plan-text-head {
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+@media screen and (max-width: 768px) {
+    html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_banner_box_wrapper {
+        margin: 25px 0px;
+    }
+
+    html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164-para {
+        letter-spacing: unset;
+    }
+}
+
+
+html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:last-child div {
+    justify-content: center;
+    text-align: center;
+    margin: 25px 0 15px 0;
+}
+
+html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:last-child youtube-video {
+    width: 100%;
+    margin: auto;
+}
