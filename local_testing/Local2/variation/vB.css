@@ -1,53 +1,129 @@
-html body.TravelShift_T54 #dropdownContainer-trips-activities-idAutocomplete a svg {
-    display: none;
+/* src/conversion-rate-experts/GenderGp/GenderGP-Test20/variation1/styles/style.scss */
+html body.CRE-20 ul[data-step=current-medication-step] [data-type=control_dropdown] {
+	display: none;
 }
 
-html body.TravelShift_T54 #dropdownContainer-trips-activities-idAutocomplete a svg+img {
-    position: absolute;
-    left: 15px;
-    width: 24px;
-    height: 24px;
-
+html body.CRE-20 ul[data-step=current-medication-step] li[data-type=control_text]:first-of-type {
+	display: none;
 }
-@media(min-width:961px) {
 
-    html body.TravelShift_T54 .Icon_T54 {
-       position: absolute;
-        top: 50%;
-        z-index: 100;
-        margin: -9px 12px;
-        width: 18px;
-        height: 18px;
-        pointer-events: none;
-    }
-
-    html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span>svg {
-        display: none;
-    }
-
-    html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span.open-test>svg {
-        display: block !important;
-    }
-html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span .Icon_T54{
-    display: block !important;
+html body.CRE-20 ul[data-step=current-medication-step] li {
+	display: none;
 }
-html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span .destination54.Icon_T54{
-    display: none !important;
-}
-    html body.TravelShift_T54 [data-crid="Travel_services_option"]:first-child span.open-test .Icon_T54 {
-        display: none !important;
-    }
-}
-@media(max-width:960px) {
-    html body.TravelShift_T54 #dropdownContainer-autocompleteAutocomplete a svg {
-        display: none;
-    }
 
-    html body.TravelShift_T54 #dropdownContainer-autocompleteAutocomplete a svg+img {
-        position: absolute;
-        left: 15px;
-        width: 24px;
-        height: 24px;
-
-    }
+html body.CRE-20 [data-step="current-medication-step"] .form-section.page-section {
+	display: flex;
+	flex-direction: col;
 }
+
+html body.CRE-20 .cre-20-form .form-single-column {
+	display: flex;
+	flex-direction: column;
+}
+
+html body.CRE-20 .cre-20-form .form-single-column .form-radio-item {
+	cursor: pointer;
+	font-size: 17px;
+}
+
+html body.CRE-20 .cre-20-form .form-single-column .form-radio-item input {
+	width: 16px;
+	height: 15px;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20YesSelected [data-type=control_dropdown] {
+	display: block;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20YesSelected li[data-type=control_text]:first-of-type {
+	display: block;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20YesSelected [data-type=control_radio] {
+	display: block;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20YesSelected .cre-20-form {
+	display: none;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20NoSelected [data-type=control_radio] {
+	display: block;
+	margin-bottom: 70px;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20NoSelected .cre-20-form {
+	display: none;
+}
+
+html body.CRE-20 .cre-20-form-heading {
+	color: #333333;
+	line-height: 24px;
+	font-weight: 700;
+	margin-bottom: 35px;
+	font-size: 1.17em;
+}
+
+html body.CRE-20 .cre-20-form {
+	margin-bottom: 90px;
+}
+
+html body.CRE-20 ul[data-step=current-medication-step].cre20NoSelected [data-type=control_radio]>label {
+	color: #333333;
+	font-weight: 700;
+	line-height: 18px;
+	margin-bottom: 30px;
+}
+
+html body.CRE-20 .cre-20-stepParsed[data-step=current-medication-step] .cre-t-20-formButons {
+	display: none;
+}
+
+html body.CRE-20 .cre-20-stepParsed[data-step=current-medication-step] .form-input-wide {
+	display: block !important;
+}
+
+html body.CRE-20 [data-step=current-medication-step] .cre-dummyBack+button {
+	display: none;
+}
+
+html body.CRE-20 ul[data-step="current-medication-step"] {
+	flex-direction: column;
+}
+
+html body.CRE-20 .cre-t-20-formButons {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+html body.CRE-20 .form-radio-item.cre-20-yes {
+	margin-bottom: 20px !important;
+}
+
+html body.CRE-20 .form-all>ul.form-section.page-section {
+	padding: 40px 30px;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+	.cre-20-form input {
+		appearance: radio !important;
+	}
+}
+
+/* 
+html body.CRE-20 [data-step=current-medication-step] .cre-dummyBack,
+html body.CRE-20 .cre-t-20-formButons .cre-dummy-back-button {
+	color: #000;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration-line: underline;
+	border-color: unset;
+	background-color: transparent;
+	border: 0;
+	padding: 0 5px 0px 0;
+	min-width: auto;
+	width: auto;
+} */
