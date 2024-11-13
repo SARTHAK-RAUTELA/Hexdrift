@@ -353,7 +353,7 @@
                 // Navigate to the desired element inside the card
                 const targetElement = card.querySelector('div[class*="pro-list-result_profileInfoContainer"]>div .hover-blue+div>[class*="hideAtOrBelow"]:first-child');
                 if (targetElement) {
-                    console.log('foundelement')
+                    // console.log('foundelement')
                     // Traverse to the parent of the parent div
                     const grandParentDiv = targetElement.closest('div').parentElement;
                     if (grandParentDiv) {
@@ -427,7 +427,7 @@
                 });
             }
             var pills = setInterval(function () {
-                console.log('test run')
+                // console.log('test run')
                 changetextforpill();
             }, 50);
             setTimeout(function () {
