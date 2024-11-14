@@ -1,99 +1,87 @@
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child>ul,
-html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:first-child>.form-title+div+div,
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child>ul,
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child>ul+div:not([class]),
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .form-title+div {
-    display: none;
-}
-
-html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:first-child>.form-title {
-    color: #000000;
-    margin-top: 20px;
-}
-
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child {
-    display: flex;
-    align-items: center;
-}
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_plan_main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_banner_box_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 40px 0px;
-    margin-top: 25px;
-}
-
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_plan_box {
-    border: 1px solid #0B3D8F;
-    display: flex;
-    flex-direction: column;
-    padding: 16px 12px;
-    gap: 7px;
-    align-items: center;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_plan_new {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 30px;
-    color: #000000;
-}
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164-icon {
-    max-width: 34px;
-}
-
-html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164-para {
-    font-size: 14px;
-    font-weight: 600;
-    max-width: 163px;
-    margin: 0 auto;
-    text-align: center;
-    color: #0B3D8F;
-    letter-spacing: .3px;
-}
-
-html body[data-path="/a/welcome"].cre-t-164 .cre-t-164-plan-text-head {
-    text-align: center;
-    color: #000;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-
-@media screen and (max-width: 768px) {
-    html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164_banner_box_wrapper {
-        margin: 25px 0px;
-    }
-
-    html body[data-path="/a/welcome"].cre-t-164 .headerless>section.flex-form:first-child .cre-t-164-para {
-        letter-spacing: unset;
-    }
-}
-
-
-html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:last-child div {
-    justify-content: center;
-    text-align: center;
-    margin: 25px 0 15px 0;
-}
-
-html body[data-path="/a/welcome"] .headerless>section.stack-block.flex-form:last-child youtube-video {
+html body.tt-160 tt-160-socialproof .tt-160-socialProof-container {
+    max-width: 512px;
     width: 100%;
-    margin: auto;
+}
+
+html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+    display: flex;
+    gap: 10px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 1);
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.tt-160-socialProof-wrapper .tt-160-socialProof-item {
+    max-width: 88px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 66%;
+    color: rgba(103, 109, 115, 1);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tt-160-socialProof-wrapper .tt-160-socialProof-item img {
+    width: 100%;
+    height: 100%;
+}
+
+html body.tt-160 [class*='hero-header_filters']>div>div+tt-160-socialProof {
+    max-width: 512px;
+}
+
+
+/* showing and hiding the mobile social proof-------- */
+@media screen and (max-width: 700px) {
+    html body.tt-160 [class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight']+div h1+div+tt-160-socialProof {
+        display: block !important;
+    }
+
+    html body.tt-160 [class*='hero-header_filters']>div>div+tt-160-socialProof {
+        display: none !important;
+    }
+
+    html body tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+        padding: 12px;
+    }
+
+
+    html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
+        max-width: 80px !important;
+    }
+
+    html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
+        max-width: 66px !important;
+    }
+
+    .tt-160-socialProof-wrapper .tt-160-socialProof-item {
+        max-width: 71px;
+    }
+
+}
+
+/* showing and hiding the desktop social proof------  */
+@media screen and (min-width: 700px) {
+    html body.tt-160 [class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight']+div h1+div+tt-160-socialProof {
+        display: none !important;
+    }
+
+    html body.tt-160 [class*='hero-header_filters']>div>div+tt-160-socialProof {
+        display: block !important;
+    }
+
+}
+
+html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
+    max-width: 110px !important;
+}
+
+html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
+    max-width: 70px !important;
 }
