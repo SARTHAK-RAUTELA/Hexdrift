@@ -2,7 +2,7 @@
     try {
       /* main variables */
       var debug = 1;
-      var variation_name = "test123";
+      var variation_name = "tt-160";
   
       function waitForElement(selector, trigger) {
             var interval = setInterval(function () {
@@ -44,6 +44,7 @@
       </tt-160-socialProof>`
   
       function init(){
+        document.querySelector("body").classList.add(variation_name);
           waitForElement("[class*='hero-header_filters']>div>div",function(){
               if(!document.querySelector("[class*='hero-header_filters']>div>div + tt-160-socialProof")){
                   document.querySelector("[class*='hero-header_filters']>div>div").insertAdjacentHTML("afterend",ttSocialProof)
