@@ -602,7 +602,7 @@ html body.TT-159 .bg-white [class*="homepage-hero_stickyHeader"] {
 
 @media screen and (min-width: 1920px) and (max-width: 2048px) {
 	html body [class*="homepage-hero_heavy"] {
-		margin-bottom: 18px !important;
+		margin-bottom: 30px !important;
 	}
 
 	html body [class*="homepage-hero_mainSection"] {
