@@ -382,7 +382,8 @@ html body.TT-159 .bg-white [class*="homepage-hero_mWeb"] > div:first-child{
   justify-content: center;
 }
 html body.TT-159 [class*="homepage-hero_navButton"] img {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 480px;
 }
 
 html body.TT-159 [class*="homepage-hero_navButton"]{
@@ -411,22 +412,28 @@ html body.TT-159 [class*="homepage-hero_navButton"]{
 }
 @media screen and (max-width: 1366px) and (min-width: 900px) {
   html body.TT-159 [class*="homepage-hero_navButton"] img{
-    max-width: 500px;
+    max-width: 380px;
   }
   html body.TT-159 [class*="homepage-hero_navButton"]{
     text-align: center;
   }
 }
 
-@media screen and (min-width:1700px){
+/* @media screen and (min-width:1700px){
   html body.TT-159 [class*="homepage-hero_root"]{
   height: 800px;
 }
-}
+} */
 
 
 @media screen and (max-width: 1536px) and (min-width: 1400px) {
   html body.TT-159 [class*="homepage-hero_navButton"] img{
     max-width: 600px;
   }
+}
+
+@media screen and (max-width: 1396px) and (min-width: 900px) {
+  html body [class*="homepage-hero_heavy"] {
+    font-size: 40px !important;
+}
 }
