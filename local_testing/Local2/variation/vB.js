@@ -55,16 +55,29 @@
         }
       })
 
-      waitForElement("[class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight'] +div h1+div", function () {
-        if (!document.querySelector("[class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight'] +div h1+div + tt-160-socialProof")) {
-          document.querySelector("[class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight'] +div h1+div").insertAdjacentHTML("afterend", ttSocialProof)
+      // waitForElement("[class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight'] +div h1+div", function () {
+      //   if (!document.querySelector("[class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight'] +div h1+div + tt-160-socialProof")) {
+      //     document.querySelector("[class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight'] +div h1+div").insertAdjacentHTML("afterend", ttSocialProof)
+      //   }
+      // })
+
+      waitForElement("[class*='hero-header_heroContainer'] [class*='Wrap_root']", function () {
+        if (!document.querySelector("[class*='hero-header_heroContainer'] [class*='Wrap_root'] + tt-160-socialProof")) {
+          document.querySelector("[class*='hero-header_heroContainer'] [class*='Wrap_root']").insertAdjacentHTML("afterend", ttSocialProof)
         }
       })
 
-      waitForElement('[class*="hero-header_flexHeaderContentTitle"]+div', function () {
+      // waitForElement('[class*="hero-header_flexHeaderContentTitle"]+div', function () {
+      //   console.log()
+      //   if (!document.querySelector('[class*="hero-header_flexHeaderContentTitle"]+div +tt-160-socialProof')) {
+      //     document.querySelector('[class*="hero-header_flexHeaderContentTitle"]+div').insertAdjacentHTML("afterend", ttSocialProof)
+      //   }
+      // })
+
+      waitForElement('[class*="hero-header_heroContainer"] [class*="hero-header_heroHeaderExtendedHeight"]+div', function () {
         console.log()
-        if (!document.querySelector('[class*="hero-header_flexHeaderContentTitle"]+div +tt-160-socialProof')) {
-          document.querySelector('[class*="hero-header_flexHeaderContentTitle"]+div').insertAdjacentHTML("afterend", ttSocialProof)
+        if (!document.querySelector('[class*="hero-header_heroContainer"] [class*="hero-header_heroHeaderExtendedHeight"]+div +tt-160-socialProof')) {
+          document.querySelector('[class*="hero-header_heroContainer"] [class*="hero-header_heroHeaderExtendedHeight"]+div').insertAdjacentHTML("afterend", ttSocialProof)
         }
       })
     }
