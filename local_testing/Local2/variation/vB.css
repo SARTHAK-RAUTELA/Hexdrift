@@ -1,35 +1,63 @@
-html body.tt-160 tt-160-socialproof .tt-160-socialProof-container {
-  max-width: 512px;
+html body.tt-160 tt-160-socialproof {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  max-width: 946px;
+  display: block;
+  padding: 40px 0px;
+  padding-bottom: 0;
 }
+
+html body.TT-153.tt-160 tt-160-socialproof {
+  max-width: 1050px;
+}
+
+html body.TT-153.tt-160 tt-160-socialproof+div {
+  max-width: 1020px;
+}
+
+html body.tt-160 tt-160-socialproof .tt-160-socialProof-container {
+  max-width: 600px;
+}
+
+html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-item-heading {
+  padding-left: 12px;
+  padding-bottom: 12px;
+  color: #676D73;
+  font-weight: 700;
+}
+
 
 html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
   display: flex;
   gap: 10px;
-  padding: 12px 20px;
+  padding: 12px;
   background: rgba(255, 255, 255, 1);
-  margin-top: 12px;
+  /* margin-top: 10px; */
   border-radius: 5px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  /* height: 50px; */
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.15);
+  height: 40px;
+  padding-top: 0;
+  padding-left: 0 !important;
 }
 
-.tt-160-socialProof-wrapper .tt-160-socialProof-item {
-  max-width: 88px;
+html body.TT-153.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+  padding-left: 12px !important;
+}
+
+html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item {
+  max-width: 100px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 66%;
+  /* height: 70%; */
   color: rgba(103, 109, 115, 1);
-  font-size: 14px;
-  font-weight: bold;
-  height: 16px;
+  font-weight: 500;
 }
 
-.tt-160-socialProof-wrapper .tt-160-socialProof-item img {
+html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item img {
   width: 100%;
   height: 100%;
 }
@@ -41,6 +69,7 @@ html body.tt-160 [class*='hero-header_filters']>div>div+tt-160-socialProof {
 
 /* showing and hiding the mobile social proof-------- */
 @media screen and (max-width: 700px) {
+
   html body.tt-160 [class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight']+div h1+div+tt-160-socialProof {
     display: block !important;
   }
@@ -49,139 +78,132 @@ html body.tt-160 [class*='hero-header_filters']>div>div+tt-160-socialProof {
     display: none !important;
   }
 
-  html body tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
-    padding: 12px;
-  }
-
-
-  html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item {
+    height: 16px !important;
     max-width: 80px !important;
   }
 
-  html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
-    max-width: 66px !important;
+  html body.tt-160 tt-160-socialproof {
+    padding: 5px 18px 8px !important;
   }
 
-  .tt-160-socialProof-wrapper .tt-160-socialProof-item {
-    max-width: 71px;
+  /* html body.TT-153.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+		padding: 0 !important;
+	} */
+
+  html body.tt-160 tt-160-socialproof+div[class*="Wrap_root"]>div {
+    margin-top: 5px !important;
   }
 
-  .tt-160-socialProof-wrapper .tt-160-socialProof-item:first-child {
-    max-width: 100px !important;
-    width: max-content;
-  }
-
-  .relative>[class*='hero-header_heroHeaderExtendedHeight'] {
-    min-height: 230px !important;
-  }
-
-}
-
-html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
-  max-width: 70px !important;
-  width: 100%;
 }
 
 /* showing and hiding the desktop social proof------  */
 @media screen and (min-width: 700px) {
 
-  html body.tt-160 [class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight']+div h1+div+tt-160-socialProof,
-  [class*="hero-header_heroContainer"] [class*="hero-header_heroHeaderExtendedHeight"]+div+tt-160-socialProof,
-  [class*='hero-header_heroContainer'] [class*='Wrap_root']+tt-160-socialProof {
+  html body.tt-160 [class*='hero-header_heroContainer'] [class*='hero-header_heroHeaderHeight']+div h1+div+tt-160-socialProof {
     display: none !important;
   }
 
   html body.tt-160 [class*='hero-header_filters']>div>div+tt-160-socialProof {
     display: block !important;
   }
+ 
 
-  html body .tt-160-socialProof-wrapper .tt-160-socialProof-item {
-    max-height: 16px !important;
+}
+
+@media screen and (max-width:370px) {
+
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item {
+    max-width: 85px;
   }
 
 }
 
-/* html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
-  max-width: 110px !important;
+@media screen and (min-width:500px) {
+
+  html body.tt-160 .tt-160-socialProof-item-heading {
+    display: none !important;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+
+  html body.tt-160 .tt-160-socialProof-item-heading {
+    display: block !important;
+  }
+
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:first-child {
+    display: none;
+  }
+}
+
+/* @media screen and (min-width:700px){ */
+html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
+  max-width: 120px !important;
+  height: 18px;
 }
 
 html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
-  max-width: 70px !important;
-} */
-
-@media screen and (max-width:420px) {
-  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
-    padding: 8px 16px !important;
-  }
-
-  html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:first-child {
-    font-size: 12px;
-  }
-
-  html body .tt-160-socialProof-wrapper .tt-160-socialProof-item {
-    height: 14px !important;
-  }
-
-  html body .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
-    max-width: 68px !important;
-  }
+  max-width: 90px !important;
 }
 
-@media screen and (max-width:395px) {
-  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(2) {
-    max-width: 63px !important;
+/* } */
 
-  }
-
-  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
-    max-width: 70px !important;
-    height: 13px !important;
-
-
-  }
-
-  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(4) {
-    max-width: 60px !important;
-
-  }
-
-  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
-    justify-content: space-between !important;
-  }
-
-
-}
-
-
-@media screen and (max-width:475px) {
-  html body .relative>[class*='hero-header_heroHeaderExtendedHeight'] {
-    min-height: 265px !important;
-  }
-}
-
-@media screen and (max-width:700px) {
-  html body tt-160-socialproof {
+@media screen and (max-width:1010px) {
+  html body.tt-160 tt-160-socialproof {
     padding-left: 32px;
-    padding-right: 32px;
-    justify-content: left;
-    display: flex;
   }
 
-  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container {
-    max-width: 512px;
-    width: 100%;
+  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-item-heading {
+    padding-left: 0 !important;
+  }
+
+  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+    padding-left: 0 !important;
   }
 }
 
 @media screen and (max-width:482px) {
-  html body tt-160-socialproof {
+  html body.tt-160 tt-160-socialproof {
     padding-left: 16px;
-    padding-right: 16px;
   }
 }
 
-@media screen and (max-width:375px) {
-  html body.tt-160 h1[class*="hero-header_flexHeaderContentTitle"]{
-    font-size: 23px !important;
+
+
+
+
+@media screen and (max-width:500px) {
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
+    max-width: 72px !important;
+    height: 18px !important;
   }
+
+  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+    padding-left: 10px !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 699px) {
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item {
+    font-size: 14px;
+    max-width: 84px !important;
+  }
+
+  html body.tt-160 tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper {
+    justify-content: flex-start;
+    gap: 38px;
+    padding-left: 3% !important;
+}
+
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3) {
+    max-width: 100px !important;
+  }
+
+  html body.tt-160 .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child {
+    max-width: 70px !important;
+  }
+
+
 }
