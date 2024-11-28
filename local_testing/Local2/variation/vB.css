@@ -222,19 +222,19 @@ html body.tt-160 tt-160-socialproof .tt-160-socialProof-container {
   
   @media screen and (max-width:460px) and (min-width:361px){
 	html body tt-160-socialproof .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(2){
-	  max-width: 63px !important;
-	  height: 14px !important;
+	  max-width: 55px !important;
+	  height: 10px !important;
 	}
   
 	html body tt-160-socialproof .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3){
-	  max-width: 82px !important;
-	  height: 12px !important;
+	  max-width: 66px !important;
+	  height: 9px !important;
 	}
   
   
 	html body tt-160-socialproof .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child{
-	  max-width: 55px !important;
-	  height: 14px !important;
+	  max-width: 45px !important;
+	  height: 12px !important;
 	}
   
   
@@ -242,18 +242,18 @@ html body.tt-160 tt-160-socialproof .tt-160-socialProof-container {
   
   @media screen and (max-width:375px){
 	html body tt-160-socialproof .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(2){
-		max-width: 53px !important;
-        height: 11px !important;
+		max-width: 52px !important;
+        height: 10px !important;
 	}
   
 	html body tt-160-socialproof .tt-160-socialProof-wrapper .tt-160-socialProof-item:nth-child(3){
-		max-width: 72px !important;
-        height: 11px !important;
+		max-width: 67px !important;
+        height: 8.8px !important;
 	}
   
 	html body tt-160-socialproof .tt-160-socialProof-wrapper .tt-160-socialProof-item:last-child{
-		max-width: 42px !important;
-        height: 12px !important;
+		max-width: 44px !important;
+        height: 11px !important;
 	}
 	html body tt-160-socialproof .tt-160-socialProof-container .tt-160-socialProof-wrapper{
 	  padding: 10px 20px !important;
