@@ -704,3 +704,9 @@ html body.TT-159 .bg-white [class*="homepage-hero_stickyHeader"] {
         padding-top: 1% !important;
     }
 }
+
+@media screen and (min-width: 1400px) and (max-width: 1707px) and (min-height: 1250px) {
+    html body [class*="homepage-hero_mainSection"] {
+        padding-top: 17% !important;
+    }
+}
