@@ -104,9 +104,9 @@ html body.SeaWorld_T221 .filter-wrapper strong {
 }
 
 html body.SeaWorld_T221 .filter-container .full-width-callout__title {
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 50px;
     text-align: left;
     font-family: "Poppins Semibold", sans-serif;
 }
@@ -116,9 +116,7 @@ html body.SeaWorld_T221 #parksSection {
     font-weight: 400;
 }
 
-html body.SeaWorld_T221 .filter-container.site-container .full-width-callout {
-    border: none !important;
-}
+
 
 html body.SeaWorld_T221 .heading_205 {
     font-size: 26px;
@@ -147,7 +145,7 @@ html body.SeaWorld_T221 .filter-container.invalidPark .filter-wrapper {
 }
 
 html body.SeaWorld_T221 .filter-container.invalidPark .full-width-callout {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 /* html body.SeaWorld_T221 #product-catalog-container-[data-columns="three"] {
@@ -272,7 +270,8 @@ html body.SeaWorld_T221 .product-tiles .product-placement-card__wrapper:after {
 
 @media (min-width: 1024px) {
     html body.SeaWorld_T221 .filter-wrapper strong {
-        font-size: 16px;}
+        font-size: 16px;
+    }
 
     html body.SeaWorld_T221 .filter-container .product-placement-card__promo-label {
         max-width: 100%;
@@ -329,7 +328,7 @@ html body.SeaWorld_T221 .product-tiles .product-placement-card__wrapper:after {
 
     html body.SeaWorld_T221 .filter-container .full-width-callout {
         padding: 0px;
-        padding-bottom: 42px;
+        padding-bottom: 50px;
     }
 }
 
@@ -339,7 +338,7 @@ html body.SeaWorld_T221 .product-tiles .product-placement-card__wrapper:after {
         margin-top: 10px;
     }
 
-   
+
     html body.SeaWorld_T221 .btn-group button {
         max-width: 145px;
         min-width: fit-content;
@@ -428,12 +427,7 @@ html body.SeaWorld_T221 .product-tiles .product-placement-card__wrapper:after {
     }
 
 
-    html body.SeaWorld_T221 .filter-container .product-placement-card__wrapper {
-        min-width: 260px;
-        height: auto;
-        max-width: 350px;
-        width: 100%;
-    }
+   
 
     html body.SeaWorld_T221 .filter-container+.product-catalog-container {
         margin-top: 20px;
@@ -535,3 +529,30 @@ html body.SeaWorld_T221 .product-tiles .product-placement-card__wrapper:after {
         width: 100%;
     }
 }
+
+@media (min-width: 1025px) {
+html body.SeaWorld_T221 .filter-container.site-container .full-width-callout {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 1px solid #cdcfcf;
+    border-radius: 0px;
+}}
+
+@media (min-width: 425px) and (max-width: 1024px) {
+    html body.SeaWorld_T221 .filter-container .product-placement-card__wrapper {
+        min-width: 260px;
+        height: auto;
+        max-width: 372px;
+        width: 100%;
+    }
+  }
+
+@media (min-width: 390px) and (max-width: 425px) {
+    html body.SeaWorld_T221 .filter-container .product-placement-card__wrapper {
+        min-width: 260px;
+        height: auto;
+        max-width: 340px;
+        width: 100%;
+    }
+  }
