@@ -1,539 +1,200 @@
-//Cro Mode (QA Test cookie)
-(function () {
-
-    // Utility Functions
-    function setCookie(name, value, options = {}) {
-        let {
-            duration,
-            domain,
-            sameSite = 'Lax'
-        } = options;
-        domain = domain || window.location.hostname.split('.').slice(-2).join('.');
-        let expires = '';
-        if (duration) {
-            let date = new Date();
-            date.setTime(date.getTime() + (duration * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = `${name}=${value}; Path=/; Domain=${domain}; SameSite=${sameSite}${expires}`;
-    }
-
-    function getCookie(name) {
-        let nameEQ = name + "=";
-        let ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    // Extract QA mode logic
-    function enableQAMode(mode) {
-        if (mode === 'qa') {
-            console.log(`CRO Mode enabled: ${mode}`);
-            setCookie('cro_mode', mode, {
-                duration: 1
-            });
-        } else {
-            //console.log('CRO Mode disabled');
-            setCookie('cro_mode', '', {
-                duration: -1
-            });
-        }
-    }
-
-    // Initialize CRO Mode
-    function initCROMode() {
-        const urlParams = new URLSearchParams(window.location.search);
-        let mode = urlParams.get('cro_mode') || getCookie('cro_mode');
-        if (mode === 'qa') {
-            enableQAMode(mode);
-            console.log("QA Mode Active");
-            // Place any QA mode specific logic here
-        } else {
-            enableQAMode('');
-        }
-    }
-
-    initCROMode();
-})();
 (function () {
     try {
         /* main variables */
-        var debug = 1;
-        var variation_name = "customgoals-SEA-205";
-
-        /* helper library */
-        var _$;
-        !(function (factory) {
-            _$ = factory();
-        })(function () {
-            var bm = function (s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+        var debug = 0;
+        var variation_name = "TT-159";
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
                 }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function (n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function (fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function () {
-                    var items = [];
-                    for (let index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function (v) {
-                    var a = v.split(" ");
-                    return this.each(function (i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                waitForElement: function (
-                    selector,
-                    trigger,
-                    delayInterval,
-                    delayTimeout
-                ) {
-                    var interval = setInterval(function () {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger();
-                        }
-                    }, delayInterval);
-                    setTimeout(function () {
-                        clearInterval(interval);
-                    }, delayTimeout);
-                },
-                live: function (selector, event, callback, context) {
-                    /****Helper Functions****/
-                    // helper for enabling IE 8 event bindings
-                    function addEvent(el, type, handler) {
-                        if (el.attachEvent) el.attachEvent("on" + type, handler);
-                        else el.addEventListener(type, handler);
-                    }
-                    // matches polyfill
-                    this &&
-                        this.Element &&
-                        (function (ElementPrototype) {
-                            ElementPrototype.matches =
-                                ElementPrototype.matches ||
-                                ElementPrototype.matchesSelector ||
-                                ElementPrototype.webkitMatchesSelector ||
-                                ElementPrototype.msMatchesSelector ||
-                                function (selector) {
-                                    var node = this,
-                                        nodes = (
-                                            node.parentNode || node.document
-                                        ).querySelectorAll(selector),
-                                        i = -1;
-                                    while (nodes[++i] && nodes[i] != node);
-                                    return !!nodes[i];
-                                };
-                        })(Element.prototype);
-                    // live binding helper using matchesSelector
-                    function live(selector, event, callback, context) {
-                        addEvent(context || document, event, function (e) {
-                            var found,
-                                el = e.target || e.srcElement;
-                            while (
-                                el &&
-                                el.matches &&
-                                el !== context &&
-                                !(found = el.matches(selector))
-                            )
-                                el = el.parentElement;
-                            if (found) callback.call(el, e);
-                        });
-                    }
-                    live(selector, event, callback, context);
-                },
-            };
-            return function (selector) {
-                return new bm(selector);
-            };
-        });
-
-        var helper = _$();
-
-        function DataLayerHelper(dataLayer, callback, useParent) {
-            this.dataLayer = dataLayer;
-            this.callback = callback;
-            this.data = {};
-            this.isProcessing = false;
-
-            var self = this;
-
-            var processQueue = function (args) {
-                // Check if args is an instance of the arguments object
-                if (typeof args === 'object' && 'length' in args) {
-                    // Convert to an array
-                    args = Array.prototype.slice.call(args);
-                } else if (!Array.isArray(args)) {
-                    console.error("Expected an array, but got:", args);
-                    args = [args]; // Wrap in an array if not
-                }
-
-                // Proceed with processing the queue
-                args.forEach(function (item) {
-                    if (Array.isArray(item)) {
-                        item.forEach(function (i) {
-                            processItem(i);
-                        });
-                    } else if (typeof item === "function") {
-                        item.call(self);
-                    } else if (typeof item === "object") {
-                        Object.keys(item).forEach(function (k) {
-                            setValue(k, item[k], self.data);
-                        });
-                    }
-                });
-                self.callback(self.data, args);
-            };
-
-
-
-            var setValue = function (path, value, obj) {
-                path.split(".").reduce(function (acc, key, i, arr) {
-                    acc[key] = (i === arr.length - 1 ? value : acc[key] || {});
-                    return acc[key];
-                }, obj);
-            };
-
-            var originalPush = dataLayer.push;
-            dataLayer.push = function () {
-                var result = originalPush.apply(dataLayer, arguments);
-                processQueue(arguments);
-                return result;
-            };
-
-            processQueue(dataLayer);
+            }, delayInterval);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, delayTimeout);
         }
-
-
-        var dataLayerACT = false
-        function dataLayerListener(model, message) {
-            var currentMessage = message[0];
-            // Check if the add_to_cart event is available in dataLayer. Then redirect user to checkout page
-            if (
-                (currentMessage && currentMessage.event === "add-to-cart") ||
-                (currentMessage && currentMessage["1"] === "add-to-cart")
-            ) {
-                console.log('product added to cart => ');
-                dataLayerACT = true;
+        function addLiveEventListener(selector, event, callback, context) {
+            // Helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent('on' + type, handler);
+                else el.addEventListener(type, handler);
             }
-        }
-        function isAnyButtonSelected(selector) {
-            var buttons = document.querySelectorAll(selector);
-            for (var i = 0; i < buttons.length; i++) {
-                if (buttons[i].classList.contains('selected')) {
-                    return true;
-                }
+            // Matches polyfill
+            this.Element && function (ElementPrototype) {
+                ElementPrototype.matches = ElementPrototype.matches ||
+                    ElementPrototype.matchesSelector ||
+                    ElementPrototype.webkitMatchesSelector ||
+                    ElementPrototype.msMatchesSelector ||
+                    function (selector) {
+                        var node = this,
+                            nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                            i = -1;
+                        while (nodes[++i] && nodes[i] != node);
+                        return !!nodes[i];
+                    };
+            }(Element.prototype);
+            // Live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found, el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e);
+                });
             }
-            return false;
+            live(selector, event, callback, context);
         }
-        function eventHandlerT221() {
-            //Select pill from both sets of options
-            helper.live('.filter-wrapper .btn-group button', 'click', function () {
-                setTimeout(function () {
-                    var daysSelected = isAnyButtonSelected('#daysGroup button');
-                    var parksSelected = isAnyButtonSelected('#parksGroup button');
-
-                    if (daysSelected && parksSelected) {
-                        window['optimizely'] = window['optimizely'] || [];
-                        window['optimizely'].push({
-                            type: "event",
-                            eventName: "sea205__select_pill_from_both_sets_of_options",
-                            tags: {
-                                revenue: 0, // Optional in cents as integer (500 == $5.00)
-                                value: 0.00 // Optional as float
-                            }
-                        });
-                    }
-                }, 200)
-
-
-
-            })
-
-            helper.live(".filter-wrapper .btn-group button", "click", function () {
-                //  Copy displayed (no results)
-                if ((document.querySelector('.results').textContent == 'Please select a park') || (document.querySelector('.results').textContent == 'Please select at least one park')) {
-                    // console.log(' Copy displayed (no results)')
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205__copy_displayed__no_results_",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    })
-                }
-                // Product recommendations displayed
-                setTimeout(function () {
-                    let visibleCount = 0;
-                    document.querySelectorAll('.product-tiles .product-placement-card__wrapper').forEach(function (card) {
-                        if (window.getComputedStyle(card).display === 'block') {
-                            card.setAttribute('data-index', visibleCount)
-                            // for goal 
-                            window['optimizely'] = window['optimizely'] || [];
-                            window['optimizely'].push({
-                                type: "event",
-                                eventName: "sea205__product_recommendations_displayed",
-                                tags: {
-                                    revenue: 0, // Optional in cents as integer (500 == $5.00)
-                                    value: 0.00 // Optional as float
-                                }
-                            });
-                            // for dimension
-                            window.optimizely = window.optimizely || [];
-                            window.optimizely.push({
-                                "type": "user",
-                                "attributes": {
-                                    "SEA205_Product_recommendations_displayed": "yes"
-                                }
-                            });
-                            // console.log("Product recommendations displayed")
-                            visibleCount++;
-                            console.log('Product visible');
-                        } else {
-                            card.removeAttribute('data-index')
-                        }
-                    });
-                }, 200)
-            });
-            //  Clicked on any recommended product
-            helper.live('.product-tiles .product-placement-card__wrapper', "click", function () {
-                // for goal
-                window['optimizely'] = window['optimizely'] || [];
-                window['optimizely'].push({
-                    type: "event",
-                    eventName: "sea205__clicked_on_any_recommended_product",
-                    tags: {
-                        revenue: 0, // Optional in cents as integer (500 == $5.00)
-                        value: 0.00 // Optional as float
-                    }
-                });
-                // for dimension
-                window.optimizely = window.optimizely || [];
-                window.optimizely.push({
-                    "type": "user",
-                    "attributes": {
-                        "SEA205_Clicked_on_any_recommended_product": "yes"
-                    }
-                });
-            })
-            // Clicked on first recommended product
-            helper.live('.product-tiles .product-placement-card__wrapper[data-index="0"]', "click", function () {
-                window['optimizely'] = window['optimizely'] || [];
-                window['optimizely'].push({
-                    type: "event",
-                    eventName: "sea205__clicked_on_first_recommended_product",
-                    tags: {
-                        revenue: 0, // Optional in cents as integer (500 == $5.00)
-                        value: 0.00 // Optional as float
-                    }
-                });
-            })
-            // Clicked on second recommended product (if available)
-            helper.live('.product-tiles .product-placement-card__wrapper[data-index="1"]', "click", function () {
-                window['optimizely'] = window['optimizely'] || [];
-                window['optimizely'].push({
-                    type: "event",
-                    eventName: "sea205__clicked_on_second_recommended_product",
-                    tags: {
-                        revenue: 0, // Optional in cents as integer (500 == $5.00)
-                        value: 0.00 // Optional as float
-                    }
-                });
-                // console.log("Clicked on second recommended product")
-            })
-            //Select pill from both sets of options
-            helper.live(".btn-group button", "click", function (button) {
-                if (document.querySelector('#daysGroup button').classList.contains('selected') && document.querySelector('#parksGroup button').classList.contains('selected')) {
-                    console.log('Select pill from both sets of options')
-                }
-            })
-
-            // Add-to-Cart from recommended product
-            helper.live('.filter-container .product-placement-detail-modal__cart-button', "click", function () {
-
-                if (dataLayerACT == true) {
-                    // for goal
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205_add_to_cart_from_recommended_product_oct_11",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205_add_to_cart_from_all_products_on_tickets_page",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    // for dimension
-                    window.optimizely = window.optimizely || [];
-                    window.optimizely.push({
-                        "type": "user",
-                        "attributes": {
-                            "SEA205_Add_to_Cart_from_recommended_product": "yes"
-                        }
-                    });
-
-                    dataLayerACT = false;
-                }
-
-            });
-            // Add-to-Cart from non recommended product
-            helper.live('.product-catalog-card__order-button', "click", function () {
-                if (dataLayerACT == true) {
-                    // for goal
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205__add_to_cart_from_other_products_on_the_page_non",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    // any product of page
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205_add_to_cart_from_all_products_on_tickets_page",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    // for dimension
-                    window.optimizely = window.optimizely || [];
-                    window.optimizely.push({
-                        "type": "user",
-                        "attributes": {
-                            "SEA205_Add_to_Cart_from_other_products_non_recommended_product": "yes"
-                        }
-                    });
-                    dataLayerACT = false;
-                }
-
-            });
-            // for any product inside the model
-            helper.live('#-Accordion .product-placement-detail-modal__cart-button', "click", function () {
-                if (dataLayerACT == true) {
-                    // for goal
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205__add_to_cart_from_other_products_on_the_page_non",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205_add_to_cart_from_all_products_on_tickets_page",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    dataLayerACT = false;
-                }
-            });
-            // anual pass click
-            helper.live('#result a', "click", function (event) {
-                if (event.target.innerText = "Annual Passes") {
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205_click_on_the_annual_passes_link_in_the_wizard_",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                }
-            });
-        }
-
+        var thumbtechservices = `
+            <div class="thumbtechservices bg-white bmhidesection">
+                <h2 class="bmheading Type_title5__FuNNq">Popular services near you.</h2>
+                <div class="bm-item">
+                    <li title="House cleaning"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936611670860&project_pk=517046450169815067"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT159/spray-bottle.svg"> <p>House <br>cleaning</p></a></li>
+                    <li title="Handyman"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=102906936628587357&project_pk=516161021990002698"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/DIY-Effort_Icon_%C2%B7_Medium.png" > <p>Handyman <br> <span>j</span></p></a></li>
+                    <li title="Local electricians" ><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799061344665605&project_pk=517046561932238849"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Energy_Icon_%C2%B7_Medium.png"> <p>Electrical and <br> wiring repair</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=108249668856752917&project_pk=517046758073319441"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Brush_Icon_%C2%B7_Medium-1.png"> <p>Interior<br> painting</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=228629991346899932&project_pk=517046785496023060"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Trash_Icon_%C2%B7_Medium.png"> <p>Junk <br> removal</p></a></li>
+                    <li><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799060310671361&project_pk=517046805709824017"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Dolly_Icon_%C2%B7_Medium.png"> <p>Local moving<br> (under 50 miles)</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799053227180037&project_pk=517046842712686592"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Repair-Support_Icon_%C2%B7_Medium.png"> <p>Appliance repair or maintenance</p></a></li>
+                    <li class="bmhideservice"><a href="https://www.thumbtack.com/instant-results/?zip_code=90066&keyword_pk=367799059811311616&project_pk=517046868953260048"><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Preview-Carousel_Icon_%C2%B7_Medium.png"> <p>Floor installation or replacement</p></a></li>
+                </div>
+            </div>
+        `;
+        var reviews = `
+            <div class="reviewsection desktop">
+                <p> Trusted by +4.5M people &nbsp;•&nbsp; 4.9/5 <span><img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png"></span> with over 300k reviews on the App Store</p>
+                </div>
+        `;
+        var mobilereviews = `
+            <div class="reviewsection mobile">
+                <p> Trusted by +4.5M people <span>4.9/5 <img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT+-+144+%7C+HP+Hero+Redesign/Star-Filled_Icon_%C2%B7_Small.png">with over 300k reviews on the App Store</span></p>
+            </div>
+        `;
+        var imagesforappsection = ` <img src="https://production-next-images-cdn.thumbtack.com/i/511992410826965002/width/400.png">`;
+        var heroheading =
+            `<div class="thmobilebanner"><img src="//cdn.optimizely.com/img/20611073899/2b43f5d6b9954b86a2a9df7fd4b9f96e.png"></div>
+        <h1 class="mb5  homepage-hero_heavy">
+            <div class="homepage-hero_textCarousel">
+                <ul class="homepage-hero_scroll">
+                    <li>Home improvement,</li>
+                    <li>Home repair,</li>
+                    <li>Home inspection,</li>
+                    <li>Home cleaning,</li>
+                    <li>Home improvement,</li>
+                </ul>
+            </div>
+            <br>made easy.
+        </h1> `;
         /* Variation Init */
         function init() {
-            helper.log('Log inside from init');
-            _$('body').addClass(variation_name)
-            //user Engage with Wizard
-            helper.waitForElement('.filter-container', function () {
-                const filterContainer = document.querySelector('.filter-container .full-width-callout');
-                function logEngagement(event) {
-                    // for goal 
-                    window['optimizely'] = window['optimizely'] || [];
-                    window['optimizely'].push({
-                        type: "event",
-                        eventName: "sea205__engage_with_wizard",
-                        tags: {
-                            revenue: 0, // Optional in cents as integer (500 == $5.00)
-                            value: 0.00 // Optional as float
-                        }
-                    });
-                    // for dimension
-                    window.optimizely = window.optimizely || [];
-                    window.optimizely.push({
-                        "type": "user",
-                        "attributes": {
-                            "SEA205_Engage_with_Wizard": "yes"
-                        }
-                    });
-                }
-                ['click', 'focus',].forEach(eventType => {
-                    filterContainer.addEventListener(eventType, logEngagement, true);
-                });
+            
+            if(window.innerWidth >= 1024){
+                document.querySelector("body").classList.add(variation_name);
+            waitForElement('form[class*="search-bar-form_root"] input[data-test="search-input"]', function () {
+                document.querySelector('form[class*="search-bar-form_root"] input[data-test="search-input"]').setAttribute("placeholder", "Describe your project or problem – be as detailed as you’d like!")
             }, 50, 15000)
-
-
-
-
-            new DataLayerHelper(
-                window.dataLayer,
-                dataLayerListener.bind(this),
-                true
-            );
+            // waitForElement('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"]', function () {
+            //     document.querySelector('[class*="homepage-hero_mainSection"] [class*="homepage-hero_mobileSearchBar"] [class*="faux-search-input_root"] span.truncate').innerHTML = "What’s on your to-do list?"
+            // }, 50, 15000)
+            var textValuesToCheck = ['Popular services in'];
+            var elementsToModify = document.querySelectorAll('[class*="Type_title"]');
+            elementsToModify.forEach((element) => {
+                var fullTextContent = element.textContent.trim();
+                if (textValuesToCheck.some(value => fullTextContent.startsWith(value))) {
+                    var parentElement = element.closest('.bg-white');
+                    if (parentElement) {
+                        parentElement.classList.add('bmhidesection');
+                    }
+                }
+            });
+            if (document.querySelector('.bmhidesection [class*="Type_title5"]')) {
+                if (!document.querySelector(".thumbtechservices")) {
+                    document.querySelector('.bmhidesection [class*="Type_title5"]').insertAdjacentHTML('afterend', thumbtechservices);
+                }
+            } else {
+                var rootSiblingElement = document.querySelector('[data-testid="root"] + div');
+                if (rootSiblingElement) {
+                    if (!document.querySelector(".thumbtechservices")) {
+                        rootSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                    }
+                } else {
+                    var customerHeaderSiblingElement = document.querySelector('[class*="composable-customer-header"] + div');
+                    if (customerHeaderSiblingElement) {
+                        if (!document.querySelector(".thumbtechservices")) {
+                            customerHeaderSiblingElement.insertAdjacentHTML('afterend', thumbtechservices);
+                        }
+                    }
+                }
+            }
+            // Putting new heading
+            waitForElement('[class*="homepage-hero_heavy"]', function () {
+                var heroElement = document.querySelector('[class*="homepage-hero_heavy"]');
+                if (!document.querySelector('.thmobilebanner')) {
+                    heroElement.insertAdjacentHTML('afterend', heroheading);
+                }
+            }, 50, 15000);
+            waitForElement('#uniqueId4 ~ [class*="search-bar_zipCodeError"]', function () {
+                if (!document.querySelector(".reviewsection.desktop")) {
+                    document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', reviews);
+                }
+            }, 50, 15000);
+  
+            waitForElement('[class*="homepage-hero_navButton"]', function () {
+                const navButton = document.querySelector('[class*="homepage-hero_navButton"]');
+  
+                // Check if an image is already appended
+                if (!navButton.querySelector('img[src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT159/Mask+group.svg"]')) {
+                  navButton.insertAdjacentHTML(
+                    'beforeend',
+                    '<img src="https://d27c6j8064skg9.cloudfront.net/Thumbtack/TT159/Mask+group.svg">'
+                  );
+                }
+            }, 50, 15000);
+            
+            // waitForElement('#uniqueId4 ~ [class*="search-bar_zipCodeError"]', function () {
+            //  if (!document.querySelector('.reviewsection.mobile')) {
+            //      document.querySelector('#uniqueId4 ~ [class*="search-bar_zipCodeError"]').insertAdjacentHTML('afterend', mobilereviews);
+            //  }
+            // }, 50, 15000);
+            // Get the zip code value from the input field
+            waitForElement('[class*="search-bar_zipCodeInput"]', function () {
+                var zipCode = document.querySelector('[class*="search-bar_zipCodeInput"]').value;
+                // Select all the links inside the thumbtechservices div
+                var links = document.querySelectorAll('.thumbtechservices a');
+                // Loop through each link and replace the zip code in the href attribute
+                links.forEach(function (link) {
+                    var href = link.getAttribute('href');
+                    href = href.replace(/zip_code=([0-9]+)/, 'zip_code=' + zipCode);
+                    link.setAttribute('href', href);
+                });
+            }, 50, 15000);
+            }
+            
         }
-        if (!window.goalclickAdded205) {
-            window.goalclickAdded205 = true
-            eventHandlerT221()
+        function thumbtackTest159(list, observer) {
+            list.getEntries().forEach((entry) => {
+                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+                    observer.disconnect();
+                    clearInterval(test144Interval);
+                    waitForElement("body", init, 50, 15000);
+                    window.isHydrated = true;
+                }
+            });
         }
-
-        /* Initialise variation */
-        helper.waitForElement("body", init, 50, 5000);
+        if (!window.isHydrated) {
+            var test144Interval = setInterval(function () {
+                waitForElement("body", init, 50, 15000);
+            }, 50);
+            setTimeout(function () {
+                clearInterval(test144Interval);
+            }, 3000);
+            const observer = new PerformanceObserver(thumbtackTest159);
+            observer.observe({ entryTypes: ["mark"] });
+        } else {
+            waitForElement("body", init, 50, 15000);
+        }
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
-})();
+  })();
+  
