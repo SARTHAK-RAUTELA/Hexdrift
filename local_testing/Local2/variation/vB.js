@@ -134,14 +134,15 @@
                           <div class="cre_t_28_modal_glimps_tiles_container">
                               <div class="cre_t_28_modal_glimps_tile cre_t_28_modal_glimps_tile_1">
                                   <span class="cre_t_28_modal_tile_index">1</span>
-                                  <h3 class="cre_t_28_modal_tile_heading">Now your treatment plan will renew
-                                      automatically!</h3>
+                                  <h3 class="cre_t_28_modal_tile_heading">Now your treatment plan will renew automatically!</h3>
                                   <p class="cre_t_28_modal_tile_paragraph">
-                                      You won’t need to do a thing. Yes, that’s right, absolutely no more repetitive
-                                      form filling!
+                                  Say goodbye to repetitive form filling! Your Transition Pack, including your details, prescriptions, and preferences, is securely saved in your account area—no need to re-enter anything each time you need a prescription.
                                       <br>
+                                      Two weeks before your medication is due, paper prescriptions are generated and sent to your doctor or pharmacy of choice, with delivery times factored in to ensure everything arrives on time.
                                       <br>
-                                      As an active subscriber, your Transition Pack will be renewed automatically, for as long as you need it!
+                                      You’ll receive a notification beforehand to keep you in the loop. As long as your account is active, this process runs smoothly, ensuring you always have what you need.
+                                      <br>
+                                      Prefer more control? No problem! You can adjust timings or turn off the auto-renewal process at any time—we’re here to make it work for you.
                                   </p>
                               </div>
                               <div class="cre_t_28_modal_glimps_tile cre_t_28_modal_glimps_tile_2">
@@ -156,6 +157,20 @@
                                   <p class="cre_t_28_modal_tile_paragraph">All your details are saved and can be
                                       updated instantly whenever you need.</p>
                               </div>
+                              <div class=" cre_t_28_FAQ">
+                                 
+                                  <h1 class="cre_t_28_modal_tile_main_faq_heading">Quick FAQs</h1>
+                                  <h3 class="cre_t_28_modal_tile_heading">1. Will my prescriptions be sent out at the wrong time?</h3>
+                                  <p class="cre_t_28_modal_tile_paragraph">No! The new system is designed to prevent delays and mistakes. Prescriptions will be sent to your doctor or pharmacy two weeks before they’re due, and delivery times are factored in to ensure you always get your medication on time</p>
+                                  
+                                  <h3 class="cre_t_28_modal_tile_heading">2. Do I lose control over when I renew prescriptions? Will I be charged automatically every 3 months?</h3>
+                                  <p class="cre_t_28_modal_tile_paragraph">Not at all. While we’ve automated the process to make it easier for you, you still have the option to make changes or adjustments.</p>
+                                  
+                                  <h3 class="cre_t_28_modal_tile_heading">3. Am I still paying £15 per prescription request?</h3>
+                                  <p class="cre_t_28_modal_tile_paragraph">No, the new system is more sophisticated. You will no longer pay per prescription request, unlimited prescription requests are covered by £5/ month. If you get your prescriptions every 3 months, you will end up paying the same.</p>
+                                 
+                              </div>
+
                           </div>
                       </div>
                       <div class="cre_t_28_modal_left_footer">
