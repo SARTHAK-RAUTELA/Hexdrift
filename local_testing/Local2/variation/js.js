@@ -1,54 +1,59 @@
-(function () {
-  try {
-    /* Main Variables */
-    const DEBUG = 1;
-    const VARIATION_NAME = "SEA241";
-    /* Utility Function: Wait for an Element */
-    function waitForElement(selector, callback, delayInterval, delayTimeout) {
-      const interval = setInterval(() => {
-        const element = document.querySelector(selector);
-        if (element) {
-          clearInterval(interval);
-          callback();
-        }
-      }, delayInterval);
-      setTimeout(() => clearInterval(interval), delayTimeout);
-    }
-   
-  
-    /* Initialize Popup */
-    function initPopup() {
-  document.body.classList.add(VARIATION_NAME);
-  
-      document.querySelector('.site-header__links > div + a').innerHTML = 'VIP Tour'
-
-  var linkElement = document.querySelector('.site-header__links > div + a');
-
-    
-      // Change the href attribute
-      linkElement.setAttribute('href', '/orlando/tours/ultimate-vip/?tab=overview');
-      
-   
-      if(document.querySelector('.site-header__mobile-links > [href="/orlando/vacation-packages"]')){
-          document.querySelector('.site-header__mobile-links > [href="/orlando/vacation-packages"]').innerHTML = 'VIP Tour';
-          document.querySelector('.site-header__mobile-links > [href="/orlando/vacation-packages"]').setAttribute('href', '/orlando/tours/ultimate-vip/?tab=overview');
-      
-      }
-
-
-      
-   }
-
-    /* Initialize Variation */
-    waitForElement(
-      ".site-header__links > div + a",
-      () => {
-        initPopup();
-      },
-      50,
-      15000
-    );
-  } catch (e) {
-    if (DEBUG) console.error(`Error in Test ${VARIATION_NAME}:`, e);
-  }
-})();
+https://exodus90.com/
+https://exodus90.com/round-2/
+https://exodus90.com/lent/
+https://exodus90.com/sys/
+https://exodus90.com/lorenzo/
+https://exodus90.com/david/
+https://exodus90.com/lent/
+https://exodus90.com/home/
+https://exodus90.com/bas/
+https://exodus90.com/new-year-new-exodus/
+https://exodus90.com/2024-hallow/
+https://exodus90.com/exodus-90/
+https://exodus90.com/asceticism-3/
+https://exodus90.com/how-lent-works-2/
+https://exodus90.com/what-to-expect/
+https://exodus90.com/lent/
+https://exodus90.com/keith-old/
+https://exodus90.com/how-lent-with-exodus-works/
+https://exodus90.com/how-it-works/
+https://exodus90.com/theloop/
+https://exodus90.com/how-it-works-october/
+https://exodus90.com/how-it-works-november/
+https://exodus90.com/lila/
+https://exodus90.com/my-parish/
+https://exodus90.com/week-one/
+https://exodus90.com/jak-to-dziala/
+https://exodus90.com/omaha/
+https://exodus90.com/st-joseph/
+https://exodus90.com/granite-city/
+https://exodus90.com/olmc/
+https://exodus90.com/fr-meyer-leaders/
+https://exodus90.com/epiphany/
+https://exodus90.com/matts-wife/
+https://exodus90.com/dallas/
+https://exodus90.com/dearborn-county/
+https://exodus90.com/lent-prep/
+https://exodus90.com/nick/
+https://exodus90.com/doyle-baxter/
+https://exodus90.com/stephen/
+https://exodus90.com/john-kanel/
+https://exodus90.com/dr-jared-staudt/
+https://exodus90.com/heroicmen/
+https://exodus90.com/walsh/
+https://exodus90.com/tailgate-tour/
+https://exodus90.com/indy/
+https://exodus90.com/
+https://exodus90.com/easter/
+https://exodus90.com/summer/
+https://exodus90.com/prayer-2/
+https://exodus90.com/exodus-plus-2/
+https://exodus90.com/prayer-3/
+https://exodus90.com/fraternity-3/
+https://exodus90.com/freedom/
+https://exodus90.com/why-we-exist/
+https://exodus90.com/how-it-works-december-advent/
+https://exodus90.com/advent/
+https://exodus90.com/2024-seek/
+https://exodus90.com/2024-hallow/
+https://exodus90.com/how-it-works-exodus90/
