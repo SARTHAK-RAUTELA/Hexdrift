@@ -866,7 +866,7 @@ html body.cre-t-28 .cre_t_28_modal_left_footer .cre_t_28_modal_left_footer_mobil
 	}
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1184px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
 	html body.cre-t-28 .cre_t_28_modal_left {
 		height: 100%;
 	}
@@ -1085,7 +1085,7 @@ html body.cre-t-28 .cre_t_28_modal_left_footer .cre_t_28_modal_left_footer_mobil
 		padding-left: 28px;
 	}
 }
-@media screen and (min-width: 1185px) {
+@media screen and (min-width: 1200px) {
 	.cre_t_28_FAQ {
 		position: absolute !important;
 	}
@@ -1094,9 +1094,9 @@ html body.cre-t-28 .cre_t_28_modal_left_footer .cre_t_28_modal_left_footer_mobil
 .cre_t_28_FAQ {
 	bottom: 0;
 	right: 0;
-	/* max-width: 672px !important; */
-	border: 1px solid red;
-	width: calc((100% - 354px)) !important;
+	max-width: 64% !important;
+	/* border: 1px solid red; */
+	/* width: calc((100% - 354px)) !important; */
 }
 
 .cre_t_28_FAQ .cre_t_28_modal_tile_main_faq_heading {
@@ -1122,5 +1122,30 @@ html body.cre-t-28 .cre_t_28_modal_left_footer .cre_t_28_modal_left_footer_mobil
 html body.cre-t-28 .cre_t_28_modal_glimps_container {
 	position: relative;
 }
+
+@media screen and (max-width: 1200px) {
+	.cre_t_28_FAQ {
+		max-width: 100% !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Mobile.cre_t_28_FAQ {
+		display: none;
+	}.Desktop.cre_t_28_FAQ {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.Desktop.cre_t_28_FAQ {
+		display: none;
+	}
+	.Mobile.cre_t_28_FAQ {
+		display: block;
+	}
+}
+
+
 
 /*# sourceMappingURL=variation.css.map */
