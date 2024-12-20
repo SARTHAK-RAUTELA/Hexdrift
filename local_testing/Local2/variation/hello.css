@@ -1,145 +1,52 @@
-/* src/conversion-rate-experts/seaworld/SeaWorld-SEA236/variation1/styles/style.scss */
-.CRE-236-Banner {
-    background: #d8eebeb2;
-    padding: 20px;
-    border-radius: 4px;
-    margin-top: 16px;
-    border: 2px solid #e6e7e7;
-    display: none;
-}
+@media screen and (max-width:767px) {
 
-.modal__content:has(.date-time-select-modal__calendar-nav-prev[disabled])+.CRE-236-Banner,
-.modal__content:has(.date-time-select-modal__calendar-nav-prev[disabled]) .CRE-236-Banner {
-    display: block;
-}
-
-.dynamic-calendar-modal__months-directions {
-    display: none;
-}
-
-.cre-236-bold {
-    font-weight: 600;
-    margin-right: 2px;
-}
-
-.CRE-236-Banner .lower-row {
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
-    align-items: center;
-}
-
-.CRE-236-Banner .lower-row a {
-    color: #003c5a;
-    font-weight: 600;
-    margin-left: 4px;
-    cursor: pointer;
-}
-
-.CRE-236-Banner .lower-row .calender-icon {
-    max-width: 20px;
-    display: flex;
-}
-
-.CRE-236-Banner .lower-row .calender-icon img {
-    width: 100%;
-}
-
-.cre-hidden {
-    display: none;
-}
-
-html body .CRE-236-Banner .additional-content {
-    font-size: 13px;
-    padding-left: 33px;
-    margin-top: 8px;
-}
-
-@media screen and (max-width: 768px) {
-    .CRE-236-Banner .upper-row {
-        font-size: 15px;
+    html body.Swiftest_05.cre-t-05-showStickyButton .swiftest_05_sticky_footer {
+        display: block !important;
     }
 
-    .CRE-236-Banner {
-        margin-left: 16px;
-        margin-right: 16px;
+    html body.Swiftest_05 .swiftest_05_sticky_footer {
+        box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.08);
+        padding: 15px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        z-index: 99;
     }
 
-    .CRE-236-Banner .lower-row a {
-        margin-left: 0px;
+    html body.Swiftest_05 .swiftest_05_sticky_footer .Sticky_cta {
+        display: flex;
+        width: 100%;
+        height: 54px;
+        padding: 15px 70px;
+        justify-content: center;
+        max-width: 375px;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 3px;
+        background: var(--color-violet-33, #5E1394);
+        color: var(--petinsurancegurus-com-white, var(--color-white-solid, #FFF));
+        text-align: center;
+        font-family: var(--font-family-Font-1, Montserrat);
+        font-size: var(--font-size-16, 16px);
+        font-style: normal;
+        font-weight: var(--font-weight-700, 700);
+        line-height: var(--line-height-24, 24px);
+        text-transform: uppercase;
     }
 
-    html body .CRE-236-Banner .lower-row {
-        font-size: 14px;
+    html body.Swiftest_05 #footer-widgets+footer.site-info{
+        margin-bottom: 60px;
     }
 
-    html body .CRE-236-Banner {
-        padding: 12px 8px;
-        margin-top: 15px;
-    }
-
-    html body .date-time-select-modal__calendar.date-time-select-modal__calendar--loading+.CRE-236-Banner {
+    html body.Swiftest_05 ._hj-widget-container [data-testid="survey-root"] {
         display: none;
     }
-
-    html body .CRE-236-Banner .additional-content {
-        padding-left: 30px;
-    }
-
-    .CRE-236-Banner .lower-row {
-        gap: 8px;
-        padding-left: 4px;
-    }
-
-    .CRE-236-Banner .lower-row .calender-icon {
-        max-width: 16px;
-    }
-
-    .CRE-236-Banner .lower-row .calender-icon img {
-        width: 19px;
-        height: 16px;
-    }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .CRE-236-Banner {
-        margin-left: 16px;
-        margin-right: 16px;
+@media screen and (max-width:400px) {
+    html body.Swiftest_05 .swiftest_05_sticky_footer .Sticky_cta {
+        max-width: 337px;
     }
 
-    .CRE-236-Banner .lower-row {
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 527px) {
-    html body .modal__title {
-        margin-top: 6px;
-    }
-
-    html body .CRE-236-Banner {
-        margin-top: 13px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .CRE-236-Banner .lower-row {
-        align-items: flex-start;
-    }
-}
-
-@media screen and (max-width: 624px) {
-
-    .CRE-236-Banner .lower-row .calender-icon {
-        margin-top: 3px;
-    }
-
-    .CRE-236-Banner .lower-row {
-        align-items: flex-start;
-    }
-
-    .CRE-236-Banner .lower-row .calender-icon img {
-        width: 16px;
-        height: 16px;
-    }
 }
