@@ -1,162 +1,139 @@
-(() => {
-    var __defProp = Object.defineProperty;
-    var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
-
-    // lib/bm-js/lib/index.js
-    var waitFor = /* @__PURE__ */ __name((check, invoke, poll) => {
-        if (check()) {
-            invoke();
-            return;
+(function () {
+  try {
+    /* main variables */
+    var debug = 1;
+    var variation_name = "Swf_06";
+    /* helper library */
+    var _$;
+    !(function (factory) {
+      _$ = factory();
+    })(function () {
+      var bm = function (s) {
+        if (typeof s === "string") {
+          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
         }
-        let polling = setInterval(() => {
-            try {
-                if (check()) {
-                    invoke();
-                    clearInterval(polling);
-                    polling = null;
-                }
-            } catch (e) {
-                console.info("listener not processed");
-            }
-        }, poll.interval);
-        setTimeout(() => {
-            if (!polling)
-                return;
-            clearInterval(polling);
-            console.info("render listener timeout", poll);
-            window.evolvRenderTimeout = {
-                msg: "evolv render listener timeout",
-                poll
-            };
-        }, poll.duration);
-    }, "waitFor");
-    var $refs = /* @__PURE__ */ __name((selector) => {
-        if (!selector) {
-            console.error(`Invalid selector!`);
-            return;
+        if (typeof s === "object") {
+          this.value = [s];
         }
-        const els = document.querySelectorAll(selector);
-        if (!els || !els.length) {
-            console.error(`Selector ${selector} does not exist in DOM!`);
-            return;
-        }
-        return els;
-    }, "$refs");
-    var $addClass = /* @__PURE__ */ __name((selector, classes) => {
-        if (!classes) {
-            console.error("Atleast one class is required!");
-            return;
-        }
-        const elements = $refs(selector);
-        if (!elements)
-            return;
-        if (Array.isArray(classes)) {
-            elements.forEach((el) => {
-                el.classList.add(...classes);
-            });
-            return;
-        }
-        if (typeof classes === "string") {
-            elements.forEach((el) => {
-                el.classList.add(classes);
-            });
-        }
-    }, "$addClass");
-    var $live = /* @__PURE__ */ __name((selector, event, callback, context) => {
-        const addEvent = /* @__PURE__ */ __name((el, type, handler) => {
-            if (el.attachEvent) {
-                el.attachEvent("on" + type, handler);
-            } else {
-                el.addEventListener(type, handler);
-            }
-        }, "addEvent");
-        if (Element.prototype.matches === void 0) {
-            Element.prototype.matches = Element.prototype.matches || Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.msMatchesSelector || function (selector2) {
-                let node = this;
-                let nodes = (node.parentNode || node.document).querySelectorAll(
-                    selector2
-                );
-                let i = -1;
-                while (nodes[++i] && nodes[i] != node)
-                    ;
-                return !!nodes[i];
-            };
-        }
-        const liveBinding = /* @__PURE__ */ __name((selector2, event2, callback2, context2) => {
-            addEvent(context2 || document, event2, function (e) {
-                let found;
-                let el = e.target || e.srcElement;
-                while (el && el.matches && el !== context2 && !(found = el.matches(selector2)))
-                    el = el.parentElement;
-                if (found)
-                    callback2.call(el, e);
-            });
-        }, "liveBinding");
-        liveBinding(selector, event, callback, context);
-    }, "$live");
-    const currentMonth = new Date().toLocaleString('default', { month: 'long' });
-    // src/conversion-rate-experts/seaworld/SeaWorld-SEA236/variation1/index.js
-    var HtmlContent236 = `
-<div class="CRE-236-Banner">
-<div class="lower-row">
-<div class="calender-icon"><img src="https://cdn.optimizely.com/img/10196690105/d1a48b754ac24a9aaeec8db8291aec2b.svgz"></div>
-<div class="lower-row-sub"><span class="cre-236-bold">Good availability: </span><span>Enjoy shorter wait times and lower pricing in <span class="CRE-236-currentmonth">${currentMonth}</span>.</span> </span>
-</div>
-
-`;
-
-    function insertNewHTML() {
-        if (window.innerWidth > 767) {
-            waitFor(
-                () => document.querySelector(".modal--active .modal__content li") ? true : false,
-                () => {
-                    document.querySelector(".date-time-select-modal__subtitle").innerHTML = "Select a date to see ticket prices";
-                    if (!document.querySelector(".CRE-236-Banner")) {
-                        document.querySelector(".modal--active .modal__content").insertAdjacentHTML("afterend", HtmlContent236);
-                    }
-                }, {
-                interval: 50,
-                duration: 15e3
-            }
-            );
-        } else {
-            waitFor(
-                () => document.querySelector(".modal__content .date-time-select-modal__calendar") ? true : false,
-                () => {
-                    document.querySelector(".date-time-select-modal__subtitle").innerHTML = "Select a date to see ticket prices";
-                    if (!document.querySelector(".CRE-236-Banner")) {
-                        document.querySelector(".modal__content .date-time-select-modal__calendar").insertAdjacentHTML("afterend", HtmlContent236);
-                    }
-                }, {
-                interval: 50,
-                duration: 15e3
-            }
-            );
-        }
-
-    }
-    __name(insertNewHTML, "insertNewHTML");
-    waitFor(
-        () => document.querySelector(".product-catalog-card__date-input .form-group__input") ? true : false,
-        () => {
-            $addClass("body", "CRE-236");
-            if (!window.eventHandlerAdded236) {
-                insertNewHTML();
-                eventHandler236();
-                window.eventHandlerAdded236 = true;
-            }
+      };
+      bm.prototype = {
+        eq: function (n) {
+          this.value = [this.value[n]];
+          return this;
         },
-        {
-            interval: 50,
-            duration: 15e3
+        each: function (fn) {
+          [].forEach.call(this.value, fn);
+          return this;
+        },
+        log: function () {
+          var items =[];
+          for (let index = 0; index < arguments.length; index++) {
+            items.push(arguments[index]);
+          }
+          console && console.log(variation_name, items);
+        },
+        addClass: function (v) {
+          var a = v.split(" ");
+          return this.each(function (i) {
+            for (var x = 0; x < a.length; x++) {
+              if (i.classList) {
+                i.classList.add(a[x]);
+              } else {
+                i.className += " " + a[x];
+              }
+            }
+          });
+        },
+        waitForElement: function (
+          selector,
+          trigger,
+          delayInterval,
+          delayTimeout
+        ) {
+          var interval = setInterval(function () {
+            if (_$(selector).value.length) {
+              clearInterval(interval);
+              trigger();
+            }
+          }, delayInterval);
+          setTimeout(function () {
+            clearInterval(interval);
+          }, delayTimeout);
+        },
+      };
+      return function (selector) {
+        return new bm(selector);
+      };
+    });
+   
+
+// Current date
+const currentDate = new Date();
+
+// Subtract 2 days
+const twoDaysBefore = new Date();
+twoDaysBefore.setDate(currentDate.getDate() - 2);
+
+// Format the date (e.g., DD Month YYYY)
+const options = { day: '2-digit', month: 'long', year: 'numeric' };
+const formattedDate = twoDaysBefore.toLocaleDateString('en-GB', options); 
+
+// Update the HTML string with the formatted date
+var TheSwiftest_06 = `
+<div class="swf_section">
+    <div class="swf_container">
+        <div class="swf_times">
+            <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/time-logo_676504cc408c2.svg" alt="">
+            <p class="times_content">Last updated:<strong> ${formattedDate}</strong></p>
+        </div>
+        <div class="swf_content">
+            <h2 class="swf_heading">2024’s <span class="border">Best Pet Insurance Plans</span></h2>
+            <p class="swf_subheading"><strong>Your furry friend deserves the very best care.</strong> Trusted by over
+                10,000 pet owners since 2020, these plans deliver the coverage you need, at great value.</p>
+        </div>
+        <ul class="swf_list">
+            <li class="swf_item">
+                <div class="check_mark">
+                    <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/check-mark_676504a22a13f.svg" alt="">
+                </div>
+                <p class="bulet_content"><strong>Top brands</strong> offering excellent service and fast claims payouts</p>
+            </li>
+            <li class="swf_item">
+                <div class="check_mark">
+                    <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/check-mark_676504a22a13f.svg" alt="">
+                </div>
+                <p class="bulet_content"><strong>Guaranteed lowest prices</strong> with exclusive deals</p>
+            </li>
+            <li class="swf_item">
+                <div class="check_mark">
+                    <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/check-mark_676504a22a13f.svg" alt="">
+                </div>
+                <p class="bulet_content"><strong>Accepted by all vets</strong> across the United States</p>
+            </li>
+        </ul>
+    </div>
+</div>`;
+
+    var helper = _$();
+    /* Variation Init */
+    function init() {
+      _$('body').addClass(variation_name)
+      helper.waitForElement('#page .inside-article [id*="modal"] + div .gb-inside-container', function () {
+        if (!document.querySelector(".swf_section")) {
+            document.querySelector("#page .inside-article [id*='modal'] + div .gb-inside-container").innerHTML = (TheSwiftest_06 )
         }
-    );
-    function eventHandler236() {
-        $live(".product-catalog-card__date-input .form-group__input", "mousedown", function () {
-          
-            insertNewHTML();
-        });
-     
+
+
+    }, 50, 15000)
+    helper.waitForElement('#page .inside-article [id*="modal"] + .gb-grid-wrapper .wp-block-image', function () {
+            document.querySelector("#page .inside-article [id*='modal'] + .gb-grid-wrapper .wp-block-image").innerHTML=`<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/dogcat-img_676504b20e461.svg">`
+    }, 50, 15000)
+   
+    
     }
-    __name(eventHandler236, "eventHandler236");
+    /* Initialise variation */
+    helper.waitForElement("body", init, 50, 15000);
+  } catch (e) {
+    if (debug) console.log(e, "error in Test" + variation_name);
+  }
 })();
