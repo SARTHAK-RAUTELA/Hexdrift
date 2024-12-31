@@ -65,19 +65,26 @@
                 return new bm(selector);
             };
         });
-
-
+  
+        /* Helper Function: Capitalize Headline */
+        function capitalizeHeadline(text) {
+            return text
+                .split(" ")
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+        }
+  
         // Current date
         const currentDate = new Date();
-
+  
         // Subtract 2 days
         const twoDaysBefore = new Date();
         twoDaysBefore.setDate(currentDate.getDate() - 2);
-
+  
         // Format the date (e.g., DD Month YYYY)
         const options = { day: '2-digit', month: 'long', year: 'numeric' };
         const formattedDate = twoDaysBefore.toLocaleDateString('en-GB', options);
-
+  
         // Update the HTML string with the formatted date
         var TheSwiftest_06 = `
   <div class="swf_section">
@@ -113,36 +120,38 @@
           </ul>
       </div>
   </div>`;
-
+  
         var helper = _$();
         /* Variation Init */
         function init() {
-            _$('body').addClass(variation_name)
-            let heading
+            _$('body').addClass(variation_name);
+            let heading;
             helper.waitForElement('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container', function () {
                 heading = document.querySelector('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container h2').textContent;
-            }, 50, 15000)
-
+                heading = capitalizeHeadline(heading); // Apply capitalization correction
+            }, 50, 15000);
+  
             helper.waitForElement('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container', function () {
                 if (!document.querySelector(".swf_section")) {
-                    document.querySelector('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container').innerHTML = (TheSwiftest_06)
+                    document.querySelector('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container').innerHTML = (TheSwiftest_06);
                 }
-            }, 50, 15000)
-
+            }, 50, 15000);
+  
             if (window.location.pathname == '/home/') {
                 helper.waitForElement(".swf_heading", function () {
-                    document.querySelector('.swf_heading').innerHTML = heading
-                }, 50, 15000)
+                    document.querySelector('.swf_heading').innerHTML = heading;
+                }, 50, 15000);
             }
-            // helper.waitForElement('#page .inside-article [id*="modal"] + .gb-grid-wrapper .wp-block-image', function () {
-            //     document.querySelector("#page .inside-article [id*='modal'] + .gb-grid-wrapper .wp-block-image").innerHTML = `<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/image-4_676d295e48e49.svg">`
-            // }, 50, 15000)
-
-
+  
+            helper.waitForElement('#page .inside-article [id*="modal"] + .gb-grid-wrapper .wp-block-image', function () {
+                document.querySelector("#page .inside-article [id*='modal'] + .gb-grid-wrapper .wp-block-image").innerHTML = `<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/image-4_676d295e48e49.svg">`;
+            }, 50, 15000);
         }
+  
         /* Initialise variation */
         helper.waitForElement("body", init, 50, 15000);
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
-})();
+  })();
+  
