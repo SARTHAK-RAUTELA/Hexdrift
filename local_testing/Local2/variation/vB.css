@@ -1,122 +1,52 @@
-html body.Swf_06 .gb-inside-container .shortcode-tooltip-ad {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    bottom: 0;
-    top: -60px;
-}
+@media screen and (max-width:767px) {
 
-html body.Swf_06 #page .inside-article [id*='modal']+div .gb-inside-container {
-    padding-bottom: 0;
-}
-
-html body.Swf_06 .site-main>article>.inside-article>.entry-content>.gb-container:first-of-type .gb-inside-container {
-    padding-bottom: 0;
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_times {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_times img {
-    max-width: 19px;
-    width: 100%;
-}
-
-html body.Swf_06 .swf_section .swf_container .times_content {
-    margin-bottom: 0;
-    color: #000;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_heading {
-    color: #000;
-    font-family: Montserrat;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 46.8px;
-    margin-bottom: 16px;
-    position: relative;
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_heading span {
-    box-shadow: inset 0 -15px 0 rgba(83, 29, 141, 0.30);
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_subheading {
-    color: #13162F;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    max-width: 691px;
-    width: 100%;
-    margin-bottom: 12px;
-}
-
-html body.Swf_06 .swf_section .swf_container .check_mark {
-    max-width: 15.569px;
-    min-width: 15.569px;
-}
-
-html body.Swf_06 .swf_section .swf_container .check_mark img {
-    width: 100%;
-}
-
-html body.Swf_06 .swf_section .swf_container .bulet_content {
-    color: #13162F;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    margin-bottom: 0;
-    padding-bottom: 8px;
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_list {
-    margin: 0;
-}
-
-html body.Swf_06 .swf_section .swf_container .swf_item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    list-style: none;
-}
-
-html body.Swf_06 #page .inside-article [id*="modal"]+.gb-grid-wrapper .wp-block-image {
-    min-width: 400px;
-    width: 100%;
-}
-
-@media (max-width:769px) {
-    html body.Swf_06 .gb-inside-container .shortcode-tooltip-ad {
-        top: -24px;
+    html body.Swiftest_05.cre-t-05-showStickyButton .swiftest_05_sticky_footer {
+        display: block !important;
     }
-}
 
-@media screen and (min-width: 766px) and (max-width: 1200px) {
-    html body.Swf_06 #page .inside-article [id*="modal"]+.gb-grid-wrapper .wp-block-image {
-        /* max-width: 400px; */
-        min-width: 256px;
+    html body.Swiftest_05 .swiftest_05_sticky_footer {
+        box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.08);
+        padding: 15px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        z-index: 99;
     }
-}
 
-@media screen and (max-width: 767px) {
-    html body.Swf_06 #page .inside-article [id*="modal"]+.gb-grid-wrapper .wp-block-image {
+    html body.Swiftest_05 .swiftest_05_sticky_footer .Sticky_cta {
         display: flex;
+        width: 100%;
+        height: 54px;
+        padding: 15px 70px;
         justify-content: center;
-        min-width: fit-content;
+        max-width: 375px;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 3px;
+        background: #5E1394;
+        color: #FFF;
+        text-align: center;
+        font-family:  "Montserrat", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight:  700;
+        line-height:  24px;
+        text-transform: uppercase;
     }
+
+    html body.Swiftest_05 #footer-widgets+footer.site-info{
+        margin-bottom: 60px;
+    }
+
+    html body.Swiftest_05 ._hj-widget-container [data-testid="survey-root"] {
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px) {
+    html body.Swiftest_05 .swiftest_05_sticky_footer .Sticky_cta {
+        max-width: 337px;
+    }
+
 }
