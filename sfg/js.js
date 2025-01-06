@@ -553,7 +553,7 @@
                             <div><strong>1. Select parks</strong></div>
                             <div>
                                 <div class="ToolTip_221"><img
-                                        src="https://cdn.optimizely.com/img/10196690105/915e532a448f47a792066a606530bd4d.png"
+                                        src="https://cdn.optimizely.com/img/10196690105/fafcd6ca51ae42868d34ccddef9624a5.svgz"
                                         alt="tooltip"></div>
                                 <div class="tooltip-text">
                                     <p class="tooltipHeading">Why do we use it?</p>
@@ -589,7 +589,7 @@
                             <div><strong>2. Number of days</strong></div>
                             <div>
                                 <div class="ToolTip_221"><img
-                                        src="https://cdn.optimizely.com/img/10196690105/915e532a448f47a792066a606530bd4d.png"
+                                        src="https://cdn.optimizely.com/img/10196690105/fafcd6ca51ae42868d34ccddef9624a5.svgz"
                                         alt="tooltip"></div>
                                 <div class="tooltip-text">
                                     <p class="tooltipHeading">Why do we use it?</p>
