@@ -1,157 +1,286 @@
 (function () {
     try {
         /* main variables */
-        var debug = 1;
-        var variation_name = "Swf_06";
-        /* helper library */
-        var _$;
-        !(function (factory) {
-            _$ = factory();
-        })(function () {
-            var bm = function (s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+        var debug = 0;
+        var variation_name = "";
+        /* all Pure helper functions */
+        function waitForElement(selector, trigger) {
+            var interval = setInterval(function () {
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger();
                 }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function (n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function (fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function () {
-                    var items = [];
-                    for (let index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function (v) {
-                    var a = v.split(" ");
-                    return this.each(function (i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                waitForElement: function (
-                    selector,
-                    trigger,
-                    delayInterval,
-                    delayTimeout
-                ) {
-                    var interval = setInterval(function () {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger();
-                        }
-                    }, delayInterval);
-                    setTimeout(function () {
-                        clearInterval(interval);
-                    }, delayTimeout);
-                },
-            };
-            return function (selector) {
-                return new bm(selector);
-            };
-        });
-  
-        /* Helper Function: Capitalize Headline */
-        function capitalizeHeadline(text) {
-            return text
-                .split(" ")
-                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ");
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
         }
+        function live(selector, event, callback, context) {
+            // helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent("on" + type, handler);
+                else el.addEventListener(type, handler);
+            }
+            // matches polyfill
+            this &&
+                this.Element &&
+                (function (ElementPrototype) {
+                    ElementPrototype.matches =
+                        ElementPrototype.matches ||
+                        ElementPrototype.matchesSelector ||
+                        ElementPrototype.webkitMatchesSelector ||
+                        ElementPrototype.msMatchesSelector ||
+                        function (selector) {
+                            var node = this,
+                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                                i = -1;
+                            while (nodes[++i] && nodes[i] != node);
+                            return !!nodes[i];
+                        };
+                })(Element.prototype);
+            // live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found,
+                        el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e);
+                });
+            }
+            live(selector, event, callback, context);
+        }
+        function addClass(el, cls) {
+            var el = document.querySelector(el);
+            if (el) {
+                el.classList.add(cls);
+            }
+        }
+        var creSuperSaver =
+            "" +
+            '  <div class="cre-superSaver">' +
+            '      <div class="cre-superSaver-container">' +
+            '          <div class="cre-superSaver-row">' +
+            '              <div class="cre-textItem">' +
+            '                  <p class="cre-card-text">AVOID THE CROWDS AND SAVE ~<span class="cre-dataPercentage">30</span>% IN OFF-PEAK TIMES!</p>' +
+            '                   <p class="cre-card-boldText">2 Flight Super Saver Special - $<span class="cre-dataPrice"></span>/person</p>' +
+            '                  <p class="cre-card-subText">The Super Saver offer is valid Monday-Friday 11am-4:30pm, excluding holidays and peak periods.</p>' +
+            "              </div>" +
+            '              <div class="cre-quantity">' +
+            '                <p class="cre-quantity">QUANTITY</p>' +
+            '              <div class="cre-quantityBtn-container">' +
+            '               <div class="cre-quantityBtn">' +
+            '                  <button id="decreaseButton">-</button>' +
+            '                  <input type="text" id="inputField" min="0" max="13" value="0">' +
+            '                  <button id="increaseButton">+</button>' +
+            "               </div>" +
+            '                  <button id="cre-addToCart-mobile">ADD TO CART</button>' +
+            "              </div>" +
+            '                  <button id="cre-addToCart">ADD TO CART</button>' +
+            '                  <p class="cre-card-subText_mobile">The Super Saver offer is valid Monday-Friday 11am-4:30pm, excluding holidays and peak periods.</p>' +
+            "              </div>" +
+            "          </div>" +
+            "      </div>" +
+            "  </div>";
+        var cre_card_fourFlights =
+            "" +
+            '  <div class="cre-card-copy-fourFlights">' +
+            "      <h2>Double the flying time of the 2 Flight and more than twice the fun!</h2>" +
+            '      <p>This is where you can begin to develop your flying skills. <span class="cre-bold">We recommend this package to get the most from your visit.</span></p>' +
+            "  </div>";
+        var cre_card_twoFlights =
+            "" +
+            '  <div class="cre-card-copy-twoFlights">' +
+            "      <h2>The perfect taster experience.</h2>" +
+            "      <p>Most people leave wishing they'd flown more, but this offers great introductory value.</span>" +
+            "      </p>" +
+            "  </div>";
+        var cre_card_tenFlights =
+            "" +
+            '  <div class="cre-card-copy-tenFlights">' +
+            "      <h2>Share 10 flights with up to 5 flyers on one fun-filled visit.</h2>" +
+            "      <p>Designed for groups who want the ultimate flying experience in one convenient package.</p>" +
+            "  </div>";
+        function inputValue() {
+            var input1 = document.getElementById("inputField");
+            var input2 = document.querySelector(".cre_superSaverproduct .qty-value");
+            if (input1 && input2) {
+                input1.value = input2.value;
+            }
+            //('Trigger Input value')
+        }
+        function updateValues() {
+            var input1 = document.getElementById("inputField");
+            var input2 = document.querySelector(".cre_superSaverproduct .qty-value");
+            if (input1 && input2) {
+                if (input1.value > parseInt(input2.max)) {
+                    input1.value = 13;
+                }
+                input2.value = input1.value;
+            }
+            //('Trigger Update value')
+        }
+        function addClassToParent(inputValue, className) {
+            waitForElement('.ProductGridForm input[value="' + inputValue + '"]', function () {
+                var parent = document.querySelector('.ProductGridForm input[value="' + inputValue + '"]').closest('.product-grid-item');
+                if (parent) {
+                    parent.classList.add(className);
+                }
+            });
+        }
+        function eventListener() {
+            live("#inputField", "input", function () {
+                updateValues();
+            });
+            live("#increaseButton", "click", function () {
+                // console.log('click')
   
-        // Current date
-        const currentDate = new Date();
-  
-        // Subtract 2 days
-        const twoDaysBefore = new Date();
-        twoDaysBefore.setDate(currentDate.getDate() - 2);
-  
-        // Format the date (e.g., DD Month YYYY)
-        const options = { day: '2-digit', month: 'long', year: 'numeric' };
-        const formattedDate = twoDaysBefore.toLocaleDateString('en-GB', options);
-  
-        // Update the HTML string with the formatted date
-        var TheSwiftest_06 = `
-  <div class="swf_section">
-      <div class="swf_container">
-          <div class="swf_times">
-              <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/time-logo_676504cc408c2.svg" alt="">
-              <p class="times_content">Last updated:<strong> ${formattedDate}</strong></p>
-          </div>
-          <div class="swf_content">
-              <h2 class="swf_heading">2024’s <span class="border">Best Pet Insurance Plans</span></h2>
-              <p class="swf_subheading"><strong>Your furry friend deserves the very best care.</strong> Trusted by over
-                  10,000 pet owners since 2020, these plans deliver the coverage you need, at great value.</p>
-          </div>
-          <ul class="swf_list">
-              <li class="swf_item">
-                  <div class="check_mark">
-                      <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/check-mark_676504a22a13f.svg" alt="">
-                  </div>
-                  <p class="bulet_content"><strong>Top brands</strong> offering excellent service and fast claims payouts</p>
-              </li>
-              <li class="swf_item">
-                  <div class="check_mark">
-                      <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/check-mark_676504a22a13f.svg" alt="">
-                  </div>
-                  <p class="bulet_content"><strong>Guaranteed lowest prices</strong> with exclusive deals</p>
-              </li>
-              <li class="swf_item">
-                  <div class="check_mark">
-                      <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/check-mark_676504a22a13f.svg" alt="">
-                  </div>
-                  <p class="bulet_content"><strong>Accepted by all vets</strong> across the United States</p>
-              </li>
-          </ul>
-      </div>
-  </div>`;
-  
-        var helper = _$();
+                document.querySelector(".cre_superSaverproduct .btn-add").click();
+                inputValue();
+            });
+            live("#decreaseButton", "click", function () {
+                // console.log('click')
+                document.querySelector(".cre_superSaverproduct .btn-subtract").click();
+                inputValue();
+            });
+            live("#cre-addToCart , #cre-addToCart-mobile", "click", function () {
+                document.querySelector(".cre_superSaverproduct .btn-add-to-cart").click();
+            });
+        }
+        function addingData() {
+            retrivePrice();
+            if (!document.querySelector(".cre-card-copy-fourFlights") && document.querySelector(".cre_fourFlights .features")) {
+                document.querySelector(".cre_fourFlights .features").insertAdjacentHTML("beforebegin", cre_card_fourFlights);
+            }
+            if (!document.querySelector(".cre-card-copy-twoFlights") && document.querySelector(".cre_twoFlights .features")) {
+                document.querySelector(".cre_twoFlights .features").insertAdjacentHTML("beforebegin", cre_card_twoFlights);
+            }
+            if (!document.querySelector(".cre-card-copy-tenFlights") && document.querySelector(".cre_familyFlights .features")) {
+                document.querySelector(".cre_familyFlights .features").insertAdjacentHTML("beforebegin", cre_card_tenFlights);
+            }
+            if (!document.querySelector(".cre_twoFlights .cre-person-text") && document.querySelector(".cre_twoFlights .qty-select-method-3")) {
+                document.querySelector(".cre_twoFlights .qty-select-method-3").insertAdjacentHTML("beforebegin", '<h2 class="cre-person-text">PER PERSON</h2><p class="cre-person-subtext">Select the number of flyers</p>');
+            }
+            if (!document.querySelector(".cre_fourFlights .cre-person-text") && document.querySelector(".cre_fourFlights .qty-select-method-3")) {
+                document.querySelector(".cre_fourFlights .qty-select-method-3").insertAdjacentHTML("beforebegin", '<h2 class="cre-person-text">PER PERSON</h2><p class="cre-person-subtext">Select the number of flyers</p>');
+            }
+            if (!document.querySelector(".cre_familyFlights div .cre-person-text") && document.querySelector(".cre_familyFlights .qty-select-method-3")) {
+                document.querySelector(".cre_familyFlights .qty-select-method-3").insertAdjacentHTML("beforebegin", '<h2 class="cre-person-text">For 10 flights</h2><p class="cre-person-subtext">Select the number of 10 flight packages</p>');
+            }
+        }
+        function productPrice() {
+            var jsonObjects = [];
+            var dataRegularAmount; // Define dataRegularAmount here
+            document.querySelectorAll(".btn.btn-add").forEach(function (e) {
+                var parent = e.closest(".product-grid-item");
+                var features = parent.querySelector(".features");
+                var listItems = parent ? parent.querySelectorAll(".features li") : null;
+                if (e.getAttribute("data-name") && e.getAttribute("data-price")) {
+                    var dataName = e.getAttribute("data-name");
+                    var dataPrice = parseFloat(e.getAttribute("data-price"));
+                    var jsonObject = {
+                        dataName: dataName,
+                        dataPrice: dataPrice,
+                    };
+                    if (listItems) {
+                        listItems.forEach(function (item) {
+                            var text = item.textContent;
+                            var percentMatch = text.match(/\d+%/); // Match one or more digits followed by '%'
+                            if (percentMatch) {
+                                var dataOfferPrice = parseFloat(percentMatch[0].replace("%", ""));
+                                dataRegularAmount = (dataOfferPrice * dataPrice) / 100 + dataPrice;
+                                dataRegularAmount = Math.round(dataRegularAmount * 100) / 100;
+                                jsonObject.dataOfferPrice = dataOfferPrice;
+                                jsonObject.dataRegularAmount = dataRegularAmount;
+                            }
+                        });
+                    }
+                    // Add class to the parent based on dataName
+                    if (dataName.indexOf("2 Flights Super Saver") !== -1) {
+                        // parent.classList.add("cre_superSaverproduct");
+                    } else if (dataName.indexOf("4 Flights") !== -1) {
+                        // parent.classList.add("cre_fourFlights");
+                        if (features && !document.querySelector('.cre_fourFlights .cre-regularPrice')) {
+                            features.insertAdjacentHTML("afterend", '<p class="cre-regularPrice">Regularly $<span>' + dataRegularAmount + "</span></p>");
+                        }
+                    } else if (dataName.indexOf("Family 10 Flights") !== -1) {
+                        // parent.classList.add("cre_familyFlights");
+                        if (features && !document.querySelector('.cre_familyFlights .cre-regularPrice')) {
+                            features.insertAdjacentHTML("afterend", '<p class="cre-regularPrice">Regularly $<span>' + dataRegularAmount + "</span></p>");
+                        }
+                    } else if (dataName === "2 Flights") {
+                        // parent.classList.add("cre_twoFlights");
+                    }
+                    addClassToParent('2 Flights Super Saver ~30% Off', 'cre_superSaverproduct');
+                    addClassToParent('2 Flights', 'cre_twoFlights');
+                    addClassToParent('4 Flights: Our Most Popular Product!', 'cre_fourFlights');
+                    addClassToParent('Friends and Family 10 Flights', 'cre_familyFlights');
+                    waitForElement(".cre_fourFlights", function () {
+                        addingData();
+                    });
+                    jsonObjects.push(jsonObject);
+                }
+            });
+            var jsonString = JSON.stringify(jsonObjects);
+            sessionStorage.setItem("CRE-t-Data", jsonString);
+        }
+        function retrivePrice() {
+            var jsonString = sessionStorage.getItem("CRE-t-Data");
+            if (jsonString) {
+                var jsonObjects = JSON.parse(jsonString);
+                jsonObjects.forEach(function (jsonObject) {
+                    if (jsonObject.dataName.indexOf("2 Flights Super Saver") !== -1) {
+                        // console.log("dataPrice: " + jsonObject.dataPrice);
+                        if (document.querySelector(".cre-dataPrice")) {
+                            document.querySelector(".cre-dataPrice").innerHTML = jsonObject.dataPrice;
+                        }
+                    }
+                });
+            }
+        }
         /* Variation Init */
         function init() {
-            _$('body').addClass(variation_name);
-            let heading;
-            helper.waitForElement('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container', function () {
-                heading = document.querySelector('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container h2').textContent;
-                heading = capitalizeHeadline(heading); // Apply capitalization correction
-            }, 50, 15000);
+            // console.log('Ifly-3')
+            addClass("body", "cre-iFly3");
   
-            helper.waitForElement('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container', function () {
-                if (!document.querySelector(".swf_section")) {
-                    document.querySelector('#page .inside-article [id*="modal"]+div> div.gb-grid-column:first-child .gb-inside-container').innerHTML = (TheSwiftest_06);
-                }
-            }, 50, 15000);
-  
-            if (window.location.pathname == '/home/') {
-                helper.waitForElement(".swf_heading", function () {
-                    document.querySelector('.swf_heading').innerHTML = heading;
-                }, 50, 15000);
-            }
-  
-            helper.waitForElement('#page .inside-article [id*="modal"] + .gb-grid-wrapper .wp-block-image', function () {
-                document.querySelector("#page .inside-article [id*='modal'] + .gb-grid-wrapper .wp-block-image").innerHTML = `<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/image-4_676d295e48e49.svg">`;
-            }, 50, 15000);
+      waitForElement('[data-name*="2 Flights Super Saver"]', function () {
+        waitForElement(".primaryContainer .mainStore .category  .category-footer", function () {
+          if (!document.querySelector(".cre-superSaver")) {
+            document.querySelector(".primaryContainer .mainStore .category  .category-footer").insertAdjacentHTML("beforebegin", creSuperSaver);
+          }
+        });
+            });
+            
+            eventListener();
         }
-  
         /* Initialise variation */
-        helper.waitForElement("body", init, 50, 15000);
+        // waitForElement('body', function () {
+        //  addClass("body", "cre-iFly3");
+        // });
+        // waitForElement('.ProductGridForm input[value="2 Flights Super Saver ~30% Off"]', function () {
+        //  init();
+        //  waitForElement(".btn.btn-add", productPrice);
+        // });
+        function activateTestBasedOnTile() {
+            var isSuperSaverPackAvailable = false;
+            // Check the super saver pack available or not
+            document.querySelectorAll(".category .product-grid .product-grid-item .product-name").forEach(function (elm) {
+                var gridItem = elm.closest(".product-grid-item");
+                if (!gridItem) return;
+                var cardName = elm.innerText.toLowerCase().trim(" ");
+                // If Current card is supper saver
+                if (cardName.indexOf("2 flights super saver") != -1 && gridItem.querySelector(".ProductGridForm")) {
+                    isSuperSaverPackAvailable = true;
+                }
+            });
+            // If super saver is available then made changes in site
+            if (!document.querySelector(".cre-iFly3")) {
+                init();
+                waitForElement(".btn.btn-add", productPrice);
+            }
+        }
+        /* Initialise variation */
+        waitForElement(".category .product-grid .product-grid-item .product-name", activateTestBasedOnTile);
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
   })();
-  
