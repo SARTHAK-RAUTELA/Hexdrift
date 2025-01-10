@@ -1,16 +1,22 @@
-html body.cre-t-29 {
+html body.cre-t-29[data-path="/fees/"],
+html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] {
     background-color: #fff !important;
 }
 
-html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www.gendergp.com/existing-members/"]:hover {
-    background-color: #fff !important;
+html body.cre-t-29[data-path="/fees/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/existing-members/"]:hover,
+html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/existing-members/"]:hover {
+    background-color: #8734a3 !important;
+    color: white !important;
+    border: 1px solid #8734a3 !important;
 }
 
-html body.cre-t-29 .cre_t_29_header_button_container {
+html body.cre-t-29[data-path="/fees/"] .cre_t_29_header_button_container,
+html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] .cre_t_29_header_button_container {
     width: max-content !important;
 }
 
-html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www.gendergp.com/existing-members/"] {
+html body.cre-t-29[data-path="/fees/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/existing-members/"],
+html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/existing-members/"] {
     border-radius: 100px !important;
     border: 1px solid #884DFF !important;
     color: #8734A3 !important;
@@ -26,7 +32,8 @@ html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www
     padding-bottom: 8px !important;
 }
 
-html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
+html body.cre-t-29[data-path="/fees/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/accessing-gender-affirming-care/"],
+html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
     border-radius: 100px !important;
     background: #8734A3 !important;
     width: 113px;
@@ -41,15 +48,19 @@ html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www
 }
 
 @media screen and (max-width: 767px) {
-    html body.cre-t-29 .elementor-94873 .elementor-element.elementor-element-2afbaa7 {
+
+    html body.cre-t-29[data-path="/fees/"] .elementor-94873 .elementor-element.elementor-element-2afbaa7,
+    html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] .elementor-94873 .elementor-element.elementor-element-2afbaa7 {
         justify-content: flex-end;
     }
 
-    html body.cre-t-29 header [data-widget_type="button.default"] {
+    html body.cre-t-29[data-path="/fees/"] header [data-widget_type="button.default"],
+    html body.cre-t-29[data-path="/accessing-gender-affirming-care/"] header [data-widget_type="button.default"] {
         max-width: max-content !important;
     }
 
-    html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
+    html body.cre-t-29[data-path="/fees/"] header [data-widget_type="button.default"] [href="https://www.gendergp.com/accessing-gender-affirming-care/"],
+    html body.cre-t-29 header[data-path="/accessing-gender-affirming-care/"] [data-widget_type="button.default"] [href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
         width: 103px;
     }
 }
@@ -57,15 +68,15 @@ html body.cre-t-29 header [data-widget_type="button.default"] [href="https://www
 /* css for fees page */
 
 
-html body.cre-t-29.cre-t-29-fees [data-elementor-type="header"] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] [data-elementor-type="header"] {
     background-color: transparent !important;
 }
 
-html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre_t_29_membership_section {
     background: transparent !important;
 }
 
-html body.cre-t-29.cre-t-29-fees .cre-t-29-hero-bg {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre-t-29-hero-bg {
     height: 1040px;
     width: 100%;
     position: absolute;
@@ -76,7 +87,7 @@ html body.cre-t-29.cre-t-29-fees .cre-t-29-hero-bg {
 
 
 
-html body.cre-t-29.cre-t-29-fees h1.elementor-heading-title.elementor-size-default {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] h1.elementor-heading-title.elementor-size-default {
     font-size: 66px !important;
     font-style: normal;
     font-weight: 700 !important;
@@ -87,12 +98,12 @@ html body.cre-t-29.cre-t-29-fees h1.elementor-heading-title.elementor-size-defau
     -webkit-text-fill-color: transparent;
 }
 
-html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section [data-element_type="container"]>.e-con-inner {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre_t_29_membership_section [data-element_type="container"]>.e-con-inner {
     position: relative;
     z-index: 2;
 }
 
-html body.cre-t-29.cre-t-29-fees .cre-t-29-orange-bg::after {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre-t-29-orange-bg::after {
     content: " ";
     width: calc(100% + 10px);
     height: calc(100% + 10px);
@@ -104,47 +115,47 @@ html body.cre-t-29.cre-t-29-fees .cre-t-29-orange-bg::after {
 }
 
 
-html body.cre-t-29.cre-t-29-fees .e-con-inner .elementor-widget-n-tabs button[aria-selected] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-con-inner .elementor-widget-n-tabs button[aria-selected] {
     border: 1px solid #A273FF;
     border-radius: 0px;
 }
 
-html body.cre-t-29.cre-t-29-fees .e-con-inner .elementor-widget-n-tabs button[aria-selected]:hover {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-con-inner .elementor-widget-n-tabs button[aria-selected]:hover {
     background: #9F4DBB91 !important;
     background-color: transparent !important;
     background-image: linear-gradient(40deg, #9F4DBB91 0%, #FF672694 100%) !important;
 }
 
-html body.cre-t-29.cre-t-29-fees .e-con-inner .elementor-widget-n-tabs button[aria-selected="true"] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-con-inner .elementor-widget-n-tabs button[aria-selected="true"] {
     background: #9F4DBB91 !important;
     background-color: transparent !important;
     background-image: linear-gradient(40deg, #9F4DBB91 0%, #FF672694 100%) !important;
     color: white;
 }
 
-html body.cre-t-29.cre-t-29-fees .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element {
     background-color: transparent;
     background-image: linear-gradient(160deg, var(--e-global-color-2687c72) 0%, var(--e-global-color-988fbf0) 100%);
 }
 
-html body.cre-t-29.cre-t-29-fees .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a {
     color: #8734A3;
 }
 
-html body.cre-t-29.cre-t-29-fees .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a svg {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a svg {
     fill: #8734A3;
 }
 
-html body.cre-t-29.cre-t-29-fees .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a:hover {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a:hover {
     color: #DA3455;
 }
 
-html body.cre-t-29.cre-t-29-fees .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a:hover svg {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .e-n-tabs-content div[id*='e-n-tab-content-'][role="tabpanel"]>.elementor-element a:hover svg {
     fill: #DA3455;
 }
 
 
-html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section [data-element_type="container"]>.e-con-inner a[href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre_t_29_membership_section [data-element_type="container"]>.e-con-inner a[href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
     border-radius: 10px !important;
     background: #8734A3 !important;
     color: #FFF;
@@ -154,7 +165,7 @@ html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section [data-element_type
     line-height: normal;
 }
 
-html body.cre-t-29.cre-t-29-fees [data-elementor-type="wp-page"]>div.e-con.e-parent a[href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] [data-elementor-type="wp-page"]>div.e-con.e-parent a[href="https://www.gendergp.com/accessing-gender-affirming-care/"] {
     border-radius: 10px !important;
     background: #884DFF !important;
     color: #FFF;
@@ -166,48 +177,48 @@ html body.cre-t-29.cre-t-29-fees [data-elementor-type="wp-page"]>div.e-con.e-par
     width: 137px;
 }
 
-html body.cre-t-29.cre-t-29-fees .elementor-widget-n-accordion summary[aria-expanded] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .elementor-widget-n-accordion summary[aria-expanded] {
     border-radius: 5px 5px 0px 0px important;
     border: 1px solid #9F4DBB important;
 }
 
-html body.cre-t-29.cre-t-29-fees .elementor-widget-n-accordion summary[aria-expanded]:hover {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .elementor-widget-n-accordion summary[aria-expanded]:hover {
     background: #EAD2F1 !important;
 }
 
-html body.cre-t-29.cre-t-29-fees .elementor-widget-n-accordion summary[aria-expanded="true"] {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .elementor-widget-n-accordion summary[aria-expanded="true"] {
     background-color: #EAD2F1 !important;
     border-style: solid;
     border-width: 1px 1px 0px 1px;
     border-color: #8734A3;
 }
 
-html body.cre-t-29.cre-t-29-fees section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]) {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]) {
     color: rgb(135, 52, 163) !important;
 }
 
-html body.cre-t-29.cre-t-29-fees section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]) span.elementor-button-icon path {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]) span.elementor-button-icon path {
     fill: rgb(135, 52, 163) !important;
 }
 
-html body.cre-t-29.cre-t-29-fees section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]):hover {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]):hover {
     color: rgb(218, 52, 85) !important;
 }
 
-html body.cre-t-29.cre-t-29-fees section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]):hover span.elementor-button-icon path {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] section .elementor-widget-n-accordion details>div[role='region'] a:not([href="#"]):hover span.elementor-button-icon path {
     fill: rgb(218, 52, 85) !important;
 }
 
-html body.cre-t-29.cre-t-29-fees section .elementor-widget-n-accordion details>div[role='region'] .elementor-icon-box-icon span path {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] section .elementor-widget-n-accordion details>div[role='region'] .elementor-icon-box-icon span path {
     stroke: rgb(135, 52, 163) !important;
 }
 
-html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section .elementor-widget-icon-list .elementor-icon-list-icon svg {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre_t_29_membership_section .elementor-widget-icon-list .elementor-icon-list-icon svg {
     display: none;
 }
 
 
-html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section .elementor-widget-icon-list .elementor-icon-list-icon {
+html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre_t_29_membership_section .elementor-widget-icon-list .elementor-icon-list-icon {
     width: 16px !important;
     height: 16px;
     flex-shrink: 0;
@@ -222,12 +233,12 @@ html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section .elementor-widget-
 
 @media screen and (max-width: 767px) {
 
-    html body.cre-t-29.cre-t-29-fees h1.elementor-heading-title.elementor-size-default {
+    html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] h1.elementor-heading-title.elementor-size-default {
         font-size: 35px !important;
         line-height: normal !important;
     }
 
-    html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section .elementor-widget-icon-list .elementor-icon-list-icon {
+    html body.cre-t-29.cre-t-29-fees[data-path="/fees/"] .cre_t_29_membership_section .elementor-widget-icon-list .elementor-icon-list-icon {
         width: 27px !important;
         height: 27px;
         aspect-ratio: 1;
@@ -238,19 +249,19 @@ html body.cre-t-29.cre-t-29-fees .cre_t_29_membership_section .elementor-widget-
 
 /* css for affirming care page */
 
-html body.cre-t-29.cre-t-29-care {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] {
     background-color: #fff;
 }
 
-html body.cre-t-29.cre-t-29-care [data-elementor-type="header"] {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] [data-elementor-type="header"] {
     background-color: transparent !important;
 }
 
-html body.cre-t-29.cre-t-29-care #content .page-content>[data-elementor-type="wp-page"]>[data-element_type="container"] {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #content .page-content>[data-elementor-type="wp-page"]>[data-element_type="container"] {
     background: transparent !important;
 }
 
-html body.cre-t-29.cre-t-29-care .cre-t-29-hero-bg {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] .cre-t-29-hero-bg {
     background: linear-gradient(180deg, rgba(255, 149, 0, 0.10) 0%, rgba(255, 165, 161, 0.50) 84%, #FFF 100%);
     width: 100%;
     height: 995px;
@@ -260,7 +271,7 @@ html body.cre-t-29.cre-t-29-care .cre-t-29-hero-bg {
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
 }
 
-html body.cre-t-29.cre-t-29-care #move-form-el::after {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #move-form-el::after {
     content: " ";
     width: calc(100% + 13px);
     height: calc(100% + 22px);
@@ -272,7 +283,7 @@ html body.cre-t-29.cre-t-29-care #move-form-el::after {
 
 }
 
-html body.cre-t-29.cre-t-29-care #top-pos-el h1.elementor-heading-title.elementor-size-default {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #top-pos-el h1.elementor-heading-title.elementor-size-default {
     background: linear-gradient(180deg, #FF9500 0%, #BE00FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -281,12 +292,12 @@ html body.cre-t-29.cre-t-29-care #top-pos-el h1.elementor-heading-title.elemento
 }
 
 
-html body.cre-t-29.cre-t-29-care #top-pos-el .elementor-widget-icon-list .elementor-icon-list-icon svg {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #top-pos-el .elementor-widget-icon-list .elementor-icon-list-icon svg {
     display: none;
 }
 
 
-html body.cre-t-29.cre-t-29-care #top-pos-el .elementor-widget-icon-list .elementor-icon-list-icon {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #top-pos-el .elementor-widget-icon-list .elementor-icon-list-icon {
     width: 16px !important;
     height: 16px;
     flex-shrink: 0;
@@ -298,24 +309,24 @@ html body.cre-t-29.cre-t-29-care #top-pos-el .elementor-widget-icon-list .elemen
     margin-top: 3px;
 }
 
-html body.cre-t-29.cre-t-29-care .form-pagebreak-next-container button {
+html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] .form-pagebreak-next-container button {
     background-color: rgba(135, 52, 163, 1) !important;
     border-color: rgba(135, 52, 163, 1) !important;
 }
 
 @media screen and (max-width: 767px) {
-    html body.cre-t-29.cre-t-29-care .cre-t-29-hero-bg {
+    html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] .cre-t-29-hero-bg {
         height: 1095px;
         clip-path: none;
     }
 
-    html body.cre-t-29.cre-t-29-care #move-form-el::after {
+    html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #move-form-el::after {
         width: calc(100% + 6px);
         height: calc(100% + 22px);
         border-radius: 20px;
     }
 
-    html body.cre-t-29.cre-t-29-care #top-pos-el .elementor-widget-icon-list .elementor-icon-list-icon {
+    html body.cre-t-29.cre-t-29-care[data-path="/accessing-gender-affirming-care/"] #top-pos-el .elementor-widget-icon-list .elementor-icon-list-icon {
         width: 27px !important;
         height: 27px;
         aspect-ratio: 1;
