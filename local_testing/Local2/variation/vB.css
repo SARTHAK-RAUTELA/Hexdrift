@@ -6,10 +6,13 @@ html body [data-attribute="booking_details_First_table"] h2:before {
     left: 0;
     right: 0;
 }
-html body  [data-attribute="booking_details_First_table"] h2 {
+
+html body [data-attribute="booking_details_First_table"] h2 {
     color: transparent;
+    position: relative;
 }
-html body  [data-attribute="booking_details_First_table"] p:before {
+
+html body [data-attribute="booking_details_First_table"] p:before {
     content: "Pay a small booking fee and enjoy 50% off the food bill for two, three, or four diners.";
     display: inline-block;
     position: absolute;
@@ -17,7 +20,9 @@ html body  [data-attribute="booking_details_First_table"] p:before {
     right: 0;
     color: rgb(39, 43, 46);
     padding: 0 29px;
+    padding-right: 0;
 }
-html body  [data-attribute="booking_details_First_table"] p {
+
+html body [data-attribute="booking_details_First_table"] p {
     color: transparent;
 }
