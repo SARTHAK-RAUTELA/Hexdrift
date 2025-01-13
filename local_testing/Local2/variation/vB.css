@@ -1,13 +1,23 @@
-/* --------------SEA244 Control-------------------- */
-html body .site-header__links > .site-header__button {
-    display: none;
+html body [data-attribute="booking_details_First_table"] h2:before {
+    content: "Save 50% on your meal";
+    display: inline-block;
+    position: absolute;
+    color: rgb(39, 43, 46);
+    left: 0;
+    right: 0;
 }
-html body .site-header__mobile-links > [href="/orlando/vacation-packages"] {
-    display: none;
+html body  [data-attribute="booking_details_First_table"] h2 {
+    color: transparent;
 }
-html body .site-header__mobile-links .site-header__button {
-    font-family: "Poppins Medium", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    padding-left: 8px;
+html body  [data-attribute="booking_details_First_table"] p:before {
+    content: "Pay a small booking fee and enjoy 50% off the food bill for two, three, or four diners.";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: rgb(39, 43, 46);
+    padding: 0 29px;
+}
+html body  [data-attribute="booking_details_First_table"] p {
+    color: transparent;
 }
