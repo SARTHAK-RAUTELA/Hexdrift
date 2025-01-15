@@ -1,28 +1,37 @@
-html body [data-attribute="booking_details_First_table"] h2:before {
-    content: "Save 50% on your meal";
-    display: inline-block;
-    position: absolute;
-    color: rgb(39, 43, 46);
-    left: 0;
-    right: 0;
-}
+@media screen and (max-width:767px) {
 
-html body [data-attribute="booking_details_First_table"] h2 {
-    color: transparent;
-    position: relative;
-}
-
-html body [data-attribute="booking_details_First_table"] p:before {
-    content: "Pay a small booking fee and enjoy 50% off the food bill for two, three, or four diners.";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    color: rgb(39, 43, 46);
-    padding: 0 29px;
-    padding-right: 0;
-}
-
-html body [data-attribute="booking_details_First_table"] p {
-    color: transparent;
-}
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
+      color: transparent;
+      position: relative;
+      font-size: 0;
+      padding: 0px 20px;
+      margin-top: 60px;
+    }
+  
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1::after {
+      color: #fff !important;
+      content: "Your Adventure in Iceland, Made Easy at the Best Price";
+      font-size: 20px;
+      width: 100%;
+    }
+    
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] [class*='FrontCover_description']{
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+  
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] [class*='FrontCover_description']{
+      color: transparent;
+      position: relative;
+      font-size: 0;
+    }
+  
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] [class*='FrontCover_description']::after {
+      color: #fff !important;
+      content: "As Iceland's largest travel marketplace, we offer the lowest prices from over 2000+ providers—guaranteed";
+      width: 100%;
+      font-size: 14px;
+    }
+  
+  
+  }
