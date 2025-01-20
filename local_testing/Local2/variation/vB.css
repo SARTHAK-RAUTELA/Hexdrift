@@ -1,37 +1,20 @@
-@media screen and (max-width:767px) {
+html body.cre-t-245 .cre-t-245-para {
+  padding: 0px 16px;
+  color: #050D11;
+  /* font-family: Poppins; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
 
-    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
-      color: transparent;
-      position: relative;
-      font-size: 0;
-      padding: 0px 20px;
-      margin-top: 60px;
-    }
-  
-    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1::after {
-      color: #fff !important;
-      content: "Your Adventure in Iceland, Made Easy at the Best Price";
-      font-size: 20px;
-      width: 100%;
-    }
-    
-    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] [class*='FrontCover_description']{
-        margin-left: 10px;
-        margin-bottom: 10px;
-    }
-  
-    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] [class*='FrontCover_description']{
-      color: transparent;
-      position: relative;
-      font-size: 0;
-    }
-  
-    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] [class*='FrontCover_description']::after {
-      color: #fff !important;
-      content: "As Iceland's largest travel marketplace, we offer the lowest prices from over 2000+ providers—guaranteed";
-      width: 100%;
-      font-size: 14px;
-    }
-  
-  
+
+
+@media screen and (max-width: 768px) {
+  html body.cre-t-245 .cre-t-245-para {
+    text-align: start;
+    font-size: 16px;
+    line-height: 20px;
   }
+}
