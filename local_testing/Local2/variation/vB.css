@@ -15,6 +15,8 @@ html body.SWF_15 #page .inside-article [id*='modal']+div .gb-inside-container {
 
 html body.SWF_15 .site-main>article>.inside-article>.entry-content>.gb-container:first-of-type .gb-inside-container {
   padding-bottom: 0;
+  display: flex;
+    justify-content: flex-end;
 }
 
 html body.SWF_15 .swf_section {
@@ -195,4 +197,10 @@ html body.SWF_15 .cre-t-15-cap {
 
 html body.SWF_15 .gb-grid-wrapper>.gb-grid-column-ec8626f2>.gb-container {
   justify-content: flex-end;
+  width: 240px;
+}
+
+.gb-grid-wrapper > .gb-grid-column-ec8626f2{
+  justify-content: flex-end;
+    display: flex;
 }
