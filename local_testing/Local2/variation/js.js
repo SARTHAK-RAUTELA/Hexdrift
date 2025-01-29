@@ -1,89 +1,49 @@
 (function () {
-    try {
+  try {
+      console.log("Testing the script"); // Fixed case-sensitive typo in console.log
+
       /* main variables */
       var debug = 1;
-      var variation_name = "cre-t-48-redirection";
-  
-      /* helper library */
-      var _$;
-      !(function (factory) {
-        _$ = factory();
-      })(function () {
-        var bm = function (s) {
-          if (typeof s === "string") {
-            this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-          }
-          if (typeof s === "object") {
-            this.value = [s];
-          }
-        };
-        bm.prototype = {
-          eq: function (n) {
-            this.value = [this.value[n]];
-            return this;
-          },
-          each: function (fn) {
-            [].forEach.call(this.value, fn);
-            return this;
-          },
-          log: function () {
-            var items =[];
-            for (let index = 0; index < arguments.length; index++) {
-              items.push(arguments[index]);
-            }
-            console && console.log(variation_name, items);
-          },
-          addClass: function (v) {
-            var a = v.split(" ");
-            return this.each(function (i) {
-              for (var x = 0; x < a.length; x++) {
-                if (i.classList) {
-                  i.classList.add(a[x]);
-                } else {
-                  i.className += " " + a[x];
-                }
-              }
-            });
-          },
-          waitForElement: function (
-            selector,
-            trigger,
-            delayInterval,
-            delayTimeout
-          ) {
-            var interval = setInterval(function () {
-              if (_$(selector).value.length) {
-                clearInterval(interval);
-                trigger();
-              }
-            }, delayInterval);
-            setTimeout(function () {
-              clearInterval(interval);
-            }, delayTimeout);
-          },
-        };
-        return function (selector) {
-          return new bm(selector);
-        };
-      });
-  
-      var helper = _$();
-  
-      /* Variation Init */
-      function init() {
-        
-        if(sessionStorage.getItem('cre-t-48-pricing-redirect')){
-          if(window.location.pathname === "/pricing"){
-          convert.redirect("/pricing-ft");
-        }
-      }
-    }
+      var variation_name = "cre-t-19";
 
-    init();
-  
-    //   /* Initialise variation */
-    //   helper.waitForElement("body", init, 50, 5000);
-    } catch (e) {
-      if (debug) console.log(e, "error in Test" + variation_name);
-    }
-  })();
+      function waitForElement(selector, trigger) {
+          console.log("Starting waitForElement for selector:", selector);
+          var interval = setInterval(function () {
+              console.log("Checking for selector:", selector);
+              var element = document.querySelector(selector); // Cache query result
+              if (element) {
+                  console.log("Element found: ", selector);
+                  clearInterval(interval);
+                  trigger(element); // Pass the element to the callback
+              }
+          }, 50);
+          setTimeout(function () {
+              clearInterval(interval);
+              console.log("Timeout reached for selector: ", selector);
+          }, 15000);
+      }
+
+      function init(searchButton) {
+          console.log("Initialization started for: ", variation_name);
+          if (searchButton) {
+              console.log("Clicking the search button");
+              searchButton.click();
+              // Goal after redirection
+              window._conv_q = window._conv_q || [];
+              window._conv_q.push(["triggerConversion", "100034716"]);
+              console.log("Conversion trigger pushed for goal 100034716");
+          } else {
+              console.log("Search button not found during initialization");
+          }
+      }
+
+      waitForElement('[data-testid="search__button"]', init);
+      console.log("Waiting for the body and search button to load...");
+      
+
+  } catch (e) {
+      if (debug) {
+          console.error("Error in Test " + variation_name + ": ", e);
+      }
+  }
+})();
