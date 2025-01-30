@@ -8,6 +8,9 @@ html body .gb-inside-container .shortcode-tooltip-ad {
 
 html body.SWF_15 #page .inside-article [id*='modal']+div .gb-inside-container {
   padding-bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 html body.SWF_15 .site-main>article>.inside-article>.entry-content>.gb-container:first-of-type .gb-inside-container {
@@ -52,7 +55,8 @@ html body.SWF_15 .swf_section .swf_container .swf_heading {
   position: relative;
   /* text-transform: capitalize !important; */
 }
-html body.SWF_15 .swf_section .swf_container .swf_heading span{
+
+html body.SWF_15 .swf_section .swf_container .swf_heading span {
   text-transform: capitalize !important;
 }
 
@@ -103,8 +107,8 @@ html body.SWF_15 .swf_section .swf_container .swf_item {
   list-style: none;
 }
 
-html body.SWF_15 #page .inside-article [id*="modal"]+.gb-grid-wrapper .wp-block-image {
-  min-width: 375px;
+html body.SWF_15 #page figure:has([src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/dogwithgirl_6797758aa4296.png"]) {
+  max-width: 242px;
   width: 100%;
 }
 
@@ -135,12 +139,14 @@ html body.SWF_15 #page .inside-article [id*="modal"]+div>div.gb-grid-column:nth-
 @media screen and (max-width: 767px) {
   html body.SWF_15 #page .inside-article [id*="modal"]+.gb-grid-wrapper .wp-block-image {
       display: flex;
-              justify-content: center;
-              min-width: 0;
-              max-width: 90%;
-              margin: 0 auto;
+      justify-content: center;
+      /* min-width: fit-content; */
   }
-  
+
+  html body.SWF_15 #page .inside-article [id*='modal']+div .gb-inside-container{
+      justify-content: center !important  ;
+  }
+
 }
 
 @media (max-width:500px) {
@@ -178,22 +184,23 @@ html body.SWF_15 #page .inside-article [id*="modal"]+div>div.gb-grid-column:nth-
 
 
 html body[data-path='/'].SWF_15 .swf_section .swf_container .swf_heading,
-html body[data-path="/comparison/"].SWF_15 .swf_section .swf_container .swf_heading{
+html body[data-path="/comparison/"].SWF_15 .swf_section .swf_container .swf_heading {
   text-transform: initial !important;
 }
 
-html body.SWF_15 .cre-t-15-cap{
+html body.SWF_15 .cre-t-15-cap {
   text-transform: capitalize !important;
-  box-shadow : none !important;
+  box-shadow: none !important;
 }
 
-html body.SWF_15 .gb-grid-wrapper > .gb-grid-column-ec8626f2 > .gb-container{
+html body.SWF_15 .gb-grid-wrapper>.gb-grid-column-ec8626f2>.gb-container {
   justify-content: flex-end;
 }
 
+html body.SWF_15 .gb-grid-column:has( [src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/image-4_676d295e48e49.svg"]){
+  padding-left: 0 !important;
+}
 
-@media screen and (min-width: 767px){
-  html body.SWF_15 .gb-grid-column:has( [src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/new-dog-cat-1_6798c2125ad43.png"]){
-      padding-left: 0 !important;
-  }
+html body.SWF_15 #page .inside-article [id*='modal']+div >div:nth-child(2) .gb-inside-container{
+  justify-content: flex-end;
 }
