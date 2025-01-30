@@ -154,6 +154,9 @@ html body.SWF_15 #page .inside-article [id*="modal"]+div>div.gb-grid-column:nth-
       font-size: 22px;
       line-height: 32.8px;
   }
+  html body.SWF_15 .swf_section{
+    padding-bottom: 0px;
+  }
 }
 
 @media (max-width:400px) {
