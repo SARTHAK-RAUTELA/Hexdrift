@@ -1,183 +1,322 @@
-if (!window.location.pathname.includes('/what-happens-next-treatment-review/') && 
-    !window.location.pathname.includes('/next-steps/')){
-
-      
-
-(function () {
-    try {
-        /* main variables */
-        var debug = 1;
-        var variation_name = "test123";
-
-        function waitForElement(selector, trigger) {
-            var interval = setInterval(function () {
-                if (
-                    document &&
-                    document.querySelector(selector) &&
-                    document.querySelectorAll(selector).length > 0
-                ) {
-                    clearInterval(interval);
-                    trigger();
-                }
-            }, 50);
-            setTimeout(function () {
-                clearInterval(interval);
-            }, 15000);
-        }
-
-        function live(selector, event, callback, context) {
-            /****Helper Functions****/
-            // helper for enabling IE 8 event bindings
-            function addEvent(el, type, handler) {
-                if (el.attachEvent) el.attachEvent("on" + type, handler);
-                else el.addEventListener(type, handler);
+"/k/maids/near-me": {
+    "20536052": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "44247502": {
+        "Header": "Check out [#] maids for hire near you",
+            "ProListTitle": "Top 10 maids for hire near you"
+    },
+    "44247542": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "60864311": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "89314777": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "291711867": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "446173449": {
+        "Header": "Check out [#] maids for hire near you",
+            "ProListTitle": "Top 10 maids for hire near you"
+    },
+    "645379061": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "694589773": {
+        "Header": "Check out [#] maids for hire near you",
+            "ProListTitle": "Top 10 maids for hire near you"
+    },
+    "694592593": {
+        "Header": "Check out [#] maids for hire near you",
+            "ProListTitle": "Top 10 maids for hire near you"
+    },
+    "694598593": {
+        "Header": "Check out [#] maids for hire near you",
+            "ProListTitle": "Top 10 maids for hire near you"
+    },
+    "694598953": {
+        "Header": "Check out [#] maids for hire near you",
+            "ProListTitle": "Top 10 maids for hire near you"
+    },
+    "694603723": {
+        "Header": "Check out [#] professional maids near you",
+            "ProListTitle": "Top 10 professional maids near you"
+    },
+    "694604053": {
+        "Header": "Check out [#] professional maids near you",
+            "ProListTitle": "Top 10 professional maids near you"
+    },
+    "934999194": {
+        "Header": "Check out cost estimates from [#] maids near you",
+            "ProListTitle": "Get cost estimates from the top 10 maids near you"
+    },
+    "1163594301": {
+        "Header": "Check out [#] maid services near you",
+            "ProListTitle": "Top 10 maid services near you"
+    },
+    "1464666527": {
+        "Header": "Check out price estimates from [#] maids near you",
+            "ProListTitle": "Get price estimates from the top 10 maids near you"
+    },
+    "2044533421": {
+        "Header": "Check out price estimates from [#] maids near you",
+            "ProListTitle": "Get price estimates from the top 10 maids near you"
+    },
+    "2145127839": {
+        "Header": "Check out [#] affordable maids near you",
+            "ProListTitle": "Top 10 affordable maids near you"
+    },
+    "2512938540": {
+        "Header": "Check out [#] of the best maids near you",
+            "ProListTitle": "Best maids near you"
+    },
+    "2512939020": {
+        "Header": "Check out [#] of the best maids near you",
+            "ProListTitle": "Best maids near you"
+    },
+    "2814597510": {
+        "Header": "Check out [#] affordable maids near you",
+            "ProListTitle": "Top 10 affordable maids near you"
+    },
+    "2814629370": {
+        "Header": "Check out [#] affordable maids near you",
+            "ProListTitle": "Top 10 affordable maids near you"
+    },
+    "3744111097": {
+        "Header": "Check out cost estimates from [#] maids near you",
+            "ProListTitle": "Get cost estimates from the top 10 maids near you"
+    },
+     "20536052": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "44247502": {
+                "Header": "Check out [#] maids for hire near you",
+                    "ProListTitle": "Top 10 maids for hire near you"
+            },
+            "44247542": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "60864311": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "89314777": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "291711867": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "446173449": {
+                "Header": "Check out [#] maids for hire near you",
+                    "ProListTitle": "Top 10 maids for hire near you"
+            },
+            "645379061": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "694589773": {
+                "Header": "Check out [#] maids for hire near you",
+                    "ProListTitle": "Top 10 maids for hire near you"
+            },
+            "694592593": {
+                "Header": "Check out [#] maids for hire near you",
+                    "ProListTitle": "Top 10 maids for hire near you"
+            },
+            "694598593": {
+                "Header": "Check out [#] maids for hire near you",
+                    "ProListTitle": "Top 10 maids for hire near you"
+            },
+            "694598953": {
+                "Header": "Check out [#] maids for hire near you",
+                    "ProListTitle": "Top 10 maids for hire near you"
+            },
+            "694603723": {
+                "Header": "Check out [#] professional maids near you",
+                    "ProListTitle": "Top 10 professional maids near you"
+            },
+            "694604053": {
+                "Header": "Check out [#] professional maids near you",
+                    "ProListTitle": "Top 10 professional maids near you"
+            },
+            "934999194": {
+                "Header": "Check out cost estimates from [#] maids near you",
+                    "ProListTitle": "Get cost estimates from the top 10 maids near you"
+            },
+            "1163594301": {
+                "Header": "Check out [#] maid services near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "1464666527": {
+                "Header": "Check out price estimates from [#] maids near you",
+                    "ProListTitle": "Get price estimates from the top 10 maids near you"
+            },
+            "2044533421": {
+                "Header": "Check out price estimates from [#] maids near you",
+                    "ProListTitle": "Get price estimates from the top 10 maids near you"
+            },
+            "2145127839": {
+                "Header": "Check out [#] affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "2512938540": {
+                "Header": "Check out [#] of the best maids near you",
+                    "ProListTitle": "Best maids near you"
+            },
+            "2512939020": {
+                "Header": "Check out [#] of the best maids near you",
+                    "ProListTitle": "Best maids near you"
+            },
+            "2814597510": {
+                "Header": "Check out [#] affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "2814629370": {
+                "Header": "Check out [#] affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "3744111097": {
+                "Header": "Check out cost estimates from [#] maids near you",
+                    "ProListTitle": "Get cost estimates from the top 10 maids near you"
+            },
+            "82157254840": {
+                "Header": "Find affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "5371717886": {
+                "Header": "Find affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "5371667246": {
+                "Header": "Find affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "5371721306": {
+                "Header": "Find affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "298916029577": {
+                "Header": "Find affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "5051137527": {
+                "Header": "Find affordable maids near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "333780604044": {
+                "Header": "Check out quotes from [#] maids near you",
+                    "ProListTitle": "Get quotes from the top 10 maids near you"
+            },
+            "13082977925": {
+                "Header": "Check out quotes from [#] maids near you",
+                    "ProListTitle": "Get quotes from the top 10 maids near you"
+            },
+            "312566735163": {
+                "Header": "Check out cost estimates from [#] maids near you",
+                    "ProListTitle": "Get cost estimates from the top 10 maids near you"
+            },
+            "306031028574": {
+                "Header": "Check out cost estimates from [#] maids near you",
+                    "ProListTitle": "Get cost estimates from the top 10 maids near you"
+            },
+            "12802134977": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "55938479041": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "2279972969416": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "296431060059": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "73346494000": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "335816414563": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "295431834136": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "65809244270": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "374311921157": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "606508575764": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "69045631238": {
+                "Header": "Check out maid services from [#] near you",
+                    "ProListTitle": "Top 10 maid services near you"
+            },
+            "5085975268": {
+                "Header": "Check out the best maids from [#] near you",
+                    "ProListTitle": "Best maids near you"
+            },
+            "393228502750": {
+                "Header": "Check out experienced maids from [#] near you",
+                    "ProListTitle": "Top 10 experienced maids near you"
+            },
+            "2190860015260": {
+                "Header": "Check out experienced maids from [#] near you",
+                    "ProListTitle": "Top 10 experienced maids near you"
+            },
+            "297975270129": {
+                "Header": "Check out top maids from [#] near you",
+                    "ProListTitle": "Top 10 maids near you"
+            },
+            "5507713372": {
+                "Header": "Check out quality maids from [#] near you",
+                    "ProListTitle": "Top 10 quality maids near you"
+            },
+            "4802024857": {
+                "Header": "Check out top maids from [#] near you",
+                    "ProListTitle": "Top 10 maids near you"
+            },
+            "390451942458": {
+                "Header": "Check out quality maids from [#] near you",
+                    "ProListTitle": "Top 10 quality maids near you"
+            },
+            "4958875594": {
+                "Header": "Check out the best maids from [#] near you",
+                    "ProListTitle": "Best maids near you"
+            },
+            "299285950942": {
+                "Header": "Check out affordable maids from [#] near you",
+                    "ProListTitle": "Top 10 affordable maids near you"
+            },
+            "297260441215": {
+                "Header": "Check out cost estimates from [#] maids near you",
+                    "ProListTitle": "Get cost estimates from the top 10 maids near you"
+            },
+            "301257594417": {
+                "Header": "Check out cost estimates from [#] maids near you",
+                    "ProListTitle": "Get cost estimates from the top 10 maids near you"
             }
-            // matches polyfill
-            this && this.Element &&
-                (function (ElementPrototype) {
-                    ElementPrototype.matches =
-                        ElementPrototype.matches ||
-                        ElementPrototype.matchesSelector ||
-                        ElementPrototype.webkitMatchesSelector ||
-                        ElementPrototype.msMatchesSelector ||
-                        function (selector) {
-                            var node = this,
-                                nodes = (
-                                    node.parentNode || node.document
-                                ).querySelectorAll(selector),
-                                i = -1;
-                            while (nodes[++i] && nodes[i] != node);
-                            return !!nodes[i];
-                        };
-                })(Element.prototype);
-            // live binding helper using matchesSelector
-            function live(selector, event, callback, context) {
-                addEvent(context || document, event, function (e) {
-                    var found,
-                        el = e.target || e.srcElement;
-                    while (
-                        el &&
-                        el.matches &&
-                        el !== context &&
-                        !(found = el.matches(selector))
-                    )
-                        el = el.parentElement;
-                    if (found) callback.call(el, e);
-                });
-            }
-            live(selector, event, callback, context);
-        }
-
-        var form_20 = `
-          <div class="cre-20-form">
-              <div class="cre-20-form-heading" >Are you currently taking gender affirming medication?</div>
-              <div class="form-single-column">
-                  <label class="form-radio-item cre-20-yes">
-                      <input type="radio" name="consent" value="yes">
-                      Yes
-                  </label>
-                  <label class="form-radio-item cre-20-no">
-                      <input type="radio" name="consent" value="no">
-                      No
-                  </label>
-              </div>
-          </div>`;
-
-        var dummyButtonsOnNewStep = `
-        <div class="cre-t-20-formButons">
-             <div class="cre-dummy-back-button form-pagebreak-back jf-form-buttons">
-                Back
-            </div>
-
-            <div class="cre-dummy-next-button form-pagebreak-next jf-form-buttons form-submit-button-orange-500">
-                Next
-            </div>
-        </div>`;
-
-        function selectSecondOptionForDropdowns() {
-            const dropdowns = document.querySelectorAll('ul[data-step="current-medication-step"] [data-type="control_dropdown"] select');
-            dropdowns.forEach((dropdown) => {
-                if (dropdown.options.length >= 2) {
-                    dropdown.selectedIndex = 1;
-                }
-            });
-        }
-
-        function eventHandler() {
-
-            live('[data-step="current-medication-step"] .cre-dummy-next-button', "click", function () {
-                if (document.querySelector(".cre-20-yes input").checked) {
-                    waitForElement('ul[data-step="current-medication-step"]', function () {
-                        document.querySelector('ul[data-step="current-medication-step"]').classList.add("cre20YesSelected");
-                        document.querySelector('ul[data-step="current-medication-step"]').classList.add("cre-20-stepParsed");
-                    })
-                } else if (document.querySelector(".cre-20-no input").checked) {
-                    document.querySelector('ul[data-step="current-medication-step"]').classList.add("cre-20-stepParsed");
-                    document.querySelector('ul[data-step="current-medication-step"]').classList.add("cre20NoSelected");
-                    selectSecondOptionForDropdowns();
-
-                    waitForElement('ul[data-step="current-medication-step"]  [data-type="control_radio"] >label', function () {
-                        document.querySelector('ul[data-step="current-medication-step"]  [data-type="control_radio"] >label').innerHTML = "Do you have capacity to consent to your own medical treatment?";
-                        document.querySelector('ul[data-step="current-medication-step"]  [data-type="control_radio"] .form-single-column >span:nth-child(1) label').innerText = "Yes";
-                        document.querySelector('ul[data-step="current-medication-step"]  [data-type="control_radio"] .form-single-column >span:nth-child(2) label').innerText = "No";
-                        document.querySelector('ul[data-step="current-medication-step"]  [data-type="control_radio"] .form-single-column >span:nth-child(3) label').innerText = "Someone is helping me";
-                    })
-                }
-            })
-
-            live('[data-step="current-medication-step"] .cre-dummy-back-button', "click", function () {
-                if (document.querySelector('[data-step="current-medication-step"]  .form-pagebreak [data-component="pagebreak-back"]')) {
-                    document.querySelector('[data-step="current-medication-step"]  .form-pagebreak [data-component="pagebreak-back"]').click()
-                }
-                document.querySelector('ul[data-step="current-medication-step"].cre-20-stepParsed')?.classList.remove("cre-20-stepParsed");
-            })
-
-            live(".cre-dummyBack","click",function(){
-                document.querySelector(".cre20YesSelected")?.classList.remove("cre20YesSelected");
-                document.querySelector(".cre20NoSelected")?.classList.remove("cre20NoSelected");
-                document.querySelector(".cre-20-stepParsed")?.classList.remove("cre-20-stepParsed");
-
-            })
-
-        }
-
-        function init() {
-            waitForElement('ul[data-step="current-medication-step"]', function () {
-                document.querySelector("body").classList.add("CRE-20");
-
-                if (!document.querySelector(".cre-20-form")) {
-                    document.querySelector(`ul[data-step="current-medication-step"]`).insertAdjacentHTML("afterbegin", form_20);
-                }
-
-            })
-
-            waitForElement('[data-step="current-medication-step"]', function () {
-                if (!document.querySelector(".cre-t-20-formButons")) {
-                    document.querySelector('[data-step="current-medication-step"]').insertAdjacentHTML("beforeend", dummyButtonsOnNewStep)
-                }
-            })
-
-            waitForElement('[data-step="current-medication-step"] .form-pagebreak-back-container button',function(){
-                if(!document.querySelector('.cre-dummyBack')){
-                    document.querySelector('[data-step="current-medication-step"] .form-pagebreak-back-container button').insertAdjacentHTML("beforebegin","<div class='cre-dummyBack form-pagebreak-back jf-form-buttons'>Back</div>")
-                }
-            })
-
-            if (!window.eventListenerAddedTest159) {
-                window.eventListenerAddedTest159 = true;
-                eventHandler()
-            }
-        }
-
-        if (!window.location.pathname.includes('/what-happens-next-treatment-review/') &&
-            !window.location.pathname.includes('/next-steps/')) {
-            init()
-        }
-
-    } catch (e) {
-        if (debug) console.log(e, "error in Test" + variation_name);
-    }
-})();
-
-
-}
+},
