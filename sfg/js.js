@@ -45,8 +45,13 @@
                   var spanElement = document.querySelector('#pro_list_header > span');
                   var firstChildNode = spanElement ? spanElement.childNodes[0] : null;
                   if (headerElement) headerElement.innerHTML = headerTitle;
-                  if (firstChildNode && firstChildNode.nodeType === Node.TEXT_NODE) firstChildNode.nodeValue = proListTitle;
-              } else if (uniqueDataObject[pagePath] && uniqueDataObject[pagePath][kwId]) {
+                  if (spanElement && firstChildNode && firstChildNode.nodeType === Node.TEXT_NODE) {
+                      firstChildNode.nodeValue = proListTitle;
+                  }
+                  return;
+              }
+              
+              if (uniqueDataObject[pagePath] && uniqueDataObject[pagePath][kwId]) {
                   var extractedNumberHeader = null;
                   var extractedNumberProList = null;
 
