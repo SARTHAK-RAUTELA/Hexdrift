@@ -4679,7 +4679,7 @@
                     "ProListTitle": "Get cost estimates from the top [#] move out cleaners near you"
                 }
             },
-            "/k/home-organizers/near-me/": {
+            "/k/home-organizers/near-me": {
                 "2176887054701": {
                     "Header": "Check out [#] affordable home organizers near you",
                     "ProListTitle": "Top [#] affordable home organizers near you"
@@ -5132,7 +5132,7 @@
                     "ProListTitle": "Get cost estimates from the top 10 fence installers near you"
                 }
             },
-            "/k/gate-companies/near-me/": {
+            "/k/gate-companies/near-me": {
                 "298144421420": {
                     "Header": "Get a cost estimate from gate installers near you",
                     "ProListTitle": "Get cost estimates from the top 10 gate installers near you"
@@ -5618,7 +5618,7 @@
                     var extractedNumberHeader = null;
                     var extractedNumberProList = null;
 
-                    var spanElementHeader = document.querySelector('.Type_title3___voqu.Type_title3___voqu span');
+                    var spanElementHeader = document.querySelector('[class*="hero-header_filtersBreakpointLarge"] h2 span');
                     if (spanElementHeader) {
                         var numberMatchHeader = spanElementHeader.textContent.trim().match(/\d+/);
                         if (numberMatchHeader) extractedNumberHeader = numberMatchHeader[0];

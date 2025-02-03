@@ -1,0 +1,20 @@
+html body.cre-t-17.cre-t-03 .gb-inside-container [class*='insurance_pannel'][data-before="1"] {
+    padding-bottom: 0px !important;
+}
+
+
+html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel'][data-before="1"] {
+    padding-bottom: 31px !important;
+}
+
+html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel_best'] {
+    padding-bottom: 0 !important;
+}
+
+html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel_best'] .cre-t-button-test17 {
+    padding-bottom: 0 !important;
+}
+
+html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel_best'] .gb-button-wrapper {
+    margin-bottom: 30px;
+}
