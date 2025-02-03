@@ -2,6 +2,9 @@ html body.cre-t-17.cre-t-03 .gb-inside-container [class*='insurance_pannel'][dat
     padding-bottom: 0px !important;
 }
 
+html body.cre-t-17.cre-t-03 [class*='insurance_pannel'][data-before="1"]  .gb-button-wrapper{
+margin-bottom: 12px;
+}
 
 html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel'][data-before="1"] {
     padding-bottom: 31px !important;

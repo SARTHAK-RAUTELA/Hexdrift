@@ -41,6 +41,8 @@ html body.cre-t-17 [class*='insurance_pannel'] .gb-button-wrapper {
         font-size: 15px !important;
     }
 
+
+
     html body.cre-t-13.cre-t-17 [data-before="1"] .cre_t_13_container {
         bottom: -30px;
     }
@@ -69,3 +71,5 @@ html body.cre-t-17 [class*='insurance_pannel'] .gb-button-wrapper {
         margin-bottom: 30px;
     }
 }
+
+html body.cre-t-17 .cre-t-button-test17

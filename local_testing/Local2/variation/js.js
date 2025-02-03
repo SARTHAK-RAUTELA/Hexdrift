@@ -13251,10 +13251,11 @@
                     var is_file = false;
                     var className = removeNonAlphanumeric(path);
 
+
                     if (!document.querySelector(`.cre-t-36-list-container-${className}`)) {
                         if (owner === null) {
                             var html = `
-                    <div class="cre-t-36-list-container cre-t-36-list-container-${index} cre-t-36-list-container-${className} ${title === "Specialist Sets" && "cre-t-36-display"}" >
+                    <div class="cre-t-36-list-container cre-t-36-list-container-${index} cre-t-36-list-container-${className} ${title === "Specialist Sets" ? "cre-t-36-display" : ""}" data-cre-text="${path.toLowerCase()}">
                       <div class="cre-t-36-folder-title-container">
                         <div class="cre-t-36-folder-title-icon">
                           ${parent_folder_html}
@@ -13271,7 +13272,7 @@
                         }
                         else {
                             var html = `
-                    <div class="cre-t-36-list-container cre-t-36-list-container-${index} cre-t-36-list-container-${className}" >
+                    <div class="cre-t-36-list-container cre-t-36-list-container-${index} cre-t-36-list-container-${className}" data-cre-text="${className}" >
                       <div class="cre-t-36-folder-title-container">
                         <div class="cre-t-36-folder-title-icon">
                           ${folder_html}
@@ -13296,14 +13297,12 @@
                 var className = removeNonAlphanumeric(title);
 
                 var html = `
-                  <div data-tree-string="${item.path}" data-file-title="${title}" data-task-red="${item.taskCounts['Red'] ?? 0}" data-task-amber="${item.taskCounts['Amber'] ?? 0}" class="cre-t-36-list-final cre-t-36-list-final-${className}" >
+                  <div data-tree-string="${item.path}" data-file-title="${title}" data-task-red="${item.taskCounts['Red'] ?? 0}" data-task-amber="${item.taskCounts['Amber'] ?? 0}" class="cre-t-36-list-final cre-t-36-list-final-${className}" data-cre-text="${title.toLowerCase()}">
                       ${file_html}
                       <span class="cre-t-36-list-final-title" >${title}</span>
                       <p class="cre-t-36-file-description cre-t-36-hide">${item.summary ?? ""}</p>
                   </div>`;
                 document.querySelector(`.cre-t-36-list-container-${owner}`).insertAdjacentHTML("beforeend", html);
-
-
             })
         }
 
@@ -13317,15 +13316,29 @@
                       <div class="cre-t-36-text-section">
                           <h2 class="cre-t-36-title">Explore our comprehensive library of maintenance schedules</h2>
                           <p class="cre-t-36-subtitle">
-                              Browse over 1,000 detailed schedules, covering all aspects of building management—from Building Fabric to Catering and Healthcare—all regularly updated to reflect the latest legislation.
+                              Search or browse over 1,000 detailed schedules, covering all aspects of building management—from Building Fabric to Catering and Healthcare—all regularly updated to reflect the latest legislation.
                           </p>
                           <!-- <div class="cre-t-36-default-play">
                               <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG30/Vector.svg" alt="">
                               <span>See an example maintenance schedule</span>
                           </div> -->
                       </div>
+                      <div class="cre-t-36-search-bar">
+                        <input
+                            type="text"
+                            class="cre-t-36-search-input"
+                            placeholder="Search for a maintenance schedule..."
+                        />
+                        <button class="cre-t-36-search-button">
+                            <img src="https://i.ibb.co.com/9qZ3LP4/sfg-36-search.png" alt="sfg-36-search">
+                        </button>
+                        <button class="cre-t-36-search-reset cre-t-36-hide">
+                            <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/SFG20/SFG25/cross.svg" alt="cross">
+                        </button>
+                      </div>
+                      <p class="cre-t-36-search-message"></p>
+
                       <div class="cre-t-36-main-list-container">
-  
                       </div>
                   </div>
               </div>
@@ -13527,6 +13540,142 @@
 
         }
 
+
+
+        function resetSearch() {
+            document.body.classList.remove("cre-t-36-searched");
+
+            var searchMessage = document.querySelector(".cre-t-36-search-message");
+            var mainContainer = document.querySelector(".cre-t-36-main-list-container");
+            var searchButton = document.querySelector(".cre-t-36-search-button");
+            var resetButton = document.querySelector(".cre-t-36-search-reset");
+
+            if (mainContainer) {
+                var matchedElements = mainContainer.querySelectorAll(".cre_search_matched");
+
+                matchedElements.forEach(function (item) {
+                    var spanElement = item.querySelector("span");
+                    if (spanElement) {
+                        spanElement.innerHTML = spanElement.innerHTML.replace(
+                            /<matched class="cre-t-36-matched-words">|<\/matched>/g,
+                            ""
+                        );
+                    }
+                    item.classList.remove("cre_search_matched");
+                });
+
+                var matchedParents = mainContainer.querySelectorAll(".cre_search_matched_parent");
+                matchedParents.forEach(function (item) {
+                    item.classList.remove("cre_search_matched_parent");
+                });
+
+                var elementsShowAll = mainContainer.querySelectorAll(".cre-t-36-show-all");
+                elementsShowAll.forEach(function (item) {
+                    item.classList.remove("cre-t-36-show-all");
+                });
+
+                if (searchMessage) searchMessage.innerHTML = "";
+                if (searchButton) searchButton.classList.remove("cre-t-36-hide");
+                if (resetButton) resetButton.classList.add("cre-t-36-hide");
+            }
+        }
+
+        function highlightText(item, texts) {
+            var spanElement = item.querySelector("span");
+            if (!spanElement) return;
+
+            var highlightedHTML = spanElement.innerHTML;
+            var MATCH_START = "__MATCH_START__";
+            var MATCH_END = "__MATCH_END__";
+
+            texts.forEach(function (text) {
+                var safeText = text.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+                var regex = new RegExp("(" + safeText + ")", "gi");
+                highlightedHTML = highlightedHTML.replace(regex, MATCH_START + "$1" + MATCH_END);
+            });
+
+            highlightedHTML = highlightedHTML
+                .split(MATCH_START).join('<matched class="cre-t-36-matched-words">')
+                .split(MATCH_END).join("</matched>");
+
+            spanElement.innerHTML = highlightedHTML;
+        }
+
+        function highlightParentContainers(item) {
+            var parent = item.parentElement.closest(".cre-t-36-list-container");
+            while (parent) {
+                parent.classList.add("cre_search_matched_parent");
+                parent = parent.parentElement.closest(".cre-t-36-list-container");
+            }
+        }
+
+        function displaySearchResult() {
+            resetSearch();
+
+            var searchInput = document.querySelector(".cre-t-36-search-input");
+            if (!searchInput) return;
+
+            var textContent = searchInput.value.trim();
+            if (!textContent) return;
+
+            // Split input into words, removing extra spaces
+            var words = textContent.toLowerCase().split(/\s+/);
+
+            // Remove words that contain only special characters
+            var texts = words.filter(function (word) {
+                return /[a-zA-Z0-9]/.test(word); // Keep only words that contain letters or numbers
+            });
+
+            if (texts.length === 0) return; // Stop if there's nothing valid to search
+
+            var searchMessage = document.querySelector(".cre-t-36-search-message");
+            var mainContainer = document.querySelector(".cre-t-36-main-list-container");
+
+            if (!mainContainer) return;
+
+            var selector = texts.map(function (text) {
+                return '[data-cre-text*="' + text + '"]';
+            }).join(",");
+
+            var matchedElements = mainContainer.querySelectorAll(selector);
+            document.body.classList.add("cre-t-36-searched");
+
+            if (matchedElements.length === 0) {
+                if (searchMessage) {
+                    // console.log("object");
+                    searchMessage.innerHTML = "No results found for '<span>" + textContent + "</span>'";
+                }
+                return;
+            }
+
+
+            var searchButton = document.querySelector(".cre-t-36-search-button");
+            var resetButton = document.querySelector(".cre-t-36-search-reset");
+
+            if (searchButton) searchButton.classList.add("cre-t-36-hide");
+            if (resetButton) resetButton.classList.remove("cre-t-36-hide");
+
+            matchedElements.forEach(function (item) {
+                item.classList.add("cre_search_matched");
+                highlightText(item, texts);
+                highlightParentContainers(item);
+            });
+
+            if (searchMessage) {
+                searchMessage.innerHTML = "Showing results for '<span>" + textContent + "</span>'";
+            }
+        }
+
+        // Attach event listener for real-time search
+        var searchInput = document.querySelector(".cre-t-36-search-input");
+        if (searchInput) {
+            searchInput.addEventListener("input", displaySearchResult);
+        }
+
+
+
+
+
         function eventListeners() {
             // file click listener
             waitForElement(".cre-t-36-modal-main", function () {
@@ -13538,9 +13687,19 @@
                         var description = splitStringByLimit(fileElement.querySelector("p.cre-t-36-file-description").textContent, 142);
                         var modalDescription = document.querySelector(".cre-t-36-modal-file-description");
                         modalDescription.textContent = description.firstPart;
-                        modalDescription.insertAdjacentHTML("beforeend", `<span class="cre-t-36-dots">...</span>`);
-                        modalDescription.insertAdjacentHTML("beforeend", `<span class="cre-t-36-hidden-text"> ${description.rest}</span>`);
-                        modalDescription.insertAdjacentHTML("beforeend", `<span class="cre-t-36-see-more">See more ${seeMore}</span>`);
+                        // console.log(description);
+                        if (description.rest && description.rest.trim().length > 0) {
+                            modalDescription.insertAdjacentHTML("beforeend", `<span class="cre-t-36-dots">...</span>`);
+                            modalDescription.insertAdjacentHTML("beforeend", `<span class="cre-t-36-hidden-text"> ${description.rest}</span>`);
+                            modalDescription.insertAdjacentHTML("beforeend", `<span class="cre-t-36-see-more">See more ${seeMore}</span>`);
+                        }
+                        else {
+                            // console.log(modalDescription);
+                            if (modalDescription.querySelector(".cre-t-36-dots")) modalDescription.querySelector(".cre-t-36-dots").remove();
+                            if (modalDescription.querySelector(".cre-t-36-hidden-text")) modalDescription.querySelector(".cre-t-36-hidden-text").remove();
+                            if (modalDescription.querySelector(".cre-t-36-see-more")) modalDescription.querySelector(".cre-t-36-see-more").remove();
+                        }
+
 
 
                         var redTask = parseInt(fileElement.getAttribute("data-task-red"));
@@ -13575,14 +13734,14 @@
                     document.querySelector('.cre-t-36-modal-content-wrapper').classList.remove("cre-t-36-display-default");
                     var circularProgress = document.querySelectorAll(".circular-progress");
 
-                    Array.from(circularProgress).forEach((progressBar) => {
+                    Array.from(circularProgress).forEach(function (progressBar) {
                         var startValue = 0,
                             endValue = Number(progressBar.getAttribute("data-percentage")),
                             speed = 50,
                             progressColor = progressBar.getAttribute("data-progress-color");
 
                         if (endValue > startValue) {
-                            var progress = setInterval(() => {
+                            var progress = setInterval(function () {
                                 if (document.querySelector(".cre-t-36-personalized-contents .cre-t-36-modal-title").textContent.trim() !== fileElement.getAttribute("data-file-title").trim()) {
                                     clearInterval(progress);
                                 }
@@ -13594,7 +13753,7 @@
                                 }
                             }, speed);
 
-                            setTimeout(() => {
+                            setTimeout(function () {
                                 clearInterval(progress);
                             }, speed * endValue);
 
@@ -13604,30 +13763,46 @@
 
                     });
 
+                    // remove this code because selectors changed
                     if (!document.querySelector(".cre-t-36-modal-container .hs-dependent-field div.hs_full_name.hs-full_name.hs-fieldtype-text.field.hs-form-field")) {
                         var fullname = document.querySelector(".cre-t-36-modal-container div.hs_full_name.hs-full_name.hs-fieldtype-text.field.hs-form-field");
-                        if (fullname) {
+                        if (fullname && document.querySelector(".cre-t-36-modal-container .hs-dependent-field")) {
                             document.querySelector(".cre-t-36-modal-container .hs-dependent-field").insertAdjacentElement("afterbegin", fullname);
                         }
-
                     }
 
                     document.querySelector('.cre-t-36-modal-main').classList.remove('cre-t-36-modal-hidden');
                 });
             }, 25, 25000);
 
-
             live("span.cre-t-36-see-more", "click", function () {
                 var parent = this.closest(".cre-t-36-modal-file-description");
                 parent.classList.toggle("cre-t-36-expanded");
-            })
-
-
-            live(".cre-t-36-folder-title-container", 'click', function (event) {
-                event.target.closest(".cre-t-36-list-container").classList.toggle("cre-t-36-display");
             });
 
+            // for normal folder click
+            live(".cre-t-36:not(.cre-t-36-searched) .cre-t-36-folder-title-container", 'click', function (event) {
+                var container = event.target.closest(".cre-t-36-list-container");
+                container.classList.toggle("cre-t-36-display");
+            });
 
+            // for searched folder click
+            live(".cre-t-36.cre-t-36-searched .cre-t-36-folder-title-container", 'click', function (event) {
+                var container = this.closest(".cre-t-36-list-container");
+                if (container.classList.contains("cre_search_matched_parent")) {
+                    container.classList.toggle("cre-t-36-hide-with-search-result");
+                }
+                else {
+                    if (this.closest(".cre-t-36-show-all") && !this.parentElement.classList.contains("cre-t-36-show-all")) {
+                        this.parentElement.classList.toggle("cre-t-36-show-all");
+                    }
+                    else {
+                        container.classList.toggle("cre-t-36-show-all");
+                    }
+                }
+
+
+            });
 
             waitForElement(".cre-t-36-modal-main", function () {
                 live(".cre-t-36-default-play", 'click', function () {
@@ -13636,8 +13811,6 @@
                 });
             }, 25, 25000);
 
-
-
             // close button f
             waitForElement(".cre-t-36-modal-main", function () {
                 live(".cre-t-36-modal-close", 'click', function () {
@@ -13645,7 +13818,6 @@
                     modal.classList.add('cre-t-36-modal-hidden');
                 });
             }, 25, 25000);
-
 
             // clicks outside the modal content and the file
             waitForElement(".cre-t-36-modal-main", function () {
@@ -13662,7 +13834,31 @@
                 document.querySelector(".cre-t-36-form-title").scrollIntoView({ behavior: "smooth" });
             })
 
+            live(".cre-t-36-search-bar button.cre-t-36-search-button", "click", displaySearchResult);
 
+            live(".cre-t-36-search-bar button.cre-t-36-search-reset", "click", function () {
+                resetSearch();
+                document.querySelector(".cre-t-36-search-input").value = "";
+            });
+
+            live(".cre-t-36-search-bar input", "keydown", function (e) {
+                if (e.key === "Enter") {
+                    displaySearchResult();
+                }
+            })
+
+            live(".cre-t-36-search-bar input", "input", function (e) {
+                if (e.target.value === "") {
+                    resetSearch();
+                }
+                else {
+                    var searchButton = document.querySelector(".cre-t-36-search-button");
+                    if (searchButton.classList.contains("cre-t-36-hide")) {
+                        document.querySelector(".cre-t-36-search-button").classList.remove("cre-t-36-hide");
+                        document.querySelector(".cre-t-36-search-reset").classList.add("cre-t-36-hide");
+                    }
+                }
+            })
 
         }
 
@@ -13683,22 +13879,6 @@
                 }
 
             }
-            // live('.cre-t-36-modal-main [value="Book your demo"]', function () {
-            //     if (location.href.startsWith('https://www.sfg20.co.uk/maintenance-schedules')) {
-            //         window.addEventListener("message", function (event) {
-            //             if (event.data.type === 'hsFormCallback' && (event.data.eventName === 'onFormError')) {
-            //                 window._conv_q = window._conv_q || [];
-            //                 _conv_q.push(["triggerConversion", "100034460"]);
-            //                 console.log("error on form test 36")
-            //             }
-            //         });
-            //     }
-            // })
-
-
-
-
-
         }
         waitForElement("#dynamicTreeView", init, 50, 15000);
     } catch (e) {
