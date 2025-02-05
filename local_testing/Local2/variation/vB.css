@@ -1,23 +1,88 @@
-html body.cre-t-17.cre-t-03 .gb-inside-container [class*='insurance_pannel'][data-before="1"] {
-    padding-bottom: 0px !important;
+html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo {
+    display: flex !important;
+    margin-top: 30px;
+    gap: 50px;
 }
 
-html body.cre-t-17.cre-t-03 [class*='insurance_pannel'][data-before="1"]  .gb-button-wrapper{
-margin-bottom: 12px;
+html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo img {
+    max-width: 171px;
+    width: 100%;
 }
 
-html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel'][data-before="1"] {
-    padding-bottom: 31px !important;
+html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo img:last-child {
+    max-width: 200px;
+    width: 100%;
 }
 
-html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel_best'] {
-    padding-bottom: 0 !important;
+html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo {
+    position: relative;
+    z-index: 9999;
 }
 
-html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel_best'] .cre-t-button-test17 {
-    padding-bottom: 0 !important;
+html[lang='en'] body[data-path="/"].CRE_EXP_47 [class*="FrontCover_headerWrapper"] .Cre_banner_logo:first-child {
+    gap: 80px;
 }
 
-html body.cre-t-17.cre-t-13 .gb-inside-container [class*='insurance_pannel_best'] .gb-button-wrapper {
-    margin-bottom: 30px;
+@media(max-width:960px) {
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo {
+        margin-top: 35px;
+    }
+}
+
+@media(max-width:1200px) and (min-width:768px) {
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 #frontCoverChildrenWrapper {
+        bottom: 25px;
+    }
+}
+
+@media(max-width:768px) {
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo {
+        order: -1;
+    }
+
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo img {
+        max-width: 100px;
+    }
+
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo img:last-child {
+        max-width: 120px;
+    }
+
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
+        margin-top: 35px !important;
+    }
+}
+
+@media screen and (min-width:769px) {
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo {
+        order: 3;
+    }
+}
+
+
+@media screen and (min-width:960px) and (max-width:1215px) {
+    html[lang="en"] body[data-path="/"][data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
+        margin-top: 12px !important;
+    }
+}
+
+@media screen and (min-width:1130px) and (max-width:1210px) {
+    html[lang=en] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo {
+        margin-top: 10px !important;
+    }
+}
+
+
+
+
+
+@media screen and (min-width:800px) and (max-width:900px) {
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo img {
+        height: 80px !important;
+        margin-right: 22px;
+    }
+
+    html[lang='en'] body[data-path="/"].CRE_EXP_47 .Cre_banner_logo img:last-child {
+        height: 80px !important;
+    }
 }
