@@ -1,218 +1,222 @@
-(function () {
-	try {
-	  /* main variables */
-	  var debug = 1;
-	  var variation_name = "cre-t-48";
-  
-	  /* helper library */
-	  var _$;
-	  !(function (factory) {
-		_$ = factory();
-	  })(function () {
-		var bm = function (s) {
-		  if (typeof s === "string") {
-			this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-		  }
-		  if (typeof s === "object") {
-			this.value = [s];
-		  }
-		};
-		bm.prototype = {
-		  eq: function (n) {
-			this.value = [this.value[n]];
-			return this;
-		  },
-		  each: function (fn) {
-			[].forEach.call(this.value, fn);
-			return this;
-		  },
-		  log: function () {
-			var items = [];
-			for (let index = 0; index < arguments.length; index++) {
-			  items.push(arguments[index]);
-			}
-			console && console.log(variation_name, items);
-		  },
-		  addClass: function (v) {
-			var a = v.split(" ");
-			return this.each(function (i) {
-			  for (var x = 0; x < a.length; x++) {
-				if (i.classList) {
-				  i.classList.add(a[x]);
-				} else {
-				  i.className += " " + a[x];
-				}
-			  }
-			});
-		  },
-		  waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-			var interval = setInterval(function () {
-			  if (_$(selector).value.length) {
-				clearInterval(interval);
-				trigger();
-			  }
-			}, delayInterval);
-			setTimeout(function () {
-			  clearInterval(interval);
-			}, delayTimeout);
-		  },
-		};
-		return function (selector) {
-		  return new bm(selector);
-		};
-	  });
-  
-	  var creHeader = `
-		<div class="cre-t-48-modal-new-modal-header w-full text-wrap text-left text-2xl font-bold max-lg:text-center">Sign up for a <span>Free</span> 3-day trial</div>
-		<div class="cre-t-48-cta flex items-center justify-center">
-		  <a href="/pricing-ft?yt3=true" class="cre-t-48-cta-link flex items-center justify-center transition-colors bg-dark-navy text-white h-10 p-6 rounded-md mt-4 w-full">
-			<span>Start Free Trial</span>
-			<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="ms-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-			  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
-			</svg>
-		  </a>
-		</div>
-	  `;
-  
-	  var creList = `
-	  
-	<li class="flex flex-row gap-x-1.5"><img alt="Green Checkbox" loading="eager" width="24" height="25" decoding="async"
-		data-nimg="1" class="aspect-square h-5 w-5 shrink-0"
-		srcset="/_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=48&amp;q=75 2x"
-		src="/_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=48&amp;q=75"
-		style="color: transparent;" data-cmp-info="10"><span
-		class="text-[18px] font-medium leading-none text-light-gray">The #1 AI Detector according to Forbes</span></li>
-	<li class="flex flex-row gap-x-1.5"><img alt="Green Checkbox" loading="eager" width="24" height="25" decoding="async"
-		data-nimg="1" class="aspect-square h-5 w-5 shrink-0"
-		srcset="/_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=48&amp;q=75 2x"
-		src="/_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=48&amp;q=75"
-		style="color: transparent;" data-cmp-info="10"><span
-		class="text-[18px] font-medium leading-none text-light-gray">Lets you use AI confidently for school and
-		work</span></li>
-	<li class="flex flex-row gap-x-1.5"><img alt="Green Checkbox" loading="eager" width="24" height="25" decoding="async"
-		data-nimg="1" class="aspect-square h-5 w-5 shrink-0"
-		srcset="/_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=48&amp;q=75 2x"
-		src="/_next/image?url=https%3A%2F%2Factive-thrill-a62d706f43.media.strapiapp.com%2Fgreen_Check_Round_1_daf4022da8.png&amp;w=48&amp;q=75"
-		style="color: transparent;" data-cmp-info="10"><span
-		class="text-[18px] font-medium leading-none text-light-gray">Saves you time and is easy to use</span></li>
-	  `;
-  
-	  var helper = _$();
-  
-	  const observeSelector = (selector, callback, options = {}) => {
-		const document = options.document || window.document;
-		const processed = new Map();
-  
-		if (options.timeout || options.onTimeout) {
-		  throw `observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`;
-		}
-  
-		let obs;
-		let isDone = false;
-  
-		const done = () => {
-		  if (obs) obs.disconnect();
-		  isDone = true;
-		};
-  
-		const processElement = (el) => {
-		  if (!processed.has(el)) {
-			processed.set(el, true);
-			callback(el);
-			if (options.once) {
-			  done();
-			  return true;
-			}
-		  }
-		  return false;
-		};
-  
-		const lookForSelector = (elParent) => {
-		  if (elParent.matches(selector) && processElement(elParent)) {
-			return true;
-		  }
-		  const elements = elParent.querySelectorAll(selector);
-		  for (const el of elements) {
-			if (processElement(el)) return true;
-		  }
-		  return false;
-		};
-		lookForSelector(document.documentElement);
-  
-		if (!isDone) {
-		  obs = new MutationObserver((mutationsList) => {
-			for (const record of mutationsList) {
-			  if (record && record.addedNodes && record.addedNodes.length) {
-				for (const addedNode of record.addedNodes) {
-				  const el = addedNode.parentElement;
-				  if (el && lookForSelector(el)) return true;
-				}
-			  }
-			}
-		  });
-		  obs.observe(document, {
-			attributes: false,
-			childList: true,
-			subtree: true,
-		  });
-		}
-		return done;
-	  };
-  
-	  function setCookie(key){
-		document.cookie = `${key}=true; path=/`;
-	  }
-  
-  
-	  /* Variation Init */
-	  function init() {
-		if (!window.cre48Observer) {
-  
-		  //static cookie added 
-		 
-		  setCookie('cre-t-48-static-cookie-yt3');
-		  
-  
-		  observeSelector('[data-selector="cre-ai-modal-header"]', () => {
-			if (document.querySelector('[data-attribute="logged-out"]')) {
-			  if (window.location.pathname === "/" || window.location.pathname === "/detector-humanizer" || window.location.pathname === "/ai-humanizer") {
-				if (document.querySelector('[data-selector="cre-ai-modal-header"]').closest(".flex.h-full.w-full.flex-col")) {
-				  document.querySelector('[data-selector="cre-ai-modal-header"]').closest(".flex.h-full.w-full.flex-col").classList.add("cre-t-48-modal");
-  
-				  document.querySelector(".cre-t-48-modal") && document.querySelector(".cre-t-48-modal").parentElement.classList.add("cre-t-48-modal-parent");
-  
-				  if (!document.querySelector(".cre-t-48-modal-new-modal-header")) {
-					document.querySelector('[data-selector="cre-ai-modal-header"]').insertAdjacentHTML("beforebegin", creHeader);
-					document.querySelector('[data-cre-light-box="true"] ul').innerHTML = creList;
-  
-					document.querySelector('html[lang="en"] body[data-attribute="logged-out"]  [data-cre-light-box="true"] .mx-auto   > p + p').textContent = "Start your FREE trial now!";
-					document.querySelector('html[lang="en"] body[data-attribute="logged-out"]  [data-cre-light-box="true"] > div div div > p.text-left.font-bold ').childNodes[0].textContent = "Humanize AI Text, and Bypass Content Detectors";
-				  }
-				  sessionStorage.setItem("cre-t-48-pricing-redirect-yt3", "true");
-				}
-			  }
-			}
-		  });
-  
-		  document.addEventListener("click", function (e) {
-			if(e.target.closest("[data-tooltip-id='login-tooltip']") || e.target.getAttribute("data-tooltip-id") === "login-tooltip"){
-			  if (document.querySelector('[data-attribute="logged-out"]')){
-				if (window.location.pathname === "/" || window.location.pathname === "/detector-humanizer" || window.location.pathname === "/ai-humanizer"){
-				  window.location.href = "/login-ft";
-				  document.body.classList.add("cre-t-48-login-ft");
-				}
-			  }
-			}
-		  })
-  
-  
-		  window.cre48Observer = true;
-		}
-	  }
-  
-	  /* Initialise variation */
-	  helper.waitForElement("body", init, 50, 5000);
-	} catch (e) {
-	  if (debug) console.log(e, "error in Test" + variation_name);
-	}
-  })();
+//Cro Mode (QA Test cookie)
+(function() {
+
+    // Utility Functions
+    function setCookie(name, value, options = {}) {
+        let {
+            duration,
+            domain,
+            sameSite = 'Lax'
+        } = options;
+        domain = domain || window.location.hostname.split('.').slice(-2).join('.');
+        let expires = '';
+        if (duration) {
+            let date = new Date();
+            date.setTime(date.getTime() + (duration * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = `${name}=${value}; Path=/; Domain=${domain}; SameSite=${sameSite}${expires}`;
+    }
+
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Extract QA mode logic
+    function enableQAMode(mode) {
+        if (mode === 'qa') {
+            console.log(`CRO Mode enabled: ${mode}`);
+            setCookie('cro_mode', mode, {
+                duration: 1
+            });
+        } else {
+            //console.log('CRO Mode disabled');
+            setCookie('cro_mode', '', {
+                duration: -1
+            });
+        }
+    }
+
+    // Initialize CRO Mode
+    function initCROMode() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let mode = urlParams.get('cro_mode') || getCookie('cro_mode');
+        if (mode === 'qa') {
+            enableQAMode(mode);
+            console.log("QA Mode Active");
+            // Place any QA mode specific logic here
+        } else {
+            enableQAMode('');
+        }
+    }
+
+    initCROMode();
+})();
+
+
+
+// The code below is added for the Convert Experiments experiments and manual location trigger
+(function() {
+  try {
+      var debug = 1;
+
+      /**
+       * setup Team
+       */
+      // LIBRARY FUNCTIONS
+      var lib = {
+
+          waitForElement(selector, trigger, delayInterval, delayTimeout) {
+              var interval = setInterval(function() {
+                  if (
+                      document &&
+                      document.querySelector(selector) &&
+                      document.querySelectorAll(selector).length > 0
+                  ) {
+                      clearInterval(interval);
+                      trigger();
+                  }
+              }, delayInterval);
+              setTimeout(function() {
+                  clearInterval(interval);
+              }, delayTimeout);
+          },
+
+      };
+
+      lib.waitForElement('body', function() {
+        // The following code will help in developing the test.
+        if (document && document.querySelector && document.querySelector('body')) {
+            document.querySelector('body').dataset.path = window.location.pathname;
+            
+        }
+    }, 50, 15000);
+
+
+
+
+      var experiments = {
+          // Experiments 
+
+
+          genderGpUrls_10() {
+
+              const genderGpUrls = [
+                  "/help-centre/gendergp-service-costs/",
+                  "/trans-sex-education/",
+                  "/help-centre/professionals-contact/",
+                  "/help-centre/surgery-referral/",
+                  "/help-centre/request-a-one-off-prescription/",
+                  "/help-centre/patients-membership/",
+                  "/locations/",
+                  "/about/updates-and-information/",
+                  "/the-gendergp-fund/",
+                  "/help-centre/reduced-costs/",
+                  "/brochure/",
+                  "/news/",
+                  "/testimonials/",
+                  "/gendergp-network/marianne-oakes/",
+                  "/podcasts/",
+                  "/pharmacy-hub/prescriber-credentials/",
+                  "/raising-concerns/",
+                  "/advocacy/petition/",
+                  "/gendergp-network/jayne-olden/",
+                  "/gendergp-network/jackie-swarbrick/",
+                  "/gender-affirming-treatment-for-trans-youth/",
+                  "/important-documents/",
+                  "/gendergp-network/james-byrne/",
+                  "/follow-up-form/",
+                  "/nhse/",
+                  "/non-binary-hub/",
+                  "/test-stripe-button/",
+                  "/help-centre/pathology-alternatives/",
+                  "/case-studies/",
+                  "/advocacy/correspondence/",
+                  "/gendergp-network/claire-booth/",
+                  "/mpts-testimonials/",
+                  "/annual-reviews/",
+                  "/trans-woman-hub/",
+                  "/guidance/",
+                  "/gendergp-network/diana-hattersley/",
+                  "/advocacy-hub/nhs-digital/",
+                  "/new-patient-prescribing-protocols/",
+                  "/help-centre/media-enquiries/",
+                  "/medical-hub/professional-indemnity/",
+                  "/advocacy/",
+                  "/gmc-requests-to-meet/",
+                  "/advocacy/bell-and-mrs-a-v-tavistock/",
+                  "/treatment-review/",
+                  "/gender-questioning-hub/",
+                  "/how-should-i-support-my-trans-child/",
+                  "/trans-man-hub/",
+                  "/voice-workshops/",
+                  "/help-centre/patients-membership-20/",
+                  "/rcgp/",
+                  "/check-subscription/",
+                  "/huffington-post/",
+                  "/advocacy/affirmative-care-for-trans-youth-live-discussion/",
+                  "/media-exposure/",
+                  "/payments_joining-fee/",
+                  "/subscribe-to-podcast/",
+                  "/advocacy-hub/british-menopause-society/article-template/",
+                  "/blood-testing-alternatives/",
+                  "/enrolment-checklist/",
+                  "/f87h43/",
+                  "/geo/",
+                  "/help-centre_old/patients-membership-20/",
+                  "/join-our-pharmacy-network/",
+                  "/kindness-counts/",
+                  "/page/",
+                  "/payments_formal-diagnosis-letter-fee/",
+                  "/payments_set-up-fee/",
+                  "/prescription-check/",
+                  "/project/",
+                  "/where-now/",
+                  "/write-to-the-bbc/",
+                  "/help-centre/blood-testing-services/",
+                  "/",
+                  "/treatment-reviews/",
+                  "/consent-session/",
+                  "/what-happens-next/",
+                  "/next-steps/",
+                  "/new-form-test/",
+                  "/jobs/",
+                  "/payments_travelling-with-medication-fee/",
+                  "/payments_paper-prescription-fee/",
+                  "/payments_electronic-prescription-fee/",
+                  "/team-requests/",
+                  "/quality-assurance-feedback/",
+                  "/workbox/",
+                  "/thank-you-for-subscribing/",
+                  "/feedback-gender-affirming/",
+                  "/workspace/",
+                  "/sitemap/",
+                  "/your-message-has-been-successfully-sent/"
+              ];
+
+              if (window.location.href.includes("https://www.gendergp.com/") && genderGpUrls.includes(window.location.pathname)) {
+                  console.log("condition matched")
+                  window.Gender_10 = 1;
+                  window._conv_q = window._conv_q || [];
+                  window._conv_q.push(["executeExperiment", "100045070"]);
+                  // console.log('Special URL detected:', currentURL);
+              }
+
+          }
+      };
+
+      //Activate Gender_10 activated
+      experiments.genderGpUrls_10();
+
+
+  } catch (e) {
+      if (debug) console.log(e, "Error in Global JavaScript");
+  }
+})();
