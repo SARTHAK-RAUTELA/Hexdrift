@@ -1,0 +1,17 @@
+/* Hide banner for logged-out users */
+html body:not(.logged_in_users).TT-163 [class*="app-upsell-banner-shared_fadeIn"] {
+    display: none !important;
+}
+
+/* Show banner for logged-in users */
+html body.logged_in_users.TT-163 [class*="app-upsell-banner-shared_fadeIn"] {
+    display: flex !important;
+}
+
+https://www.thumbtack.com/
+
+
+
+html body:not(.logged_in_users) [class*="app-upsell-banner-shared_fadeIn"]{
+display: none !important;
+}
