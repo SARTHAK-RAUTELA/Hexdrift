@@ -1,73 +1,25 @@
-html body.cre-t-09 header#top nav,
-html body.cre-t-09 #page-header-wrap{
-    display: none !important;
-}
-
-html body.cre-t-09 [data-cre-form-container="true"] .left >div.vc_col-sm-4,
-html body.cre-t-09 [data-cre-form-container="true"].reach-mobile,
-html body.cre-t-09 .container-wrap .reach-skip-trim,
-html #footer-outer #footer-widgets{
+html body .removeSection {
     display: none;
 }
 
-html body.cre-t-09 #header-space[data-header-mobile-fixed="1"]{
-    min-height: 90px !important;
+html body.cre-t-258-control .chip-list__container {
+    margin-bottom: 0px;
 }
 
-html body.cre-t-09.hide_discount_bar #header-space[data-header-mobile-fixed="1"]{
-    height: auto;
-}
-
-html body header#top #logo{
-    margin-top: 10px;
-    margin-bottom: 10px;
+html body.cre-t-258-control [data-contains-gold="true0"] {
+    margin-top: 20px !important;
 }
 
 
-html body.cre-t-09 .cre-t-09-banner-container{
-    background: #D9D9D9;
+
+html body .removeSection {
+    display: none;
 }
 
-html body.cre-t-09 .cre-t-09-banner-wrapper{
-    display: flex;
-    justify-content: center;
-    padding: 8.25px 5px;
+html body.cre-t-258-variation .chip-list__container {
+    margin-bottom: 0px;
 }
 
-html body.cre-t-09 .cre-t-09-banner-text{
-    color: rgba(0, 0, 0, 0.80);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-}
-
-html body.cre-t-09 form.reach-form input[type="button"]{
-    width: 100%;
-    max-width: 173px;
-    border-radius: 5px !important;
-    background: #333;
-    margin-bottom: 10px;
-    padding: 12px 0;
-    font-size: 16px;
-}
-
-html body.cre-t-09 form.reach-form input[value="Submit Application"]{
-    width: 100%;
-    max-width: 173px;
-    border-radius: 5px !important;
-    /* padding: 12px 0 !important; */
-    font-size: 16px;
-    height: 45px;
-}
-
-@media screen and (max-width:1200px){
-    html body.cre-t-09 #ajax-content-wrap{
-        margin-top: 30px;
-    }
-}
-
-html body.cre-t-09.hide_discount_bar #ajax-content-wrap{
-    margin-top: 0px !important;
+html body.cre-t-258-variation [data-contains-gold="true1"] {
+    margin-top: 20px !important;
 }

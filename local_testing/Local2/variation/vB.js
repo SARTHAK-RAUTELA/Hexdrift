@@ -1,10 +1,8 @@
 (function () {
   try {
-    /* main variables */
     var debug = 1;
-    var variation_name = "cre-t-258-variation";
+    var variation_name = "cre-t-258-control";
 
-    /* helper library */
     var _$;
     !(function (factory) {
       _$ = factory();
@@ -92,21 +90,21 @@
       });
     }
 
-    trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .product-placement-detail-modal__cart-button', "sea258_-_atc_of_any_pass");
+    trackEvent('.cre-t-258-control [data-contains-gold="true0"] .product-placement-detail-modal__cart-button', "sea258_-_atc_of_any_pass");
 
-    trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .product-placement-card__wrapper .product-placement-card', "sea258_-_atc_of_any_product__on_either_page_");
+    trackEvent('.cre-t-258-control [data-contains-gold="true0"] .product-placement-card__wrapper .product-placement-card', "sea258_-_atc_of_any_product__on_either_page_");
 
-    trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .modal__wrapper:has(div[data-display-name="Platinum Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_platinum_pass__either_page_");
+    trackEvent('.cre-t-258-control [data-contains-gold="true0"] .modal__wrapper:has(div[data-display-name="Platinum Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_platinum_pass__either_page_");
 
-    trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .modal__wrapper:has(div[data-display-name="Silver Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_silver_pass__either_page_");
-    trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .modal__wrapper:has(div[data-display-name="Gold Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_gold_pass__either_page_");
+    trackEvent('.cre-t-258-control [data-contains-gold="true0"] .modal__wrapper:has(div[data-display-name="Silver Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_silver_pass__either_page_");
+    trackEvent('.cre-t-258-control [data-contains-gold="true0"] .modal__wrapper:has(div[data-display-name="Gold Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_gold_pass__either_page_");
 
     if (window.location.pathname === "/tampa/annual-pass-b/" || window.location.pathname === "/tampa/annual-pass/") {
-      trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .modal__wrapper:has(div[data-display-name="Bronze Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_bronze_pass");
+      trackEvent('.cre-t-258-control [data-contains-gold="true0"] .modal__wrapper:has(div[data-display-name="Bronze Pass"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_bronze_pass");
     }
 
     if (window.location.pathname === "/tampa/tickets/fun-card-b/" || window.location.pathname === "/tampa/tickets/fun-card/") {
-      trackEvent('.cre-t-258-variation [data-contains-gold="true1"] .modal__wrapper:has(div[data-display-name="2025 Fun Card"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_2025_fun_card");
+      trackEvent('.cre-t-258-control [data-contains-gold="true0"] .modal__wrapper:has(div[data-display-name="2025 Fun Card"]) .modal__footer .product-placement-detail-modal__cart-button', "sea258_-_atc_of_2025_fun_card");
     }
 
     function insertDataAttributes() {
@@ -119,7 +117,7 @@
           if (additionalWrapper) {
             additionalWrapper.setAttribute("data-contains-gold", "true" + dataValue);
             dataValue++;
-            var captureSection = document.querySelector('[data-contains-gold="true0"]');
+            var captureSection = document.querySelector('[data-contains-gold="true1"]');
             if (captureSection) {
               captureSection.classList.add("removeSection");
             }
