@@ -97,10 +97,10 @@
     }
 
 
-    function changeJourneyPlaceholder() {
+    function changeJourneyPlaceholder(){
       const journeySelect = document.querySelector('[cre-test-id="brazil-sitewide"] select[name="journey"]');
       if (journeySelect) {
-        journeySelect.options[0].text = "What journey are you on? (Select)";
+          journeySelect.options[0].text = "What journey are you on? (Select)";
       }
     }
 
@@ -124,12 +124,6 @@
       }, 50, 25000);
     }
 
-    function setTimer() {
-      var now = new Date().getTime();
-      sessionStorage.setItem('cre_ggp_br_user_entered', now);
-    }
-
-
     function mobileModalTrigger() {
       var modalInterval = setInterval(() => {
         var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
@@ -143,7 +137,7 @@
 
               setTimeout(function () {
                 waitForElement('[cre-test-id="brazil-sitewide"] form', moveForm, 25, 25000);
-              }, 1000);
+              },1000);
               document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
               document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
 
@@ -158,10 +152,10 @@
       }, 50);
     }
 
-    // function setTimer() {
-    //   var now = new Date().getTime();
-    //   sessionStorage.setItem('cre_ggp_br_user_entered', now);
-    // }
+    function setTimer() {
+      var now = new Date().getTime();
+      sessionStorage.setItem('cre_ggp_br_user_entered', now);
+    }
 
     function eventListeners() {
 
@@ -195,15 +189,14 @@
 
 
       var wpcf7Elm = document.querySelector('[cre-test-id="brazil-sitewide"] .wpcf7-form');
-      wpcf7Elm && wpcf7Elm.addEventListener('wpcf7submit', function (event) {
-        console.log("Form coming braz il")
-        setTimeout(() => {
-          if (document.querySelector('[cre-test-id="brazil-sitewide"] .wpcf7-form.sent')) {
-            document.body.classList.add('signUpForm-submitted')
-            document.body.classList.add("cre_ggp_br-submitted");
-          }
-        }, 3000);
-      }, false);
+      if (wpcf7Elm) {
+          wpcf7Elm.addEventListener("wpcf7mailsent", function (event) {
+              if(event.detail.contactFormId === 103969){
+                document.body.classList.add("signUpForm-submitted");
+                document.body.classList.add("cre_ggp_br-submitted");
+              }
+          }, false);
+      }
 
     }
 
@@ -211,15 +204,8 @@
       if (!document.body.classList.contains(variation_name)) {
         document.body.classList.add(variation_name);
         addModal();
-        // waitForElement('[cre-test-id="brazil-sitewide"] select[name="journey"]', changeJourneyPlaceholder, 50, 15000);
-        // waitForElement(".cre_ggp_br_close", eventListeners, 50, 15000);
-
-        if (!window.cre_br_events) {
-          waitForElement('[cre-test-id="brazil-sitewide"] select[name="journey"]', changeJourneyPlaceholder, 50, 15000);
-          waitForElement(".cre_ggp_br_close", eventListeners, 50, 15000);
-          window.cre_br_events = true;
-        }
-
+        waitForElement('[cre-test-id="brazil-sitewide"] select[name="journey"]', changeJourneyPlaceholder, 50, 15000);
+        waitForElement(".cre_ggp_br_close", eventListeners, 50, 15000);
       }
     }
 
