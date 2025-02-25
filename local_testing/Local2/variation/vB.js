@@ -161,14 +161,14 @@
                 <div class="cre_popupshow">
                     <div class="Ctacontroll">
                         <p class='CrePrevious'>Previous</p>
-                        <p class="Cre_application">Next</p>
+                        <p class="Cre_application">Submit Application</p>
                     </div>
                     <div class="Cre_popupinside">
                         <h2>Pay your deposit</h2>
                         <p>Please pay now to guarantee ${name}’s course and ${courseDate}.</p>
                         <div class="cre_cta">
                             <span class="Cre_price">Pay Now (${price})</span>
-                            <span class="Cre_goaccount">Request to Pay Later</span>
+                            <span class="Cre_goaccount">Go to my account</span>
                         </div>
                     </div>
                 </div>

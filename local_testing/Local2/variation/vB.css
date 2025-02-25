@@ -1,18 +1,18 @@
-html body.cre-Cambridge_8 .cre_popupshow h2 {
+html body.cre-Cambridge_8V2 .cre_popupshow h2 {
   font-family: Open Sans;
   font-weight: 700;
   font-size: 16px;
   line-height: 21.79px;
   letter-spacing: 0%;
 }
-html body.cre-Cambridge_8 .cre_popupshow p {
+html body.cre-Cambridge_8V2 .cre_popupshow p {
   font-family: Open Sans;
   font-weight: 400;
   font-size: 13px;
   line-height: 17.7px;
   letter-spacing: 0%;
 }
-html body.cre-Cambridge_8 .cre_cta span {
+html body.cre-Cambridge_8V2 .cre_cta span {
   display: inline-block;
   border-radius: 4px;
   width: 185px;
@@ -27,27 +27,27 @@ html body.cre-Cambridge_8 .cre_cta span {
   letter-spacing: 0%;
   cursor: pointer;
 }
-html body.cre-Cambridge_8 .cre_cta {
+html body.cre-Cambridge_8V2 .cre_cta {
   display: flex;
   gap: 15px;
 }
-html body.cre-Cambridge_8 .cre_cta span:first-child {
+html body.cre-Cambridge_8V2 .cre_cta span:first-child {
   background-color: #69bbe6;
   color: #fff;
 }
-html body.cre-Cambridge_8 .cre_cta span:nth-child(2) {
+html body.cre-Cambridge_8V2 .cre_cta span:nth-child(2) {
    background: #F8F8F8;
    border: 1px solid #3333331A;
    color: #5f5f5f;
  
 }
-html body.cre-Cambridge_8.hidestup4 [style="width:75%;"] {
+html body.cre-Cambridge_8V2.hidestup4 [style="width:75%;"] {
 width: 100% !important;
 }
-html body.cre-Cambridge_8.hidestup4 .gf_progressbar.gf_progressbar_blue div span {
+html body.cre-Cambridge_8V2.hidestup4 .gf_progressbar.gf_progressbar_blue div span {
 color: transparent;
 }
-html body.cre-Cambridge_8.hidestup4 .gf_progressbar.gf_progressbar_blue div span:after {
+html body.cre-Cambridge_8V2.hidestup4 .gf_progressbar.gf_progressbar_blue div span:after {
   content: "100%";
   color: #fff;
   position: absolute;
@@ -57,12 +57,12 @@ html body.cre-Cambridge_8.hidestup4 .gf_progressbar.gf_progressbar_blue div span
   box-sizing: border-box;
   width: 97% !important;
 }
-html body.cre-Cambridge_8 .cre_popupshow {
+html body.cre-Cambridge_8V2 .cre_popupshow {
 display: block;
 width: 100%;
 clear: both;
 }
-html body.cre-Cambridge_8 .cre_paymenticon {
+html body.cre-Cambridge_8V2 .cre_paymenticon {
   margin-top: 12px;
 }
 .cre_paymenticon {
@@ -117,13 +117,13 @@ html body.cre-Cambridge_8 .cre_paymenticon {
 #gform_page_71_4[style="display:none;"] + .cre_popupshow{
    display: none;
 }
-html body.cre-Cambridge_8.Cre_removepopup .cre_popupshow{
+html body.cre-Cambridge_8V2.Cre_removepopup .cre_popupshow{
    display: none;
 }
-html body.cre-Cambridge_8.Cre_removepopup  #gform_page_71_4{
+html body.cre-Cambridge_8V2.Cre_removepopup  #gform_page_71_4{
    display: inline-block;
 }
-html body.cre-Cambridge_8.Cre_removepopup #gform_page_71_4 .gform_page_footer.top_label{
+html body.cre-Cambridge_8V2.Cre_removepopup #gform_page_71_4 .gform_page_footer.top_label{
   opacity: 1;
 }
 html body.hidestup4 #gf_progressbar_wrapper_71 > h3 div:after {
@@ -166,7 +166,7 @@ html body.hidestup4 #gf_progressbar_wrapper_71 .gf_progressbar_title span:nth-ch
     background-size: 50px;
 display:inline-block
 } */
-html body.cre-Cambridge_8 .cre_paymenticon img {
+html body.cre-Cambridge_8V2 .cre_paymenticon img {
   max-width: 184px;
 }
 html body.Cre_showcta .Ctacontroll {
