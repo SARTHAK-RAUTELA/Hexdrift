@@ -1,198 +1,58 @@
-html body.cre-Cambridge_8V2 .cre_popupshow h2 {
-  font-family: Open Sans;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21.79px;
-  letter-spacing: 0%;
-}
-html body.cre-Cambridge_8V2 .cre_popupshow p {
-  font-family: Open Sans;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 17.7px;
-  letter-spacing: 0%;
-}
-html body.cre-Cambridge_8V2 .cre_cta span {
-  display: inline-block;
-  border-radius: 4px;
-  width: 185px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Open Sans;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 17.7px;
-  letter-spacing: 0%;
-  cursor: pointer;
-}
-html body.cre-Cambridge_8V2 .cre_cta {
-  display: flex;
-  gap: 15px;
-}
-html body.cre-Cambridge_8V2 .cre_cta span:first-child {
-  background-color: #69bbe6;
-  color: #fff;
-}
-html body.cre-Cambridge_8V2 .cre_cta span:nth-child(2) {
-   background: #F8F8F8;
-   border: 1px solid #3333331A;
-   color: #5f5f5f;
- 
-}
-html body.cre-Cambridge_8V2.hidestup4 [style="width:75%;"] {
-width: 100% !important;
-}
-html body.cre-Cambridge_8V2.hidestup4 .gf_progressbar.gf_progressbar_blue div span {
-color: transparent;
-}
-html body.cre-Cambridge_8V2.hidestup4 .gf_progressbar.gf_progressbar_blue div span:after {
-  content: "100%";
-  color: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  box-sizing: border-box;
-  width: 97% !important;
-}
-html body.cre-Cambridge_8V2 .cre_popupshow {
-display: block;
-width: 100%;
-clear: both;
-}
-html body.cre-Cambridge_8V2 .cre_paymenticon {
-  margin-top: 12px;
-}
-.cre_paymenticon {
-  margin-top: 12px;
+html body [class*="Section_useContent"]>h2[data-crid*="vprowheading-car"] {
+  position: relative;
+  min-height: 65px;
+  font-size: 0;
+  line-height: 0;
 }
 
-.CrePrevious,
-.Cre_application{
-  padding: 7px 11px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.45scubic-bezier(0.25, 1, 0.33, 1);
-  -moz-transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
-  -webkit-transition: all 0.45scubic-bezier(0.25, 1, 0.33, 1);
-  width: auto;
-  font-size: 12px;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  white-space: normal;
-  border-radius: 4px;
+html body [class*="Section_useContent"]>h2[data-crid*="vprowheading-car"]::after {
+  content: "Choose from Iceland’s top car rental providers";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
 }
-.CrePrevious {
-  background-color: #333;
-  
-}
-.Cre_application {
-  background-color: #69bbe6;
-  max-width: 100px;
-  width: 100%;
-  text-align: center;
-  
-}
-#gform_page_71_4 .gform_page_footer.top_label {
-  opacity: 0;
-}
-#gform_page_71_4 + .Cre_popupinside {
-  display: none;
-}
-.hidestup4 #gform_page_71_4{ display: none;}
-.Cre_popupinside {
-  display: none;
-}
-.hidestup4 .Cre_popupinside{
-   display: block;
-}
-.hidestup4 .cre_popupshow .Ctacontroll{
-   display: none;
-}
-#gform_page_71_4[style="display:none;"] + .cre_popupshow{
-   display: none;
-}
-html body.cre-Cambridge_8V2.Cre_removepopup .cre_popupshow{
-   display: none;
-}
-html body.cre-Cambridge_8V2.Cre_removepopup  #gform_page_71_4{
-   display: inline-block;
-}
-html body.cre-Cambridge_8V2.Cre_removepopup #gform_page_71_4 .gform_page_footer.top_label{
-  opacity: 1;
-}
-html body.hidestup4 #gf_progressbar_wrapper_71 > h3 div:after {
-  content: "Secure your place at Reach Cambridge today";
+
+html body [class*="Section_useContent"]>h2[data-crid*="vprowheading-car"]::before {
+  content: "Pick your ride now; you can finalise pickup times and details as your trip gets closer.";
   position: absolute;
-  color: #252834 !important;
-  position: absolute;
-  left: 0;
+  top: 25px;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
 }
-html body.hidestup4  #gf_progressbar_wrapper_71 > h3 div {
-  color: transparent !important;
-}
-html body.hidestup4  #gf_progressbar_wrapper_71 .gf_progressbar_title {
-  color: transparent;
-}
-html body.hidestup4 #gf_progressbar_wrapper_71 .gf_progressbar_title span:nth-child(1):after {
-  content: "Apply now";
-  color: gray;
-  position: absolute;
-  left: 0;
-}
-/* html body.page-template-dashboard.cre-Cambridge_8.cre_ovelay:before {
-  text-align: center;
-    background-position: top;
-    content: " ";
-    background-color: #fff;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999999;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://www.reachcambridge.com/wp-content/plugins/gravityforms/images/spinner.svg);
-    background-repeat: no-repeat;
-   
-    background-size: 50px;
-display:inline-block
-} */
-html body.cre-Cambridge_8V2 .cre_paymenticon img {
-  max-width: 184px;
-}
-html body.Cre_showcta .Ctacontroll {
-  display: flex;
-  gap: 16px;
-}
-.Ctacontroll {
-  display: flex
-;
-  gap: 20px;
-}
- 
-html body.page-template-dashboard.cre-Cambridge_8.Cre_remooverlay:before{
-  display: none;
-}
-@media screen and (max-width:768px) {
-  html body #gf_progressbar_wrapper_71 > div {
-    margin-top: 45px;
-}
-html body #gf_progressbar_wrapper_71 > h3 div:after{
-  line-height: 30px;
-}
-html body #gf_progressbar_wrapper_71 > h3 div{
+
+
+/* mobile */
+
+html body [class*="Container_mobileContainer"] h2[data-crid*="vprowheading-car"]:nth-child(1) {
   position: relative;
+  min-height: 65px;
+  font-size: 0;
+  line-height: 0;
 }
-html body #gf_progressbar_wrapper_71 > h3 div:after{
-  top: 0;
+
+html body [class*="Container_mobileContainer"] h2[data-crid*="vprowheading-car"]:nth-child(1)::after {
+  content: "Choose from Iceland’s top car rental providers";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
 }
+
+html body [class*="Container_mobileContainer"] h2[data-crid*="vprowheading-car"]:nth-child(1)::before {
+  content: "Pick your ride now; you can finalise pickup times and details as your trip gets closer.";
+  position: absolute;
+  top: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+}
+
+@media screen and (max-width:1024px) {
+  html body [class*="Section_useContent"]>h2[data-crid*="vprowheading-car"]::before {
+    top: 30px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
