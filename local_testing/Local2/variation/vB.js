@@ -18,17 +18,26 @@
     
         /* Variation Init */
         function init() {
-            document.addEventListener('click', function(event) {
-                const button = event.target.closest('[data-test="pro-list-result"] button');
-                if (button) {
-                    event.preventDefault(); // Default action rokna
-                    
-                    const targetElement = document.querySelector('[class*="hero-header-filters_wrap"] .mt3 [data-test="hero-filters-cta"]');
-                    if (targetElement) {
-                        targetElement.click(); // Target element par click trigger karna
-                    }
+        
+          document.addEventListener('click', function(event) {
+            const button = document.querySelectorAll('[data-test="pro-list-result"]'); 
+        
+            if (button) {
+                event.preventDefault(); 
+        
+                const targetElements = document.querySelectorAll('.mt3 [data-test="hero-filters-cta"]');
+                
+                if (targetElements.length > 0) {
+                    targetElements.forEach((targetElement) => {
+                      targetElement.click(); 
+                    });
+                } else {
+                    console.log(" No Target Element ");
                 }
-            });
+            }
+        });
+  
+        
         }
         /* Initialise variation */
         function thumbtackTest165(list, observer) {
@@ -59,3 +68,4 @@
         if (debug) console.log(e, "error in Test" + variation_name);
     }
   })();
+  
