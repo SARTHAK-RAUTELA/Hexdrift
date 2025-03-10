@@ -1,99 +1,212 @@
-html body.ReachCambridge_T13 #discount_banner_top span.cre-bold::after {
-  content: "Very few places left!";
-  color: #FFF;
-  /* font-size: 16px; */
-  font-size: 18px;
-  font-style: normal;
+html body.cre-Cambridge_8V2 .cre_popupshow h2 {
+  font-family: Open Sans;
   font-weight: 700;
-  line-height: 21px;
-  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 21.79px;
+  letter-spacing: 0%;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top span.cre-bold,
-html body.ReachCambridge_T13 #discount_banner_top .discount_description {
-  font-size: 0;
-  line-height: 0;
-}
-
-html body.ReachCambridge_T13 #discount_banner_top .discount_description {
-  padding-left: 0;
-}
-
-html body.ReachCambridge_T13 #discount_banner_top .discount_description::after {
-  content: "Apply now—this round closes soon.";
-  color: #FFF;
-  /* font-size: 16px; */
-  font-size: 18px;
-  font-style: normal;
+html body.cre-Cambridge_8V2 .cre_popupshow p {
+  font-family: Open Sans;
   font-weight: 400;
-  line-height: 21px;
-  font-family: Inter, sans-serif;
+  font-size: 13px;
+  line-height: 17.7px;
+  letter-spacing: 0%;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top span.cre-underline {
+html body.cre-Cambridge_8V2 .cre_cta span {
+  display: inline-block;
+  border-radius: 4px;
+  width: 185px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Open Sans;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17.7px;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+html body.cre-Cambridge_8V2 .cre_cta {
+  display: flex;
+  gap: 15px;
+}
+
+html body.cre-Cambridge_8V2 .cre_cta span:first-child {
+  background-color: #69bbe6;
+  color: #fff;
+}
+
+html body.cre-Cambridge_8V2 .cre_cta span:nth-child(2) {
+  background: #F8F8F8;
+  border: 1px solid #3333331A;
+  color: #5f5f5f;
+
+}
+
+html body.cre-Cambridge_8V2 .hidestup4 [style="width:75%;"] {
+  width: 100% !important;
+}
+
+html body.cre-Cambridge_8V2 .hidestup4 .gf_progressbar.gf_progressbar_blue div span {
+  color: transparent;
+}
+
+html body.cre-Cambridge_8V2 .hidestup4 .gf_progressbar.gf_progressbar_blue div span:after {
+  content: "100%";
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  width: 97% !important;
+}
+
+html body.cre-Cambridge_8V2 .cre_popupshow {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+html body.cre-Cambridge_8V2 .cre_paymenticon {
+  margin-top: 12px;
+}
+
+.cre_paymenticon {
+  margin-top: 12px;
+}
+
+.CrePrevious,
+.Cre_application {
+  padding: 7px 11px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.45scubic-bezier(0.25, 1, 0.33, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+  -webkit-transition: all 0.45scubic-bezier(0.25, 1, 0.33, 1);
+  width: auto;
+  font-size: 12px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  white-space: normal;
+  border-radius: 4px;
+}
+
+.CrePrevious {
+  background-color: #333;
+
+}
+
+.Cre_application {
+  background-color: #69bbe6;
+  max-width: 152px;
+  width: 100%;
+  text-align: center;
+
+}
+
+#gform_page_71_4+.Cre_popupinside {
   display: none;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top .cre-rocket-img {
-  top: 0;
-  margin-right: 6px;
+.hidestup4 #gform_page_71_4 {
+  display: none;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top .cre-countdown-container {
-  margin-left: 10px;
-  gap: 10px;
+.Cre_popupinside {
+  display: none;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top .cre-time-box>span {
-  font-size: 20px;
-  padding: 5px 0px;
-  border-radius: 7px;
+.hidestup4 .Cre_popupinside {
+  display: block;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top .cre-time-box {
-  margin-top: 5px;
+.hidestup4 .cre_popupshow .Ctacontroll {
+  display: none;
 }
 
-html body.ReachCambridge_T13 #discount_banner_top .cre-time-box .cre-label {
-  font-size: 10px;
+#gform_page_71_4[style="display:none;"]+.cre_popupshow {
+  display: none;
 }
 
+html body.cre-Cambridge_8V2 .Cre_removepopup .cre_popupshow {
+  display: none;
+}
 
+html body.cre-Cambridge_8V2 .Cre_removepopup #gform_page_71_4 {
+  display: inline-block;
+}
 
-@media screen and (max-width:999px) {
-  html body.ReachCambridge_T13 #discount_banner_top .cre-countdown-container::before {
-    font-size: 13px;
+html body.cre-Cambridge_8V2 .Cre_removepopup #gform_page_71_4 .gform_page_footer.top_label {
+  opacity: 1;
+}
+
+html body.hidestup4 #gf_progressbar_wrapper_71>h3 div:after {
+  content: "Secure your place at Reach Cambridge today";
+  position: absolute;
+  color: #252834 !important;
+  position: absolute;
+  left: 0;
+}
+
+html body.hidestup4 #gf_progressbar_wrapper_71>h3 div {
+  color: transparent !important;
+}
+
+html body.hidestup4 #gf_progressbar_wrapper_71 .gf_progressbar_title {
+  color: transparent;
+}
+
+html body.hidestup4 #gf_progressbar_wrapper_71 .gf_progressbar_title span:nth-child(1):after {
+  content: "Apply now";
+  color: gray;
+  position: absolute;
+  left: 0;
+}
+
+html body.cre-Cambridge_8V2 .cre_paymenticon img {
+  max-width: 184px;
+}
+
+html body.Cre_showcta .Ctacontroll {
+  display: flex;
+  gap: 16px;
+}
+
+.Ctacontroll {
+  display: flex;
+  gap: 20px;
+}
+
+html body.page-template-dashboard.cre-Cambridge_8V2 .Cre_remooverlay:before {
+  display: none;
+}
+
+@media screen and (max-width:768px) {
+  html body.cre-Cambridge_8V2 #gf_progressbar_wrapper_71>div {
+    margin-top: 45px;
   }
 
-  html body.ReachCambridge_T13 #discount_banner_top .cre-countdown-container::after,
-  html body.ReachCambridge_T13 #discount_banner_top .cre-time-box .cre-label {
-    font-size: 11px;
+  html body.cre-Cambridge_8V2 #gf_progressbar_wrapper_71>h3 div:after {
+    line-height: 30px;
   }
 
-  html body.ReachCambridge_T13 #discount_banner_top .cre-countdown-container {
+  html body.cre-Cambridge_8V2 #gf_progressbar_wrapper_71>h3 div {
     position: relative;
-    padding-top: 15px;
   }
 
-  html body.ReachCambridge_T13 #discount_banner_top .cre-countdown-container::before {
-    content: "Apply now—this round closes soon.";
-    position: absolute;
+  html body.cre-Cambridge_8V2 #gf_progressbar_wrapper_71>h3 div:after {
     top: 0;
-    text-align: center;
   }
-
-  html body.ReachCambridge_T13 #discount_banner_top .cre-time-box>span {
-    font-size: 12px;
-    padding: 3px 11px;
-  }
-
-  html body.ReachCambridge_T13 #discount_banner_top .discount_description::after {
-    display: none;
-  }
-
 }
 
-html body.ReachCambridge_T13 #discount_banner_top .cre-rocket-img {
-  height: 24px;
-  width: 24px;
+html body.cre-Cambridge_8V2 .cre_popupshow~.cre_popupshow {
+  display: none;
 }
