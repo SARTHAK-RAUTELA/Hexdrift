@@ -106,10 +106,14 @@
       }, 50, 5000);
     });
     helper.live('.Cre_price', 'click', function () {
-      document.querySelector('.cre_cta').insertAdjacentHTML(
-        'beforeend',
-        '<img id="gform_ajax_spinner_71" class="gform_ajax_spinner cre_loader" src="https://www.reachcambridge.com/wp-content/plugins/gravityforms/images/spinner.svg" alt="">'
-      );
+      const ctaElement = document.querySelector('.cre_cta');
+
+      if (!ctaElement.querySelector('#gform_ajax_spinner_71')) {
+          ctaElement.insertAdjacentHTML(
+              'beforeend',
+              '<img id="gform_ajax_spinner_71" class="gform_ajax_spinner cre_loader" src="https://www.reachcambridge.com/wp-content/plugins/gravityforms/images/spinner.svg" alt="">'
+          );
+      }
       sessionStorage.setItem('redirecting', 'true');
       helper.waitForElement('#gform_submit_button_71', function (submitButton) {
         const form = submitButton.closest('form#gform_71');
@@ -132,19 +136,13 @@
           let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
           if (progressBar) {
             updatePopupContent(); // Add class if progress bar is 75%
-
           }
         }, 50, 5000);
       }, 500, 15000);
     });
-
-
     helper.live('.apply-extra-remove-link', 'click', function () {
       updatePopupContent();
     });
-
-
-
     function updatePopupContent() {
       const nameElement = document.querySelector('.apply-right-course.first');
       const courseDateElement = document.querySelector('#sidebar .apply-right-programs .apply-right-title');
@@ -197,18 +195,16 @@
               window.location.href = 'https://www.reachcambridge.com/checkout';
             }
           }, 100);
-
           setTimeout(() => {
             clearInterval(checkInterval);
             const dashboardElement = document.querySelector('.page-template-dashboard');
             if (dashboardElement) {
               dashboardElement.style.opacity = '1';
             }
-          }, 30000);
+          }, 90000);
         }
       }
       checkURLAndRedirect();
-
     }
     // if (!window.goalclickAdded205) {
     //     window.goalclickAdded205 = true;
