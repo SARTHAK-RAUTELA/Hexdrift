@@ -1,130 +1,131 @@
-(function () {
-    try {
+(function() {
+  try {
       /* Main Variables */
       var debug = 1;
       var variation_name = "cre-Cambridge_8V2";
       /* Helper Library */
       var _$;
-      !(function (factory) {
-        _$ = factory();
-      })(function () {
-        var bm = function (s) {
-          if (typeof s === "string") {
-            this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-          }
-          if (typeof s === "object") {
-            this.value = [s];
-          }
-        };
-        bm.prototype = {
-          eq: function (n) {
-            this.value = [this.value[n]];
-            return this;
-          },
-          each: function (fn) {
-            [].forEach.call(this.value, fn);
-            return this;
-          },
-          log: function () {
-            var items = [];
-            for (let index = 0; index < arguments.length; index++) {
-              items.push(arguments[index]);
-            }
-            console && console.log(variation_name, items);
-          },
-          addClass: function (v) {
-            var a = v.split(" ");
-            return this.each(function (i) {
-              for (var x = 0; x < a.length; x++) {
-                if (i.classList) {
-                  i.classList.add(a[x]);
-                } else {
-                  i.className += " " + a[x];
-                }
+      !(function(factory) {
+          _$ = factory();
+      })(function() {
+          var bm = function(s) {
+              if (typeof s === "string") {
+                  this.value = Array.prototype.slice.call(document.querySelectorAll(s));
               }
-            });
-          },
-          waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-            var interval = setInterval(function () {
-              if (_$(selector).value.length) {
-                clearInterval(interval);
-                trigger(document.querySelector(selector));
+              if (typeof s === "object") {
+                  this.value = [s];
               }
-            }, delayInterval);
-            setTimeout(function () {
-              clearInterval(interval);
-            }, delayTimeout);
-          },
-          live: function (selector, event, callback, context) {
-            function addEvent(el, type, handler) {
-              if (el.attachEvent) el.attachEvent("on" + type, handler);
-              else el.addEventListener(type, handler);
-            }
-            function live(selector, event, callback, context) {
-              addEvent(context || document, event, function (e) {
-                var found,
-                  el = e.target || e.srcElement;
-                while (el && el.matches && el !== context && !(found = el.matches(selector)))
-                  el = el.parentElement;
-                if (found) callback.call(el, e);
-              });
-            }
-            live(selector, event, callback, context);
-          },
-        };
-        return function (selector) {
-          return new bm(selector);
-        };
+          };
+          bm.prototype = {
+              eq: function(n) {
+                  this.value = [this.value[n]];
+                  return this;
+              },
+              each: function(fn) {
+                  [].forEach.call(this.value, fn);
+                  return this;
+              },
+              log: function() {
+                  var items = [];
+                  for (let index = 0; index < arguments.length; index++) {
+                      items.push(arguments[index]);
+                  }
+                  console && console.log(variation_name, items);
+              },
+              addClass: function(v) {
+                  var a = v.split(" ");
+                  return this.each(function(i) {
+                      for (var x = 0; x < a.length; x++) {
+                          if (i.classList) {
+                              i.classList.add(a[x]);
+                          } else {
+                              i.className += " " + a[x];
+                          }
+                      }
+                  });
+              },
+              waitForElement: function(selector, trigger, delayInterval, delayTimeout) {
+                  var interval = setInterval(function() {
+                      if (_$(selector).value.length) {
+                          clearInterval(interval);
+                          trigger(document.querySelector(selector));
+                      }
+                  }, delayInterval);
+                  setTimeout(function() {
+                      clearInterval(interval);
+                  }, delayTimeout);
+              },
+              live: function(selector, event, callback, context) {
+                  function addEvent(el, type, handler) {
+                      if (el.attachEvent) el.attachEvent("on" + type, handler);
+                      else el.addEventListener(type, handler);
+                  }
+                  function live(selector, event, callback, context) {
+                      addEvent(context || document, event, function(e) {
+                          var found,
+                              el = e.target || e.srcElement;
+                          while (el && el.matches && el !== context && !(found = el.matches(selector)))
+                              el = el.parentElement;
+                          if (found) callback.call(el, e);
+                      });
+                  }
+                  live(selector, event, callback, context);
+              },
+          };
+          return function(selector) {
+              return new bm(selector);
+          };
       });
       var helper = _$();
-      helper.live('.Cre_application', 'click', function () {
-        document.body.classList.add('hidestup4');
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-        helper.waitForElement('.wpb_wrapper > #gform_wrapper_71', function () {
-          // Check if the element with 75% width exists
-          helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function () {
-            let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
-            if (progressBar) {
-              updatePopupContent(); // Add class if progress bar is 75%
-            }
+      helper.live('.Cre_application', 'click', function() {
+          document.body.classList.add('hidestup4');
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+          helper.waitForElement('.wpb_wrapper > #gform_wrapper_71', function() {
+              // Check if the element with 75% width exists
+              helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function() {
+                  let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
+                  if (progressBar) {
+                      updatePopupContent(); // Add class if progress bar is 75%
+                  }
+              }, 50, 5000);
+          }, 500, 15000);
+      });
+      helper.live('.CrePrevious', 'click', function() {
+          document.body.classList.remove('hidestup4');
+          // Check if the progress bar with 75% width is NOT present
+          helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function() {
+              if (document.querySelector('.gf_progressbar_percentage[style="width:75%;"]')) {
+                  document.body.classList.remove('Cre_showcta');
+              }
           }, 50, 5000);
-        }, 500, 15000);
+          helper.waitForElement('#gform_previous_button_71', function(prevButton) {
+              prevButton.click();
+          }, 50, 5000);
       });
-      helper.live('.CrePrevious', 'click', function () {
-        document.body.classList.remove('hidestup4');
-        // Check if the progress bar with 75% width is NOT present
-        helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function () {
-          if (document.querySelector('.gf_progressbar_percentage[style="width:75%;"]')) {
-            document.body.classList.remove('Cre_showcta');
+      helper.live('.Cre_price', 'click', function() {
+          const ctaElement = document.querySelector('.cre_cta');
+          if (!ctaElement.querySelector('.cre_loader')) {
+              ctaElement.insertAdjacentHTML(
+                  'beforeend',
+                  '<img id="gform_ajax_spinner_71" class="gform_ajax_spinner cre_loader" src="https://www.reachcambridge.com/wp-content/plugins/gravityforms/images/spinner.svg" alt="">'
+              );
           }
-        }, 50, 5000);
-        helper.waitForElement('#gform_previous_button_71', function (prevButton) {
-          prevButton.click();
-        }, 50, 5000);
+          sessionStorage.setItem('redirecting', 'true');
+          helper.waitForElement('#gform_submit_button_71', function(submitButton) {
+              const form = submitButton.closest('form#gform_71');
+              if (form) {
+                  form.submit();
+              } else {
+                  submitButton.style.display = 'block';
+                  submitButton.click();
+                  submitButton.style.display = 'none';
+              }
+          }, 50, 5000);
       });
-      helper.live('.Cre_price', 'click', function () {
-        const ctaElement = document.querySelector('.cre_cta');
-        if (!ctaElement.querySelector('#gform_ajax_spinner_71')) {
-            ctaElement.insertAdjacentHTML(
-                'beforeend',
-                '<img id="gform_ajax_spinner_71" class="gform_ajax_spinner cre_loader" src="https://www.reachcambridge.com/wp-content/plugins/gravityforms/images/spinner.svg" alt="">'
-            );
-        }
-        sessionStorage.setItem('redirecting', 'true');
-        helper.waitForElement('#gform_submit_button_71', function (submitButton) {
-          const form = submitButton.closest('form#gform_71');
-          if (form) {
-            form.submit();
-          } else {
-            submitButton.style.display = 'block';
-            submitButton.click();
-            submitButton.style.display = 'none';
-          }
-        }, 50, 5000);
-      });
+      
       helper.live('.Cre_goaccount', 'click', function() {
         const ctaElement = document.querySelector('.cre_cta');
         if (!ctaElement.querySelector('.cre_loader')) {
@@ -145,95 +146,102 @@
             }
         }, 50, 5000);
       });
-      helper.live('#gform_next_button_71_51', 'click', function () {
-        helper.waitForElement('.wpb_wrapper > #gform_wrapper_71', function () {
-          // Check if the element with 75% width exists
-          helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function () {
-            let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
-            if (progressBar) {
-              updatePopupContent(); // Add class if progress bar is 75%
-            }
-          }, 50, 5000);
-        }, 500, 15000);
+      helper.live('#gform_next_button_71_51', 'click', function() {
+          helper.waitForElement('.wpb_wrapper > #gform_wrapper_71', function() {
+              // Check if the element with 75% width exists
+              helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function() {
+                  let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
+                  if (progressBar) {
+                      updatePopupContent(); // Add class if progress bar is 75%
+                     
+                  }
+              }, 50, 5000);
+          }, 500, 15000);
       });
-      helper.live('.apply-extra-remove-link', 'click', function () {
-        updatePopupContent();
+      
+      helper.live('.apply-extra-remove-link', 'click', function() {
+          updatePopupContent();
       });
+          
       function updatePopupContent() {
-        const nameElement = document.querySelector('.apply-right-course.first');
-        const courseDateElement = document.querySelector('#sidebar .apply-right-programs .apply-right-title');
-        const priceElement = document.querySelector('.reach-deposit-holder');
-    
-        if (!nameElement || !courseDateElement) {
-            return;
-        }
-    
-        const name = (nameElement.textContent.trim().replace(/-/g, ':') || 'Student').trim();
-        const courseDate = (courseDateElement.textContent.trim() || 'your selected date').trim();
-        const price = priceElement ? priceElement.textContent.trim() : 'Price not available';
-    
-        const popupHTML = `
-                <div class="cre_popupshow">
-                <div class="Ctacontroll">
-                <p class='CrePrevious'>Previous</p>
-                <p class="Cre_application">Submit Application</p>
-                </div>
-                <div class="Cre_popupinside">
-                <h2>Pay your deposit</h2>
-                <p>Please pay now to guarantee${name} course - ${courseDate}.</p>
-                <div class="cre_cta">
-                <span class="Cre_price">Pay Now  £${price}</span>
-                <span class="Cre_goaccount">Go to my account</span>
-                </div>
-                </div>
-                </div>
-                `;
-    
-        const progressBar = document.querySelector('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4');
-        const existingPopup = document.querySelector('.cre_popupshow');
-    
-        if (existingPopup) {
-            existingPopup.outerHTML = popupHTML;
-        } else if (progressBar) {
-            helper.waitForElement('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4', function () {
-                let progressBar = document.querySelector('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4');
-                if (progressBar) {
-                    progressBar.insertAdjacentHTML("afterend", popupHTML);
-                    document.querySelector('#gform_page_71_4 .gform_page_footer.top_label').style.opacity = '0';
-                }
-            }, 50, 5000);
-        }
-    }
-      function init() {
-        _$('body').addClass(variation_name);
-        function checkURLAndRedirect() {
-          if (sessionStorage.getItem('redirecting') === 'true') {
-            const checkInterval = setInterval(() => {
-              if (window.location.href.includes('dashboard?reachFormEvent=Reach')) {
-                clearInterval(checkInterval);
-                document.querySelector('.page-template-dashboard').style.opacity = '0';
-                document.querySelector('.nectar-button').click();
-                window.location.href = 'https://www.reachcambridge.com/checkout';
-              }
-            }, 100);
-            setTimeout(() => {
-              clearInterval(checkInterval);
-              const dashboardElement = document.querySelector('.page-template-dashboard');
-              if (dashboardElement) {
-                dashboardElement.style.opacity = '1';
-              }
-            }, 90000);
+          const nameElements = document.querySelectorAll('.vc_col-sm-8 + .vc_col-sm-4  #sidebar .apply-right-programs .apply-right-course');
+          const courseDateElement = document.querySelector('#sidebar .apply-right-programs .apply-right-title');
+          const priceElement = document.querySelector('.reach-deposit-holder');
+      
+          if (!nameElements.length || !courseDateElement) {
+              return;
           }
-        }
-        checkURLAndRedirect();
+      
+          // Sabhi course names ko ek single string me convert karna
+          const name = nameElements.length 
+              ? [...nameElements].map(el => el.textContent.trim().replace(/-/g, '')).join(', ') 
+              : 'Student';
+      
+          const courseDate = (courseDateElement.textContent.trim() || 'your selected date').trim();
+          const price = priceElement ? priceElement.textContent.trim() : 'Price not available';
+      
+          const popupHTML = `
+              <div class="cre_popupshow">
+                  <div class="Ctacontroll">
+                      <p class='CrePrevious'>Previous</p>
+                      <p class="Cre_application">Submit Application</p>
+                  </div>
+                  <div class="Cre_popupinside">
+                      <h2>Pay your deposit</h2>
+                      <p>Please pay now to guarantee: ${name} - ${courseDate}.</p>
+                      <div class="cre_cta">
+                          <span class="Cre_price">Pay Now £${price}</span>
+                          <span class="Cre_goaccount">Go to my account</span>
+                      </div>
+                  </div>
+              </div>
+          `;
+      
+          const progressBar = document.querySelector('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4');
+          const existingPopup = document.querySelector('.cre_popupshow');
+      
+          if (existingPopup) {
+              existingPopup.outerHTML = popupHTML;
+          } else if (progressBar) {
+              helper.waitForElement('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4', function () {
+                  let progressBar = document.querySelector('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4');
+                  if (progressBar) {
+                      progressBar.insertAdjacentHTML("afterend", popupHTML);
+                      document.querySelector('#gform_page_71_4 .gform_page_footer.top_label').style.opacity = '0';
+                  }
+              }, 50, 5000);
+          }
       }
-      // if (!window.goalclickAdded205) {
-      //     window.goalclickAdded205 = true;
-      //     eventHandlerT8();
-      // }
+      
+    
+      function init() {
+          _$('body').addClass(variation_name);
+          function checkURLAndRedirect() {
+              if (sessionStorage.getItem('redirecting') === 'true') {
+                  const checkInterval = setInterval(() => {
+                      if (window.location.href.includes('dashboard?reachFormEvent=Reach')) {
+                          clearInterval(checkInterval);
+                          document.querySelector('.page-template-dashboard').style.opacity = '0';
+                          document.querySelector('.nectar-button').click();
+                          window.location.href = 'https://www.reachcambridge.com/checkout';
+                      }
+                  }, 100);
+          
+                  setTimeout(() => {
+                      clearInterval(checkInterval);
+                      const dashboardElement = document.querySelector('.page-template-dashboard');
+                      if (dashboardElement) {
+                          dashboardElement.style.opacity = '1';
+                      }
+                  }, 90000);
+              }
+          }
+          checkURLAndRedirect();
+          
+      }
+     
       helper.waitForElement("body", init, 50, 5000);
-    } catch (e) {
+  } catch (e) {
       console.log(e, "Error in Test " + variation_name);
-    }
-  })();
-  
+  }
+})();
