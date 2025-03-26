@@ -1,45 +1,45 @@
-html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo {
+html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
     display: flex !important;
     margin-top: 30px;
     gap: 50px;
 }
-html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo img {
+html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img {
     max-width: 171px;
     width: 100%;
 }
-html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo img:last-child {
+html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img:last-child {
     max-width: 200px;
     width: 100%;
 }
-html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo {
+html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
     position: relative;
     z-index: 9999;
 }
-html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 [class*="FrontCover_headerWrapper"] .Cre_banner_logo:first-child {
+html[lang='en'] body.CRE_EXP_56B [class*="FrontCover_headerWrapper"] .Cre_banner_logo:first-child {
     gap: 80px;
 }
 @media(max-width:960px) {
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
         margin-top: 35px;
     }
 }
 @media(max-width:1200px) and (min-width:768px) {
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 #frontCoverChildrenWrapper {
+    html[lang='en'] body.CRE_EXP_56B #frontCoverChildrenWrapper {
         bottom: 25px;
     }
 }
 @media(max-width:768px) {
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
         order: -1;
             width: 100%;
     justify-content: space-between;
     padding: 0 20px;
     }
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo img {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img {
         max-width: 100px;
         height: 56px !important;
     }
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo img:last-child {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img:last-child {
         max-width: 120px;
     }
     html[lang="en"] body[data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
@@ -47,7 +47,7 @@ html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 [class*="FrontC
     }
 }
 @media screen and (min-width:769px) {
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
         order: 3;
     }
 }
@@ -57,16 +57,19 @@ html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 [class*="FrontC
     }
 }
 @media screen and (min-width:1130px) and (max-width:1210px) {
-    html[lang=en] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo {
+    html[lang=en] body.CRE_EXP_56B .Cre_banner_logo {
         margin-top: 10px !important;
     }
 }
 @media screen and (min-width:800px) and (max-width:900px) {
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo img {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img {
         height: 80px !important;
         margin-right: 22px;
     }
-    html[lang='en'] body[data-path="/book-trips-holiday"].CRE_EXP_47 .Cre_banner_logo img:last-child {
+    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img:last-child {
         height: 80px !important;
     }
+}
+html[lang='en'] body[data-path="/"].CRE_EXP_56B .Cre_banner_logo{
+    display: none;
 }

@@ -1,6 +1,6 @@
 window.expLibraryDataQueue = window.expLibraryDataQueue || [];
 window.expLibraryDataQueue.push({
-  CRE_EXP_47: {
+  CRE_EXP_56B: {
     var: {
       bannerHTML: `
             <div class="Cre_banner_logo jeewan" style="display:none">
@@ -16,16 +16,19 @@ window.expLibraryDataQueue.push({
     // Initialize the experiment
     init() {
       let $this = this;
-      this.runAt('html[lang="en"] body[data-path="/book-trips-holiday"] [class*="FrontCover_headerWrapper"] h1 + div', function ([element]) {
+
+      this.runAt('html[lang="en"] [class*="FrontCover_headerWrapper"] h1 + div', function ([element]) {
         if (!document.querySelector(".Cre_banner_logo")) {
           element.insertAdjacentHTML('afterend', $this.var.bannerHTML)
         }
       })
-      this.runAt('html[lang="en"] body[data-path="/book-trips-holiday"] #frontCover  [class*="FrontCover_coverImageWrapper"] + div [class*="FrontCover_headerWrapper"] [class*="FrontCover_description"]', function ([element]) {
+
+      this.runAt('html[lang="en"] #frontCover  [class*="FrontCover_coverImageWrapper"] + div [class*="FrontCover_headerWrapper"] [class*="FrontCover_description"]', function ([element]) {
          if (!document.querySelector(' #frontCover  [class*="FrontCover_coverImageWrapper"] + div [class*="FrontCover_headerWrapper"] [class*="FrontCover_description"] + .Cre_banner_logo')) {
           element.insertAdjacentHTML('afterend', $this.var.bannerHTML)
         }
       })
+
        
     },
   },
