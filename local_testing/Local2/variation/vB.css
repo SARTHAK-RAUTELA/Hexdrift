@@ -1,75 +1,46 @@
-html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
-    display: flex !important;
-    margin-top: 30px;
-    gap: 50px;
+html body.TT-168  [class*="carousel_item"] > div {
+    border: 1px solid #eaeced !important;
 }
-html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img {
-    max-width: 171px;
-    width: 100%;
+html body.TT-168  [class*="carousel_item"] > div {
+    border: 1px solid #eaeced !important;
+    display: flex;
+    flex-direction: column;
 }
-html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img:last-child {
-    max-width: 200px;
-    width: 100%;
+
+
+html body.TT-168  [class*="review-carousel_reviewText"] {
+    order: 4;
 }
-html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
-    position: relative;
-    z-index: 9999;
+
+html body.TT-168  [class*="carousel_item"] > div [class*="Type_title6"] + div {
+    order: 3;
 }
-html[lang='en'] body.CRE_EXP_56B [class*="FrontCover_headerWrapper"] .Cre_banner_logo:first-child {
-    gap: 80px;
+
+html body.TT-168  [class*="review-carousel_reviewText"] + div {
+    margin: 15px 0;
 }
-@media(max-width:960px) {
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
-        margin-top: 35px;
-    }
+
+html body.TT-168  [class*="review-carousel_reviewText"] + div {
+    margin: 10px;
 }
-@media(max-width:1200px) and (min-width:768px) {
-    html[lang='en'] body.CRE_EXP_56B #frontCoverChildrenWrapper {
-        bottom: 25px;
-    }
+
+html body.TT-168  [class*="review-carousel_reviewText"] + .flex {
+    margin: 10px 0px;
 }
-@media(max-width:768px) {
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
-        order: -1;
-            width: 100%;
-    justify-content: space-between;
-    padding: 0 20px;
-    }
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img {
-        max-width: 100px;
-        height: 56px !important;
-    }
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img:last-child {
-        max-width: 120px;
-    }
-    html[lang="en"] body[data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
-        margin-top: 35px !important;
-    }
+
+html body.TT-168  [class*=" review-carousel_serviceName"] {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 700 !important;
+    color: #2f3033 !important;
 }
-@media screen and (min-width:769px) {
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo {
-        order: 3;
-    }
+
+
+html body.TT-168  [class*="carousel_item"] [class*="Type_title6"]:before {
+    content: "from ";
 }
-@media screen and (min-width:960px) and (max-width:1215px) {
-    html[lang="en"] body[data-url*="https://guidetoiceland.is/"] [class*='FrontCover_headerWrapper'] h1 {
-        margin-top: 12px !important;
-    }
-}
-@media screen and (min-width:1130px) and (max-width:1210px) {
-    html[lang=en] body.CRE_EXP_56B .Cre_banner_logo {
-        margin-top: 10px !important;
-    }
-}
-@media screen and (min-width:800px) and (max-width:900px) {
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img {
-        height: 80px !important;
-        margin-right: 22px;
-    }
-    html[lang='en'] body.CRE_EXP_56B .Cre_banner_logo img:last-child {
-        height: 80px !important;
-    }
-}
-html[lang='en'] body[data-path="/"].CRE_EXP_56B .Cre_banner_logo{
-    display: none;
+html body.TT-168  [class*="carousel_item"] > div > div:first-child {
+    font-weight: 400 !important;
+    text-transform: capitalize;
+    font-size: 14px !important;
 }
