@@ -1,155 +1,133 @@
 (function () {
-    try {
-        /* Main variables */
-        var debug = 0;
-        var variation_name = "TT-168"; // Variation name for tracking
+  try {
+    /* main variables */
+    var debug = 1;
+    var variation_name = "cre-t-41";
 
-        /* All Pure helper functions */
-
-        // Function to wait for an element to appear in the DOM
-        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-            var interval = setInterval(function () {
-                // Check if the element exists and trigger callback
-                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-                    clearInterval(interval);
-                    trigger(); // Call the trigger function once the element is found
-                }
-            }, delayInterval); // Check every delayInterval milliseconds
-            setTimeout(function () {
-                clearInterval(interval); // Stop checking after delayTimeout
-            }, delayTimeout);
+    /* helper library */
+    var _$;
+    !(function (factory) {
+      _$ = factory();
+    })(function () {
+      var bm = function (s) {
+        if (typeof s === "string") {
+          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
         }
-
-        // Function to add event listeners that work across all browsers (including IE 8)
-        function live(selector, event, callback, context) {
-            // Helper function to add event listeners for IE 8 and other browsers
-            function addEvent(el, type, handler) {
-                if (el.attachEvent) el.attachEvent("on" + type, handler); // IE 8
-                else el.addEventListener(type, handler); // Other browsers
+        if (typeof s === "object") {
+          this.value = [s];
+        }
+      };
+      bm.prototype = {
+        eq: function (n) {
+          this.value = [this.value[n]];
+          return this;
+        },
+        each: function (fn) {
+          [].forEach.call(this.value, fn);
+          return this;
+        },
+        log: function () {
+          var items = [];
+          for (let index = 0; index < arguments.length; index++) {
+            items.push(arguments[index]);
+          }
+          console && console.log(variation_name, items);
+        },
+        addClass: function (v) {
+          var a = v.split(" ");
+          return this.each(function (i) {
+            for (var x = 0; x < a.length; x++) {
+              if (i.classList) {
+                i.classList.add(a[x]);
+              } else {
+                i.className += " " + a[x];
+              }
             }
-
-            // Polyfill for matches method to ensure it works across browsers
-            this &&
-                this.Element &&
-                (function (ElementPrototype) {
-                    ElementPrototype.matches =
-                        ElementPrototype.matches ||
-                        ElementPrototype.matchesSelector ||
-                        ElementPrototype.webkitMatchesSelector ||
-                        ElementPrototype.msMatchesSelector ||
-                        function (selector) {
-                            var node = this,
-                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                                i = -1;
-                            while (nodes[++i] && nodes[i] != node);
-                            return !!nodes[i];
-                        };
-                })(Element.prototype);
-
-            // Live binding helper using matchesSelector
-            function live(selector, event, callback, context) {
-                addEvent(context || document, event, function (e) {
-                    var found,
-                        el = e.target || e.srcElement;
-                    // Loop through parent elements to find a match
-                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-                    if (found) callback.call(el, e); // Call the callback if a match is found
-                });
+          });
+        },
+        waitForElement: function (
+          selector,
+          trigger,
+          delayInterval,
+          delayTimeout
+        ) {
+          var interval = setInterval(function () {
+            if (_$(selector).value.length) {
+              clearInterval(interval);
+              trigger();
             }
-            live(selector, event, callback, context); // Bind the event
-        }
-        
-        /* Variation Init */
-        function init() {
-            // Add variation class to the body
-            document.querySelector("body").classList.add(variation_name);
+          }, delayInterval);
+          setTimeout(function () {
+            clearInterval(interval);
+          }, delayTimeout);
+        },
+      };
+      return function (selector) {
+        return new bm(selector);
+      };
+    });
 
-            // Check if text content includes 'review' and add class to parent
-            document.querySelectorAll('.mb5').forEach(parent => {
-                const titleElement = parent.querySelector('[class*="Type_title3"]');
-                if (titleElement && titleElement.textContent.toLowerCase().includes('review')) {
-                    parent.classList.add('cre_reviwe'); // Add class for 'review'
-                }
-            });
+    var helper = _$();
 
-            // Move the 'review' section after the hero header
-            document.querySelectorAll('.cre_reviwe').forEach(section => {
-                const target = document.querySelector('[class*="hero-header_root"]');
-                if (target && section) {
-                    target.after(section); // Append the section after hero header
-                }
-            });
-        
-            // Get source and target elements
-            let sourceHeading = document.querySelector("#pro_list_header span");
-            let targetHeading = document.querySelector(".cre_reviwe [class*='Type_title3']");
-        
-            // Wait for the element to appear and modify the text
-            waitForElement('#pro_list_header span', function() {
-                if (window.location.href.includes("www.thumbtack.com/k")) {
-                    if (sourceHeading && targetHeading) {
-                        let text = sourceHeading.childNodes[0].textContent.trim().toLowerCase();
-                        
-                        // Ensure 'on Thumbtack' is not already present before modifying
-                        if (!targetHeading.textContent.includes("on Thumbtack")) {
-                            let newText;
-            
-                            // Check if "top X" pattern exists
-                            if (/^top \d+\s+/.test(text)) {
-                                newText = text.replace(/^top \d+\s+/, "Reviews for ");
-                            } else {
-                                newText = "Reviews for " + text;
-                            }
-            
-                            targetHeading.textContent = newText + " on Thumbtack";
-                        }
-                    }
-                }
-            }, 50, 10000);
-            
+    var cta = `<a href='https://www.gendergp.com/webinar/' class='cre-t-41-cta'>Questions? Join our FREE webinar</a>`;
 
-            // Add "on Thumbtack" for specific URL
-            if (window.location.href.includes("www.thumbtack.com/ga")) {
-                let targetHeading = document.querySelector(".cre_reviwe [class*='Type_title3']");
-                if (targetHeading && !targetHeading.textContent.includes("on Thumbtack")) {
-                    targetHeading.textContent += " on Thumbtack"; // Append "on Thumbtack"
-                }
-            }
+    /* Variation Init */
+    function init() {
+      _$('body').addClass(variation_name);
 
-            // Hide review section if less than 2 carousel items are found
-            let carouselItems = document.querySelectorAll('[class*="carousel_carousel"] [class*="carousel_row"] > div');
-            let creReview = document.querySelector(".cre_reviwe");
-            if (creReview && carouselItems.length < 2) {
-                creReview.style.display = "none"; // Inline hide the review section
-            }
-        }
-        
-        /* Initialise variation */
-        function thumbtackTest144(list, observer) {
-            list.getEntries().forEach((entry) => {
-                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
-                    observer.disconnect(); // Stop observing
-                    clearInterval(test144Interval); // Clear interval
-                    waitForElement("body", init, 50, 15000); // Initialize the variation after hydration
-                    window.isHydrated = true;
-                }
-            });
+      helper.waitForElement(".cre-t-19-cta-link", function () {
+        var heroCTA19 = document.querySelector(".cre-t-19-cta-link");
+        heroCTA19.parentElement.classList.add('cre-t-41-cta-container');
+        if (!document.querySelector(".elementor-button-wrapper.cre-t-41-cta-container .cre-t-41-cta")) {
+          heroCTA19.insertAdjacentHTML("afterend", cta);
         }
 
-        // Check hydration status and initiate
-        if (!window.isHydrated) {
-            var test144Interval = setInterval(function () {
-                waitForElement("body", init, 50, 15000); // Wait for body to load
-            }, 50);
-            setTimeout(function () {
-                clearInterval(test144Interval); // Stop the interval after 3 seconds
-            }, 3000);
-            const observer = new PerformanceObserver(thumbtackTest144);
-            observer.observe({ entryTypes: ["mark"] }); // Start observing performance marks
-        } else {
-            waitForElement("body", init, 50, 15000); // If already hydrated, initialize immediately
+        var subcopy = heroCTA19.closest(".cre-t-19-container")?.nextElementSibling;
+
+        // comment this code if client agrees to change text
+        subcopy && subcopy.querySelector('a.elementor-button.elementor-button-link')?.classList.add("cre-t-41-subcopy-modify");
+
+        // add new text in the subcopy remove the commented code if client agrees to change text
+        // var subcopySpan = subcopy.querySelector("span.elementor-button-text");
+        // if (subcopySpan) {
+        //   subcopySpan.textContent = "Learn more about how our service works";
+        // }
+
+      }, 50, 5000);
+
+
+      helper.waitForElement("#home-test-hero-1 .elementor-button-link[href='https://www.gendergp.com/accessing-gender-affirming-care/']", function () {
+
+        var heroCTA = document.querySelector(`#home-test-hero-1 .elementor-button-link[href="https://www.gendergp.com/accessing-gender-affirming-care/"]`);
+        heroCTA.parentElement.classList.add('cre-t-41-cta-container');
+
+        if (!document.querySelector(".cre-t-19-cta.cre-t-41-cta-container .cre-t-41-cta")) {
+          heroCTA.insertAdjacentHTML("afterend", cta);
         }
-    } catch (e) {
-        if (debug) console.log(e, "error in Test" + variation_name); // Log errors if debug is enabled
+
+        heroCTA.closest('[data-element_type="container"]').classList.add("cre-t-41-parent-container");
+        var subcopy = heroCTA.closest('[data-element_type="widget"]')?.nextElementSibling;
+
+
+        // comment this code if client agrees to change text
+        subcopy && subcopy.querySelector('a.elementor-button.elementor-button-link')?.classList.add("cre-t-41-subcopy-modify");
+
+
+        // add new text in the subcopy uncomment code if client agrees to change text
+        // var subcopySpan = subcopy.querySelector("span.elementor-button-text");
+        // if (subcopySpan) {
+        //   subcopySpan.textContent = "Learn more about how our service works";
+        // }
+
+      }, 50, 5000);
+
+
+
     }
+
+    /* Initialise variation */
+    helper.waitForElement('#home-test-hero-1 .elementor-button-link[href="https://www.gendergp.com/accessing-gender-affirming-care/"],.cre-t-19-cta-link', init, 50, 5000);
+  } catch (e) {
+    if (debug) console.log(e, "error in Test" + variation_name);
+  }
 })();
