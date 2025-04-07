@@ -2,8 +2,7 @@
   try {
     /* main variables */
     var debug = 1;
-    var variation_name = "cre-t-41";
-
+    var variation_name = "cre-t-42";
     /* helper library */
     var _$;
     !(function (factory) {
@@ -45,12 +44,7 @@
             }
           });
         },
-        waitForElement: function (
-          selector,
-          trigger,
-          delayInterval,
-          delayTimeout
-        ) {
+        waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
           var interval = setInterval(function () {
             if (_$(selector).value.length) {
               clearInterval(interval);
@@ -66,67 +60,195 @@
         return new bm(selector);
       };
     });
-
     var helper = _$();
-
-    var cta = `<a href='https://www.gendergp.com/webinar/' class='cre-t-41-cta'>Questions? Join our FREE webinar</a>`;
-
-    /* Variation Init */
-    function init() {
-      _$('body').addClass(variation_name);
-
-      helper.waitForElement(".cre-t-19-cta-link", function () {
-        var heroCTA19 = document.querySelector(".cre-t-19-cta-link");
-        heroCTA19.parentElement.classList.add('cre-t-41-cta-container');
-        if (!document.querySelector(".elementor-button-wrapper.cre-t-41-cta-container .cre-t-41-cta")) {
-          heroCTA19.insertAdjacentHTML("afterend", cta);
-        }
-
-        var subcopy = heroCTA19.closest(".cre-t-19-container")?.nextElementSibling;
-
-        // comment this code if client agrees to change text
-        subcopy && subcopy.querySelector('a.elementor-button.elementor-button-link')?.classList.add("cre-t-41-subcopy-modify");
-
-        // add new text in the subcopy remove the commented code if client agrees to change text
-        // var subcopySpan = subcopy.querySelector("span.elementor-button-text");
-        // if (subcopySpan) {
-        //   subcopySpan.textContent = "Learn more about how our service works";
-        // }
-
-      }, 50, 5000);
-
-
-      helper.waitForElement("#home-test-hero-1 .elementor-button-link[href='https://www.gendergp.com/accessing-gender-affirming-care/']", function () {
-
-        var heroCTA = document.querySelector(`#home-test-hero-1 .elementor-button-link[href="https://www.gendergp.com/accessing-gender-affirming-care/"]`);
-        heroCTA.parentElement.classList.add('cre-t-41-cta-container');
-
-        if (!document.querySelector(".cre-t-19-cta.cre-t-41-cta-container .cre-t-41-cta")) {
-          heroCTA.insertAdjacentHTML("afterend", cta);
-        }
-
-        heroCTA.closest('[data-element_type="container"]').classList.add("cre-t-41-parent-container");
-        var subcopy = heroCTA.closest('[data-element_type="widget"]')?.nextElementSibling;
-
-
-        // comment this code if client agrees to change text
-        subcopy && subcopy.querySelector('a.elementor-button.elementor-button-link')?.classList.add("cre-t-41-subcopy-modify");
-
-
-        // add new text in the subcopy uncomment code if client agrees to change text
-        // var subcopySpan = subcopy.querySelector("span.elementor-button-text");
-        // if (subcopySpan) {
-        //   subcopySpan.textContent = "Learn more about how our service works";
-        // }
-
-      }, 50, 5000);
-
-
-
+    // observer Selector helper for observe  the  dynamic modal 
+    function debounce(func, timeout = 300) {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.apply(this, args);
+        }, timeout);
+      };
     }
 
+    function observeSelector(selector, callback, options = {}) {
+      const document = options.document || window.document;
+      const processed = new Map();
+
+      if (options.timeout || options.onTimeout) {
+        throw `observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`;
+      }
+
+      let obs;
+      let isDone = false;
+
+      const done = () => {
+        if (obs) obs.disconnect();
+        isDone = true;
+      };
+
+      const processElement = (el) => {
+        if (!processed.has(el)) {
+          processed.set(el, true);
+          callback(el);
+          if (options.once) {
+            done();
+            return true;
+          }
+        }
+        return false;
+      };
+
+      const lookForSelector = () => {
+        const elParent = document.documentElement;
+        if (elParent.matches(selector) || elParent.querySelector(selector)) {
+          const elements = elParent.querySelectorAll(selector);
+          elements.forEach((el) => processElement(el));
+        }
+      };
+
+      const debouncedLookForSelector = debounce(() => {
+        lookForSelector();
+      }, 100);
+
+      // Initial check for the selector on page load
+      lookForSelector();
+
+      if (!isDone) {
+        obs = new MutationObserver(() => {
+          debouncedLookForSelector();
+        });
+
+        obs.observe(document, {
+          attributes: false,
+          childList: true,
+          subtree: true,
+        });
+      }
+
+      return done;
+    }
+
+    var icon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+    <path d="M6.74908 14.2382L0 7.48911L1.68727 5.80184L6.74908 10.8637L17.6127 0L19.3 1.68727L6.74908 14.2382Z" fill="#C7A77B"/>
+  </svg>`;
+    var creT13ModalContent = `
+      <div style="display: none;" class="cre-t-42-modal-overlay"></div>
+  <div style="display: none;" class="cre-t-42-modal-container">
+    
+    <div class="cre-t-42-modal-wrapper">
+      <div class="cre-t-42-cross">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <path d="M2.1868 18L0.452148 16.2L7.39074 9L0.452148 1.8L2.1868 0L9.12538 7.2L16.064 0L17.7986 1.8L10.86 9L17.7986 16.2L16.064 18L9.12538 10.8L2.1868 18Z" fill="#D8DBDF"/>
+  </svg>
+      </div>
+      <div class="cre-t-42-modal-main">
+        <div class="cre-t-modal-header">What is First Table?</div>
+         <div class="cre-t-42-modal-content">
+          <div class="cre-t-42-modal-sub-copy"><b>First Table is a restaurant discovery platform where you get 50% off your meal!</b> Restaurants use First Table to fill empty tables. You pay a small booking fee and enjoy a great dining experience at half the price.</div>
+          <div class="cre-t-42-modal-list-header">How it Works</div>
+          <div class="cre-t-42-modal-list-items">
+            <div class="cre-t-42-modal-list-item">
+              <div class="cre-t-42-modal-item-content">
+                <span>Find a Restaurant</span> — Browse restaurants near you and discover new cuisines.
+              </div>
+            </div>
+            <div class="cre-t-42-modal-list-item">
+              
+              <div class="cre-t-42-modal-item-content"><span>Book the First Table</span>—Pay a small booking fee to secure your table. Your reservation is confirmed instantly.</div>
+            </div>
+            <div class="cre-t-42-modal-list-item">
+            
+              <div class="cre-t-42-modal-item-content"><span>Enjoy 50% Off</span>—Save on your meal while receiving the same great food and service as full-paying customers.</div>
+            </div>
+          </div>
+          <div class="cre-t-42-modal-nohidefree">No hidden fees. Just great food at half the price.</div>
+          <div class="cre-t-42-modal-lWhy_Restaurants">Why Restaurants <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg"> First Table</div>
+          <div class="cre-t-42-modal-paragraph">Restaurants love First Table because it fills their empty tables and brings in new customers. You'll get the <b>same great food and service—no</b> cut corners, just a win-win for everyone.</div>
+          <div class="cre-t-42-modal-reviewsection">
+             <div class="cre-t-42-modal-reviewicon"><img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg"></div>
+              <p> "The service was exceptional, and the food was top-notch even with the discount."<p>
+          </div>
+          <div class="cre-t-42-modal-lWhy-Common-Questions">
+           <div class="Cre_heading_wuestions"> Common Questions</div>
+             <div class="cre-t-42-modal-questionstab">
+                <p>Will my booking be honoured?</p>
+                <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
+             </div>
+             <div class="cre-t-42-modal-questionstab">
+                <p>Do restaurants limit what I can order?</p>
+                <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
+             </div>
+               <div class="cre-t-42-modal-questionstab">
+                <p>Is First Table legit?</p>
+                <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
+             </div>
+              <div class="cre-t-42-modal-faqcta"> <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a></div>
+          </div>
+        </div>
+       <div class="cre-t-42-modal-button">OK, got it</div>
+      </div>
+    </div>
+  </div>
+      `;
+    // all the changes based  on our targeted modal and social login present or not 
+    function updateChanges() {
+
+      observeSelector('[data-attribute="hero"]', () => {
+        helper.waitForElement('[list-page="true"] [data-attribute="header-nav"] , [list-page="true"] [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]', function () {
+          var insertionDiv = document.querySelector('[list-page="true"] [data-attribute="header-nav"]');
+          var insertionDiv2 = document.querySelector('[list-page="true"] [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]');
+          var creT13NewContent = document.querySelector(".cre-t-42-new-content-container");
+          var mobileselector = document.querySelector('[list-page="true"] [data-attribute="header-search"]');
+
+          if ((insertionDiv || insertionDiv2 || mobileselector) && !creT13NewContent) {
+            const newContent = `<span class="cre-t-42-new-content-container">How it Works</span>`;
+            if (window.innerWidth <= 767 && mobileselector) {
+              mobileselector.insertAdjacentHTML("beforeend", newContent);
+            } else if (insertionDiv) {
+
+              insertionDiv.insertAdjacentHTML("afterbegin", newContent);
+            } else if (insertionDiv2) {
+
+              insertionDiv2.insertAdjacentHTML("afterbegin", newContent);
+            }
+
+            document.body.insertAdjacentHTML("beforeend", creT13ModalContent);
+          }
+          document.addEventListener("click", function (e) {
+
+            if (e.target.classList.contains("cre-t-42-new-content-container")) {
+              document.body.classList.add("cre-t-42-modal-open");
+              window._conv_q = window._conv_q || [];
+              _conv_q.push(["triggerConversion", "100035415"]);
+            }
+            if (e.target.classList.contains("cre-t-42-cross") || e.target.closest("div").classList.contains("cre-t-42-cross") || e.target.classList.contains("cre-t-42-modal-button")) {
+              if (document.body.classList.contains("cre-t-42-modal-open")) {
+                document.body.classList.remove("cre-t-42-modal-open");
+              }
+            }
+            if (e.target.classList.contains("cre-t-42-modal-overlay")) {
+              if (document.body.classList.contains("cre-t-42-modal-open")) {
+                document.body.classList.remove("cre-t-42-modal-open");
+              }
+            }
+          });
+        }, 50, 15000)
+      });
+    }
+    /* Variation Init */
+    function init() {
+      document.body.classList.add(variation_name);
+      // initiate the observer only once 
+      if (!window.creT42bserver) {
+        window.creT42bserver = true;
+        updateChanges();
+
+      }
+    }
     /* Initialise variation */
-    helper.waitForElement('#home-test-hero-1 .elementor-button-link[href="https://www.gendergp.com/accessing-gender-affirming-care/"],.cre-t-19-cta-link', init, 50, 5000);
+    helper.waitForElement("[list-page='true']", init, 50, 15000);
   } catch (e) {
     if (debug) console.log(e, "error in Test" + variation_name);
   }
