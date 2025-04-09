@@ -62,6 +62,9 @@ html body.cre-t-30 .cre-t-30-content-text-list ol{
   html body.cre-t-30 .cre-t-30-content-text-description{
     font-size: 14px;
   }
+  html body.cre-t-30 .cre-t-30-content-text-list ol{
+    font-size: 14px;
+  }
   
 }
 
@@ -181,17 +184,17 @@ html body.cre-t-30 .cre-t-30-img-cta .gb-button-text {
 
 @media screen and (max-width: 400px) {
   html body.cre-t-30 .cre-t-30-logo-1 {
-      width: 80px;
-      height: 53px;
+      width: 84px;
+      height: 56px;
   }
   html body.cre-t-30 .cre-t-30-logo-2 {
-      width: 48px;
-      height: 53.281px;
+      width: 54px;
+      height: 55.281px;
   }
 
   html body.cre-t-30 .cre-t-30-logo-3 {
-      width: 125px;
-      height: 53px;
+      width: 134px;
+      height: 58px;
   }
   
 
