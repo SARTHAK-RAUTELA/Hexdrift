@@ -1,200 +1,228 @@
 (function () {
-    try {
-        /* Main Variables */
-        var debug = 1;
-        var variation_name = "cre-Cambridge_8";
-        /* Helper Library */
-        var _$;
-        !(function (factory) {
-            _$ = factory();
-        })(function () {
-            var bm = function (s) {
-                if (typeof s === "string") {
-                    this.value = Array.prototype.slice.call(document.querySelectorAll(s));
-                }
-                if (typeof s === "object") {
-                    this.value = [s];
-                }
-            };
-            bm.prototype = {
-                eq: function (n) {
-                    this.value = [this.value[n]];
-                    return this;
-                },
-                each: function (fn) {
-                    [].forEach.call(this.value, fn);
-                    return this;
-                },
-                log: function () {
-                    var items = [];
-                    for (let index = 0; index < arguments.length; index++) {
-                        items.push(arguments[index]);
-                    }
-                    console && console.log(variation_name, items);
-                },
-                addClass: function (v) {
-                    var a = v.split(" ");
-                    return this.each(function (i) {
-                        for (var x = 0; x < a.length; x++) {
-                            if (i.classList) {
-                                i.classList.add(a[x]);
-                            } else {
-                                i.className += " " + a[x];
-                            }
-                        }
-                    });
-                },
-                waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-                    var interval = setInterval(function () {
-                        if (_$(selector).value.length) {
-                            clearInterval(interval);
-                            trigger(document.querySelector(selector));
-                        }
-                    }, delayInterval);
-                    setTimeout(function () {
-                        clearInterval(interval);
-                    }, delayTimeout);
-                },
-                live: function (selector, event, callback, context) {
-                    function addEvent(el, type, handler) {
-                        if (el.attachEvent) el.attachEvent("on" + type, handler);
-                        else el.addEventListener(type, handler);
-                    }
-                    function live(selector, event, callback, context) {
-                        addEvent(context || document, event, function (e) {
-                            var found,
-                                el = e.target || e.srcElement;
-                            while (el && el.matches && el !== context && !(found = el.matches(selector)))
-                                el = el.parentElement;
-                            if (found) callback.call(el, e);
-                        });
-                    }
-                    live(selector, event, callback, context);
-                },
-            };
-            return function (selector) {
-                return new bm(selector);
-            };
-        });
-        var helper = _$();
-        helper.live('.Cre_application', 'click', function () {
-            document.body.classList.add('hidestup4');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            helper.waitForElement('.wpb_wrapper > #gform_wrapper_71', function () {
-                // Check if the element with 75% width exists
-                helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function () {
-                    let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
-                    if (progressBar) {
-                        updatePopupContent();// Add class if progress bar is 75%
-                    }
-                }, 50, 5000);
-            }, 500, 15000);
-        });
-        helper.live('.CrePrevious', 'click', function () {
-            document.body.classList.remove('hidestup4');
-            // Check if the progress bar with 75% width is NOT present
-            helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function () {
-                if (document.querySelector('.gf_progressbar_percentage[style="width:75%;"]')) {
-                    document.body.classList.remove('Cre_showcta');
-                }
-            }, 50, 5000);
-            helper.waitForElement('#gform_previous_button_71', function (prevButton) {
-                prevButton.click();
-            }, 50, 5000);
-        });
-        helper.live('.Cre_price', 'click', function () {
-            document.querySelector('.cre_cta').insertAdjacentHTML(
-                'beforeend',
-                '<img id="gform_ajax_spinner_71" class="gform_ajax_spinner cre_loader" src="https://www.reachcambridge.com/wp-content/plugins/gravityforms/images/spinner.svg" alt="">'
-            );
-            sessionStorage.setItem('redirecting', 'true');
-            helper.waitForElement('#gform_submit_button_71', function (submitButton) {
-                const form = submitButton.closest('form#gform_71');
-                if (form) {
-                    form.submit();
-                } else {
-                    submitButton.style.display = 'block';
-                    submitButton.click();
-                    submitButton.style.display = 'none';
-                }
-            }, 50, 5000);
-        });
-        helper.live('.Cre_goaccount', 'click', function () {
-            document.body.classList.remove('hidestup4');
-        });
-        helper.live('#gform_next_button_71_51', 'click', function () {
-            helper.waitForElement('.wpb_wrapper > #gform_wrapper_71', function () {
-                // Check if the element with 75% width exists
-                helper.waitForElement('.gf_progressbar_percentage[style="width:75%;"]', function () {
-                    let progressBar = document.querySelector('.gf_progressbar_percentage[style="width:75%;"]');
-                    if (progressBar) {
-                        updatePopupContent();// Add class if progress bar is 75%
-                    }
-                }, 50, 5000);
-            }, 500, 15000);
-        });
-        function updatePopupContent() {
-            const nameElement = document.querySelector('.apply-right-course.first');
-            const courseDateElement = document.querySelector('#sidebar .apply-right-programs .apply-right-title');
-            const priceElement = document.querySelector('.apply-right-fees .apply-right-total');
-            if (!nameElement || !courseDateElement || !priceElement) {
-                return;
-            }
-            const name = nameElement.textContent.trim() || 'Student';
-            const courseDate = courseDateElement.textContent.trim() || 'your selected date';
-            const price = priceElement.textContent.trim() || 'Price not available';
-            const popupHTML = `
-    <div class="cre_popupshow">
-    <div class="Ctacontroll">
-    <p class='CrePrevious'>Previous</p>
-    <p class="Cre_application">Next</p>
-    </div>
-    <div class="Cre_popupinside">
-    <h2>Pay your deposit</h2>
-    <p>Please pay now to guarantee ${name}’s course and ${courseDate}.</p>
-    <div class="cre_cta">
-    <span class="Cre_price">Pay Now (${price})</span>
-    <span class="Cre_goaccount">Request to Pay Later</span>
-    </div>
-    </div>
-    </div>
-    `;
-            const progressBar = document.querySelector('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4');
-            const existingPopup = document.querySelector('.cre_popupshow');
-            if (existingPopup) {
-                existingPopup.outerHTML = popupHTML;
-            } else if (progressBar) {
-                helper.waitForElement('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4', function () {
-                    let progressBar = document.querySelector('#gform_page_71_3[style="display:none;"]  + #gform_page_71_4');
-                    if (progressBar) {
-                        progressBar.insertAdjacentHTML("afterend", popupHTML);
-                    }
-                }, 50, 5000);
-            }
+  try {
+    /* main variables */
+    var debug = 1;
+    var variation_name = "cre-t-30";
+
+    /* helper library */
+    var _$;
+    !(function (factory) {
+      _$ = factory();
+    })(function () {
+      var bm = function (s) {
+        if (typeof s === "string") {
+          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
         }
-        function init() {
-            _$('body').addClass(variation_name);
-            function checkURLAndRedirect() {
-                if (sessionStorage.getItem('redirecting') === 'true') {
-                    const checkInterval = setInterval(() => {
-                        if (window.location.href.includes('dashboard?reachFormEvent=Reach')) {
-                            clearInterval(checkInterval);
-                            document.querySelector('.page-template-dashboard').style.opacity = '0';
-                            document.querySelector('.nectar-button').click();
-                            window.location.href = 'https://www.reachcambridge.com/checkout';
-                        }
-                    }, 100);
-                    setTimeout(() => clearInterval(checkInterval), 30000);
-                }
-            }
-            checkURLAndRedirect();
+        if (typeof s === "object") {
+          this.value = [s];
         }
-        // if (!window.goalclickAdded205) {
-        //     window.goalclickAdded205 = true;
-        //     eventHandlerT8();
-        // }
-        helper.waitForElement("body", init, 50, 5000);
-    } catch (e) {
-        console.log(e, "Error in Test " + variation_name);
+      };
+      bm.prototype = {
+        eq: function (n) {
+          this.value = [this.value[n]];
+          return this;
+        },
+        each: function (fn) {
+          [].forEach.call(this.value, fn);
+          return this;
+        },
+        log: function () {
+          var items = [];
+          for (let index = 0; index < arguments.length; index++) {
+            items.push(arguments[index]);
+          }
+          console && console.log(variation_name, items);
+        },
+        addClass: function (v) {
+          var a = v.split(" ");
+          return this.each(function (i) {
+            for (var x = 0; x < a.length; x++) {
+              if (i.classList) {
+                i.classList.add(a[x]);
+              } else {
+                i.className += " " + a[x];
+              }
+            }
+          });
+        },
+        waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
+          var interval = setInterval(function () {
+            if (_$(selector).value.length) {
+              clearInterval(interval);
+              trigger();
+            }
+          }, delayInterval);
+          setTimeout(function () {
+            clearInterval(interval);
+          }, delayTimeout);
+        },
+      };
+      return function (selector) {
+        return new bm(selector);
+      };
+    });
+    var helper = _$();
+
+    var methodologyContent = {
+      methodology: {
+        header: "Trusted, Transparent, and 100% Independent Ranking Methodology",
+        sections: [
+          {
+            title: "How Our Rankings Work",
+            description:
+              "We independently reviewed the top pet insurers from NAPHIA (North American Pet Health Insurance Association) — a trusted industry body — and ranked them based on 11 factors that matter most to pet owners:",
+            list: [
+              "Average price across all 50 states*",
+              "What’s covered and what's not",
+              "Key policy details like accidents, illnesses, surgeries, check-ups, cancer treatment, and lab tests",
+              "Financial strength of the insurer (AM Best rating)",
+              "Reimbursement percentage (how much you get back)",
+              "Annual payout limit",
+              "How easy it is to sign up and manage your policy",
+              "How clear and simple the policy is to understand",
+              "Customer reviews",
+              "Overall Brand Trust",
+              "Satisfaction with the claims process",
+            ],
+          },
+          {
+            title: "Listings Are 100% Independent",
+            description: "We don’t accept payment for listings or ranking changes. Every provider is shown based on merit — never financial gain.",
+          },
+          {
+            title: "A+ Rated, BBB-Accredited Business",
+            description:
+              "Pet Insurance Gurus is an A+ rated, BBB-accredited business. Since 2020, we’ve helped over 100,000 pet owners protect their furry family members. Unlike many competitors, we’re a U.S.-based company headquartered in San Francisco, California.",
+            logos: [
+              {
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/accreditedlogo_67ee355538820.svg",
+                alt: "B+",
+              },
+            ],
+          },
+          {
+            title: "How We Make Money",
+            description: "We may earn a commission if you buy a policy through one of our links which allows us to keep our service free. Companies can’t pay to appear in or influence our rankings — our recommendations are 100% independent.",
+          },
+          {
+            title: "You Pay the Same Price as Going Direct",
+            description: "Pet Insurance prices are regulated by law. You won’t find a lower price anywhere else for a policy found on Pet Insurance Gurus.",
+          },
+          {
+            title: "Our Service Is Free to Use",
+            description:
+              "You don’t pay anything to use this site. If you click a link and buy a policy, we may earn a commission from a pet insurance provider, however, this does not affect how we rank or recommend plans.",
+          },
+          {
+            title: "Your Privacy is 100% Protected",
+            description:
+              "We don’t collect personal information. You can browse our website and compare pet insurance providers with complete privacy — no phone number, no email, and no personal details are required.",
+          },
+          {
+            title: "Prices Are Averages, Not Quotes",
+            description:
+              "To help you compare, we show the average cost of a standard policy for a 2-year-old Labrador Retriever Dog and a 2-year-old American Shorthair Cat, across all 50 US states. Since your pet is unique, your final quote will be different — click through to your provider choice for a personalized quote.",
+          },
+          {
+            title: "We Donate to Animal Welfare Charities",
+            description: "When you buy pet insurance through us we donate $25 to the following charities — giving a helping paw to pets and animals in need!",
+            logos: [
+              {
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/ca-1_67a0b3f0e6536.png",
+                alt: "human",
+              },
+              {
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/wwf-logo_67a0b436ad198.png",
+                alt: "WWF",
+              },
+              {
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/bf-sta-logo-4_67a0b3e26a36a.png",
+                alt: "save them all",
+              },
+              {
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/ca-4_67a0b3fd4eda1.png",
+                alt: "alley cat allies",
+              },
+              {
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/ca-5_67a0b40bb07da.png",
+                alt: "planet",
+              },
+            ],
+          },
+          {
+            title: "You’re Always in Control",
+            description: "We help you narrow your options and build confidence in your shortlist. Every pet and owner is different, so the final decision will always be yours.",
+          },
+        ],
+        zipCodes:
+          "*Below are all the zip codes used to calculate the national average prices for each pet insurance provider: AL (35206) | AK (99516) | AZ (85050) | AR (72205) | CA (90210) | CO (80238) | CT (06105) | DE (19904) | FL (33155) | GA (30331) | HI (96821) | ID (83712) | IL (60630) | IN (46229) | IA (50317) | KS (66109) | KY (40511) | LA (70112) | ME (04108) | MD (21209) | MA (02136) | MI (48201) | MN (55414) | MS (39211) | MO (63104) | MT (59101) | NE (68154) | NV (89117) | NH (03062) | NJ (07305) | NM (87120) | NY (10022) | NC (27603) | ND (58104) | OH (44102) | OK (73129) | OR (97229) | PA (19128) | RI (02909) | SC (29414) | SD (57108) | TN (38111) | TX (77054) | UT (84104) | VT (05408) | VA (23221) | WA (98108) | WV (25311) | WI (53225) | WY (82009)",
+      },
+    };
+
+    function generateMethodologyContent() {
+      let methodologyHtml = `<div class="cre-t-30-methodology-container">
+        <div class="cre-t-30-methodology-wrapper">
+          <div class="cre-t-30-header">
+            <div class="cre-t-30-header-text">${methodologyContent.methodology.header}</div>
+          </div>`;
+
+      methodologyContent.methodology.sections.forEach((section, index) => {
+        methodologyHtml += `<div class="cre-t-30-content cre-t-30-content${index + 1}">
+        <div class="cre-t-30-content-text-header">${section.title}</div>
+        <div class="cre-t-30-content-text-description">${section.description}</div>`;
+
+        if (section.list) {
+          methodologyHtml += `<div class="cre-t-30-content-text-list"><ol>`;
+          section.list.forEach((item) => {
+            methodologyHtml += `<li>${item}</li>`;
+          });
+          methodologyHtml += `</ol></div>`;
+        }
+
+        if (section.logos) {
+          methodologyHtml += `<div class="cre-t-30-logo-section">`;
+
+          section.logos.forEach((logo, index) => {
+            methodologyHtml += `<div class="cre-t-30-logo cre-t-30-logo-${index + 1}">
+              <img src="${logo.src}" alt="${logo.alt}" />
+            </div>`;
+          });
+
+          methodologyHtml += `</div>`;
+        }
+
+        methodologyHtml += `</div>`;
+      });
+
+      methodologyHtml += `</div></div>`;
+      return methodologyHtml;
     }
+
+    function generateZipCodeContent() {
+      return `<div class="cre-t-30-zipcode-container">
+        <div class="cre-t-30-zipcode-text">${methodologyContent.methodology.zipCodes}</div>
+      </div>`;
+    }
+
+    /* Initialize variation */
+    function init() {
+      _$("body").addClass(variation_name);
+
+      // Generate and insert methodology content
+      const methodologyHtml = generateMethodologyContent();
+      const zipCodeHtml = generateZipCodeContent();
+
+      // Append methodology content after #content-section
+      if (!document.querySelector(".cre-t-30-methodology-container")) {
+        const container = document.querySelector("#content-section");
+        container.insertAdjacentHTML("afterend", methodologyHtml);
+        document.querySelector(".cre-t-30-methodology-wrapper").insertAdjacentHTML("beforeend", zipCodeHtml);
+      }
+    }
+
+    /* Wait for element to load and initialize */
+    helper.waitForElement("#content-section", init, 25, 25000);
+  } catch (e) {
+    if (debug) console.log(e, "Error in Test " + variation_name);
+  }
 })();
