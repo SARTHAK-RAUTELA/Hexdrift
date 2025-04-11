@@ -1,224 +1,156 @@
-html body.cre-t-30 #content-section{
-  display: none;
+html body.RC-Test18 .discount-banner-top .cre-rocket-img {
+  top: -7px;
 }
 
-html body.cre-t-30 .cre-t-30-methodology-wrapper{
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 40px;
+html body.RC-Test18 .discount-banner-top .cre-time-box>span {
+  font-size: 16px;
+  border-radius: 10px;
 }
 
-html body.cre-t-30 .cre-t-30-header-text{
-  color: var(--petinsurancegurus-com-black, var(--color-black-solid, #000));
-  font-family: var(--font-family-Font-1, Montserrat);
-  font-size: var(--font-size-32, 32px);
-  font-style: normal;
-  font-weight: var(--font-weight-600, 600);
-  line-height: var(--line-height-38_4, 38.4px); 
-  margin-bottom: 28px;
+html body.RC-Test18 .cre-countdown-container {
+  gap: 10px;
 }
 
-html body.cre-t-30 .cre-t-30-content-text-header{
-  color: var(--petinsurancegurus-com-black, var(--color-black-solid, #000));
-  font-family: var(--font-family-Font-1, Montserrat);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: var(--font-weight-400, 700);
-  line-height: var(--line-height-24, 24px);
+html body.RC-Test18 .cre-bold span {
+  font-weight: 500;
 }
 
-html body.cre-t-30 .cre-t-30-content{
-  margin-bottom: 25px;
+html body.RC-Test18 #discount_banner_top [class*="discount-banner"] .cre-countdown-container .cre-days,
+html body.RC-Test18 #discount_banner_top [class*="discount-banner"] .cre-countdown-container .cre-hours,
+html body.RC-Test18 #discount_banner_top [class*="discount-banner"] .cre-countdown-container .cre-minutes {
+  min-width: 40px;
 }
 
-html body.cre-t-30 .cre-t-30-zipcode-text{
-  color: #808080;
-  font-family: var(--font-family-Font-1, Montserrat);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: var(--font-weight-400, 400);
-  line-height: 19px;
+html body.RC-Test18 .cre-time-box .cre-label {
+  font-weight: 500;
 }
 
-html body.cre-t-30 .cre-t-30-content-text-list ol{
-  padding-left: 30px;
-}
-
-
-@media screen and (max-width: 767px) {
-  html body.cre-t-30 .cre-t-30-methodology-wrapper{
-      padding: 41px 20px;
+@media screen and (min-width: 1000px) {
+  html body.RC-Test18 .discount-banner-top .cre-rocket-img {
+    top: -4px;
   }
 
-  html body.cre-t-30 .cre-t-30-header-text{
-      font-size: 24px;
-      line-height: 31px;
+  html body.RC-Test18 .cre-countdown-container {
+    margin-left: 0px;
   }
 
-  html body.cre-t-30 .cre-t-30-content-text-header{
-    font-size: 16px;
+  html body.RC-Test18 .discount-banner-top .cre-countdown-container+div {
+    margin: 0 !important;
+    margin-top: -9px !important;
+    margin-left: 4px !important;
   }
 
-  html body.cre-t-30 .cre-t-30-content-text-description{
+  html body.RC-Test18 .discount-banner-top .cre-rocket-img+a {
+    margin-top: -9px;
+    margin-right: 3px;
+
+  }
+
+  html body.RC-Test18 .discount-banner-top .cre-rocket-img {
+    height: 28px;
+    width: 28px;
+    margin-right: 6px;
+  }
+
+  html body.RC-Test18 .missing_t18 {
+    margin: 0;
+    order: 6;
+    font-size: 17px;
+  }
+
+  html body.RC-Test18 #discount_banner_top .cre-bold {
+    font-size: 17px;
+  }
+
+  html body.RC-Test18 .cre-time-box .cre-label {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+}
+
+html body.RC-Test18 .cre-countdown-container {
+  align-items: center;
+}
+
+@media (max-width: 999px) {
+
+  html body.RC-Test18 #discount_banner_top [class*="discount-banner"] .cre-countdown-container .cre-days,
+  html body.RC-Test18 #discount_banner_top [class*="discount-banner"] .cre-countdown-container .cre-hours,
+  html body.RC-Test18 #discount_banner_top [class*="discount-banner"] .cre-countdown-container .cre-minutes {
+    min-width: 40px;
+    max-width: 40px;
+  }
+
+  html body .cre-time-box>span {
+    padding: 6px 6px !important;
+  }
+
+  html body.RC-Test18 .next_t18,
+  html body.RC-Test18 .missing_t18 {
+    margin-top: -20px;
+  }
+}
+
+@media(max-width: 600px) {
+
+  html body.RC-Test18 .next_t18,
+  html body.RC-Test18 .missing_t18 {
     font-size: 14px;
-  }
-    html body.cre-t-30 .cre-t-30-content-text-list ol{
-    font-size: 14px;
+    margin-top: -20px;
   }
 }
 
-/* Logo Section Css */
-html body.cre-t-30 .cre-t-30-logo-section {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 16px;
-  margin-top: 16px;
+@media(max-width: 450px) {
+
+  html body.RC-Test18 #discount_banner_top [class*=discount-banner] .cre-countdown-container .cre-days,
+  html body.RC-Test18 #discount_banner_top [class*=discount-banner] .cre-countdown-container .cre-hours,
+  html body.RC-Test18 #discount_banner_top [class*=discount-banner] .cre-countdown-container .cre-minutes {
+    min-width: 36px;
+    max-width: 36px;
+  }
+
+  html body.RC-Test18 .cre-time-box .cre-label {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  html body.RC-Test18 .cre-time-box>span {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  html body.RC-Test18 .next_t18,
+  html body.RC-Test18 .missing_t18 {
+    font-size: 13px;
+    margin-top: -20px;
+  }
+
+  html body.RC-Test18 .cre-countdown-container {
+    gap: 8px;
+  }
 }
 
-html body.cre-t-30 .cre-t-30-logo {
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-}
+@media(max-width: 400px) {
 
-html body.cre-t-30 .cre-t-30-logo-1 {
-  width: 95.039px;
-  height: 68.281px;
-}
-html body.cre-t-30 .cre-t-30-logo-2 {
-  width: 58.131px;
-  height: 68.281px;
-}
-html body.cre-t-30 .cre-t-30-logo-3 {
-  width: 162.397px;
-  height: 68.281px;
-}
-html body.cre-t-30 .cre-t-30-logo-4 {
-  width: 121.798px;
-  height: 68.281px;
-}
-html body.cre-t-30 .cre-t-30-logo-5 {
-  width: 66.435px;
-  height: 68.281px;
-}
-
-html body.cre-t-30 .cre-t-30-content3 .cre-t-30-logo-section .cre-t-30-logo{
-  width: 125px;
-  height: fit-content;
-}
-html body.cre-t-30 .cre-t-30-content3 .cre-t-30-logo-section .cre-t-30-logo img{
-  width: 100%;
-}
-
-@media screen and (max-width: 767px) {
-  html body.cre-t-30 .cre-t-30-modal-section {
-      max-height: fit-content;
-      width: 92%;
-  }
-  html body.cre-t-30 .cre-t-30-logo-section {
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-      max-width: 350px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      row-gap: 30px;
+  html body.RC-Test18 .next_t18,
+  html body.RC-Test18 .missing_t18 {
+    font-size: 12px;
   }
 
-  html body.cre-t-30 .cre-t-30-logo {
-      align-items: center;
+  html body.RC-Test18 .cre-time-box .cre-label {
+    font-weight: 500;
+    font-size: 10px;
   }
 
-
-  html body.cre-t-30 .cre-t-30-logo-1 {
-      width: 95.039px;
-      height: 58.281px;
-  }
-  html body.cre-t-30 .cre-t-30-logo-2 {
-      width: 58.131px;
-      height: 58.281px;
+  html body.RC-Test18 .cre-time-box>span {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-top: 6px;
   }
 
-  html body.cre-t-30 .cre-t-30-logo-3 {
-      width: 140px;
-      height: 58px;
-      position: relative;
-      overflow: hidden;
-  }
-  html body.cre-t-30 .cre-t-30-logo-3 img {
-      width: 143px;
-      position: absolute;
-      height: auto;
-      object-fit: unset;
-      max-width: none;
-      top: -4px;
-      bottom: 0;
-      margin: auto 0;
-  }
-
-  html body.cre-t-30 .cre-t-30-logo img {
-      object-fit: contain;
-      max-width: none;
-      max-height: none;
-      width: 100%;
-      height: 100%;
-  }
-  html body.cre-t-30 .cre-t-30-logo-4 {
-      width: 120px;
-      height: 59px;
-  }
-
-  html body.cre-t-30 .cre-t-30-logo-5 {
-      height: 60px;
-      width: 60px;
-  }
- 
-}
-
-
-html body.cre-t-30 .cre-t-30-img-cta .gb-button-text {
-  margin-right: 6px;
-}
-
-@media screen and (max-width: 400px) {
-  html body.cre-t-30 .cre-t-30-logo-1 {
-      width: 84px;
-      height: 56px;
-  }
-  html body.cre-t-30 .cre-t-30-logo-2 {
-      width: 54px;
-      height: 55.281px;
-  }
-
-  html body.cre-t-30 .cre-t-30-logo-3 {
-      width: 134px;
-      height: 58px;
-  }
-  
-
-  html body.cre-t-30 .cre-t-30-logo-3 img {
-      width: 131px;
-      top: -3px;
-  }
-
-  html body.cre-t-30 .cre-t-30-logo-4 {
-      width: 100px;
-      height: 55px;
-  }
-
-  html body.cre-t-30 .cre-t-30-logo-5 {
-      height: 56px;
-      width: 50px;
-  }
-  html body.cre-t-30 .cre-t-30-logo-5 img{
-      object-position: center -1px;
-  }
-  
-}
-
-@media screen and (max-width: 359px) {
-  html body.cre-t-30 .cre-t-30-logo-3 {
-      order: 1;
+  html body.RC-Test18 .cre-countdown-container {
+    gap: 5px;
   }
 }
