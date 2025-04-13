@@ -95,7 +95,7 @@
               "Pet Insurance Gurus is an A+ rated, BBB-accredited business. Since 2020, we’ve helped over 100,000 pet owners protect their furry family members. Unlike many competitors, we’re a U.S.-based company headquartered in San Francisco, California.",
             logos: [
               {
-                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/accreditedlogo_67ee355538820.svg",
+                src: "https://cdn-3.convertexperiments.com/uf/10007679/10007714/group-51_67f7b14d6a58f.png",
                 alt: "B+",
               },
             ],

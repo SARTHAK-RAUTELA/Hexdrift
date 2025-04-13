@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream11 Team Generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script> <!-- For CSV Export -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script> <!-- For API Requests -->
+  <style>
+    /* TailwindCSS (you can customize this further) */
+    body { font-family: 'Arial', sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin: 10px 0; width: 100%; max-width: 300px; }
+    .card { border: 1px solid #ddd; padding: 20px; margin-top: 20px; }
+    .team { margin-bottom: 20px; }
+    .team h3 { margin-bottom: 10px; font-weight: bold; }
+    .team p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h1>Dream11 Team Generator</h1>
+  
+  <!-- Screenshot Upload -->
+  <input type="file" id="screenshotInput" accept="image/*">
+  <div id="playerInputs"></div>
+  
+  <button id="generateTeamsBtn">Generate Teams</button>
+  
+  <div id="teamsOutput"></div>
+  
+  <button id="downloadCSVBtn" style="display: none;">Download as CSV</button>
+
+  <script src="dream.js"></script>
+</body>
+</html>
