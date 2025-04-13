@@ -1,11 +1,106 @@
-// Store player data after OCR
 let players = [];
 let weatherData = {};
+
+// Handle Screenshot Upload
+document.getElementById('screenshotInput').addEventListener('change', function (e) {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const img = new Image();
+      img.onload = function() {
+        processScreenshot(img); // Process the image and extract player names
+      };
+      img.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// Process the Screenshot using OCR (Tesseract.js)
+function processScreenshot(image) {
+  Tesseract.recognize(
+    image, 
+    'eng', 
+    {
+      logger: (m) => console.log(m), // Log progress
+    }
+  ).then(({ data: { text } }) => {
+    console.log('OCR Result: ', text);
+    
+    // Assuming the OCR gives you names like "Player 1, Player 2, ..."
+    const playerNames = text.split(',').map(name => name.trim()).filter(name => name.length > 0);
+    
+    // Create input fields for player names
+    const playerInputsDiv = document.getElementById('playerInputs');
+    playerInputsDiv.innerHTML = ''; // Clear previous inputs
+    playerNames.forEach((name, index) => {
+      const playerNameInput = document.createElement('input');
+      playerNameInput.type = 'text';
+      playerNameInput.id = `playerName${index + 1}`;
+      playerNameInput.value = name;
+      playerNameInput.placeholder = `Player ${index + 1}`;
+      playerNameInput.classList.add('px-4', 'py-2', 'border', 'rounded', 'w-full');
+      
+      const playerTeamInput = document.createElement('input');
+      playerTeamInput.type = 'text';
+      playerTeamInput.id = `playerTeam${index + 1}`;
+      playerTeamInput.placeholder = 'Team (e.g., Team A)';
+      playerTeamInput.classList.add('px-4', 'py-2', 'border', 'rounded', 'w-full');
+      
+      const playerRoleInput = document.createElement('select');
+      playerRoleInput.id = `playerRole${index + 1}`;
+      playerRoleInput.classList.add('px-4', 'py-2', 'border', 'rounded', 'w-full');
+      ['BAT', 'BOWL', 'AR', 'WK'].forEach(role => {
+        const option = document.createElement('option');
+        option.value = role;
+        option.textContent = role;
+        playerRoleInput.appendChild(option);
+      });
+      
+      const playerPointsInput = document.createElement('input');
+      playerPointsInput.type = 'number';
+      playerPointsInput.id = `playerPoints${index + 1}`;
+      playerPointsInput.placeholder = 'Predicted Points';
+      playerPointsInput.classList.add('px-4', 'py-2', 'border', 'rounded', 'w-full');
+
+      const inputDiv = document.createElement('div');
+      inputDiv.classList.add('space-y-4');
+      inputDiv.appendChild(playerNameInput);
+      inputDiv.appendChild(playerTeamInput);
+      inputDiv.appendChild(playerRoleInput);
+      inputDiv.appendChild(playerPointsInput);
+
+      playerInputsDiv.appendChild(inputDiv);
+    });
+
+    // Show the "Generate Teams" button
+    document.getElementById('generateTeamsBtn').style.display = 'block';
+  }).catch(error => {
+    console.error('OCR Error:', error);
+  });
+}
 
 // Generate all valid 11-player teams
 function generateTeams() {
   const validTeams = [];
   
+  // Gather player data from input fields
+  players = [];
+  for (let i = 0; i < 22; i++) {
+    const playerName = document.getElementById(`playerName${i + 1}`).value;
+    const playerTeam = document.getElementById(`playerTeam${i + 1}`).value;
+    const playerRole = document.getElementById(`playerRole${i + 1}`).value;
+    const playerPoints = parseInt(document.getElementById(`playerPoints${i + 1}`).value) || 0;
+    
+    players.push({
+      name: playerName,
+      team: playerTeam,
+      role: playerRole,
+      predictedPoints: playerPoints
+    });
+  }
+
   // Generate all valid combinations (simplified for example)
   for (let i = 0; i < players.length; i++) {
     for (let j = i + 1; j < players.length; j++) {
@@ -45,18 +140,17 @@ function generateTeams() {
   displayTeams(teamsWithCVC.flat()); // Flatten the array to get all C/VC combinations
 }
 
-// Display the teams in UI
+// Display teams on the webpage
 function displayTeams(teams) {
   const teamsOutput = document.getElementById('teamsOutput');
   teamsOutput.innerHTML = ''; // Clear previous results
   
   teams.forEach((team, index) => {
     const teamDiv = document.createElement('div');
-    teamDiv.classList.add('card');
-    teamDiv.classList.add('team');
+    teamDiv.classList.add('bg-white', 'p-6', 'rounded-lg', 'shadow-md', 'mb-6');
     
     const teamHTML = `
-      <h3>Team ${index + 1}</h3>
+      <h3 class="text-xl font-semibold">Team ${index + 1}</h3>
       <p><strong>Captain:</strong> ${team.captain}</p>
       <p><strong>Vice Captain:</strong> ${team.viceCaptain}</p>
       <p><strong>Total Points:</strong> ${team.totalPoints}</p>
@@ -70,7 +164,7 @@ function displayTeams(teams) {
   document.getElementById('downloadCSVBtn').style.display = 'block'; // Show CSV button
 }
 
-// Download as CSV
+// Download CSV of players and teams
 document.getElementById('downloadCSVBtn').addEventListener('click', function () {
   const data = players.map(player => ({
     name: player.name,
@@ -87,58 +181,5 @@ document.getElementById('downloadCSVBtn').addEventListener('click', function () 
   link.click();
 });
 
-// OCR for Player Names
-function processScreenshot(image) {
-  Tesseract.recognize(
-    image, 
-    'eng', 
-    {
-      logger: (m) => console.log(m),
-    }
-  ).then(({ data: { text } }) => {
-    console.log('OCR Result: ', text);
-    
-    // Assuming the OCR gives you names like "Player 1, Player 2, ..."
-    const playerNames = text.split(',').map(name => name.trim());
-    
-    // Fill the player names into input fields
-    for (let i = 0; i < playerNames.length; i++) {
-      const playerInput = document.getElementById(`playerName${i + 1}`);
-      if (playerInput) {
-        playerInput.value = playerNames[i];
-      }
-    }
-  }).catch(error => {
-    console.error('OCR Error:', error);
-  });
-}
-
-// Handle Screenshot Upload
-document.getElementById('screenshotInput').addEventListener('change', function (e) {
-  const file = e.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      const img = new Image();
-      img.onload = function() {
-        processScreenshot(img);
-      };
-      img.src = event.target.result;
-    };
-    reader.readAsDataURL(file);
-  }
-});
-
-// Weather API Integration
-async function fetchWeatherAndPitchData(venue) {
-  try {
-    const response = await axios.get(`https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${venue}`);
-    weatherData = response.data;
-    console.log(weatherData);
-  } catch (error) {
-    console.error('Weather API Error:', error);
-  }
-}
-
-// Example of how to call the weather API when a venue is entered
-fetchWeatherAndPitchData("Eden Gardens");
+// Event listener for generating teams after screenshot data is processed
+document.getElementById('generateTeamsBtn').addEventListener('click', generateTeams);
