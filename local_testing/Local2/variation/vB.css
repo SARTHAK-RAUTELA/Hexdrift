@@ -1,0 +1,142 @@
+html body.cre-t-35 .price-guarantee {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    z-index: 9;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #F1F7FF;
+    box-shadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+}
+
+html body.cre-t-35 .guarantee-content {
+    display: flex;
+    gap: 10px;
+    max-width: 533px;
+    margin: 0 auto;
+}
+
+html body.cre-t-35 .price-guarantee .icon {
+    color: #000;
+    flex-shrink: 0;
+}
+
+
+
+html body.cre-t-35 .price-guarantee .text-content {
+    flex-grow: 1;
+}
+
+html body.cre-t-35 .price-guarantee .text-content h2 {
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: #000;
+}
+
+html body.cre-t-35 .price-guarantee .text-content p {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+    line-height: 1.4;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+html body.cre-t-35 .price-guarantee .close-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #666;
+    top: 20px;
+}
+
+html body.cre-t-35 .price-guarantee .close-button:hover {
+    color: #000;
+}
+
+html body.cre-t-35 .price-guarantee .close-button .X-cross-icon {
+    width: 16px;
+    height: 16px;
+}
+
+html body.cre-t-35 .guarantee-content .icon .cre-price-guarantee-badge {
+    width: 19.568px;
+    height: 23.21px;
+}
+
+@media (max-width: 768px) {
+
+
+    html body.cre-t-35 .price-guarantee .close-button {
+        top: 3px;
+        transform: none;
+    }
+
+    html body.cre-t-35 .price-guarantee .text-content h2 {
+        font-size: 18px;
+    }
+
+    html body.cre-t-35 .price-guarantee .text-content p {
+        font-size: 14px;
+    }
+
+    html body.cre-t-35 .price-guarantee {
+        padding: 10px;
+    }
+
+    html body.cre-t-35 .price-guarantee .close-button .X-cross-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    html body.cre-t-35 .price-guarantee {
+        right: 20px;
+    }
+
+    html body.cre-t-35 .price-guarantee {
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    html body.cre-t-35 .price-guarantee {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    html body.cre-t-35 .guarantee-content .icon .cre-price-guarantee-badge {
+        width: 17.568px;
+        height: 21.21px;
+    }
+
+    html body.cre-t-35 .price-guarantee .text-content h2 {
+        font-size: 16px;
+    }
+
+    html body.cre-t-35 .price-guarantee .text-content p {
+        font-size: 12px;
+    }
+
+    html body.cre-t-35 .price-guarantee {
+        padding: 18px 13px;
+    }
+
+    html body.cre-t-35 .guarantee-content {
+        gap: 8px;
+    }
+
+}
