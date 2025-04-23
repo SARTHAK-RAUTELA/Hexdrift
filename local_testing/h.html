@@ -1,137 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HexDrift - Makeup & Hair Artistry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #f7e1dd;
+      --accent: #c44569;
+      --dark: #1e1e1e;
+      --light: #ffffff;
+    }
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
 
-        nav li {
-            margin: 0 1rem;
-        }
+    header {
+      background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
+    header p {
+      font-size: 1.25rem;
+    }
 
-        #home {
-            background: url('images/home-bg.jpg') no-repeat center center/cover;
-            color: white;
-        }
+    nav {
+      background: var(--light);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
 
-        #projects .project {
-            display: inline-block;
-            margin: 1rem;
-            width: 300px;
-        }
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+    }
 
-        #projects img {
-            width: 100%;
-            height: auto;
-        }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
+    .services, .gallery, .testimonials {
+      display: grid;
+      gap: 30px;
+    }
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
+    .services div, .testimonials div {
+      background: var(--primary);
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-            #projects .project {
-                width: 100%;
-            }
-        }
-    </style>
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .cta {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      background: white;
+      color: var(--accent);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--dark);
+      color: white;
+    }
+
+    .instagram-embed {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>HexDrift</h1>
+    <p>Makeup & Hairstyle Artistry – Bridal | Glam | Editorial</p>
+  </header>
 
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my skills, projects, and achievements.</p>
-    </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm the artist behind HexDrift – a passionate makeup & hairstyle expert blending bold, soft, and trendy styles to help you shine on your big day or special event.</p>
+  </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-        </ul>
-    </section>
+  <section id="services" class="services">
+    <h2>Services</h2>
+    <div>💄 Bridal Makeup</div>
+    <div>💃 Party & Festive Looks</div>
+    <div>📷 Editorial & Photoshoots</div>
+    <div>💇‍♀️ Hairstyling for All Occasions</div>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="images/project1.jpg" alt="Project 1">
-            <p>Project 1 description</p>
-        </div>
-        <div class="project">
-            <img src="images/project2.jpg" alt="Project 2">
-            <p>Project 2 description</p>
-        </div>
-    </section>
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <img src="https://source.unsplash.com/250x250/?bridal,makeup" alt="Makeup Look 1" />
+    <img src="https://source.unsplash.com/250x250/?makeup,hair" alt="Makeup Look 2" />
+    <img src="https://source.unsplash.com/250x250/?fashion,model" alt="Makeup Look 3" />
+    <img src="https://source.unsplash.com/250x250/?beauty,makeup" alt="Makeup Look 4" />
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    </section>
+  <section id="testimonials" class="testimonials">
+    <h2>Client Love</h2>
+    <div>"Absolutely loved my bridal look – flawless and elegant!"</div>
+    <div>"She made me feel confident and glowing for my shoot. Highly recommended!"</div>
+    <div>"Super professional and sweet – hairstyle was perfect all day."</div>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+  <section id="contact" class="cta">
+    <h2>Book Your Look</h2>
+    <p>Let’s glam you up for your next event. DM me or book now!</p>
+    <a href="https://wa.me/919999999999">Message on WhatsApp</a>
+    <a href="https://instagram.com/yourinstagram" style="display: block; margin-top: 15px; color: white; text-decoration: underline;">Follow on Instagram</a>
 
-    <script src="script.js"></script>
+    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Tell me what you need..." required></textarea>
+      <button type="submit">Send Booking Request</button>
+    </form>
+
+    <div class="instagram-embed">
+      <iframe src="https://snapwidget.com/embed/123456" title="Instagram Feed" width="100%" height="400" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HexDrift. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>

@@ -177,8 +177,8 @@ html body.cre-t-34.cre-t-30 #content-section .ct-span.oxy-stock-content-styles {
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-    .header-nav ul {
-        margin: 0px 0 0 auto !important;
+    html body.cre-t-34 .header-nav ul {
+        margin: 3px 0 0 auto !important;
     }
 
 }
