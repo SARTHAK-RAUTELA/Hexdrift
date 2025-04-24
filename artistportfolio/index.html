@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Make-Up Artist Sofia Smith</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make-up Artist Sofia Smith</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <div class="logo">Make.Sofia</div>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-        <div class="menu-toggle" id="menuToggle">☰</div>
-      </nav>
-    </div>
-  </header>
+    <nav class="navbar">
+        <div class="logo">Make.Sofia</div>
+        <div class="nav-links">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About Me</a>
+            <a href="#press">Press</a>
+        </div>
+    </nav>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>MAKE-UP ARTIST SOFIA SMITH</h1>
-      <p>I will emphasize your beauty and give you an unforgettable experience.</p>
-      <button>Sign up for makeup</button>
-    </div>
-    <div class="hero-image">
-      <img src="https://source.unsplash.com/450x600/?makeup,model" alt="Makeup Model" />
-    </div>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MAKE-UP ARTIST<br>SOFIA SMITH</h1>
+                <p class="subheading">I will emphasize your beauty and give you an unforgettable experience.</p>
+                <button class="cta-button">Sign up for makeup</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e" alt="Professional Makeup Look">
+            </div>
+        </section>
 
-  <section class="stats">
-    <div><strong>1500+</strong>Clients</div>
-    <div><strong>400+</strong>Reviews</div>
-    <div><strong>100%</strong>Satisfaction</div>
-    <div><strong>80K</strong>Audience</div>
-  </section>
+        <section class="stats">
+            <div class="stat-item">
+                <h2>1500+</h2>
+                <p>Clients</p>
+            </div>
+            <div class="stat-item">
+                <h2>400+</h2>
+                <p>Reviews</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Satisfied</p>
+            </div>
+            <div class="stat-item">
+                <h2>80K</h2>
+                <p>Audience</p>
+            </div>
+        </section>
 
-  <section class="about">
-    <h2>About me</h2>
-    <div class="about-content">
-      <p>Hi! My name is Sofia Smith. I am a makeup artist from London with extensive work.</p>
-      <p>I regularly undergo professional development with the best specialists to make you even more beautiful.</p>
-    </div>
-  </section>
+        <section id="about" class="about">
+            <h2>About me</h2>
+            <div class="about-content">
+                <p class="intro">Hi! My name is Sofia Smith.<br>I am a makeup artist from London with extensive work.</p>
+                <div class="about-details">
+                    <p>I regularly undergo professional development with the best specialists to master new techniques.</p>
+                    <p>Let me help you with the art of makeup and give you an unforgettable experience.</p>
+                </div>
+            </div>
+        </section>
 
-  <section class="portfolio">
-    <h2>Portfolio</h2>
-    <div class="grid">
-      <div class="item">
-        <img src="https://source.unsplash.com/400x400/?woman,makeup" alt="Light Makeup" />
-        <h3>Light makeup</h3>
-        <p>A natural everyday style that suits all face shapes.</p>
-      </div>
-      <div class="item">
-        <img src="https://source.unsplash.com/400x400/?makeup,evening" alt="Evening Makeup" />
-        <h3>Evening makeup</h3>
-        <p>Rich colors for stunning evening events.</p>
-      </div>
-      <div class="item">
-        <img src="https://source.unsplash.com/400x400/?beauty,fashion" alt="Age-related Makeup" />
-        <h3>Age-related makeup</h3>
-        <p>This style hides wrinkles and enhances facial shapes.</p>
-      </div>
-      <div class="item">
-        <img src="https://source.unsplash.com/400x400/?asian,model" alt="Asian Makeup" />
-        <h3>Asian makeup</h3>
-        <p>Makeup for Asian types that keep the natural facial features.</p>
-      </div>
-    </div>
-  </section>
+        <section id="portfolio" class="portfolio">
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937" alt="Evening Makeup">
+                    <h3>Evening makeup</h3>
+                    <p>An impressive image for a special evening out at its finest</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f" alt="Light Makeup">
+                    <h3>Light makeup</h3>
+                    <p>A natural glow that lets your innate beauty shine</p>
+                </div>
+                <div class="portfolio-item text-only">
+                    <h3>Age-related makeup</h3>
+                    <p>The makeup needs and challenges age-related skin brings</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1512257640574-7c0539d642be" alt="Asian Makeup">
+                    <h3>Asian makeup</h3>
+                    <p>Makeup style for Asian facial features</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98" alt="Special Effects">
+                    <h3>Special Effects</h3>
+                    <p>Creative and artistic transformations</p>
+                </div>
+                <div class="portfolio-item text-only">
+                    <h3>Bridal makeup</h3>
+                    <p>Make your special day even more beautiful</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1526045478516-99145907023c" alt="Natural Glow">
+                    <h3>Natural Glow</h3>
+                    <p>Enhance your natural beauty</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263" alt="Editorial">
+                    <h3>Editorial</h3>
+                    <p>High-fashion and creative looks</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

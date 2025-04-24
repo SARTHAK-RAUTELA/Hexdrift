@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Artist - Professional Beauty Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="hero__nav">
+            <a href="#" class="hero__logo">MAKEUP ARTIST</a>
+            <button class="hero__toggle" aria-label="Toggle menu">☰</button>
+            <ul class="hero__menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero__content">
+            <h1 class="hero__title">MAKEUP<br>ARTIST</h1>
+            <p class="hero__subtitle">Follow Your Beauty. Welcome to our Glam Haven</p>
+            <a href="#about" class="btn btn--primary">Learn more</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <img src="https://source.unsplash.com/800x800/?makeup,beauty" alt="Makeup artist at work" class="about__img" />
+        <div class="about__text">
+            <h2>WHAT I DO?</h2>
+            <p>With an artist's touch and a visionary's eye, im transforming faces into works of art, creating captivating looks that reflect your inner radiance.</p>
+            <p>Whether you're seeking a glamorous makeover for a special occasion or a subtle enhancement for everyday elegance, our makeup artistry is an ode to your individuality.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services__card">
+            <h2>SERVICES</h2>
+            <ul class="services__list">
+                <li>Bridal Makeup</li>
+                <li>Corporate Events</li>
+                <li>Runway Makeup</li>
+                <li>Special Occasion Makeup</li>
+            </ul>
+            <img src="https://source.unsplash.com/600x400/?makeup,cosmetics" alt="Colorful makeup art" class="services__img" />
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <div class="portfolio__grid">
+            <img src="https://source.unsplash.com/600x800/?makeup,portrait" alt="Portfolio image 1" />
+            <img src="https://source.unsplash.com/800x600/?beauty,makeup" alt="Portfolio image 2" />
+            <img src="https://source.unsplash.com/600x800/?cosmetics,face" alt="Portfolio image 3" />
+            <img src="https://source.unsplash.com/800x600/?makeup,model" alt="Portfolio image 4" />
+            <img src="https://source.unsplash.com/600x800/?beauty,portrait" alt="Portfolio image 5" />
+            <img src="https://source.unsplash.com/800x600/?makeup,artist" alt="Portfolio image 6" />
+        </div>
+        <div class="portfolio__dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact__info">
+            <h2>Transforming Beauty Through Artistry</h2>
+        </div>
+        <form class="contact__form">
+            <div class="form-group">
+                <input type="text" id="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+                <textarea id="message" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn btn--secondary">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2023 Katy Milen. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">IN</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
