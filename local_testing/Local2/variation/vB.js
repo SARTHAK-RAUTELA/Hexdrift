@@ -1,158 +1,159 @@
-window.expLibraryDataQueue = window.expLibraryDataQueue || [];
-window.expLibraryDataQueue.push({
-    CRE_EXP_T90: {
-        var: {
-            tagConfigs: [
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_entry_ticket"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                                <span>Ticket</span>
-                                <div class="tooltip-90">
-                                   <div class="tooltip-90-heading">Entry Tickets</div>
-                                   <div class="tooltip-90-content">Fast access to top attractions</div>
-                                </div>
-                              </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_singleday"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                                <span>Day Tour</span>
-                                <div class="tooltip-90">
-                                  <div class="tooltip-90-heading">Day Tours</div>
-                                  <div class="tooltip-90-content">Guided single-day adventures</div>
-                                </div>
-                             </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_multiday"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Multi-Day</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Multi-Day Tours</div>
-                      <div class="tooltip-90-content">Extended trips with guides and hotels</div>
-                    </div>
-                              </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_package"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Package</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Vacation Packages</div>
-                      <div class="tooltip-90-content">Stays, tours, and a planned itinerary</div>
-                    </div>
-                    </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_selfdrive"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Self-Drive</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Self-Drive Tours</div>
-                      <div class="tooltip-90-content">Car, hotels, customizable tours and itineraries</div>
-                    </div>
-                    </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_transfer"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Transfer</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Transfers</div>
-                      <div class="tooltip-90-content">Convenient and reliable transportation</div>
-                    </div></div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_private"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Private Tour</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Private Tours</div>
-                      <div class="tooltip-90-content">Private guide, transport, and tailored experiences</div>
-                    </div>
-                    </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_shore_excursions"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Shore-Trip</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Shore Excursions</div>
-                      <div class="tooltip-90-content">Tours with harbor pickup for cruise passengers</div>
-                    </div></div>`
-                },
-            ],
-        },
-        enable_DEBUG: true, // For debugging
-        initOnce: false, // False if events need to be added multiple times
+(function () {
+    try {
+        /* Main variables */
+        var debug = 0;
+        var variation_name = "TT-168"; // Variation name for tracking
 
-        // Attach event handlers Please do not call this function anywhere. This will automatically call from library
-        attachEventHandlers() {
-            window.addEventListener('travelshift:routeChangeComplete', e => {
-                if (!window._travelshift.experiments.some(
-                    exp => exp.name === "T90_TOUR_TYPES_EXPERIMENT" && exp.variation === "1"
-                )) {
-                    (window._travelshift.experiments = window._travelshift.experiments || []).push({ name: 'T90_TOUR_TYPES_EXPERIMENT', variation: "1" });
+        /* All Pure helper functions */
+
+        // Function to wait for an element to appear in the DOM
+        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+            var interval = setInterval(function () {
+                // Check if the element exists and trigger callback
+                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
+                    clearInterval(interval);
+                    trigger(); // Call the trigger function once the element is found
                 }
-                this.init();
-            });
-            this.observeSelector('a[data-crid*="product_card"]', (element) => {
-                this.appendHtml();
-            });
+            }, delayInterval); // Check every delayInterval milliseconds
+            setTimeout(function () {
+                clearInterval(interval); // Stop checking after delayTimeout
+            }, delayTimeout);
+        }
 
-            // SINGLE optimized event handler for all tag interactions
-            document.addEventListener('click', (event) => {
-                console.log(event.target)
-                // Check if click originated from a tag container or its children
-                const tagContainer = event.target.closest('.tagContainerT90');
+        // Function to add event listeners that work across all browsers (including IE 8)
+        function live(selector, event, callback, context) {
+            // Helper function to add event listeners for IE 8 and other browsers
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent("on" + type, handler); // IE 8
+                else el.addEventListener(type, handler); // Other browsers
+            }
 
-                if (tagContainer) {
-                    // Handle tag container click
-                    event.preventDefault();
-                    event.stopPropagation();
+            // Polyfill for matches method to ensure it works across browsers
+            this &&
+                this.Element &&
+                (function (ElementPrototype) {
+                    ElementPrototype.matches =
+                        ElementPrototype.matches ||
+                        ElementPrototype.matchesSelector ||
+                        ElementPrototype.webkitMatchesSelector ||
+                        ElementPrototype.msMatchesSelector ||
+                        function (selector) {
+                            var node = this,
+                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                                i = -1;
+                            while (nodes[++i] && nodes[i] != node);
+                            return !!nodes[i];
+                        };
+                })(Element.prototype);
 
-                    // Get all current tag containers (fresh query to include dynamic elements)
-                    const allTags = document.querySelectorAll('.tagContainerT90');
-
-                    // Remove class from all others
-                    allTags.forEach(tag => {
-                        if (tag !== tagContainer) {
-                            tag.classList.remove('hover-effect_t90');
-                        }
-                    });
-
-                    // Toggle class on clicked element
-                    tagContainer.classList.toggle('hover-effect_t90');
-                } else {
-                    // Click was outside any tag container - remove all hover effects
-                    document.querySelectorAll('.tagContainerT90').forEach(tag => {
-                        tag.classList.remove('hover-effect_t90');
-                    });
-                }
-            });
-        },
-        appendHtml() {
-            this.var.tagConfigs.forEach(({ selector, content }) => {
-                document.querySelectorAll(selector).forEach(element => {
-                    if (!element.querySelector(".tagContainerT90")) {
-                        element.insertAdjacentHTML("beforeend", content);
-                    }
+            // Live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found,
+                        el = e.target || e.srcElement;
+                    // Loop through parent elements to find a match
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e); // Call the callback if a match is found
                 });
-            });
-        },
-        // Initialize the experiment
-        init() {
-            // Example: Run a callback when the body is available
-            this.runAt('html[lang="en"] body[data-path*="/book-trips-holiday"]', ([element]) => {
-                if (window.location.href.includes("https://guidetoiceland.is/book-trips-holiday")) {
-                    if (!window._travelshift.experiments.some(
-                        exp => exp.name === "T90_TOUR_TYPES_EXPERIMENT" && exp.variation === "1"
-                    )) {
-                        (window._travelshift.experiments = window._travelshift.experiments || []).push({ name: 'T90_TOUR_TYPES_EXPERIMENT', variation: "1" });
-                    }
+            }
+            live(selector, event, callback, context); // Bind the event
+        }
+        
+        /* Variation Init */
+        function init() {
+            // Add variation class to the body
+            document.querySelector("body").classList.add(variation_name);
+
+            // Check if text content includes 'review' and add class to parent
+            document.querySelectorAll('.mb5').forEach(parent => {
+                const titleElement = parent.querySelector('[class*="Type_title3"]');
+                if (titleElement && titleElement.textContent.toLowerCase().includes('review')) {
+                    parent.classList.add('cre_reviwe'); // Add class for 'review'
                 }
             });
 
-        },
-    },
-});
+            // Move the 'review' section after the hero header
+            document.querySelectorAll('.cre_reviwe').forEach(section => {
+                const target = document.querySelector('[class*="hero-header_root"]');
+                const targetsecond = document.querySelector('[class*="composable-customer-header_root"] + .pv5');
+            
+                if (target) {
+                    target.after(section);
+                } else if (targetsecond) {
+                    targetsecond.after(section);
+                }
+            });
+        
+            // Get source and target elements
+            let sourceHeading = document.querySelector("#pro_list_header span");
+            let targetHeading = document.querySelector(".cre_reviwe [class*='Type_title3']");
+        
+            // Wait for the element to appear and modify the text
+            waitForElement('#pro_list_header span', function() {
+                if (window.location.href.includes("www.thumbtack.com/k")) {
+                    if (sourceHeading && targetHeading) {
+                        let text = sourceHeading.childNodes[0].textContent.trim().toLowerCase();
+                        
+                        // Ensure 'on Thumbtack' is not already present before modifying
+                        if (!targetHeading.textContent.includes("on Thumbtack")) {
+                            let newText;
+            
+                            // Check if "top X" pattern exists
+                            if (/^top \d+\s+/.test(text)) {
+                                newText = text.replace(/^top \d+\s+/, "Reviews for ");
+                            } else {
+                                newText = "Reviews for " + text;
+                            }
+            
+                            targetHeading.textContent = newText + " on Thumbtack";
+                        }
+                    }
+                }
+            }, 50, 10000);
+            
+
+            // Add "on Thumbtack" for specific URL
+            if (window.location.href.includes("www.thumbtack.com/ga")) {
+                let targetHeading = document.querySelector(".cre_reviwe [class*='Type_title3']");
+                if (targetHeading && !targetHeading.textContent.includes("on Thumbtack")) {
+                    targetHeading.textContent += " on Thumbtack"; // Append "on Thumbtack"
+                }
+            }
+
+            // Hide review section if less than 2 carousel items are found
+            let carouselItems = document.querySelectorAll('[class*="carousel_carousel"] [class*="carousel_row"] > div');
+            let creReview = document.querySelector(".cre_reviwe");
+            if (creReview && carouselItems.length < 2) {
+                creReview.style.display = "none"; // Inline hide the review section
+            }
+        }
+        
+        /* Initialise variation */
+        function thumbtackTest144(list, observer) {
+            list.getEntries().forEach((entry) => {
+                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
+                    observer.disconnect(); // Stop observing
+                    clearInterval(test144Interval); // Clear interval
+                    waitForElement("body", init, 50, 15000); // Initialize the variation after hydration
+                    window.isHydrated = true;
+                }
+            });
+        }
+
+        // Check hydration status and initiate
+        if (!window.isHydrated) {
+            var test144Interval = setInterval(function () {
+                waitForElement("body", init, 50, 15000); // Wait for body to load
+            }, 50);
+            setTimeout(function () {
+                clearInterval(test144Interval); // Stop the interval after 3 seconds
+            }, 3000);
+            const observer = new PerformanceObserver(thumbtackTest144);
+            observer.observe({ entryTypes: ["mark"] }); // Start observing performance marks
+        } else {
+            waitForElement("body", init, 50, 15000); // If already hydrated, initialize immediately
+        }
+    } catch (e) {
+        if (debug) console.log(e, "error in Test" + variation_name); // Log errors if debug is enabled
+    }
+})();

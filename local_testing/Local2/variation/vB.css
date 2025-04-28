@@ -1,23 +1,46 @@
-html body.cre-t-31 [data-unique="best-overall"] {
-    border-top: none;
-    margin-top: 0px;
+html body.TT-168  [class*="carousel_item"] > div {
+    border: 1px solid #eaeced !important;
+}
+html body.TT-168  [class*="carousel_item"] > div {
+    border: 1px solid #eaeced !important;
+    display: flex;
+    flex-direction: column;
 }
 
-html body.cre-t-31 .cre-t-31-other-companies {
-    margin-top: 40px;
-    margin-bottom: 15px;
+
+html body.TT-168  [class*="review-carousel_reviewText"] {
+    order: 4;
 }
 
-html body.cre-t-31 .cre-t-31-other-companies p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 600;
+html body.TT-168  [class*="carousel_item"] > div [class*="Type_title6"] + div {
+    order: 3;
 }
 
-html body.cre-t-31 .cre-t-31-other-companies p a.cre-t-31-other-companies-link {
-    font-weight: 400;
-    color: #000;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+html body.TT-168  [class*="review-carousel_reviewText"] + div {
+    margin: 15px 0;
+}
+
+html body.TT-168  [class*="review-carousel_reviewText"] + div {
+    margin: 10px;
+}
+
+html body.TT-168  [class*="review-carousel_reviewText"] + .flex {
+    margin: 10px 0px;
+}
+
+html body.TT-168  [class*=" review-carousel_serviceName"] {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    font-weight: 700 !important;
+    color: #2f3033 !important;
+}
+
+
+html body.TT-168  [class*="carousel_item"] [class*="Type_title6"]:before {
+    content: "from ";
+}
+html body.TT-168  [class*="carousel_item"] > div > div:first-child {
+    font-weight: 400 !important;
+    text-transform: capitalize;
+    font-size: 14px !important;
 }
