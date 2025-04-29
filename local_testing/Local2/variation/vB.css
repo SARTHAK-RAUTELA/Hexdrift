@@ -1,34 +1,35 @@
-html body.TT-168  [class*="carousel_item"] > div {
+html body.TT-168 [class*="carousel_item"]>div {
     border: 1px solid #eaeced !important;
 }
-html body.TT-168  [class*="carousel_item"] > div {
+
+html body.TT-168 [class*="carousel_item"]>div {
     border: 1px solid #eaeced !important;
     display: flex;
     flex-direction: column;
 }
 
 
-html body.TT-168  [class*="review-carousel_reviewText"] {
+html body.TT-168 [class*="review-carousel_reviewText"] {
     order: 4;
 }
 
-html body.TT-168  [class*="carousel_item"] > div [class*="Type_title6"] + div {
+html body.TT-168 [class*="carousel_item"]>div [class*="Type_title6"]+div {
     order: 3;
 }
 
-html body.TT-168  [class*="review-carousel_reviewText"] + div {
+html body.TT-168 [class*="review-carousel_reviewText"]+div {
     margin: 15px 0;
 }
 
-html body.TT-168  [class*="review-carousel_reviewText"] + div {
+html body.TT-168 [class*="review-carousel_reviewText"]+div {
     margin: 10px;
 }
 
-html body.TT-168  [class*="review-carousel_reviewText"] + .flex {
+html body.TT-168 [class*="review-carousel_reviewText"]+.flex {
     margin: 10px 0px;
 }
 
-html body.TT-168  [class*=" review-carousel_serviceName"] {
+html body.TT-168 [class*=" review-carousel_serviceName"] {
     font-size: 16px !important;
     line-height: 24px !important;
     font-weight: 700 !important;
@@ -36,11 +37,22 @@ html body.TT-168  [class*=" review-carousel_serviceName"] {
 }
 
 
-html body.TT-168  [class*="carousel_item"] [class*="Type_title6"]:before {
+html body.TT-168 [class*="carousel_item"] [class*="Type_title6"]:before {
     content: "from ";
 }
-html body.TT-168  [class*="carousel_item"] > div > div:first-child {
+
+html body.TT-168 [class*="carousel_item"]>div>div:first-child {
     font-weight: 400 !important;
     text-transform: capitalize;
     font-size: 14px !important;
+}
+
+html body.TT-168 .cre_reviwe {
+    background: rgb(255 255 255) !important;
+    margin-bottom: 20px !important;
+}
+
+html body.TT-168 .cre_reviwe>div {
+    padding-bottom: 10px !important;
+    border: none !important;
 }
