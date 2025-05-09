@@ -1,9 +1,10 @@
 (function () {
   try {
-    /* main variables */
+    /* Main Variables */
     var debug = 1;
-    var variation_name = "cre-t-51";
-    /* helper library */
+    var variation_name = "cre-t-38";
+
+    /* Helper Library */
     var _$;
     !(function (factory) {
       _$ = factory();
@@ -61,305 +62,234 @@
       };
     });
     var helper = _$();
-    // observer Selector helper for observe  the  dynamic modal 
-    function debounce(func, timeout = 300) {
-      let timer;
-      return (...args) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-          func.apply(this, args);
-        }, timeout);
-      };
-    }
-    function observeSelector(selector, callback, options = {}) {
-      const document = options.document || window.document;
-      const processed = new Map();
-      if (options.timeout || options.onTimeout) {
-        throw `observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`;
+
+    /* Live Event Listener */
+    function live(selector, event, callback, context) {
+      function addEvent(el, type, handler) {
+        if (el.attachEvent) el.attachEvent("on" + type, handler);
+        else el.addEventListener(type, handler);
       }
-      let obs;
-      let isDone = false;
-      const done = () => {
-        if (obs) obs.disconnect();
-        isDone = true;
-      };
-      const processElement = (el) => {
-        if (!processed.has(el)) {
-          processed.set(el, true);
-          callback(el);
-          if (options.once) {
-            done();
-            return true;
-          }
-        }
-        return false;
-      };
-      const lookForSelector = () => {
-        const elParent = document.documentElement;
-        if (elParent.matches(selector) || elParent.querySelector(selector)) {
-          const elements = elParent.querySelectorAll(selector);
-          elements.forEach((el) => processElement(el));
-        }
-      };
-      const debouncedLookForSelector = debounce(() => {
-        lookForSelector();
-      }, 100);
-      // Initial check for the selector on page load
-      lookForSelector();
-      if (!isDone) {
-        obs = new MutationObserver(() => {
-          debouncedLookForSelector();
-        });
-        obs.observe(document, {
-          attributes: false,
-          childList: true,
-          subtree: true,
+      this &&
+        this.Element &&
+        (function (ElementPrototype) {
+          ElementPrototype.matches =
+            ElementPrototype.matches ||
+            ElementPrototype.matchesSelector ||
+            ElementPrototype.webkitMatchesSelector ||
+            ElementPrototype.msMatchesSelector ||
+            function (selector) {
+              var node = this,
+                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                i = -1;
+              while (nodes[++i] && nodes[i] != node);
+              return !!nodes[i];
+            };
+        })(Element.prototype);
+      function live(selector, event, callback, context) {
+        addEvent(context || document, event, function (e) {
+          var found,
+            el = e.target || e.srcElement;
+          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+          if (found) callback.call(el, e);
         });
       }
-      return done;
-    }
-    function waitForSwiper(trigger) {
-      var interval = setInterval(function () {
-        if (typeof window.Swiper != "undefined") {
-          clearInterval(interval);
-          trigger();
-        }
-      }, 50);
-      setTimeout(function () {
-        clearInterval(interval);
-      }, 15000);
+      live(selector, event, callback, context);
     }
 
-    function addScript() {
-      var scriptOne = document.createElement("script");
-      scriptOne.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js";
-      document.querySelector("head").appendChild(scriptOne);
-
-      var swiperCss =
-        '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" integrity="sha512-ipO1yoQyZS3BeIuv2A8C5AwQChWt2Pi4KU3nUvXxc4TKr8QgG8dPexPAj2JGsJD6yelwKa4c7Y2he9TTkPM4Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
-      document.querySelector("head").insertAdjacentHTML("beforeend", swiperCss);
-
-    }
-    var icon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
-    <path d="M6.74908 14.2382L0 7.48911L1.68727 5.80184L6.74908 10.8637L17.6127 0L19.3 1.68727L6.74908 14.2382Z" fill="#C7A77B"/>
-  </svg>`;
-    var creT13ModalContent = `
-      <div style="display: none;" class="cre-t-51-modal-overlay"></div>
-  <div style="display: none;" class="cre-t-51-modal-container">
-    
-    <div class="cre-t-51-modal-wrapper">
-      <div class="cre-t-51-cross">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-    <path d="M2.1868 18L0.452148 16.2L7.39074 9L0.452148 1.8L2.1868 0L9.12538 7.2L16.064 0L17.7986 1.8L10.86 9L17.7986 16.2L16.064 18L9.12538 10.8L2.1868 18Z" fill="#D8DBDF"/>
-  </svg>
-      </div>
-    <!-- Swiper container -->
-     <div class="cre-t-51-modal-main">
-        <div class="desktopopup">
-          <div class="cre-t-modal-header">What is First Table?</div>
-           <div class="cre-t-51-modal-content">
-            <div class="cre-t-51-modal-sub-copy"><b>First Table offers 50% off bookings at top restaurants.</b> Pay a small fee to secure a table and enjoy great dining for half the price.</div>
-            <div class="cre-t-51-modal-list-header">How it Works</div>
-            <div class="cre-t-51-modal-list-items">
-              <div class="cre-t-51-modal-list-item">
-                <div class="cre-t-51-modal-item-content">
-                  <span>Explore Restaurants</span>—Find top-rated restaurants near you and try something new.
-                </div>
-              </div>
-              <div class="cre-t-51-modal-list-item">
-                
-                <div class="cre-t-51-modal-item-content"><span>Book a Table</span>—Pay a small fee to reserve your discounted table. Your reservation is confirmed instantly.</div>
-              </div>
-              <div class="cre-t-51-modal-list-item">
-              
-                <div class="cre-t-51-modal-item-content"><span>Enjoy 50% Off</span>—Get the same great food and service for half the price.</div>
-              </div>
-            </div>
-            <div class="cre-t-51-modal-nohidefree">No hidden fees. Just great food at half the price.</div>
-            <div class="cre-t-51-modal-lWhy_Restaurants">Why Restaurants <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg"> First Table</div>
-            <div class="cre-t-51-modal-paragraph">Restaurants love First Table because it fills their empty tables and brings in new customers. You'll get the <b>same great food and service</b>—no cut corners, just a win-win for everyone.</div>
-            <div class="cre-t-51-modal-reviewsection">
-               <div class="cre-t-51-modal-reviewicon"><img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg"></div>
-                <p> "The service was exceptional, and the food was top-notch even with the discount."<p>
-            </div>
-            <div class="cre-t-51-modal-lWhy-Common-Questions">
-             <div class="Cre_heading_wuestions"> Common Questions</div>
-               <div class="cre-t-51-modal-questionstab">
-                  <p>Will my booking be honoured?</p>
-                  <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
-               </div>
-               <div class="cre-t-51-modal-questionstab">
-                  <p>Do restaurants limit what I can order?</p>
-                  <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
-               </div>
-                 <div class="cre-t-51-modal-questionstab">
-                  <p>Is First Table legit?</p>
-                  <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
-               </div>
-                <div class="cre-t-51-modal-faqcta"> <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a></div>
-            </div>
-          </div>
-          </div>
-<div class="mobile_popup">
-    <div class="swiperslidermain swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide Cre_item">
-      <div class="cre-t-51-modal-list-header">What is First Table?</div>
-      <div class="cre-t-51-modal-sub-copy"><b>First Table offers 50% off bookings at top restaurants</b>  Pay a small fee to secure a table and enjoy great dining for half the price.</div>
-      <div class="cre-t-51-modal-list-items">
-        <div class="cre-t-51-modal-list-item">
-          <div class="cre-t-51-modal-item-content">
-            <span>Find a Restaurant</span> — Browse restaurants near you and discover new cuisines.
-          </div>
-        </div>
-        <div class="cre-t-51-modal-list-item">
-          <div class="cre-t-51-modal-item-content">
-            <span>Book the First Table</span> — Pay a small booking fee to secure your table. Your reservation is confirmed instantly.
-          </div>
-        </div>
-        <div class="cre-t-51-modal-list-item">
-          <div class="cre-t-51-modal-item-content">
-            <span>Enjoy 50% Off</span> — Save on your meal while receiving the same great food and service as full-paying customers.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="swiper-slide Cre_item">
-      <div class="cre-t-51-modal-lWhy_Restaurants">
-        Why Restaurants
-        <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg">
-        First Table
-      </div>
-      <div class="cre-t-51-modal-paragraph">
-        Restaurants love First Table because it fills their empty tables and brings in new customers.
-        You'll get the <b>same great food and service—no</b> cut corners, just a win-win for everyone.
-      </div>
-      <div class="cre-t-51-modal-reviewsection">
-        <div class="cre-t-51-modal-reviewicon">
-          <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg">
-        </div>
-        <p>"The service was exceptional, and the food was top-notch even with the discount."</p>
-      </div>
-    </div>
-
-    <div class="swiper-slide Cre_item">
-      <div class="cre-t-51-modal-lWhy-Common-Questions">
-        <div class="Cre_heading_wuestions">Common Questions</div>
-        <div class="cre-t-51-modal-questionstab">
-          <p>Will my booking be honoured?</p>
-          <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
-        </div>
-        <div class="cre-t-51-modal-questionstab">
-          <p>Do restaurants limit what I can order?</p>
-          <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
-        </div>
-        <div class="cre-t-51-modal-questionstab">
-          <p>Is First Table legit?</p>
-          <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
-        </div>
-        <div class="cre-t-51-modal-faqcta">
-          <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a>
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-
-  <!-- Add Pagination & Navigation if needed -->
-   
-</div>
-<div class="swiper-pagination"></div>
-      <div class="cre-t-51-modal-button">OK, got it</div>
-      </div>
-    </div>
-  </div>
-      `;
-    // all the changes based  on our targeted modal and social login present or not 
-    function updateChanges() {
-      observeSelector('[data-attribute="hero"] , #form-alert', () => {
-        helper.waitForElement(' [data-attribute="header-nav"] ,  [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]', function () {
-          var insertionDiv = document.querySelector(' [data-attribute="header-nav"]');
-          var insertionDiv2 = document.querySelector(' [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]');
-          var creT13NewContent = document.querySelector(".cre-t-51-new-content-container");
-          var mobileselector = document.querySelector(' [data-attribute="header-search"]');
-          if ((insertionDiv || insertionDiv2 || mobileselector) && !creT13NewContent) {
-            const newContent = `<span class="cre-t-51-new-content-container">How it Works</span>`;
-            if (window.innerWidth <= 767 && mobileselector) {
-              mobileselector.insertAdjacentHTML("beforeend", newContent);
-            } else if (insertionDiv) {
-              insertionDiv.insertAdjacentHTML("afterbegin", newContent);
-            } else if (insertionDiv2) {
-              insertionDiv2.insertAdjacentHTML("afterbegin", newContent);
-            }
-            document.body.insertAdjacentHTML("beforeend", creT13ModalContent);
-          }
-        
-        }, 50, 15000)
-     
-      });
-      document.addEventListener("click", function (e) {
-        if (e.target.classList.contains("cre-t-51-new-content-container")) {
-          document.body.classList.add("cre-t-51-modal-open");
-          window._conv_q = window._conv_q || [];
-          _conv_q.push(["triggerConversion", "100035415"]);
-        }
-        if (e.target.classList.contains("cre-t-51-cross") || e.target.closest("div").classList.contains("cre-t-51-cross") || e.target.classList.contains("cre-t-51-modal-button")) {
-          if (document.body.classList.contains("cre-t-51-modal-open")) {
-            document.body.classList.remove("cre-t-51-modal-open");
-          }
-        }
-        if (e.target.classList.contains("cre-t-51-modal-overlay")) {
-          if (document.body.classList.contains("cre-t-51-modal-open")) {
-            document.body.classList.remove("cre-t-51-modal-open");
-          }
-        }
-        if (e.target.classList.contains("cre-t-51-modal-list-header")) {
-          e.target.classList.toggle("cre-t-51-modal-open");
-        }
-        if (e.target.classList.contains("cre-t-51-modal-lWhy_Restaurants")) {
-          e.target.classList.toggle("cre-t-51-Why_Restaurants");
-        }
-        if (e.target.classList.contains("Cre_heading_wuestions")) {
-          e.target.classList.toggle("cre-t-51-heading_wuestions");
-        }
-      });
-    }
-    addScript();
-   
-    /* Variation Init */
-    function init() {
-      document.body.classList.add(variation_name);
-      // initiate the observer only once 
-      if (!window.creT42bserver) {
-        window.creT42bserver = true;
-        updateChanges();
-      }
-
-      
-      function initializeSwiper() {
-        new Swiper(".swiperslidermain", {
-          loop: false,
-          slidesPerView: 1,
-          spaceBetween: 20,
-          autoHeight: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+    /* Methodology Content */
+    var methodologyContent = {
+      methodology: {
+        rankingMethodology: {
+          headerMethodology: "Trusted, Transparent, and 100% Independent",
+        },
+        faqs: [
+          {
+            title: "Ranking Methodology",
+            description:
+              "We independently reviewed the top pet insurers from NAPHIA (North American Pet Health Insurance Association) — a trusted industry body — and ranked them based on 11 factors that matter most to pet owners:",
+            descriptionList: [
+              "Average price across all 50 states*",
+              "What's covered and what's not",
+              "Key policy details like accidents, illnesses, surgeries, check-ups, cancer treatment, and lab tests",
+              "Financial strength of the insurer (AM Best rating)",
+              "Reimbursement percentage (how much you get back)",
+              "Annual payout limit",
+              "How easy it is to sign up and manage your policy",
+              "How clear and simple the policy is to understand",
+              "Customer reviews",
+              "Overall Brand Trust",
+              "Satisfaction with the claims process",
+            ],
           },
-           a11y: {
-            enabled: false  // This disables aria-live and related attributes
-          }
-         
-        });
+          {
+    "title": "Listings are 100% independent",
+    "description": "We don't accept payment for listings or ranking changes. Every provider is shown based on merit — never financial gain."
+  },
+  {
+    "title": "A+ rated, BBB-accredited business",
+    "description": "Pet Insurance Gurus is an A+ rated, BBB-accredited business. Since 2020, we've helped over 100,000 pet owners protect their furry family members. Unlike many competitors, we're a U.S.-based company headquartered in San Francisco, California.",
+    "logos": [
+      {
+        "src": "https://cdn-3.convertexperiments.com/uf/10007679/10007714/group-51_67f7b14d6a58f.png",
+        "alt": "B+"
       }
-      
-      waitForSwiper(initializeSwiper);
-      
+    ]
+  },
+  {
+    "title": "How we make money",
+    "description": "We may earn a commission if you buy a policy through one of our links which allows us to keep our service free. Companies can't pay to appear in or influence our rankings — our recommendations are 100% independent."
+  },
+  {
+    "title": "You pay the same price as going direct",
+    "description": "Pet Insurance prices are regulated by law. You won't find a lower price anywhere else for a policy found on Pet Insurance Gurus."
+  },
+  {
+    "title": "Our service is free to use",
+    "description": "You don't pay anything to use this site. If you click a link and buy a policy, we may earn a commission from a pet insurance provider, however, this does not affect how we rank or recommend plans."
+  },
+  {
+    "title": "Your privacy is 100% protected",
+    "description": "We don't collect personal information. You can browse our website and compare pet insurance providers with complete privacy — no phone number, no email, and no personal details are required."
+  },
+  {
+    "title": "Prices are averages, not quotes",
+    "description": "To help you compare, we show the average cost of a standard policy for a 2-year-old Labrador Retriever Dog and a 2-year-old American Shorthair Cat, across all 50 US states. Since your pet is unique, your final quote will be different — click through to your provider choice for a personalized quote."
+  },
+  {
+    "title": "We donate to animal welfare charities",
+    "description": "When you buy pet insurance through us we donate $25 to the following charities — giving a helping paw to pets and animals in need!",
+    "logos": [
+      {
+        "src": "https://cdn-3.convertexperiments.com/uf/10007679/10007714/ca-1_67a0b3f0e6536.png",
+        "alt": "human"
+      },
+      {
+        "src": "https://cdn-3.convertexperiments.com/uf/10007679/10007714/wwf-logo_67a0b436ad198.png",
+        "alt": "WWF"
+      },
+      {
+        "src": "https://cdn-3.convertexperiments.com/uf/10007679/10007714/bf-sta-logo-4_67a0b3e26a36a.png",
+        "alt": "save them all"
+      },
+      {
+        "src": "https://cdn-3.convertexperiments.com/uf/10007679/10007714/ca-4_67a0b3fd4eda1.png",
+        "alt": "alley cat allies"
+      },
+      {
+        "src": "https://cdn-3.convertexperiments.com/uf/10007679/10007714/ca-5_67a0b40bb07da.png",
+        "alt": "planet"
+      }
+    ]
+  },
+  {
+    "title": "You're always in control",
+    "description": "We help you narrow your options and build confidence in your shortlist. Every pet and owner is different, so the final decision will always be yours."
+  }
+        ],
+        zipCodes:
+          "*Below are all the zip codes used to calculate the national average prices for each pet insurance provider: AL (35206) | AK (99516) | AZ (85050) | AR (72205) | CA (90210) | CO (80238) | CT (06105) | DE (19904) | FL (33155) | GA (30331) | HI (96821) | ID (83712) | IL (60630) | IN (46229) | IA (50317) | KS (66109) | KY (40511) | LA (70112) | ME (04108) | MD (21209) | MA (02136) | MI (48201) | MN (55414) | MS (39211) | MO (63104) | MT (59101) | NE (68154) | NV (89117) | NH (03062) | NJ (87120) | NY (10022) | NC (27603) | ND (58104) | OH (44102) | OK (73129) | OR (97229) | PA (19128) | RI (02909) | SC (29414) | SD (57108) | TN (38111) | TX (77054) | UT (84104) | VT (05408) | VA (23221) | WA (98108) | WV (25311) | WI (53225) | WY (82009)",
+      },
+    };
+
+    /* Generate Ranking Methodology */
+    function generateRankingMethodology() {
+      const ranking = methodologyContent.methodology.rankingMethodology;
+      let html = `
+      <div class="cre-t-38-methodology-container">
+        <h2 class="cre-t-38-methodology-header">${ranking.headerMethodology}</h2>
+        
+      `;
+
+      html += `</div>`;
+      return html;
     }
-    /* Initialise variation */
-    helper.waitForElement("[data-attribute='header-logo']", init, 50, 15000);
+
+    /* Generate FAQs */
+    function generateFAQs() {
+      let faqHtml = `<div class="cre-t-38-faq-container">`;
+      methodologyContent.methodology.faqs.forEach((faq, index) => {
+        faqHtml += `
+          <div class="cre-t-38-faq-wrapper">
+            <div class="cre-t-38-header">
+              <div class="cre-t-38-header-text">${faq.title}</div>
+              <div class="cre-t-38-header-icon">
+                <img class="cre-t-38-header-icon-img-plus" src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/plus_6813312b8647c.svg">
+                <img class="cre-t-38-header-icon-img-min" src="https://cdn-3.convertexperiments.com/uf/10007679/10007714/min_6813311e380d0.svg">
+              </div>
+            </div>
+            <div class="cre-t-38-content-wrapper-faq">
+              <div class="cre-t-38-description">${faq.description}</div>
+        `;
+        // Add ordered list if descriptionList exists
+        if (faq.descriptionList) {
+          faqHtml += `<ol class="cre-t-38-list">`;
+          faq.descriptionList.forEach((item) => {
+            faqHtml += `<li>${item}</li>`;
+          });
+          faqHtml += `</ol>`;
+        }
+        // Add logos if they exist
+        if (faq.logos) {
+          faqHtml += `<div class="cre-t-38-logo-section">`;
+          faq.logos.forEach((logo, logoIndex) => {
+            faqHtml += `
+              <div class="cre-t-38-logo cre-t-38-logo-${logoIndex + 1}">
+                <img src="${logo.src}" alt="${logo.alt}" />
+              </div>
+            `;
+          });
+          faqHtml += `</div>`;
+        }
+        faqHtml += `</div></div>`;
+      });
+      faqHtml += `</div>`;
+      return faqHtml;
+    }
+
+    /* Generate Zip Code Content */
+    function generateZipCodeContent() {
+      return `<div class="cre-t-38-zipcode-container">
+        <div class="cre-t-38-zipcode-text">${methodologyContent.methodology.zipCodes}</div>
+      </div>`;
+    }
+
+    /* Add Event Listener for Toggle */
+    function addEventListener() {
+      live(".cre-t-38-header", "click", (e) => {
+        const clickedHeader = e.target.closest(".cre-t-38-header");
+        if (clickedHeader) {
+          const wrapper = clickedHeader.parentElement;
+          wrapper.classList.toggle("active");
+        }
+      });
+    }
+
+    /* Initialize Variation */
+    function init() {
+      _$("body").addClass(variation_name);
+
+      // Generate and append all content to the DOM
+      const container = document.getElementById("span-26-63");
+      if (container) {
+        // Append Ranking Methodology
+        container.innerHTML = generateRankingMethodology();
+
+        // Append FAQs
+        container.insertAdjacentHTML("beforeend", generateFAQs());
+
+        // Append Zip Code Content
+        container.insertAdjacentHTML("beforeend", generateZipCodeContent());
+      } else {
+        console.error('Element with ID "span-26-63" not found.');
+      }
+
+      // Add event listeners
+      addEventListener();
+    }
+
+    /* Wait for Element to Load and Initialize */
+    helper.waitForElement("#content-section", init, 25, 25000);
   } catch (e) {
-    if (debug) console.log(e, "error in Test" + variation_name);
+    if (debug) console.log(e, "Error in Test " + variation_name);
   }
 })();
