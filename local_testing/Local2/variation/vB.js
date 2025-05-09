@@ -1,156 +1,365 @@
-window.expLibraryDataQueue = window.expLibraryDataQueue || [];
-window.expLibraryDataQueue.push({
-    CRE_EXP_T90: {
-        var: {
-            tagConfigs: [
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_entry_ticket"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                                <span>Ticket</span>
-                                <div class="tooltip-90">
-                                   <div class="tooltip-90-heading">Entry Tickets</div>
-                                   <div class="tooltip-90-content">Fast access to top attractions</div>
-                                </div>
-                              </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_singleday"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                                <span>Day Tour</span>
-                                <div class="tooltip-90">
-                                  <div class="tooltip-90-heading">Day Tours</div>
-                                  <div class="tooltip-90-content">Guided single-day adventures</div>
-                                </div>
-                             </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_multiday"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Multi-Day</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Multi-Day Tours</div>
-                      <div class="tooltip-90-content">Extended trips with guides and hotels</div>
-                    </div>
-                              </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_package"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Package</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Vacation Packages</div>
-                      <div class="tooltip-90-content">Stays, tours, and a customizable itinerary</div>
-                    </div>
-                    </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_selfdrive"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Self-Drive</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Self-Drive Tours</div>
-                      <div class="tooltip-90-content">Car, hotels, customizable tours and itineraries</div>
-                    </div>
-                    </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_transfer"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Transfer</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Transfers</div>
-                      <div class="tooltip-90-content">Convenient and reliable transportation</div>
-                    </div></div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_private"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Private Tour</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Private Tours</div>
-                      <div class="tooltip-90-content">Private guide, transport, and tailored experiences</div>
-                    </div>
-                    </div>`
-                },
-                {
-                    selector: `html[lang="en"] body[data-path*="/book-trips-holiday"] [data-crid*="tour_shore_excursions"] [data-crid="product_card_image"]`,
-                    content: `<div class="tagContainerT90">
-                    <span>Shore-Trip</span>
-                    <div class="tooltip-90">
-                      <div class="tooltip-90-heading">Shore Excursions</div>
-                      <div class="tooltip-90-content">Tours with harbor pickup for cruise passengers</div>
-                    </div></div>`
-                },
-            ],
+(function () {
+  try {
+    /* main variables */
+    var debug = 1;
+    var variation_name = "cre-t-51";
+    /* helper library */
+    var _$;
+    !(function (factory) {
+      _$ = factory();
+    })(function () {
+      var bm = function (s) {
+        if (typeof s === "string") {
+          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+        }
+        if (typeof s === "object") {
+          this.value = [s];
+        }
+      };
+      bm.prototype = {
+        eq: function (n) {
+          this.value = [this.value[n]];
+          return this;
         },
-        enable_DEBUG: true, // For debugging
-        initOnce: false, // False if events need to be added multiple times
-
-        // Attach event handlers Please do not call this function anywhere. This will automatically call from library
-        attachEventHandlers() {
-            window.addEventListener('travelshift:routeChangeComplete', e => {
-                if (!window._travelshift.experiments.some(
-                    exp => exp.name === "T90_TOUR_TYPES_EXPERIMENT" && exp.variation === "1"
-                )) {
-                    (window._travelshift.experiments = window._travelshift.experiments || []).push({ name: 'T90_TOUR_TYPES_EXPERIMENT', variation: "1" });
-                }
-                this.init();
-            });
-            this.observeSelector('a[data-crid*="product_card"]', (element) => {
-                this.appendHtml();
-            });
-
-            // SINGLE optimized event handler for all tag interactions
-            document.addEventListener('click', (event) => {
-                console.log(event.target)
-                // Check if click originated from a tag container or its children
-                const tagContainer = event.target.closest('.tagContainerT90');
-
-                if (tagContainer) {
-                    // Handle tag container click
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    // Get all current tag containers (fresh query to include dynamic elements)
-                    const allTags = document.querySelectorAll('.tagContainerT90');
-
-                    // Remove class from all others
-                    allTags.forEach(tag => {
-                        if (tag !== tagContainer) {
-                            tag.classList.remove('hover-effect_t90');
-                        }
-                    });
-
-                    // Toggle class on clicked element
-                    tagContainer.classList.toggle('hover-effect_t90');
-                } else {
-                    // Click was outside any tag container - remove all hover effects
-                    document.querySelectorAll('.tagContainerT90').forEach(tag => {
-                        tag.classList.remove('hover-effect_t90');
-                    });
-                }
-            });
+        each: function (fn) {
+          [].forEach.call(this.value, fn);
+          return this;
         },
-        appendHtml() {
-            this.var.tagConfigs.forEach(({ selector, content }) => {
-                document.querySelectorAll(selector).forEach(element => {
-                    if (!element.querySelector(".tagContainerT90")) {
-                        element.insertAdjacentHTML("beforeend", content);
-                    }
-                });
-            });
+        log: function () {
+          var items = [];
+          for (let index = 0; index < arguments.length; index++) {
+            items.push(arguments[index]);
+          }
+          console && console.log(variation_name, items);
         },
-        // Initialize the experiment
-        init() {
-            // Example: Run a callback when the body is available
-            if (window.location.href.includes("https://guidetoiceland.is/book-trips-holiday")) {
-                if (!window._travelshift.experiments.some(
-                    exp => exp.name === "T90_TOUR_TYPES_EXPERIMENT" && exp.variation === "1"
-                )) {
-                    (window._travelshift.experiments = window._travelshift.experiments || []).push({ name: 'T90_TOUR_TYPES_EXPERIMENT', variation: "1" });
-                }
+        addClass: function (v) {
+          var a = v.split(" ");
+          return this.each(function (i) {
+            for (var x = 0; x < a.length; x++) {
+              if (i.classList) {
+                i.classList.add(a[x]);
+              } else {
+                i.className += " " + a[x];
+              }
             }
-
+          });
         },
-    },
-});
+        waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
+          var interval = setInterval(function () {
+            if (_$(selector).value.length) {
+              clearInterval(interval);
+              trigger();
+            }
+          }, delayInterval);
+          setTimeout(function () {
+            clearInterval(interval);
+          }, delayTimeout);
+        },
+      };
+      return function (selector) {
+        return new bm(selector);
+      };
+    });
+    var helper = _$();
+    // observer Selector helper for observe  the  dynamic modal 
+    function debounce(func, timeout = 300) {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.apply(this, args);
+        }, timeout);
+      };
+    }
+    function observeSelector(selector, callback, options = {}) {
+      const document = options.document || window.document;
+      const processed = new Map();
+      if (options.timeout || options.onTimeout) {
+        throw `observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`;
+      }
+      let obs;
+      let isDone = false;
+      const done = () => {
+        if (obs) obs.disconnect();
+        isDone = true;
+      };
+      const processElement = (el) => {
+        if (!processed.has(el)) {
+          processed.set(el, true);
+          callback(el);
+          if (options.once) {
+            done();
+            return true;
+          }
+        }
+        return false;
+      };
+      const lookForSelector = () => {
+        const elParent = document.documentElement;
+        if (elParent.matches(selector) || elParent.querySelector(selector)) {
+          const elements = elParent.querySelectorAll(selector);
+          elements.forEach((el) => processElement(el));
+        }
+      };
+      const debouncedLookForSelector = debounce(() => {
+        lookForSelector();
+      }, 100);
+      // Initial check for the selector on page load
+      lookForSelector();
+      if (!isDone) {
+        obs = new MutationObserver(() => {
+          debouncedLookForSelector();
+        });
+        obs.observe(document, {
+          attributes: false,
+          childList: true,
+          subtree: true,
+        });
+      }
+      return done;
+    }
+    function waitForSwiper(trigger) {
+      var interval = setInterval(function () {
+        if (typeof window.Swiper != "undefined") {
+          clearInterval(interval);
+          trigger();
+        }
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
+    }
+
+    function addScript() {
+      var scriptOne = document.createElement("script");
+      scriptOne.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js";
+      document.querySelector("head").appendChild(scriptOne);
+
+      var swiperCss =
+        '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" integrity="sha512-ipO1yoQyZS3BeIuv2A8C5AwQChWt2Pi4KU3nUvXxc4TKr8QgG8dPexPAj2JGsJD6yelwKa4c7Y2he9TTkPM4Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
+      document.querySelector("head").insertAdjacentHTML("beforeend", swiperCss);
+
+    }
+    var icon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+    <path d="M6.74908 14.2382L0 7.48911L1.68727 5.80184L6.74908 10.8637L17.6127 0L19.3 1.68727L6.74908 14.2382Z" fill="#C7A77B"/>
+  </svg>`;
+    var creT13ModalContent = `
+      <div style="display: none;" class="cre-t-51-modal-overlay"></div>
+  <div style="display: none;" class="cre-t-51-modal-container">
+    
+    <div class="cre-t-51-modal-wrapper">
+      <div class="cre-t-51-cross">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <path d="M2.1868 18L0.452148 16.2L7.39074 9L0.452148 1.8L2.1868 0L9.12538 7.2L16.064 0L17.7986 1.8L10.86 9L17.7986 16.2L16.064 18L9.12538 10.8L2.1868 18Z" fill="#D8DBDF"/>
+  </svg>
+      </div>
+    <!-- Swiper container -->
+     <div class="cre-t-51-modal-main">
+        <div class="desktopopup">
+          <div class="cre-t-modal-header">What is First Table?</div>
+           <div class="cre-t-51-modal-content">
+            <div class="cre-t-51-modal-sub-copy"><b>First Table offers 50% off bookings at top restaurants.</b> Pay a small fee to secure a table and enjoy great dining for half the price.</div>
+            <div class="cre-t-51-modal-list-header">How it Works</div>
+            <div class="cre-t-51-modal-list-items">
+              <div class="cre-t-51-modal-list-item">
+                <div class="cre-t-51-modal-item-content">
+                  <span>Explore Restaurants</span>—Find top-rated restaurants near you and try something new.
+                </div>
+              </div>
+              <div class="cre-t-51-modal-list-item">
+                
+                <div class="cre-t-51-modal-item-content"><span>Book a Table</span>—Pay a small fee to reserve your discounted table. Your reservation is confirmed instantly.</div>
+              </div>
+              <div class="cre-t-51-modal-list-item">
+              
+                <div class="cre-t-51-modal-item-content"><span>Enjoy 50% Off</span>—Get the same great food and service for half the price.</div>
+              </div>
+            </div>
+            <div class="cre-t-51-modal-nohidefree">No hidden fees. Just great food at half the price.</div>
+            <div class="cre-t-51-modal-lWhy_Restaurants">Why Restaurants <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg"> First Table</div>
+            <div class="cre-t-51-modal-paragraph">Restaurants love First Table because it fills their empty tables and brings in new customers. You'll get the <b>same great food and service</b>—no cut corners, just a win-win for everyone.</div>
+            <div class="cre-t-51-modal-reviewsection">
+               <div class="cre-t-51-modal-reviewicon"><img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg"></div>
+                <p> "The service was exceptional, and the food was top-notch even with the discount."<p>
+            </div>
+            <div class="cre-t-51-modal-lWhy-Common-Questions">
+             <div class="Cre_heading_wuestions"> Common Questions</div>
+               <div class="cre-t-51-modal-questionstab">
+                  <p>Will my booking be honoured?</p>
+                  <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
+               </div>
+               <div class="cre-t-51-modal-questionstab">
+                  <p>Do restaurants limit what I can order?</p>
+                  <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
+               </div>
+                 <div class="cre-t-51-modal-questionstab">
+                  <p>Is First Table legit?</p>
+                  <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
+               </div>
+                <div class="cre-t-51-modal-faqcta"> <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a></div>
+            </div>
+          </div>
+          </div>
+<div class="mobile_popup">
+    <div class="swiperslidermain swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide Cre_item">
+      <div class="cre-t-51-modal-list-header">What is First Table?</div>
+      <div class="cre-t-51-modal-sub-copy"><b>First Table offers 50% off bookings at top restaurants</b>  Pay a small fee to secure a table and enjoy great dining for half the price.</div>
+      <div class="cre-t-51-modal-list-items">
+        <div class="cre-t-51-modal-list-item">
+          <div class="cre-t-51-modal-item-content">
+            <span>Find a Restaurant</span> — Browse restaurants near you and discover new cuisines.
+          </div>
+        </div>
+        <div class="cre-t-51-modal-list-item">
+          <div class="cre-t-51-modal-item-content">
+            <span>Book the First Table</span> — Pay a small booking fee to secure your table. Your reservation is confirmed instantly.
+          </div>
+        </div>
+        <div class="cre-t-51-modal-list-item">
+          <div class="cre-t-51-modal-item-content">
+            <span>Enjoy 50% Off</span> — Save on your meal while receiving the same great food and service as full-paying customers.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide Cre_item">
+      <div class="cre-t-51-modal-lWhy_Restaurants">
+        Why Restaurants
+        <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg">
+        First Table
+      </div>
+      <div class="cre-t-51-modal-paragraph">
+        Restaurants love First Table because it fills their empty tables and brings in new customers.
+        You'll get the <b>same great food and service—no</b> cut corners, just a win-win for everyone.
+      </div>
+      <div class="cre-t-51-modal-reviewsection">
+        <div class="cre-t-51-modal-reviewicon">
+          <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg">
+        </div>
+        <p>"The service was exceptional, and the food was top-notch even with the discount."</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide Cre_item">
+      <div class="cre-t-51-modal-lWhy-Common-Questions">
+        <div class="Cre_heading_wuestions">Common Questions</div>
+        <div class="cre-t-51-modal-questionstab">
+          <p>Will my booking be honoured?</p>
+          <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
+        </div>
+        <div class="cre-t-51-modal-questionstab">
+          <p>Do restaurants limit what I can order?</p>
+          <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
+        </div>
+        <div class="cre-t-51-modal-questionstab">
+          <p>Is First Table legit?</p>
+          <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
+        </div>
+        <div class="cre-t-51-modal-faqcta">
+          <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Add Pagination & Navigation if needed -->
+   
+</div>
+<div class="swiper-pagination"></div>
+      <div class="cre-t-51-modal-button">OK, got it</div>
+      </div>
+    </div>
+  </div>
+      `;
+    // all the changes based  on our targeted modal and social login present or not 
+    function updateChanges() {
+      observeSelector('[data-attribute="hero"] , #form-alert', () => {
+        helper.waitForElement(' [data-attribute="header-nav"] ,  [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]', function () {
+          var insertionDiv = document.querySelector(' [data-attribute="header-nav"]');
+          var insertionDiv2 = document.querySelector(' [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]');
+          var creT13NewContent = document.querySelector(".cre-t-51-new-content-container");
+          var mobileselector = document.querySelector(' [data-attribute="header-search"]');
+          if ((insertionDiv || insertionDiv2 || mobileselector) && !creT13NewContent) {
+            const newContent = `<span class="cre-t-51-new-content-container">How it Works</span>`;
+            if (window.innerWidth <= 767 && mobileselector) {
+              mobileselector.insertAdjacentHTML("beforeend", newContent);
+            } else if (insertionDiv) {
+              insertionDiv.insertAdjacentHTML("afterbegin", newContent);
+            } else if (insertionDiv2) {
+              insertionDiv2.insertAdjacentHTML("afterbegin", newContent);
+            }
+            document.body.insertAdjacentHTML("beforeend", creT13ModalContent);
+          }
+        
+        }, 50, 15000)
+     
+      });
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("cre-t-51-new-content-container")) {
+          document.body.classList.add("cre-t-51-modal-open");
+          window._conv_q = window._conv_q || [];
+          _conv_q.push(["triggerConversion", "100035415"]);
+        }
+        if (e.target.classList.contains("cre-t-51-cross") || e.target.closest("div").classList.contains("cre-t-51-cross") || e.target.classList.contains("cre-t-51-modal-button")) {
+          if (document.body.classList.contains("cre-t-51-modal-open")) {
+            document.body.classList.remove("cre-t-51-modal-open");
+          }
+        }
+        if (e.target.classList.contains("cre-t-51-modal-overlay")) {
+          if (document.body.classList.contains("cre-t-51-modal-open")) {
+            document.body.classList.remove("cre-t-51-modal-open");
+          }
+        }
+        if (e.target.classList.contains("cre-t-51-modal-list-header")) {
+          e.target.classList.toggle("cre-t-51-modal-open");
+        }
+        if (e.target.classList.contains("cre-t-51-modal-lWhy_Restaurants")) {
+          e.target.classList.toggle("cre-t-51-Why_Restaurants");
+        }
+        if (e.target.classList.contains("Cre_heading_wuestions")) {
+          e.target.classList.toggle("cre-t-51-heading_wuestions");
+        }
+      });
+    }
+    addScript();
+   
+    /* Variation Init */
+    function init() {
+      document.body.classList.add(variation_name);
+      // initiate the observer only once 
+      if (!window.creT42bserver) {
+        window.creT42bserver = true;
+        updateChanges();
+      }
+
+      
+      function initializeSwiper() {
+        new Swiper(".swiperslidermain", {
+          loop: false,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          autoHeight: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+           a11y: {
+            enabled: false  // This disables aria-live and related attributes
+          }
+         
+        });
+      }
+      
+      waitForSwiper(initializeSwiper);
+      
+    }
+    /* Initialise variation */
+    helper.waitForElement("[data-attribute='header-logo']", init, 50, 15000);
+  } catch (e) {
+    if (debug) console.log(e, "error in Test" + variation_name);
+  }
+})();
