@@ -1,0 +1,366 @@
+html body.cre-t-38-V2 .cre-t-38-methodology-main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 40px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-header-text {
+    color: #000;
+    font-family: var(--font-family-Font-1, Montserrat);
+    font-size: 23px;
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-38_4, 38.4px);
+}
+
+html body.cre-t-38-V2 .cre-t-38-content-text-header {
+    color: var(--petinsurancegurus-com-black, var(--color-black-solid, #000));
+    font-family: var(--font-family-Font-1, Montserrat);
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 700);
+    line-height: var(--line-height-24, 24px);
+}
+
+html body.cre-t-38-V2 .cre-t-38-content {
+    margin-bottom: 25px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-zipcode-text {
+    color: #808080;
+    font-family: var(--font-family-Font-1, Montserrat);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: 19px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-content-text-list ol {
+    padding-left: 30px;
+}
+
+
+@media screen and (max-width: 767px) {
+    html body.cre-t-38-V2 .cre-t-38-methodology-main {
+        padding: 0px 20px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-header-text {
+        font-size: 21px;
+        line-height: 31px;
+    }
+
+}
+
+/* Logo Section Css */
+html body.cre-t-38-V2 .cre-t-38-logo-section {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-logo {
+    display: flex;
+    /* justify-content: center; */
+    flex-shrink: 0;
+}
+
+html body.cre-t-38-V2 .cre-t-38-logo-1 {
+    width: 95.039px;
+    height: 68.281px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-logo-2 {
+    width: 58.131px;
+    height: 68.281px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-logo-3 {
+    width: 162.397px;
+    height: 68.281px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-logo-4 {
+    width: 121.798px;
+    height: 68.281px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-logo-5 {
+    width: 66.435px;
+    height: 68.281px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-content3 .cre-t-38-logo-section .cre-t-38-logo {
+    width: 125px;
+    height: fit-content;
+}
+
+html body.cre-t-38-V2 .cre-t-38-content3 .cre-t-38-logo-section .cre-t-38-logo img {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    html body.cre-t-38-V2 .cre-t-38-modal-section {
+        max-height: fit-content;
+        width: 92%;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-section {
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        max-width: 350px;
+        width: 100%;
+        /* margin-left: auto;
+        margin-right: auto; */
+        row-gap: 30px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo {
+        align-items: center;
+    }
+
+
+    html body.cre-t-38-V2 .cre-t-38-logo-1 {
+        width: 95.039px;
+        height: 58.281px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-2 {
+        width: 58.131px;
+        height: 58.281px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-3 {
+        width: 140px;
+        height: 58px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-3 img {
+        width: 143px;
+        position: absolute;
+        height: auto;
+        object-fit: unset;
+        max-width: none;
+        top: -4px;
+        bottom: 0;
+        margin: auto 0;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo img {
+        object-fit: contain;
+        max-width: none;
+        max-height: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-4 {
+        width: 120px;
+        height: 59px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-5 {
+        height: 60px;
+        width: 60px;
+    }
+
+}
+
+
+html body.cre-t-38-V2 .cre-t-38-img-cta .gb-button-text {
+    margin-right: 6px;
+}
+
+@media screen and (max-width: 400px) {
+    html body.cre-t-38-V2 .cre-t-38-logo-1 {
+        width: 80px;
+        height: 53px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-2 {
+        width: 48px;
+        height: 53.281px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-3 {
+        width: 125px;
+        height: 53px;
+    }
+
+
+    html body.cre-t-38-V2 .cre-t-38-logo-3 img {
+        width: 131px;
+        top: -3px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-4 {
+        width: 100px;
+        height: 55px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-5 {
+        height: 56px;
+        width: 50px;
+    }
+
+    html body.cre-t-38-V2 .cre-t-38-logo-5 img {
+        object-position: center -1px;
+    }
+
+}
+
+@media screen and (max-width: 359px) {
+    html body.cre-t-38-V2 .cre-t-38-logo-3 {
+        order: 1;
+    }
+}
+
+.cre-t-38-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px 20px 0px;
+    cursor: pointer;
+
+}
+
+.cre-t-38-faq-wrapper-2 .cre-t-38-header {
+    padding: 20px 0px;
+}
+
+.cre-t-38-header-icon {
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+
+.cre-t-38-methodology-wrapper {
+    border-top: 1px solid #DBDCE0;
+    border-bottom: 1px solid #DBDCE0;
+}
+
+.cre-t-38-content-wrapper-faq {
+    display: none;
+}
+
+.cre-t-38-methodology-wrapper.active .cre-t-38-content-wrapper-faq {
+    display: block;
+}
+
+span .cre-t-38-control-methodology-wrapper {
+    display: none;
+}
+
+span.active .cre-t-38-control-methodology-wrapper {
+    display: block;
+}
+
+.cre-t-38-faq-control-icon {
+    width: 20px;
+    height: 20px !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.cre-t-38-zipcode-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Final CSS */
+
+.cre-t-38-faq-wrapper.active .cre-t-38-content-wrapper-faq {
+    display: block;
+}
+
+
+.cre-t-38-faq-wrapper .cre-t-38-header-icon .cre-t-38-header-icon-img-min {
+    display: none;
+}
+
+.cre-t-38-faq-wrapper.active .cre-t-38-header-icon .cre-t-38-header-icon-img-plus {
+    display: none;
+}
+
+.cre-t-38-faq-wrapper.active .cre-t-38-header-icon .cre-t-38-header-icon-img-min,
+.cre-t-38-faq-wrapper .cre-t-38-header-icon .cre-t-38-header-icon-img-plus {
+    display: block;
+}
+
+
+.cre-t-38-faq-wrapper {
+    border-bottom: 1px solid #DBDCE0;
+}
+
+@media screen and (max-width: 767px) {
+    #content-section .page-content .ct-span .cre-t-38-faq-wrapper h2 {
+        font-size: 21px;
+    }
+
+}
+
+.cre-t-38-content-wrapper-faq ol.cre-t-38-list {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-bottom: 22px;
+    padding: 0;
+    padding-left: 15px;
+}
+
+[data-path="/canada/"].cre-t-38 ol.cre-t-38-list {
+    padding-left: 15px;
+}
+
+[data-path="/canada/"].cre-t-38 ol.cre-t-38-list li {
+    padding-bottom: 1rem;
+}
+
+.cre-t-38-content2 .cre-t-38-logo img {
+    width: 100%;
+}
+
+html body.cre-t-38-V2 .cre-t-38-content2 .cre-t-38-logo-section {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.cre-t-38-logo-section img {
+    width: unset;
+}
+
+html body.cre-t-38-V2 #span-26-63>div.cre-t-38-methodology-container>div.cre-t-38-faq-wrapper.cre-t-38-faq-wrapper-2.active>div.cre-t-38-content-wrapper-faq>div:nth-child(2)>div.cre-t-38-logo-section>div {
+    width: 125px;
+    height: fit-content;
+}
+
+html body.cre-t-38-V2 .cre-t-38-faq-wrapper-2.active {
+    padding-bottom: 10px;
+}
+
+html body.cre-t-38-V2 .cre-t-38-list li {
+    padding-bottom: 1rem;
+}
+
+html body.cre-t-38-V2 #content-section .ct-section-inner-wrap {
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+   html body.cre-t-38-V2 #content-section .ct-section-inner-wrap {
+    padding-top: 20px;
+}
+
+}
