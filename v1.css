@@ -1,355 +1,430 @@
-html body.cre-t-38-V1 .cre-t-38-methodology-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0px 40px;
+body[data-path="/booking/confirmation"] .confirmation-header {
+    max-width: 1145px;
+    margin: 0 auto;
+    padding-top: 59px;
+
 }
 
-html body.cre-t-38-V1 .cre-t-38-header-text {
-    color: #000;
-    font-family: var(--font-family-Font-1, Montserrat);
-    font-size: 23px;
-    font-style: normal;
-    font-weight: var(--font-weight-600, 600);
-    line-height: var(--line-height-38_4, 38.4px);
+[data-path="/booking/confirmation"] [data-attribute="confirmation-wrapper"] {
+    display: none !important;
+    ;
 }
 
-html body.cre-t-38-V1 .cre-t-38-content-text-header {
-    color: var(--petinsurancegurus-com-black, var(--color-black-solid, #000));
-    font-family: var(--font-family-Font-1, Montserrat);
-    font-size: 17px;
-    font-style: normal;
-    font-weight: var(--font-weight-400, 700);
-    line-height: var(--line-height-24, 24px);
+html body[data-path="/booking/confirmation"] .share-section {
+    max-width: 501px;
 }
 
-html body.cre-t-38-V1 .cre-t-38-content {
+
+body[data-path="/booking/confirmation"] .status-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 12px; */
+    background: rgba(236, 244, 237, 0.6);
+    padding: 22px 20px;
+    margin-bottom: 40px;
+}
+
+body[data-path="/booking/confirmation"] .check-icon {
+    width: 28px;
+    height: 28px;
+    background: url(https://cdn-3.convertexperiments.com/uf/10007679/10007713/tick-1_681c465a5c854.svg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+body[data-path="/booking/confirmation"] .status-banner h1 {
+    margin: 0;
+    color: #265682;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: var(--font-abril-fatface), serif;
+    margin-left: 12px;
+}
+
+body[data-path="/booking/confirmation"] .reservation-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    /* padding: 0 40px; */
+}
+
+body[data-path="/booking/confirmation"] .share-section h2 {
+    color: #265682;
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-family: var(--font-abril-fatface), serif;
+    margin-top: 30px;
+}
+
+body[data-path="/booking/confirmation"] .share-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+body[data-path="/booking/confirmation"] .share-button,
+body[data-path="/booking/confirmation"] .copy-link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+body[data-path="/booking/confirmation"] .share-button {
+    /* background: #224a75;
+    color: white;
+    border: none; */
+
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    outline: none;
+    user-select: none;
+    letter-spacing: -0.5px;
+    padding: 12px 24px;
+    width: 100%;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background: rgb(38, 86, 130);
+    border: 1px solid rgb(38, 86, 130);
+    font-size: 15px;
+    line-height: 1.625;
+    transition: 0.1s ease-out;
+    position: relative;
+    white-space: normal;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    font-weight: bold;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+body[data-path="/booking/confirmation"] .share-button:hover {
+    background: rgb(44, 101, 153);
+    border-color: rgb(44, 101, 153);
+}
+
+
+
+
+
+body[data-path="/booking/confirmation"] .copy-link-button {
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    outline: none;
+    user-select: none;
+    letter-spacing: -0.5px;
+    padding: 12px 24px;
+    width: 100%;
+    cursor: pointer;
+    color: rgb(38, 86, 130);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(215, 219, 222);
+    font-size: 15px;
+    line-height: 1.625;
+    transition: 0.1s ease-out;
+    position: relative;
+    white-space: normal;
+    font-weight: bold;
+    -webkit-box-align: center;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+body[data-path="/booking/confirmation"] .copy-link-button:hover {
+    background: rgb(255, 255, 255);
+    border-color: rgb(235, 239, 242);
+}
+
+body[data-path="/booking/confirmation"] .share-icon {
+    width: 15px;
+    height: 12px;
+    background: url(https://cdn-3.convertexperiments.com/uf/10007679/10007713/arrow_681c462ea4b4c.svg) no-repeat center;
+    background-size: contain;
+}
+
+body[data-path="/booking/confirmation"] .link-icon {
+    width: 18px;
+    height: 18px;
+    background: url(https://cdn-3.convertexperiments.com/uf/10007679/10007713/link_681c4647279b8.svg) no-repeat center;
+    background-size: contain;
+}
+
+body[data-path="/booking/confirmation"] .booking-info {
+    padding: 47px 64px 92px 64px;
+    background: linear-gradient(180deg, var(--color-grey-93, #F5EDE4) 0%, var(--color-white-solid, #FFF) 100%);
+}
+
+body[data-path="/booking/confirmation"] .restaurant-name {
+    color: #d6bb96;
+
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--font-abril-fatface), serif;
+}
+
+body[data-path="/booking/confirmation"] .booking-time {
+    color: #265682;
+
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 18px;
+    font-family: var(--font-abril-fatface), serif;
+}
+
+body[data-path="/booking/confirmation"] .confirmation-message {
+    font-size: 16px;
     margin-bottom: 25px;
 }
 
 
-
-html body.cre-t-38-V1 .cre-t-38-content-text-list ol {
-    padding-left: 30px;
-}
-
-
-@media screen and (max-width: 767px) {
-    html body.cre-t-38-V1 .cre-t-38-methodology-main {
-        padding: 0px 20px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-header-text {
-        font-size: 21px;
-        line-height: 31px;
-    }
-
-}
-
-/* Logo Section Css */
-html body.cre-t-38-V1 .cre-t-38-logo-section {
+body[data-path="/booking/confirmation"] .detail-row {
     display: flex;
-    gap: 18px;
     margin-bottom: 16px;
-    margin-top: 16px;
+    flex-wrap: wrap;
+    gap: 4px;
 }
 
-html body.cre-t-38-V1 .cre-t-38-logo {
+body[data-path="/booking/confirmation"] .detail-row dt {
+    color: #99a3ab;
+    font-size: 17px;
+
+}
+
+body[data-path="/booking/confirmation"] .detail-row dd {
+    color: #272b2e;
+    font-size: 17px;
+    margin: 0;
+}
+
+body[data-path="/booking/confirmation"] .manage-booking-button {
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    outline: none;
+    user-select: none;
+    letter-spacing: -0.5px;
+    padding: 12px 24px;
+    width: 100%;
+    cursor: pointer;
+    color: rgb(38, 86, 130);
+    border: 1px solid rgba(38, 86, 130, 0.30);
+    font-size: 15px;
+    line-height: 1.625;
+    transition: 0.1s ease-out;
+    position: relative;
+    white-space: normal;
+    font-weight: bold;
+    display: inline-block;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+
+body[data-path="/booking/confirmation"] .manage-booking-button:hover {
+    background: rgb(255, 255, 255);
+    border-color: rgb(235, 239, 242);
+}
+
+
+
+body[data-path="/booking/confirmation"] .mobile-apps {
+    text-align: center;
+}
+
+body[data-path="/booking/confirmation"] .mobile-apps p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+body[data-path="/booking/confirmation"] .app-store-buttons {
     display: flex;
     justify-content: center;
-    flex-shrink: 0;
+    gap: 15px;
 }
 
-html body.cre-t-38-V1 .cre-t-38-logo-1 {
-    width: 95.039px;
-    height: 68.281px;
+body[data-path="/booking/confirmation"] .google-play {
+    width: 180px;
+    height: 54px;
+    background: url(https://images.firsttable.net/180x54/public/8246385935/google-play-badge.png) no-repeat;
+    background-size: cover;
 }
 
-html body.cre-t-38-V1 .cre-t-38-logo-2 {
-    width: 58.131px;
-    height: 68.281px;
+body[data-path="/booking/confirmation"] .app-store {
+    width: 161px;
+    height: 54px;
+    background: url(https://images.firsttable.net/161x54/public/49a5e27d56/app-store-badge.png) no-repeat;
+    background-size: cover;
 }
 
-html body.cre-t-38-V1 .cre-t-38-logo-3 {
-    width: 162.397px;
-    height: 68.281px;
-}
-
-html body.cre-t-38-V1 .cre-t-38-logo-4 {
-    width: 121.798px;
-    height: 68.281px;
-}
-
-html body.cre-t-38-V1 .cre-t-38-logo-5 {
-    width: 66.435px;
-    height: 68.281px;
-}
-
-html body.cre-t-38-V1 .cre-t-38-content3 .cre-t-38-logo-section .cre-t-38-logo {
-    width: 125px;
-    height: fit-content;
-}
-
-html body.cre-t-38-V1 .cre-t-38-content3 .cre-t-38-logo-section .cre-t-38-logo img {
-    width: 100%;
-}
-
-@media screen and (max-width: 767px) {
-    html body.cre-t-38-V1 .cre-t-38-modal-section {
-        max-height: fit-content;
-        width: 92%;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-section {
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-        max-width: 350px;
-        width: 100%;
-        /* margin-left: auto;
-        margin-right: auto; */
-        row-gap: 30px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo {
-        align-items: center;
-    }
-
-
-    html body.cre-t-38-V1 .cre-t-38-logo-1 {
-        width: 95.039px;
-        height: 58.281px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-2 {
-        width: 58.131px;
-        height: 58.281px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-3 {
-        width: 140px;
-        height: 58px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-3 img {
-        width: 143px;
-        position: absolute;
-        height: auto;
-        object-fit: unset;
-        max-width: none;
-        top: -4px;
-        bottom: 0;
-        margin: auto 0;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo img {
-        object-fit: contain;
-        max-width: none;
-        max-height: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-4 {
-        width: 120px;
-        height: 59px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-5 {
-        height: 60px;
-        width: 60px;
-    }
-
-}
-
-
-html body.cre-t-38-V1 .cre-t-38-img-cta .gb-button-text {
-    margin-right: 6px;
-}
-
-@media screen and (max-width: 400px) {
-    html body.cre-t-38-V1 .cre-t-38-logo-1 {
-        width: 80px;
-        height: 53px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-2 {
-        width: 48px;
-        height: 53.281px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-3 {
-        width: 125px;
-        height: 53px;
-    }
-
-
-    html body.cre-t-38-V1 .cre-t-38-logo-3 img {
-        width: 131px;
-        top: -3px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-4 {
-        width: 100px;
-        height: 55px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-5 {
-        height: 56px;
-        width: 50px;
-    }
-
-    html body.cre-t-38-V1 .cre-t-38-logo-5 img {
-        object-position: center -1px;
-    }
-
-}
-
-@media screen and (max-width: 359px) {
-    html body.cre-t-38-V1 .cre-t-38-logo-3 {
-        order: 1;
-    }
-}
-
-.cre-t-38-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0px;
-    cursor: pointer;
-
-}
-
-.cre-t-38-header-icon {
-    height: 38px;
-    display: flex;
-    align-items: center;
-}
-
-html body.cre-t-38-V1 #content-section>div {
-    padding-bottom: 0px;
-}
-
-.cre-t-38-methodology-wrapper {
-    border-top: 1px solid #DBDCE0;
-    border-bottom: 1px solid #DBDCE0;
-}
-
-.cre-t-38-content-wrapper-faq {
-    display: none;
-}
-
-.cre-t-38-methodology-wrapper.active .cre-t-38-content-wrapper-faq {
-    display: block;
-}
-
-
-.cre-t-38-methodology-wrapper.active .cre-t-38-header-icon-img-min,
-#content-section .page-content span.active .cre-t-38-faq-control-icon-img-min {
-    display: block;
-}
-
-.cre-t-38-methodology-wrapper .cre-t-38-header-icon-img-min,
-#content-section .page-content span .cre-t-38-faq-control-icon-img-min {
-    display: none;
-}
-
-.cre-t-38-methodology-wrapper.active .cre-t-38-header-icon-img-plus,
-#content-section .page-content span.active .cre-t-38-faq-control-icon-img-plus {
-    display: none;
-}
-
-.cre-t-38-methodology-wrapper .cre-t-38-header-icon-img-plus,
-#content-section .page-content span .cre-t-38-faq-control-icon-img-plus {
-    display: block;
-}
-
-span .cre-t-38-control-methodology-wrapper {
-    display: none;
-}
-
-span.active .cre-t-38-control-methodology-wrapper {
-    display: block;
-}
-
-.cre-t-38-faq-control-icon {
-    width: 20px;
-    height: 20px !important;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    display: flex;
-}
-
-#content-section .page-content,
-#content-section .page-content .ct-span {
-    width: 100%;
-}
-
-.cre-t-38-faq-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    cursor: pointer;
-    padding: 2px 0px 20px 0px;
-}
-
-#content-section .page-content .ct-span .cre-t-38-faq-wrapper h2 {
-    font-size: 23px;
+body[data-path="/booking/confirmation"] .detail-row ul {
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.cre-t-38-zipcode-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+body[data-path="/booking/confirmation"] .booking-label {
+    float: left;
+    clear: left;
+    text-align: left;
+    color: rgb(153, 163, 171);
+    padding-right: 7px;
+    font-size: 16px;
 }
 
-.cre-t-38-methodology-container {
-    margin-bottom: 60px;
+body[data-path="/booking/confirmation"] .booking-value {
+    margin: 0px 0px 0px 20px;
+    padding: 0px 0px 5px;
+    font-size: 16px;
 }
 
 
-@media screen and (max-width: 767px) {
-    #content-section .page-content .ct-span .cre-t-38-faq-wrapper h2 {
-        font-size: 21px;
+body[data-path="/booking/confirmation"] .booking-details [data-attribute="booking_fee"] p {
+    display: none !important;
+    ;
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    body[data-path="/booking/confirmation"] .reservation-details {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    html body.cre-t-38-V1 #content-section>div {
-        padding-top: 20px;
+    body[data-path="/booking/confirmation"] .share-section h2 {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    body[data-path="/booking/confirmation"] .status-banner {
+        margin-bottom: 10px;
+    }
+
+
+    body[data-path="/booking/confirmation"] .status-banner h1 {
+        font-size: 24px;
+    }
+
+    html body[data-path="/booking/confirmation"] .share-section {
+        padding: 0px 20px;
+    }
+
+    body[data-path="/booking/confirmation"] .booking-info {
+        padding: 47px 20px 92px 20px;
+    }
+
+    body[data-path="/booking/confirmation"] .google-play {
+        width: 161px;
+        height: 48px;
+    }
+
+    body[data-path="/booking/confirmation"] .app-store {
+        width: 161px;
+        height: 54px;
+
+    }
+
+    html body[data-path="/booking/confirmation"] .share-section {
+        max-width: 100%;
+    }
+
+    body[data-path="/booking/confirmation"] .confirmation-header {
+        padding-top: 0px;
+
+    }
+
+    body[data-path="/booking/confirmation"] .status-banner h1 {
+        margin-left: 8px;
+    }
+
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1146px) {
+
+    body[data-path="/booking/confirmation"] .reservation-details {
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    body[data-path="/booking/confirmation"] .booking-info {
+        padding: 20px 20px 20px 20px;
+        min-width: 360px;
+    }
+
+    body[data-path="/booking/confirmation"] .google-play {
+        width: 156px;
+        height: 46px;
+    }
+
+    body[data-path="/booking/confirmation"] .app-store {
+        width: 139px;
+        height: 46px;
     }
 
 }
 
-.cre-t-38-content2 .cre-t-38-logo img {
-    width: 100%;
+@media (max-width: 500px) {
+    body[data-path="/booking/confirmation"] .google-play {
+        width: 154px;
+        height: 46px;
+    }
+
+    body[data-path="/booking/confirmation"] .app-store {
+        width: 154px;
+        height: 51px;
+    }
+
 }
 
-html body.cre-t-38-V1 .cre-t-38-content2 .cre-t-38-logo-section {
-    margin-left: 0;
-    margin-right: 0;
-}
 
-html body.cre-t-38-V1 .cre-t-38-content10 .cre-t-38-content-text-description {
-    color: #808080;
-    font-family: var(--font-family-Font-1, Montserrat);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: var(--font-weight-400, 400);
-    line-height: 19px;
-}
+@media (max-width: 358px) {
+    body[data-path="/booking/confirmation"] .status-banner h1 {
+        font-size: 22px;
+    }
 
-html body.cre-t-38-V1 .cre-t-38-content2 .cre-t-38-logo-section .cre-t-38-logo {
-    width: 125px;
-    height: fit-content;
-}
+    body[data-path="/booking/confirmation"] .google-play {
+        width: 144px;
+        height: 39px;
+    }
 
-html body.cre-t-38-V1 .share-container {
-    padding: 10px 20px;
-    margin-top: 0px;
-}
+    body[data-path="/booking/confirmation"] .app-store {
+        width: 147px;
+        height: 45px;
+    }
 
-html body.cre-t-38-V1 #content-section>div {
-    padding-top: 40px;
+    body[data-path="/booking/confirmation"] .share-button,
+    body[data-path="/booking/confirmation"] .copy-link-button {
+        font-size: 14px;
+    }
+
 }
