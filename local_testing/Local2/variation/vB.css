@@ -21,6 +21,12 @@ html body.cre-t-51 .cre-t-51-modal-overlay {
     height: 100%;
     background: rgba(39, 43, 46, 0.45);
     z-index: 9;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+html body.cre-t-51.cre-t-51-modal-open .cre-t-51-modal-overlay {
+    opacity: 1;
 }
 
 html body.cre-t-51 .cre-t-51-modal-faqcta a {
@@ -36,10 +42,17 @@ html body.cre-t-51 .cre-t-51-modal-container {
     z-index: 10;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.95);
     background: #ffffff;
     max-width: 973px;
     width: 100%;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+html body.cre-t-51.cre-t-51-modal-open .cre-t-51-modal-container {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 html body.cre-t-51 .cre-t-51-modal-main {
@@ -150,14 +163,6 @@ html body.cre-t-51 .cre-t-51-cross {
     cursor: pointer;
 }
 
-html body.cre-t-51.cre-t-51-modal-open .cre-t-51-modal-overlay {
-    display: block !important;
-}
-
-html body.cre-t-51.cre-t-51-modal-open .cre-t-51-modal-container {
-    display: flex !important;
-}
-
 html body.cre-t-51 .cre-t-51-modal-item-content {
     color: #272b2e;
     font-style: normal;
@@ -206,7 +211,6 @@ html body.cre-t-51 .Cre_heading_wuestions {
 }
 
 html body.cre-t-51 .cre-t-51-modal-questionstab>p:first-child {
-
     font-weight: 700;
     font-size: 19px;
     letter-spacing: 0%;
@@ -214,7 +218,6 @@ html body.cre-t-51 .cre-t-51-modal-questionstab>p:first-child {
 }
 
 html body.cre-t-51 .cre-t-51-modal-questionstab>p {
-
     color: #272B2E;
     font-weight: 400;
     font-size: 19px;
@@ -599,24 +602,32 @@ html body .cre-t-51-modal-content .cre-t-51-modal-lWhy_Restaurants {
         position: inherit !important;
         margin-top: auto;
     }
-    .cre_stickybutton {
-        position: fixed;
-        bottom: 5px;
-        width: 95%;
-        left: 0;
-        right: 0;
-        z-index: 99;
-        margin: 0 auto;
-        background-color: #ffffff;
-    }
-    .mobile_popup {
-        padding-bottom: 60px;
-    }
-    .swiper-pagination-bullets.swiper-pagination-horizontal{
-        bottom: 65px!important;
-    }
 }
 
 html body .desktopopup .cre-t-51-modal-content .cre-t-51-modal-lWhy_Restaurants {
     margin-top: 20px;
+}
+
+html body.cre-t-51 .cre-t-51-modal-wrapper-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    visibility: hidden;
+}
+
+html body.cre-t-51.cre-t-51-modal-open .cre-t-51-modal-wrapper-container {
+    visibility: visible;
+}
+
+
+
+@media screen and (max-width: 340px) {
+    html body.cre-t-51 .cre-t-51-new-content-container {
+        margin-right: 0px;
+        font-size: 14px;
+        order: -1;
+    }
 }
