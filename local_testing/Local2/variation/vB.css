@@ -631,3 +631,5 @@ html body.cre-t-51.cre-t-51-modal-open .cre-t-51-modal-wrapper-container {
         order: -1;
     }
 }
+
+html body[data-path="/"] .cre-t-01-newCTA a , html body[data-path="/"] .buttonLink a[href="/all-about-spelling/"], html body[data-path="/"] .buttonLink a[href="/all-about-math/"], html body[data-path="/"] .buttonLink a[href="/all-about-reading/"]
