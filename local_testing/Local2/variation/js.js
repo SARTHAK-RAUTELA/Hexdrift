@@ -234,3 +234,11 @@
     if (debug) console.log(e, "error in Test" + variation_name);
   }
 })();
+
+
+https://www.gendergp.com/the-hidden-risks-of-diy-hrt-what-every-trans-person-should-know/
+https://www.gendergp.com/progesterone-transgender-hrt-mtf-breast-growth/
+https://www.gendergp.com/non-binary-hormone-use/
+https://www.gendergp.com/how-to-start-transitioning-starting-hrt/
+https://www.gendergp.com/next-steps/
+/what-happens-next-treatment-review/
