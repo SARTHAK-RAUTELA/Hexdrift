@@ -306,7 +306,7 @@
     </div>
     <div class="cre-t-51-modal-paragraph">
       Restaurants love First Table because it fills their empty tables and brings in new customers.
-      You'll get the <b>same great food and service—no</b> cut corners, just a win-win for everyone.
+      You'll get the <b>same great food and service</b>—no cut corners, just a win-win for everyone.
     </div>
     <div class="cre-t-51-modal-reviewsection">
       <div class="cre-t-51-modal-reviewicon">
