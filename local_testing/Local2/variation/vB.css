@@ -1,152 +1,149 @@
-html body.TT-174 .tt-174-guranteeText {
-    font-size: 14px !important;
-    line-height: 20px !important;
+/* Use dynamic class names for CRE_EXP_1 */
+html body.CRE_EXP_3 .CRE_EXP_3__header {
+  color: #123456;
+  font-family: Roboto;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 27px;
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
 }
 
+html body.CRE_EXP_3 .CRE_EXP_3__subheader {
+  color: #0B3E64;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 590px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-html body.TT-174 [class*='homepage-hero_reviewText'],
-html body.TT-174 [class*='homepage-hero_mobileSearchBar'] [class*='Type_title7'] {
+html body.CRE_EXP_3 .grand-total-main {
+  display: none;
+}
+
+html body.CRE_EXP_3 .CRE_EXP_3__subheader + .container .page {
+  margin-top: 49px !important;
+} 
+
+html body[data-path="/cart.php"] .button.button--primary[href="/checkout"] {
+  background-color: #ed7000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 45px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 0px !important;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html body[data-path="/cart.php"] .button.button--primary[href="/checkout"]:hover {
+  background-color: #ff8c00;
+}
+
+html body.CRE_EXP_3 .CRE_EXP_3__payment-icons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  justify-content: center;
+}
+
+html body.CRE_EXP_3 .CRE_EXP_3__payment-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+html body.CRE_EXP_3 .CRE_EXP_3__payment-icon svg {
+  width: 46px;
+  height: 32px;
+}
+
+html body.CRE_EXP_3 .cart-actions.cart-content-padding-right {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+html body.CRE_EXP_3 .cart-actions.cart-content-padding-right::after{
+  display: none;
+}
+
+@media (max-width: 800px) {
+  
+  html body.CRE_EXP_3 .CRE_EXP_3__header {
+    margin-top: 85px;
+  }
+  html body.CRE_EXP_3 .CRE_EXP_3__subheader + .container .page {
+    margin-top: 25px !important;
+  }
+
+  
+  
+}
+
+@media (max-width: 550px) {
+
+html body.CRE_EXP_3 .cart-actions.cart-content-padding-right {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+
+
+  }
+
+  html body.CRE_EXP_3 .cart-actions.cart-content-padding-right::after {
     display: none;
-}
+  }
 
-@media screen and (min-width:768px) {
-    html body.TT-174 .tt-174-separatorDesktop {
-        display: inline-block !important;
-    }
-}
-
-@media screen and (max-width:768px) {
-    html body.TT-174 .tt-174-separatorMobile {
-        display: block !important;
-    }
-}
-
-
-
-
-
-
-html body.TT-174 .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(44, 44, 44, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    display: none;
-}
-
-html body.TT-174 .popup-modal {
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
-    width: 620px;
-    max-width: 100vw;
-    padding: 36px 32px 28px 32px;
-    position: relative;
-    text-align: left;
-}
-
-html body.TT-174 .popup-close {
-    position: absolute;
-    top: 4px;
-    right: 18px;
-    background: none;
-    border: none;
-    font-size: 32px;
-    color: #222;
-    cursor: pointer;
-    line-height: 1;
-}
-
-html body.TT-174 .popup-title {
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 20px;
-
-}
-
-html body.TT-174 .popup-desc {
-    font-size: 16px;
-    color: #2F3033;
-    line-height: 24px;
-    margin-bottom: 20px
-}
-
-html body.TT-174 .popup-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 18px;
-}
-
-html body.TT-174 .popup-primary {
-    background: #009fd9;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 9px 19px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s;
-    max-width: 92px;
+  html body[data-path="/cart.php"] .button.button--primary[href="/checkout"] {
     width: 100%;
+  }
+
+  html body.CRE_EXP_3 .CRE_EXP_3__subheader {
     font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  html body.CRE_EXP_3 .CRE_EXP_3__header {
+    font-size: 28px;
+  }
+}
+
+
+@media (min-width: 801px) {
+  
+html body.CRE_EXP_3 .grand-total {
+  border-bottom: 1px solid #e5e5e5;
+}
+
 }
 
 
 
-html body.TT-174 .popup-secondary {
-    background: #fff;
-    color: #009fd9;
-    border: 2px solid #D3D4D5;
-    border-radius: 4px;
-    padding: 7px 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    max-width: 154px;
-    width: 100%;
-    height: 54px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
+html body.CRE_EXP_3 .shipping .cart-total-value span {
+font-size: 16px;
+color: #757575;
+font-weight: 400;
+line-height: 27px;
 }
 
-
-html body.TT-174.openmodal .popup-overlay {
-    display: flex;
-}
-
-html body.TT-174 .tt-174-guranteeText b:last-child:hover {
-    border-bottom: 1px solid #2f3033;
-}
-
-html body.TT-174 .tt-174-guranteeText b:last-child {
-    cursor: pointer;
-}
-
-html body.TT-174.tt_show-popup .popup-overlay {
-    display: flex;
-}
-
-@media screen and (max-width: 768px) {
-    html body.TT-174 .popup-modal {
-        max-width: 94vw;
-    }
-
-    html body.TT-174 .popup-actions {
-        justify-content: start;
-    }
-
-    html body.TT-174 .popup-title {
-        line-height: 35px;
-    }
+html body.CRE_EXP_3  .CRE_EXP_3coupon-code .coupon-code-add {
+  color: #757575;
+font-size: 16px;
+font-weight: 400;
+line-height: 27px;
 }

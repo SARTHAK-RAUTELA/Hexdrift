@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House Color Changer with Mask</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    canvas { border: 1px solid #aaa; margin-top: 10px; display: block; }
+    label { display: inline-block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>Change House Colors (with Mask)</h2>
+
+<label>Upload House Image:</label>
+<input type="file" id="uploadImage" accept="image/*"><br>
+
+<label>Upload Mask Image (white = house):</label>
+<input type="file" id="uploadMask" accept="image/*"><br>
+
+<label>From Color 1 (e.g., dark brown):</label>
+<input type="color" id="fromColor1" value="#3e2f2b">
+
+<label>To Color 1 (e.g., dark blue):</label>
+<input type="color" id="toColor1" value="#002244"><br>
+
+<label>From Color 2 (e.g., light yellow):</label>
+<input type="color" id="fromColor2" value="#f4e3b5">
+
+<label>To Color 2 (e.g., light blue):</label>
+<input type="color" id="toColor2" value="#add8e6"><br>
+
+<button onclick="applyColorChange()">Apply Color Change</button>
+
+<canvas id="canvas"></canvas>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let image = new Image();
+let mask = new Image();
+
+let imageLoaded = false;
+let maskLoaded = false;
+
+document.getElementById('uploadImage').addEventListener('change', function (e) {
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    image.onload = function () {
+      imageLoaded = true;
+      drawImageIfReady();
+    };
+    image.src = event.target.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+});
+
+document.getElementById('uploadMask').addEventListener('change', function (e) {
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    mask.onload = function () {
+      maskLoaded = true;
+      drawImageIfReady();
+    };
+    mask.src = event.target.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+});
+
+function drawImageIfReady() {
+  if (imageLoaded && maskLoaded) {
+    canvas.width = image.width;
+    canvas.height = image.height;
+    ctx.drawImage(image, 0, 0);
+  }
+}
+
+function hexToRgb(hex) {
+  const bigint = parseInt(hex.slice(1), 16);
+  return {
+    r: (bigint >> 16) & 255,
+    g: (bigint >> 8) & 255,
+    b: bigint & 255
+  };
+}
+
+function applyColorChange() {
+  if (!(imageLoaded && maskLoaded)) {
+    alert("Please upload both the house image and the mask image.");
+    return;
+  }
+
+  ctx.drawImage(image, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const maskCanvas = document.createElement('canvas');
+  const maskCtx = maskCanvas.getContext('2d');
+
+  maskCanvas.width = canvas.width;
+  maskCanvas.height = canvas.height;
+  maskCtx.drawImage(mask, 0, 0);
+  const maskData = maskCtx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+  const data = imageData.data;
+
+  const from1 = hexToRgb(document.getElementById('fromColor1').value);
+  const to1 = hexToRgb(document.getElementById('toColor1').value);
+
+  const from2 = hexToRgb(document.getElementById('fromColor2').value);
+  const to2 = hexToRgb(document.getElementById('toColor2').value);
+
+  const tolerance = 40;
+
+  for (let i = 0; i < data.length; i += 4) {
+    // Only change pixels where the mask is white
+    const maskR = maskData[i];
+    const maskG = maskData[i + 1];
+    const maskB = maskData[i + 2];
+
+    const isWhite = maskR > 200 && maskG > 200 && maskB > 200;
+    if (!isWhite) continue;
+
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+
+    if (Math.abs(r - from1.r) < tolerance &&
+        Math.abs(g - from1.g) < tolerance &&
+        Math.abs(b - from1.b) < tolerance) {
+      data[i] = to1.r;
+      data[i + 1] = to1.g;
+      data[i + 2] = to1.b;
+    }
+
+    if (Math.abs(r - from2.r) < tolerance &&
+        Math.abs(g - from2.g) < tolerance &&
+        Math.abs(b - from2.b) < tolerance) {
+      data[i] = to2.r;
+      data[i + 1] = to2.g;
+      data[i + 2] = to2.b;
+    }
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+}
+</script>
+
+</body>
+</html>
