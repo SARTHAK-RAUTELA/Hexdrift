@@ -1,149 +1,36 @@
-/* Use dynamic class names for CRE_EXP_1 */
-html body.CRE_EXP_3 .CRE_EXP_3__header {
-  color: #123456;
-  font-family: Roboto;
-  font-size: 34px;
-  font-weight: 600;
-  line-height: 27px;
-  margin-top: 64px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: fit-content;
+html body #main>a[href*="/sign-up-form"].block.bg-off-black {
+  font-size: 0;
 }
 
-html body.CRE_EXP_3 .CRE_EXP_3__subheader {
-  color: #0B3E64;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 590px;
-  padding-left: 20px;
-  padding-right: 20px;
+html body #main>a[href*="/sign-up-form"].block.bg-off-black::after {
+  content: "ACT FAST: FINAL RELEASE PACKAGES SELLING OUT";
+  font-size: 16px;
 }
 
-html body.CRE_EXP_3 .grand-total-main {
-  display: none;
+/* .CRE_EXP_5-black-wrapper */
+
+html body .CRE_EXP_5-black-container .CRE_EXP_5-black-wrapper a[href*="/sign-up-form"] {
+  font-size: 0;
 }
 
-html body.CRE_EXP_3 .CRE_EXP_3__subheader + .container .page {
-  margin-top: 49px !important;
-} 
-
-html body[data-path="/cart.php"] .button.button--primary[href="/checkout"] {
-  background-color: #ed7000;
-  color: #ffffff;
-  border: none;
-  padding: 10px 45px;
-  font-size: 18px;
-  border-radius: 30px;
-  cursor: pointer;
-  margin-bottom: 0px !important;
-  height: 47px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html body .CRE_EXP_5-black-container .CRE_EXP_5-black-wrapper a[href*="/sign-up-form"]::after {
+  content: "ACT FAST: FINAL RELEASE PACKAGES SELLING OUT";
+  font-size: 16px;
 }
 
-html body[data-path="/cart.php"] .button.button--primary[href="/checkout"]:hover {
-  background-color: #ff8c00;
+/* .CRE_EXP_6-black-wrapper */
+
+html body .CRE_EXP_6-black-container .CRE_EXP_6-black-wrapper a[href*="/sign-up-form"] {
+  font-size: 0;
 }
 
-html body.CRE_EXP_3 .CRE_EXP_3__payment-icons {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  justify-content: center;
+html body .CRE_EXP_6-black-container .CRE_EXP_6-black-wrapper a[href*="/sign-up-form"]::after {
+  content: "ACT FAST: FINAL RELEASE PACKAGES SELLING OUT";
+  font-size: 16px;
 }
 
-html body.CRE_EXP_3 .CRE_EXP_3__payment-icon {
-  display: inline-flex;
-  align-items: center;
-}
-
-html body.CRE_EXP_3 .CRE_EXP_3__payment-icon svg {
-  width: 46px;
-  height: 32px;
-}
-
-html body.CRE_EXP_3 .cart-actions.cart-content-padding-right {
-  display: flex;
-  gap: 18px;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-html body.CRE_EXP_3 .cart-actions.cart-content-padding-right::after{
-  display: none;
-}
-
-@media (max-width: 800px) {
-  
-  html body.CRE_EXP_3 .CRE_EXP_3__header {
-    margin-top: 85px;
+@media (max-width: 600px) {
+  body #main > a[href*="/sign-up-form"].block.bg-off-black::after {
+    font-size: 13px;
   }
-  html body.CRE_EXP_3 .CRE_EXP_3__subheader + .container .page {
-    margin-top: 25px !important;
-  }
-
-  
-  
-}
-
-@media (max-width: 550px) {
-
-html body.CRE_EXP_3 .cart-actions.cart-content-padding-right {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 10px;
-
-
-  }
-
-  html body.CRE_EXP_3 .cart-actions.cart-content-padding-right::after {
-    display: none;
-  }
-
-  html body[data-path="/cart.php"] .button.button--primary[href="/checkout"] {
-    width: 100%;
-  }
-
-  html body.CRE_EXP_3 .CRE_EXP_3__subheader {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-  }
-
-  html body.CRE_EXP_3 .CRE_EXP_3__header {
-    font-size: 28px;
-  }
-}
-
-
-@media (min-width: 801px) {
-  
-html body.CRE_EXP_3 .grand-total {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-}
-
-
-
-html body.CRE_EXP_3 .shipping .cart-total-value span {
-font-size: 16px;
-color: #757575;
-font-weight: 400;
-line-height: 27px;
-}
-
-html body.CRE_EXP_3  .CRE_EXP_3coupon-code .coupon-code-add {
-  color: #757575;
-font-size: 16px;
-font-weight: 400;
-line-height: 27px;
 }
