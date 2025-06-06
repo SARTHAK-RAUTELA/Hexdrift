@@ -30,7 +30,10 @@ html body .CRE_EXP_6-black-container .CRE_EXP_6-black-wrapper a[href*="/sign-up-
 }
 
 @media (max-width: 600px) {
-  body #main > a[href*="/sign-up-form"].block.bg-off-black::after {
+
+  body #main>a[href*="/sign-up-form"].block.bg-off-black::after,
+  html body .CRE_EXP_5-black-container .CRE_EXP_5-black-wrapper a[href*="/sign-up-form"]::after,
+  html body .CRE_EXP_6-black-container .CRE_EXP_6-black-wrapper a[href*="/sign-up-form"]::after {
     font-size: 13px;
   }
 }
