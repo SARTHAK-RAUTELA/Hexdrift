@@ -271,59 +271,11 @@ html body.CRE_EXP_4[data-path*=reading] .CRE_EXP_4-listing-content-items .CRE_EX
   order: 3;
 }
 
-@media screen and (max-width:767px) {
-  html body.CRE_EXP_4 .product-container .level-title {
-    font-size: 40px;
-    line-height: normal;
-    padding: 0px 10px;
-    margin-bottom: 25px;
-  }
-
-  html body.CRE_EXP_4 .CRE_EXP_4-alert-container {
-    padding: 0px 15px;
-    margin-bottom: 22px;
-  }
-
-  html body.CRE_EXP_4 .CRE_EXP_4-text-alert-content {
-    padding: 0px 22px;
-  }
-
-  html body.CRE_EXP_4 .CRE_EXP_4-product-level h4 a {
-    font-size: 24px;
-  }
-
-  html body .product-details-section {
-    margin-top: 14px;
-  }
-
-  html body .product-details-section>.product-option {
-    align-items: center;
-    gap: 24px;
-  }
-
-  html body.CRE_EXP_4 .product-option.CRE_EXP_4-product-option-review h4 a,
-  html body.CRE_EXP_4 .product-option.CRE_EXP_4-product-option-letter h4 a {
-    font-size: 20px;
-  }
-
-  html body.CRE_EXP_4 .CRE_EXP_4-new-product-content {
-    max-width: 261px;
-  }
-
-  html body.CRE_EXP_4 .CRE_EXP_4-new-product-content-header {
-    font-size: 24px;
-    line-height: normal;
-  }
-
-  html body.CRE_EXP_4 .CRE_EXP_4-alert-wrapper {
-    padding: 10px 0px;
-  }
-
-  html body.CRE_EXP_4 .product-container.CRE_EXP_4-margin-bottom {
-    margin-bottom: 30px;
-  }
-
-  html body.CRE_EXP_4 .product-option.CRE_EXP_4-product-option-letter.CRE_EXP_4-show {
-    margin-bottom: 20px;
-  }
+@media screen and (max-width:500px) {
+ .CRE_EXP_08-modal-button-wrapper{
+  padding: 13px 66px;
+ }
 }
+
+
+.navPages-list .navPages-item > .navPages-action , .CRE_EXP_2-nav-item, .CRE_EXP_2-mob-nav-item
