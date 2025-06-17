@@ -1,384 +1,455 @@
-window.expLibraryDataQueue = window.expLibraryDataQueue || [];
-window.expLibraryDataQueue.push({
-  CRE_EXP_4: {
-    enable_DEBUG: true,
-    initOnce: false,
-    localDevelopment: true,
+(function () {
+  try {
+    /* main variables */
+    var debug = 1;
+    var variation_name = "cre-t-51";
 
-    // Check and extract the level from the level title
-    checkTextLevelTitle() {
-      const $this = this;
-      // Run when the element is available
-      $this.runAt(".product-container .level-title", function () {
-        var levelTitleElement = document.querySelector(".product-container .level-title");
-        var textContent = levelTitleElement ? levelTitleElement.textContent : "";
-        var level = $this.extractLevelFromText(textContent);
-        $this.addAlertAndVideoContent(level);
-        $this.addNewContentForProduct(level);
-      });
-    },
+    function waitForElement(selector, trigger) {
+      var interval = setInterval(function () {
+        if (
+          document &&
+          document.querySelector(selector) &&
+          document.querySelectorAll(selector).length > 0
+        ) {
+          clearInterval(interval);
+          trigger();
+        }
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
+    }
 
-    // Extract level from the text content
-    extractLevelFromText(textContent) {
-      var match = textContent.match(/Level\s+(\d+)/);
-      if (match && match[1]) {
-        return match[1];
+    // observer Selector helper for observe  the  dynamic modal 
+    function debounce(func, timeout = 300) {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.apply(this, args);
+        }, timeout);
+      };
+    }
+
+    function observeSelector(selector, callback, options = {}) {
+      const document = options.document || window.document;
+      const processed = new Map();
+      if (options.timeout || options.onTimeout) {
+        throw `observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`;
       }
-      return "Unknown";
-    },
-
-    // Add class for Selected element
-    addClassForSpecificElement() {
-      const $this = this;
-      const testName = $this.__testName;
-
-      this.runAt(".product-container", function () {
-        var parentElement = document.querySelector(".product-container");
-        if (parentElement) parentElement.classList.add(`${testName}-margin-bottom`);
-      });
-
-      this.runAt(".product-details-section > .product-option h4", function () {
-        // Select all h4 elements within the product options
-        document.querySelectorAll(".product-details-section > .product-option h4").forEach((h4) => {
-          const text = h4.textContent.trim();
-          const optionDiv = h4.closest("div.product-option");
-
-          if (!optionDiv) return;
-
-          // Add classes based on the text content of the h4 element
-          if (text.includes("Level")) optionDiv.classList.add(`${testName}-product-level`);
-          if (text.includes("Letter")) optionDiv.classList.add(`${testName}-product-option-letter`);
-          if (text.includes("Review")) optionDiv.classList.add(`${testName}-product-option-review`);
-        });
-      });
-
-      this.live(`.${testName}-product-level.product-option .quantity-increase`, "click", () => {
-        var quantityInput = document.querySelector(`.${testName}-product-level .quantity-number`);
-        console.log(quantityInput);
-        if (quantityInput && parseInt(quantityInput.value, 10) > 0) {
-          [`.${testName}-product-option-letter`, `.${testName}-product-option-review`, `.${testName}-new-product-container`].forEach((selector) => {
-            var el = document.querySelector(selector);
-            console.log(el);
-            if (el) el.classList.add(`${testName}-show`);
-          });
-          if (parentElement) parentElement.classList.remove(`${testName}-margin-bottom`);
-        }
-      });
-    },
-
-    // Add alert and video content dynamically based on level
-    addAlertAndVideoContent(level) {
-      const $this = this;
-      const testName = $this.__testName;
-
-      // Run when the Header element is available for Alert
-      this.runAt(".product-container .level-title", function () {
-        // Dynamically insert the level into the HTML string
-        const alertHtml = `<div class="${testName}-alert-container">
-              <div class="${testName}-alert-wrapper">
-                <div class="${testName}-text-alert-content">Our programs are based on skill mastery, not age or grade—take the <a href="https://www.allaboutlearningpress.com/all-about-reading-level-4/">placement test</a> to see if your student is ready for level ${level}.</div>
-              </div>
-            </div>`;
-
-        if (!document.querySelector(`.${testName}-alert-container`)) {
-          document.querySelector(".product-container .level-title").insertAdjacentHTML("afterend", alertHtml);
-        }
-
-        const videoHeaderHtml = `<div class="${testName}-video-container">
-          <div class="${testName}-video-wrapper">
-            <div class="${testName}-text-video-content">What’s Included in Level ${level} Materials</div>
-          </div>
-        </div>`;
-
-        if (!document.querySelector(`.${testName}-video-container`)) {
-          document.querySelector(".dx-wide.beige .content-container .video-placeholder").insertAdjacentHTML("beforebegin", videoHeaderHtml);
-        }
-      });
-
-      // Run when the Video element is available
-      this.runAt(".dx-wide.beige .content-container .video-placeholder", function () {
-        var videoHeaderHtml = `<div class="${testName}-video-container">
-          <div class="${testName}-video-wrapper">
-            <div class="${testName}-text-video-content">What’s Included in Level ${level} Materials</div>
-          </div>
-        </div>`;
-
-        if (!document.querySelector(`.${testName}-video-container`)) {
-          document.querySelector(".dx-wide.beige .content-container .video-placeholder").insertAdjacentHTML("beforebegin", videoHeaderHtml);
-        }
-        // Move this section to the top
-        var wideBeigeElement = document.querySelector(".dx-wide.beige");
-        var optionalProdsElement = document.querySelector(".product-container");
-
-        if (wideBeigeElement && optionalProdsElement) {
-          optionalProdsElement.insertAdjacentElement("afterend", wideBeigeElement);
-        }
-      });
-
-      this.runAt("html body .product-details-main + .product-option a", function () {
-        var levelTitle = document.querySelector("html body .product-details-main + .product-option a");
-        if (levelTitle) {
-          levelTitle.textContent = `Level ${level} Program Materials`;
-        }
-      })
-      
-      var getAlert = document.querySelector(`.${testName}-alert-container a`);
-      if (window.location.href.includes("spelling")) {
-        getAlert.href = "https://www.allaboutlearningpress.com/spelling-placement";
-      } else if (window.location.href.includes("reading")) {
-        getAlert.href = "https://www.allaboutlearningpress.com/reading-placement";
-      }
-    },
-
-    addNewListingForProduct() {
-      const $this = this;
-      const testName = $this.__testName;
-
-      this.runAt(".product-container .product-details-section .product-details-main + .product-option", function () {
-        var sourceParagraph = document.querySelector(`html body.${testName} .product-details-main + .product-option p:not(.product-price)`);
-        var dynamicListItemsHtml = "";
-
-        function processItemText(itemTextContent) {
-          var processedText = itemTextContent.trim();
-
-          // Remove trailing period if any
-          if (processedText.endsWith(".")) {
-            processedText = processedText.slice(0, -1);
+      let obs;
+      let isDone = false;
+      const done = () => {
+        if (obs) obs.disconnect();
+        isDone = true;
+      };
+      const processElement = (el) => {
+        if (!processed.has(el)) {
+          processed.set(el, true);
+          callback(el);
+          if (options.once) {
+            done();
+            return true;
           }
+        }
+        return false;
+      };
+      const lookForSelector = () => {
+        const elParent = document.documentElement;
+        if (elParent.matches(selector) || elParent.querySelector(selector)) {
+          const elements = elParent.querySelectorAll(selector);
+          elements.forEach((el) => processElement(el));
+        }
+      };
+      const debouncedLookForSelector = debounce(() => {
+        lookForSelector();
+      }, 100);
+      // Initial check for the selector on page load
+      lookForSelector();
+      if (!isDone) {
+        obs = new MutationObserver(() => {
+          debouncedLookForSelector();
+        });
+        obs.observe(document, {
+          attributes: false,
+          childList: true,
+          subtree: true,
+        });
+      }
+      return done;
+    }
 
-          processedText = processedText.replace(/^and\s+/i, "");
-          processedText = processedText.trim();
+    function waitForSwiper(trigger) {
+      var interval = setInterval(function () {
+        if (typeof window.Swiper != "undefined") {
+          clearInterval(interval);
+          trigger();
+        }
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
+    }
 
-          // Rule: Handle quantity words
-          var matchOne = processedText.match(/^(?:one|a|an)\s+(.+)/is);
+    function addScript() {
+      var scriptOne = document.createElement("script");
+      scriptOne.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js";
+      document.querySelector("head").appendChild(scriptOne);
+      var swiperCss =
+        '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" integrity="sha512-ipO1yoQyZS3BeIuv2A8C5AwQChWt2Pi4KU3nUvXxc4TKr8QgG8dPexPAj2JGsJD6yelwKa4c7Y2he9TTkPM4Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />';
+      document.querySelector("head").insertAdjacentHTML("beforeend", swiperCss);
+    }
 
-          if (matchOne && matchOne[1]) {
-            var rest = matchOne[1];
-            processedText = rest.charAt(0).toUpperCase() + rest.slice(1).toLowerCase();
-          } else {
-            var matchMultiple = processedText.match(/^(two|three|four|five|six|seven|eight|nine|ten)\s+(.+)/is);
-            if (matchMultiple && matchMultiple[1] && matchMultiple[2]) {
-              var quantity = matchMultiple[1];
-              var rest = matchMultiple[2];
-              processedText = quantity.charAt(0).toUpperCase() + quantity.slice(1).toLowerCase() + " " + rest.toLowerCase();
-            } else {
-              if (processedText.length > 0) {
-                processedText = processedText.charAt(0).toUpperCase() + processedText.slice(1).toLowerCase();
+    function mutationObserverForUseUSerType() {
+      // Create a mutation observer to watch for changes to the users_type attribute
+      const userTypeObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'users_type') {
+            const userType = document.body.getAttribute('users_type');
+            if (userType === 'guest') {
+              var mobileselector = document.querySelector(' [data-attribute="header-search"]');
+              if (window.innerWidth <= 767 && mobileselector) {
+                mobileselector.insertAdjacentHTML("beforeend", newContent);
+              } else {
+                var insertionDiv = document.querySelector(' [data-attribute="header-nav"]');
+                insertionDiv && insertionDiv.insertAdjacentHTML("afterbegin", newContent);
+              }
+
+            } else if (userType === 'member') {
+              var mobileselector = document.querySelector(' [data-attribute="header-search"]');
+              if (window.innerWidth <= 767 && mobileselector) {
+                mobileselector.insertAdjacentHTML("beforeend", newContent);
+              } else {
+                if (document.querySelector(' [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]')) {
+                  document.querySelector(' [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]').insertAdjacentHTML("afterbegin", newContent);
+                }
               }
             }
           }
+        });
+      });
 
-          processedText = processedText.replace(/(\([^)]*\))/g, "<span>$1</span>—one per child");
+      // Start observing the body element for attribute changes
+      userTypeObserver.observe(document.body, { attributes: true, attributeFilter: ['users_type'] });
 
-          return processedText;
-        }
+    }
 
-        if (sourceParagraph) {
-          var fullText = sourceParagraph.textContent.trim();
-          var itemsString = "";
+    function mutationObserverForNewAccount() {
+      // Create a mutation observer to watch for changes to the user_type attribute
+      const newAccountObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'user_type') {
+            const userType = document.body.getAttribute('user_type');
+            if (userType === 'new_account') {
+              injectModal();
+              window._conv_q = window._conv_q || [];
+              _conv_q.push(["triggerConversion", "100035661"]);
 
-          var packageIncludesMarker = "Package includes:";
-          var markerPosition = fullText.toLowerCase().indexOf(packageIncludesMarker.toLowerCase());
-
-          if (markerPosition !== -1) {
-            itemsString = fullText.substring(markerPosition + packageIncludesMarker.length).trim();
-          } else {
-            itemsString = fullText;
+            }
           }
+        });
+      });
 
-          var splitRegex = /(?:,\s*|\s+and\s+)(?=(?:[^()]*\([^()]*\)[^()]*)*[^()]*$)/i;
+      // Start observing the body element for attribute changes
+      newAccountObserver.observe(document.body, { attributes: true, attributeFilter: ['user_type'] });
+    }
 
-          var items = itemsString
-            .split(splitRegex)
-            .map((item, index) => {
-              var trimmedItem = item.trim();
-              return trimmedItem;
-            })
-            .filter((item) => item !== "");
+    let newContent = `<span class="cre-t-51-new-content-container">How it Works</span>`;
 
-          if (items.length > 0) {
-            items.forEach((item, index) => {
-              var processedItemText = processItemText(item);
-              dynamicListItemsHtml += `<div class="${testName}-listing-wrapper ${testName}-listing-wrapper-${index + 1}">
-            <ul class="${testName}-listing-content-ui-items">
-            <li class="${testName}-listing-item ${testName}-listing-item-${index + 1}">${processedItemText}</li></ul></div>`;
-            });
-          }
-        }
+    var icon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+    <path d="M6.74908 14.2382L0 7.48911L1.68727 5.80184L6.74908 10.8637L17.6127 0L19.3 1.68727L6.74908 14.2382Z" fill="#C7A77B"/>
+    </svg>`;
 
-        var addNewListingHtml = `<div class="${testName}-listing-container">
-          <div class="${testName}-listing-wrapper">
-              <div class="${testName}-listing-main">
-                  <div class="${testName}-listing-content-header">Package includes:</div>
-                  <div class="${testName}-listing-content-items">
-                      ${dynamicListItemsHtml}
-                  </div>
-                  <div class="${testName}-listing-content-subtext">
-                      <span class="${testName}-listing-content-subtext-bold">Want to see what’s inside?</span> Watch the video below or visit our <a href="https://www.allaboutlearningpress.com/shop-all-products/">All Products page</a> for a closer look.
-                  </div>
+    var creT13ModalContent = `
+      <div class="cre-t-51-modal-overlay"></div>
+  <div class="cre-t-51-modal-container">
+    
+    <div class="cre-t-51-modal-wrapper">
+      <div class="cre-t-51-cross">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <path d="M2.1868 18L0.452148 16.2L7.39074 9L0.452148 1.8L2.1868 0L9.12538 7.2L16.064 0L17.7986 1.8L10.86 9L17.7986 16.2L16.064 18L9.12538 10.8L2.1868 18Z" fill="#D8DBDF"/>
+  </svg>
+      </div>
+    <!-- Swiper container -->
+     <div class="cre-t-51-modal-main">
+        <div class="desktopopup">
+          <div class="cre-t-modal-header">What is First Table?</div>
+           <div class="cre-t-51-modal-content">
+            <div class="cre-t-51-modal-sub-copy"><b>First Table offers 50% off bookings at top restaurants.</b> Pay a small fee to secure a table and enjoy great dining for half the price.</div>
+            <div class="cre-t-51-modal-list-header Cre_Accordion">How it Works</div>
+            <div class="cre-t-51-modal-list-items">
+              <div class="cre-t-51-modal-list-item">
+                <div class="cre-t-51-modal-item-content">
+                  <span>Explore Restaurants</span>—Find top-rated restaurants near you and try something new.
+                </div>
               </div>
+              <div class="cre-t-51-modal-list-item">
+                
+                <div class="cre-t-51-modal-item-content"><span>Book a Table</span>—Pay a small fee to reserve your discounted table. Your reservation is confirmed instantly.</div>
+              </div>
+              <div class="cre-t-51-modal-list-item">
+              
+                <div class="cre-t-51-modal-item-content"><span>Enjoy 50% Off</span>—Get the same great food and service for half the price.</div>
+              </div>
+            </div>
+            <div class="cre-t-51-modal-nohidefree">No hidden fees. Just great food at half the price.</div>
+            <div class="cre-t-51-modal-lWhy_Restaurants Cre_Accordion">Why Restaurants <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg"> First Table</div>
+            <div class="cre-t-51-modal-paragraph">Restaurants love First Table because it fills their empty tables and brings in new customers. You'll get the <b>same great food and service</b>—no cut corners, just a win-win for everyone.</div>
+            <div class="cre-t-51-modal-reviewsection">
+               <div class="cre-t-51-modal-reviewicon"><img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg"></div>
+                <p> "The service was exceptional, and the food was top-notch even with the discount."<p>
+            </div>
+            <div class="cre-t-51-modal-lWhy-Common-Questions">
+             <div class="Cre_heading_wuestions Cre_Accordion"> Common Questions</div>
+               <div class="cre-t-51-modal-questionstab">
+                  <p>Will my booking be honoured?</p>
+                  <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
+               </div>
+               <div class="cre-t-51-modal-questionstab">
+                  <p>Do restaurants limit what I can order?</p>
+                  <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
+               </div>
+                 <div class="cre-t-51-modal-questionstab">
+                  <p>Is First Table legit?</p>
+                  <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
+               </div>
+                <div class="cre-t-51-modal-faqcta"> <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a></div>
+            </div>
           </div>
-      </div>`;
-
-        if (!document.querySelector(`.${testName}-listing-container`)) {
-          var insertTarget = document.querySelector(`.${testName}-product-level .product-price + p`);
-          if (insertTarget) {
-            insertTarget.insertAdjacentHTML("beforebegin", addNewListingHtml);
-          } else {
-            console.error("Target element for inserting new listing container not found.");
-          }
-        }
-      });
-    },
-    addNewContentForProduct() {
-      const $this = this;
-      const testName = $this.__testName;
-
-      // Default text based on URL
-      var text = "";
-      if (location.href.includes("spelling")) {
-        text = "Spelling";
-      } else if (location.href.includes("reading")) {
-        text = "Reading";
-      }
-
-      // Function to add the content once level is available
-      function addContentWithLevel(level) {
-        const newIncludeText = level ? level : "Unknown"; // Default to "Unknown" if level is undefined
-
-        $this.runAt(".product-container .product-details-section .product-details-main + .product-option", function () {
-          var newIncludeTextHtml = `
-            <div class="${testName}-new-include-container">
-              <div class="${testName}-new-include">
-                <div class="${testName}-new-include-text-content">
-                  Includes everything you need to teach Level ${newIncludeText} 
-                  <span class="${testName}-new-include-bold">${text}</span>, 
-                  including a reusable teacher’s manual and readers.
-                </div>
-              </div>
-            </div>`;
-
-          var textNewContent = document.querySelector(".product-details-section > .product-details-main + .product-option h4 + .product-price");
-          if (!document.querySelector(`.${testName}-new-include-container`)) {
-            textNewContent.insertAdjacentHTML("afterend", newIncludeTextHtml);
-          }
-        });
-
-        // Adding additional new product content
-        $this.runAt(".product-container .product-details-section .product-details-main + .product-option + .faq-section", function () {
-          var newContentProduct = `
-            <div class="${testName}-new-product-container">
-              <div class="${testName}-new-product-wrapper">
-                <div class="${testName}-new-product-content">
-                  <div class="${testName}-new-product-content-header">You’ll also need these one-time resources...</div>
-                  <div class="${testName}-new-product-content-subheader">
-                    These tools are used across all levels of the All About <span>${text}</span> program. 
-                    If you’ve completed a previous level, you probably already have them—no need to repurchase.
-                  </div>
-                </div>
-              </div>
-            </div>`;
-
-          var addElement = document.querySelector(".product-container .product-details-section .product-details-main + .product-option + .faq-section");
-          if (!document.querySelector(`.${testName}-new-product-container`)) {
-            addElement.insertAdjacentHTML("beforebegin", newContentProduct);
-          }
-        });
-      }
-
-      // Check for the level and wait for it to load
-      $this.runAt(".product-container .level-title", function () {
-        var levelTitleElement = document.querySelector(".product-container .level-title");
-        var textContent = levelTitleElement ? levelTitleElement.textContent : "";
-        var level = $this.extractLevelFromText(textContent);
-
-        if (level !== "Unknown") {
-          addContentWithLevel(level);
-        } else {
-          // If level is still "Unknown", keep checking every second
-          setTimeout(() => {
-            $this.addNewContentForProduct(); // Retry until level is available
-          }, 1000); // Retry after 1 second
-        }
-      });
-    },
-    addContentForProduct() {
-      const $this = this;
-      const testName = $this.__testName;
-
-      this.runAt(`.product-option.${testName}-product-option-review p:not(.product-price)`, function () {
-        var newReviewContentHtml = `<div class="${testName}-review-letter-product-container ${testName}-review-product-container">
-      <div class="${testName}-review-product-wrapper">
-        <div class="${testName}-review-product-content ${testName}-product-text-content">
-          <span class="${testName}-product-content-bold">One-time purchase per student.</span> Helps organize your child’s flashcards for daily review and long-term progress. Includes tabbed dividers and foam spacers to separate mastered and review cards.
+          </div>
+<div class="mobile_popup">
+    <div class="cre-t-51-cross-mobile">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+    <path d="M2.1868 18L0.452148 16.2L7.39074 9L0.452148 1.8L2.1868 0L9.12538 7.2L16.064 0L17.7986 1.8L10.86 9L17.7986 16.2L16.064 18L9.12538 10.8L2.1868 18Z" fill="#D8DBDF"></path>
+  </svg>
+      </div>
+    <div class="swiperslidermain swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide Cre_item">
+      <div class="cre-t-51-modal-list-header Cre_Accordion">How it Works</div>
+      <div class="cre-t-51-modal-sub-copy"><b>First Table offers 50% off bookings at top restaurants.</b>  Pay a small fee to secure a table and enjoy great dining for half the price.</div>
+      <div class="cre-t-51-modal-list-items">
+        <div class="cre-t-51-modal-list-item">
+          <div class="cre-t-51-modal-item-content">
+            <span>Explore Restaurants</span>Find top-rated restaurants near you and try something new.
+          </div>
+        </div>
+        <div class="cre-t-51-modal-list-item">
+          <div class="cre-t-51-modal-item-content">
+            <span>Book a Table</span>Pay a small fee to reserve your discounted table. Your reservation is confirmed instantly.
+          </div>
+        </div>
+        <div class="cre-t-51-modal-list-item">
+          <div class="cre-t-51-modal-item-content">
+            <span>Enjoy 50% Off</span>Get the same great food and service for half the price.
+          </div>
         </div>
       </div>
-    </div>`;
-
-        var newContentProduct = document.querySelector(`.product-option.${testName}-product-option-review p:not(.product-price)`);
-
-        if (!document.querySelector(`.${testName}-review-product-container`)) {
-          newContentProduct.insertAdjacentHTML("beforebegin", newReviewContentHtml);
-        }
-      });
-
-      this.runAt(`.product-option.${testName}-product-option-letter p:not(.product-price)`, function () {
-        var newReviewContentHtml = `<div class="${testName}-review-letter-product-container ${testName}-letter-product-container">
-        <div class="${testName}-letter-product-wrapper">
-          <div class="${testName}-letter-product-content ${testName}-product-text-content">
-            <span class="${testName}-product-content-bold">One-time purchase per household.</span> Includes every tile needed, along with pre-cut magnets and two storage bags. Note that you can use the physical tiles, the <span class="${testName}-letter-product-content-letter">Letter Tiles App</span>, or a combination of both.
-          </div>
+    </div>
+    <div class="swiper-slide Cre_item">
+      <div class="cre-t-51-modal-lWhy_Restaurants Cre_Accordion">
+        Why Restaurants
+        <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/vector_67efae1c20173.svg">
+        First Table
+      </div>
+      <div class="cre-t-51-modal-paragraph">
+        Restaurants love First Table because it fills their empty tables and brings in new customers.
+        You'll get the <b>same great food and service</b>—no cut corners, just a win-win for everyone.
+      </div>
+      <div class="cre-t-51-modal-reviewsection">
+        <div class="cre-t-51-modal-reviewicon">
+          <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007713/group-10_67efae29ecdee.svg">
         </div>
-      </div>`;
+        <p>"The service was exceptional, and the food was top-notch even with the discount."</p>
+      </div>
+    </div>
+    <div class="swiper-slide Cre_item">
+      <div class="cre-t-51-modal-lWhy-Common-Questions">
+        <div class="Cre_heading_wuestions Cre_Accordion">Common Questions</div>
+        <div class="cre-t-51-modal-questionstab">
+          <p>Will my booking be honoured?</p>
+          <p>Yes! Your reservation is confirmed instantly and the restaurant knows you're coming.</p>
+        </div>
+        <div class="cre-t-51-modal-questionstab">
+          <p>Do restaurants limit what I can order?</p>
+          <p>The menu and any conditions are always clear upfront, so you know exactly what to expect.</p>
+        </div>
+        <div class="cre-t-51-modal-questionstab">
+          <p>Is First Table legit?</p>
+          <p>Trusted by over 2,000,000 diners and 2,500+ restaurants globally. We monitor restaurant quality and only work with reputable venues.</p>
+        </div>
+        <div class="cre-t-51-modal-faqcta">
+          <a href="https://www.firsttable.co.nz/frequently-asked-questions">See all FAQs</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- Add Pagination & Navigation if needed -->
+   
+</div>
+   <div class="cre_fixed_footer">
+      <div class="swiper-pagination"></div>
+      <div class="cre-t-51-modal-button">OK, got it</div>
+  </div>    
+      </div>
+    </div>
+  </div>
+      `;
 
-        var newContentProduct = document.querySelector(`.product-option.${testName}-product-option-letter p:not(.product-price)`);
+    // Function to inject modal into the DOM
+    function injectModal() {
+      // Only inject if it doesn't already exist
+      if (!document.querySelector(".cre-t-51-modal-container")) {
+        const modalWrapper = document.createElement('div');
+        modalWrapper.className = 'cre-t-51-modal-wrapper-container';
+        modalWrapper.innerHTML = creT13ModalContent;
+        document.body.appendChild(modalWrapper);
 
-        if (!document.querySelector(`.${testName}-letter-product-container`)) {
-          newContentProduct.insertAdjacentHTML("beforebegin", newReviewContentHtml);
+        // Initialize event listeners for the newly added modal
+        addModalEventListeners();
+
+        // Initialize Swiper if mobile view
+        if (window.innerWidth <= 768) {
+          waitForSwiper(initializeSwiper);
         }
+
+        // Add open class to show modal
+        document.body.classList.add("cre-t-51-modal-open");
+      } else {
+        // If modal already exists, just show it
+        document.body.classList.add("cre-t-51-modal-open");
+      }
+    }
+
+    // Function to remove modal from the DOM
+    function removeModal() {
+      const modalWrapper = document.querySelector('.cre-t-51-modal-wrapper-container');
+      if (modalWrapper) {
+        // First remove the open class
+        document.body.classList.remove("cre-t-51-modal-open");
+
+        // Use setTimeout to add a slight delay before removing from DOM
+        // This allows for any CSS transitions to complete
+        setTimeout(() => {
+          modalWrapper.remove();
+        }, 300);
+      }
+    }
+
+    // Add event listeners for the modal
+    function addModalEventListeners() {
+      // Close modal with X button
+      const closeButtons = document.querySelectorAll('.cre-t-51-cross, .cre-t-51-cross-mobile');
+      closeButtons.forEach(button => {
+        button.addEventListener('click', removeModal);
       });
 
-      this.live(`.${testName}-letter-product-content-letter`, "click", function () {
-        var targetElement = document.querySelector(".app-container.dx-section");
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+      // Close with overlay click
+      const overlay = document.querySelector('.cre-t-51-modal-overlay');
+      if (overlay) {
+        overlay.addEventListener('click', removeModal);
+      }
+
+      // Close with "OK, got it" button
+      const okButton = document.querySelector('.cre-t-51-modal-button');
+      if (okButton) {
+        okButton.addEventListener('click', removeModal);
+      }
+
+      // Toggle sections
+      const toggleHeaders = document.querySelectorAll('.cre-t-51-modal-list-header, .cre-t-51-modal-lWhy_Restaurants, .Cre_heading_wuestions');
+      toggleHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+          if (this.classList.contains('cre-t-51-modal-list-header')) {
+            this.classList.toggle('cre-t-51-modal-open');
+          } else if (this.classList.contains('cre-t-51-modal-lWhy_Restaurants')) {
+            this.classList.toggle('cre-t-51-Why_Restaurants');
+          } else if (this.classList.contains('Cre_heading_wuestions')) {
+            this.classList.toggle('cre-t-51-heading_wuestions');
+          }
+        });
+      });
+    }
+
+    function initializeSwiper() {
+      new Swiper(".swiperslidermain", {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        // autoHeight: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        a11y: {
+          enabled: false  // This disables aria-live and related attributes
         }
       });
+    }
 
-      var productOptionLetter = document.querySelector(`.${testName}-product-option-letter`);
-      var containerSection = document.querySelector(`.${testName}-new-product-container`);
+    // all the changes based on our targeted modal and social login present or not 
+    function updateChanges() {
+      observeSelector('[data-attribute="header-search"]', () => {
+        waitForElement(' [data-attribute="header-nav"] ,  [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]', function () {
+          var insertionDiv = document.querySelector(' [data-attribute="header-nav"]');
+          var insertionDiv2 = document.querySelector(' [users_type="member"] [data-attribute="header-search"] + [display="flex"] > [display="flex"]');
+          var creT13NewContent = document.querySelector(".cre-t-51-new-content-container");
+          var mobileselector = document.querySelector(' [data-attribute="header-search"]');
+          if ((insertionDiv || insertionDiv2 || mobileselector) && !creT13NewContent) {
+            if (window.innerWidth <= 767 && mobileselector) {
+              mobileselector.insertAdjacentHTML("beforeend", newContent);
+            } else if (insertionDiv) {
+              insertionDiv.insertAdjacentHTML("afterbegin", newContent);
+            } else if (insertionDiv2) {
+              insertionDiv2.insertAdjacentHTML("afterbegin", newContent);
+            }
+          }
+        });
+      });
 
-      if (productOptionLetter && containerSection) {
-        // Move the element to the top of the .faq section
-        containerSection.insertAdjacentElement("afterend", productOptionLetter);
+      // Add click event for "How it Works" link
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("cre-t-51-new-content-container")) {
+          injectModal();
+          window._conv_q = window._conv_q || [];
+          _conv_q.push(["triggerConversion", "100035661"]);
+        }
+
+        // Handle new account user type
+        if (e.target.classList.contains("cre-t-51-cross") ||
+          e.target.closest("div")?.classList.contains("cre-t-51-cross") ||
+          e.target.classList.contains("cre-t-51-modal-button")) {
+          if (document.body.getAttribute("user_type") === "new_account") {
+            document.body.removeAttribute("user_type");
+          }
+        }
+
+
+
+
+
+      });
+
+      mutationObserverForUseUSerType();
+      mutationObserverForNewAccount();
+    }
+
+    addScript();
+
+    /* Variation Init */
+    function init() {
+      document.body.classList.add(variation_name);
+      // initiate the observer only once 
+      if (!window.creT52bserver) {
+        window.creT52bserver = true;
+        updateChanges();
       }
-    },
-    techMultipleSectionFunction() {
-      var getElementP = document.querySelector(".dx-wide.blue .text-content p");
-      var level = "";
+    }
 
-      if (location.href.includes("spelling")) {
-        level = "Spelling";
-      } else if (location.href.includes("reading")) {
-        level = "Reading";
-      }
-
-      if (getElementP && level) {
-        getElementP.textContent = `All About ${level} makes it easy to teach multiple students! If you're teaching more than one child, you'll need to purchase an additional Student Packet and Reading Review Box for each child.`;
-      }
-    },
-
-    // Initialize the experiment
-    init() {
-      const $this = this;
-
-      $this.addClassForSpecificElement();
-      $this.addNewListingForProduct();
-      $this.addNewContentForProduct();
-      $this.addContentForProduct();
-      $this.techMultipleSectionFunction();
-
-      $this.checkTextLevelTitle();
-    },
-  },
-});
+    /* Initialise variation */
+    waitForElement("[data-attribute='header-logo']", init);
+  } catch (e) {
+    if (debug) console.log(e, "error in Test" + variation_name);
+  }
+})();
