@@ -1,0 +1,140 @@
+html body.CRE_EXP_09 .page-content p+.presenter_alt.readingPlacementTest .presenter__media,
+html body.CRE_EXP_09 .page-content>p {
+  display: none;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-htw-wrapper {
+  display: flex;
+  gap: 35px;
+  padding-bottom: 69px;
+  border-bottom: 1px solid #DDD;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-tool-content {
+  border: 1px solid #E3F1FC;
+  background: rgba(227, 241, 252, 0.30);
+  padding: 27px 55px 27px 29px;
+  display: flex;
+  align-items: self-start;
+  gap: 12px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-header-text {
+  color: #0B3E64;
+  font-family: inherit;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0.25px;
+  margin-bottom: 32px;
+  margin-top: 80px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-subheader-text {
+  color: #0B3E64;
+  font-family: inherit;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 43px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-tool-text {
+  color: #0B3E64;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-howItWorks-header {
+  color: #0B3E64;
+  font-family: inherit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  margin-top: 51px;
+  margin-bottom: 23px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-htw-step {
+  width: 50px;
+  height: 50px;
+  background: #E3F1FC;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0B3E64;
+  text-align: center;
+  font-family: inherit;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-htw-content {
+  width: 100%;
+  max-width: 270px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-htw-head {
+  color: #0B3E64;
+  font-family: inherit;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-htw-subhead {
+  color: #0B3E64;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+html body.CRE_EXP_09 .CRE_EXP_09-tool-icon {
+  padding-top: 3px;
+}
+html body.CRE_EXP_09 .readingPlacementTest h2{
+  margin-top: 69px;
+}
+
+@media screen and (max-width: 767px) {
+  html body.CRE_EXP_09 .CRE_EXP_09-htw-wrapper {
+    flex-direction: column;
+  }
+  html body.CRE_EXP_09 .CRE_EXP_09-header-text{
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+
+  html body.CRE_EXP_09 .CRE_EXP_09-tool-content{
+    padding: 12px;
+    gap: 8px;
+  }
+
+  html body.CRE_EXP_09 .CRE_EXP_09-subheader-text{
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  html body.CRE_EXP_09 .CRE_EXP_09-htw-content{
+    max-width: 100%;
+  }
+
+  
+}
