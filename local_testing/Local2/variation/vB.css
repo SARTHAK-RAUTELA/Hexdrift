@@ -431,10 +431,12 @@ html body.pro-page-updte [class*="TextInput_inputStylesRoundedBordersLeft"] {
 }
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 1280px) {
 
-  html body.pro-page-updte [class*="hero_heroInnerOffsetRight"] [class*="hero_heroTitle"] {
-    margin: 0 20px;
+  html body.SWF_T49 #intro-section .ct-section-inner-wrap .hero-image {
+    max-width: 418px;
+    height: 280px;
+    width: auto;
   }
 
 }
