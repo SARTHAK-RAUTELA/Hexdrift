@@ -1,176 +1,103 @@
 (function () {
   try {
-    /* main variables */
     var debug = 1;
-    var variation_name = "control";
+    var variation_name = "cre-t-91";
 
-    /* helper library */
-    var _$;
-    !(function (factory) {
-      _$ = factory();
-    })(function () {
-      var bm = function (s) {
-        if (typeof s === "string") {
-          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+    function waitForElement(selector, callback) {
+      var interval = setInterval(function () {
+        if (document.querySelector(selector)) {
+          clearInterval(interval);
+          callback();
         }
-        if (typeof s === "object") {
-          this.value = [s];
-        }
-      };
-      bm.prototype = {
-        eq: function (n) {
-          this.value = [this.value[n]];
-          return this;
-        },
-        each: function (fn) {
-          [].forEach.call(this.value, fn);
-          return this;
-        },
-        log: function () {
-          var items = [];
-          for (let index = 0; index < arguments.length; index++) {
-            items.push(arguments[index]);
-          }
-          console && console.log(variation_name, items);
-        },
-        addClass: function (v) {
-          var a = v.split(" ");
-          return this.each(function (i) {
-            for (var x = 0; x < a.length; x++) {
-              if (i.classList) {
-                i.classList.add(a[x]);
-              } else {
-                i.className += " " + a[x];
-              }
-            }
-          });
-        },
-        waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-          var interval = setInterval(function () {
-            if (_$(selector).value.length) {
-              clearInterval(interval);
-              trigger();
-            }
-          }, delayInterval);
-          setTimeout(function () {
-            clearInterval(interval);
-          }, delayTimeout);
-        },
-      };
-      return function (selector) {
-        return new bm(selector);
-      };
-    });
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
+    }
 
-    var helper = _$();
-
-    function live(selector, event, callback, context) {
-      /****Helper Functions****/
-      // helper for enabling IE 8 event bindings
-      function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent("on" + type, handler);
-        else el.addEventListener(type, handler);
+    function debounce(func, timeout = 1000) {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.apply(this, args);
+        }, timeout);
+      };
+    }
+    function observeSelector(selector, callback, options = {}) {
+      const document = options.document || window.document;
+      const processed = new Map();
+      if (options.timeout || options.onTimeout) {
+        throw `observeSelector options \`timeout\` and \`onTimeout\` are not yet implemented.`;
       }
-      // matches polyfill
-      this.Element &&
-        (function (ElementPrototype) {
-          ElementPrototype.matches =
-            ElementPrototype.matches ||
-            ElementPrototype.matchesSelector ||
-            ElementPrototype.webkitMatchesSelector ||
-            ElementPrototype.msMatchesSelector ||
-            function (selector) {
-              var node = this,
-                nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                i = -1;
-              while (nodes[++i] && nodes[i] != node);
-              return !!nodes[i];
-            };
-        })(Element.prototype);
-      // live binding helper using matchesSelector
-      function live(selector, event, callback, context) {
-        addEvent(context || document, event, function (e) {
-          var found,
-            el = e.target || e.srcElement;
-          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-          if (found) callback.call(el, e);
+      let obs;
+      let isDone = false;
+      const done = () => {
+        if (obs) obs.disconnect();
+        isDone = true;
+      };
+      const processElement = (el) => {
+        if (!processed.has(el)) {
+          processed.set(el, true);
+          callback(el);
+          if (options.once) {
+            done();
+            return true;
+          }
+        }
+        return false;
+      };
+      const lookForSelector = () => {
+        const elParent = document.documentElement;
+        if (elParent.matches(selector) || elParent.querySelector(selector)) {
+          const elements = elParent.querySelectorAll(selector);
+          elements.forEach((el) => processElement(el));
+        }
+      };
+      const debouncedLookForSelector = debounce(() => {
+        lookForSelector();
+      }, 100);
+      // Initial check for the selector on page load
+      lookForSelector();
+      if (!isDone) {
+        obs = new MutationObserver(() => {
+          debouncedLookForSelector();
+        });
+        obs.observe(document, {
+          attributes: false,
+          childList: true,
+          subtree: true,
         });
       }
-      live(selector, event, callback, context);
+      return done;
     }
 
-    /* Variation Init */
     function init() {
-      //helper.log("Log inside from init");
-      //_$("body").addClass(variation_name);
-
-      // ALL13 - Clicks on [Register] top-level navigation item
-      live('.navPages-item > a[aria-label="Register"]', "mousedown", function () {
-        console.log("Register goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035953"]);
-      });
-
-      // ALL13 - Clicks on [Sign in] top-level navigation item
-      live('.navPages-item > a[aria-label="Sign in"]', "mousedown", function () {
-        console.log("Sign in goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035954"]);
-      });
-
-      // ALL13 - Clicks on [About] top-level navigation item
-      live('.navPages-item > a[aria-label="About"], .CRE_EXP_13-nav-item5', "mousedown", function () {
-        console.log("About goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035955"]);
-      });
-
-      // ALL13 - Clicks on [Blog] top-level navigation item
-      live('.navPages-item > a[aria-label="Blog"]', "mousedown", function () {
-        console.log("Blog goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035956"]);
-      });
-
-      // ALL13 - Clicks on [FAQ] top-level navigation item
-      live('.navPages-item > a[aria-label="FAQ"], .CRE_EXP_13-nav-item3', "mousedown", function () {
-        console.log("FAQ goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035957"]);
-      });
-
-      // ALL13 - Clicks on [Free Resources] top-level navigation item
-      live('.navPages-item > a[aria-label="Free Resources"], .CRE_EXP_13-nav-item4', "mousedown", function () {
-        console.log("Free Resources goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035958"]);
-      });
-
-      // ALL13 - Clicks on [Shop All Products] top-level navigation item
-      live('.navPages-item > a[aria-label="Shop All Products"]', "mousedown", function () {
-        console.log("Shop All Products goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035959"]);
-      });
-
-      // ALL13 - Clicks on [Programs] top-level navigation item
-      live('.navPages-item > a[aria-label="Programs"], .CRE_EXP_13-nav-item1', "mousedown", function () {
-        console.log("Programs goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035961"]);
-      });
-
-      // ALL13 - Clicks on any top level navigation item
-      live(".navPages-list .navPages-item > .navPages-action, .CRE_EXP_13-nav-item", "mousedown", function () {
-        console.log("Any top level navigation goal should trigger");
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100035962"]);
+      document.body.classList.add(variation_name);
+      waitForElement('[data-attribute="restaurant-list-item"] img', function () {
+        const TARGET_SIZE = "220x220";
+        const NEW_SIZE = "800x800";
+        const images = document.querySelectorAll('[data-attribute="restaurant-list-item"] img');
+        images.forEach((img) => {
+          const item = img.closest('[data-attribute="restaurant-list-item"]');
+          if (!item || item.classList.contains("cre-t-269-image-updated")) return;
+          img.src = img.src.includes(TARGET_SIZE) ? img.src.replaceAll(TARGET_SIZE, NEW_SIZE) : img.src;
+          img.srcset = img.srcset?.includes(TARGET_SIZE) ? img.srcset.replaceAll(TARGET_SIZE, NEW_SIZE) : img.srcset;
+          item.classList.add("cre-t-269-image-updated");
+        });
       });
     }
-
-    /* Initialise variation */
-    helper.waitForElement("body", init, 50, 5000);
+    waitForElement("body", function () {
+      if (!window.cre91EventHandler) {
+        setTimeout(function () {
+          observeSelector('[data-attribute="restaurant-list-item"]', function () {
+            init();
+          });
+        }, 2000);
+        window.cre91EventHandler = true;
+      }
+    });
   } catch (e) {
-    if (debug) console.log(e, "error in Test" + variation_name);
+    if (debug) console.log(e, "Error in Test" + variation_name, e);
   }
 })();

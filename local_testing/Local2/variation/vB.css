@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+    html body [data-attribute="restaurant-list-item"] > div > div.group {
+        grid-template-columns: 1fr;
+    }
+
+    html body [data-attribute="restaurant-list-item"] > div > div.group > div:first-child {
+        display: flex;
+        width: 100%;
+    }
+
+    html body [data-attribute="restaurant-list-item"] > div > div.group > div:first-child img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 234px;
+        object-position: center;
+    }
+
+    html body [data-attribute="restaurant-list-item"] > div > div.group > div:first-child img ~ div.inline-flex {
+        top: 8px;
+        bottom: unset;
+        right: 9px;
+    }
+
+    html body [data-attribute="restaurant-list-item"] > div > div.group > .col-span-2 {
+        grid-column: unset;
+    }
+
+    html body [data-attribute="restaurant-list-item"]  button[title="Add to favourites"] {
+        width: 22px;
+        height: 20px;
+        display: flex;
+        margin: 0;
+        top: 14px;
+        left: 13px;
+    }
+}
