@@ -722,3 +722,9 @@ html body.pro-page-updte [class*="TextInput_inputStylesRoundedBordersLeft"] {
 .thumbtack-section-variation~*:last-child {
     display: block;
 }
+
+@media (max-width: 970px) and (min-width: 750px) {
+    html body.pro-page-updte .thumbtack-section-variation .calculator form {
+        padding: 0 20px;
+    }
+}
