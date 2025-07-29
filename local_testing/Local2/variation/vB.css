@@ -728,3 +728,9 @@ html body.pro-page-updte [class*="TextInput_inputStylesRoundedBordersLeft"] {
         padding: 0 20px;
     }
 }
+
+
+html body.pro-page-updte .thumbtack-section.thumbtack-section-variation {
+    padding-top: 60px;
+    padding-bottom: 0;
+}
