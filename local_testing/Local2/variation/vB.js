@@ -1,113 +1,139 @@
-(function () {
-    try {
-        /* Main variables */
-        var debug = 0;
-        var variation_name = "TT-170"; // Variation name for tracking
+window.expLibraryDataQueue = window.expLibraryDataQueue || [];
+window.expLibraryDataQueue.push({
+  CRE_EXP_20: {
+    var: {},
+    enable_DEBUG: true,
+    initOnce: false,
+    localDevelopment: true,
 
-        /* All Pure helper functions */
+    init() {
+      const $this = this;
+      const testName = $this.__testName;
 
-        // Function to wait for an element to appear in the DOM
-        function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-            var interval = setInterval(function () {
-                // Check if the element exists and trigger callback
-                if (document && document.querySelector(selector) && document.querySelectorAll(selector).length > 0) {
-                    clearInterval(interval);
-                    trigger(); // Call the trigger function once the element is found
-                }
-            }, delayInterval); // Check every delayInterval milliseconds
-            setTimeout(function () {
-                clearInterval(interval); // Stop checking after delayTimeout
-            }, delayTimeout);
-        }
+      // -------------------------------
+      // Card Data
+      // -------------------------------
+      const cardData = [
+        {
+          id: 1,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image_688c9ce58e095.png",
+          alt: "notebook",
+          title: "Easy to teach.",
+          title2: "Easy to learn.",
+          content: "Open-and-go lessons. No prep needed. Simply follow the steps.",
+        },
+        {
+          id: 2,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-6_688c9cb4f2ad7.png",
+          alt: "todo",
+          title: "No teaching",
+          title2: "experience needed",
+          content: "Scripted guidance makes it easy—even if you're new to homeschooling.",
+        },
+        {
+          id: 3,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-1_688c9d01cb7a6.png",
+          alt: "certificate",
+          title: "Multisensory, hands-",
+          title2: "on learning",
+          content: "Engages all learning styles with activities that stick.",
+        },
+        {
+          id: 4,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-1_688c9d23d9c35.png",
+          alt: "rank",
+          title: "Mastery over",
+          title2: "memorization",
+          content: "Your child learns one concept at a time—no gaps, no guessing.",
+        },
+        {
+          id: 5,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-4_688c9d8b5c30d.png",
+          alt: "rank",
+          title: "Real progress in just",
+          title2: "20 minutes a day",
+          content: "Designed for short attention spans and busy family life.",
+        },
+        {
+          id: 6,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-2_688c9d739f4b4.png",
+          alt: "certificate",
+          title: "Screen-free by",
+          title2: "design",
+          content: "Built for real connection. Learn offline, with optional app supplement.",
+        },
+        {
+          id: 7,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-3_688c9d601b0c1.png",
+          alt: "notebook",
+          title: "Guided by the Orton-",
+          title2: "Gillingham method",
+          content: "A trusted, research-based method proven to help all learners.",
+        },
+        {
+          id: 8,
+          imageUrl: "https://cdn-3.convertexperiments.com/uf/10007679/10007798/image-2_688c9d3ba4351.png",
+          alt: "todo",
+          title: "12-month returns &",
+          title2: "lifetime support",
+          content: "Not the right fit? Send it back. Need help? Call, email, or message anytime.",
+        },
+      ];
 
-        // Function to add event listeners that work across all browsers (including IE 8)
-        function live(selector, event, callback, context) {
-            // Helper function to add event listeners for IE 8 and other browsers
-            function addEvent(el, type, handler) {
-                if (el.attachEvent) el.attachEvent("on" + type, handler); // IE 8
-                else el.addEventListener(type, handler); // Other browsers
+      // -------------------------------
+      // Generate Cards HTML 
+      // -------------------------------
+      const cardsHtml = cardData.reduce((html, card) => {
+        return (
+          html +
+          `
+          <div class="${testName}-card card${card.id}">
+            <div class="${testName}-card-image-wrapper">
+              <img src="${card.imageUrl}" alt="${card.alt}" class="${testName}-card-image">
+            </div>
+            <div class="${testName}-card-content-header">
+              <div>${card.title}</div>
+              <div>${card.title2}</div>
+            </div>
+            <div class="${testName}-card-content">${card.content}</div>
+          </div>
+        `
+        );
+      }, "");
+
+      const heroNewSectionHtml = `
+        <div class="${testName}-container">
+          <div class="${testName}-wrapper">
+            ${cardsHtml}
+          </div>
+        </div>
+      `;
+
+      // -------------------------------
+      // New Section Insertion
+      // -------------------------------
+      $this.runAt(`html body [data-layout-name="Layout"] div>div>p`, () => {
+        const paragraphs = document.querySelectorAll('html body [data-layout-name="Layout"] div>div>p');
+
+        for (let i = 0; i < paragraphs.length; i++) {
+          const text = paragraphs[i].textContent.trim().toLowerCase();
+
+          if (text.includes("lifetime")) {
+            const grabbedDiv = paragraphs[i].closest('div[data-layout-name="Layout"]');
+
+            if (grabbedDiv) {
+              grabbedDiv.classList.add(`${testName}-hero-section`);
+
+              const alreadyInserted = grabbedDiv.querySelector(`.${testName}-container`);
+              if (!alreadyInserted) {
+                grabbedDiv.insertAdjacentHTML("afterend", heroNewSectionHtml);
+              }
             }
 
-            // Polyfill for matches method to ensure it works across browsers
-            this &&
-                this.Element &&
-                (function (ElementPrototype) {
-                    ElementPrototype.matches =
-                        ElementPrototype.matches ||
-                        ElementPrototype.matchesSelector ||
-                        ElementPrototype.webkitMatchesSelector ||
-                        ElementPrototype.msMatchesSelector ||
-                        function (selector) {
-                            var node = this,
-                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                                i = -1;
-                            while (nodes[++i] && nodes[i] != node);
-                            return !!nodes[i];
-                        };
-                })(Element.prototype);
-
-            // Live binding helper using matchesSelector
-            function live(selector, event, callback, context) {
-                addEvent(context || document, event, function (e) {
-                    var found,
-                        el = e.target || e.srcElement;
-                    // Loop through parent elements to find a match
-                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-                    if (found) callback.call(el, e); // Call the callback if a match is found
-                });
-            }
-            live(selector, event, callback, context); // Bind the event
+            break;
+          }
         }
-        
-
-        /* Variation Init */
-        function init() {
-            // Add variation class to the body
-            document.querySelector("body").classList.add(variation_name);
-            
-          
-            const navElement = document.querySelector('[aria-label="Open Thumbtack navigation"]');
-
-            // Check if navElement exists and Sign up button is not already added
-            if (navElement && !document.querySelector('.ttsignupelement')) {
-              const signUpHTML = `
-                <a href="/register" class="ttsignupelement links_linkBarThemedLink__pihFR">
-                  <button class="themed_themedButton__UKQVj themed_themedButtonRoundedBordersLeft___blLq themed_themedButtonRoundedBordersRight__d0G5C themed_themedButtonThemePrimary__pd6_C themed_themedButtonWidthAuto__NPxnl" type="button">
-                    <span class="themed_flexWrapper__MQCSr themed_flexWrapperSizeSmall__gGusi">Sign up</span>
-                  </button>
-                </a>
-              `;
-              navElement.insertAdjacentHTML("afterend", signUpHTML);
-            }
-          
-        }
-        
-        /* Initialise variation */
-        function thumbtackTest144(list, observer) {
-            list.getEntries().forEach((entry) => {
-                if (entry.entryType === "mark" && entry.name === "afterHydrate") {
-                    observer.disconnect(); // Stop observing
-                    clearInterval(test144Interval); // Clear interval
-                    waitForElement("body", init, 50, 15000); // Initialize the variation after hydration
-                    window.isHydrated = true;
-                }
-            });
-        }
-
-        // Check hydration status and initiate
-        if (!window.isHydrated) {
-            var test144Interval = setInterval(function () {
-                waitForElement("body", init, 50, 15000); // Wait for body to load
-            }, 50);
-            setTimeout(function () {
-                clearInterval(test144Interval); // Stop the interval after 3 seconds
-            }, 3000);
-            const observer = new PerformanceObserver(thumbtackTest144);
-            observer.observe({ entryTypes: ["mark"] }); // Start observing performance marks
-        } else {
-            waitForElement("body", init, 50, 15000); // If already hydrated, initialize immediately
-        }
-    } catch (e) {
-        if (debug) console.log(e, "error in Test" + variation_name); // Log errors if debug is enabled
-    }
-})();
+      });
+    },
+  },
+});
