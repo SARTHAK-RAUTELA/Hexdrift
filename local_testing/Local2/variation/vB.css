@@ -1,17 +1,17 @@
-Page Base URL
-https://www.thumbtack.com/pro?coBrand=gosite
-https://www.thumbtack.com/pro?coBrand=workiz
-https://www.thumbtack.com/pro?coBrand=clienttether
-https://www.thumbtack.com/pro?coBrand=jobber
-https://www.thumbtack.com/pro?coBrand=hatch
-https://www.thumbtack.com/pro?coBrand=turbotax
-https://www.thumbtack.com/pro?coBrand=wisetack
-https://www.thumbtack.com/pro?coBrand=housecallpro
-https://www.thumbtack.com/pro?coBrand=oncue
-https://www.thumbtack.com/pro?coBrand=signpost
-https://www.thumbtack.com/pro?coBrand=toolsey
-https://www.thumbtack.com/pro?coBrand=networkleads
-https://www.thumbtack.com/pro?utm_medium=partnership
-https://www.thumbtack.com/pro?utm_medium=partnership
-https://www.thumbtack.com/pro?utm_medium=partnership
+html body.TT-170 [class*="app-upsell-banner-shared_fadeIn"] {
+    bottom: 0;
+    top: inherit !important;
+    height: auto;
+}
 
+html body.TT-170.logged_in_users .ttsignupelement {
+    display: none;
+}
+
+
+html body.TT-170 .ttsignupelement {
+    position: absolute;
+    right: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+}
