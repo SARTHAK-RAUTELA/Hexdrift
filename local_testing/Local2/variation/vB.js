@@ -129,7 +129,11 @@ const parentSelectors = ['[data-path="/orlando/tickets/"] .product-catalog-card_
     '[data-path="/orlando/events/howl-o-scream/tickets/"] .product-catalog-card__order-button',
     '[data-path="/san-diego/events/howl-o-scream/tickets/"] .product-placement-detail-modal__cart-button',
     '[data-path="/san-diego/events/howl-o-scream/tickets/"] .product-placement-card__button.button-secondary',
-    '[data-path="/orlando/events/howl-o-scream/tickets/"] .s-curve-card__booking-cta [href*="https://res.vacations.seaworld.com/search/default.aspx"]'
+    '[data-path="/orlando/events/howl-o-scream/tickets/"] .s-curve-card__booking-cta [href*="https://res.vacations.seaworld.com/search/default.aspx"]',
+    '[data-path*="/san-diego/tickets/fun-card/"] .mini-cart__checkout-btn',
+    '[data-path*="/san-diego/tickets/special-offers/"] .mini-cart__checkout-btn',
+    '[data-path*="/san-diego/events/howl-o-scream/tickets/"] .mini-cart__checkout-btn',
+    '[data-path*="/orlando/events/howl-o-scream/tickets/"] .mini-cart__checkout-btn'
 ];
 
 // Special selectors that should trigger console.log
@@ -150,6 +154,7 @@ const specialSelectors = [
     '[data-path="/san-diego/tickets/special-offers/"] .product-catalog-card__order-button',
     '[data-path="/san-diego/events/howl-o-scream/tickets/"] .product-placement-detail-modal__cart-button',
     '[data-path="/orlando/events/howl-o-scream/tickets/"] .product-catalog-card__order-button'
+
 ];
 
 // Listen for clicks on the document
