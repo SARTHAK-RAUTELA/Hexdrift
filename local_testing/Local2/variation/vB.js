@@ -22,6 +22,38 @@ window.expLibraryDataQueue.push({
         });
       });
     
+
+      this.runAt('body[data-path^="/all-about"] .product-details-section .product-option .product-option-text h4 a', () => {
+        const links = document.querySelectorAll(
+          'body[data-path^="/all-about"] .product-details-section .product-option .product-option-text h4 a'
+        );
+      
+        links.forEach(link => {
+          // Agar › already nahi hai, tabhi add karein
+          if (!link.textContent.trim().endsWith("›")) {
+            link.textContent = link.textContent.trim() + " ›";
+          }
+        });
+      });
+
+      this.runAt('html body[data-path^="/tiles-and-boxes"]  .product-details-section .product-option .product-option-text h4 a', () => {
+        const links = document.querySelectorAll(
+          'html body[data-path^="/tiles-and-boxes"]  .product-details-section .product-option .product-option-text h4 a'
+        );
+      
+        links.forEach(link => {
+          // Agar › already nahi hai, tabhi add karein
+          if (!link.textContent.trim().endsWith("›")) {
+            link.textContent = link.textContent.trim() + " ›";
+          }
+        });
+      });
+
+
+      
+
+      
+
     },
    
     // Initialize the experiment
