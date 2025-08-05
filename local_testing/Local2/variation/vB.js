@@ -1,44 +1,56 @@
-// Test-01
-window.expLibraryDataQueue = window.expLibraryDataQueue || [];
-window.expLibraryDataQueue.push({
-  CRE_EXP_25: {
-    var: {},
-    enable_DEBUG: true, // For debugging
-    initOnce: false, // False if events need to be added multiple times
-    localDevelopment: true,
+(function () {
+    try {
+        var debug = 1;
 
-    changeBtnText() {
-      // Add arrow only if not already present
+        function live(selector, event, callback, context) {
+            // helper for enabling IE 8 event bindings
+            function addEvent(el, type, handler) {
+                if (el.attachEvent) el.attachEvent("on" + type, handler);
+                else el.addEventListener(type, handler);
+            }
+            // matches polyfill
+            this &&
+                this.Element &&
+                (function (ElementPrototype) {
+                    ElementPrototype.matches =
+                        ElementPrototype.matches ||
+                        ElementPrototype.matchesSelector ||
+                        ElementPrototype.webkitMatchesSelector ||
+                        ElementPrototype.msMatchesSelector ||
+                        function (selector) {
+                            var node = this,
+                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                                i = -1;
+                            while (nodes[++i] && nodes[i] != node);
+                            return !!nodes[i];
+                        };
+                })(Element.prototype);
+            // live binding helper using matchesSelector
+            function live(selector, event, callback, context) {
+                addEvent(context || document, event, function (e) {
+                    var found,
+                        el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(el, e);
+                });
+            }
+            live(selector, event, callback, context);
+        }
 
-      this.runAt('body[data-path^="/all-about"] .product-details-section .product-option .product-option-text h4 a', () => {
-        const links = document.querySelectorAll(
-          'body[data-path^="/all-about"] .product-details-section .product-option .product-option-text h4 a'
-        );
+        live(".add-to-cart-button.buy-now-btn", 'click', function () {
+            const quantites = document.querySelectorAll(".product-details-section .product-option .product-option-text + .quantity-selection .quantity-number");
 
-        links.forEach(link => {
-          if (!link.textContent.trim().endsWith("›")) {
-            link.textContent = link.textContent.trim() + " ›";
-          }
-        });
-      });
-
-      this.runAt('html body[data-path^="/tiles-and-boxes"] .product-details-section .product-option .product-option-text h4 a', () => {
-        const links = document.querySelectorAll(
-          'html body[data-path^="/tiles-and-boxes"] .product-details-section .product-option .product-option-text h4 a'
-        );
-
-        links.forEach(link => {
-          if (!link.textContent.trim().endsWith("›")) {
-            link.textContent = link.textContent.trim() + " ›";
-          }
-        });
-      });
-    },
-
-    // Initialize the experiment
-    init() {
-      const $this = this;
-      $this.changeBtnText();
-    },
-  },
-});
+            for (let quantity of quantites) {
+                let value = parseInt(quantity.value) || 0;
+                if (value > 0) {
+                    // fire goal
+                    window._conv_q = window._conv_q || [];
+                    _conv_q.push(["triggerConversion", "100036329"]);
+                    return;
+                }
+            }
+        })
+    } catch (e) {
+        if (debug) console.log(e, "Error in Global JavaScript");
+    }
+})();
