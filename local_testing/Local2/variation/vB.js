@@ -1,56 +1,74 @@
 (function () {
-    try {
-        var debug = 1;
+  try {
+    /* main variables */
+    var debug = 1;
+    var variation_name = "ssc-01";
 
-        function live(selector, event, callback, context) {
-            // helper for enabling IE 8 event bindings
-            function addEvent(el, type, handler) {
-                if (el.attachEvent) el.attachEvent("on" + type, handler);
-                else el.addEventListener(type, handler);
-            }
-            // matches polyfill
-            this &&
-                this.Element &&
-                (function (ElementPrototype) {
-                    ElementPrototype.matches =
-                        ElementPrototype.matches ||
-                        ElementPrototype.matchesSelector ||
-                        ElementPrototype.webkitMatchesSelector ||
-                        ElementPrototype.msMatchesSelector ||
-                        function (selector) {
-                            var node = this,
-                                nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                                i = -1;
-                            while (nodes[++i] && nodes[i] != node);
-                            return !!nodes[i];
-                        };
-                })(Element.prototype);
-            // live binding helper using matchesSelector
-            function live(selector, event, callback, context) {
-                addEvent(context || document, event, function (e) {
-                    var found,
-                        el = e.target || e.srcElement;
-                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-                    if (found) callback.call(el, e);
-                });
-            }
-            live(selector, event, callback, context);
+    function waitForElement(selector, trigger) {
+      var interval = setInterval(function () {
+        if (
+          document &&
+          document.querySelector(selector) &&
+          document.querySelectorAll(selector).length > 0
+        ) {
+          clearInterval(interval);
+          trigger();
         }
-
-        live(".add-to-cart-button.buy-now-btn", 'click', function () {
-            const quantites = document.querySelectorAll(".product-details-section .product-option .product-option-text + .quantity-selection .quantity-number");
-
-            for (let quantity of quantites) {
-                let value = parseInt(quantity.value) || 0;
-                if (value > 0) {
-                    // fire goal
-                    window._conv_q = window._conv_q || [];
-                    _conv_q.push(["triggerConversion", "100036329"]);
-                    return;
-                }
-            }
-        })
-    } catch (e) {
-        if (debug) console.log(e, "Error in Global JavaScript");
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
     }
+
+    function getFirstWordBeforeComma(input) {
+      const match = input.match(/^(\w+),/);
+      return match ? match[1] : null;
+    }
+
+    function init() {
+
+      // Changing the healine text--------
+      waitForElement('#step-payments >h2', function () {
+        let currentText = document.querySelector('#step-payments >h2').textContent;
+        let newText = getFirstWordBeforeComma(currentText);
+        document.querySelector('#step-payments >h2').textContent = newText + ", we’ve verified your identity!"
+      })
+
+      waitForElement('#step-payments  form h2', function () {
+        document.querySelector('#step-payments  form h2').innerHTML = 'Unlock all 3 credit scores right now—for just $1';
+      })
+
+      waitForElement('#step-payments  form h2 + div', function () {
+        document.querySelector('#step-payments  form h2 + div').innerHTML = 'This $1 <b>refundable</b> processing fee helps to verify your identity and prevent fraud.'
+      })
+
+      waitForElement('#step-payments  form h2 + div + div >div span', function () {
+        document.querySelectorAll('#step-payments  form h2 + div + div >div span').forEach(function (bullet, index) {
+          if (index == 0) {
+            bullet.innerHTML = '<b>Instant access</b> to all 3 bureau reports';
+          } else if (index == 1) {
+            bullet.innerHTML = '<b>Only $1 today</b>. No hidden fees.';
+          } else {
+            bullet.innerHTML = '<b>No impact</b> on your credit score';
+          }
+        })
+      })
+
+      waitForElement('#step-payments  form h2 + div + div +div>span', function () {
+        document.querySelector('#step-payments  form h2 + div + div +div>span').innerHTML = 'Secure, encrypted payment';
+      })
+
+      waitForElement('#step-payments #btn-submit', function () {
+        if (!document.querySelector('.cre-01-trustpilot-logo')) {
+          document.querySelector('#step-payments #btn-submit').insertAdjacentHTML('afterend', '<img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/trustpilot-logo_6889adb106718.svg" class="cre-01-trustpilot-logo">')
+        }
+      })
+    }
+
+    waitForElement('html body[data-funnel-step="payments"]', init)
+
+
+  } catch (e) {
+    if (debug) console.log(e, "error in Test" + variation_name);
+  }
 })();
