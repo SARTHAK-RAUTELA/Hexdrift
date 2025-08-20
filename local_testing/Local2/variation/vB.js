@@ -37,11 +37,4 @@ https://www.thumbtack.com/k/affordable-limousine-services/near-me?QA=tt_City_Nam
 https://www.thumbtack.com/k/local-movers/near-me?QA=tt_City_Name
 https://www.thumbtack.com/k/swimming-pool-removal/near-me?QA=tt_City_Name
 https://www.thumbtack.com/k/hedge-trimming-services/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/porches/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/career-coach/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/interior-designers/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/microwave-installation/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/ceiling-fan-install/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/dressmakers/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/leaf-removal/near-me?QA=tt_City_Name
-https://www.thumbtack.com/k/lawn-mower-repairs/near-me?QA=tt_City_Name
+https:/
