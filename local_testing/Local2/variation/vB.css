@@ -3,6 +3,7 @@
 [data-funnel-step="registration-name"].ssc-08 .trustpilot-widget iframe,
 [data-funnel-step="registration-address"].ssc-08 .trustpilot-widget iframe,
 [data-funnel-step="registration-email"].ssc-08 .trustpilot-widget iframe,
+[data-funnel-step="auth-questions"].ssc-08 .trustpilot-widget iframe,
 [data-funnel-step="identity-verification"].ssc-08 .trustpilot-widget iframe {
   position: relative;
   width: 100%;
@@ -16,6 +17,7 @@
 [data-funnel-step="registration-name"].ssc-08 .bg-white .navbar>div:first-child,
 [data-funnel-step="registration-address"].ssc-08 .bg-white .navbar>div:first-child,
 [data-funnel-step="registration-email"].ssc-08 .bg-white .navbar>div:first-child,
+[data-funnel-step="auth-questions"].ssc-08 .bg-white .navbar>div:first-child,
 [data-funnel-step="identity-verification"].ssc-08 .bg-white .navbar>div:first-child {
   display: flex;
 
@@ -28,6 +30,7 @@
 [data-funnel-step="registration-name"].ssc-08 .trustpilot-widget,
 [data-funnel-step="registration-address"].ssc-08 .trustpilot-widget,
 [data-funnel-step="registration-email"].ssc-08 .trustpilot-widget,
+[data-funnel-step="auth-questions"].ssc-08 .trustpilot-widget,
 [data-funnel-step="identity-verification"].ssc-08 .trustpilot-widget {
   position: relative;
   width: 138px !important;
@@ -38,6 +41,7 @@
 [data-funnel-step="registration-name"].ssc-08 [style="top: 60px;"],
 [data-funnel-step="registration-address"].ssc-08 [style="top: 60px;"],
 [data-funnel-step="registration-email"].ssc-08 [style="top: 60px;"],
+[data-funnel-step="auth-questions"].ssc-08 [style="top: 60px;"],
 [data-funnel-step="identity-verification"].ssc-08 [style="top: 60px;"] {
   top: 90px !important;
 }
@@ -46,6 +50,7 @@
 [data-funnel-step="registration-name"].ssc-08 .tp-widget-businessinfo,
 [data-funnel-step="registration-address"].ssc-08 .tp-widget-businessinfo,
 [data-funnel-step="registration-email"].ssc-08 .tp-widget-businessinfo,
+[data-funnel-step="auth-questions"].ssc-08 .tp-widget-businessinfo,
 [data-funnel-step="identity-verification"].ssc-08 .tp-widget-businessinfo {
   font-size: 6px;
 
@@ -55,6 +60,7 @@
 [data-funnel-step="registration-name"].ssc-08 .navbar [alt="Standard Scores"],
 [data-funnel-step="registration-address"].ssc-08 .navbar [alt="Standard Scores"],
 [data-funnel-step="registration-email"].ssc-08 .navbar [alt="Standard Scores"],
+[data-funnel-step="auth-questions"].ssc-08 .navbar [alt="Standard Scores"],
 [data-funnel-step="identity-verification"].ssc-08 .navbar [alt="Standard Scores"] {
   margin-top: 0;
 }
@@ -63,6 +69,7 @@
 [data-funnel-step="registration-name"].ssc-08 .navbar,
 [data-funnel-step="registration-address"].ssc-08 .navbar,
 [data-funnel-step="registration-email"].ssc-08 .navbar,
+[data-funnel-step="auth-questions"].ssc-08 .navbar,
 [data-funnel-step="identity-verification"].ssc-08 .navbar {
   padding-top: 3px;
 }
@@ -73,6 +80,7 @@
   [data-funnel-step="registration-name"].ssc-08 .bg-white .navbar>div:first-child,
   [data-funnel-step="registration-address"].ssc-08 .bg-white .navbar>div:first-child,
   [data-funnel-step="registration-email"].ssc-08 .bg-white .navbar>div:first-child,
+  [data-funnel-step="auth-questions"].ssc-08 .bg-white .navbar>div:first-child,
   [data-funnel-step="identity-verification"].ssc-08 .bg-white .navbar>div:first-child {
     padding: 0 12px;
   }
@@ -84,36 +92,42 @@
   [data-funnel-step="registration-name"].ssc-08 .navbar [alt="Standard Scores"],
   [data-funnel-step="registration-address"].ssc-08 .navbar [alt="Standard Scores"],
   [data-funnel-step="registration-email"].ssc-08 .navbar [alt="Standard Scores"],
+  [data-funnel-step="auth-questions"].ssc-08 .navbar [alt="Standard Scores"],
   [data-funnel-step="identity-verification"].ssc-08 .navbar [alt="Standard Scores"] {
     max-width: 178px;
   }
 
-  [data-funnel-step="payments"].ssc-08.Cre_logout-active [style="top: 60px;"],
-  [data-funnel-step="registration-name"].ssc-08.Cre_logout-active [style="top: 60px;"],
-  [data-funnel-step="registration-address"].ssc-08.Cre_logout-active [style="top: 60px;"],
-  [data-funnel-step="registration-email"].ssc-08.Cre_logout-active [style="top: 60px;"],
-  [data-funnel-step="identity-verification"].ssc-08.Cre_logout-active [style="top: 60px;"] {
-    top: 60px !important;
-  }
+
 
   [data-funnel-step="payments"].ssc-08.Cre_logout-active .navbar,
   [data-funnel-step="registration-name"].ssc-08.Cre_logout-active .navbar,
   [data-funnel-step="registration-address"].ssc-08.Cre_logout-active .navbar,
   [data-funnel-step="registration-email"].ssc-08.Cre_logout-active .navbar,
+  [data-funnel-step="auth-questions"].ssc-08.Cre_logout-active .navbar,
   [data-funnel-step="identity-verification"].ssc-08.Cre_logout-active .navbar {
     padding-top: 0.75rem;
   }
 
 }
 
-[data-funnel-step="payments"].ssc-08 .ssc-08 .cre_tp-widget-businessinfo,
+[data-funnel-step="payments"].ssc-08 .cre_tp-widget-businessinfo,
 [data-funnel-step="registration-name"].ssc-08 .cre_tp-widget-businessinfo,
 [data-funnel-step="registration-address"].ssc-08 .cre_tp-widget-businessinfo,
 [data-funnel-step="registration-email"].ssc-08 .cre_tp-widget-businessinfo,
+[data-funnel-step="auth-questions"].ssc-08 .cre_tp-widget-businessinfo,
 [data-funnel-step="identity-verification"].ssc-08 .cre_tp-widget-businessinfo {
   display: block;
 }
 
 .cre_tp-widget-businessinfo {
   display: none;
+}
+
+[data-funnel-step="payments"].ssc-08.Cre_logout-active [style="top: 60px;"],
+[data-funnel-step="registration-name"].ssc-08.Cre_logout-active [style="top: 60px;"],
+[data-funnel-step="registration-address"].ssc-08.Cre_logout-active [style="top: 60px;"],
+[data-funnel-step="registration-email"].ssc-08.Cre_logout-active [style="top: 60px;"],
+[data-funnel-step="auth-questions"].ssc-08.Cre_logout-active [style="top: 60px;"],
+[data-funnel-step="identity-verification"].ssc-08.Cre_logout-active [style="top: 60px;"] {
+  top: 60px !important;
 }
