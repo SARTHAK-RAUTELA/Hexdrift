@@ -1,187 +1,169 @@
-@media screen and (max-width:768px) {
+.CRE_EXP_22-bundle-active .product-price {
+  display: none;
+}
 
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+div+p,
-    html body[data-funnel-step="payments"] #step-payments .cre-13-trustpilot-logo+div {
-        display: none !important;
-    }
+/* Tab Container */
+.CRE_EXP_22-tab-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-    html body[data-funnel-step="payments"] #step-payments>h2 {
-        color: #13143A;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 26.6px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-    }
+/* Tab Cursor */
+.tab-title {
+  cursor: pointer;
+  font-family: Roboto;
+}
 
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+div span {
-        color: #13143A;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 29.6px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-    }
+/* Bundle Info Styles */
+.CRE_EXP_22-bundle-info {
+  display: block;
+}
 
+.CRE_EXP_22-bundle-paragraph {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #666666;
+  margin: 10px 0;
+  line-height: 1.4;
+}
 
-    html body[data-funnel-step="payments"] #step-payments form h2+div {
-        font-weight: 500;
-        margin-bottom: 18px;
-        line-height: 24px;
-    }
+.CRE_EXP_22-total-display {
+  text-align: left;
+  display: block;
+  margin-top: 10px;
+}
 
-    html body[data-funnel-step="payments"] #step-payments form h2 {
-        font-size: 29px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
+.CRE_EXP_22-total-amount {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0B3E64;
+}
 
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div>div span b {
-        font-weight: 700;
-    }
-
-    html body[data-funnel-step="payments"] #step-payments .cre-13-trustpilot-logo+div+div {
-        color: rgba(75, 75, 128, 0.65);
-    }
-
-    html body[data-funnel-step="payments"] #step-payments #btn-submit {
-        padding: 23px 26px;
-    }
-
-    html body[data-funnel-step="payments"] .cre-13-trustpilot-logo {
-        margin: 0 auto;
-        margin-bottom: 2.25rem;
-        margin-top: 1.25rem;
-    }
-
-    html body[data-funnel-step="payments"] form>div h2+div+div+div {
-        margin-top: 30px;
-    }
-
-    html body form>div h2+div+div .bg-green-dark+span {
-        font-size: 17x;
-        font-style: normal;
-        line-height: 24px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        font-weight: 500;
-    }
-
-    html body[data-funnel-step="payments"] form>div h2+div+div+div>div img {
-        display: none;
-    }
-
-    html body[data-funnel-step="payments"] form>div h2+div+div+div>div {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2223%22%20viewBox%3D%220%200%2018%2023%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M9%2023C6.39375%2022.3292%204.24219%2020.8006%202.54531%2018.4144C0.848437%2016.0281%200%2013.3783%200%2010.465V3.45L9%200L18%203.45V10.465C18%2013.3783%2017.1516%2016.0281%2015.4547%2018.4144C13.7578%2020.8006%2011.6062%2022.3292%209%2023ZM6.75%2016.1H11.25C11.5687%2016.1%2011.8359%2015.9898%2012.0516%2015.7694C12.2672%2015.549%2012.375%2015.2758%2012.375%2014.95V11.5C12.375%2011.1742%2012.2672%2010.901%2012.0516%2010.6806C11.8359%2010.4602%2011.5687%2010.35%2011.25%2010.35V9.2C11.25%208.5675%2011.0297%208.02604%2010.5891%207.57562C10.1484%207.12521%209.61875%206.9%209%206.9C8.38125%206.9%207.85156%207.12521%207.41094%207.57562C6.97031%208.02604%206.75%208.5675%206.75%209.2V10.35C6.43125%2010.35%206.16406%2010.4602%205.94844%2010.6806C5.73281%2010.901%205.625%2011.1742%205.625%2011.5V14.95C5.625%2015.2758%205.73281%2015.549%205.94844%2015.7694C6.16406%2015.9898%206.43125%2016.1%206.75%2016.1ZM7.875%2010.35V9.2C7.875%208.87417%207.98281%208.60104%208.19844%208.38062C8.41406%208.16021%208.68125%208.05%209%208.05C9.31875%208.05%209.58594%208.16021%209.80156%208.38062C10.0172%208.60104%2010.125%208.87417%2010.125%209.2V10.35H7.875Z%22%20fill%3D%22%23228BE6%22%2F%3E%3C%2Fsvg%3E");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 20px;
-    }
-
-    html body[data-funnel-step="payments"] form div>h2+div+div .bg-green-dark {
-        background: url(https://cdn-3.convertexperiments.com/uf/10007679/10007821/checkmark_6895dda1105b1.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 20px;
-    }
-
-    html body[data-funnel-step="payments"] form div>h2+div+div .bg-green-dark img {
-        display: none !important;
-    }
+/* .CRE_EXP_22-total-amount::before {
+  content: 'Total: ';
+  font-weight: 400;
+  color: #666666;
+} */
 
 
-    html body[data-funnel-step="payments"] #step-payments #btn-submit span {
-        color: #13143A;
-        text-align: center;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 29.6px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-    }
+html body.CRE_EXP_22 .product-option .product-option-text p+p {
+  margin-top: 4.25px;
+}
 
+html body.CRE_EXP_22 .product-details-section .faq-section {
+      padding: 6.25px 0 15px 0;
+}
 
-    html body[data-funnel-step="payments"] #step-payments button#btn-submit+p.microcopy {
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        text-align: center;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        color: #13143A;
-        margin-top: 8px;
-    }
+html body.CRE_EXP_22 .product-details-section button.add-to-cart-button.buy-now-btn {
+  margin-top: 14px;
+}
 
-    html body[data-funnel-step="payments"] [data-selector="payment-step-our-customer-loves-section"] [class*="bg-gradient"]:last-child {
-        order: -1;
-    }
+html body.CRE_EXP_22 .product-details-section .product-option {
+  margin-top: 9px;
+}
 
+html body[data-path="/all-about-reading-pre-reading/"] .CRE_EXP_22-total-display {
+  margin-top: 13.25px;
+}
 
-    html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_content {
-        display: block !important;
-        color: #13143A;
-        text-align: center;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        margin-top: 12px;
-    }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .CRE_EXP_22-total-display {
+    text-align: left;
+  }
+}
 
-    html body[data-funnel-step="payments"] .accordion_heading {
-        color: #08A5E9;
-        text-align: center;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        display: flex;
-        justify-content: center;
-        gap: 7.7px;
-        max-width: fit-content;
-        margin: 0 auto;
-    }
-
-
-    html body[data-funnel-step="payments"] .accordion_heading>img {
-        transform: rotate(-180deg);
-    }
-
-    html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_heading>img {
-        transform: inherit;
-    }
+.product-details-main .product-details-heading {
+  display: none;
 }
 
 
-@media screen and (max-width:372px) {
+.CRE_EXP_22-bundle-active .product-details-section .products-section {
+  display: none;
+}
 
-    html body form>div h2+div+div .bg-green-dark+span {
-        font-size: 16px;
-    }
+.CRE_EXP_22-bundle-active .product-details-section .quantity-selection {
+  visibility: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
 
-    html body[data-funnel-step="payments"] #step-payments>h2 {
-        line-height: 25.6px;
-    }
 
+.CRE_EXP_22-bundle-active .CRE_EXP_24-container {
+  display: none !important;
+}
+
+.CRE_EXP_22-bundle-active .btn-right {
+  justify-content: flex-start !important;
+}
+
+
+.CRE_EXP_22-bundle-paragraph {
+  color: #0B3E64;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  /* 150% */
+  margin-top: 32px;
+}
+
+.CRE_EXP_22-bundle-active .product-details-main {
+  margin-bottom: 8px;
+}
+
+
+.CRE_EXP_22-bundle-active .CRE_EXP_22-total-amount {
+  color: #0B3E64;
+  font-family: Roboto;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  /* 115.385% */
+  letter-spacing: 0.25px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+}
+
+
+.CRE_EXP_22-tab-container .tab-title {
+  color: #757575;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 166.667% */
+  letter-spacing: 0.25px;
+  padding: 14px 32px;
+}
+
+.CRE_EXP_22-tab-container .is-active .tab-title {
+  color: #0B3E64;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.25px;
 }
 
 
 
-@media screen and (max-width:358px) {
 
-    html body[data-funnel-step="payments"] #step-payments>h2 {
-        font-size: 18px;
-    }
 
-    html body[data-funnel-step="payments"] #step-payments form h2 {
-        font-size: 25px;
-        line-height: 30.6px;
-    }
+.CRE_EXP_22-tab-container .tab {
+  float: left !important;
+  border-top-color: #fff !important;
+}
+
+.CRE_EXP_22-tab-container .is-active {
+  margin-bottom: -1px !important;
+  border: 1px solid #e5e5e5 !important;
+  border-bottom: 1px solid #fff !important;
 
 }
