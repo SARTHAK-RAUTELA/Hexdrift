@@ -25,7 +25,8 @@ csv_path = "/mnt/data/benner_calendar_1990_2059.csv"
 df.to_csv(csv_path, index=False)
 
 # Safe template with token replacement
-template = dedent("""
+template = dedent(
+    """
 # benner_playbook_template.py
 # Purpose: Turn the Benner calendar into an exposure plan with simple, testable rules.
 #
@@ -128,7 +129,8 @@ if __name__ == "__main__":
     out = "benner_monthly_schedule_2023_2036.csv"
     sched.to_csv(out, index=False)
     print(f"Wrote: {{out}}")
-""").strip()
+"""
+).strip()
 
 template = template.replace("<<HARD_YEARS>>", str(hard_years))
 template = template.replace("<<GOOD_YEARS>>", str(good_years))
@@ -139,6 +141,7 @@ with open(py_path, "w", encoding="utf-8") as f:
     f.write(template)
 
 import caas_jupyter_tools as cj
+
 cj.display_dataframe_to_user("Benner calendar (1990–2059)", df)
 
 print(csv_path)
