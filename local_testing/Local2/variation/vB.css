@@ -1,167 +1,23 @@
-.CRE_EXP_22-bundle-active .product-price {
-  display: none;
+html body.cre-t-60 [data-unique="outbound-partner-clicks-Lemonade-Listing-Only"] .plan-number:after {
+    content: " 1";
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
-/* Tab Container */
-.CRE_EXP_22-tab-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+html body.cre-t-60 [data-unique="comparison-table"] > [data-unique="outbound-partner-clicks-Liberty-Mutual-Listing-Only"]:first-child .plan-number:after{
+    content: " 2";
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
-
-/* Tab Cursor */
-.tab-title {
-  cursor: pointer;
-  font-family: Roboto;
+html body.cre-t-60 [data-unique="outbound-partner-clicks-Lemonade-Listing-Only"] .plan-number ,
+html body.cre-t-60 [data-unique="comparison-table"] > [data-unique="outbound-partner-clicks-Liberty-Mutual-Listing-Only"]:first-child .plan-number {
+    color: transparent;
+    
 }
-
-/* Bundle Info Styles */
-.CRE_EXP_22-bundle-info {
-  display: block;
-}
-
-.CRE_EXP_22-bundle-paragraph {
-  font-family: Roboto;
-  font-size: 14px;
-  color: #666666;
-  margin: 10px 0;
-  line-height: 1.4;
-}
-
-.CRE_EXP_22-total-display {
-  text-align: left;
-  display: block;
-  margin-top: 10px;
-}
-
-.CRE_EXP_22-total-amount {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 600;
-  color: #0B3E64;
-}
-
-/* .CRE_EXP_22-total-amount::before {
-  content: 'Total: ';
-  font-weight: 400;
-  color: #666666;
-} */
-html body.CRE_EXP_22 .product-option .product-option-text p+p {
-margin-top: 4.25px;
-}
-
-html body.CRE_EXP_22 .product-details-section .faq-section {
-      padding: 6.25px 0 15px 0;
-}
-
-html body.CRE_EXP_22 .product-details-section button.add-to-cart-button.buy-now-btn {
-  margin-top: 14px;
-}
-
-html body.CRE_EXP_22 .product-details-section .product-option {
-  margin-top: 9px;
-}
-
-html body[data-path="/all-about-reading-pre-reading/"] .CRE_EXP_22-total-display {
-  margin-top: 13.25px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .CRE_EXP_22-total-display {
-    text-align: left;
-  }
-}
-
-.product-details-main .product-details-heading {
-  display: none;
-}
-
-
-.CRE_EXP_22-bundle-active .product-details-section .products-section {
-  display: none;
-}
-
-.CRE_EXP_22-bundle-active .product-details-section .quantity-selection {
-  visibility: hidden;
-  z-index: -1;
-  pointer-events: none;
-}
-
-
-.CRE_EXP_22-bundle-active .CRE_EXP_24-container {
-  display: none !important;
-}
-
-.CRE_EXP_22-bundle-active .btn-right {
-  justify-content: flex-start !important;
-}
-
-
-.CRE_EXP_22-bundle-paragraph {
-  color: #0B3E64;
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  /* 150% */
-  margin-top: 32px;
-}
-
-.CRE_EXP_22-bundle-active .product-details-main {
-  margin-bottom: 8px;
-}
-
-
-.CRE_EXP_22-bundle-active .CRE_EXP_22-total-amount {
-  color: #0B3E64;
-  font-family: Roboto;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  /* 115.385% */
-  letter-spacing: 0.25px;
-  margin-top: 5px;
-  margin-bottom: 14px;
-}
-
-
-.CRE_EXP_22-tab-container .tab-title {
-  color: #757575;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  /* 166.667% */
-  letter-spacing: 0.25px;
-  padding: 14px 32px;
-}
-
-.CRE_EXP_22-tab-container .is-active .tab-title {
-  color: #0B3E64;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0.25px;
-}
-
-
-
-
-
-.CRE_EXP_22-tab-container .tab {
-  float: left !important;
-  border-top-color: #fff !important;
-}
-
-.CRE_EXP_22-tab-container .is-active {
-  margin-bottom: -1px !important;
-  border: 1px solid #e5e5e5 !important;
-  border-bottom: 1px solid #fff !important;
-
+html body.cre-t-60 [data-unique="outbound-partner-clicks-Lemonade-Listing-Only"] {
+    order: -1;
 }
