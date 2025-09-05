@@ -1,30 +1,37 @@
-.button-secondary,
-.button-tertiary,
-.center-callout__button,
-.sitecore-form__wrapper input[type=submit],
-.product-catalog-container__continue-button,
-.s-curve-card__booking-button,
-.product-catalog-card__order-button,
-.date-time-select-modal__cancel-button,
-.date-time-select-modal__done-button,
-.product-placement-detail-modal__cart-button,
-.button-wrapper,
-.swpe-btn.swpe-btn--primary,
-.button,
-.two-tier-product-listing__button,
-.mini-cart__checkout-btn,
-.mini-cart__remove-btn,
-.mini-cart__modal .modal__close,
-.mini-cart__shop-btn,
-.navybtn,
-.items-in-cart__browse-btn,
-.items-in-cart__browse-btn--primary,
-.featured-story-card__button,
-.featured-story-card__button,
-.blog-listing__load-more-posts-button,
-.large-button,
-.cre-t-246-show-all-wrapper,
-.items-in-cart__shop-btn,
-.cre-t-246-show-all-wrapper {
-    border: 2px solid red;
+/* Make each nav item inline-flex so link + arrow align */
+.primary-nav__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Ensure the link doesn’t stretch and arrow stays right */
+.primary-nav__item > a {
+  display: inline-block;
+  margin-right: 0.25rem; /* space before arrow */
+}
+
+.submenu-toggle {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  visibility: hidden;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Show only when focused */
+.primary-nav__item:focus-within > .submenu-toggle {
+  visibility: visible;
+}
+
+/* Focus highlight */
+.submenu-toggle:focus {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0 2px;
 }
