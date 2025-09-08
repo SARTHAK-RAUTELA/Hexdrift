@@ -1,7 +1,8 @@
 (function () {
   try {
+    /* main variables */
     var debug = 1;
-    var variation_name = "budgetBlind_T49"
+    var variation_name = "cre_ggp_br";
     function waitForElement(selector, trigger, delayInterval, delayTimeout) {
       var interval = setInterval(function () {
         if (
@@ -18,8 +19,6 @@
       }, delayTimeout);
     }
     function live(selector, event, callback, context) {
-      /****Helper Functions****/
-      // helper for enabling IE 8 event bindings
       function addEvent(el, type, handler) {
         if (el.attachEvent) el.attachEvent("on" + type, handler);
         else el.addEventListener(type, handler);
@@ -34,102 +33,178 @@
             ElementPrototype.msMatchesSelector ||
             function (selector) {
               var node = this,
-                nodes = (
-                  node.parentNode || node.document
-                ).querySelectorAll(selector),
+                nodes = (node.parentNode || node.document).querySelectorAll(selector),
                 i = -1;
               while (nodes[++i] && nodes[i] != node);
               return !!nodes[i];
             };
         })(Element.prototype);
-      // live binding helper using matchesSelector
       function live(selector, event, callback, context) {
         addEvent(context || document, event, function (e) {
           var found,
             el = e.target || e.srcElement;
-          while (
-            el &&
-            el.matches &&
-            el !== context &&
-            !(found = el.matches(selector))
-          )
-            el = el.parentElement;
+          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
           if (found) callback.call(el, e);
         });
       }
       live(selector, event, callback, context);
     }
-    function eventhandler() {
-      // Main link → always navigates event handler k andr
-      live(".primary-nav__item > a", "click", function (e) {
-        var target = e.target;
-        if (target && target.matches("a")) {
-          var url = target.getAttribute("href");
-          if (url && url !== "#") {
-            window.location.href = url;
+    function addModal() {
+      var modalHtml = `
+            <div class="cre_ggp_br_container cre_ggp_br_hide">
+              <div class="cre_ggp_br_modal_container">
+                <div class="cre_ggp_br_modal_content">
+                <h1 class="cre_ggp_br_title">
+                     Brasil, fique de olho – novos serviços disponíveis em breve
+                    </h1>
+                  <div class="cre_ggp_br_modal_left">
+                    
+                    <p class="cre_ggp_br_paragraph">
+                      Seja uma das <b>primeiras</b> pessoas no Brasil a ter acesso <b>rápido</b> e <b>descomplicado</b> aos cuidados de afirmação de gênero da GenderGP.
+                    </p>
+                    <p class="cre_ggp_br_paragraph">
+                      O que esperar:
+                    </p>
+                    <ul class="cre_ggp_br_bullet_list">
+                      <li>Receitas <b>rápidas</b> e <b>fáceis</b></li>
+                      <li>Sem necessidade de <b>consultas</b></li>
+                      <li>Muito <b>carinho</b> e <b>cuidado</b></li>
+                    </ul>
+                    
+                    <div class="cre_ggp_br_input_container"></div>
+                  </div>
+                  <div class="cre_ggp_br-stay-content-thank-you">
+                    <div class="cre_ggp_br-main-content-icon-thank-you">
+                        <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GenderGP/test13/thank-you.svg" alt="thank you">
+                    </div>
+                    <div class="cre_ggp_br-main-content-2-thank-you">
+                        <h2 class="cre_ggp_br-main-content-header-thank-you">Thank You!</h2>
+                    </div>
+                    <div class="cre_ggp_br-main-content-3-thank-you">
+                        <p class="cre_ggp_br-main-content-subheader-thank-you">Your submission has been received!</p>
+                    </div>
+                  </div>
+                  <img class="cre_ggp_br_mobile_image" src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/bg-image_68b14abea0013.png">
+                </div>
+                <span class="cre_ggp_br_close">
+                  <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/gender-modal-close.png" alt="close icon">
+                </span>
+              </div>
+            </div>
+        `;
+      if (!document.querySelector(".cre_ggp_br_container")) {
+        document.querySelector(".cre_ggp_br").insertAdjacentHTML("beforeend", modalHtml);
+      }
+    }
+    function changeJourneyPlaceholder() {
+      const journeySelect = document.querySelector('[cre-test-id="brazil-sitewide"] select[name="journey"]');
+      if (journeySelect) {
+        journeySelect.options[0].text = "Qual é a sua jornada?";
+      }
+    }
+    function moveForm() {
+      var form = document.querySelector('[cre-test-id="brazil-sitewide"]');
+      waitForElement(".cre_ggp_br_input_container", function () {
+        form.querySelector('input[type="email"]').setAttribute("placeholder", "Email*");
+        document.querySelector(".cre_ggp_br_input_container").insertAdjacentElement("afterbegin", form);
+        // Handle form submission
+        // form.addEventListener("submit", function (event) {
+        //   waitForElement(".cre_ggp_br_container", function () {
+        //     document.body.classList.add("signUpForm-submitted");
+        //     document.body.classList.add("cre_ggp_br-submitted");
+        //   }, 50, 5000);
+        // });
+      }, 50, 25000);
+    }
+    function mobileModalTrigger() {
+      var modalInterval = setInterval(() => {
+        var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
+        if (!session) {
+          var userEntry = sessionStorage.getItem('cre_ggp_br_user_entered');
+          if (userEntry != null) {
+            var now = new Date();
+            var startTime = parseInt(userEntry);
+            if (startTime + 24000 < now.getTime()) {
+              setTimeout(function () {
+                waitForElement('[cre-test-id="brazil-sitewide"] form', moveForm, 25, 25000);
+              }, 1000);
+              document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
+              document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
+              clearInterval(modalInterval);
+            }
+          }
+          else {
+            setTimer();
           }
         }
+      }, 50);
+    }
+    function setTimer() {
+      var now = new Date().getTime();
+      sessionStorage.setItem('cre_ggp_br_user_entered', now);
+    }
+    function eventListeners() {
+      if (window.innerWidth < 1150) {
+        mobileModalTrigger();
+      }
+      else {
+        document.body.addEventListener('mouseleave', function (event) {
+          var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
+          if (event.clientY <= 0 && !session && !document.querySelector(".cre_ggp_br_modal_triggered")) {
+            waitForElement('[cre-test-id="brazil-sitewide"] form', moveForm, 25, 25000);
+            document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
+            document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
+          }
+        });
+      }
+      live(".cre_ggp_br_container", "click", function (e) {
+        sessionStorage.setItem("cre_ggp_br_modal_triggered", true);
+        if (document.querySelector(".cre_ggp_br_modal_container").contains(e.target)) {
+          if (e.target === document.querySelector(".cre_ggp_br_close")) {
+            document.querySelector(".cre_ggp_br_container").classList.add("cre_ggp_br_hide");
+          }
+        }
+        else {
+          document.querySelector(".cre_ggp_br_container").classList.add("cre_ggp_br_hide");
+        }
       });
+      var wpcf7Elm = document.querySelector('[cre-test-id="brazil-sitewide"] .wpcf7-form');
+      if (wpcf7Elm) {
+        wpcf7Elm.addEventListener("wpcf7mailsent", function (event) {
+          if (event.detail.contactFormId === 103969) {
+            document.body.classList.add("signUpForm-submitted");
+            document.body.classList.add("cre_ggp_br-submitted");
+          }
+        }, false);
+      }
     }
 
-    function init() {
-      document.querySelector('body').classList.add(variation_name);
-      document.querySelectorAll(".primary-nav__item").forEach(function (item, idx) {
-        var link = item.querySelector("a");
-        var subnav = item.querySelector(".primary-nav__subnav");
+    // NEW FUNCTION TO CHANGE SUBMIT BUTTON TEXT
 
-        if (link && subnav) {
-          if (!subnav.id) {
-            subnav.id = "submenu-" + idx;
-          }
+    function changeSubmitButtonText() {
 
-          // Create toggle button
-          var toggle = document.createElement("button");
-          toggle.className = "submenu-toggle";
-          toggle.setAttribute("aria-label", link.textContent + " submenu");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.setAttribute("aria-controls", subnav.id);
-          toggle.innerHTML = "&#9662;"; // ▼
-          if (!item.querySelector('.submenu-toggle')) {
-            link.insertAdjacentElement("afterend", toggle);
-          }
+      var submitBtn = document.querySelector('.wpcf7-form-control.wpcf7-submit');
 
+      if (submitBtn) {
 
-          // Initialize aria-hidden
-          subnav.setAttribute("aria-hidden", "true");
-
-          // Toggle submenu (keyboard/mouse click on arrow)
-          toggle.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            // Close all other open submenus
-            document.querySelectorAll(".primary-nav__item.is-open").forEach(function (openItem) {
-              if (openItem !== item) {
-                openItem.classList.remove("is-open");
-                var openToggle = openItem.querySelector(".submenu-toggle");
-                var openSubnav = openItem.querySelector(".primary-nav__subnav");
-                if (openToggle) openToggle.setAttribute("aria-expanded", "false");
-                if (openSubnav) openSubnav.setAttribute("aria-hidden", "true");
-              }
-            });
-
-            // Toggle current submenu
-            var expanded = this.getAttribute("aria-expanded") === "true";
-            this.setAttribute("aria-expanded", String(!expanded));
-            item.classList.toggle("is-open", !expanded);
-            subnav.setAttribute("aria-hidden", String(expanded));
-          });
-        }
-      });
-      if (!window.eventAttached49) {
-        eventhandler();
-        window.eventAttached49 = true;
+        submitBtn.value = "Comece já";
 
       }
 
     }
-    waitForElement("body", init, 50, 15000);
+
+    function init() {
+      if (!document.body.classList.contains(variation_name)) {
+        document.body.classList.add(variation_name);
+        addModal();
+        waitForElement('.wpcf7-form-control.wpcf7-submit', changeSubmitButtonText, 50, 15000);
+        waitForElement('[cre-test-id="brazil-sitewide"] select[name="journey"]', changeJourneyPlaceholder, 50, 15000);
+        waitForElement(".cre_ggp_br_close", eventListeners, 50, 15000);
+        
+      }
+    }
+    waitForElement("body", init, 50, 25000);
   } catch (e) {
-    console.log(e, "error in Test variation_name");
+    if (debug) console.log(e, "error in Test" + variation_name);
   }
 })();
