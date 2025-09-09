@@ -2,209 +2,118 @@
   try {
     /* main variables */
     var debug = 1;
-    var variation_name = "cre_ggp_br";
-    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-      var interval = setInterval(function () {
-        if (
-          document &&
-          document.querySelector(selector) &&
-          document.querySelectorAll(selector).length > 0
-        ) {
-          clearInterval(interval);
-          trigger();
+    var variation_name = "cre-t-60";
+
+    /* helper library */
+    var _$;
+    !(function (factory) {
+      _$ = factory();
+    })(function () {
+      var bm = function (s) {
+        if (typeof s === "string") {
+          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
         }
-      }, delayInterval);
-      setTimeout(function () {
-        clearInterval(interval);
-      }, delayTimeout);
-    }
-    function live(selector, event, callback, context) {
-      function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent("on" + type, handler);
-        else el.addEventListener(type, handler);
-      }
-      // matches polyfill
-      this.Element &&
-        (function (ElementPrototype) {
-          ElementPrototype.matches =
-            ElementPrototype.matches ||
-            ElementPrototype.matchesSelector ||
-            ElementPrototype.webkitMatchesSelector ||
-            ElementPrototype.msMatchesSelector ||
-            function (selector) {
-              var node = this,
-                nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                i = -1;
-              while (nodes[++i] && nodes[i] != node);
-              return !!nodes[i];
-            };
-        })(Element.prototype);
-      function live(selector, event, callback, context) {
-        addEvent(context || document, event, function (e) {
-          var found,
-            el = e.target || e.srcElement;
-          while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
-          if (found) callback.call(el, e);
-        });
-      }
-      live(selector, event, callback, context);
-    }
-    function addModal() {
-      var modalHtml = `
-            <div class="cre_ggp_br_container cre_ggp_br_hide">
-              <div class="cre_ggp_br_modal_container">
-                <div class="cre_ggp_br_modal_content">
-                <h1 class="cre_ggp_br_title">
-                     Brasil, fique de olho – novos serviços disponíveis em breve
-                    </h1>
-                  <div class="cre_ggp_br_modal_left">
-                    
-                    <p class="cre_ggp_br_paragraph">
-                      Seja uma das <b>primeiras</b> pessoas no Brasil a ter acesso <b>rápido</b> e <b>descomplicado</b> aos cuidados de afirmação de gênero da GenderGP.
-                    </p>
-                    <p class="cre_ggp_br_paragraph">
-                      O que esperar:
-                    </p>
-                    <ul class="cre_ggp_br_bullet_list">
-                      <li>Receitas <b>rápidas</b> e <b>fáceis</b></li>
-                      <li>Sem necessidade de <b>consultas</b></li>
-                      <li>Muito <b>carinho</b> e <b>cuidado</b></li>
-                    </ul>
-                    
-                    <div class="cre_ggp_br_input_container"></div>
-                  </div>
-                  <div class="cre_ggp_br-stay-content-thank-you">
-                    <div class="cre_ggp_br-main-content-icon-thank-you">
-                        <img src="https://d27c6j8064skg9.cloudfront.net/ConversionRateExpert/GenderGP/test13/thank-you.svg" alt="thank you">
-                    </div>
-                    <div class="cre_ggp_br-main-content-2-thank-you">
-                        <h2 class="cre_ggp_br-main-content-header-thank-you">Thank You!</h2>
-                    </div>
-                    <div class="cre_ggp_br-main-content-3-thank-you">
-                        <p class="cre_ggp_br-main-content-subheader-thank-you">Your submission has been received!</p>
-                    </div>
-                  </div>
-                  <img class="cre_ggp_br_mobile_image" src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/bg-image_68b14abea0013.png">
-                </div>
-                <span class="cre_ggp_br_close">
-                  <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/gender-modal-close.png" alt="close icon">
-                </span>
-              </div>
-            </div>
-        `;
-      if (!document.querySelector(".cre_ggp_br_container")) {
-        document.querySelector(".cre_ggp_br").insertAdjacentHTML("beforeend", modalHtml);
-      }
-    }
-    function changeJourneyPlaceholder() {
-      const journeySelect = document.querySelector('[cre-test-id="brazil-sitewide"] select[name="journey"]');
-      if (journeySelect) {
-        journeySelect.options[0].text = "Qual é a sua jornada?";
-      }
-    }
-    function moveForm() {
-      var form = document.querySelector('[cre-test-id="brazil-sitewide"]');
-      waitForElement(".cre_ggp_br_input_container", function () {
-        form.querySelector('input[type="email"]').setAttribute("placeholder", "Email*");
-        document.querySelector(".cre_ggp_br_input_container").insertAdjacentElement("afterbegin", form);
-        // Handle form submission
-        // form.addEventListener("submit", function (event) {
-        //   waitForElement(".cre_ggp_br_container", function () {
-        //     document.body.classList.add("signUpForm-submitted");
-        //     document.body.classList.add("cre_ggp_br-submitted");
-        //   }, 50, 5000);
-        // });
-      }, 50, 25000);
-    }
-    function mobileModalTrigger() {
-      var modalInterval = setInterval(() => {
-        var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
-        if (!session) {
-          var userEntry = sessionStorage.getItem('cre_ggp_br_user_entered');
-          if (userEntry != null) {
-            var now = new Date();
-            var startTime = parseInt(userEntry);
-            if (startTime + 24000 < now.getTime()) {
-              setTimeout(function () {
-                waitForElement('[cre-test-id="brazil-sitewide"] form', moveForm, 25, 25000);
-              }, 1000);
-              document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
-              document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
-              clearInterval(modalInterval);
+        if (typeof s === "object") {
+          this.value = [s];
+        }
+      };
+      bm.prototype = {
+        eq: function (n) {
+          this.value = [this.value[n]];
+          return this;
+        },
+        each: function (fn) {
+          [].forEach.call(this.value, fn);
+          return this;
+        },
+        log: function () {
+          var items = [];
+          for (var index = 0; index < arguments.length; index++) {
+            items.push(arguments[index]);
+          }
+          console && console.log(variation_name, items);
+        },
+        addClass: function (v) {
+          var a = v.split(" ");
+          return this.each(function (i) {
+            for (var x = 0; x < a.length; x++) {
+              if (i.classList) {
+                i.classList.add(a[x]);
+              } else {
+                i.className += " " + a[x];
+              }
             }
-          }
-          else {
-            setTimer();
-          }
-        }
-      }, 50);
-    }
-    function setTimer() {
-      var now = new Date().getTime();
-      sessionStorage.setItem('cre_ggp_br_user_entered', now);
-    }
-    function eventListeners() {
-      if (window.innerWidth < 1150) {
-        mobileModalTrigger();
-      }
-      else {
-        document.body.addEventListener('mouseleave', function (event) {
-          var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
-          if (event.clientY <= 0 && !session && !document.querySelector(".cre_ggp_br_modal_triggered")) {
-            waitForElement('[cre-test-id="brazil-sitewide"] form', moveForm, 25, 25000);
-            document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
-            document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
-          }
-        });
-      }
-      live(".cre_ggp_br_container", "click", function (e) {
-        sessionStorage.setItem("cre_ggp_br_modal_triggered", true);
-        if (document.querySelector(".cre_ggp_br_modal_container").contains(e.target)) {
-          if (e.target === document.querySelector(".cre_ggp_br_close")) {
-            document.querySelector(".cre_ggp_br_container").classList.add("cre_ggp_br_hide");
-          }
-        }
-        else {
-          document.querySelector(".cre_ggp_br_container").classList.add("cre_ggp_br_hide");
-        }
-      });
-      var wpcf7Elm = document.querySelector('[cre-test-id="brazil-sitewide"] .wpcf7-form');
-      if (wpcf7Elm) {
-        wpcf7Elm.addEventListener("wpcf7mailsent", function (event) {
-          if (event.detail.contactFormId === 103969) {
-            document.body.classList.add("signUpForm-submitted");
-            document.body.classList.add("cre_ggp_br-submitted");
-          }
-        }, false);
-      }
-    }
+          });
+        },
+        waitForElement: function (
+          selector,
+          trigger,
+          delayInterval,
+          delayTimeout
+        ) {
+          var interval = setInterval(function () {
+            if (_$(selector).value.length) {
+              clearInterval(interval);
+              trigger();
+            }
+          }, delayInterval);
+          setTimeout(function () {
+            clearInterval(interval);
+          }, delayTimeout);
+        },
+      };
+      return function (selector) {
+        return new bm(selector);
+      };
+    });
 
-    // NEW FUNCTION TO CHANGE SUBMIT BUTTON TEXT
+    var helper = _$();
 
-    function changeSubmitButtonText() {
-
-      var submitBtn = document.querySelector('.wpcf7-form-control.wpcf7-submit');
-
-      if (submitBtn) {
-
-        submitBtn.value = "Comece já";
-
-      }
-
-    }
-
+    /* Variation Init */
     function init() {
-      if (!document.body.classList.contains(variation_name)) {
-        document.body.classList.add(variation_name);
-        addModal();
-        waitForElement('.wpcf7-form-control.wpcf7-submit', changeSubmitButtonText, 50, 15000);
-        waitForElement('[cre-test-id="brazil-sitewide"] select[name="journey"]', changeJourneyPlaceholder, 50, 15000);
-        waitForElement(".cre_ggp_br_close", eventListeners, 50, 15000);
-        
+      _$("body").addClass(variation_name);
+
+      // --- TrustScore Image Swaps ---
+      var lemonadeTrust = document.querySelector(
+        '[data-unique="outbound-partner-clicks-Lemonade-Listing-Only"] .trustpilot-image'
+      );
+      if (lemonadeTrust && !lemonadeTrust.src.includes("4.90-trustscore")) {
+        lemonadeTrust.src =
+          "https://rentersinsurancegurus.com/wp-content/uploads/2025/04/4.90-trustscore-800x368.png";
+        console.log(variation_name, "Lemonade TrustScore swapped → 4.9");
+      }
+
+      var libertyTrust = document.querySelector(
+        '[data-unique="outbound-partner-clicks-Liberty-Mutual-Listing-Only"] .trustpilot-image'
+      );
+      if (libertyTrust && !libertyTrust.src.includes("4.7-trustscore")) {
+        libertyTrust.src =
+          "https://rentersinsurancegurus.com/wp-content/uploads/2025/04/4.7-trustscore-800x368.png";
+        console.log(variation_name, "Liberty TrustScore swapped → 4.7");
+      }
+
+      // --- Lemonade App Store Banner number only ---
+      var lemonadeBanner = document.querySelector(
+        '[data-unique="outbound-partner-clicks-Lemonade-Listing-Only"] .rating-bar'
+      );
+      if (lemonadeBanner) {
+        // find the first <strong> inside the rating-text and replace whatever value is there
+        var firstStrong = lemonadeBanner.querySelector(".rating-text strong");
+        if (firstStrong && firstStrong.textContent.trim() !== "83,796") {
+          firstStrong.textContent = "83,796";
+          console.log(variation_name, "Lemonade banner number updated → 83,796");
+        }
       }
     }
-    waitForElement("body", init, 50, 25000);
+
+    /* Init variation */
+    helper.waitForElement(
+      "#comparison-section [data-unique='comparison-table']",
+      init,
+      50,
+      50000
+    );
   } catch (e) {
-    if (debug) console.log(e, "error in Test" + variation_name);
+    if (debug) console.log(e, "error in Test " + variation_name);
   }
 })();
