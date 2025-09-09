@@ -92,6 +92,8 @@
         console.log(variation_name, "Liberty TrustScore swapped → 4.7");
       }
 
+
+
       // --- Lemonade App Store Banner number only ---
       var lemonadeBanner = document.querySelector(
         '[data-unique="outbound-partner-clicks-Lemonade-Listing-Only"] .rating-bar'
@@ -104,6 +106,38 @@
           console.log(variation_name, "Lemonade banner number updated → 83,796");
         }
       }
+
+
+
+      // --- Replace Best Overall with Lemonade ---
+      var bestOverall = document.querySelector('[data-unique="best-overall"]');
+      var lemonadeCard = document.querySelector('[data-unique="outbound-partner-clicks-Lemonade-Listing-Only"]');
+
+      if (bestOverall && lemonadeCard) {
+        var lemonadeClone = lemonadeCard.cloneNode(true);
+
+        // Only take the plan-box from Lemonade (not its bubble)
+        var lemonadeBox = lemonadeClone.querySelector('.plan-box');
+        var libertyBox = bestOverall.querySelector('.plan-box');
+
+        if (lemonadeBox && libertyBox) {
+          libertyBox.replaceWith(lemonadeBox);
+          console.log(variation_name, "Best Overall → Lemonade replaced");
+
+          // Make sure the bubble says "Best Overall"
+          var bestOverallBubble = bestOverall.querySelector('.number-bubble .plan-number');
+          if (bestOverallBubble) {
+            bestOverallBubble.textContent = "Best Overall";
+            bestOverallBubble.classList.add("best-overall-text");
+          }
+          bestOverall.querySelector('.number-bubble').classList.add("best-overall-bubble");
+        }
+      }
+
+
+
+
+
     }
 
     /* Init variation */
