@@ -1,154 +1,137 @@
 (function () {
   try {
+    /* main variables */
     var debug = 1;
-    var _$;
-    !(function (factory) {
-      _$ = factory();
-    })(function () {
-      var bm = function (s) {
-        if (typeof s === "string") {
-          this.value = Array.prototype.slice.call(document.querySelectorAll(s));
+    var variation_name = "ssc-14";
+
+    function waitForElement(selector, trigger) {
+      var interval = setInterval(function () {
+        if (
+          document &&
+          document.querySelector(selector) &&
+          document.querySelectorAll(selector).length > 0
+        ) {
+          clearInterval(interval);
+          trigger();
         }
-        if (typeof s === "object") {
-          this.value = [s];
-        }
-      };
-      bm.prototype = {
-        eq: function (n) {
-          this.value = [this.value[n]];
-          return this;
-        },
-        each: function (fn) {
-          [].forEach.call(this.value, fn);
-          return this;
-        },
-        addClass: function (v) {
-          var a = v.split(" ");
-          return this.each(function (i) {
-            for (var x = 0; x < a.length; x++) {
-              if (i.classList) {
-                i.classList.add(a[x]);
-              } else {
-                i.className += " " + a[x];
-              }
-            }
-          });
-        },
-        waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
-          var interval = setInterval(function () {
-            if (_$(selector).value.length) {
-              clearInterval(interval);
-              trigger();
-            }
-          }, delayInterval);
-          setTimeout(function () {
-            clearInterval(interval);
-          }, delayTimeout);
-        },
-        live: function (selector, event, callback, context) {
-          function addEvent(el, type, handler) {
-            if (el.attachEvent) el.attachEvent("on" + type, handler);
-            else el.addEventListener(type, handler);
+      }, 50);
+      setTimeout(function () {
+        clearInterval(interval);
+      }, 15000);
+    }
+
+    function live(selector, event, callback, context) {
+      function addEvent(el, type, handler) {
+        if (el.attachEvent) el.attachEvent("on" + type, handler);
+        else el.addEventListener(type, handler);
+      }
+      if (this && this.Element) {
+        (function (ElementPrototype) {
+          ElementPrototype.matches =
+            ElementPrototype.matches ||
+            ElementPrototype.matchesSelector ||
+            ElementPrototype.webkitMatchesSelector ||
+            ElementPrototype.msMatchesSelector ||
+            function (selector) {
+              var node = this,
+                nodes = (node.parentNode || node.document).querySelectorAll(selector),
+                i = -1;
+              while (nodes[++i] && nodes[i] != node);
+              return !!nodes[i];
+            };
+        })(Element.prototype);
+      }
+      addEvent(context || document, event, function (e) {
+        var el = e.target || e.srcElement;
+        while (el && el.matches && el !== context) {
+          if (el.matches(selector)) {
+            callback.call(el, e);
+            break;
           }
-          this &&
-            this.Element &&
-            (function (ElementPrototype) {
-              ElementPrototype.matches =
-                ElementPrototype.matches ||
-                ElementPrototype.matchesSelector ||
-                ElementPrototype.webkitMatchesSelector ||
-                ElementPrototype.msMatchesSelector ||
-                function (selector) {
-                  var node = this,
-                    nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                    i = -1;
-                  while (nodes[++i] && nodes[i] != node);
-                  return !!nodes[i];
-                };
-            })(Element.prototype);
-          function live(selector, event, callback, context) {
-            addEvent(context || document, event, function (e) {
-              var found,
-                el = e.target || e.srcElement;
-              while (
-                el &&
-                el.matches &&
-                el !== context &&
-                !(found = el.matches(selector))
-              )
-                el = el.parentElement;
-              if (found) callback.call(el, e);
-            });
-          }
-          live(selector, event, callback, context);
-        },
-      };
-      return function (selector) {
-        return new bm(selector);
-      };
-    });
-
-    var helper = _$();
-
-    function init() {
-      document.querySelectorAll(".primary-nav__item").forEach(function (item, idx) {
-        var link = item.querySelector("a");
-        var subnav = item.querySelector(".primary-nav__subnav");
-
-        if (link && subnav) {
-          if (!subnav.id) {
-            subnav.id = "submenu-" + idx;
-          }
-
-          // Create toggle button
-          var toggle = document.createElement("button");
-          toggle.className = "submenu-toggle";
-          toggle.setAttribute("aria-label", link.textContent + " submenu");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.setAttribute("aria-controls", subnav.id);
-          toggle.innerHTML = "&#9662;"; // ▼
-
-          link.insertAdjacentElement("afterend", toggle);
-          subnav.hidden = true;
-
-          // Toggle submenu
-          toggle.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            // Close all other open submenus
-            document.querySelectorAll(".primary-nav__item.is-open").forEach(function (openItem) {
-              if (openItem !== item) {
-                openItem.classList.remove("is-open");
-                var openToggle = openItem.querySelector(".submenu-toggle");
-                var openSubnav = openItem.querySelector(".primary-nav__subnav");
-                if (openToggle) openToggle.setAttribute("aria-expanded", "false");
-                if (openSubnav) openSubnav.hidden = true;
-              }
-            });
-
-            // Toggle current submenu
-            var expanded = this.getAttribute("aria-expanded") === "true";
-            this.setAttribute("aria-expanded", String(!expanded));
-            item.classList.toggle("is-open", !expanded);
-            subnav.hidden = expanded;
-          });
-        }
-      });
-
-      // Main link → always navigates
-      helper.live(".primary-nav__item > a", "click", function (e) {
-        var target = e.target;
-        if (target && target.matches("a")) {
-          var url = target.getAttribute("href");
-          if (url && url !== "#") {
-            window.location.href = url;
-          }
+          el = el.parentElement;
         }
       });
     }
+    const cancleany = `
+            <div class="cre_cancelany mobile-text-added">
+            <h6>$29.95/month · Cancel anytime</h6>
+            <p>7-day money-back guarantee</p>
+            </div>`;
+    var Cre_13Accordion = `
+            <div class="ssc13_accordion">
+            <h3 class="accordion_heading">
+            How our money-back guarantee works
+            <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/vector-4_68a6acd6018d8.svg" alt="" width="14" height="14">
+            </h3>
+            <p class="accordion_content" style="display:none;">
+            If you’re not happy, tell us within 7 days and we’ll refund your $29.95. No questions asked. You can also cancel anytime to stop future charges.
+            </p>
+            </div>`;
 
-    helper.waitForElement("body", init, 50, 15000);
+    function init() {
+      document.body.setAttribute("data-plan-override", "premium-plus-alt-a");
+
+      waitForElement('.Cre_hero-subtext', function () {
+        const herosubtext = document.querySelector(".Cre_hero-subtext");
+        // Only insert if heroGroup exists AND .cre_t-03_content_group does NOT already exist
+        if (herosubtext && !document.querySelector(".cre_cancelany")) {
+          herosubtext.insertAdjacentHTML("afterend", cancleany);
+        }
+      })
+
+      setTimeout(function () {
+        waitForElement('#step-payments form h2', function () {
+          document.querySelector('#step-payments  form h2').innerHTML = 'Unlock all 3 scores today for just $29.95—100% risk-free';
+        })
+        waitForElement('#step-payments form h2 + div', function () {
+          document.querySelector('#step-payments  form h2 + div').innerHTML = 'Get instant access to all 3 credit scores. You’ll be charged<b> $29.95</b> today and each month after. Cancel anytime.'
+        })
+        waitForElement('#step-payments form h2 + div + div >div span', function () {
+          document.querySelectorAll('#step-payments  form h2 + div + div >div span').forEach(function (bullet, index) {
+            if (index == 0) {
+              bullet.innerHTML = '<b>Instant access</b> to all 3 bureau reports';
+            } else if (index == 1) {
+              bullet.innerHTML = '<b>Risk-free—</b>full refund within 7 days';
+            } else {
+              bullet.innerHTML = '<b>Cancel anytime</b> in seconds';
+            }
+          })
+        })
+        waitForElement('.accordion_heading', function () {
+          document.querySelector('.accordion_heading').innerHTML =
+            'How our money-back guarantee works <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/vector-4_68a6acd6018d8.svg" alt="" width="14" height="14">';
+        });
+        waitForElement('.accordion_content', function () {
+          document.querySelector('.accordion_content').innerHTML = " If you’re not happy, tell us within 7 days and we’ll refund your $29.95. No questions asked. You can also cancel anytime to stop future charges."
+        })
+      }, 100);
+
+      waitForElement("#step-payments form h2+div+div", function () {
+        let target = document.querySelector("#step-payments form h2+div+div");
+        // Check if accordion already inserted right after the target
+        if (target && !target.nextElementSibling?.classList.contains("ssc13_accordion")) {
+          target.insertAdjacentHTML("afterend", Cre_13Accordion);
+        }
+      });
+
+      if (!window.eventListenerAddedTest14) {
+        window.eventListenerAddedTest14 = true;
+
+        live(".ssc13_accordion .accordion_heading", "click", function () {
+          console.log("clicked");
+          let parent = this.closest(".ssc13_accordion");
+          if (parent) {
+            parent.classList.toggle("active");
+          }
+        });
+
+      }
+
+
+    }
+
+    waitForElement('body', init)
   } catch (e) {
-    console.log(e, "error in Test variation_name");
+    if (debug) console.log(e, "error in Test" + variation_name);
   }
 })();

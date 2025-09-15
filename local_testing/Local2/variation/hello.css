@@ -1,342 +1,107 @@
-html body.cre_ggp_br .cre_ggp_br_container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    overflow-y: scroll;
-    top: 0;
-    left: 0;
-    background-color: rgba(18, 17, 17, 0.55);
-    z-index: 999999;
-}
-
-html body.cre_ggp_br .cre_ggp_br_container.cre_ggp_br_hide {
-    display: none;
-}
-
-html body.cre_ggp_br .cre_ggp_br_modal_container {
-    max-width: 1024px;
-    width: 100%;
-    height: 630px;
-    padding: 55px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 8px;
-    position: relative;
-    background-color: rgb(228 226 216);
-    background-image: url(https://cdn-3.convertexperiments.com/uf/10007679/10007617/bg-image_68b14abea0013.png);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: contain;
-    overflow: hidden;
-}
-
-html body.cre_ggp_br .cre_ggp_br_modal_content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-html body.cre_ggp_br .cre_ggp_br_modal_left {
-    display: flex;
-    flex-direction: column;
-    max-width: 586px;
-    justify-content: start;
-    align-items: start;
-    z-index: 10;
-    width: 100%;
-}
-
-html body.cre_ggp_br .cre_ggp_br_title {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48.41px;
-    text-align: left;
-    color: rgba(0, 0, 0, 1);
-    margin-bottom: 25px;
-    max-width: 735px;
-}
-
-html body.cre_ggp_br .cre_ggp_br_paragraph {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 26.63px;
-    text-align: left;
-    color: rgba(0, 0, 0, 1);
-    max-width: 100%;
-    margin-bottom: 25px;
-    padding: 0;
-    width: 517px;
-}
-
-html body.cre_ggp_br .cre_ggp_br_input_container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 27px;
-    width: 100%;
-    max-width: 398px;
-}
-
-html body.cre_ggp_br input[type="email"] {
-    padding: 15px 10px;
-    width: 100%;
-    font-size: 15px;
-    font-weight: 400;
-    border-radius: 5px;
-    line-height: 18.15px;
-    border-color: transparent;
-    min-height: 48px;
-}
-
-html body.cre_ggp_br .cre_ggp_br_input_container .footer-widget #block-10 {
-    display: block !important;
-}
-
-html body.cre_ggp_br input[type="submit"] {
-    padding: 15px 10px;
-    width: 100%;
-    background: rgba(190, 86, 123, 1);
-    border-color: transparent;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24.2px;
-    text-align: center;
-    margin-top: 15px;
-}
-
-html body.cre_ggp_br.cre_ggp_br-submitted .cre_ggp_br_modal_left {
-    display: none;
-}
-
-html body.cre_ggp_br .cre_ggp_br-stay-content-thank-you {
-    display: none;
-    position: relative;
-    z-index: 11;
-}
-
-html body.cre_ggp_br.cre_ggp_br-submitted .cre_ggp_br-stay-content-thank-you {
-    display: block;
-}
-
-html body.cre_ggp_br .cre_ggp_br-main-content-icon-thank-you {
-    width: 130px;
-    height: 130px;
-    padding: 30px;
-    border-radius: 50%;
-    background: #be567b;
-    display: flex;
-    justify-content: center;
-}
-
-html body.cre_ggp_br .cre_ggp_br-main-content-icon-thank-you img {
-    margin: auto;
-    width: max-content;
-}
-
-html body.cre_ggp_br .cre_ggp_br-main-content-header-thank-you {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 60.51px;
-    text-align: left;
-    color: #000000;
-    margin-top: 15px;
-}
-
-html body.cre_ggp_br .cre_ggp_br-main-content-3-thank-you {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 24.2px;
-    text-align: left;
-    color: #000000;
-    max-width: 268px;
-    margin-top: 20px;
-}
-
-html body.cre_ggp_br .cre_ggp_br_close {
-    position: absolute;
-    top: 32px;
-    right: 31px;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-html body.cre_ggp_br .cre_ggp_br_close img {
-    pointer-events: none;
-    background-color: #f14769;
-    border-radius: 9px;
-}
-
-.cre_ggp_br_mobile_image {
-    display: none;
-}
-
 @media screen and (max-width:768px) {
-    html body.cre_ggp_br .cre_ggp_br_container {
-        padding: 10px;
+
+    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+p,
+    html body[data-funnel-step="payments"] #step-payments .cre-01-trustpilot-logo+div {
+        display: none !important;
     }
 
-    html body.cre_ggp_br .cre_ggp_br_modal_container {
-        padding: 25px 0;
-        background-image: none;
-        height: auto;
-        min-height: 497px;
-        padding-bottom: 0;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_paragraph:first-child {
-        margin-top: 10px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_title {
-        font-size: 28px;
-        font-weight: 800;
-        line-height: 33.89px;
-        padding: 0;
-        margin-bottom: 12px;
-        padding: 0 25px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_paragraph {
-        padding: 0 25px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_paragraph+p {
-        margin-top: 12px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_paragraph {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 21.79px;
-        margin-bottom: 10px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_input_container {
-        max-width: 100%;
-        margin-top: 10px;
-        gap: 15px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_close {
-        width: 18px;
-        top: 9px;
-        right: 8px;
-    }
-
-    .cre_ggp_br_mobile_image {
-        display: none;
-        position: absolute;
-        width: 702px !important;
-        height: 100%;
-        object-fit: cover;
-        opacity: .7;
-        top: 6px;
-        right: 1px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_input_container [data-name="journey"] [name="journey"],
-    html body.cre_ggp_br input[type="email"] {
-        font-size: 12px;
-        padding: .5rem 10px !important;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_modal_container {
-        background-color: rgb(246 246 234);
-    }
-
-    .cre_ggp_br_input_container>.elementor-element:first-child {
-        width: 89%;
-        margin: 0 auto;
-    }
-}
-
-
-@media screen and (min-height:767px) {
-    html body.cre_ggp_br .cre_ggp_br_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width:767px) {
-    html body.cre_ggp_br .cre_ggp_br_container {
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-    }
-}
-
-html body.cre_ggp_br .cre_ggp_br_input_container #user_state+br {
-    display: none !important;
-}
-
-html body.cre_ggp_br .cre_ggp_br_input_container [class*="-response-output"] {
-    display: none !important;
-}
-
-html body.cre_ggp_br .cre_ggp_br_input_container span[class*="-spinner"] {
-    display: block;
-    margin: 10px auto 0;
-}
-
-
-html body.cre_ggp_br .cre_ggp_br_input_container {
-    display: none;
-}
-
-html body.cre_ggp_br .cre_ggp_br_cta {
-    display: inline-block;
-    margin-top: 60px;
-    padding: 12px 90px;
-    background: #BE567B;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-@media screen and (max-width:768px) {
-    html body.cre_ggp_br.signUpForm-submitted .cre_ggp_br_modal_container {
-        padding: 20px;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_input_container .form-row p {
-        margin-bottom: 15px !important;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_input_container {
-        display: flex;
-    }
-
-    html body.cre_ggp_br .cre_ggp_br_cta {
-        display: inline-block;
-        margin-top: 0px;
-        padding: 12px 90px;
-        background: #BE567B;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background 0.3s ease;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        bottom: 31px;
+    html body[data-funnel-step="payments"] #step-payments>h2,
+    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div>span {
+        color: #13143A;
         text-align: center;
-        max-width: 343px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 29.6px;
+        letter-spacing: var(--letter-spacing--0_79, -0.792px);
+    }
+
+    html body[data-funnel-step="payments"] #step-payments form h2+div {
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    html body[data-funnel-step="payments"] #step-payments form h2 {
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 31.6px;
+        letter-spacing: var(--letter-spacing--0_79, -0.792px);
+
+    }
+
+    html body[data-funnel-step="payments"] #step-payments form h2+div+div>div span b {
+        font-weight: 700;
+    }
+
+    html body[data-funnel-step="payments"] #step-payments .cre-01-trustpilot-logo+div+div {
+        color: rgba(75, 75, 128, 0.65);
+    }
+
+    html body[data-funnel-step="payments"] #step-payments #btn-submit {
+        padding: 23px 35px;
+    }
+
+    html body[data-funnel-step="payments"] .cre-01-trustpilot-logo {
         margin: 0 auto;
-        display: inline-block;
-        padding: 15px 11px;
+        margin-bottom: 2.25rem;
+        margin-top: 1.25rem;
+    }
+
+    html body[data-funnel-step="payments"] form>div h2+div+div+div {
+        margin-top: 30px;
+    }
+
+    html body form>div h2+div+div .bg-green-dark+span {
+        font-size: 16.8px;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: var(--letter-spacing--0_79, -0.792px);
+        font-weight: 500;
+    }
+
+    html body[data-funnel-step="payments"] form>div h2+div+div+div>div img {
+        display: none;
+    }
+
+    html body[data-funnel-step="payments"] form>div h2+div+div+div>div {
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2223%22%20viewBox%3D%220%200%2018%2023%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M9%2023C6.39375%2022.3292%204.24219%2020.8006%202.54531%2018.4144C0.848437%2016.0281%200%2013.3783%200%2010.465V3.45L9%200L18%203.45V10.465C18%2013.3783%2017.1516%2016.0281%2015.4547%2018.4144C13.7578%2020.8006%2011.6062%2022.3292%209%2023ZM6.75%2016.1H11.25C11.5687%2016.1%2011.8359%2015.9898%2012.0516%2015.7694C12.2672%2015.549%2012.375%2015.2758%2012.375%2014.95V11.5C12.375%2011.1742%2012.2672%2010.901%2012.0516%2010.6806C11.8359%2010.4602%2011.5687%2010.35%2011.25%2010.35V9.2C11.25%208.5675%2011.0297%208.02604%2010.5891%207.57562C10.1484%207.12521%209.61875%206.9%209%206.9C8.38125%206.9%207.85156%207.12521%207.41094%207.57562C6.97031%208.02604%206.75%208.5675%206.75%209.2V10.35C6.43125%2010.35%206.16406%2010.4602%205.94844%2010.6806C5.73281%2010.901%205.625%2011.1742%205.625%2011.5V14.95C5.625%2015.2758%205.73281%2015.549%205.94844%2015.7694C6.16406%2015.9898%206.43125%2016.1%206.75%2016.1ZM7.875%2010.35V9.2C7.875%208.87417%207.98281%208.60104%208.19844%208.38062C8.41406%208.16021%208.68125%208.05%209%208.05C9.31875%208.05%209.58594%208.16021%209.80156%208.38062C10.0172%208.60104%2010.125%208.87417%2010.125%209.2V10.35H7.875Z%22%20fill%3D%22%23228BE6%22%2F%3E%3C%2Fsvg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 20px;
+    }
+
+    html body[data-funnel-step="payments"] form div>h2+div+div .bg-green-dark {
+        background: url(https://cdn-3.convertexperiments.com/uf/10007679/10007821/checkmark_6895dda1105b1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 20px;
+    }
+
+    html body[data-funnel-step="payments"] form div>h2+div+div .bg-green-dark img {
+        display: none !important;
+    }
+
+    html body[data-funnel-step="payments"] #btn-submit>span {
+        color: #13143A;
+        text-align: center;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 29.6px;
+        /* 118.4% */
+        letter-spacing: var(--letter-spacing--0_79, -0.792px);
+    }
+
+}
+
+@media screen and (max-width:375px) {
+    html body[data-funnel-step="payments"] #step-payments>h2 {
+        font-size: 18px;
+    }
+
+    html body[data-funnel-step="payments"] #step-payments form h2 {
+        font-size: 25px;
     }
 }

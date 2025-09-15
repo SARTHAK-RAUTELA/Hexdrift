@@ -1,6 +1,89 @@
+@media screen and (max-width: 768px) {
+  html body[data-funnel-step="payments"] #step-payments #btn-submit {
+    padding: 23px 0;
+  }
+
+  html body .hero-btn_group .cre_cancelany h6 {
+    font-size: 19px;
+    color: #13143A;
+  }
+
+  html body .cre_cancelany p {
+    text-align: center !important;
+  }
+
+  html body[data-path="/l/get-your-scores"].cre-t-09 .hero-lp-content .hero-btn_group a {
+    padding: 19px 30px;
+  }
+
+  html body .cre_cancelany.mobile-text-added h6 {
+    color: #13143A;
+    text-align: center;
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: var(--letter-spacing--0_18, -0.176px);
+  }
+
+  html body .cre_cancelany.mobile-text-added p {
+    color: #13143A;
+    font-size: 13px !important;
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: 20px;
+    letter-spacing: var(--letter-spacing--0_18, -0.176px);
+    text-align: center !important;
+  }
+
+  html body[data-funnel-step="payments"] .accordion_heading {
+    color: #08A5E9;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: var(--letter-spacing--0_79, -0.792px);
+    display: flex;
+    justify-content: center;
+    gap: 7.7px;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_content {
+    display: block !important;
+    color: #13143A;
+    text-align: center;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: var(--letter-spacing--0_79, -0.792px);
+    margin-top: 12px;
+  }
+
+  html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_heading>img {
+    transform: inherit;
+  }
+
+  html body[data-funnel-step="payments"] form>div h2+div+div+div {
+    margin-top: 30px;
+  }
+
+  html body[data-funnel-step="payments"] .accordion_heading>img {
+    transform: rotate(-180deg);
+  }
+
+  html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+div+p {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 365px) {
   html body[data-funnel-step="payments"] .accordion_heading {
     color: #08A5E9;
     text-align: center;
     font-size: 16px;
   }
+}
