@@ -1,136 +1,242 @@
-@media screen and (max-width: 768px) {
-    html body[data-funnel-step="payments"] #step-payments #btn-submit {
-        padding: 23px 4px;
-    }
+.Cre_trustpilot-section .trustpilot-header {
+    text-align: center;
+  }
+  
+  .Cre_trustpilot-section .trustpilot-badge {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 23px;
+    gap: 6px;
+    color: #00b67a;
+    font-weight: 600;
+  }
+  
+  .Cre_trustpilot-section .trustpilot-badge img {
+    height: 22px;
+  }
+  
+  .Cre_trustpilot-section .trustpilot-badge .stars {
+    color: #00b67a;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  
+  .Cre_trustpilot-section .trustpilot-badge .rating {
+    color: #fff;
+    background: #00b67a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .Cre_trustpilot-section .headline {
+    color: #FFF;
+text-align: center;
+font-size: 29px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.6px; 
+margin-top: 20px;
+  }
+  
+  .Cre_trustpilot-section .subline {
+    color: #FFF;
+text-align: center;
 
-    html body[data-path="/l/get-your-scores"].cre-t-09 .hero-lp-content .hero-btn_group a {
-        padding: 19px 30px;
-    }
+font-size: 17px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+margin-top: 22px;
+  }
+  
+  .Cre_trustpilot-section .subline a {
+    color: #08A5E9;
 
-    html body .cre_cancelany.mobile-text-added h6 {
-        color: #13143A;
-        text-align: center;
-        font-size: var(--font-size-16, 16px);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 20px;
-        letter-spacing: var(--letter-spacing--0_18, -0.176px);
-    }
+font-size: 17px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+  }
+  
+  .Cre_trustpilot-section .testimonials {
+    margin-top: 45px;
+  }
+  
+  .Cre_trustpilot-section .review {
+    margin-bottom: 44px;
+  }
+  
+  .Cre_trustpilot-section .review .stars {
+    color: #ffb400;
+    font-size: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 
-    html body .cre_cancelany.mobile-text-added p {
-        color: #13143A;
-        font-size: 13px !important;
-        font-style: normal;
-        font-weight: var(--font-weight-400, 400);
-        line-height: 20px;
-        letter-spacing: var(--letter-spacing--0_18, -0.176px);
-        text-align: center !important;
-    }
-
-    html body[data-funnel-step="payments"] .accordion_heading {
-        color: #08A5E9;
-        text-align: center;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        display: flex;
-        justify-content: center;
-        gap: 7.7px;
-        max-width: fit-content;
-        margin: 0 auto;
-    }
-
-    html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_content {
-        display: block !important;
-        color: #13143A;
-        text-align: center;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        margin-top: 12px;
-        text-wrap: pretty;
-    }
-
-    html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_heading>img {
-        transform: inherit;
-    }
-
-    html body[data-funnel-step="payments"] form>div h2+div+div+div {
-        margin-top: 30px;
-    }
-
-    html body[data-funnel-step="payments"] .accordion_heading>img {
-        transform: rotate(-180deg);
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+div+p {
-        display: none;
-    }
-
-    html body[data-funnel-step="payments"] form div>h2+div+div>div {
-        margin-bottom: 9px;
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2 {
-        font-size: 29px;
-        line-height: 33.6px;
-
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+div>span {
-        letter-spacing: -0.79px;
-    }
+  }
+  
+  .Cre_trustpilot-section .review p {
+    color: #FFF;
+    text-align: center;
+    
+    font-size: 17px;
+    font-style: normal;
+    line-height: 24px; 
+    font-weight: 500;
+  }
+  
+  .Cre_trustpilot-section .review .author {
+    display: block;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .Cre_trustpilot-section .more-reviews {
+    color: #08A5E9;
+    text-align: center;
+    
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
+  .Cre_trustpilot-section .more-reviews:hover {
+    text-decoration: underline;
+  }
+  .Cre_morelink{
+    text-align: center;
+  }
+  
 
 
-    html body[data-funnel-step="payments"] #step-payments #btn-submit+.btn-note {
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 24px;
-        letter-spacing: -0.79px;
-        text-align: center;
-        color: #13143A;
-    }
 
-    html body form>div h2+div+div .bg-green-dark+span {
-        font-size: 17px;
-    }
 
-    html body[data-funnel-step="payments"] #step-payments form h2+div {
-        font-size: 17px;
-        font-style: normal;
-        line-height: 24px;
-        letter-spacing: -0.792px;
-        font-weight: 500;
-    }
+  [data-funnel-step="registration-name"] .Cre_trustpilot-section,
+  [data-funnel-step="registration-address"] .Cre_trustpilot-section,
+  [data-funnel-step="registration-email"] .Cre_trustpilot-section,
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section,
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section {
+    background-color: #2E3068;
+  }
+  
+  [data-funnel-step="registration-name"] .Cre_trustpilot-section .trustpilot-header,
+  [data-funnel-step="registration-address"] .Cre_trustpilot-section .trustpilot-header,
+  [data-funnel-step="registration-email"] .Cre_trustpilot-section .trustpilot-header,
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .trustpilot-header,
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .trustpilot-header {
+    display: none;
+  }
+  
+  [data-funnel-step="registration-name"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="registration-address"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="registration-email"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .testimonials {
+    padding: 38px 24px;
+  }
+  
+  [data-funnel-step="registration-name"] .Cre_trustpilot-section .review,
+  [data-funnel-step="registration-address"] .Cre_trustpilot-section .review,
+  [data-funnel-step="registration-email"] .Cre_trustpilot-section .review,
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .review,
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .review,
+  [data-funnel-step="registration-address"] .Cre_morelink,
+  [data-funnel-step="registration-name"] .Cre_morelink,
+  [data-funnel-step="registration-email"] .Cre_morelink,
+  [data-funnel-step="identity-verification"] .Cre_morelink,
+  [data-funnel-step="auth-questions"] .Cre_morelink {
+    display: none;
+    margin-bottom: 28px;
+  }
 
-    html body[data-funnel-step="payments"] .accordion_heading {
-        color: #08A5E9;
-        text-align: center;
-        font-size: 17px;
-    }
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section , 
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section {
+    order: 2;
+    margin-top: 45px;
+}
+[data-funnel-step="identity-verification"] #registration-v2 > div ,
+[data-funnel-step="auth-questions"] #registration-v2 > div{
+    flex-direction: column;
+    display: flex;
+  }
 
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .testimonials , 
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .testimonials {
+    margin-top: 0;
+  }
+
+
+  
+
+[data-funnel-step="registration-name"] .Cre_trustpilot-section .review:first-child {
+  display: block;
+}
+
+[data-funnel-step="registration-address"] .Cre_trustpilot-section .review:nth-child(2) {
+  display: block;
+}
+
+[data-funnel-step="registration-email"] .Cre_trustpilot-section .review:nth-child(3) {
+  display: block;
+}
+[data-funnel-step="identity-verification"] .Cre_trustpilot-section .review:nth-child(4) {
+  display: block;
+}
+[data-funnel-step="auth-questions"] .Cre_trustpilot-section .review:nth-child(5) {
+  display: block;
+}
+.Cre-truspilot a img +img {
+  top: 1px;
+  position: relative;
 }
 
 
-@media screen and (max-width: 365px) {
-    html body[data-funnel-step="payments"] .accordion_heading {
-        font-size: 16px;
-    }
+ 
 
-    html body[data-funnel-step="payments"] #step-payments form h2+div {
-        font-size: 16px;
-    }
 
-    html body form>div h2+div+div .bg-green-dark+span {
-        font-size: 16px;
-    }
 
-    html body[data-funnel-step="payments"] .active.ssc13_accordion .accordion_content {
-        font-size: 16px;
-    }
+
+
+[data-funnel-step="payments"] .Cre_trustpilot-section {
+  display: none;
 
 }
+
+.Cre-truspilot a {
+  display: flex
+;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+}
+.Cre-truspilot span {
+  line-height: 17px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+[data-path="/l/get-your-scores"] .testimonials .Cre-truspilot{
+  display: none;
+}
+.review + .Cre-truspilot a{
+  pointer-events: none;
+}
+.trustpilot-header .Cre-truspilot a img:first-child {
+  position: relative;
+  top: -2px;
+}
+
+@media (max-width: 365px) {
+     [data-funnel-step="registration-name"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="registration-address"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="registration-email"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .testimonials,
+  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .testimonials {
+    padding: 38px 17px;
+  }
+  }

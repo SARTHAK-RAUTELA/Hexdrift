@@ -1,142 +1,86 @@
 (function () {
-  try {
-    var debug = 1;
-    var variation_name = "cre_ggp_br";
-    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-      var interval = setInterval(function () {
-        if (
-          document &&
-          document.querySelector(selector) &&
-          document.querySelectorAll(selector).length > 0
-        ) {
-          clearInterval(interval);
-          trigger();
-        }
-      }, delayInterval);
-      setTimeout(function () {
-        clearInterval(interval);
-      }, delayTimeout);
-    }
-    function live(selector, event, callback, context) {
-      function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent("on" + type, handler);
-        else el.addEventListener(type, handler);
-      }
-      this.Element &&
-        (function (ElementPrototype) {
-          ElementPrototype.matches =
-            ElementPrototype.matches ||
-            ElementPrototype.matchesSelector ||
-            ElementPrototype.webkitMatchesSelector ||
-            ElementPrototype.msMatchesSelector ||
-            function (selector) {
-              var node = this,
-                nodes = (node.parentNode || node.document).querySelectorAll(selector),
-                i = -1;
-              while (nodes[++i] && nodes[i] != node);
-              return !!nodes[i];
-            };
-        })(Element.prototype);
-      function live(selector, event, callback, context) {
-        addEvent(context || document, event, function (e) {
-          var found,
-            el = e.target || e.srcElement;
-          while (el && el.matches && el !== context && !(found = el.matches(selector)))
-            el = el.parentElement;
-          if (found) callback.call(el, e);
-        });
-      }
-      live(selector, event, callback, context);
-    }
-    function addModal() {
-      var modalHtml = `
-        <div class="cre_ggp_br_container cre_ggp_br_hide">
-          <div class="cre_ggp_br_modal_container">
-            <div class="cre_ggp_br_modal_content">
-              <h1 class="cre_ggp_br_title">
-                A GenderGP no Brasil agora se chama Vivuna!
-              </h1>
-              <div class="cre_ggp_br_modal_left">
-                <p class="cre_ggp_br_paragraph">
-                  <b>Estamos ampliando nossa missão de apoiar as pessoas trans no mundo todo</b> e, no Brasil, atuamos com o nome <b>Vivuna.</b>
-                </p>
-                <p class="cre_ggp_br_paragraph">
-                  Descubra nossos serviços e conheça nosso site aqui.
-                </p>
+    try {
+        /* main variables */
+        var debug = 1;
+        var variation_name = "cre-t-16";
 
-                <div class="cre_ggp_br_input_container">
-                  <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/mobile-image_68b17f9a29a97.png">
+        function waitForElement(selector, trigger) {
+            var interval = setInterval(function () {
+                if (
+                    document &&
+                    document.querySelector(selector) &&
+                    document.querySelectorAll(selector).length > 0
+                ) {
+                    clearInterval(interval);
+                    trigger();
+                }
+            }, 50);
+            setTimeout(function () {
+                clearInterval(interval);
+            }, 15000);
+        }
+
+      
+
+        var imageurl = 'https://cdn-3.convertexperiments.com/uf/10007679/10007821/group-48098675_68c79f0c7da42.svg';
+
+        const trustpilotsectionL = `
+        <div class="Cre_trustpilot-section">
+            <div class="trustpilot-header">
+                <div class="Cre-truspilot">
+                    <a href="https://www.trustpilot.com/review/standardscores.com" target="_blank"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/image-33-1_68c79eed713e4.svg"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/image-34-1_68c79effc7d50.svg"> <span>4.7</span></a>
                 </div>
-                
-                <a href="https://vivuna.com.br" target="_blank" class="cre_ggp_br_cta">Continuar</a>
-              </div>
-              <img class="cre_ggp_br_mobile_image" src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/bg-image_68b14abea0013.png">
+                <p class="headline">300,000+ people trust
+                    <br> us to monitor, rebuild
+                    <br> &amp; protect their credit </p>
+                <p class="subline">Rated 4.7 out of 5 stars on <a href="https://www.trustpilot.com/review/standardscores.com" target="_blank">Trustpilot</a> </p>
             </div>
-            <span class="cre_ggp_br_close">
-              <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007617/gender-modal-close.png" alt="close icon">
-            </span>
-          </div>
-        </div>
-      `;
-      if (!document.querySelector(".cre_ggp_br_container")) {
-        document.querySelector(".cre_ggp_br").insertAdjacentHTML("beforeend", modalHtml);
-      }
-    }
-    function mobileModalTrigger() {
-      var modalInterval = setInterval(() => {
-        var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
-        if (!session) {
-          var userEntry = sessionStorage.getItem("cre_ggp_br_user_entered");
-          if (userEntry != null) {
-            var now = new Date();
-            var startTime = parseInt(userEntry);
-            if (startTime + 24000 < now.getTime()) {
-              document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
-              document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
-              clearInterval(modalInterval);
-            }
-          } else {
-            setTimer();
-          }
+            <div class="testimonials">
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“<b>…found disputes in minutes</b> and helped me understand how it affects my credit score.”</p> <span class="author">— <b>Ebony Breedlove,</b> July 25, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“Finding out more about my credit score … and <strong>how I can dispute errors.</strong>”</p> <span class="author">— <b>Valarie Mundia,</b> August 21, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“…explains to me to my <strong>understanding how my credit works.</strong>”</p> <span class="author">— <b>Crystal Estrada,</b> June 18, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“<strong>…nothing short of amazing.</strong>”</p> <span class="author">— <b>Cheryl Lewis,</b> August 18, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“<strong>My experience was wonderful…</strong>”</p> <span class="author">— <b>Mary, </b>July 10, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“Very helpful and <strong>guided me through all the steps</strong>”</p> <span class="author">— <b>Corey Hall,</b> July 07, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“Straightforward… gave me <strong>practical steps without pressure.</strong>”</p> <span class="author">— <b>Reviewer,</b> June 5, 2025</span> </div>
+                <div class="review"> <span class="stars"><img src="${imageurl}"></span>
+                    <p>“<strong>Customer service was great!</strong>”</p> <span class="author">— <b>Kimmi Beverly,</b> August 04, 2025</span> </div>
+                <div class="Cre-truspilot">
+                    <a href="https://www.trustpilot.com/review/standardscores.com" target="_blank"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/image-33-1_68c79eed713e4.svg"> <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007821/image-34-1_68c79effc7d50.svg"> <span>4.7</span></a>
+                </div>
+            </div>
+            <div class="Cre_morelink"> <a href="https://www.trustpilot.com/review/standardscores.com" target="_blank" class="more-reviews">Read more reviews on Trustpilot →</a></div>
+        </div>`;
+        function init() {
+            document.body.classList.add(variation_name);
+
+                waitForElement('.sct-testimonials .container', function () {
+                    if (!document.querySelector('.Cre_trustpilot-section')) {
+                        document.querySelector('.sct-testimonials .container').innerHTML = trustpilotsectionL
+                    }
+                })
+
+            // Add section after #step-registration
+                waitForElement('#step-registration', function () {
+                    if (!document.querySelector('.Cre_trustpilot-section')) {
+                        document.querySelector('#step-registration')
+                            .insertAdjacentHTML('afterend', trustpilotsectionL);
+                    }
+                });
         }
-      }, 50);
+
+        
+
+        waitForElement('body', init);
+
+    } catch (e) {
+        if (debug) console.log(e, "error in Test " + variation_name);
     }
-    function setTimer() {
-      var now = new Date().getTime();
-      sessionStorage.setItem("cre_ggp_br_user_entered", now);
-    }
-    function eventListeners() {
-      if (window.innerWidth < 1150) {
-        mobileModalTrigger();
-      } else {
-        document.body.addEventListener("mouseleave", function (event) {
-          var session = sessionStorage.getItem("cre_ggp_br_modal_triggered");
-          if (event.clientY <= 0 && !session && !document.querySelector(".cre_ggp_br_modal_triggered")) {
-            document.querySelector(".cre_ggp_br_container").classList.remove("cre_ggp_br_hide");
-            document.querySelector("body.cre_ggp_br").classList.add("cre_ggp_br_modal_triggered");
-          }
-        });
-      }
-      live(".cre_ggp_br_container", "click", function (e) {
-        sessionStorage.setItem("cre_ggp_br_modal_triggered", true);
-        if (document.querySelector(".cre_ggp_br_modal_container").contains(e.target)) {
-          if (e.target === document.querySelector(".cre_ggp_br_close")) {
-            document.querySelector(".cre_ggp_br_container").classList.add("cre_ggp_br_hide");
-          }
-        } else {
-          document.querySelector(".cre_ggp_br_container").classList.add("cre_ggp_br_hide");
-        }
-      });
-    }
-    function init() {
-      if (!document.body.classList.contains(variation_name)) {
-        document.body.classList.add(variation_name);
-        addModal();
-        waitForElement(".cre_ggp_br_close", eventListeners, 50, 15000);
-      }
-    }
-    waitForElement("body", init, 50, 25000);
-  } catch (e) {
-    if (debug) console.log(e, "error in Test" + variation_name);
-  }
 })();
