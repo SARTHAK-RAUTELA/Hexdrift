@@ -1,107 +1,262 @@
-@media screen and (max-width:768px) {
+[class*="cobaltized-cost-page-hero_root"] {
+    min-height: auto !important;
+    height: auto !important;
+}
 
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div+p,
-    html body[data-funnel-step="payments"] #step-payments .cre-01-trustpilot-logo+div {
-        display: none !important;
+[class*="cobaltized-cost-page-hero_root"] h2 {
+    font-weight: 900;
+    color: #2F3033;
+}
+
+[class*="cobaltized-cost-page-hero_root"] h1 span {
+    font-weight: 300;
+}
+
+[class*="cobaltized-cost-page-hero_root"] .green {
+    color: #009FD9 !important;
+}
+
+[class*="cobaltized-cost-page-hero_root"] [class*="cobaltized-cost-page-hero_graph"] {
+    visibility: hidden !important;
+}
+
+.banner_img {
+    max-width: 547px;
+    height: 283px;
+    overflow: hidden;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    right: -150px;
+    bottom: -54px;
+    position: absolute;
+    width: 100%;
+}
+
+.custom-toc ul {
+    list-style-type: none;
+    /* Removes the bullets */
+    padding-left: 0;
+    /* Optionally remove left padding */
+    margin-left: 0;
+}
+
+.custom-toc ul li {
+    list-style-type: none;
+    /* Ensures no bullets on list items */
+}
+
+.banner_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-white {
+    position: relative;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 946px;
+    margin: 0 auto;
+    gap: 50px;
+    border-top: 1px solid #e9ebec;
+    padding-top: 25px;
+}
+
+.custom-toc h2 {
+    color: #2F3033;
+    /* font-family: "Thumbtack Rise"; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 1600px) {
+    .banner_img {
+        right: -15%;
+        bottom: -64px;
     }
 
-    html body[data-funnel-step="payments"] #step-payments>h2,
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div+div>span {
-        color: #13143A;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 29.6px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2+div {
-        font-weight: 500;
-        margin-bottom: 18px;
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2 {
-        font-size: 27px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 31.6px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-
-    }
-
-    html body[data-funnel-step="payments"] #step-payments form h2+div+div>div span b {
-        font-weight: 700;
-    }
-
-    html body[data-funnel-step="payments"] #step-payments .cre-01-trustpilot-logo+div+div {
-        color: rgba(75, 75, 128, 0.65);
-    }
-
-    html body[data-funnel-step="payments"] #step-payments #btn-submit {
-        padding: 23px 35px;
-    }
-
-    html body[data-funnel-step="payments"] .cre-01-trustpilot-logo {
-        margin: 0 auto;
-        margin-bottom: 2.25rem;
-        margin-top: 1.25rem;
-    }
-
-    html body[data-funnel-step="payments"] form>div h2+div+div+div {
-        margin-top: 30px;
-    }
-
-    html body form>div h2+div+div .bg-green-dark+span {
-        font-size: 16.8px;
-        font-style: normal;
-        line-height: 24px;
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-        font-weight: 500;
-    }
-
-    html body[data-funnel-step="payments"] form>div h2+div+div+div>div img {
+    #Table\ of\ Contents,
+    #Table\ of\ Contents+ul {
         display: none;
     }
 
-    html body[data-funnel-step="payments"] form>div h2+div+div+div>div {
-        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2223%22%20viewBox%3D%220%200%2018%2023%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M9%2023C6.39375%2022.3292%204.24219%2020.8006%202.54531%2018.4144C0.848437%2016.0281%200%2013.3783%200%2010.465V3.45L9%200L18%203.45V10.465C18%2013.3783%2017.1516%2016.0281%2015.4547%2018.4144C13.7578%2020.8006%2011.6062%2022.3292%209%2023ZM6.75%2016.1H11.25C11.5687%2016.1%2011.8359%2015.9898%2012.0516%2015.7694C12.2672%2015.549%2012.375%2015.2758%2012.375%2014.95V11.5C12.375%2011.1742%2012.2672%2010.901%2012.0516%2010.6806C11.8359%2010.4602%2011.5687%2010.35%2011.25%2010.35V9.2C11.25%208.5675%2011.0297%208.02604%2010.5891%207.57562C10.1484%207.12521%209.61875%206.9%209%206.9C8.38125%206.9%207.85156%207.12521%207.41094%207.57562C6.97031%208.02604%206.75%208.5675%206.75%209.2V10.35C6.43125%2010.35%206.16406%2010.4602%205.94844%2010.6806C5.73281%2010.901%205.625%2011.1742%205.625%2011.5V14.95C5.625%2015.2758%205.73281%2015.549%205.94844%2015.7694C6.16406%2015.9898%206.43125%2016.1%206.75%2016.1ZM7.875%2010.35V9.2C7.875%208.87417%207.98281%208.60104%208.19844%208.38062C8.41406%208.16021%208.68125%208.05%209%208.05C9.31875%208.05%209.58594%208.16021%209.80156%208.38062C10.0172%208.60104%2010.125%208.87417%2010.125%209.2V10.35H7.875Z%22%20fill%3D%22%23228BE6%22%2F%3E%3C%2Fsvg%3E");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 20px;
-    }
-
-    html body[data-funnel-step="payments"] form div>h2+div+div .bg-green-dark {
-        background: url(https://cdn-3.convertexperiments.com/uf/10007679/10007821/checkmark_6895dda1105b1.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 20px;
-    }
-
-    html body[data-funnel-step="payments"] form div>h2+div+div .bg-green-dark img {
-        display: none !important;
-    }
-
-    html body[data-funnel-step="payments"] #btn-submit>span {
-        color: #13143A;
-        text-align: center;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 29.6px;
-        /* 118.4% */
-        letter-spacing: var(--letter-spacing--0_79, -0.792px);
-    }
 
 }
 
-@media screen and (max-width:375px) {
-    html body[data-funnel-step="payments"] #step-payments>h2 {
-        font-size: 18px;
+.bg-gray-200 [class*="Wrap_root"] {
+    position: relative;
+}
+
+[class*="cobaltized-cost-page-hero_stickyHeader"]+p[class*="Type_text2"] {
+    display: none;
+}
+
+.custom-wrap {
+    width: 66%;
+}
+
+.custom-toc {
+    width: 34%;
+}
+
+.moved-toc-mobile:before {
+    content: "Table of Contents";
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.moved-toc-mobile {
+    margin-bottom: 30px !important;
+}
+
+[class*="cobaltized-cost-page-hero_root"] {
+    margin-bottom: 0 !important;
+}
+
+.custom-wrap [id="Table of Contents"] {
+    display: none;
+    ;
+}
+
+.custom-wrap [id="Table of Contents"]+ul {
+    display: none;
+    ;
+}
+
+[class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    content: " ";
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    border-radius: 100px;
+}
+
+.Thumbtack_Staff [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://production-next-images-cdn.thumbtack.com/i/522528727836483603');
+    background-size: cover;
+}
+
+[class*="composable-customer-header_root"]+.mb6>div:nth-child(4) {
+    padding-left: 40px;
+    position: relative;
+}
+
+.Kristy_Snyder [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://cdn.optimizely.com/img/20611073899/183677312a214cc4aa1047c11a25ac53.png');
+    background-size: cover;
+}
+
+.Melanie_Fourie [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://cdn.optimizely.com/img/20611073899/7ccf78555e6440e388a33dfb8206178f.png');
+    background-size: cover;
+}
+
+.Nicki_Escudero [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://production-next-images-cdn.thumbtack.com/i/522538471725907978');
+    background-size: cover;
+}
+
+.Sydney_Champion [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg');
+    background-size: cover;
+}
+
+.Kathleen_Allardyce [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://production-next-images-cdn.thumbtack.com/i/522528727836483603');
+    background-size: cover;
+}
+
+.Chris_Davaa [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://cdn.optimizely.com/img/20611073899/25292421492643be914e6589cd3dd5fd.jpg');
+    background-size: cover;
+}
+
+.Daniel_Jones [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+    background-image: url('https://cdn.optimizely.com/img/20611073899/7ce7e8fd6f854b02ace82e59be6fad09.png');
+    background-size: cover;
+}
+
+[class*="composable-customer-header_root"]+.mb6>div:nth-child(2) {
+    margin-top: 9px;
+}
+
+@media screen and (max-width: 1024px) {
+    [class*="cobaltized-cost-page-hero_redesignRoot"] {
+        height: auto !important;
     }
 
-    html body[data-funnel-step="payments"] #step-payments form h2 {
-        font-size: 25px;
+    [class*="cobaltized-cost-page-hero_redesignRoot"]>div:first-child {
+        margin-bottom: 40px !important;
+        display: flex;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"]>div:first-child h2 {
+        order: 1;
+        margin-top: 16px;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"] [class*="cobaltized-cost-page-hero_zipForm"] {
+        order: 3;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"] [class*="Type_text2"] {
+        order: 2;
+        padding-top: 0 !important;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"] .br-pill {
+        display: none;
+    }
+
+    [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+        left: 9px;
+    }
+
+    [class*="composable-customer-header_root"]+.mb6>div:nth-child(4) {
+        padding-left: 45px;
+    }
+
+    .moved-toc-mobile {
+        padding-left: 13px;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"]>div:first-child+div {
+        margin-bottom: 49px;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"]>div:first-child[class*="cobaltized-cost-page-hero_stickyHeader"] {
+        display: inline-block;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"] .br-pill+h2 {
+        margin-top: 20px;
+    }
+
+    [class*="cobaltized-cost-page-hero_redesignRoot"] .br-pill+h2 span {
+        display: block;
+    }
+
+    [class*="cobaltized-cost-page-hero_navButton"] {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    [class*="composable-customer-header_root"]+.mb6>div:first-child {
+        padding-bottom: 50px !important;
     }
 }

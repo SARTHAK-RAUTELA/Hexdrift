@@ -1,242 +1,618 @@
-.Cre_trustpilot-section .trustpilot-header {
+/* Hero Adjustments */
+
+
+html body[data-path="/"] [data-attribe="booking_details_section"] {
+    display: none;
+}
+
+html body[data-path="/"] [data-attribute="featured-cities"] {
+    display: none;
+}
+
+html body[data-path="/"] [data-attribute="join-first-table-section"] {
+    display: none;
+}
+
+html body[data-path="/"] [data-attribute="our-story"] {
+    display: none;
+}
+
+
+html body[data-path="/"] [data-attribute="hero-dropdown"] {
+    min-height: 325px;
+    padding-bottom: 40px;
     text-align: center;
-  }
-  
-  .Cre_trustpilot-section .trustpilot-badge {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    margin-bottom: 23px;
-    gap: 6px;
-    color: #00b67a;
-    font-weight: 600;
-  }
-  
-  .Cre_trustpilot-section .trustpilot-badge img {
-    height: 22px;
-  }
-  
-  .Cre_trustpilot-section .trustpilot-badge .stars {
-    color: #00b67a;
-    font-size: 18px;
-    letter-spacing: 1px;
-  }
-  
-  .Cre_trustpilot-section .trustpilot-badge .rating {
-    color: #fff;
-    background: #00b67a;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .Cre_trustpilot-section .headline {
-    color: #FFF;
-text-align: center;
-font-size: 29px;
-font-style: normal;
-font-weight: 700;
-line-height: 33.6px; 
-margin-top: 20px;
-  }
-  
-  .Cre_trustpilot-section .subline {
-    color: #FFF;
-text-align: center;
+}
 
-font-size: 17px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px;
-margin-top: 22px;
-  }
-  
-  .Cre_trustpilot-section .subline a {
-    color: #08A5E9;
+html body[data-path="/"] [data-attribute="hero-dropdown"] h1[data-textnodetype="h1"] {
+    font-size: 44px;
+    font-weight: 400;
+    max-width: 822px;
+    display: inline-block;
+}
 
-font-size: 17px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px;
-  }
-  
-  .Cre_trustpilot-section .testimonials {
-    margin-top: 45px;
-  }
-  
-  .Cre_trustpilot-section .review {
-    margin-bottom: 44px;
-  }
-  
-  .Cre_trustpilot-section .review .stars {
-    color: #ffb400;
+
+html body[data-path="/"] [data-attribute="hero-dropdown"] span.cre-t-111-text-underline {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+html body[data-path="/"] [data-attribute="hero-dropdown"] span.cre-t-111-text-underline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background-image: url('https://cdn-3.convertexperiments.com/uf/10007679/10007713/redline-icon_68bab0aeb8080.svg');
+    z-index: -1;
+    background-size: auto 100%;
+}
+
+
+
+
+html body[data-path="/"] [data-attribute="hero-dropdown"] p[data-textnodetype="p"] {
     font-size: 16px;
-    margin-bottom: 6px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
+    font-weight: 400;
+    max-width: 802px;
+    margin: 0px auto 23px;
+}
 
-  }
-  
-  .Cre_trustpilot-section .review p {
-    color: #FFF;
-    text-align: center;
-    
-    font-size: 17px;
-    font-style: normal;
-    line-height: 24px; 
-    font-weight: 500;
-  }
-  
-  .Cre_trustpilot-section .review .author {
-    display: block;
-    font-size: 17px;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .Cre_trustpilot-section .more-reviews {
-    color: #08A5E9;
-    text-align: center;
-    
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  
-  .Cre_trustpilot-section .more-reviews:hover {
-    text-decoration: underline;
-  }
-  .Cre_morelink{
-    text-align: center;
-  }
-  
+html body[data-path="/"] section[data-attribute="hero-background-image"] {
+    padding-bottom: 0;
+    margin-bottom: 72px;
+    max-height: 325px;
+    min-height: 325px;
+}
 
 
 
 
-  [data-funnel-step="registration-name"] .Cre_trustpilot-section,
-  [data-funnel-step="registration-address"] .Cre_trustpilot-section,
-  [data-funnel-step="registration-email"] .Cre_trustpilot-section,
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section,
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section {
-    background-color: #2E3068;
-  }
-  
-  [data-funnel-step="registration-name"] .Cre_trustpilot-section .trustpilot-header,
-  [data-funnel-step="registration-address"] .Cre_trustpilot-section .trustpilot-header,
-  [data-funnel-step="registration-email"] .Cre_trustpilot-section .trustpilot-header,
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .trustpilot-header,
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .trustpilot-header {
+
+
+
+html body[data-path="/"] section[data-attribute="hero-background-image"] div.gMqQtX {
     display: none;
-  }
-  
-  [data-funnel-step="registration-name"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="registration-address"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="registration-email"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .testimonials {
-    padding: 38px 24px;
-  }
-  
-  [data-funnel-step="registration-name"] .Cre_trustpilot-section .review,
-  [data-funnel-step="registration-address"] .Cre_trustpilot-section .review,
-  [data-funnel-step="registration-email"] .Cre_trustpilot-section .review,
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .review,
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .review,
-  [data-funnel-step="registration-address"] .Cre_morelink,
-  [data-funnel-step="registration-name"] .Cre_morelink,
-  [data-funnel-step="registration-email"] .Cre_morelink,
-  [data-funnel-step="identity-verification"] .Cre_morelink,
-  [data-funnel-step="auth-questions"] .Cre_morelink {
-    display: none;
-    margin-bottom: 28px;
-  }
-
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section , 
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section {
-    order: 2;
-    margin-top: 45px;
 }
-[data-funnel-step="identity-verification"] #registration-v2 > div ,
-[data-funnel-step="auth-questions"] #registration-v2 > div{
-    flex-direction: column;
+
+html body[data-path="/"] [data-attribute="navigation-home"] {
+    margin-bottom: 0px;
+}
+
+
+html body[data-path="/"] [data-attribute="hero-dropdown"] [data-crid="Main_Search_form"] div[display="block,flex"] {
+    border-radius: 5px;
+    background: var(--color-white-solid, #FFF);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+
+
+html body[data-path="/"] .cre-t-107-top-restaurants-container[data-region="Auckland"] {
+    padding-top: 50px;
+}
+
+
+html body[data-path="/"] .cre-t-107-top-restaurants-container[data-region="Queenstown-Lakes"] {
+    padding-bottom: 133px;
+}
+
+
+
+
+
+
+
+
+
+/* ***************************************************************************************** */
+/* ***************************************************************************************** */
+/* **************************  FST-107 TOP RESTAURANTS SLIDER  **************************** */
+/* ***************************************************************************************** */
+/* ***************************************************************************************** */
+
+
+html body[data-path="/"] .cre-t-107-top-restaurants-container[data-region="auckland"] {
+    margin-top: 100px;
+}
+
+/* Card Adjustments */
+html body[data-path="/"] .cre-t-107-top-restaurants-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 16px 38px 16px;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-slider-container {
+    padding: 0 5px;
+    position: relative;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-section-header-container {
     display: flex;
-  }
-
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .testimonials , 
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .testimonials {
-    margin-top: 0;
-  }
-
-
-  
-
-[data-funnel-step="registration-name"] .Cre_trustpilot-section .review:first-child {
-  display: block;
-}
-
-[data-funnel-step="registration-address"] .Cre_trustpilot-section .review:nth-child(2) {
-  display: block;
-}
-
-[data-funnel-step="registration-email"] .Cre_trustpilot-section .review:nth-child(3) {
-  display: block;
-}
-[data-funnel-step="identity-verification"] .Cre_trustpilot-section .review:nth-child(4) {
-  display: block;
-}
-[data-funnel-step="auth-questions"] .Cre_trustpilot-section .review:nth-child(5) {
-  display: block;
-}
-.Cre-truspilot a img +img {
-  top: 1px;
-  position: relative;
-}
-
-
- 
-
-
-
-
-
-[data-funnel-step="payments"] .Cre_trustpilot-section {
-  display: none;
-
-}
-
-.Cre-truspilot a {
-  display: flex
-;
+    justify-content: space-between;
     align-items: center;
-    gap: 7px;
-    justify-content: center;
-}
-.Cre-truspilot span {
-  line-height: 17px;
-  font-size: 15px;
-  color: #fff;
-  font-weight: 500;
-}
-[data-path="/l/get-your-scores"] .testimonials .Cre-truspilot{
-  display: none;
-}
-.review + .Cre-truspilot a{
-  pointer-events: none;
-}
-.trustpilot-header .Cre-truspilot a img:first-child {
-  position: relative;
-  top: -2px;
+    margin-bottom: 16px;
 }
 
-@media (max-width: 365px) {
-     [data-funnel-step="registration-name"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="registration-address"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="registration-email"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="identity-verification"] .Cre_trustpilot-section .testimonials,
-  [data-funnel-step="auth-questions"] .Cre_trustpilot-section .testimonials {
-    padding: 38px 17px;
-  }
-  }
+html body[data-path="/"] .cre-t-107-top-restaurants-card {
+    max-width: 212px;
+    /* flex: 1 1 212px; */
+    flex: 0 0 auto;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-image-wrapper {
+    max-width: 212px;
+    height: 150px;
+    width: 100%;
+    /* border-radius: 5px 5px 0 0; */
+
+}
+
+html body[data-path="/"] img.cre-t-107-top-restaurants-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-content {
+    padding: 14px 17px;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-name {
+    color: #272B2E;
+    /* font-family: "Open Sans"; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.672px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+html body[data-path="/"] span.cre-t-107-top-restaurants-card-restaurant-rating-value {
+    color: #272B2E;
+    /* font-family: var(--font-family-Font-2, "Open Sans"); */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px
+}
+
+html body[data-path="/"] span.cre-t-107-top-restaurants-card-restaurant-rating-count {
+    color: #272B2E;
+    /* font-family: var(--font-family-Font-2, "Open Sans"); */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-rating-stars {
+    max-width: 62px;
+    min-height: 10px;
+    display: flex;
+}
+
+
+html body[data-path="/"] .cre-t-107-top-restaurants-section-header-title {
+    color: #333;
+    font-family: var(--font-abril-fatface), serif;
+    font-size: 28px;
+    font-style: normal;
+}
+
+html body[data-path="/"] a.cre-t-107-top-restaurants-section-header-subtitle {
+    color: #265682;
+    /* font-family: var(--font-family-Font-2, "Open Sans"); */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    padding-right: 22px;
+    font-family: var(--font-open-sans), sans-serif;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-location,
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-cuisines {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-location-text,
+html body[data-path="/"] .cre-t-107-top-restaurants-card-restaurant-cuisine-text {
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #99A3AB;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* Swiper CSS */
+
+
+/* .mainSwiper107 .swiper {
+    padding: 0 15px;
+    overflow: hidden;
+} */
+
+
+html body[data-path="/"] .mainSwiper107 .swiper-wrapper[aria-live="polite"] {
+    overflow: visible;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html body[data-path="/"] svg.swiper-navigation-icon {
+    display: none;
+}
+
+/* .swiper.cre-t-107-swiper.mainSwiper107 {
+    padding: 0 10px;
+} */
+
+
+
+
+/* Swiper navigation styles */
+html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-next,
+html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-prev {
+    z-index: 99999 !important;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #272B2E;
+
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-next {
+    right: -8px;
+    left: auto;
+    top: 30%;
+}
+
+html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-prev {
+    left: -15px;
+    right: auto;
+    top: 30%;
+}
+
+html body[data-path="/"] .swiper-button-prev.cre-t-107-swiper-button-prev::after,
+html body[data-path="/"] .swiper-button-next.cre-t-107-swiper-button-next::after {
+    font-size: 15px;
+}
+
+
+html body[data-path="/"] .swiper-button-prev.swiper-button-prev.cre-t-107-swiper-button-prev.swiper-button-disabled,
+html body[data-path="/"] .swiper-button-next.swiper-button-next.cre-t-107-swiper-button-next.swiper-button-disabled {
+    display: none;
+}
+
+/* .mainSwiper107 .swiper-button-disabled {
+    display: none;
+} */
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    /* Separator Design Adjustments */
+
+    html body[data-path="/"] [data-crid="Main_Search_Region"] .css-17cpzoy-control {
+        padding: 0px 0px 0px 0px;
+    }
+
+    html body[data-path="/"] [data-crid="Main_Search_Region"] .css-1p4big6-control {
+        padding: 0px 0px 0px 0px;
+    }
+
+
+    html body[data-path="/"] [data-crid="Main_Search_Region"] .css-tlfecz-indicatorContainer {
+        padding: 8px 0px 8px 8px;
+    }
+
+    html body[data-path="/"] [data-crid="Main_Search_Region"] .css-1gtu0rj-indicatorContainer {
+        padding: 8px 0px 8px 8px;
+    }
+
+    html body[data-path="/"] [data-crid="Main_Search_Region"] .css-1sbz417-control {
+        padding: 0;
+    }
+
+    html body[data-path="/"] [data-crid="Main_Search_Region"] .css-4awlod-control {
+        padding: 0px
+    }
+
+
+    /* Hero Adjustments Media************************************************** */
+
+
+    html body[data-path="/"] [data-attribute="hero-dropdown"] h1[data-textnodetype="h1"] {
+        font-size: 40px;
+        line-height: 53px;
+        margin-bottom: 16px;
+    }
+
+
+    html body[data-path="/"] [data-attribute="navigation-home"] {
+        margin-bottom: 10px;
+    }
+
+
+    html body[data-path="/"] [data-attribute="hero-dropdown"] [role="separator"] {
+        height: 1px;
+        /* width: calc(100% - 40px); */
+        margin: 0 auto;
+    }
+
+
+    html body[data-path="/"] [data-attribute="hero-dropdown"] [data-testid="search__button"] {
+        margin-top: 10px
+    }
+
+
+    html body[data-path="/"] section[data-attribute="hero-background-image"] {
+        /* max-height: 436px; */
+        min-height: 436px;
+    }
+
+    html body[data-path="/"] [data-attribute="hero-dropdown"] [data-crid="Main_Search_form"] div[display="block,flex"] {
+        box-shadow: none;
+    }
+
+
+    html body[data-path="/"] [data-crid="Main_Search_form"] {
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    }
+
+
+
+
+
+
+
+
+
+
+    /* Swiper navigation styles */
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-next,
+    html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-prev {
+        width: 21px;
+        height: 21px;
+        display: none;
+    }
+
+    html body[data-path="/"] .swiper-button-prev.cre-t-107-swiper-button-prev::after,
+    html body[data-path="/"] .swiper-button-next.cre-t-107-swiper-button-next::after {
+        font-size: 8px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-next {
+        right: -9px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-slider-container .cre-t-107-swiper-button-prev {
+        left: -7px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-section-header-title {
+        font-size: 20px;
+        max-width: 280px;
+        line-height: normal;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-section-header-container {
+        margin-bottom: 30px;
+        align-items: flex-start;
+    }
+
+
+
+    html body[data-path="/"] a.cre-t-107-top-restaurants-section-header-subtitle {
+        padding-right: 0;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-slider-container {
+        padding: 0;
+    }
+
+
+    html body[data-path="/"] .swiper.cre-t-107-swiper.mainSwiper107 {
+        padding: 0;
+    }
+
+    html body[data-path="/"] .mainSwiper107 .swiper-wrapper[aria-live="polite"] {
+        padding-left: 5px;
+    }
+
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-card-content {
+        padding: 10px 10px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-card-image-wrapper {
+        /* max-width: 143px; */
+        height: 123px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-container {
+        padding: 0 16px 20px 16px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-container[data-region="Queenstown-Lakes"] {
+        padding-bottom: 60px;
+    }
+}
+
+
+@media screen and (min-width: 419px) and (max-width: 446px) {
+    html body[data-path="/"] section[data-attribute="hero-background-image"] {
+        max-height: 375px;
+        min-height: 375px;
+        margin-bottom: 60px;
+    }
+
+    html body[data-path="/"] [data-attribute="hero-dropdown"] {
+        min-height: 325px;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 590px) {
+    html body[data-path="/"] [data-attribute="hero-dropdown"] h1[data-textnodetype="h1"] {
+        font-size: 30px
+    }
+}
+
+
+@media screen and (min-width: 447px) and (max-width: 767px) {
+    html body[data-path="/"] section[data-attribute="hero-background-image"] {
+        max-height: 325px;
+        min-height: 325px;
+    }
+
+    html body[data-path="/"] .cre-t-107-top-restaurants-container[data-region="auckland"] {
+        padding-top: 50px;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 870px) {
+    html body[data-path="/"] [data-attribute="hero-dropdown"] h1[data-textnodetype="h1"] {
+        font-size: 40px;
+        font-weight: 400;
+        max-width: 822px;
+        justify-content: center;
+    }
+
+    html body[data-path="/"] [data-attribute="hero-dropdown"] p[data-textnodetype="p"] {
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+
+/* Skeleton****************************************** */
+
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .cre-t-107-top-restaurants-cards {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+}
+
+
+html body[data-path="/"] .cre-t-107-loader-wrapper.loader-hidden {
+    display: none;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 16px 38px 16px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-card {
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-image {
+    width: 100%;
+    height: 150px;
+    background: #e0e0e0;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-text,
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-link {
+    height: 14px;
+    background: #e0e0e0;
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-title {
+    width: 40%;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-link {
+    width: 10%;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-rating {
+    width: 40%;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-location {
+    width: 50%;
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-cuisine {
+    width: 45%;
+}
+
+/* Optional shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: -300px 0;
+    }
+
+    100% {
+        background-position: 300px 0;
+    }
+}
+
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-card,
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-text,
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-image,
+html body[data-path="/"] .cre-t-107-loader-wrapper .skeleton-link {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 300px 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
