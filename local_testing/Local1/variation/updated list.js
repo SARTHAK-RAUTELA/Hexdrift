@@ -106,82 +106,94 @@
 
     function customGoal() {
       // SFG20 Standard
-      helper.live('#mega_loop_1 .cre-t-50-header-text', 'mouseover', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036704"]);
-      })
+      helper.live("#mega_loop_1 .cre-t-50-header-text", "mouseover", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036704"]);
+      });
       // Software
-      helper.live('#mega_loop_2 .cre-t-50-header-text', 'mouseover', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036705"]);
-      })
+      helper.live("#mega_loop_2 .cre-t-50-header-text", "mouseover", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036705"]);
+      });
 
-      //  What is SFG menu 
-      helper.live('[data-id="the_sfg20_standard"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036706"]);
-      })
+      //  What is SFG menu
+      helper.live('[data-id="the_sfg20_standard"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036706"]);
+      });
       //  Maintenance Schedules
-      helper.live('[data-id="maintenance_schedules"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036708"]);
-      })
+      helper.live('[data-id="maintenance_schedules"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036708"]);
+      });
 
-      //  SFG20 Licensed Companies 
-      helper.live('.cre-t-68-licensed', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036710"]);
-      })
-
-
+      //  SFG20 Licensed Companies
+      helper.live(".cre-t-68-licensed", "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036710"]);
+      });
 
       //  Software content goal for variation and control
       //  [data-id="facilities_iq"]
-      helper.live('a[data-id="facilities_iq"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036707"]);
-      })
+      helper.live('a[data-id="facilities_iq"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036707"]);
+      });
 
       //  SFG20 Mobiliser  only for variation
-      helper.live('.cre-t-68-software', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036709"]);
-      })
+      helper.live(".cre-t-68-software", "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036709"]);
+      });
 
       //  [data-id="integration_with_fm_systems"]
-      helper.live('[data-id="integration_with_fm_systems"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036711"]);
-      })
-
-
+      helper.live('[data-id="integration_with_fm_systems"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036711"]);
+      });
 
       //  Industry Content Goal for variation and control
       //  Healthcare
-      helper.live('a[data-id="healthcare"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036712"]);
-      })
+      helper.live('a[data-id="healthcare"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036712"]);
+      });
 
       //  [data-id="education"]
-      helper.live('a[data-id="education"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036713"]);
-      })
+      helper.live('a[data-id="education"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036713"]);
+      });
       // data-id="facilities_management"
-      helper.live('a[data-id="facilities_management"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036714"]);
-      })
+      helper.live('a[data-id="facilities_management"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036714"]);
+      });
       //  data-id="government"
-      helper.live('a[data-id="government"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036715"]);
-      })
+      helper.live('a[data-id="government"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036715"]);
+      });
       //  data-id="sports"
-      helper.live('a[data-id="sports"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036716"]);
-      })
+      helper.live('a[data-id="sports"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036716"]);
+      });
       //  data-id="hvac"
-      helper.live('a[data-id="hvac"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036717"]);
-      })
+      helper.live('a[data-id="hvac"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036717"]);
+      });
       // data-id="residential"
-      helper.live('a[data-id="residential"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036718"]);
-      })
+      helper.live('a[data-id="residential"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036718"]);
+      });
       //  data-id="other_industries"
-      helper.live('a[data-id="other_industries"]', 'click', function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036719"]);
-      })
+      helper.live('a[data-id="other_industries"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036719"]);
+      });
     }
 
     function htmlInsertion() {
@@ -244,51 +256,49 @@
     function textChangeAndUrl() {
       setTimeout(() => {
         const htmlElementNew = `<li class="cre-t-68-licensed-li  nav-items main-link hs-item-has-children">
-        <a href="https://www.sfg20.co.uk/sfg20-digital-badge" class="cre-t-68-licensed child-menu-item" data-id="accessing_the_schedules_licensed">
-            SFG20 Licensed Companies 
-            <span style="color:rgba(29, 113, 166, 1.0);background: rgba(210, 228, 238, 1.0);" class="bookmark-text cre-t-68-new">New</span>
-          </a>
-    </li>`;
+          <a href="https://www.sfg20.co.uk/sfg20-digital-badge" class="cre-t-68-licensed child-menu-item" data-id="accessing_the_schedules_licensed">
+              SFG20 Licensed Companies 
+              <span style="color:rgba(29, 113, 166, 1.0);background: rgba(210, 228, 238, 1.0);" class="bookmark-text cre-t-68-new">New</span>
+            </a>
+      </li>`;
 
         const htmlElementNew2 = `<li class="cre-t-68-mobility nav-items main-link hs-item-has-children"><a href="https://www.sfg20.co.uk/facilities-iq/mobiliser" class="cre-t-68-software child-menu-item" data-id="accessing_the_schedules">
-        SFG20 Mobiliser
-        <span style="color:rgba(29, 113, 166, 1.0);background: rgba(210, 228, 238, 1.0);" class="bookmark-text cre-t-68-new">New</span>
-      </a></li>`;
+          SFG20 Mobiliser
+          <span style="color:rgba(29, 113, 166, 1.0);background: rgba(210, 228, 238, 1.0);" class="bookmark-text cre-t-68-new">New</span>
+        </a></li>`;
 
         // Only insert the first element if no ".cre-t-68-new" exists anywhere on the page
         if (!document.querySelector(".cre-t-68-new")) {
-          document.querySelectorAll(".cre-t-68-accessing_the_schedules").forEach(el => {
+          document.querySelectorAll(".cre-t-68-accessing_the_schedules").forEach((el) => {
             el.insertAdjacentHTML("beforebegin", htmlElementNew);
           });
         }
 
         // Insert the second element before every matching target
-        document.querySelectorAll(".cre-t-68-features_undefined_benefits").forEach(el => {
+        document.querySelectorAll(".cre-t-68-features_undefined_benefits").forEach((el) => {
           el.insertAdjacentHTML("beforebegin", htmlElementNew2);
         });
       }, 1000);
 
-      document.querySelectorAll('[data-id="the_sfg20_standard"]').forEach(el => {
+      document.querySelectorAll('[data-id="the_sfg20_standard"]').forEach((el) => {
         el.textContent = "What is SFG20";
       });
-      document.querySelectorAll('[data-id="integration_with_fm_systems"]').forEach(el => {
+      document.querySelectorAll('[data-id="integration_with_fm_systems"]').forEach((el) => {
         el.textContent = "Integrations";
       });
 
-
-      document.querySelectorAll('[data-id="maintenance_schedules"]').forEach(el => {
-        if (el.tagName === 'A') {
+      document.querySelectorAll('[data-id="maintenance_schedules"]').forEach((el) => {
+        if (el.tagName === "A") {
           el.href = "https://www.sfg20.co.uk/maintenance-schedules";
         }
       });
 
-
+      document.querySelector(".cre-t-68-what-is-sfg20 .submenu-parent-title").textContent = "SFG20 Standard";
+      // document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(2) > .nav-link-wrap  a.nav-link").textContent = "Software";
     }
 
-
     function forMobileUrlAndTextChange() {
-
-      var submenuTitlesMobile1 = document.querySelectorAll('.header-mobile .nav-drill-inner > ul.nav-items > li:nth-child(1) > ul li.hs-menu-depth-2 > div a')
+      var submenuTitlesMobile1 = document.querySelectorAll(".header-mobile .nav-drill-inner > ul.nav-items > li:nth-child(1) > ul li.hs-menu-depth-2 > div a");
 
       submenuTitlesMobile1.forEach((submenuTitle) => {
         const textContent = submenuTitle.textContent.trim();
@@ -302,7 +312,7 @@
         }
       });
 
-      var submenuTitlesMobile2 = document.querySelectorAll('.header-mobile .nav-drill-inner > ul.nav-items > li:nth-child(2) > ul li.hs-menu-depth-2 > div a')
+      var submenuTitlesMobile2 = document.querySelectorAll(".header-mobile .nav-drill-inner > ul.nav-items > li:nth-child(2) > ul li.hs-menu-depth-2 > div a");
 
       submenuTitlesMobile2.forEach((submenuTitle) => {
         const textContent = submenuTitle.textContent.trim();
@@ -317,12 +327,12 @@
       });
 
       setTimeout(() => {
-        document.querySelector('.header-mobile .cre-t-68-fm-providers').insertAdjacentElement("beforebegin", document.querySelector('.header-mobile .cre-t-68-industry-content'));
-        document.querySelector('.header-mobile .nav-level-1 > .nav-item:nth-child(2)').insertAdjacentElement("beforeend", document.querySelector('.header-mobile .cre-t-68-software'));
+        document.querySelector(".header-mobile .cre-t-68-fm-providers").insertAdjacentElement("beforebegin", document.querySelector(".header-mobile .cre-t-68-industry-content"));
+        document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(2)").insertAdjacentElement("beforeend", document.querySelector(".header-mobile .cre-t-68-software"));
       }, 1000);
 
-      document.querySelector('.header-mobile .nav-level-1 > .nav-item:nth-child(1) > .nav-link-wrap  a.nav-link').textContent = "SFG20 Standard";
-      document.querySelector('.header-mobile .nav-level-1 > .nav-item:nth-child(2) > .nav-link-wrap  a.nav-link').textContent = "Software";
+      document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(1) > .nav-link-wrap  a.nav-link").textContent = "SFG20 Standard";
+      document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(2) > .nav-link-wrap  a.nav-link").textContent = "Software";
     }
     /* Variation Init */
     function init() {
@@ -331,13 +341,6 @@
       textChangeAndUrl();
       forMobileUrlAndTextChange();
       customGoal();
-      // eventHandler();
-      // if(window.innerWidth < 1198){
-      //   helper.live('.header-mobile .nav-level-1 > .nav-item:nth-child(2)', 'click', function () {
-      //     console.log("clicked");
-      //     document.querySelector('.header-mobile li.cre-t-68-software').click()
-      //   })
-      // }
     }
 
     /* Initialize variation */

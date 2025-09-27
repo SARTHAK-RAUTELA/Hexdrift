@@ -164,3 +164,12 @@ html body.cre-t-68 .header-desktop .cre-t-68-industry-content {
     }
 
 }
+
+html body.cre-t-68 .child-items .cre-t-68-software .submenu-items-menu .cre-t-68-mobility,
+html body.cre-t-68 ul.open li.nav-items.main-link.cre-t-68-mobility {
+    display: none;
+}
+
+html body.cre-t-68 ul.open li.nav-items.main-link.cre-t-68-facilities_iq {
+    text-transform: none;
+}
