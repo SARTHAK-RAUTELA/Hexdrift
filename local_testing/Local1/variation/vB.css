@@ -1,464 +1,166 @@
-test-32-button-container.cre-t-32-button-container {
+html body.cre-t-68 .cre-t-68-fm-providers {
+    display: none !important;
+}
+
+html body.cre-t-68 .cre-t-68-maintenance-schedules {
+    display: none !important;
+}
+
+html body.cre-t-68 .cre-t-68-who_we_help {
+    display: none !important;
+}
+
+html body.cre-t-68 .cre-t-68-accessing_the_schedules {
+    display: none !important;
+}
+
+html body.cre-t-68 #mega_loop_2 .dropdown-content .graphic-image-menu {
+    display: none !important;
+}
+
+.cre-t-68-features_undefined_benefits {
+    display: none !important;
+}
+
+html body.cre-t-68 #mega_loop_1 .cre-t-50-header-text {
+    font-size: 0;
     display: flex;
-    gap: 30px;
+    justify-content: flex-start;
 }
 
-html body.cre-t-32 breedcontainer {
-    position: relative;
+html body.cre-t-68 #mega_loop_2 .cre-t-50-header-text {
+    font-size: 0;
     display: flex;
-    align-items: center;
-    cursor: pointer;
-    min-width: 282px;
+
 }
 
-html body.cre-t-32[data-active-tab="all-pets"] .cre-t-32-breed-container select.cre-t-32-select-breed,
-html body.cre-t-32 .cre-t-32-arrow-container {
-    pointer-events: none;
-    cursor: not-allowed;
-    cursor: pointer;
-    opacity: 0.5;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    user-select: none;
-}
-
-html body.cre-t-32 select.cre-t-32-select-breed {
-    font-size: 16px;
-    max-width: 282px;
-    height: 50px;
-    padding: 13px 40px 14px 26px;
-    appearance: none;
-    border-radius: 78px;
-    border: 1.2px solid rgba(209, 209, 209, 0.70);
-    background: #fff;
-    cursor: pointer;
-    display: block;
-    color: #000;
-}
-
-html body.cre-t-32 .cre-t-32-arrow-container {
-    position: absolute;
-    height: 20px;
-    right: 18px;
-    cursor: pointer;
-    pointer-events: none;
-}
-
-html body.cre-t-32 select.cre-t-32-select-breed option {
-    color: #13162F;
-}
-
-html body.cre-t-32[data-active-tab="cats"] select[name="cre-t-32-breed"] option[data-breed-type="all"] {
-    color: #D1D1D1;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-}
-
-html body.cre-t-32 breedcontainer::after {
-    content: " ";
-    display: block;
-    height: 31px;
-    width: 1px;
-    background: #D1D1D1;
-    position: absolute;
-    right: -15px;
-    top: 9px;
-}
-
-html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container {
-    height: 50px;
-    max-width: 232px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-radius: 78px;
-    background: #FFF;
-}
-
-html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container .cre-t-32-zipcode-error {
-    position: absolute;
-    bottom: -22px;
-    left: 0;
-    margin-left: 10px;
-    font-size: 13px;
-    color: red;
-    display: none;
-}
-
-html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container .cre-t-32-zipcode-error.cre-t-32-display-error {
-    display: block;
-}
-
-html body.cre-t-32 .cre-t-32-location-container {
-    max-height: 21px;
-    position: absolute;
-    margin-left: 30px;
-    cursor: pointer;
-    pointer-events: none;
-}
-
-html body.cre-t-32 input.cre-t-32-zipcode {
-    font-size: 16px;
+html body.cre-t-68 #mega_loop_1 .cre-t-50-header-text::after {
+    content: "SFG20 Standard";
     padding: 0;
-    margin: 0;
-    border: none;
-    height: 100%;
-    border-radius: 78px;
-    border: 1.2px solid #D1D1D1;
-    width: 100%;
-    padding: 12px 45px;
-    padding-left: 62px;
-}
-
-html body.cre-t-32 input.cre-t-32-zipcode::-webkit-input-placeholder,
-html body.cre-t-32 input.cre-t-32-zipcode::placeholder {
-    color: #D1D1D1;
+    border: 0;
+    position: relative;
+    color: #042d38;
+    font-family: inherit;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-}
-
-html body.cre-t-32 .cre-t-32-hide-listing {
-    display: none !important;
-}
-
-html body.cre-t-32 input.cre-t-32-zipcode::-webkit-outer-spin-button,
-html body.cre-t-32 input.cre-t-32-zipcode::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-html body.cre-t-32 input.cre-t-32-zipcode[type=number] {
-    -moz-appearance: textfield;
-}
-
-html body.cre-t-32 .cre-t-32-cross-container {
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    display: none;
-    margin-top: -2px;
-    width: 45px;
-    justify-content: center;
-    pointer-events: all;
-    height: 100%;
-}
-
-html body.cre-t-32 .cre-t-32-cross-container svg {
-    height: 100%;
-    object-fit: contain;
-}
-
-html body.cre-t-32 .cre-t-32-cross-container.cre-t-32-display-cross {
-    display: flex;
-}
-
-html body.cre-t-32 .cre-t-32-active-combination {
-    width: 100%;
-    margin-bottom: 22px;
-    font-size: 16px;
-    line-height: 21px;
-}
-
-html body.cre-t-32 [data-oxy-tabs-active-tab-class] {
-    margin-bottom: 15px !important;
-    row-gap: 10px;
-}
-
-html body.cre-t-32 span.cre-t-32-filter-type {
     font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    align-items: center;
 }
 
-/* handle test 55 */
-html body.cre-t-32 .cre-t-55-plan-cost {
-    display: none !important;
+html body.cre-t-68 #mega_loop_2 .cre-t-50-header-text::after {
+    content: "Software";
+    padding: 0;
+    border: 0;
+    position: relative;
+    color: #042d38;
+    font-family: inherit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    align-items: center;
 }
 
-html body.cre-t-32 .plan-details>.plan-detail-column:first-child>.plan-detail-content>.ct-span {
-    display: none;
+/* html body.cre-t-68 .cre-t-68-what-is-sfg20 .submenu-parent-title{
+    font-size: 0 !important;
+    margin-left: 0 !important;
 }
 
-/* handle responsive */
-@media screen and (max-width: 1023px) {
-    html body.cre-t-32 [data-oxy-tabs-active-tab-class] {
-        flex-wrap: wrap;
-    }
+html body.cre-t-68 .cre-t-68-what-is-sfg20 .submenu-parent-title::after{
+    content: "SFG20 STANDARD";
+    color: #5b6466;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+} */
 
-    html body.cre-t-32 breedcontainer {
-        min-width: unset;
-    }
 
-    html body.cre-t-32 .cre-t-32-active-combination {
-        margin-bottom: 30px;
-    }
 
-    html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container {
-        max-width: 300px;
-        min-width: 166px;
-    }
 
-    html body.cre-t-32 select.cre-t-32-select-breed {
-        max-width: 300px;
-        min-width: 178px;
+/* Mega menu */
+html body.cre-t-68 .header-desktop #mega_loop_1 .megamenu-dropdown .child-items {
+    width: 600px !important;
+    gap: 16px;
+}
+
+
+html body.cre-t-68 .header-desktop .cre-t-68-industry-content {
+    width: 45%;
+}
+
+html body.cre-t-68 .header-desktop .cre-t-68-industry-content {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+
+    html body.cre-t-68 li.nav-items.main-link.cre-t-68-mobility,
+    html body.cre-t-68 li.nav-items.main-link.cre-t-68-licensed-li {
+        border-bottom: none !important;
+        padding-bottom: 0px !important;
     }
 }
 
-@media screen and (max-width: 991px) {
-    test-32-button-container.cre-t-32-button-container {
-        gap: 7px;
+/* For mobile */
+
+@media screen and (max-width: 1199px) {
+
+    html body.cre-t-68 li.nav-items.main-link.cre-t-68-mobility,
+    html body.cre-t-68 li.nav-items.main-link.cre-t-68-licensed-li {
+        border-bottom: none !important;
     }
 
-    html body.cre-t-32 breedcontainer::after {
+    html body.cre-t-68 .header-mobile .cre-t-68-maintenance-schedules {
+        display: none !important;
+    }
+
+    html body.cre-t-68 .header-mobile .cre-t-68-fm-providers {
+        display: none !important;
+    }
+
+    html body.cre-t-68 .cre-t-68-new.bookmark-text {
         display: none;
     }
-}
 
-@media screen and (max-width: 479px) {
-
-    /* html body.cre-t-32 select.cre-t-32-select-breed,
-html body.cre-t-32 input.cre-t-32-zipcode,
-html body.cre-t-32 input.cre-t-32-zipcode::-webkit-input-placeholder,
-html body.cre-t-32 .cre-t-32-active-combination {
-font-size: 1.4rem;
-} */
-    html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container .cre-t-32-zipcode-error {
-        font-size: 11px;
+    html body.cre-t-68 .header-mobile .nav-level-1>.nav-item:nth-child(2)>.nav-link-wrap,
+    html .header-mobile .nav-level-1>.nav-item:nth-child(2)>ul {
+        display: none !important;
     }
 
-    html body.cre-t-32 select.cre-t-32-select-breed {
-        height: 100%;
-        padding: 10px 20px;
-        padding-right: 38px;
+    html body.cre-t-68 .header-mobile .nav-level-1>.nav-item:nth-child(2) {
+        border-bottom: none !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0px !important;
     }
 
-    html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container {
-        height: unset;
+    html body.cre-t-68 .header-mobile .cre-t-68-software .nav-link-wrap a {
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        vertical-align: middle;
+        color: #042D38;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 0 !important;
+        text-transform: capitalize;
     }
 
-    html body.cre-t-32 input.cre-t-32-zipcode {
-        padding: 10px 37px;
-        padding-left: 37px;
+    html body.cre-t-68 ul.open li.nav-items.main-link.cre-t-68-mobility {
+        border-bottom: 1px solid #D4D6D6 !important
     }
 
-    html body.cre-t-32 .cre-t-32-location-container {
-        margin-left: 15px;
+    html body.cre-t-68 li.nav-items.main-link.cre-t-68-mobility,
+    html body.cre-t-68 li.nav-items.main-link.cre-t-68-licensed-li {
+        padding-bottom: 24px !important;
     }
-
-    html body.cre-t-32 .cre-t-32-cross-container svg,
-    html body.cre-t-32 .cre-t-32-location-container svg {
-        transform: scale(0.8);
-    }
-}
-
-@media screen and (max-width: 389px) {
-    html body.cre-t-32 [data-oxy-tabs-active-tab-class] {
-        margin-bottom: 25px !important;
-    }
-
-    test-32-button-container.cre-t-32-button-container {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
-
-    html body.cre-t-32 zipcontainer.cre-t-32-zipcode-container {
-        max-width: none;
-        width: 100%;
-    }
-
-    html body.cre-t-32 select.cre-t-32-select-breed {
-        max-width: none;
-        width: 100%;
-    }
-
-    html body.cre-t-32 .cre-t-32-active-combination {
-        margin-bottom: 32px;
-    }
-
-    html body.cre-t-32 input.cre-t-32-zipcode {
-        padding-right: 55px;
-    }
-
-    html body.cre-t-32 .cre-t-32-cross-container {
-        width: 55px;
-    }
-}
-
-/* tooltip */
-html body.cre-t-32 .cre-t-32-tooltip-container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    z-index: 1;
-    cursor: default;
-}
-
-html body.cre-t-32 .cre-t-32-tooltip-container.cre-t-32-display-tooltip {
-    display: block;
-}
-
-html body.cre-t-32 .cre-t-32-tooltip-wrapper {
-    position: relative;
-}
-
-html body.cre-t-32 .cre-t-32-tooltip-arrow {
-    width: 39px;
-    height: 26px;
-    position: relative;
-    top: 13px;
-}
-
-html body.cre-t-32 .cre-t-32-tooltip-arrow svg {
-    height: 100%;
-    width: 100%;
-    transform: scale(1.7, 1.4);
-}
-
-html body.cre-t-32 .cre-t-32-tooltip-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-html body.cre-t-32 .cre-t-32-tooltip-text {
-    border-radius: 3px;
-    background: rgba(94, 19, 147, 1);
-    box-shadow: 0 3px 8px 0 rgba(19, 19, 20, 0.12);
-    font-size: 12.3px;
-    line-height: 16px;
-    color: #fff;
-    padding: 19px 22px;
-    width: max-content;
-    font-weight: 500;
-}
-
-/* loader */
-.cre-t-32-loader-container {
-    position: relative;
-    opacity: 0;
-    z-index: -1;
-}
-
-body.cre-t-32-show-loader .cre-t-32-loader-container {
-    z-index: 1;
-    animation: loadercontainer 1s linear infinite;
-}
-
-@keyframes loadercontainer {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    75% {
-        opacity: 0.5;
-        transform: translateY(1rem);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(2rem);
-    }
-}
-
-.cre-t-32-loader-container::before {
-    z-index: 99;
-    position: absolute;
-    left: 50%;
-    top: -30px;
-    content: " ";
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin-left: -20px;
-    border-radius: 50%;
-    border: 4px solid #e94452;
-    border-color: #e94452 transparent #e94452 transparent;
-    animation: lds-dual-ring 1.5s linear infinite;
-    animation-delay: 0;
-}
-
-body.cre-t-32-show-loader .oxy-tabs-contents-wrapper.oxy-tabs-contents {
-    opacity: 0;
-    animation: tabscontents 1s ease-in-out;
-}
-
-@keyframes tabscontents {
-    0% {
-        opacity: 0.5;
-        transform: translateY(0);
-    }
-
-    50% {
-        opacity: 0;
-        transform: translateY(2rem);
-    }
-
-    75% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-html body.cre-t-32 .best-overall-container [data-unique*="Listing-Only"].cre-t-32-hide-listing {
-    display: block !important;
-}
-
-html body.cre-t-32 input.cre-t-32-zipcode::-webkit-contacts-auto-fill-button {
-    visibility: hidden;
-    display: none !important;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-}
-
-@media screen and (max-width:550px) {
-
-    html body.cre-t-32 input.cre-t-32-zipcode::-webkit-input-placeholder,
-    html body.cre-t-32 input.cre-t-32-zipcode::placeholder {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width:430px) {
-
-    html body.cre-t-32 input.cre-t-32-zipcode::-webkit-input-placeholder,
-    html body.cre-t-32 input.cre-t-32-zipcode::placeholder {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width:390px) {
-
-    html body.cre-t-32 input.cre-t-32-zipcode::-webkit-input-placeholder,
-    html body.cre-t-32 input.cre-t-32-zipcode::placeholder {
-        font-size: 16px;
-    }
-}
-
-
-html body.cre-t-32 test-32-price.cre-t-32-price.cre-t-32-hide-variation-price {
-
-    display: none;
-
-}
-
-html body.cre-t-32 .cre-t-32-show-control-price {
-
-    display: inline-block !important;
 
 }
