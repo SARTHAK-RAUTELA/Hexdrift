@@ -3,6 +3,7 @@
     /* main variables */
     var debug = 1;
     var variation_name = "cre-t-68";
+
     /* helper library */
     var _$;
     !(function (factory) {
@@ -32,6 +33,7 @@
           }
           console && console.log(variation_name, items);
         },
+
         // Adding Class
         addClass: function (v) {
           var a = v.split(" ");
@@ -45,6 +47,7 @@
             }
           });
         },
+
         // Waiting for element to load
         waitForElement: function (selector, trigger, delayInterval, delayTimeout) {
           var interval = setInterval(function () {
@@ -57,6 +60,7 @@
             clearInterval(interval);
           }, delayTimeout);
         },
+
         live: function (selector, event, callback, context) {
           /****Helper Functions****/
           // helper for enabling IE 8 event bindings
@@ -96,17 +100,22 @@
         return new bm(selector);
       };
     });
+
     var helper = _$();
     // Helper Library
+
     function customGoal() {
       // SFG20 Standard
       helper.live("#mega_loop_1 .cre-t-50-header-text", "mouseover", function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036702"]);
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036704"]);
       });
       // Software
       helper.live("#mega_loop_2 .cre-t-50-header-text", "mouseover", function () {
-        window._conv_q = window._conv_q || []; _conv_q.push(["triggerConversion", "100036703"]);
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036705"]);
       });
+
       //  What is SFG menu
       helper.live('[data-id="the_sfg20_standard"]', "click", function () {
         window._conv_q = window._conv_q || [];
@@ -117,23 +126,39 @@
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036708"]);
       });
+
+      //  SFG20 Licensed Companies
+      helper.live(".cre-t-68-licensed", "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036710"]);
+      });
+
       //  Software content goal for variation and control
       //  [data-id="facilities_iq"]
       helper.live('a[data-id="facilities_iq"]', "click", function () {
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036707"]);
       });
+
+      //  SFG20 Mobiliser  only for variation
+      // helper.live(".cre-t-68-software", "click", function () {
+      //   window._conv_q = window._conv_q || [];
+      //   _conv_q.push(["triggerConversion", "100036709"]);
+      // });
+
       //  [data-id="integration_with_fm_systems"]
       helper.live('[data-id="integration_with_fm_systems"]', "click", function () {
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036711"]);
       });
+
       //  Industry Content Goal for variation and control
       //  Healthcare
       helper.live('a[data-id="healthcare"]', "click", function () {
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036712"]);
       });
+
       //  [data-id="education"]
       helper.live('a[data-id="education"]', "click", function () {
         window._conv_q = window._conv_q || [];
@@ -169,75 +194,155 @@
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036719"]);
       });
-      // Only for control
-      // [data-id="accessing_the_schedules"]
-      helper.live('a[data-id="accessing_the_schedules"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036725"]);
+    }
+
+    function htmlInsertion() {
+      const submenuTitles = document.querySelectorAll(".child-items .submenu-parent-title");
+
+      submenuTitles.forEach((submenuTitle) => {
+        const textContent = submenuTitle.textContent.trim();
+
+        const parentLi = submenuTitle.closest("li");
+
+        if (parentLi && parentLi.tagName === "LI") {
+          const sanitizedText = textContent.replace(/\s+/g, "-").toLowerCase();
+
+          parentLi.classList.add("cre-t-68-" + sanitizedText);
+        }
       });
-      // [data-id="features_&_benefits"]
-      helper.live('a[data-id="who_we_help"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036726"]);
+
+      // Array of data-id values to target
+      const dataIds = ["who_we_help", "the_sfg20_standard", "maintenance_schedules", "accessing_the_schedules", "facilities_iq", "features_&_benefits", "integration_with_fm_systems"];
+
+      // Generate a CSS selector string dynamically
+      const selector = dataIds.map((id) => `[data-id="${id}"]`).join(", ");
+
+      // Select all elements matching the generated selector
+      document.querySelectorAll(selector).forEach((targetElement) => {
+        // Find the closest parent <li> element
+        const parentLi = targetElement.closest("li");
+
+        // Ensure the parent <li> exists before proceeding
+        if (parentLi && parentLi.tagName === "LI") {
+          // Get the data-id value from the target element
+          const dataId = targetElement.getAttribute("data-id");
+
+          // Sanitize the data-id to make it suitable for a class name
+          const sanitizedDataId = dataId.replace(/[^a-zA-Z0-9-_]/g).toLowerCase();
+
+          // Dynamically create the class name
+          const dynamicClass = `cre-t-68-${sanitizedDataId}`;
+
+          // Add the dynamic class to the parent <li>
+          parentLi.classList.add(dynamicClass);
+        }
       });
-      //  [data-id="features_&_benefits"]
-      helper.live('a[data-id="features_&_benefits"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036737"]);
+
+      setTimeout(function () {
+        var getItemsMenu = document.querySelector(".cre-t-68-industry-content");
+        if (getItemsMenu) {
+          var wherePlace = document.querySelector(".cre-t-68-fm-providers");
+          wherePlace.insertAdjacentElement("afterend", getItemsMenu);
+        }
+
+        var getItemSoft = document.querySelector(".cre-t-68-software");
+        if (getItemSoft) {
+          var wherePlaceSoft = document.querySelector(".left-side .cre-t-68-maintenance-schedules");
+          wherePlaceSoft.insertAdjacentElement("afterend", getItemSoft);
+        }
+      }, 500);
+    }
+
+    function textChangeAndUrl() {
+      setTimeout(() => {
+        const htmlElementNew = `<li class="cre-t-68-licensed-li  nav-items main-link hs-item-has-children">
+          <a href="https://www.sfg20.co.uk/sfg20-digital-badge" class="cre-t-68-licensed child-menu-item" data-id="accessing_the_schedules_licensed">
+              SFG20 Licensed Companies 
+              <span style="color:rgba(29, 113, 166, 1.0);background: rgba(210, 228, 238, 1.0);" class="bookmark-text cre-t-68-new">New</span>
+            </a>
+      </li>`;
+
+        // const htmlElementNew2 = `<li class="cre-t-68-mobility nav-items main-link hs-item-has-children"><a href="https://www.sfg20.co.uk/facilities-iq/mobiliser" class="cre-t-68-software child-menu-item" data-id="accessing_the_schedules">
+        //   SFG20 Mobiliser
+        //   <span style="color:rgba(29, 113, 166, 1.0);background: rgba(210, 228, 238, 1.0);" class="bookmark-text cre-t-68-new">New</span>
+        // </a></li>`;
+
+        // Only insert the first element if no ".cre-t-68-new" exists anywhere on the page
+        if (!document.querySelector(".cre-t-68-new")) {
+          document.querySelectorAll(".cre-t-68-accessing_the_schedules").forEach((el) => {
+            el.insertAdjacentHTML("beforebegin", htmlElementNew);
+          });
+        }
+
+        // Insert the second element before every matching target
+        // document.querySelectorAll(".cre-t-68-features_undefined_benefits").forEach((el) => {
+        //   el.insertAdjacentHTML("beforebegin", htmlElementNew2);
+        // });
+      }, 1000);
+
+      document.querySelectorAll('[data-id="the_sfg20_standard"]').forEach((el) => {
+        el.textContent = "What is SFG20";
       });
-      // data-id="member_list"
-      helper.live('a[data-id="member_list"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036727"]);
+      document.querySelectorAll('[data-id="integration_with_fm_systems"]').forEach((el) => {
+        el.textContent = "Integrations";
       });
-      // data-id="claim_your_badge"
-      helper.live('a[data-id="claim_your_badge"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036738"]);
+
+      document.querySelectorAll('[data-id="maintenance_schedules"]').forEach((el) => {
+        if (el.tagName === "A") {
+          el.href = "https://www.sfg20.co.uk/maintenance-schedules";
+        }
       });
-      //
-      // data-id="verify_a_sfg20_contractor"
-      helper.live('a[data-id="verify_a_sfg20_contractor"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036728"]);
+
+      document.querySelector(".cre-t-68-what-is-sfg20 .submenu-parent-title").textContent = "SFG20 Standard";
+      // document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(2) > .nav-link-wrap  a.nav-link").textContent = "Software";
+    }
+
+    function forMobileUrlAndTextChange() {
+      var submenuTitlesMobile1 = document.querySelectorAll(".header-mobile .nav-drill-inner > ul.nav-items > li:nth-child(1) > ul li.hs-menu-depth-2 > div a");
+
+      submenuTitlesMobile1.forEach((submenuTitle) => {
+        const textContent = submenuTitle.textContent.trim();
+
+        const parentLi = submenuTitle.closest("li");
+
+        if (parentLi && parentLi.tagName === "LI") {
+          const sanitizedText = textContent.replace(/\s+/g, "-").toLowerCase();
+
+          parentLi.classList.add("cre-t-68-" + sanitizedText);
+        }
       });
-      // data-id="core_library"
-      helper.live('a[data-id="core_library"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036731"]);
+
+      var submenuTitlesMobile2 = document.querySelectorAll(".header-mobile .nav-drill-inner > ul.nav-items > li:nth-child(2) > ul li.hs-menu-depth-2 > div a");
+
+      submenuTitlesMobile2.forEach((submenuTitle) => {
+        const textContent = submenuTitle.textContent.trim();
+
+        const parentLi = submenuTitle.closest("li");
+
+        if (parentLi && parentLi.tagName === "LI") {
+          const sanitizedText = textContent.replace(/\s+/g, "-").toLowerCase();
+
+          parentLi.classList.add("cre-t-68-" + sanitizedText);
+        }
       });
-      // data-id="building_fabric"
-      helper.live('a[data-id="building_fabric"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036732"]);
-      });
-      // data-id="catering"
-      helper.live('a[data-id="catering"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036733"]);
-      });
-      // data-id="htm_aligned"
-      helper.live('a[data-id="htm_aligned"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036734"]);
-      });
-      // data-id="mothballing_&_reactivation"
-      helper.live('a[data-id="mothballing_&_reactivation"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036735"]);
-      });
-      // data-id="security"
-      helper.live('a[data-id="security"]', "click", function () {
-        window._conv_q = window._conv_q || [];
-        _conv_q.push(["triggerConversion", "100036736"]);
-      });
+
+      setTimeout(() => {
+        document.querySelector(".header-mobile .cre-t-68-fm-providers").insertAdjacentElement("beforebegin", document.querySelector(".header-mobile .cre-t-68-industry-content"));
+        document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(2)").insertAdjacentElement("beforeend", document.querySelector(".header-mobile .cre-t-68-software"));
+      }, 1000);
+
+      document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(1) > .nav-link-wrap  a.nav-link").textContent = "SFG20 Standard";
+      document.querySelector(".header-mobile .nav-level-1 > .nav-item:nth-child(2) > .nav-link-wrap  a.nav-link").textContent = "Software";
     }
     /* Variation Init */
     function init() {
       _$("body").addClass(variation_name);
+      htmlInsertion();
+      textChangeAndUrl();
+      forMobileUrlAndTextChange();
       customGoal();
-      // eventHandler();
     }
+
     /* Initialize variation */
     helper.waitForElement('[data-id="accessing_the_schedules"]', init, 50, 25000);
   } catch (e) {
