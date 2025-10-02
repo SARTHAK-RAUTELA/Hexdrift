@@ -130,7 +130,7 @@
 	;
 }
 
-[class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	content: " ";
 	height: 30px;
 	width: 30px;
@@ -144,47 +144,52 @@
 	background-size: cover;
 }
 
-.Thumbtack_Staff [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Thumbtack_Staff [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://production-next-images-cdn.thumbtack.com/i/522528727836483603');
 	background-size: cover;
 }
 
-[class*="composable-customer-header_root"]+.mb6>div:nth-child(4) {
+[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child {
 	padding-left: 40px;
 	position: relative;
+	margin: 0 auto;
 }
 
-.Kristy_Snyder [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div {
+	padding-left: 38px;
+}
+
+.Kristy_Snyder [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://cdn.optimizely.com/img/20611073899/183677312a214cc4aa1047c11a25ac53.png');
 	background-size: cover;
 }
 
-.Melanie_Fourie [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Melanie_Fourie [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://cdn.optimizely.com/img/20611073899/7ccf78555e6440e388a33dfb8206178f.png');
 	background-size: cover;
 }
 
-.Nicki_Escudero [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Nicki_Escudero [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://production-next-images-cdn.thumbtack.com/i/522538471725907978');
 	background-size: cover;
 }
 
-.Sydney_Champion [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Sydney_Champion [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://cdn.optimizely.com/img/20611073899/e48bd752b35743e1b8093e9827b0af86.jpg');
 	background-size: cover;
 }
 
-.Kathleen_Allardyce [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Kathleen_Allardyce [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://production-next-images-cdn.thumbtack.com/i/522528727836483603');
 	background-size: cover;
 }
 
-.Chris_Davaa [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Chris_Davaa [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://cdn.optimizely.com/img/20611073899/25292421492643be914e6589cd3dd5fd.jpg');
 	background-size: cover;
 }
 
-.Daniel_Jones [class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+.Daniel_Jones [class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 	background-image: url('https://cdn.optimizely.com/img/20611073899/7ce7e8fd6f854b02ace82e59be6fad09.png');
 	background-size: cover;
 }
@@ -223,11 +228,11 @@
 		display: none;
 	}
 
-	[class*="composable-customer-header_root"]+.mb6>div:nth-child(4):before {
+	[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child:before {
 		left: 9px;
 	}
 
-	[class*="composable-customer-header_root"]+.mb6>div:nth-child(4) {
+	[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div:first-child {
 		padding-left: 45px;
 	}
 
@@ -271,6 +276,14 @@
 	[id="Table of Contents"] {
 		display: none;
 	}
+
+	[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div {
+		padding-left: 7px;
+	}
+
+	html body .expert-main-wrapper {
+		flex-direction: column;
+	}
 }
 
 @media screen and (min-width: 1025px) {
@@ -280,15 +293,12 @@
 	}
 
 	html body [class*="cobaltized-cost-page-hero_root"] h2 {
-
 		line-height: 36px !important;
-
 	}
 
 	[class*="cobaltized-cost-page-hero_root"] .green {
 		margin-top: 8px;
-		display: inline !important;
-		margin-left: 5px;
+		/* margin-left: 5px; */
 	}
 }
 
@@ -304,7 +314,6 @@
 		[class*="cobaltized-cost-page-hero_root"] {
 			grid-template-columns: [left] 1fr [gutter] 0px [right] 1fr;
 		}
-
 	}
 }
 
@@ -352,4 +361,74 @@
 	html body [class*="composable-customer-header_root"]+div [class*="Wrap_root"] .mb4>h3 {
 		margin-bottom: -16px;
 	}
+}
+
+
+.expert-main-wrapper {
+	display: flex;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.expert-main-wrapper>div {
+	width: auto;
+	max-width: inherit;
+	margin: 0 !important;
+
+}
+
+.expert-review-section .expert-image img {
+	width: 30px;
+	border-radius: 100px;
+	margin-right: 8px;
+	height: 30px;
+}
+
+.expert-review-section .expert-image img[alt="Daniel Jones - Junk Miners"] {
+	width: 60px;
+	border-radius: 100px;
+	margin-right: 0px;
+	height: 35px;
+}
+
+.expert-review-section .expert-image img[alt="Shawn Myers - Skilled Pugs Pressure Wash & Gutter Cleaning"] {
+	width: 32px;
+	border-radius: 100px;
+	margin-right: 8px;
+	height: 33px;
+}
+
+@media screen and (max-width: 1024px) {
+	[class*="composable-customer-header_root"]+.mb6>div:nth-child(4)>div {
+		padding-left: 7px;
+	}
+
+	.expert-review-section .expert-image img[alt="Daniel Jones - Junk Miners"] {
+		width: 55px;
+		height: 33px;
+		margin-right: -7px;
+		margin-left: -9px;
+	}
+}
+
+.Wrap_root__YXWM_.expert-review-section {
+	display: flex;
+}
+
+[class*="cobaltized-cost-page-hero_graph"] {
+	height: 0;
+}
+
+html body [class*="cobaltized-cost-page-hero_root"] {
+	display: inline;
+
+}
+
+[class*="cobaltized-cost-page-hero_zipForm"] {
+	max-width: 465px !important;
+	width: 100%;
+}
+
+.expert-review-section .expert-image+div div:nth-of-type(1) p {
+	color: #2f3033;
 }
