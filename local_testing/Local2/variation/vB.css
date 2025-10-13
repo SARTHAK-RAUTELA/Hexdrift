@@ -1,94 +1,374 @@
-html [data-funnel-step="registration-email"] #step-registration form div h2+p,
-html [data-funnel-step="registration-email"] #step-registration form div h2 {
-	display: none;
-}
-
-html [data-funnel-step="registration-email"] .cre-t-26-step-3-sub-header,
-html [data-funnel-step="registration-email"] .cre-t-26-step-3-header {
-	display: block !important;
+html body .product-container .product-details-section .btn-right {
+    flex-direction: column;
+    align-items: flex-end !important;
 }
 
 
-html [data-funnel-step="registration-name"] form div h2,
-html [data-funnel-step="registration-address"] form div h2 {
-	margin-bottom: 16px;
+html body .cre-t-07-paypalLogo {
+    max-width: 80px;
+    max-height: 80px;
+    width: 100%;
+    height: 100%;
+    margin-left: 5px;
 }
 
 
-html .cre-t-26-sub-header p {
-	color: #4B4B80;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 300;
-	line-height: 29px;
-	/* 138.095% */
+html body .cre-t-07-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-html .cre-t-26-header {
-	color: #13143A;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 32px;
-	margin-top: 16px;
-	margin-bottom: 15px;
+html body .cre-t-07-modal-container.active {
+    display: flex;
+}
+
+/* Modal overlay */
+html body .cre-t-07-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+/* Modal content */
+html body .cre-t-07-modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 640px;
+    position: relative;
+    z-index: 1002;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: cre-t-07-modalSlideIn 0.3s ease-out;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+@keyframes cre-t-07-modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Close button */
+html body .cre-t-07-close-btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: PayPalPro, Helvetica, Arial, sans-serif;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+/* Modal header */
+html body .cre-t-07-modal-header {
+    padding: 40px 40px 0 40px;
+    text-align: left;
+}
+
+html body .cre-t-07-paypal-triggerButton {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+html body .cre-t-07-paypal-triggerButton:hover {
+    text-decoration: underline;
+}
+
+html body .cre-t-07-paypal-logo {
+    padding: 0px;
+    margin-left: 45px;
+    z-index: 9;
+    transform: translate(0, 2rem);
+    transition: transform .2s ease-out;
+
+}
+
+html body .modal-scrolled .cre-t-07-paypal-logo {
+    margin-left: 65px !important;
+    margin-top: 10px;
+    transform: translate(-3rem, 0);
 }
 
 
+/* .cre-t-07-paypal-logo {
+    width: 80px;
+    height: 20px;
+    background-color: #0070ba;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+} */
 
-/* html [data-funnel-step="registration-address"] #phone+div[class="text-[12px] text-base-40 font-light mt-1"] {
-   display: none;
- } */
+html body .cre-t-07-modal-title {
+    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 24px;
+    color: #001435;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
 
-/* html [data-funnel-step="registration-address"] .cre-t-26-alert-copy-container {
-   display: flex !important;
-   margin-top: 4px;
-   gap: 4px;
-   align-items: center;
- } */
+html body .cre-t-07-payment-option-label {
+    color: #001435;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    margin-bottom: 18px;
+    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
+    font-weight: 600;
+}
 
-/* html [data-funnel-step="registration-address"] .cre-t-26-alert-copy-container .cre-t-26-alert-copy {
-   font-size: 11px;
-   color: #979CBA;
-   margin-top: 4px;
- } */
+/* Modal body */
+html body .cre-t-07-modal-body {
+    padding: 0 40px;
+}
 
-
-html [data-funnel-step="registration-address"] #phone~div[class*=text] {
-	position: relative;
-	font-size: 0;
-	/* hide old text */
-	color: #666;
-	display: flex;
-	align-items: center;
-	margin-top: 7px;
+html body .cre-t-07-payment-option {
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    height: 100px;
+    background-color: #fff;
+    padding: 12px 12px 15px 20px;
+    border-radius: 12px;
+    font-size: 100%;
+    overflow: visible;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
-html [data-funnel-step="registration-address"] #phone~div[class*=text]::before {
-	content: "";
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background: url("https://cdn-3.convertexperiments.com/uf/10007679/10007821/alerticon_68df6dd2547b8.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+html body .cre-t-07-option-title {
+    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    align-items: center;
+    color: #001435;
 }
 
-
-html [data-funnel-step="registration-address"] #phone~div[class*=text]::after {
-	content: "Used once only to verify your identity. Never stored.";
-	font-size: 13px;
-	margin-left: 4px;
-	color: #979CBA;
-	margin-top: 4px;
-	font-weight: normal;
+html body .cre-t-07-option-description {
+    color: #686a6d;
+    font-size: 100%;
+    font-family: PayPalOpen, Helvetica, Arial, Sans-Serif;
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (max-width: 390px) {
-	html [data-funnel-step="registration-address"] #phone~div[class*=text]::after {
-		font-size: 11px;
-	}
+/* Steps section */
+html body .cre-t-07-steps-section {
+    padding: 40px;
+    /* border-top: 1px solid #e5e5e5; */
+    margin-top: 16px;
+    padding-top: 20px;
+}
 
+html body .cre-t-07-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 5px;
+}
+
+html body .cre-t-07-step:last-child {
+    margin-bottom: 0;
+}
+
+/* .cre-t-07-step-number {
+    background-color: #2c2e2f;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+} */
+
+html body .cre-t-07-step-text,
+html body .cre-t-07-step-number {
+    color: #001435;
+    list-style: none;
+    line-height: 24px;
+    font-size: 18px;
+    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
+}
+
+/* Footer */
+html body .cre-t-07-modal-footer {
+    padding: 16px 40px 40px 40px;
+    color: #686a6d;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 0;
+    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
+
+}
+
+html body .cre-t-07-ButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+
+html body .cre-t-07-modal-content {
+    overflow: auto;
+    /* Keep scroll functionality */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+html body .cre-t-07-modal-content::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    html body .cre-t-07-step-text,
+    html body .cre-t-07-step-number {
+        font-size: 16px;
+    }
+
+    html body .product-container .product-details-section .btn-right {
+        align-items: center !important;
+    }
+
+    html body .cre-t-07-modal-content {
+        width: 95%;
+        margin: 20px;
+        max-height: 85vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    html body .cre-t-07-modal-header {
+        padding: 30px 20px 0 20px;
+    }
+
+    html body .cre-t-07-modal-body {
+        padding: 0 20px;
+    }
+
+    html body .cre-t-07-steps-section {
+        padding: 20px;
+    }
+
+    html body .cre-t-07-modal-footer {
+        padding: 16px 20px 30px 20px;
+    }
+
+    html body .cre-t-07-paypal-logo {
+        margin-left: 20px !important;
+    }
+
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    html body .cre-t-07-modal-container {
+        padding: 10px;
+    }
+
+    html body .cre-t-07-modal-content {
+        width: 100%;
+        margin: 0;
+        max-height: 90vh;
+        border-radius: 8px;
+    }
+
+    html body .cre-t-07-modal-header {
+        padding: 20px 15px 0 15px;
+    }
+
+    html body .cre-t-07-modal-body {
+        padding: 0 15px;
+    }
+
+    html body .cre-t-07-steps-section {
+        padding: 15px;
+    }
+
+    html body .cre-t-07-modal-footer {
+        padding: 10px 15px 20px 15px;
+    }
+
+    html body .cre-t-07-option-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    html body .cre-t-07-close-btn {
+        font-size: 35px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    html body .cre-t-07-modal-header {
+        padding: 40px 65px 0 65px;
+    }
+
+    html body .cre-t-07-modal-body {
+        padding: 0 65px;
+    }
+
+    html body .cre-t-07-steps-section {
+        padding: 26px 65px 26px;;
+    }
+
+    html body .cre-t-07-modal-footer {
+        padding: 16px 65px 40px 65px;
+    }
+
+    html body .cre-t-07-paypal-logo {
+        margin-left: 65px;
+    }
 }

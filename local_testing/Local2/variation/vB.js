@@ -19,8 +19,8 @@
             }, 15000);
         }
         var imageurl = 'https://cdn-3.convertexperiments.com/uf/10007679/10007821/group-48098675_68c79f0c7da42.svg';
-        
-          const trustpilotsection2 = `
+
+        const trustpilotsection2 = `
             <div class="Cre_trustpilot-section" style="display: none;">
             <div class="trustpilot-header">
             <div class="Cre-truspilot">
@@ -79,8 +79,11 @@
             </div>
             <div class="Cre_morelink"> <a href="https://www.trustpilot.com/review/standardscores.com" target="_blank" class="more-reviews">Read more reviews on Trustpilot →</a></div>
             </div>`;
-
+        console.log("testinfadljkhfjkas");
         function init() {
+
+            console.log("Initializing variation:", variation_name);
+            console.log("updated");
             document.body.classList.add(variation_name);
             waitForElement('.sct-testimonials .container', function () {
                 if (!document.querySelector('.Cre_trustpilot-section')) {
