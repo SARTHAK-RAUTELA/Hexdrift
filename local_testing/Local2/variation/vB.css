@@ -1,374 +1,265 @@
-html body .product-container .product-details-section .btn-right {
-    flex-direction: column;
-    align-items: flex-end !important;
-}
-
-
-html body .cre-t-07-paypalLogo {
-    max-width: 80px;
-    max-height: 80px;
-    width: 100%;
-    height: 100%;
-    margin-left: 5px;
-}
-
-
-html body .cre-t-07-modal-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-html body .cre-t-07-modal-container.active {
-    display: flex;
-}
-
-/* Modal overlay */
-html body .cre-t-07-modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1001;
-}
-
-/* Modal content */
-html body .cre-t-07-modal-content {
-    background: white;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 640px;
+html body .cre-t-125-average-container {
+    display: block !important;
+    z-index: 1;
     position: relative;
-    z-index: 1002;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    animation: cre-t-07-modalSlideIn 0.3s ease-out;
-    max-height: 80vh;
-    overflow-y: auto;
 }
-
-@keyframes cre-t-07-modalSlideIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Close button */
-html body .cre-t-07-close-btn {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    font-size: 40px;
-    font-weight: 100;
-    font-family: PayPalPro, Helvetica, Arial, sans-serif;
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 15px;
-}
-
-/* Modal header */
-html body .cre-t-07-modal-header {
-    padding: 40px 40px 0 40px;
-    text-align: left;
-}
-
-html body .cre-t-07-paypal-triggerButton {
-    cursor: pointer;
-    font-size: 15px;
-}
-
-html body .cre-t-07-paypal-triggerButton:hover {
-    text-decoration: underline;
-}
-
-html body .cre-t-07-paypal-logo {
-    padding: 0px;
-    margin-left: 45px;
-    z-index: 9;
-    transform: translate(0, 2rem);
-    transition: transform .2s ease-out;
-
-}
-
-html body .modal-scrolled .cre-t-07-paypal-logo {
-    margin-left: 65px !important;
-    margin-top: 10px;
-    transform: translate(-3rem, 0);
-}
-
-
-/* .cre-t-07-paypal-logo {
-    width: 80px;
-    height: 20px;
-    background-color: #0070ba;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    display: flex;
+html body .cre-t-125-average-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 12px;
-} */
-
-html body .cre-t-07-modal-title {
-    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 36px;
-    margin-bottom: 24px;
-    color: #001435;
-    margin-top: 10px;
-    letter-spacing: -1px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 
-html body .cre-t-07-payment-option-label {
-    color: #001435;
-    font-size: 18px;
-    width: 100%;
-    display: block;
-    margin-bottom: 18px;
-    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
-    font-weight: 600;
-}
-
-/* Modal body */
-html body .cre-t-07-modal-body {
-    padding: 0 40px;
-}
-
-html body .cre-t-07-payment-option {
-    border: 1px solid #ccc;
-    margin-bottom: 16px;
-    height: 100px;
-    background-color: #fff;
-    padding: 12px 12px 15px 20px;
-    border-radius: 12px;
-    font-size: 100%;
-    overflow: visible;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-html body .cre-t-07-option-title {
-    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
-    display: flex;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px;
+html body .cre-t-125-average-saving {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    color: #001435;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
-html body .cre-t-07-option-description {
-    color: #686a6d;
-    font-size: 100%;
-    font-family: PayPalOpen, Helvetica, Arial, Sans-Serif;
-    margin-top: 5px;
-    font-size: 17px;
+html body .cre-t-125-savings-text {
+    color: #99a3ab;
+    font-family: var(--font-open-sans), sans-serif;
+    font-size: var(--font-size-12, 12px);
+    font-style: normal;
     font-weight: 400;
-    line-height: 24px;
-    display: flex;
+    line-height: var(--line-height-14, 14px);
+}
+
+html body .cre-t-125-tooltip-wrapper {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-}
-
-/* Steps section */
-html body .cre-t-07-steps-section {
-    padding: 40px;
-    /* border-top: 1px solid #e5e5e5; */
-    margin-top: 16px;
-    padding-top: 20px;
-}
-
-html body .cre-t-07-step {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 16px;
-    gap: 5px;
-}
-
-html body .cre-t-07-step:last-child {
-    margin-bottom: 0;
-}
-
-/* .cre-t-07-step-number {
-    background-color: #2c2e2f;
-    color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
-    margin-right: 12px;
-    flex-shrink: 0;
-    margin-top: 2px;
-} */
-
-html body .cre-t-07-step-text,
-html body .cre-t-07-step-number {
-    color: #001435;
-    list-style: none;
-    line-height: 24px;
-    font-size: 18px;
-    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
+    position: relative;
 }
 
-/* Footer */
-html body .cre-t-07-modal-footer {
-    padding: 16px 40px 40px 40px;
-    color: #686a6d;
-    text-align: left;
-    font-size: 14px;
-    line-height: 20px;
-    padding-top: 0;
-    font-family: PayPalPro, Helvetica, Arial, Sans-Serif;
-
-}
-
-html body .cre-t-07-ButtonContainer {
+html body .cre-t-125-tooltip-icon {
+    width: 13px;
+    height: 13px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background: #fff;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-html body .cre-t-07-modal-content {
-    overflow: auto;
-    /* Keep scroll functionality */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+html body .cre-t-125-tooltip-content {
+    background: #c7a77b00;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    min-width: 249px;
+    position: absolute;
+    bottom: calc(100% - -3px);
+    right: -118px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
-html body .cre-t-07-modal-content::-webkit-scrollbar {
+html body .cre-t-125-tooltip-text {
+    color: #fff;
+    font-family: var(--font-open-sans), sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #c7a77b;
+    padding: 12px;
+    -webkit-box-shadow:
+        0 12px 16px -4px rgba(16, 24, 40, 0.08),
+        0 4px 6px -2px rgba(16, 24, 40, 0.03);
+    box-shadow:
+        0 12px 16px -4px rgba(16, 24, 40, 0.08),
+        0 4px 6px -2px rgba(16, 24, 40, 0.03);
+}
+
+html body .cre-t-125-tooltip-arrow {
+    position: relative;
+    bottom: 3px;
+    width: 100%;
+    height: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background: transparent;
+}
+
+html body .cre-t-125-tooltip {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 2px;
+}
+html body .cre-t-125-tooltip-active .cre-t-125-tooltip-content {
+    opacity: 1;
+    pointer-events: all;
+}
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
+/* plp page  */
+html body .cre-t-125-average-matched[data-attribute="restaurant-list-item"] [data-attribute="booking-fee-element"] {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+html body .cre-t-125-average-matched[data-attribute="restaurant-list-item"] .cre-t-125-average-container {
+    --tw-translate-y: -0.125rem;
+    --tw-translate-x: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+/* ___________________________________________________________________ */
+/* ___________________________________________________________________ */
 
-    html body .cre-t-07-step-text,
-    html body .cre-t-07-step-number {
-        font-size: 16px;
-    }
-
-    html body .product-container .product-details-section .btn-right {
-        align-items: center !important;
-    }
-
-    html body .cre-t-07-modal-content {
-        width: 95%;
-        margin: 20px;
-        max-height: 85vh;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    html body .cre-t-07-modal-header {
-        padding: 30px 20px 0 20px;
-    }
-
-    html body .cre-t-07-modal-body {
-        padding: 0 20px;
-    }
-
-    html body .cre-t-07-steps-section {
-        padding: 20px;
-    }
-
-    html body .cre-t-07-modal-footer {
-        padding: 16px 20px 30px 20px;
-    }
-
-    html body .cre-t-07-paypal-logo {
-        margin-left: 20px !important;
-    }
-
+/* pdp page  */
+html body #RestaurantAvailability [data-attribute="booking-fee-element"][detail-restaurant-id] {
+    display: none;
 }
 
-/* Extra small screens */
-@media (max-width: 480px) {
-    html body .cre-t-07-modal-container {
-        padding: 10px;
-    }
+html body #RestaurantAvailability .cre-t-125-average-container {
+    --tw-translate-y: -0.125rem;
+    --tw-translate-x: 0;
 
-    html body .cre-t-07-modal-content {
-        width: 100%;
-        margin: 0;
-        max-height: 90vh;
-        border-radius: 8px;
-    }
-
-    html body .cre-t-07-modal-header {
-        padding: 20px 15px 0 15px;
-    }
-
-    html body .cre-t-07-modal-body {
-        padding: 0 15px;
-    }
-
-    html body .cre-t-07-steps-section {
-        padding: 15px;
-    }
-
-    html body .cre-t-07-modal-footer {
-        padding: 10px 15px 20px 15px;
-    }
-
-    html body .cre-t-07-option-description {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    html body .cre-t-07-close-btn {
-        font-size: 35px;
-        width: 40px;
-        height: 40px;
-    }
-
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@media screen and (min-width:1024px) {
-    html body .cre-t-07-modal-header {
-        padding: 40px 65px 0 65px;
+@media (max-width: 379px) {
+    html body #RestaurantAvailability .cre-t-125-detail-parent {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
     }
 
-    html body .cre-t-07-modal-body {
-        padding: 0 65px;
+    html body #RestaurantAvailability .cre-t-125-detail-parent > a {
+        margin-left: 0;
     }
 
-    html body .cre-t-07-steps-section {
-        padding: 26px 65px 26px;;
+    html body #RestaurantAvailability .cre-t-125-tooltip-content {
+        right: -65px;
     }
 
-    html body .cre-t-07-modal-footer {
-        padding: 16px 65px 40px 65px;
+    html body #RestaurantAvailability .cre-t-125-tooltip-arrow {
+        margin-left: 52px;
+    }
+}
+
+@media (max-width: 365px) {
+    html body [data-attribute="restaurant-list-item"] .cre-t-125-detail-list-parent {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
     }
 
-    html body .cre-t-07-paypal-logo {
-        margin-left: 65px;
+    html body [data-attribute="restaurant-list-item"] .cre-t-125-detail-list-parent > a {
+        margin-left: 0;
+    }
+
+    html body [data-attribute="restaurant-list-item"] .cre-t-125-tooltip-content {
+        right: -30px;
+        min-width: 190px;
+    }
+
+    html body [data-attribute="restaurant-list-item"] .cre-t-125-tooltip-arrow {
+        margin-left: auto;
+        width: fit-content;
+        margin-right: 28px;
     }
 }
