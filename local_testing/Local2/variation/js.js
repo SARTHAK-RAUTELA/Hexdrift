@@ -16805,7 +16805,6 @@
       live('.cre-t-125-average-matched[data-attribute="restaurant-list-item"] button[data-attribute="New_booking-time-button"]', "click", function () {
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036891"]);
-        _conv_q.push(["triggerConversion", "100036912"]);//newgoal
       });
 
       // Another goal tracking the same thing for those listings that DO NOT have an average savings figure.
@@ -16813,7 +16812,6 @@
       live('[data-attribute="restaurant-list-item"]:not(.cre-t-125-average-matched) button[data-attribute="New_booking-time-button"]', "click", function () {
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036892"]);
-        _conv_q.push(["triggerConversion", "100036913"]);//newgoal
       });
 
       // A final goal tracking clicks on the same thing for ALL listings, regardless of whether they have an average savings figure or not.
@@ -16821,6 +16819,26 @@
       live('[data-attribute="restaurant-list-item"] button[data-attribute="New_booking-time-button"]', "click", function () {
         window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036893"]);
+      });
+
+      //New goals
+      // One goal to track clicks on any available time for those listings that DO have an average saving figure.
+      live('.cre-t-125-average-matched[data-attribute="restaurant-list-item"] button[data-attribute="New_booking-time-button"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036912"]);//newgoal
+      });
+
+      // Another goal tracking the same thing for those listings that DO NOT have an average savings figure.
+      // FST125 - Clicks on Listings without Average Saving
+      live('[data-attribute="restaurant-list-item"]:not(.cre-t-125-average-matched) button[data-attribute="New_booking-time-button"]', "click", function () {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", "100036913"]);//newgoal
+      });
+
+      // A final goal tracking clicks on the same thing for ALL listings, regardless of whether they have an average savings figure or not.
+      // FST125 - Clicks on All Listings
+      live('[data-attribute="restaurant-list-item"] button[data-attribute="New_booking-time-button"]', "click", function () {
+        window._conv_q = window._conv_q || [];
         _conv_q.push(["triggerConversion", "100036914"]);//newgoal
       });
     }
@@ -16864,4 +16882,64 @@
   } catch (e) {
     if (debug) console.log(e, "Error in Test" + variation_name, e);
   }
+})();
+
+(function () {
+
+  try {
+
+    /* main variables */
+
+    var debug = 1;
+
+    var variation_name = "";
+
+    function waitForHotjarScript(trigger) {
+
+      var interval = setInterval(function () {
+
+        if (window.hj) {
+
+          clearInterval(interval);
+
+          trigger();
+
+        }
+
+      }, 50);
+
+      // Timeout to stop checking after 15 seconds
+
+      setTimeout(function () {
+
+        clearInterval(interval);
+
+      }, 15000);
+
+    }
+
+    // Wait for Hotjar to load and then fire the event
+
+    waitForHotjarScript(function () {
+
+      try {
+
+        window.hj = window.hj || function () { (hj.q = hj.q || []).push(arguments) };
+
+        hj('event', 'fst125');
+
+      } catch (error) {
+
+        console.error("Error firing Hotjar event: ", error);
+
+      }
+
+    });
+
+  } catch (e) {
+
+    if (debug) console.log(e, "error in Test" + variation_name);
+
+  }
+
 })();
