@@ -1,13 +1,54 @@
-html body.cre-t-brandNameInCopyDeployment .cre-t-brandNameInCopy {
-    margin-top: 25px;
+/* Make each nav item inline-flex so link + arrow align */
+.primary-nav__item {
+  display: inline-flex;
+  align-items: center;
 }
 
-html body.cre-t-brandNameInCopyDeployment .cre-t-brandNameInCopy p {
-    font-family: "Montserrat", arial, sans-serif !important;
-    font-size: 16px;
-    text-align: left;
-    font-weight: 400;
-    line-height: 24px;
-    color: #000000;
-    margin-bottom: 0;
+/* Ensure the link doesn’t stretch and arrow stays right */
+.primary-nav__item>a {
+  display: inline-block;
+  margin-right: 0.25rem;
+  /* space before arrow */
+}
+
+/* Arrow button (submenu toggle) */
+.submenu-toggle {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  margin-left: 0.25rem;
+  border: 1px solid black;
+  /* keep arrow focusable but hidden */
+  opacity: 0;
+  pointer-events: none;
+  /* not clickable until focused */
+  transition: opacity 0.2s ease;
+  padding: 0 2px;
+}
+
+/* Arrow visible only when it itself is focused */
+.submenu-toggle:focus {
+  opacity: 1;
+  pointer-events: auto;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Submenu show on hover + when JS adds .is-open */
+.primary-nav__item:hover>.primary-nav__subnav,
+.primary-nav__item.is-open>.primary-nav__subnav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-bb .primary-nav__list .primary-nav__link {
+  margin-right: 0;
 }
