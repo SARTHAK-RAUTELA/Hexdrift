@@ -1,135 +1,113 @@
 (function () {
-  try {
-    var debug = 1;
-    var variation_name = "budgetBlind_T49"
-    function waitForElement(selector, trigger, delayInterval, delayTimeout) {
-      var interval = setInterval(function () {
-        if (
-          document &&
-          document.querySelector(selector) &&
-          document.querySelectorAll(selector).length > 0
-        ) {
+    try {
+      /* main variables */
+
+      var variation_name = "Buckfire_T02";
+      /* Helper functions */
+
+      function waitForElement(selector, trigger, delayInterval, delayTimeout) {
+        var interval = setInterval(function () {
+          if (document.querySelectorAll(selector).length) {
+            clearInterval(interval);
+            trigger();
+          }
+        }, delayInterval);
+
+        setTimeout(function () {
           clearInterval(interval);
-          trigger();
-        }
-      }, delayInterval);
-      setTimeout(function () {
-        clearInterval(interval);
-      }, delayTimeout);
-    }
-    function live(selector, event, callback, context) {
-      /****Helper Functions****/
-      // helper for enabling IE 8 event bindings
-      function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent("on" + type, handler);
-        else el.addEventListener(type, handler);
+        }, delayTimeout);
       }
-      // matches polyfill
-      this.Element &&
-        (function (ElementPrototype) {
-          ElementPrototype.matches =
-            ElementPrototype.matches ||
-            ElementPrototype.matchesSelector ||
-            ElementPrototype.webkitMatchesSelector ||
-            ElementPrototype.msMatchesSelector ||
-            function (selector) {
-              var node = this,
-                nodes = (
-                  node.parentNode || node.document
-                ).querySelectorAll(selector),
-                i = -1;
-              while (nodes[++i] && nodes[i] != node);
-              return !!nodes[i];
-            };
-        })(Element.prototype);
-      // live binding helper using matchesSelector
-      function live(selector, event, callback, context) {
-        addEvent(context || document, event, function (e) {
-          var found,
-            el = e.target || e.srcElement;
-          while (
-            el &&
-            el.matches &&
-            el !== context &&
-            !(found = el.matches(selector))
-          )
-            el = el.parentElement;
-          if (found) callback.call(el, e);
-        });
-      }
-      live(selector, event, callback, context);
-    }
-    function eventhandler() {
-      // Main link → always navigates event handler k andr
-      live(".primary-nav__item > a", "click", function (e) {
-        var target = e.target;
-        if (target && target.matches("a")) {
-          var url = target.getAttribute("href");
-          if (url && url !== "#") {
-            window.location.href = url;
-          }
-        }
-      });
-    }
 
-    function init() {
-      document.querySelector('body').classList.add(variation_name);
-      document.querySelectorAll(".primary-nav__item").forEach(function (item, idx) {
-        var link = item.querySelector("a");
-        var subnav = item.querySelector(".primary-nav__subnav");
+      var Buckfire02_Stick = `
+               <div class="Buckfire02-Stick_Button" style="display: none;">
+                <div class="Buckfire02-Stick_CTA">
+                  <div class="Need_Helf">
+                    <div class="Need_Helf_logo">
+                      <img src="https://cdn-3.convertexperiments.com/uf/10007679/10007804/online_686382d83edeb.svg" alt="online">
+                    </div>
+                    <span class="need-help_content">Case Specialists Available Now </span>
+                  </div>
+                  
+                  <p class="need-help_subcontent"><a href="tel:8006061717"> – Call (800) 606-1717</a></p>
+                </div>
+              </div>`;
+      function init() {
+        document.body.classList.add(variation_name);
+        function replacePhoneNumberEverywhere(oldText, newText, oldDigits, newDigits) {
 
-        if (link && subnav) {
-          if (!subnav.id) {
-            subnav.id = "submenu-" + idx;
+          // 1. Replace in text nodes
+
+          const treeWalker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+          );
+
+          let node;
+          while ((node = treeWalker.nextNode())) {
+            if (node.nodeValue.includes(oldText)) {
+              node.nodeValue = node.nodeValue.replaceAll(oldText, newText);
+            }
           }
 
-          // Create toggle button
-          var toggle = document.createElement("button");
-          toggle.className = "submenu-toggle";
-          toggle.setAttribute("aria-label", link.textContent + " submenu");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.setAttribute("aria-controls", subnav.id);
-          toggle.innerHTML = "&#9662;"; // ▼
-          if (!item.querySelector('.submenu-toggle')) {
-            link.insertAdjacentElement("afterend", toggle);
-          }
-
-
-          // Initialize aria-hidden
-          subnav.setAttribute("aria-hidden", "true");
-
-          // Toggle submenu (keyboard/mouse click on arrow)
-          toggle.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            // Close all other open submenus
-            document.querySelectorAll(".primary-nav__item.is-open").forEach(function (openItem) {
-              if (openItem !== item) {
-                openItem.classList.remove("is-open");
-                var openToggle = openItem.querySelector(".submenu-toggle");
-                var openSubnav = openItem.querySelector(".primary-nav__subnav");
-                if (openToggle) openToggle.setAttribute("aria-expanded", "false");
-                if (openSubnav) openSubnav.setAttribute("aria-hidden", "true");
+          // 2. Replace in attributes
+          const allElements = document.querySelectorAll('*');
+          allElements.forEach(el => {
+            for (let attr of el.attributes) {
+              let updatedValue = attr.value;
+              if (updatedValue.includes(oldDigits)) {
+                updatedValue = updatedValue.replaceAll(oldDigits, newDigits);
               }
-            });
-
-            // Toggle current submenu
-            var expanded = this.getAttribute("aria-expanded") === "true";
-            this.setAttribute("aria-expanded", String(!expanded));
-            item.classList.toggle("is-open", !expanded);
-            subnav.setAttribute("aria-hidden", String(expanded));
+              if (updatedValue.includes(oldText)) {
+                updatedValue = updatedValue.replaceAll(oldText, newText);
+              }
+              if (updatedValue !== attr.value) {
+                el.setAttribute(attr.name, updatedValue);
+              }
+            }
           });
         }
-      });
-      if (!window.eventAttached49) {
-        eventhandler();
-        window.eventAttached49 = true;
 
+        // Run replacement continuously for 20 seconds
+        const runStart = Date.now();
+        const intervalId = setInterval(() => {
+          replacePhoneNumberEverywhere(
+            '(888) 797-8787',
+            '(800) 606-1717',
+            '+18887978787',
+            '+18006061717'
+          );
+
+          if (Date.now() - runStart > 20000) {
+            clearInterval(intervalId);
+            console.log('Stopped after 20 seconds');
+          }
+        }, 50);
+        waitForElement("header+#mobile-menu-view", function () {
+          if (!document.querySelector(".Buckfire02-Stick_Button")) {
+            document.querySelector("header+#mobile-menu-view")
+              .insertAdjacentHTML("afterend", Buckfire02_Stick);
+          }
+        }, 50, 15000);
       }
-
+      /* Initialise variation */
+      waitForElement("header+#mobile-menu-view", init, 50, 15000);
+      function loadCTM() {
+        var s = document.createElement("script");
+        s.src = "http:////76015.tctm.co/t.js";
+        s.async = true;
+        document.head.appendChild(s);
+      }
+      waitForElement('head', loadCTM)
+      // Make entire banner clickable
+      document.addEventListener("click", function (e) {
+        var banner = document.querySelector(".Buckfire_T02 .Buckfire02-Stick_Button");
+        if (banner && banner.contains(e.target)) {
+        window.location.href = "tel:8006061717";
+      }
+    });
+    } catch (e) {
+      console.error(e, "error in Test " + variation_name);
     }
-    waitForElement("body", init, 50, 15000);
-  } catch (e) {
-    console.log(e, "error in Test variation_name");
-  }
-})();
+  })();
