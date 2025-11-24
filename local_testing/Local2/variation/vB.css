@@ -1,21 +1,226 @@
-[data-attribute="restaurant-list-location"] a,
-[data-attribute="restaurant-list-location"] span {
-  color: #99A3AB;
-  font-size: 14.5px;
-  line-height: normal;
+@media screen and (max-width: 767px) {
+
+
+  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox-container {
+    display: flex !important;
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+
+  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox {
+    display: none;
+  }
+
+  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox-label {
+    display: flex !important;
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 10px;
+    /* 🔥 Increase gap here */
+    color: rgba(75, 75, 128, 0.65) !important;
+    font-size: 14.5px !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: 22px;
+    letter-spacing: -0.792px;
+  }
+
+  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-custom-checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    border: 1px solid #ECF0F5;
+    background: #FFF;
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
+    /* 🔥 Prevent distortion */
+    vertical-align: middle;
+    /* 🔥 Align perfectly with first line of text */
+  }
+
+  /* Checked */
+  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox:checked+.cre-t-32-checkbox-label .cre-t-32-custom-checkbox {
+    background-image: url('https://cdn-3.convertexperiments.com/uf/10007679/10007821/checkmark_691c3d1b37dd3.svg');
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: #ECF0F5;
+    outline: none;
+  }
+
+ .cre-t-32-loaded a.cre-t-32-cta-wrapper {
+   display: flex;
+   background-color: #F59E0B;
+   color: #13143A;
+   text-align: center;
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 700;
+   letter-spacing: var(--letter-spacing--0_79, -0.792px);
+   padding: 16px 12px;
+   border-radius: 6px;
+   justify-content: center;
+   line-height: 46px;
+ }
+
+
+  .cre-t-32-loaded #negative-items-alert {
+    display: none;
+  }
+
+  .cre-t-32-alert-box-container {
+    position: relative;
+    margin-top: 20px;
+    max-width: 100%
+  }
+
+  .cre-t-32-alert-box-wrapper {
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #F7CF60;
+    background: #FFF8E1;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  }
+
+  .cre-t-32-alert-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    /* font-family: "Be Vietnam Pro", "Helvetica", "Arial", sans-serif; */
+  }
+
+  .cre-t-32-alert-box-cross-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .cre-t-32-alert-subTitle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px
+  }
+
+  .cre-t-32-alert-bar {
+    width: 2.5px;
+    height: 20px;
+    background: #FFB700;
+  }
+
+  .cre-t-32-alert-mainSubTitle {
+    color: #13143A;
+    /* font-family: "Be Vietnam Pro"; */
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 165.517% */
+    letter-spacing: var(--letter-spacing--0_79, -0.792px);
+  }
+
+
+  .cre-t-32-alert-description {
+    color: #13143A;
+    /* font-family: "Be Vietnam Pro"; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 165.517% */
+    letter-spacing: var(--letter-spacing--0_79, -0.792px);
+    margin-top: 14px;
+    margin-bottom: 18px
+  }
+
+  .cre-t-32-alert-call-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 6px;
+    background: #FFCA33;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    min-height: 45px;
+  }
+
+  .cre-t-32-alert-blink-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .cre-t-32-alert-paragraph.secondPara {
+    margin-top: 14px;
+  }
+
+  .cre-t-32-alert-call-text {
+    color: #13143A;
+    text-align: center;
+    /* font-family: "Be Vietnam Pro"; */
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29.6px;
+    /* 204.138% */
+    letter-spacing: var(--letter-spacing--0_79, -0.792px);
+  }
+
+
+  .cre-t-32-alert-call-blink {
+    width: 8px;
+    height: 8px;
+    background: #16A34A;
+    border-radius: 100%;
+    animation: pulse-animation 2s infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0 rgba(3, 168, 78, 0.4);
+    }
+
+    70% {
+      box-shadow: 0 0 0 7px rgba(3, 168, 78, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(3, 168, 78, 0);
+    }
+  }
 }
 
-[data-attribute="restaurant-list-location"] a {
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+@media screen and (max-width: 390px) {
+  .cre-t-32-alert-box-container {
+    max-width: 336px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 374px) {
+  .cre-t-32-alert-box-wrapper {
+    padding: 16px;
+  }
 
-  [data-attribute="restaurant-list-location"] a,
-  [data-attribute="restaurant-list-location"] a+span,
-  .cre-t-148 .cre-t-148-menu-item {
-    gap: 9px !important;
+  .cre-t-32-alert-mainSubTitle {
+    font-size: 12.5px;
+    line-height: 20px;
+  }
+
+  .cre-t-32-alert-description {
+    font-size: 12.5px;
+    line-height: 20px;
+  }
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  .cre-t-32-alert-box-container {
+    display: none !important;
   }
 }
