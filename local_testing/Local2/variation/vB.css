@@ -1,226 +1,321 @@
-@media screen and (max-width: 767px) {
+html body.cre-t-153.cre-t-153-modal-open .cre-t-153-modal-main {
+  display: block !important;
+}
+
+html body.cre-t-153 .cre-t-153-modal-main {
+  display: none;
+}
+
+html body.cre-t-153 .cre-t-153-modal-main.active {
+  display: block;
+}
+
+/* ===========================
+   MODAL OVERLAY
+=========================== */
+html body.cre-t-153 .cre-t-153-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(114, 111, 111, 0.9);
+  z-index: 2147483646 !important;
+}
+
+/* ===========================
+   MODAL CONTENT (SCALE BASED)
+=========================== */
+html body.cre-t-153 .cre-t-153-modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  padding: 52px 74px;
+  background-color: #fff;
+  max-width: 817px;
+  width: calc(100% - 20px);
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2147483647 !important;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ===========================
+   BADGE + CLOSE ICON
+=========================== */
+html body.cre-t-153 .cre-t-153-modal-badge-wrapper {
+  position: absolute;
+  left: -13px;
+  top: 44px;
+}
+
+html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper {
+  cursor: pointer;
+}
+
+/* ===========================
+   TEXT + ELEMENTS
+=========================== */
+html body.cre-t-153 .cre-t-153-main-title {
+  color: #265682;
+  text-align: center;
+  font-family: var(--font-abril-fatface), serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-top: 22px;
+  margin-bottom: 34px;
+}
+
+html body.cre-t-153 .cre-t-153-main-displayImage-wrapper {
+  max-width: 668px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 
-  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox-container {
-    display: flex !important;
-    align-items: flex-start;
-    margin-top: 12px;
-  }
+html body.cre-t-153 .cre-t-153-text-area {
+  color: #272B2E;
+  text-align: center;
+  /* font-family: "Open Sans"; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 30px auto;
+  max-width: 511px;
+  /* 161.875% */
+}
 
-  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox {
-    display: none;
-  }
+html body.cre-t-153 .cre-t-153-second-para {
+  margin-top: 30px;
+}
 
-  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox-label {
-    display: flex !important;
-    align-items: flex-start;
-    cursor: pointer;
-    gap: 10px;
-    /* 🔥 Increase gap here */
-    color: rgba(75, 75, 128, 0.65) !important;
-    font-size: 14.5px !important;
-    font-style: normal;
-    font-weight: 500 !important;
-    line-height: 22px;
-    letter-spacing: -0.792px;
-  }
+/* CTA Button */
+html body.cre-t-153 .cre-t-153-modal-cta {
+  display: flex;
+  max-width: 390px;
+  padding: 12px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  background: #FF685D;
+  margin: 0 auto;
+  border-radius: 4px;
+}
 
-  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-custom-checkbox {
-    width: 22px;
-    height: 22px;
-    border-radius: 3px;
-    border: 1px solid #ECF0F5;
-    background: #FFF;
-    display: inline-block;
-    position: relative;
-    flex-shrink: 0;
-    /* 🔥 Prevent distortion */
-    vertical-align: middle;
-    /* 🔥 Align perfectly with first line of text */
-  }
+html body.cre-t-153 .cre-t-153-modal-cta:hover {
+  cursor: pointer;
+}
 
-  /* Checked */
-  [data-path="/sign-up/payments"].cre-t-32-checkBox-added .cre-t-32-checkbox:checked+.cre-t-32-checkbox-label .cre-t-32-custom-checkbox {
-    background-image: url('https://cdn-3.convertexperiments.com/uf/10007679/10007821/checkmark_691c3d1b37dd3.svg');
-    background-size: 70% 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-color: #ECF0F5;
-    outline: none;
-  }
+html body.cre-t-153 .cre-t-153-modal-cta-text {
+  color: #FFF;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 26px;
+}
 
- .cre-t-32-loaded a.cre-t-32-cta-wrapper {
-   display: flex;
-   background-color: #F59E0B;
-   color: #13143A;
-   text-align: center;
-   font-size: 25px;
-   font-style: normal;
-   font-weight: 700;
-   letter-spacing: var(--letter-spacing--0_79, -0.792px);
-   padding: 16px 12px;
-   border-radius: 6px;
-   justify-content: center;
-   line-height: 46px;
- }
+/* Footer */
+html body.cre-t-153 .cre-t-153-modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  gap: 16px;
+}
 
+html body.cre-t-153 .cre-t-153-modal-footer-text {
+  color: #9D9D9D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
 
-  .cre-t-32-loaded #negative-items-alert {
-    display: none;
-  }
+html body.cre-t-153 span.cre-t-153-underLine {
+  position: relative;
+}
 
-  .cre-t-32-alert-box-container {
-    position: relative;
-    margin-top: 20px;
-    max-width: 100%
-  }
+html body.cre-t-153 span.cre-t-153-underLine::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 8px;
+  background: url("https://v2.crocdn.com/FirstTable/longLine.svg") no-repeat center bottom;
+  background-size: contain;
+  z-index: -1;
+}
 
-  .cre-t-32-alert-box-wrapper {
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #F7CF60;
-    background: #FFF8E1;
-    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
-  }
-
-  .cre-t-32-alert-title {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    /* font-family: "Be Vietnam Pro", "Helvetica", "Arial", sans-serif; */
-  }
-
-  .cre-t-32-alert-box-cross-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-
-  .cre-t-32-alert-subTitle-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    gap: 10px
-  }
-
-  .cre-t-32-alert-bar {
-    width: 2.5px;
-    height: 20px;
-    background: #FFB700;
-  }
-
-  .cre-t-32-alert-mainSubTitle {
-    color: #13143A;
-    /* font-family: "Be Vietnam Pro"; */
-    font-size: 14.5px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    /* 165.517% */
-    letter-spacing: var(--letter-spacing--0_79, -0.792px);
-  }
+.cre-t-153-modal-arrow-wrapper>img {
+  min-height: 23.4px;
+  max-width: 14px;
+}
 
 
-  .cre-t-32-alert-description {
-    color: #13143A;
-    /* font-family: "Be Vietnam Pro"; */
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    /* 165.517% */
-    letter-spacing: var(--letter-spacing--0_79, -0.792px);
-    margin-top: 14px;
-    margin-bottom: 18px
-  }
-
-  .cre-t-32-alert-call-cta-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    border-radius: 6px;
-    background: #FFCA33;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
-    min-height: 45px;
-  }
-
-  .cre-t-32-alert-blink-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .cre-t-32-alert-paragraph.secondPara {
-    margin-top: 14px;
-  }
-
-  .cre-t-32-alert-call-text {
-    color: #13143A;
-    text-align: center;
-    /* font-family: "Be Vietnam Pro"; */
-    font-size: 14.5px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 29.6px;
-    /* 204.138% */
-    letter-spacing: var(--letter-spacing--0_79, -0.792px);
-  }
-
-
-  .cre-t-32-alert-call-blink {
-    width: 8px;
-    height: 8px;
-    background: #16A34A;
-    border-radius: 100%;
-    animation: pulse-animation 2s infinite;
-  }
-
-  @keyframes pulse-animation {
-    0% {
-      box-shadow: 0 0 0 0 rgba(3, 168, 78, 0.4);
-    }
-
-    70% {
-      box-shadow: 0 0 0 7px rgba(3, 168, 78, 0);
-    }
-
-    100% {
-      box-shadow: 0 0 0 0 rgba(3, 168, 78, 0);
-    }
+@media (max-width: 1023px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    width: calc(100% - 40px);
+    /* transform: translate(-50%, -50%) scale(0.8); */
+    /* max-height: 95%; */
   }
 }
 
-@media screen and (max-width: 390px) {
-  .cre-t-32-alert-box-container {
-    max-width: 336px;
-    margin-left: auto;
-    margin-right: auto;
+/* ===========================
+   RESPONSIVE — MOBILE WIDTH
+=========================== */
+@media screen and (max-width: 767px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 30px 20px;
+    width: calc(100% - 0px);
+    /* max-height: 95%; */
   }
+
+  html body.cre-t-153 .cre-t-153-main-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-badge-wrapper {
+    top: 17px;
+    left: -11px;
+  }
+
+  html body.cre-t-153 img.cre-t-153-modal-badge {
+    max-width: 175px;
+  }
+
+
+  html body.cre-t-153 .cre-t-153-modal-footer-text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-footer {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  html body.cre-t-153 .cre-t-153-second-para {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  html body.cre-t-153 .cre-t-153-text-area {
+    margin: 20px 0px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-cta {
+    padding: 10px 10px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper .cre-t-153-cross-icon {
+    width: 100%
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper {
+    max-width: 20px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-logo-wrapppr {
+    margin-top: 25px;
+  }
+
+
+  html body.cre-t-153 .cre-t-153-footer-group-image {
+    max-width: 85px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-cta-text {
+    font-size: 14px;
+  }
+
 }
 
 @media screen and (max-width: 374px) {
-  .cre-t-32-alert-box-wrapper {
-    padding: 16px;
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.8);
+    width: calc(100% - -50px);
   }
 
-  .cre-t-32-alert-mainSubTitle {
-    font-size: 12.5px;
-    line-height: 20px;
+}
+
+/* ===========================
+   RESPONSIVE — SHORT HEIGHT DEVICES
+=========================== */
+
+
+@media screen and (min-width: 1024px) and (max-height: 1240px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.9);
   }
 
-  .cre-t-32-alert-description {
-    font-size: 12.5px;
-    line-height: 20px;
+}
+
+@media screen and (min-width: 1024px) and (max-height: 1140px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height:750px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height:680px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height:590px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height:500px) {
+  html body.cre-t-153 .cre-t-153-modal-content {
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html body.cre-t-153 .cre-t-153-footer-group-image {
+    max-width: 85px;
+  }
+
+  html body.cre-t-153 .cre-t-153-modal-footer-text {
+    font-size: 10px;
+    line-height: 18px;
   }
 }
 
 
+html body.cre-t-153 .cre-t-153-modal-logo-wrapppr {
+  width: 206px;
+  margin: auto;
+}
 
-
-
-@media (min-width: 768px) {
-  .cre-t-32-alert-box-container {
-    display: none !important;
+@media screen and (max-width: 767px) {
+  html body.cre-t-153 .cre-t-153-modal-logo-wrapppr {
+    margin-top: 25px;
   }
 }
