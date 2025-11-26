@@ -1,19 +1,15 @@
-html body.cre-t-153.cre-t-153-modal-open .cre-t-153-modal-main {
-  display: block !important;
-}
-
-html body.cre-t-153 .cre-t-153-modal-main {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-main {
   display: none;
 }
 
-html body.cre-t-153 .cre-t-153-modal-main.active {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-main.active {
   display: block;
 }
 
 /* ===========================
    MODAL OVERLAY
 =========================== */
-html body.cre-t-153 .cre-t-153-overlay {
+html body[users_type="guest"].cre-t-146 .cre-t-146-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -26,7 +22,7 @@ html body.cre-t-153 .cre-t-153-overlay {
 /* ===========================
    MODAL CONTENT (SCALE BASED)
 =========================== */
-html body.cre-t-153 .cre-t-153-modal-content {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -46,26 +42,26 @@ html body.cre-t-153 .cre-t-153-modal-content {
 /* ===========================
    BADGE + CLOSE ICON
 =========================== */
-html body.cre-t-153 .cre-t-153-modal-badge-wrapper {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-badge-wrapper {
   position: absolute;
   left: -13px;
   top: 44px;
 }
 
-html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper {
   cursor: pointer;
 }
 
 /* ===========================
    TEXT + ELEMENTS
 =========================== */
-html body.cre-t-153 .cre-t-153-main-title {
+html body[users_type="guest"].cre-t-146 .cre-t-146-main-title {
   color: #265682;
   text-align: center;
   font-family: var(--font-abril-fatface), serif;
@@ -76,14 +72,14 @@ html body.cre-t-153 .cre-t-153-main-title {
   margin-bottom: 34px;
 }
 
-html body.cre-t-153 .cre-t-153-main-displayImage-wrapper {
+html body[users_type="guest"].cre-t-146 .cre-t-146-main-displayImage-wrapper {
   max-width: 668px;
   width: 100%;
   margin: 0 auto;
 }
 
 
-html body.cre-t-153 .cre-t-153-text-area {
+html body[users_type="guest"].cre-t-146 .cre-t-146-text-area {
   color: #272B2E;
   text-align: center;
   /* font-family: "Open Sans"; */
@@ -91,17 +87,16 @@ html body.cre-t-153 .cre-t-153-text-area {
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
-  margin: 30px auto;
-  max-width: 511px;
+  margin: 30px 30px;
   /* 161.875% */
 }
 
-html body.cre-t-153 .cre-t-153-second-para {
+html body[users_type="guest"].cre-t-146 .cre-t-146-second-para {
   margin-top: 30px;
 }
 
 /* CTA Button */
-html body.cre-t-153 .cre-t-153-modal-cta {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cta {
   display: flex;
   max-width: 390px;
   padding: 12px 12px;
@@ -113,20 +108,16 @@ html body.cre-t-153 .cre-t-153-modal-cta {
   border-radius: 4px;
 }
 
-html body.cre-t-153 .cre-t-153-modal-cta:hover {
-  cursor: pointer;
-}
-
-html body.cre-t-153 .cre-t-153-modal-cta-text {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cta-text {
   color: #FFF;
   text-align: center;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 26px;
 }
 
 /* Footer */
-html body.cre-t-153 .cre-t-153-modal-footer {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,37 +125,37 @@ html body.cre-t-153 .cre-t-153-modal-footer {
   gap: 16px;
 }
 
-html body.cre-t-153 .cre-t-153-modal-footer-text {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
   color: #9D9D9D;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
 }
 
-html body.cre-t-153 span.cre-t-153-underLine {
+html body[users_type="guest"].cre-t-146 span.cre-t-146-underLine {
   position: relative;
 }
 
-html body.cre-t-153 span.cre-t-153-underLine::after {
+html body[users_type="guest"].cre-t-146 span.cre-t-146-underLine::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0px;
   width: 100%;
   height: 8px;
-  background: url("https://v2.crocdn.com/FirstTable/longLine.svg") no-repeat center bottom;
+  background: url("https://v2.crocdn.com/FirstTable/underLine%20(1).svg") no-repeat center bottom;
   background-size: contain;
   z-index: -1;
 }
 
-.cre-t-153-modal-arrow-wrapper>img {
+.cre-t-146-modal-arrow-wrapper>img {
   min-height: 23.4px;
   max-width: 14px;
 }
 
 
 @media (max-width: 1023px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     width: calc(100% - 40px);
     /* transform: translate(-50%, -50%) scale(0.8); */
     /* max-height: 95%; */
@@ -175,80 +166,77 @@ html body.cre-t-153 span.cre-t-153-underLine::after {
    RESPONSIVE — MOBILE WIDTH
 =========================== */
 @media screen and (max-width: 767px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.9);
     padding: 30px 20px;
     width: calc(100% - 0px);
     /* max-height: 95%; */
   }
 
-  html body.cre-t-153 .cre-t-153-main-title {
-    font-size: 30px;
+  html body[users_type="guest"].cre-t-146 .cre-t-146-main-title {
+    font-size: 28px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     line-height: 30px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-badge-wrapper {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-badge-wrapper {
     top: 17px;
     left: -11px;
   }
 
-  html body.cre-t-153 img.cre-t-153-modal-badge {
+  html body[users_type="guest"].cre-t-146 img.cre-t-146-modal-badge {
     max-width: 175px;
   }
 
 
-  html body.cre-t-153 .cre-t-153-modal-footer-text {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
     font-size: 13px;
     line-height: 18px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-footer {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer {
     margin-top: 20px;
     gap: 10px;
   }
 
-  html body.cre-t-153 .cre-t-153-second-para {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-second-para {
     margin-top: 15px;
     margin-bottom: 15px;
   }
 
-  html body.cre-t-153 .cre-t-153-text-area {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-text-area {
     margin: 20px 0px;
     font-size: 14px;
     line-height: 24px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-cta {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cta {
     padding: 10px 10px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper .cre-t-153-cross-icon {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper .cre-t-146-cross-icon {
     width: 100%
   }
 
-  html body.cre-t-153 .cre-t-153-modal-cross-icon-wrapper {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper {
     max-width: 20px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-logo-wrapppr {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-logo-wrapppr {
     margin-top: 25px;
   }
 
 
-  html body.cre-t-153 .cre-t-153-footer-group-image {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-footer-group-image {
     max-width: 85px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-cta-text {
-    font-size: 14px;
-  }
 
 }
 
 @media screen and (max-width: 374px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.8);
     width: calc(100% - -50px);
   }
@@ -261,61 +249,67 @@ html body.cre-t-153 span.cre-t-153-underLine::after {
 
 
 @media screen and (min-width: 1024px) and (max-height: 1240px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.9);
   }
 
 }
 
 @media screen and (min-width: 1024px) and (max-height: 1140px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.85);
   }
 }
 
 @media screen and (min-width: 1024px) and (max-height:750px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.8);
   }
 }
 
 @media screen and (min-width: 1024px) and (max-height:680px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.7);
   }
 }
 
 @media screen and (min-width: 1024px) and (max-height:590px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.6);
   }
 }
 
 @media screen and (min-width: 1024px) and (max-height:500px) {
-  html body.cre-t-153 .cre-t-153-modal-content {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
     transform: translate(-50%, -50%) scale(0.55);
   }
 }
 
-@media screen and (max-width: 350px) {
-  html body.cre-t-153 .cre-t-153-footer-group-image {
-    max-width: 85px;
+@media screen and (max-width: 422px) {
+
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-footer-group-image {
+    max-width: 80px;
   }
 
-  html body.cre-t-153 .cre-t-153-modal-footer-text {
+  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
     font-size: 10px;
     line-height: 18px;
   }
 }
 
-
-html body.cre-t-153 .cre-t-153-modal-logo-wrapppr {
+html body[users_type="guest"].cre-t-146 .cre-t-146-modal-logo-wrapppr {
   width: 206px;
   margin: auto;
 }
 
 @media screen and (max-width: 767px) {
-  html body.cre-t-153 .cre-t-153-modal-logo-wrapppr {
-    margin-top: 25px;
-  }
+    html body[users_type="guest"].cre-t-146 .cre-t-146-modal-logo-wrapppr {
+        margin-top: 25px;
+    }
 }
