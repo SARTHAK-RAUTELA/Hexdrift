@@ -1,315 +1,104 @@
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-main {
-  display: none;
+:root {
+    --primary-color: #1A0EAB; 
+    --secondary-color: #464cff; 
+    --underline-color: #bbbee7ab;
+    --color-white: #fff;
+    --hover-color:#2e20c1;
 }
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-main.active {
-  display: block;
+html body a.ct-link-button.see-plans-button,
+html body .number-bubble,
+html body .oxy-tabs-wrapper.oxy-tabs > div.tabs-0208-tab-active,
+html body .ct-section.social-proof,
+html body .ct-link-button.header-quote-button,
+html body ul li.Mui-selected {
+    background: var(--primary-color) !important;  
 }
 
-/* ===========================
-   MODAL OVERLAY
-=========================== */
-html body[users_type="guest"].cre-t-146 .cre-t-146-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(114, 111, 111, 0.9);
-  z-index: 2147483646 !important;
+html body .ct-link-button.header-quote-button:hover,
+html body a.ct-link-button.see-plans-button:hover{
+    background: var(--hover-color) !important;
 }
 
-/* ===========================
-   MODAL CONTENT (SCALE BASED)
-=========================== */
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center;
-  padding: 52px 74px;
-  background-color: #fff;
-  max-width: 817px;
-  width: calc(100% - 20px);
-  height: auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 2147483647 !important;
-  text-align: center;
-  border-radius: 8px;
+html body .guarantee-container .best-price-label{
+    color: var(--primary-color) !important;
+}
+html body .oxy-site-navigation.header-nav ul li a:hover{
+    color: var(--secondary-color) !important;
 }
 
-/* ===========================
-   BADGE + CLOSE ICON
-=========================== */
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-badge-wrapper {
-  position: absolute;
-  left: -13px;
-  top: 44px;
+html body .oxy-dynamic-list .guarantee-container .oxy-popover_icon svg{
+    fill: var(--primary-color) !important;
 }
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+html body div.oxy-dynamic-list a.oxy-read-more-link:hover{
+    background: var(--primary-color) !important;  
+    color: var(--color-white) !important;
 }
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper {
-  cursor: pointer;
+html body div.oxy-dynamic-list a.oxy-read-more-link{
+    background: var(--color-white)  !important;
+    color: var(--primary-color)!important;
+    border: 1px solid var(--primary-color) !important;
 }
 
-/* ===========================
-   TEXT + ELEMENTS
-=========================== */
-html body[users_type="guest"].cre-t-146 .cre-t-146-main-title {
-  color: #265682;
-  text-align: center;
-  font-family: var(--font-abril-fatface), serif;
-  font-size: 42px;
-  font-weight: 400;
-  line-height: 50px;
-  margin-top: 22px;
-  margin-bottom: 34px;
+html body .oxy-pro-accordion_item button:hover{
+    color: var(--hover-color) !important;
 }
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-main-displayImage-wrapper {
-  max-width: 668px;
-  width: 100%;
-  margin: 0 auto;
+html body .oxy-pro-accordion_item button .oxy-pro-accordion_icon svg:hover{
+    fill: var(--secondary-color) !important;
+}
+
+html footer ul li a:hover{
+    color: var(--secondary-color) !important;
+}
+
+html .ct-section h1.home-heading span span.underline{
+    box-shadow: inset 0 -15px 0 var( --underline-color) !important;
+}
+
+html footer .social-link:hover{
+    background-color: var(--hover-color) !important;
+}
+
+html body .oxy-social-share-buttons .oxy-share-button:hover{
+    background-color: var(--hover-color) !important;
 }
 
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-text-area {
-  color: #272B2E;
-  text-align: center;
-  /* font-family: "Open Sans"; */
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  margin: 30px 30px;
-  /* 161.875% */
+html body footer .oxy-nav-menu ul li:hover,
+html body footer .oxy-nav-menu ul li.menu-item:hover a{
+    color: var(--hover-color) !important;
 }
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-second-para {
-  margin-top: 30px;
+html body #content-section .oxy-pro-accordion .oxy-pro-accordion_item.active .oxy-pro-accordion_header{
+    color: var(--secondary-color) !important;
 }
 
-/* CTA Button */
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cta {
-  display: flex;
-  max-width: 390px;
-  padding: 12px 12px;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-  background: #FF685D;
-  margin: 0 auto;
-  border-radius: 4px;
+html body .exit-modal-content .button.Lemonade{
+    background: var(--primary-color) !important;
 }
 
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cta-text {
-  color: #FFF;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 26px;
+html body div.oxy-dynamic-list a.oxy-read-more-link .oxy-read-more-link_text:hover{
+    color: var(--color-white) !important;
 }
 
-/* Footer */
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 55px;
-  gap: 16px;
-}
-
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
-  color: #9D9D9D;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-html body[users_type="guest"].cre-t-146 span.cre-t-146-underLine {
-  position: relative;
-}
-
-html body[users_type="guest"].cre-t-146 span.cre-t-146-underLine::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  width: 100%;
-  height: 8px;
-  background: url("https://v2.crocdn.com/FirstTable/underLine%20(1).svg") no-repeat center bottom;
-  background-size: contain;
-  z-index: -1;
-}
-
-.cre-t-146-modal-arrow-wrapper>img {
-  min-height: 23.4px;
-  max-width: 14px;
+html body .page-content .oxy-stock-content-styles p  a{
+    color: var(--primary-color) !important;
 }
 
 
-@media (max-width: 1023px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    width: calc(100% - 40px);
-    /* transform: translate(-50%, -50%) scale(0.8); */
-    /* max-height: 95%; */
-  }
+html body .oxy-header-container .oxy-header-left > a[href="/"] img {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
 }
 
-/* ===========================
-   RESPONSIVE — MOBILE WIDTH
-=========================== */
-@media screen and (max-width: 767px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.9);
-    padding: 30px 20px;
-    width: calc(100% - 0px);
-    /* max-height: 95%; */
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-main-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    line-height: 30px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-badge-wrapper {
-    top: 17px;
-    left: -11px;
-  }
-
-  html body[users_type="guest"].cre-t-146 img.cre-t-146-modal-badge {
-    max-width: 175px;
-  }
-
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
-    font-size: 13px;
-    line-height: 18px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer {
-    margin-top: 20px;
-    gap: 10px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-second-para {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-text-area {
-    margin: 20px 0px;
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cta {
-    padding: 10px 10px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper .cre-t-146-cross-icon {
-    width: 100%
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-cross-icon-wrapper {
-    max-width: 20px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-logo-wrapppr {
-    margin-top: 25px;
-  }
-
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-footer-group-image {
-    max-width: 85px;
-  }
-
-
+html body .oxy-header-container .oxy-header-left > a[href="/"] img {
+    content: url('https://cdn-3.convertexperiments.com/uf/10007679/10007714/green_691ea8bc22ec2.svg') !important;
+    opacity: 1 !important;
 }
 
-@media screen and (max-width: 374px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.8);
-    width: calc(100% - -50px);
-  }
-
-}
-
-/* ===========================
-   RESPONSIVE — SHORT HEIGHT DEVICES
-=========================== */
-
-
-@media screen and (min-width: 1024px) and (max-height: 1240px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
-
-}
-
-@media screen and (min-width: 1024px) and (max-height: 1140px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.85);
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-height:750px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-height:680px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-height:590px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.6);
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-height:500px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-content {
-    transform: translate(-50%, -50%) scale(0.55);
-  }
-}
-
-@media screen and (max-width: 422px) {
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
-    font-size: 11px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  html body[users_type="guest"].cre-t-146 .cre-t-146-footer-group-image {
-    max-width: 80px;
-  }
-
-  html body[users_type="guest"].cre-t-146 .cre-t-146-modal-footer-text {
-    font-size: 10px;
-    line-height: 18px;
-  }
-}
-
-html body[users_type="guest"].cre-t-146 .cre-t-146-modal-logo-wrapppr {
-  width: 206px;
-  margin: auto;
-}
-
-@media screen and (max-width: 767px) {
-    html body[users_type="guest"].cre-t-146 .cre-t-146-modal-logo-wrapppr {
-        margin-top: 25px;
-    }
+html body .mobile-back-to-top a{
+    background-color: var(--primary-color) !important;
 }
