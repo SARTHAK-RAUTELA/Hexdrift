@@ -1,7 +1,9 @@
-    html body.cre-t-150 [data-attribute="restaurant-list-location"] {
-        padding: 0px 0px 4px 0px;
-    }
-
-    html body.cre-t-150 [data-attribute="restaurant-list-item"]>div>div>div.flex.self-stretch .cre-t-129-review-container, html body.cre-t-150 [data-attribute="restaurant-list-item"]>div>div>div.flex.self-stretch .cre-t-129-link-review {
-    margin-bottom: 5px;
+.main-padded>.page-banner+.section-navigation+.section-navigation,
+.section-navigation-list__item:has(a[href="/san-antonio/tickets/"]):not(.cre-t-304-new-tab),
+html body.cre-t-304 .cre-t-304-old-tab_tickets,
+html body.cre-t-304 .pass-comparison-table.site-container,
+html body.cre-t-304 .cre-t-304-hide-product-catalog-container,
+.section-navigation+.product-catalog-container[data-columns="three"],
+html body.cre-t-304 .product-catalog-card[data-display-name="Any Day Ticket"] {
+    display: none;
 }
