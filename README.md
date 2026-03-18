@@ -40,7 +40,7 @@
 
 ## 🧰 Tools & Platforms
 
-<img src="additionalfiles/Images/Optimizely_Logo_Full-Color_Dark_hS40gNw.png" height="50"/> <img src="https://skillicons.dev/icons?i=ae,androidstudio,discord,firebase,gmail"/> <img src="additionalfiles/Images/Frame - Copy.png" height="40"/> <img src="https://skillicons.dev/icons?i=nodejs,npm,ps,stackoverflow"/> <img src="additionalfiles/Images/hotjar_logo.png" height="30"/>  <img src="additionalfiles/Images/trello.png" height="25"/>
+<img src="additionalfiles/Images/Optimizely_Logo_Full-Color_Dark_hS40gNw.png" height="50"/> <img src="https://skillicons.dev/icons?i=ae,androidstudio,discord,firebase,gmail"/> <img src="additionalfiles/Images/Frame - Copy.png" height="40"/> <img src="https://skillicons.dev/icons?i=nodejs,npm,ps,stackoverflow"/> <img src="additionalfiles/Images/hotjar_logo.png" height="30"/>  <img src="additionalfiles/Images/trello.png" height="25"/>  <img src="additionalfiles/Images/vwo-logo-color.svg" height="25"/>
 
 
 ---
